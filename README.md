@@ -21,13 +21,16 @@
 ## 構成
 
 ```
-data/spots.json            店と横丁のデータ（ジオコーディング済み、地図に埋め込む）
+data/spots.json            店と横丁のデータ（ジオコーディング済み。ページに埋め込む）
+data/overrides.json        手作業の補正（位置・営業状況の更新・収録除外）
 data/geocode_cache.json    国土地理院・Overpass の検索結果キャッシュ（再現用）
 data/review.txt            位置に注意が必要な店の一覧
-research/*.json            エリア別の調査結果（出典付きの元データ）
+research/*.json            エリア別の調査結果（出典付きの元データ）と調査仕様 SPEC.md
 site/src/                  ページ本体（page.html, style.css, map.js, app.js）
-site/data/base.json        東京全域の背景地図（鉄道・道路・水域・緑地・駅名・地名）
-site/data/c/{x}_{y}.json   z12 タイル単位の街路データ（生活道路・路地・建物・OSM の飲み屋）
+site/data/base.json        広域の背景地図（z12 まで）と駅名・地名
+site/data/base_hi.json     東京の詳しい背景地図（z13 から読み込む）
+site/data/c/{x}_{y}.json   z12 タイル単位の街路・丁目名・OSM の飲み屋（z13 から）
+site/data/b/{x}_{y}.json   z13 タイル単位の建物・路地・階段（店の周辺のみ、z15 から）
 scripts/                   データ取得と生成のスクリプト
 ```
 
@@ -35,17 +38,16 @@ scripts/                   データ取得と生成のスクリプト
 
 ```sh
 pip install shapely
-python3 scripts/fetch_base.py                 # OSM から東京全域の背景データ（Overpass）
+python3 scripts/fetch_base.py                 # OSM から背景データ（Overpass）
 python3 scripts/fetch_detail.py pois streets  # OSM の飲み屋と生活道路
-python3 scripts/build_basemap.py              # → site/data/base.json
+python3 scripts/build_basemap.py              # → site/data/base.json, base_hi.json
 python3 scripts/build_spots.py "research/*.json"   # → data/spots.json（ジオコーディング）
+python3 scripts/check_spots.py                # 範囲外・区の不一致・出典なしなどを検査
 python3 scripts/spot_points.py > .cache/points.json
 python3 scripts/fetch_detail.py around .cache/points.json   # 店の周りの路地と建物
-python3 scripts/build_chunks.py               # → site/data/c/*.json
+python3 scripts/build_chunks.py               # → site/data/c/, site/data/b/
 python3 scripts/build_site.py                 # → dist/artifact/ と dist/pages/
 ```
-
-`dist/pages/` はそのまま静的ホスティングに置けます。`main` ブランチに入ると GitHub Actions（`.github/workflows/pages.yml`）が GitHub Pages に公開します（Settings → Pages → Source を「GitHub Actions」にしておく）。Pages 版では航空写真（地理院タイル）と現在地ボタンも使えます。
 
 ## データと出典
 

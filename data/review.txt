@@ -1,6 +1,6 @@
 akabane-chikara	no geocode	None
-ikebukuro-fukuro	osm match too far 389m	いけふくろうカフェ
 takenotsuka-elsa	osm match too far 395m	スナック　秀
+shinjuku-ucchan	osm match too far 188m	もつ焼き　ウッチャン
+ikebukuro-snack-bell	osm match too far 388m	スナック パンザマスト
+shinjuku2-cafe-bar-voice	osm match too far 211m	cafe&bar chaos
 kunitachi-macchan	osm 119m from address	まっちゃん
-tachikawa-shutei-tamagawa	osm match too far 175m	玉河
-hachioji-tachinomi-taro	osm match too far 236m	中村金太郎

@@ -366,6 +366,7 @@
     gsi: "住所の建物位置（国土地理院の住所検索）",
     "gsi-block": "住所の街区の中心（国土地理院の住所検索）。数十m ずれることがあります",
     manual: "地図データから手作業で決めた位置",
+    tabelog: "食べログの店舗地図の位置（住所は街区までしか特定できないため）",
     approx: "おおよその位置（要確認）",
   };
 
@@ -416,7 +417,9 @@
         <a class="btn ghost" href="${osmUrl(s)}" target="_blank" rel="noopener">OpenStreetMap</a>
       </div>
       <div class="d-meta">
+        ${s.stacked ? `<p><b>注</b>同じ番地に${s.stacked}軒あるため、地図上では数mずらして表示しています。</p>` : ""}
         <p><b>位置</b>${esc(GEO_TXT[s.geo] || "")}${s.gsi && /^gsi/.test(s.geo) ? `（${esc(s.gsi.replace(/^東京都/, ""))}）` : ""}　<span class="mono">${s.lat.toFixed(6)}, ${s.lng.toFixed(6)}</span></p>
+        ${s.xcheck != null && s.geo !== "tabelog" ? `<p><b>照合</b>食べログの店舗地図の位置との差は約${Math.max(1, Math.round(s.xcheck / 5) * 5)}m</p>` : ""}
         ${s.checked ? `<p><b>営業確認</b>${esc(s.checked)}</p>` : ""}
         ${(s.sources || []).length ? `<p><b>出典</b>${s.sources.map((u, i) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host(u))}</a>`).join("、")}</p>` : ""}
       </div>`;

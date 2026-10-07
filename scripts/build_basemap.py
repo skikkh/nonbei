@@ -1,6 +1,6 @@
 """Turn the cached Overpass extracts into site/data/base.json.
 
-base.json = {"lo": [...], "hi": [...], "labels": [...]}
+base.json = {"lo": [...], "labels": [...]}     base_hi.json = {"hi": [...]}
   feature = [class, minzoom, part, part, ...]   part = polyline-encoded world units
   label   = [type, minzoom, x, y, name, rank]
 "lo" is drawn at zoom <= 12, "hi" at zoom >= 13 (together with the lazily
@@ -350,14 +350,17 @@ def main():
     build_wide(wide)
     lo.items += wide.items
     labels = station_labels() + place_labels() + park_labels() + wide_labels()
-    data = {"v": 3, "z0": 18, "bbox": [round(x0), round(y0), round(x1), round(y1)],
-            "lo": sorted(lo.feats, key=lambda f: f[0]), "hi": sorted(hi.feats, key=lambda f: f[0]),
-            "labels": labels}
-    path = os.path.join(OUT, "base.json")
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
-    print(f"wrote {path}: {os.path.getsize(path)/1e6:.2f} MB lo={len(lo.feats)} hi={len(hi.feats)} labels={len(labels)}",
-          file=sys.stderr)
+    # base.json is all the city-wide view needs; base_hi.json is fetched once the map reaches zoom 13
+    out = {
+        "base.json": {"v": 3, "z0": 18, "bbox": [round(x0), round(y0), round(x1), round(y1)],
+                      "lo": sorted(lo.feats, key=lambda f: f[0]), "labels": labels},
+        "base_hi.json": {"v": 3, "hi": sorted(hi.feats, key=lambda f: f[0])},
+    }
+    for name, data in out.items():
+        path = os.path.join(OUT, name)
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
+        print(f"wrote {path}: {os.path.getsize(path)/1e6:.2f} MB", file=sys.stderr)
 
 
 if __name__ == "__main__":

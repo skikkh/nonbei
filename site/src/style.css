@@ -150,6 +150,7 @@ button { cursor: pointer; }
 .listhead .of { display: block; font-weight: 400; font-size: var(--t-xs); color: var(--ink-3); }
 .hint { margin: 6px 16px 0; font-size: var(--t-xs); color: var(--ink-3); }
 .list { list-style: none; margin: 0; padding: 6px 8px 16px; display: flex; flex-direction: column; gap: 2px; }
+.list .more { display: flex; justify-content: center; padding: 10px 0 4px; }
 .list .empty { padding: 24px 12px; color: var(--ink-2); font-size: var(--t-sm); text-align: center; }
 .card { position: relative; display: flex; align-items: stretch; border-radius: 10px; }
 .card:hover { background: var(--panel-2); }
@@ -354,7 +355,9 @@ path.yk-shape[stroke-width="7"] { stroke-dasharray: none; stroke-opacity: .28; s
   #panel[data-sheet="peek"] .noren .sub { display: none; }
   .map-tools { top: 80px; }
   .leaflet-top.leaflet-right { margin-top: env(safe-area-inset-top, 0px); }
-  .leaflet-bottom { bottom: 212px; }
+  .leaflet-bottom { bottom: 212px; transition: bottom .25s ease; }
+  #panel[data-sheet="half"] ~ #map .leaflet-bottom { bottom: calc(56% + 4px); }
+  #panel[data-sheet="full"] ~ #map .leaflet-bottom { display: none; }
   .map-status { bottom: 224px; }
   body.show-detail .noren { display: none; }
   body.show-detail #sheet-handle { height: 18px; margin-bottom: -6px; }

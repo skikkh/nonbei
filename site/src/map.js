@@ -168,9 +168,24 @@
     this.chunks = {}; // key -> "loading" | "done"
     var self = this;
     base.lo.forEach(function (r) { self.lo.insert(toFeature(r)); });
-    base.hi.forEach(function (r) { self.hi.insert(toFeature(r)); });
+    (base.hi || []).forEach(function (r) { self.hi.insert(toFeature(r)); });
     base.labels.forEach(function (l) { self.addLabel(l); });
+    this.hiState = base.hi ? "done" : null;
   }
+  // the detailed Tokyo layers (zoom >= 13) live in base_hi.json
+  Store.prototype.needHi = function (onLoad) {
+    var self = this;
+    if (this.hiState) return;
+    this.hiState = "loading";
+    fetch(this.baseUrl + "base_hi.json").then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
+    }).then(function (d) {
+      d.hi.forEach(function (r) { self.hi.insert(toFeature(r)); });
+      self.hiState = "done";
+      onLoad(null);
+    }).catch(function () { self.hiState = null; });
+  };
   Store.prototype.addLabel = function (l) {
     this.labels.insert({ t: l[0], z: l[1], x: l[2], y: l[3], n: l[4], r: l[5], b: [l[2], l[3], l[2], l[3]] });
   };
@@ -248,6 +263,7 @@
       var m = 30 / s * dpr;
       if (z >= 13) {
         var self = this, again = function (b) { self.repaint(b); if (self.onChunk) self.onChunk(); };
+        st.needHi(again);
         st.need("c", ox, oy, ox + span, oy + span, again);
         if (z >= 15) st.need("b", ox, oy, ox + span, oy + span, again);
       }

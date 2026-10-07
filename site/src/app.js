@@ -126,7 +126,7 @@
   }
 
   // markers -----------------------------------------------------------------
-  const spotLayer = L.layerGroup().addTo(map);
+  const spotLayer = L.layerGroup(); // syncZoom() puts it on the map from zoom 12
   const areaLayer = L.layerGroup();
   const ykLayer = L.layerGroup().addTo(map);
   const markers = new Map();
@@ -219,7 +219,9 @@
 
   // bubbles for the city-wide view: regions up to z10, towns at z11, pins from z12
   const regionLayer = L.layerGroup();
-  let areaBubbles = [];
+  const REGION_SHORT = { "都心（新橋・銀座・神田）": "都心", "上野・浅草・日暮里": "上野・浅草", "新宿・中野・杉並": "新宿・中央線",
+    "渋谷・目黒・世田谷": "渋谷・城南", "池袋・赤羽・城北": "池袋・赤羽", "墨田・江東・江戸川": "城東" };
+  let bubbles = { area: [], region: [] };
   const bubble = (layer, name, spots, cls) => {
     const n = spots.length;
     const social = spots.filter((s) => (s.social || 0) >= 4).length;
@@ -228,7 +230,7 @@
     const m = L.marker([lat, lng], { icon, pane: "areas", title: `${name}：${n}軒（交流しやすい店 ${social}軒）`, keyboard: false });
     m.on("click", () => map.flyToBounds(L.latLngBounds(spots.map((s) => [s.lat, s.lng])), { ...panelPad(), maxZoom: 16, duration: 0.8 }));
     layer.addLayer(m);
-    return { m, n, w: name.length * 13 + 40, ll: L.latLng(lat, lng) };
+    return { m, n, w: name.length * (cls === "a-r" ? 15 : 13) + 44, h: cls === "a-r" ? 34 : 28, ll: L.latLng(lat, lng) };
   };
   const group = (list, key) => {
     const g = new Map();
@@ -238,23 +240,30 @@
   const buildAreas = (list) => {
     areaLayer.clearLayers();
     regionLayer.clearLayers();
-    areaBubbles = [];
+    bubbles = { area: [], region: [] };
     group(list, "area").forEach((spots, name) => {
-      areaBubbles.push(bubble(areaLayer, name, spots, spots.length >= 15 ? "a-l" : spots.length >= 7 ? "a-m" : "a-s"));
+      bubbles.area.push(bubble(areaLayer, name, spots, spots.length >= 15 ? "a-l" : spots.length >= 7 ? "a-m" : "a-s"));
     });
-    group(list, "region").forEach((spots, name) => bubble(regionLayer, name.replace(/（.*?）/, ""), spots, "a-r"));
+    group(list, "region").forEach((spots, name) => bubbles.region.push(bubble(regionLayer, REGION_SHORT[name] || name, spots, "a-r")));
   };
-  // keep the bigger towns when bubbles collide
+  // place bubbles biggest first; nudge a colliding one up, down or sideways, else hide it
   const declutterAreas = () => {
-    if (!map.hasLayer(areaLayer)) return;
+    const list = map.hasLayer(regionLayer) ? bubbles.region : map.hasLayer(areaLayer) ? bubbles.area : null;
+    if (!list) return;
     const placed = [];
-    [...areaBubbles].sort((a, b) => b.n - a.n).forEach((b) => {
+    const free = (q) => !placed.some((o) => q[0] < o[2] && q[2] > o[0] && q[1] < o[3] && q[3] > o[1]);
+    [...list].sort((a, b) => b.n - a.n).forEach((b) => {
       const p = map.latLngToContainerPoint(b.ll);
-      const box = [p.x - b.w / 2 - 3, p.y - 14, p.x + b.w / 2 + 3, p.y + 14];
-      const free = !placed.some((o) => box[0] < o[2] && box[2] > o[0] && box[1] < o[3] && box[3] > o[1]);
-      if (free) placed.push(box);
-      const el = b.m.getElement();
-      if (el) el.style.visibility = free ? "" : "hidden";
+      const tries = [[0, 0], [0, -b.h], [0, b.h], [b.w * 0.6, 0], [-b.w * 0.6, 0], [b.w * 0.5, -b.h], [-b.w * 0.5, b.h]];
+      let at = null;
+      for (const [dx, dy] of tries) {
+        const q = [p.x + dx - b.w / 2, p.y + dy - b.h / 2, p.x + dx + b.w / 2, p.y + dy + b.h / 2];
+        if (free(q)) { placed.push(q); at = [dx, dy]; break; }
+      }
+      const btn = b.m.getElement()?.firstElementChild;
+      if (!btn) return;
+      btn.style.visibility = at ? "" : "hidden";
+      btn.style.transform = at ? `translate(calc(-50% + ${at[0]}px), calc(-50% + ${at[1]}px))` : "";
     });
   };
 
@@ -292,6 +301,8 @@
   };
 
   let current = [];
+  const PAGE = 150;
+  let shown = PAGE;
   const render = () => {
     const filtered = SPOTS.filter(matches);
     visible.clear();
@@ -309,7 +320,8 @@
     $("#total").textContent = filtered.length;
   };
 
-  const renderList = (filtered = SPOTS.filter(matches)) => {
+  const renderList = (filtered = SPOTS.filter(matches), keepPage = false) => {
+    if (!keepPage) shown = PAGE;
     const c = map.getCenter();
     const cw = NBMap.project(c.lat, c.lng);
     let list = filtered;
@@ -329,7 +341,7 @@
       return;
     }
     const near = (s) => s.near && s.near[0] ? `${esc(s.near[0][0])}駅 ${walk(s.near[0][1])}` : esc(s.station || "");
-    ol.innerHTML = list.slice(0, 400).map((s) => `
+    ol.innerHTML = list.slice(0, shown).map((s) => `
       <li class="card k-${s.kind}${s.id === S.selected ? " is-sel" : ""}" data-id="${s.id}">
         <button class="card-main" type="button" data-id="${s.id}">
           <span class="mini-pin" aria-hidden="true">${KIND[s.kind].g}</span>
@@ -341,7 +353,7 @@
           </span>
         </button>
         <button class="fav${fav.has(s.id) ? " on" : ""}" type="button" data-fav="${s.id}" aria-pressed="${fav.has(s.id)}" title="行きたいリスト">${fav.has(s.id) ? "★" : "☆"}</button>
-      </li>`).join("");
+      </li>`).join("") + (list.length > shown ? `<li class="more"><button type="button" class="btn ghost" id="more">さらに表示（残り${list.length - shown}軒）</button></li>` : "");
   };
   const walk = (m) => (m < 1000 ? `${Math.max(1, Math.round(m / 80))}分` : `${(m / 1000).toFixed(1)}km`);
 
@@ -545,6 +557,7 @@
     const card = e.target.closest(".card-main[data-id]");
     if (card) { select(card.dataset.id); return; }
     if (e.target.closest("#back")) { closeDetail(); return; }
+    if (e.target.closest("#more")) { shown += PAGE; renderList(undefined, true); return; }
     const cp = e.target.closest("[data-copy]");
     if (cp) {
       const text = cp.dataset.copy;

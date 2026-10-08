@@ -102,7 +102,7 @@
     f: { open: false, social: false, solo: false, hiru: false, cheap: false, card: false, english: false, fav: false },
     favs: new Set(store.get("nb-favs", [])),
     theme: store.get("nb-theme", "night"),
-    three: store.get("nb-three", true),
+    three: store.get("nb-three2", false),
   };
   let D, spots, byId, atlas;
   const phone = () => matchMedia("(max-width: 820px)").matches;
@@ -266,7 +266,7 @@
     $("#north").addEventListener("click", () => atlas && atlas.map.easeTo({ bearing: 0, duration: 500 }));
     $("#tilt").setAttribute("aria-pressed", String(state.three));
     $("#tilt").addEventListener("click", () => {
-      state.three = !state.three; store.set("nb-three", state.three);
+      state.three = !state.three; store.set("nb-three2", state.three);
       $("#tilt").setAttribute("aria-pressed", String(state.three));
       if (atlas) atlas.setThree(state.three);
     });

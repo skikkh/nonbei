@@ -84,25 +84,27 @@
   }
 
   // ------------------------------------------------------------------ palettes
-  // 夜: indigo ink with sodium-lit streets.  昼: washi paper and sumi ink.
+  // 夜: a monochrome midnight indigo, water darkest, blocks and streets in
+  // steps of light, so only the lanterns (and the rail lines) carry colour.
+  // 昼: white ground and footprints drawn like a residential map.
   const PAL = {
     night: {
-      bg: "#0b0f19", park: "#0f1a18", forest: "#0d1715", cemetery: "#101716", grass: "#0f1b17", water: "#060a12", river: "#08101c",
-      bld: "#121722", bldLo: "#121824", bldHi: "#1e2536", bldLine: "#1a202d",
-      minor: "#1a202d", ped: "#2a2130", tert: "#252b37", sec: "#3a3021", pri: "#4c3a1f", mot: "#634820",
-      cas: "#0b0f19", tunnel: "#222936", path: "#2e3547", admin: "#2a2f3e", pref: "#3c3550",
-      rail: "#6d7487", railTun: 0.3, railOp: 0.78, railCase: "#0b0f19",
-      text: "#f2e9d8", halo: "#0b0f19", yomi: "#9c947f", place: "#8b8574", placeBig: "#b7ae97", parkText: "#6b8f74",
-      station: "#f2e9d8", stationRing: "#0b0f19", sign: "#d9432b", signText: "#fff6e6", signLine: "rgba(255,214,170,.55)",
-      poi: "#c98a5a", poiText: "#d8a47c",
-      glow: 0.6, ykFill: 0.11, ykLine: 0.8, dot: "#fff1d0",
+      bg: "#161e2d", park: "#142420", forest: "#13221e", cemetery: "#172220", grass: "#15261f", water: "#0b111c", river: "#0d1522",
+      bld: "#1c2537", bldLine: "#2b354b", bldShadow: "rgba(3,6,12,.6)",
+      minor: "#232d40", ped: "#283247", tert: "#2b364c", sec: "#323e56", pri: "#3b4862", mot: "#46546f",
+      cas: "#141b29", tunnel: "#232c3d", path: "#36425a", admin: "#2f3a52", pref: "#3e4a68",
+      rail: "#5d6a85", railTun: 0.25, railOp: 0.6, railCase: "#161e2d",
+      text: "#ece8e1", halo: "#131a28", yomi: "#9099ab", place: "#8a93a6", placeBig: "#b6becd", parkText: "#6f9488",
+      station: "#ece8e1", stationRing: "#131a28", sign: "#d9432b", signText: "#fff6e6", signLine: "rgba(255,214,170,.55)",
+      poi: "#c08a64", poiText: "#d1a585",
+      glow: 0.62, ykFill: 0.11, ykLine: 0.8, dot: "#fff1d0",
     },
     day: {
       bg: "#f4f4f1", park: "#dde8d6", forest: "#d3e0cb", cemetery: "#e5e9e2", grass: "#e1eadb", water: "#cdd9e2", river: "#c3d2dd",
-      bld: "#e9e8e4", bldLo: "#efeeea", bldHi: "#e0dfda", bldLine: "#d9d8d3",
+      bld: "#e7e6e1", bldLine: "#d0cec8", bldShadow: "rgba(28,28,27,.07)",
       minor: "#ffffff", ped: "#f0eeea", tert: "#ffffff", sec: "#ffffff", pri: "#ffffff", mot: "#fffcf6",
       cas: "#d6d5d0", tunnel: "#d3d2cd", path: "#a6a5a0", admin: "#bab6c6", pref: "#a7a1b6",
-      rail: "#3d3d3b", railTun: 0.4, railOp: 0.85, railCase: "#f4f4f1",
+      rail: "#3d3d3b", railTun: 0.35, railOp: 0.6, railCase: "#f4f4f1",
       text: "#1c1c1b", halo: "#f8f8f6", yomi: "#77766f", place: "#6c6b66", placeBig: "#3f3e3a", parkText: "#557550",
       station: "#ffffff", stationRing: "#1c1c1b", sign: "#c8371f", signText: "#fffdf9", signLine: "rgba(28,28,27,.32)",
       poi: "#ad5a3a", poiText: "#8e4a31",
@@ -188,7 +190,7 @@
     return [
       ...roadLayers(src, P, false).filter((l) => /-(minor|ped|tert)(-|$)/.test(l.id)),
       { id: `${src}-poi`, type: "circle", source: src, minzoom: 15.5, filter: ["==", ["get", "c"], 90],
-        paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 15.5, 1.6, 18, 3.6], "circle-color": P.poi, "circle-opacity": 0.85, "circle-stroke-color": P.bg, "circle-stroke-width": 1 } },
+        paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 15.5, 1.2, 18, 2.8], "circle-color": P.poi, "circle-opacity": 0.55, "circle-stroke-color": P.bg, "circle-stroke-width": 0.8 } },
     ];
   }
 
@@ -200,14 +202,15 @@
         paint: { "line-color": P.path, "line-width": w([16, 2], [19, 5]), "line-dasharray": [0.4, 0.5] } },
       { id: `${src}-service`, type: "line", source: src, minzoom: 16, filter: ["==", ["get", "c"], 27],
         layout: { "line-join": "round", "line-cap": "round" }, paint: { "line-color": P.minor, "line-width": w([16, 1], [18, 4], [20, 12]) } },
+      // footprints, not boxes: a soft offset shadow, the fill, then a hairline
+      { id: `${src}-bldsh`, type: "fill", source: src, minzoom: 15, filter: ["==", ["get", "c"], 6],
+        paint: { "fill-color": P.bldShadow, "fill-translate": [1.2, 1.8], "fill-translate-anchor": "viewport", "fill-antialias": false,
+          "fill-opacity": ["interpolate", ["linear"], ["zoom"], 15, 0, 15.8, 1] } },
       { id: `${src}-bld`, type: "fill", source: src, minzoom: 15, filter: ["==", ["get", "c"], 6],
-        paint: { "fill-color": P.bld, "fill-outline-color": P.bldLine, "fill-opacity": ["interpolate", ["linear"], ["zoom"], 15, 0, 15.6, 1] } },
-      { id: `${src}-bld3d`, type: "fill-extrusion", source: src, minzoom: 15.2, filter: ["==", ["get", "c"], 6],
-        paint: {
-          "fill-extrusion-color": ["interpolate", ["linear"], ["get", "a"], 4, P.bldLo, 60, P.bldHi],
-          "fill-extrusion-height": ["interpolate", ["linear"], ["zoom"], 15.2, 0, 16.2, ["get", "a"]],
-          "fill-extrusion-opacity": 0.9, "fill-extrusion-vertical-gradient": true,
-        } },
+        paint: { "fill-color": P.bld, "fill-opacity": ["interpolate", ["linear"], ["zoom"], 15, 0, 15.6, 1] } },
+      { id: `${src}-bldline`, type: "line", source: src, minzoom: 15.4, filter: ["==", ["get", "c"], 6],
+        paint: { "line-color": P.bldLine, "line-width": ["interpolate", ["linear"], ["zoom"], 15.4, 0.3, 17, 0.6, 19, 1.1],
+          "line-opacity": ["interpolate", ["linear"], ["zoom"], 15.4, 0, 16, 1] } },
     ];
   }
 
@@ -229,7 +232,7 @@
       this.colours = [];
       this.visibleIds = new Set(this.spots.map((s) => s.id));
       this.dpr = Math.min(window.devicePixelRatio || 1, 2);
-      this.three = opts.three !== false;
+      this.three = !!opts.three;
       this.ready = false;
       const P = this.P;
       this.map = new maplibregl.Map({
@@ -334,7 +337,8 @@
           const isB = id[0] === "b";
           const layers = (isB ? detailLayers(sid, this.P) : streetLayers(sid, this.P));
           // streets sit under the main roads; paths and building footprints under the spots; extrusions on top
-          layers.forEach((l) => m.addLayer(l, !isB ? (l.id.endsWith("-poi") ? "anchor-spots" : "anchor-hi-roads") : l.type === "fill-extrusion" ? "anchor-3d" : "anchor-detail"));
+          // footprints sit on the ground under every street; paths and steps above the roads
+          layers.forEach((l) => m.addLayer(l, !isB ? (l.id.endsWith("-poi") ? "anchor-spots" : "anchor-hi-roads") : /-bld(sh|line)?$/.test(l.id) ? "anchor-streets" : "anchor-detail"));
           this.chunks[id] = { state: "done", layers: layers.map((l) => l.id), sid };
           this._touch(id);
         }
@@ -540,10 +544,15 @@
       ctx.save();
       if (this.theme === "day") { ctx.shadowColor = "rgba(36,32,27,.28)"; ctx.shadowBlur = 3; ctx.shadowOffsetY = 1; }
       else { ctx.shadowColor = "rgba(255,106,74,.55)"; ctx.shadowBlur = 10; }
-      ctx.fillStyle = P.sign; ctx.fillRect(b[0], b[1], w2, h);
+      ctx.fillStyle = P.sign;
+      ctx.beginPath();
+      if (ctx.roundRect) ctx.roundRect(b[0], b[1], w2, h, 3); else ctx.rect(b[0], b[1], w2, h);
+      ctx.fill();
       ctx.restore();
-      ctx.fillStyle = "rgba(0,0,0,.22)"; ctx.fillRect(b[0], b[1], w2, 2);
-      ctx.strokeStyle = P.signLine; ctx.lineWidth = 0.8; ctx.strokeRect(b[0] + 2, b[1] + 3.5, w2 - 4, h - 6);
+      ctx.strokeStyle = P.signLine; ctx.lineWidth = 0.8;
+      ctx.beginPath();
+      if (ctx.roundRect) ctx.roundRect(b[0] + 2, b[1] + 2.5, w2 - 4, h - 5, 2); else ctx.rect(b[0] + 2, b[1] + 2.5, w2 - 4, h - 5);
+      ctx.stroke();
       ctx.fillStyle = P.signText; ctx.font = `800 ${fs}px ${SERIF}`;
       ctx.textAlign = "center"; ctx.textBaseline = "middle";
       const cx = b[0] + w2 / 2;
@@ -727,12 +736,12 @@
     // -------------------------------------------------------------- camera
     flyToSpot(s, offset) {
       const target = { center: [s.lng, s.lat], zoom: Math.max(this.map.getZoom(), s.kind === "yokocho" ? 16.8 : 17.6), offset: offset || [0, 0], duration: 1600, essential: true };
-      if (this.three) { target.pitch = 52; } else { target.pitch = 0; target.bearing = 0; }
+      if (this.three) { target.pitch = 45; } else { target.pitch = 0; target.bearing = 0; }
       this.map.flyTo(target);
     }
     setThree(on) {
       this.three = on;
-      this.map.easeTo({ pitch: on ? 55 : 0, bearing: on ? this.map.getBearing() : 0, duration: 700 });
+      this.map.easeTo({ pitch: on ? 45 : 0, bearing: on ? this.map.getBearing() : 0, duration: 700 });
     }
   }
 

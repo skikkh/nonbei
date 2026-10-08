@@ -1,10 +1,10 @@
 name: Deploy map to GitHub Pages
 
-# Runs on the default branch only. Enable it once under
-# Settings → Pages → Build and deployment → Source: "GitHub Actions".
+# Builds dist/site and publishes it to https://skikkh.github.io/nonbei/.
+# Pages must use Settings → Pages → Build and deployment → Source: "GitHub Actions".
 on:
   push:
-    branches: [main]
+    branches: [main, claude/sharp-carson-92yr24]
   workflow_dispatch:
 
 permissions:

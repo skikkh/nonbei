@@ -75,6 +75,8 @@ def build(out=os.path.join(ROOT, "dist", "site")):
             src = os.path.join(STATIC, name)
             if os.path.isfile(src):
                 shutil.copy(src, os.path.join(out, name))
+            elif os.path.isdir(src):
+                shutil.copytree(src, os.path.join(out, name), dirs_exist_ok=True)
     open(os.path.join(out, ".nojekyll"), "w").close()
     kb = lambda p: os.path.getsize(os.path.join(out, p)) / 1e3  # noqa: E731
     print(f"index.html {kb('index.html'):.0f} KB, data/spots.json {kb('data/spots.json'):.0f} KB", file=sys.stderr)

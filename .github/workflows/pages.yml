@@ -1,10 +1,10 @@
 name: Deploy map to GitHub Pages
 
 # Builds dist/site and publishes it to https://skikkh.github.io/nonbei/.
-# Pages must use Settings → Pages → Build and deployment → Source: "GitHub Actions".
+# Only for Settings → Pages → Source: "GitHub Actions"; run it from the
+# Actions tab. With Source "Deploy from a branch" (main, /docs), Pages serves
+# docs/ directly and this workflow is not needed.
 on:
-  push:
-    branches: [main, claude/sharp-carson-92yr24]
   workflow_dispatch:
 
 permissions:
@@ -27,8 +27,6 @@ jobs:
       - name: Assemble the site
         run: python3 scripts/build_site.py
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/site

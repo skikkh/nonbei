@@ -36,7 +36,7 @@
   window.og = (async () => {
     const D = await fetch("../data/spots.json").then((r) => r.json());
     const live = D.spots.filter((s) => s.status !== "closed");
-    document.getElementById("facts").textContent = `${live.length}軒・営業時間、予算、客層、混む時間、店の決まり、名物と値段まで`;
+    document.getElementById("facts").textContent = `${live.length}軒・営業時間、予算、客層、店の決まりまで`;
     const a = await new Promise((res) => { const at = new NBAtlas.Atlas(document.getElementById("map"), { spots: live, chunks: D.chunks, theme: "night", three: true, capture: true, webSans: true, dataUrl: "../data/", bounds: [[139.69, 35.68], [139.72, 35.70]], padding: () => 0, showPoi: () => false, onReady: () => res(at) }); });
     a.map.jumpTo({ center: [139.7021, 35.6934], zoom: 16.15, pitch: 58, bearing: -22 });
     const text = document.body.innerText;

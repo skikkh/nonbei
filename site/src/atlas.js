@@ -549,7 +549,7 @@
       const cx = b[0] + w2 / 2;
       [...text].forEach((ch, i) => {
         const cy = b[1] + 5.5 + fs * 1.04 * (i + 0.5);
-        if (VROT.has(ch)) { ctx.save(); ctx.translate(cx, cy); ctx.rotate(Math.PI / 2); ctx.fillText(ch, 0, 0); ctx.restore(); }
+        if (VROT.has(ch) || /[A-Za-z]/.test(ch)) { ctx.save(); ctx.translate(cx, cy); ctx.rotate(Math.PI / 2); ctx.fillText(ch, 0, 0); ctx.restore(); }
         else ctx.fillText(ch, cx, cy);
       });
       ctx.textAlign = "left";

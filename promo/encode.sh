@@ -11,11 +11,11 @@ COLOR="-color_primaries bt709 -color_trc bt709 -colorspace bt709 -color_range tv
 ffmpeg -y -loglevel error -framerate 30 -i frames/f%04d.jpg \
   -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=48000 \
   -map 0:v -map 1:a -shortest -vf "$VF" \
-  -c:v libx264 -profile:v high -level:v 4.2 -preset slow -crf 16 -g 60 -keyint_min 30 $COLOR \
+  -c:v libx264 -profile:v high -level:v 4.2 -preset slow -crf 20 -g 60 -keyint_min 30 $COLOR \
   -c:a aac -b:a 128k -ar 48000 -movflags +faststart nonbei-reel.mp4
 
 ffmpeg -y -loglevel error -framerate 30 -i frames/f%04d.jpg -vf "$VF" \
-  -c:v libx264 -profile:v high -level:v 4.2 -preset slow -b:v 4200k -pass 1 -passlogfile light -an -f mp4 /dev/null
+  -c:v libx264 -profile:v high -level:v 4.2 -preset slow -b:v 4200k -g 60 -pass 1 -passlogfile light -an -f mp4 /dev/null
 ffmpeg -y -loglevel error -framerate 30 -i frames/f%04d.jpg \
   -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=48000 \
   -map 0:v -map 1:a -shortest -vf "$VF" \

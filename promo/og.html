@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>東京のんべえ地図 — OGP</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Shippori+Mincho+B1:wght@600;800&display=swap">
+<link rel="stylesheet" href="maplibre-gl.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.js"></script>
+<script src="atlas.js"></script>
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #0b0f19; color: #f2e9d8; }
+  #map { position: absolute; left: 380px; top: 0; width: 820px; height: 630px; }
+  .nb-overlay { position: absolute; left: 0; top: 0; pointer-events: none; }
+  .panel { position: absolute; left: 0; top: 0; width: 520px; height: 630px; padding: 70px 0 0 64px; box-sizing: border-box;
+    background: linear-gradient(to right, #0b0f19 0, #0b0f19 340px, rgba(11,15,25,0) 520px); }
+  .logo { width: 44px; height: 58px; filter: drop-shadow(0 0 18px rgba(255,106,74,.7)); }
+  h1 { margin: 26px 0 0; font: 800 66px/1.15 "Shippori Mincho B1", serif; letter-spacing: .08em; }
+  h1 em { font-style: normal; color: #ff6a4a; text-shadow: 0 0 24px rgba(255,106,74,.45); }
+  .sub { margin: 22px 0 0; font: 600 21px/1.65 "Shippori Mincho B1", serif; color: #d9cfbb; }
+  .facts { margin: 26px 0 0; font: 400 16px/1.7 "BIZ UDPGothic", sans-serif; color: #a89f8b; }
+  .url { position: absolute; left: 64px; bottom: 50px; margin: 0; font: 700 20px/1 "BIZ UDPGothic", sans-serif; color: #f2e9d8; letter-spacing: .03em; }
+  .osm { position: absolute; right: 12px; bottom: 8px; margin: 0; font: 400 10px/1 sans-serif; color: rgba(242,233,216,.45); }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div class="panel">
+  <svg class="logo" viewBox="0 0 24 32"><rect x="7" y="1.2" width="10" height="3" rx=".8" fill="#14100c"/><rect x="7" y="27.8" width="10" height="3" rx=".8" fill="#14100c"/><path d="M12 3.6c6.3 0 9.6 5.4 9.6 12.4S18.3 28.4 12 28.4 2.4 23 2.4 16 5.7 3.6 12 3.6z" fill="#e2432a"/><path d="M3.3 10.6h17.4M2.6 14.2h18.8M2.6 17.8h18.8M3.3 21.4h17.4M4.8 25h14.4M4.8 7h14.4" stroke="#8f2414" stroke-width=".7" opacity=".85"/></svg>
+  <h1>東京<em>のんべえ</em><br>地図</h1>
+  <p class="sub">立ち飲み・角打ち・せんべろ・横丁。<br>今夜、誰かと話せる一軒を探す。</p>
+  <p class="facts" id="facts"></p>
+</div>
+<p class="url">skikkh.github.io/nonbei</p>
+<p class="osm">© OpenStreetMap contributors</p>
+<script>
+  window.og = (async () => {
+    const D = await fetch("../data/spots.json").then((r) => r.json());
+    const live = D.spots.filter((s) => s.status !== "closed");
+    document.getElementById("facts").textContent = `${live.length}軒・営業時間、予算、客層、混む時間、店の決まり、名物と値段まで`;
+    const a = await new Promise((res) => { const at = new NBAtlas.Atlas(document.getElementById("map"), { spots: live, chunks: D.chunks, theme: "night", three: true, capture: true, webSans: true, dataUrl: "../data/", bounds: [[139.69, 35.68], [139.72, 35.70]], padding: () => 0, showPoi: () => false, onReady: () => res(at) }); });
+    a.map.jumpTo({ center: [139.7021, 35.6934], zoom: 16.15, pitch: 58, bearing: -22 });
+    const text = document.body.innerText;
+    await Promise.all([document.fonts.load('800 66px "Shippori Mincho B1"', text), document.fonts.load('600 21px "Shippori Mincho B1"', text), document.fonts.load('400 16px "BIZ UDPGothic"', text), document.fonts.load('700 20px "BIZ UDPGothic"', text)]);
+    for (let i = 0; i < 200 && !a.fontsReady; i++) await new Promise((r) => setTimeout(r, 50));
+    window.nbAtlas = a;
+    return true;
+  })();
+</script>
+</body>
+</html>

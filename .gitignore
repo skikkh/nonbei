@@ -5,3 +5,4 @@ __pycache__/
 site/vendor/leaflet.js
 .DS_Store
 data/info.json
+promo/out/

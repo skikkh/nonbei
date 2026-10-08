@@ -223,6 +223,7 @@ svg { width: 18px; height: 18px; flex: none; }
 .d-kind { display: flex; align-items: center; gap: 9px; margin: 0; font-size: 12px; color: var(--text-2); letter-spacing: .04em; }
 .d-name { margin: 14px 0 0; font: 800 30px/1.3 var(--serif); letter-spacing: .03em; }
 .d-name rt { font: 400 10.5px/1 var(--sans); color: var(--text-3); letter-spacing: .14em; padding-bottom: 4px; }
+.d-name-note { display: block; margin-top: 2px; font: 600 15px/1.5 var(--serif); color: var(--text-2); letter-spacing: .02em; }
 .d-en { margin: 4px 0 0; font-size: 11.5px; color: var(--text-3); letter-spacing: .03em; }
 .d-catch { margin: 14px 0 0; font: 600 16px/1.6 var(--serif); color: var(--accent-2); }
 .d-desc { margin: 12px 0 0; font-size: 14px; line-height: 1.9; color: var(--text-2); }
@@ -252,6 +253,11 @@ svg { width: 18px; height: 18px; flex: none; }
 .talk-big { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
 .talk-big .talk i { width: 9px; height: 9px; }
 .talk-big b { font: 800 14px/1 var(--serif); }
+.talk-big.solo { margin-top: -2px; }
+.talk-big.solo .talk i.on { background: var(--text-2); border-color: var(--text-2); box-shadow: none; }
+.talk-big span:not(.talk) { font-size: 12.5px; color: var(--text-2); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 12px 0 0; padding: 0; }
+.tags li { padding: 3px 8px; border: 1px solid var(--line-2); border-radius: 2px; font-size: 11.5px; color: var(--text-2); }
 .facts { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 10px 14px; margin: 0; font-size: 13.5px; line-height: 1.65; }
 .facts dt { color: var(--text-3); font-size: 12px; padding-top: 1px; }
 .facts dd { margin: 0; color: var(--text); }

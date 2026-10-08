@@ -92,7 +92,7 @@
   const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return u; } };
   const SRC_NAME = { "tabelog.com": "食べログ", "hotpepper.jp": "ホットペッパー", "retty.me": "Retty", "san-tatsu.jp": "さんたつ", "instagram.com": "Instagram", "x.com": "X", "twitter.com": "X" };
   const srcName = (u) => { const h = host(u); for (const k in SRC_NAME) if (h === k || h.endsWith("." + k)) return SRC_NAME[k]; return h; };
-  const talkDots = (n) => `<span class="talk" aria-label="話しやすさ${n}">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= n ? "on" : ""}"></i>`).join("")}</span>`;
+  const talkDots = (n, label) => `<span class="talk" aria-label="${label || "話しやすさ"}${n}">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= n ? "on" : ""}"></i>`).join("")}</span>`;
   const seal = (k, on) => `<i class="seal${on ? " on" : ""}" style="--c:var(--k-${k})" aria-hidden="true">${KIND[k].glyph}</i>`;
 
   // ---------------------------------------------------------------- state
@@ -378,6 +378,12 @@
     if (id && byId && byId[id] && id !== state.sel) select(id, { sheet: "half" });
   }
 
+  // furigana over the shop name only, not over a trailing note such as （角打ち明治屋）
+  function nameRuby(s) {
+    if (!s.kana) return esc(s.name);
+    const m = s.name.match(/^(.*?)([（(].*)$/);
+    return m ? `<ruby>${esc(m[1])}<rt>${esc(s.kana)}</rt></ruby><span class="d-name-note">${esc(m[2])}</span>` : `<ruby>${esc(s.name)}<rt>${esc(s.kana)}</rt></ruby>`;
+  }
   function fact(label, value, src, sub) {
     if (value == null || value === "" || (Array.isArray(value) && !value.length)) return "";
     return `<dt>${label}</dt><dd>${value}${src ? `<span class="src-tag">${esc(src)}</span>` : ""}${sub ? `<small>${sub}</small>` : ""}</dd>`;
@@ -406,7 +412,7 @@
       <button type="button" class="t-btn" data-act="share"><svg><use href="#i-share"/></svg>共有</button></div>`);
     h.push(`<header class="d-head">
       <p class="d-kind">${seal(s.kind, true)}${KIND[s.kind].label}・${esc(s.area)}${s.ward && !s.area.includes(s.ward) ? `（${esc(s.ward)}）` : ""}</p>
-      <h2 class="d-name">${s.kana ? `<ruby>${esc(s.name)}<rt>${esc(s.kana)}</rt></ruby>` : esc(s.name)}</h2>
+      <h2 class="d-name">${nameRuby(s)}</h2>
       ${s.en ? `<p class="d-en">${esc(s.en)}</p>` : ""}
       ${s.catch ? `<p class="d-catch">${esc(s.catch)}</p>` : ""}
       <p class="d-desc">${esc(s.desc)}</p></header>`);
@@ -420,7 +426,9 @@
     if (!yk || s.talk) {
       h.push(`<section class="d-sec"><h3>話しやすさ</h3>
         ${!yk ? `<div class="talk-big">${talkDots(s.social || 0)}<b>${TALK[s.social || 0] || ""}</b></div>` : ""}
-        ${s.talk ? `<p>${esc(s.talk)}</p>` : ""}${s.talk2 ? `<p>${esc(s.talk2)}</p>` : ""}</section>`);
+        ${!yk && s.solo ? `<div class="talk-big solo">${talkDots(s.solo, "一人で入りやすさ")}<span>一人で入りやすさ ${["", "グループ向け", "グループ客が多い", "一人でも入れる", "一人客が多い", "一人客が大半"][s.solo] || ""}</span></div>` : ""}
+        ${s.talk ? `<p>${esc(s.talk)}</p>` : ""}${s.talk2 ? `<p>${esc(s.talk2)}</p>` : ""}
+        ${s.tags && s.tags.length ? `<ul class="tags">${s.tags.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}</section>`);
     }
     // facts
     const budgetSub = [s.budget_dinner ? `食べログ・夜 ${s.budget_dinner}` : "", s.budget_lunch ? `昼 ${s.budget_lunch}` : ""].filter(Boolean).join("／");
@@ -436,6 +444,7 @@
       fact("酒", s.drinks ? esc(s.drinks.join("・")) : ""),
       fact("電話", s.phone ? `<a href="tel:${esc(s.phone.replace(/[^\d+]/g, ""))}">${esc(s.phone)}</a>` : ""),
       fact("創業", s.since ? esc(s.since) : s.opened ? esc(String(s.opened).replace(/^(\d{4})\.(\d{1,2}).*$/, "$1年$2月開店")) : ""),
+      fact("昼飲み", s.hiru ? "15時より前から飲める" : ""),
       fact("英語", s.english ? "英語メニューや英語での対応あり" : ""),
     ].join("");
     if (facts) h.push(`<section class="d-sec"><h3>基本の情報</h3><dl class="facts">${facts}</dl></section>`);
@@ -542,7 +551,9 @@
     $("#clock").textContent = `${t.getUTCMonth() + 1}月${t.getUTCDate()}日（${di.hol ? "祝" : DAY_JP[DK[di.dow]]}）${hm(min)}`;
     const open = spots.filter((s) => s.status !== "closed" && (openState(s) || {}).open).length;
     $("#open-count").innerHTML = `いま <b>${open}</b>軒が営業中`;
+    const list = $("#list"), top = list.scrollTop;
     renderList();
+    list.scrollTop = top;
     if (state.sel && !$("#detail").hidden) {
       const now = $("#detail .d-now");
       const s = byId[state.sel], sl = stLabel(openState(s), true);

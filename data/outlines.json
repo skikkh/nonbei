@@ -1,0 +1,13 @@
+{
+ "kichijoji-harmonica-yokocho": {
+  "buildings": [
+   "w145129803"
+  ],
+  "center": [
+   35.703743,
+   139.5792576
+  ],
+  "fronting": false,
+  "note": "OSMの landuse=retail「ハーモニカ横丁」区画（吉祥寺本町1-1、平和通り・ダイヤ街・武蔵通りに囲まれた街区）"
+ }
+}

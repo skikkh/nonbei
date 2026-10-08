@@ -20,7 +20,7 @@ import urllib.parse
 import urllib.request
 
 sys.path.insert(0, os.path.dirname(__file__))
-from geo import enc_str, proj, unproj  # noqa: E402
+from geo import W, enc_str, proj, unproj  # noqa: E402
 from overpass import CACHE as OSM_CACHE, query  # noqa: E402
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
@@ -47,6 +47,10 @@ try:
     CACHE = json.load(open(CACHE_PATH, encoding="utf-8"))
 except FileNotFoundError:
     CACHE = {}
+try:  # traced yokocho outlines, see scripts/outline.py
+    OUTLINES = json.load(open(os.path.join(ROOT, "data", "outline_shapes.json"), encoding="utf-8"))
+except FileNotFoundError:
+    OUTLINES = {}
 
 
 def save_cache():
@@ -372,7 +376,7 @@ def clean(s):
     out = {}
     for k in ["id", "name", "name_kana", "name_en", "kind", "yokocho", "area", "ward", "address", "address_detail", "station",
               "hours", "closed", "budget", "budget_min", "budget_max", "price_note", "social", "solo", "hiru", "tags", "payment",
-              "smoking", "english", "desc", "talk", "tips", "shops", "since", "status", "checked", "sources"]:
+              "smoking", "english", "desc", "talk", "tips", "shops", "since", "status", "checked", "sources", "where", "members"]:
         v = s.get(k)
         if isinstance(v, str):
             v = v.strip() or None
@@ -396,6 +400,7 @@ def clean(s):
     out["english"] = bool(out["english"])
     out["tags"] = [t for t in (out["tags"] or []) if isinstance(t, str)][:12]
     out["sources"] = [u for u in (out["sources"] or []) if isinstance(u, str) and u.startswith("http")][:4]
+    out["members"] = [m.strip() for m in (out["members"] or []) if isinstance(m, str) and m.strip()][:20]
     if out["status"] not in STATUS:
         out["status"] = "uncertain"
     out["id"] = re.sub(r"[^a-z0-9-]+", "-", (out["id"] or "").lower()).strip("-")
@@ -427,6 +432,9 @@ def prefetch(spots, workers=3):
 
 def main():
     files = sorted(glob.glob(sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "research", "*.json")))
+    skip = os.environ.get("NONBEI_SKIP")  # e.g. NONBEI_SKIP=sweep- leaves out research files still being written
+    if skip:
+        files = [f for f in files if not os.path.basename(f).startswith(skip)]
     overrides = {}
     opath = os.path.join(ROOT, "data", "overrides.json")
     if os.path.exists(opath):
@@ -513,6 +521,16 @@ def main():
                     review.append((s["id"], f"tabelog pin {d:.0f}m from our position", pos["geo"]))
         if pos["geo"] == "approx":
             review.append((s["id"], "address only to " + g["level"], g.get("title")))
+        if s["id"] in OUTLINES:
+            # a traced outline (scripts/outline.py) beats the shape found by name; keep the pin inside it
+            from shapely.geometry import Point, Polygon
+            from shapely.ops import unary_union
+            o = OUTLINES[s["id"]]
+            s["shape"] = {"t": "poly", "p": o["p"]}
+            area = unary_union([Polygon([proj(lo, la) for la, lo in r]).buffer(0) for r in o["ll"]])
+            gap = area.distance(Point(proj(pos["lng"], pos["lat"]))) * 40075016.686 * math.cos(math.radians(pos["lat"])) / W
+            if gap > 8:
+                pos = {"lat": o["c"][0], "lng": o["c"][1], "geo": "outline"}
         s.update(pos)
         s["gsi"] = g.get("title")
         s["near"] = nearest_stations(stations, s["lat"], s["lng"])

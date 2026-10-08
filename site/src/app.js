@@ -405,6 +405,7 @@
   function detailHTML(s) {
     const st = openState(s), sl = stLabel(st, true), src = s.src || {}, fav = state.favs.has(s.id);
     const yk = s.kind === "yokocho";
+    const parent = s.yokocho ? spots.find((o) => o.id === s.yokocho) : null;
     const h = [];
     h.push(`<div class="d-bar">
       <button type="button" class="t-btn" data-act="back"><svg><use href="#i-back"/></svg>一覧</button><span class="sp"></span>
@@ -413,6 +414,7 @@
     h.push(`<header class="d-head">
       <p class="d-kind">${seal(s.kind, true)}${KIND[s.kind].label}・${esc(s.area)}${s.ward && !s.area.includes(s.ward) ? `（${esc(s.ward)}）` : ""}</p>
       <h2 class="d-name">${nameRuby(s)}</h2>
+      ${parent ? `<p class="d-parent"><button type="button" class="near-link" data-id="${parent.id}">${seal("yokocho", true)}${esc(parent.name)}の中の店</button></p>` : ""}
       ${s.en ? `<p class="d-en">${esc(s.en)}</p>` : ""}
       ${s.catch ? `<p class="d-catch">${esc(s.catch)}</p>` : ""}
       <p class="d-desc">${esc(s.desc)}</p></header>`);
@@ -429,6 +431,21 @@
         ${!yk && s.solo ? `<div class="talk-big solo">${talkDots(s.solo, "一人で入りやすさ")}<span>一人で入りやすさ ${["", "グループ向け", "グループ客が多い", "一人でも入れる", "一人客が多い", "一人客が大半"][s.solo] || ""}</span></div>` : ""}
         ${s.talk ? `<p>${esc(s.talk)}</p>` : ""}${s.talk2 ? `<p>${esc(s.talk2)}</p>` : ""}
         ${s.tags && s.tags.length ? `<ul class="tags">${s.tags.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}</section>`);
+    }
+    // the shops inside a yokocho
+    if (yk) {
+      const inside = spots.filter((o) => o.yokocho === s.id && o.status !== "closed");
+      const onMap = (n) => inside.some((o) => o.name.includes(n) || n.includes(o.name.replace(/[（(].*$/, "")));
+      const others = (s.members || []).filter((n) => !onMap(n));
+      if (s.where || inside.length || others.length) {
+        h.push(`<section class="d-sec"><h3>横丁の中</h3>
+          ${s.where ? `<p class="d-sub"><em>範囲</em>${esc(s.where)}</p>` : ""}
+          ${inside.length ? `<ul class="near-list">${inside.map((o) => {
+            const ol = stLabel(openState(o));
+            return `<li><button type="button" class="near-item" data-id="${o.id}">${seal(o.kind, true)}<span><b>${esc(o.name)}</b><span>${esc(o.catch || KIND[o.kind].label)}${ol ? `・<span class="${ol.cls}">${ol.text}</span>` : ""}</span></span><em>${KIND[o.kind].label}</em></button></li>`;
+          }).join("")}</ul>` : ""}
+          ${others.length ? `<p class="d-sub"><em>${inside.length ? "ほかの店" : "主な店"}</em>${others.map(esc).join("、")}</p>` : ""}</section>`);
+      }
     }
     // facts
     const budgetSub = [s.budget_dinner ? `食べログ・夜 ${s.budget_dinner}` : "", s.budget_lunch ? `昼 ${s.budget_lunch}` : ""].filter(Boolean).join("／");
@@ -492,7 +509,7 @@
       ${s.checked ? `<p class="src-meta">紹介文：${esc(s.checked)}</p>` : ""}
       ${s.checked_reviews ? `<p class="src-meta">店の様子・品書き：${esc(s.checked_reviews)}</p>` : ""}
       ${srcs.length ? `<ul class="src-list">${srcs.map((u) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(srcName(u))}</a></li>`).join("")}</ul>` : ""}</section>`);
-    h.push(`<p class="d-foot">情報は変わります。営業時間・値段・決まりは出かける前に店の最新情報で確かめてください。位置は${s.geo === "osm" ? "OpenStreetMap の店舗" : "住所"}から求めています。</p>`);
+    h.push(`<p class="d-foot">情報は変わります。営業時間・値段・決まりは出かける前に店の最新情報で確かめてください。${s.kind === "yokocho" && s.shape && s.shape.t === "poly" ? "横丁の範囲は、路地と店の建物の形（OpenStreetMap）から囲んでいます。" : `位置は${s.geo === "osm" ? "OpenStreetMap の店舗" : "住所"}から求めています。`}</p>`);
     return h.join("");
   }
   function linkBtns(s) {
@@ -524,7 +541,7 @@
     });
     const c = el.querySelector("[data-act=copy]");
     if (c) c.addEventListener("click", () => copy(s.address, "住所をコピーしました"));
-    el.querySelectorAll(".near-item").forEach((b) => b.addEventListener("click", () => select(b.dataset.id)));
+    el.querySelectorAll(".near-item, .near-link").forEach((b) => b.addEventListener("click", () => select(b.dataset.id)));
   }
 
   // ---------------------------------------------------------------- OSM spots

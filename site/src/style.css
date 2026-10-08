@@ -300,6 +300,11 @@ svg { width: 18px; height: 18px; flex: none; }
 .addr { display: flex; align-items: flex-start; gap: 6px; margin-top: 8px !important; }
 .addr button { color: var(--text-3); padding: 2px; }
 .addr button:hover { color: var(--text); }
+.d-parent { margin: 8px 0 0; }
+.near-link { display: inline-flex; align-items: center; gap: 7px; padding: 4px 10px 4px 5px; border: 1px solid var(--line); border-radius: 999px;
+  font-size: 12px; color: var(--text-2); }
+.near-link:hover { color: var(--text); border-color: var(--text-3); }
+.near-link .seal { background: var(--c); color: var(--seal-text); }
 .near-list { list-style: none; margin: 0; padding: 0; }
 .near-item { width: 100%; display: grid; grid-template-columns: 21px minmax(0, 1fr) auto; gap: 11px; align-items: center; padding: 9px 0; text-align: left; border-top: 1px solid var(--line); }
 .near-list li:first-child .near-item { border-top: 0; }

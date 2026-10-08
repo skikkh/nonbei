@@ -3,8 +3,10 @@
 Each summary round writes {spot id: {...}} files (fields: catch, crowd, busy,
 rules, vibe, menu, charge, first, talk2, web, insta, x, fix, status, checked,
 sources_add). Later files win per spot. Values are checked for type and
-trimmed; unknown spot ids are dropped.
-usage: python3 scripts/merge_enrich.py DIR [DIR ...]
+trimmed; unknown spot ids are dropped. A research file (a JSON array of spot
+entries, e.g. research/sweep-*.json) counts too: its entries carry the same
+fields next to the research ones.
+usage: python3 scripts/merge_enrich.py DIR_OR_FILE [DIR_OR_FILE ...]
 """
 import glob
 import json
@@ -61,8 +63,11 @@ def main(dirs):
     merged = json.load(open(path, encoding="utf-8")) if os.path.exists(path) else {}
     n = 0
     for d in dirs:
-        for f in sorted(glob.glob(os.path.join(d, "*.json"))):
-            for sid, rec in json.load(open(f, encoding="utf-8")).items():
+        for f in sorted(glob.glob(os.path.join(d, "*.json"))) if os.path.isdir(d) else [d]:
+            data = json.load(open(f, encoding="utf-8"))
+            if isinstance(data, list):  # research entries: same id rule as build_spots.clean
+                data = {re.sub(r"[^a-z0-9-]+", "-", (x.get("id") or "").lower()).strip("-"): x for x in data if isinstance(x, dict)}
+            for sid, rec in data.items():
                 if sid in ids and isinstance(rec, dict):
                     c = clean(rec)
                     if c:

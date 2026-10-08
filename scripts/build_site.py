@@ -21,7 +21,7 @@ VENDOR = os.path.join(ROOT, "site", "vendor")
 
 KEEP = ("id", "name", "kana", "en", "kind", "area", "ward", "region", "address", "station", "near", "lat", "lng", "shape",
         "social", "solo", "hiru", "english", "tags", "status", "since", "desc", "talk", "tips", "price", "budget",
-        "budget_min", "budget_max", "checked", "sources", "geo")
+        "budget_min", "budget_max", "checked", "sources", "geo", "yokocho", "where", "members")
 
 
 def read(*p):

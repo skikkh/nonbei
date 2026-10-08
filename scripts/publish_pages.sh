@@ -10,7 +10,8 @@ here=$(cd "$(dirname "$0")/.." && pwd)
 dest=${1:?usage: publish_pages.sh PATH_TO_skikkh.github.io}
 [ -f "$here/dist/site/index.html" ] || { echo "run scripts/build_site.py first" >&2; exit 1; }
 mkdir -p "$dest/nonbei"
-rsync -a --delete --exclude media/ "$here/dist/site/" "$dest/nonbei/"
+find "$dest/nonbei" -mindepth 1 -maxdepth 1 ! -name media -exec rm -rf {} +
+cp -R "$here/dist/site/." "$dest/nonbei/"
 if [ -f "$here/promo/out/nonbei-reel-light.mp4" ]; then
   mkdir -p "$dest/nonbei/media"
   cp "$here/promo/out/nonbei-reel-light.mp4" "$dest/nonbei/media/nonbei-reel.mp4"

@@ -1,4 +1,30 @@
 {
+ "kamata-bourbon-road": {
+  "center": [
+   35.56188,
+   139.71368
+  ],
+  "exclude": [
+   "w432120178",
+   "w1304198122"
+  ],
+  "fronting": true,
+  "max_building": 300,
+  "note": "JR蒲田駅西口前の通りから西へ、東急池上線の高架の北側に沿って延びる「東急蒲田駅前通り」（通称バーボンロード。OSMでは中ほどの68 mだけに名前あり）。東急蒲田駅の北側から、豚番長・日本酒人のある西蒲田7-63の西の角までの約240 mと、通りの北側に並ぶ小さな店の建物。",
+  "sources": [
+   "https://4travel.jp/dm_shisetsu/11436728",
+   "https://www.nikkan-gendai.com/articles/view/life/187034",
+   "https://san-tatsu.jp/towns/112219/",
+   "https://tabelog.com/en/tokyo/A1315/A131503/13096562/",
+   "https://r.gnavi.co.jp/e686003/"
+  ],
+  "ways": [
+   43108078,
+   1360213116,
+   1360213115
+  ],
+  "width": 4
+ },
  "kichijoji-harmonica-yokocho": {
   "buildings": [
    "w145129803"
@@ -9,5 +35,348 @@
   ],
   "fronting": false,
   "note": "OSMの landuse=retail「ハーモニカ横丁」区画（吉祥寺本町1-1、平和通り・ダイヤ街・武蔵通りに囲まれた街区）"
+ },
+ "oimachi-heiwakoji": {
+  "buildings": [
+   "w621691465"
+  ],
+  "center": [
+   35.6073256,
+   139.7369572
+  ],
+  "fronting": true,
+  "max_building": 200,
+  "note": "ゼームス坂通りの東側、東小路の先で鮫洲大山線の一本北を東西に抜ける細い路地「平和小路」（OSMに名前あり）。ゼームス坂通りの歩道から東の路地（W56）に突き当たるまでの約55 mと、路地に面した小さな店々、突き当たりの三代目むら上（東大井5-7-15）の建物。",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20180915/137935.html",
+   "https://www.nikkan-gendai.com/articles/view/life/330417",
+   "https://r.gnavi.co.jp/g801402/",
+   "https://tabelog.com/en/tokyo/A1315/A131501/13094230/"
+  ],
+  "ways": [
+   388400494
+  ],
+  "width": 2
+ },
+ "oimachi-higashikoji": {
+  "center": [
+   35.60755,
+   139.735928
+  ],
+  "exclude": [
+   "w174323897",
+   "w621654175"
+  ],
+  "fronting": true,
+  "max_building": 200,
+  "note": "大井町駅東口前、駅沿いの歩道から東へ延びる2本の路地「東小路 飲食店街」（OSMに名前あり。北の路地はすずらん通りまで、南の路地はゼームス坂通りまで）と路地に面した小さな店。横丁を縦断するすずらん通りは、鮫洲大山線の歩道から北の武蔵屋酒店・臚雷亭の前までを手で描いて加えた。",
+  "polys": [
+   [
+    [
+     35.6073415,
+     139.7358777
+    ],
+    [
+     35.6075492,
+     139.7360963
+    ],
+    [
+     35.6077585,
+     139.7363189
+    ],
+    [
+     35.6077168,
+     139.7363784
+    ],
+    [
+     35.6075075,
+     139.7361558
+    ],
+    [
+     35.6073014,
+     139.7359372
+    ]
+   ]
+  ],
+  "sources": [
+   "https://4travel.jp/dm_shisetsu/11851052",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20180915/137935.html",
+   "https://www.nikkan-gendai.com/articles/view/life/330417"
+  ],
+  "ways": [
+   388356315,
+   388356314
+  ],
+  "width": 2.5
+ },
+ "omori-sanno-koji": {
+  "buildings": [
+   "w445411778"
+  ],
+  "center": [
+   35.5889882,
+   139.7279218
+  ],
+  "exclude": [
+   "w222299343",
+   "w445411779",
+   "w558180883",
+   "w558180878",
+   "w558202361",
+   "w558202362",
+   "w558202364",
+   "w558202359",
+   "w558202360",
+   "w558202358",
+   "w558202356"
+  ],
+  "fronting": true,
+  "max_building": 400,
+  "note": "大森駅西口、池上通りとJR線路に挟まれた谷底を南北に通る路地「山王小路飲食店街」（OSMに名前あり）。北の階段下の大森山王酒場・Misakiyaの建物から、南の階段脇の藤つぼまでの約85 mと、路地に面したスナック・バーの小さな建物。池上通り側に面したドラッグストア・スーパーなどの大きな建物と駅舎は除いた。",
+  "sources": [
+   "https://local-media.heteml.net/?p=32585",
+   "https://san-tatsu.jp/articles/133648/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20141115/108143.html",
+   "https://www.city.ota.tokyo.jp/seikatsu/sumaimachinami/machizukuri/ekishuuhen/omori/omorinishi/kangaekata.files/kihonntekikanngaekata.pdf"
+  ],
+  "ways": [
+   558180870
+  ],
+  "width": 3
+ },
+ "shimbashi-ekimae-bldg": {
+  "buildings": [
+   "w151481750",
+   "w151481836"
+  ],
+  "center": [
+   35.6661907,
+   139.7595581
+  ],
+  "fronting": false,
+  "note": "新橋駅東口（汐留口）前の新橋駅前ビル。酒場が集まる1号館（北、新橋2-20-15）と、ゆりかもめ新橋駅の下の都道を挟んで南の2号館（新橋2-21-1、地下で1号館とつながり地下1階に酒場がある）の建物を囲む。",
+  "sources": [
+   "https://ja.wikipedia.org/wiki/%E6%96%B0%E6%A9%8B%E9%A7%85%E5%89%8D%E3%83%93%E3%83%AB",
+   "https://www.nikkan-gendai.com/articles/view/life/209764",
+   "https://san-tatsu.jp/spots/326916/"
+  ]
+ },
+ "shimbashi-karasumori": {
+  "center": [
+   35.666443,
+   139.756134
+  ],
+  "fronting": true,
+  "max_building": 300,
+  "note": "烏森神社（新橋2-15-5）のある、新橋仲通り・烏森通り・ニュー新橋ビル西側の道・新橋駅前からの区道に囲まれた一画の路地。神社へ続く参道（烏森通りから北へ入る路地と東の駅側から入る路地）と、神社脇から西へ延びる3本の平行な路地と、それに面した小さな店の建物。烏森通り南側の路地は含めない。",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20251129/146507.html",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20151212/120009.html",
+   "https://www.openstreetmap.org/node/260408025"
+  ],
+  "ways": [
+   151329173,
+   151329174,
+   151329175,
+   1419987500,
+   1089809301,
+   1089809302
+  ],
+  "width": 3
+ },
+ "shimbashi-new-shimbashi-bldg": {
+  "buildings": [
+   "w24013305"
+  ],
+  "center": [
+   35.6661676,
+   139.757555
+  ],
+  "fronting": false,
+  "note": "新橋駅日比谷口（SL広場）・烏森口前のニュー新橋ビル（新橋2-16-1）。小さな酒場がひしめく地下1階の飲食街を含む建物全体を囲む。",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20251129/146508.html",
+   "https://san-tatsu.jp/spots/325354/"
+  ]
+ },
+ "shinagawa-konan-yokocho": {
+  "buildings": [
+   "w157573126"
+  ],
+  "center": [
+   35.629196,
+   139.742325
+  ],
+  "exclude": [
+   "w157573670",
+   "w157573531",
+   "w157573667",
+   "w157573549",
+   "w157573495",
+   "w157573677",
+   "w172281497",
+   "w172281578",
+   "w172281581",
+   "w157573655"
+  ],
+  "fronting": true,
+  "max_building": 400,
+  "note": "品川駅港南口の駅前通り南側、港南2-2の高層雑居ビル（ミナトビルなど西側の7〜10階建て）と東の区道に挟まれた低層の飲み屋の一角。中央を東西に抜ける路地と南北の路地2本・北への抜け道、南の裏路地（南の通りへの抜け道を含む）と、それに面した低層の店（路地裏・みかさ・マーちゃん・原価ビストロBAN!など）。",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20190105/139271.html",
+   "https://www.timeout.jp/tokyo/ja/things-to-do/shinagawa-guide",
+   "https://www.nikkan-gendai.com/articles/view/life/335602"
+  ],
+  "ways": [
+   172281629,
+   172281625,
+   172281611,
+   172281613,
+   172281627
+  ],
+  "width": 3
+ },
+ "tamachi-keio-nakadori": {
+  "center": [
+   35.64785,
+   139.7459
+  ],
+  "exclude": [
+   "w119590445",
+   "w119909746",
+   "w119908033"
+  ],
+  "fronting": true,
+  "note": "慶應仲通り（田町駅西口の慶応通り・第一京浜側から西へ、桜田通り（三田通り）の手前まで約250m）と、そこから北の五十番通り・裏通りへ抜ける飲み屋の多い3本の歩行者路地、それに面した店の建物。大きなオフィスビル・マンションは除く。",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20240203/144624.html",
+   "https://www.jalan.net/kankou/spt_guide000000184849/",
+   "https://www.openstreetmap.org/way/207527847"
+  ],
+  "ways": [
+   207527847,
+   46868991,
+   69340207,
+   46872655,
+   203654377
+  ],
+  "width": 4
+ },
+ "toranomon-yokocho": {
+  "center": [
+   35.6677987,
+   139.7498952
+  ],
+  "fronting": false,
+  "note": "虎ノ門ヒルズ ビジネスタワー（虎ノ門1-17-1）3階のうち、公式フロアマップで「虎ノ門横丁」とされる北側〜東側のL字の区画（中央のエレベーター・トイレのコアと、西側・南側の別店舗は除く）を建物の輪郭に合わせて描いた。",
+  "polys": [
+   [
+    [
+     35.6681544,
+     139.7500468
+    ],
+    [
+     35.6679989,
+     139.7505302
+    ],
+    [
+     35.667446,
+     139.750261
+    ],
+    [
+     35.6675631,
+     139.749899
+    ],
+    [
+     35.6676154,
+     139.7499236
+    ],
+    [
+     35.66756,
+     139.7500923
+    ],
+    [
+     35.6679234,
+     139.7502686
+    ],
+    [
+     35.6680174,
+     139.7499805
+    ]
+   ]
+  ],
+  "sources": [
+   "https://www.toranomonhills.com/floor_map/bt_map_3f.html",
+   "https://www.toranomonhills.com/toranomonyokocho/"
+  ]
+ },
+ "yotsuya-shinmichi": {
+  "buildings": [
+   "w170182041",
+   "w1216260009",
+   "w170182273",
+   "w165808540",
+   "w165808568",
+   "w165808415",
+   "w1339996018",
+   "w165808473",
+   "w170182250",
+   "w165808350",
+   "w165808513",
+   "w165808416",
+   "w165808583",
+   "w165808559",
+   "w170182107",
+   "w170182365",
+   "w165808505",
+   "w170182136",
+   "w170182007",
+   "w170182024",
+   "w170182249",
+   "w170182299"
+  ],
+  "center": [
+   35.686585,
+   139.728582
+  ],
+  "fronting": true,
+  "note": "四ツ谷駅前の外堀通りから新宿通りの一本北を西へ延びるしんみち通り（四谷1丁目）。外堀通り側の東端から、西の南北の道（三栄通りへ抜ける道）に突き当たるまで約170mの通りと、それに面した店の建物。途中から新宿通りへ南に抜ける脇道は含めない。",
+  "polys": [
+   [
+    [
+     35.6868532,
+     139.7277651
+    ],
+    [
+     35.6864862,
+     139.7288166
+    ],
+    [
+     35.6865201,
+     139.728834
+    ],
+    [
+     35.6868871,
+     139.727779
+    ],
+    [
+     35.6868956,
+     139.7277408
+    ],
+    [
+     35.6868617,
+     139.7277286
+    ]
+   ]
+  ],
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20260620/147071.html",
+   "https://news.nissyoku.co.jp/?p=146244",
+   "https://www.openstreetmap.org/way/39635032"
+  ],
+  "ways": [
+   39635032
+  ],
+  "width": 4
  }
 }

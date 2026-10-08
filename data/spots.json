@@ -1,7 +1,7 @@
 {
  "updated": "2026年10月",
  "accuracy": {
-  "n": 209,
+  "n": 210,
   "median": 7,
   "p90": 24
  },
@@ -17,7 +17,6 @@
     "人形町",
     "四ツ谷",
     "日本橋",
-    "田町",
     "秋葉原",
     "銀座",
     "人形町・浜町",
@@ -25,6 +24,7 @@
     "日比谷",
     "浜松町",
     "浜松町・大門",
+    "田町",
     "神楽坂",
     "茅場町",
     "虎ノ門"
@@ -366,9 +366,9 @@
    "price": "約120軒の居酒屋・飲食店が密集",
    "region": "都心（新橋・銀座・神田）",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "k}xtpB}_zkq@BLJLPFnEtA"
+     "{hxtpBawykq@YGPu@cBa@Pk@_AY@CoA[@Ei@O?C[I_@|AOGH]eAW@C[IH[aAYSt@s@S\\gAKEQHIVUIMDEXQGIICOWDFTLPf@NOb@EAYnBRHEN`Bp@l@aBZJM\\f@RJYp@TBK`@NAD\\LZeARFKZE@IZ\\JM\\h@Pf@wAPFIXr@ZbBf@J[RD"
     ]
    },
    "lat": 35.6863694,
@@ -524,6 +524,13 @@
    "en": "Shimbashi Ekimae Building",
    "price": "豚屋鳥山はコイン制のせんべろセット（チンチロリンで当たるとコインが増える）。たち飲み 吟はつまみ80円〜（2020年時点）",
    "region": "都心（新橋・銀座・神田）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "mycupB_aclq@|@{AEQq@a@SBkExGdAr@HMvC~@VS",
+     "{scupBwjclq@k@[UD{@~A`Al@~@_B"
+    ]
+   },
    "lat": 35.6661907,
    "lng": 139.7595581,
    "geo": "osm-area",
@@ -577,18 +584,24 @@
    "en": "Karasumori Shrine Alley & Karasumori-guchi Bar District",
    "price": "烏森口周辺には焼き鳥店だけで70軒以上（2015年）。やきとん まこちゃんは1本165円（2025年）",
    "region": "都心（新橋・銀座・神田）",
-   "lat": 35.666443,
-   "lng": 139.756134,
-   "geo": "gsi-block",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "yobupBoxblq@a@MJa@e@OM`@oBm@Lc@YKCFm@SRo@g@O@Eq@QWDy@zCe@MGPZJW`Af@LQp@EAUx@dBb@V{@jBh@Wz@~Ad@V}@^LFSa@MFUk@QDKh@NRq@b@NFSa@MH[Nc@`@L"
+    ]
+   },
+   "lat": 35.6667027,
+   "lng": 139.756425,
+   "geo": "outline",
    "gsi": "東京都港区新橋二丁目１５番",
    "near": [
     [
      "新橋",
-     272
+     257
     ],
     [
      "内幸町",
-     342
+     320
     ]
    ]
   },
@@ -630,6 +643,12 @@
    "en": "New Shimbashi Building",
    "price": "地下に立ち飲み・小さな居酒屋が密集。立ち呑 破天荒の惣菜はほぼ300円",
    "region": "都心（新橋・銀座・神田）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "macupBivblq@`@MzByGK[mIiCWVf@tDPjDRX"
+    ]
+   },
    "lat": 35.6661676,
    "lng": 139.757555,
    "geo": "osm-area",
@@ -1758,12 +1777,11 @@
    "kana": "あさのにほんしゅてん はままつちょう",
    "en": "Asano Nihon Shuten Hamamatsucho",
    "price": "約150種の日本酒をグラス売り。45mlで420円〜（90mlは1.5倍）、蔵元フェアの3種飲み比べ1,050円（早い時間帯は840円）など（2026年5月の記事）",
-   "region": "都心（新橋・銀座・神田）",
-   "xcheck": 48,
    "lat": 35.6539236,
    "lng": 139.7550247,
-   "geo": "tabelog",
-   "gsi": "東京都港区浜松町二丁目１１番",
+   "region": "都心（新橋・銀座・神田）",
+   "xcheck": 0,
+   "geo": "manual",
    "near": [
     [
      "モノレール浜松町",
@@ -1862,6 +1880,12 @@
    "en": "Keio Nakadori Shopping Street",
    "price": "ホルモンまさるの味噌ダレ「まさるホルモン」、湯浅の刺身3品盛り・おでん5品盛り",
    "region": "都心（新橋・銀座・神田）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "_o~tpBmfklq@B[]C@M{@C?FSAC`@OA@i@]Aq@?wAGW??@yAI?BUAAf@cEMBmAk@AAb@K??E]CIDQ?iBwDDYWEE`@f@lAGbAC?IaA_AACTD@IvA~AHEjAV@Ed@YCEv@XBHH`@@Cr@UAAPZ@?HF?E~@`@B?HVB@Kx@D?Mn@BARVBJmBj@BF_AE?B]p@BCXf@F?Dt@FEv@UCCb@f@BIfAC?MtCZ??GN??FV??MP@BiA|@BBy@YA?By@A?S`@@Bo@D?@U?KEABg@B?B}@H@By@d@BABb@B?Ix@BBg@H@H?Gj@lBHDk@H?@W"
+    ]
+   },
    "lat": 35.647655,
    "lng": 139.747101,
    "geo": "gsi-block",
@@ -2577,19 +2601,24 @@
    "en": "Toranomon Yokocho",
    "price": "東京の名店の支店が集まり、各店の料理をアラカルトで頼める。TORANOMON BREWERY、虎ノ門酒場器楽亭+ など",
    "region": "都心（新橋・銀座・神田）",
-   "lat": 35.6677987,
-   "lng": 139.7498952,
-   "geo": "osm-area",
-   "osm": "n11431781569",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "_m`upBccblq@ZeAkBk@~@}C|@VJ_@mCw@gBdG"
+    ]
+   },
+   "lat": 35.6677728,
+   "lng": 139.7503078,
+   "geo": "outline",
    "gsi": "東京都港区虎ノ門一丁目１７番",
    "near": [
     [
      "虎ノ門ヒルズ",
-     196
+     232
     ],
     [
      "虎ノ門",
-     266
+     270
     ]
    ]
   },
@@ -10905,6 +10934,12 @@
    "price": "もつ焼きマーちゃん（串160円・もつ煮込み460円）、昭和61年創業の居酒屋 路地裏（激辛の牛すじ煮込み）、食肉市場直結のホルモンが売りの居酒屋みかさなど",
    "region": "品川・大田",
    "area_label": "品川（港南口）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "wp}tpB{pslq@ACN??]i@A?CI??WX?@Y@?@[YAFo@UCAPq@A?HM?AL]AANmBCARL?AjAOAARL@A`@ZHf@B?Dl@B?FR?@]T??XxA@FNPI]{@"
+    ]
+   },
    "lat": 35.629196,
    "lng": 139.742325,
    "geo": "gsi-block",
@@ -11071,9 +11106,9 @@
    "price": "1948年創業のうなぎ店「三代目 むら上」、立ち飲み「平和小路酒場JJ」（串カツ250円・ホッピーセット450円）など",
    "region": "品川・大田",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "ax{tpBcl}lq@zBXFBtANDD"
+     "_q{tpByj}lq@V]ES}@ICXc@ENYaDYi@tAV@@Gn@FADR@CVRBB[d@FLQCRVBADXBZRXa@FBFM"
     ]
    },
    "lat": 35.6073256,
@@ -11132,10 +11167,9 @@
    "price": "肉のまえかわ（コロッケ130円・メンチカツ170円・レモンサワー290円）、臚雷亭（梅酒サワー240円・自家製餃子380円）、金井寿司の鉄火巻きの焼き寿司、いさ美寿司のせんべろ寿司など",
    "region": "品川・大田",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "oo{tpBoj}lq@tDZdGh@",
-     "{j{tpBmh}lq@`Hn@"
+     "qa{tpBah}lq@@QE?Fs@yAOE^a@ECTgBQ`@i@[Ue@h@o@EB]aAICVe@CKRQCCRB?MRfAn@JSf@Z{@bAZVhAsAJHp@D?C\\Dd@XBQnCTBSF@BQGABY"
     ]
    },
    "lat": 35.6075805,
@@ -11569,9 +11603,9 @@
    "price": "スナック中心。谷の奥には立ち飲みの大森山王酒場（ホッピー・ソーセージ盛り）、2026年6月開店の立ち飲み「いたりあんばー へちま」なども",
    "region": "品川・大田",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "anxtpBkmemq@nAyCVo@hAaB"
+     "chxtpBsvemq@q@_@i@nAB@Yb@yBdFr@XJ[MEFMLFb@cAA?b@kAIEXo@NH\\u@KC"
     ]
    },
    "lat": 35.5889882,
@@ -12330,9 +12364,9 @@
    "price": "立ち飲み、洋食、洋酒バー、タイ料理などのエスニック、牡蠣の店まで業態はさまざま",
    "region": "品川・大田",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "chstpBevqmq@vG["
+     "avrtpBsvqmq@?YmH?wGZmKl@Jr@tDY?Bn@G@JbAKlAECc@PAVA?r@\\??[RA?Ct@??DpCC@c@KI^??Vp@??ZR??Aj@?lAE?MhA??["
     ]
    },
    "lat": 35.5618614,
@@ -20099,7 +20133,7 @@
   },
   {
    "id": "kichijoji-harmonica-yokocho",
-   "name": "ハーモニカ横丁（ハモニカ横丁）",
+   "name": "ハモニカ横丁",
    "kind": "yokocho",
    "area": "吉祥寺",
    "ward": "武蔵野市",
@@ -20124,7 +20158,7 @@
    "payment": "店舗により異なる",
    "smoking": "不明",
    "english": false,
-   "desc": "戦後の闇市をルーツに持ち、吉祥寺駅北口すぐの狭い路地に約100軒がひしめく横丁。名前は間口の狭い店が並ぶ様子を作家・亀井勝一郎が「ハーモニカ横丁」と呼んだことに由来する。1947年創業の干物店などの老舗と、1990年代後半以降に増えた立ち飲み・バー・カフェが混在している。",
+   "desc": "戦後の闇市をルーツに持ち、吉祥寺駅北口すぐの狭い路地に約100軒がひしめく横丁。名前は、間口の狭い店が並ぶ様子をハーモニカの吹き口に見立てたことに由来する（命名は作家・亀井勝一郎とされる）。1947年創業の干物店などの老舗と、1990年代後半以降に増えた立ち飲み・バー・カフェが混在している。",
    "talk": "区画が狭く、立ち飲みや小さなカウンターの店が多いので隣の客との距離が近い。軽く1杯飲んで次の店へ移るはしご酒の途中で会話が生まれやすい。",
    "tips": "週末の夜は混雑する。現金のみの店とキャッシュレスのみの店が混在するので両方用意を。",
    "shops": 100,
@@ -20136,29 +20170,29 @@
     "https://www.mapple.net/original/472306/",
     "https://www.timeout.jp/tokyo/ja/nightlife/yokocho-guide-hamonica-yokocho"
    ],
-   "kana": "はーもにかよこちょう",
-   "en": "Harmonica Yokocho",
+   "kana": "はもにかよこちょう",
+   "en": "Hamonika Yokocho (Harmonica Alley)",
    "price": "焼き鳥（てっちゃん）、鶏料理の立ち飲み（ポヨ）、練り物店のおでん立ち飲み（つかだ）、曜日替わりスタッフの立ち飲み（彩）など。老舗の餃子店や干物店も混在",
    "region": "多摩",
    "shape": {
     "t": "poly",
     "p": [
-     "{lbspBmdrkq@jGpB`B{FmHH[Rg@|A"
+     "}lbspBidrkq@nGrBfBeGwHH]Ri@`B"
     ]
    },
-   "lat": 35.703743,
-   "lng": 139.5792576,
+   "lat": 35.7037717,
+   "lng": 139.5790707,
    "geo": "osm-area",
-   "osm": "w145129803",
+   "osm": "n14134404937",
    "gsi": "東京都武蔵野市吉祥寺本町一丁目１番",
    "near": [
     [
      "吉祥寺",
-     151
+     165
     ],
     [
      "井の頭公園",
-     761
+     771
     ]
    ]
   },
@@ -21546,22 +21580,27 @@
    "kana": "がれーら たちかわ ふーどまーけっと",
    "en": "GALERA Tachikawa Food Market",
    "price": "約470㎡のワンフロアに、仕切りのないまま約10店（クラフトビール、タコス、おでん、春巻きなど）が並ぶ",
-   "region": "多摩",
-   "lat": 35.6994368986705,
+   "lat": 35.6994369,
    "lng": 139.416183,
-   "geo": "gsi",
-   "gsi": "東京都立川市曙町二丁目１６番１号",
+   "region": "多摩",
+   "shape": {
+    "t": "line",
+    "p": [
+     "sqfqpBceskq@s@z@",
+     "gsfqpBgcskq@A_A"
+    ]
+   },
+   "geo": "manual",
    "near": [
     [
      "立川",
-     284
+     287
     ],
     [
      "立川北",
      333
     ]
-   ],
-   "stacked": 2
+   ]
   },
   {
    "id": "tachikawa-yatai-mura-paradise",
@@ -21592,7 +21631,7 @@
    "kana": "たちかわやたいむらぱらだいす",
    "en": "Tachikawa Yataimura Paradise",
    "region": "多摩",
-   "lat": 35.699329101329496,
+   "lat": 35.699383,
    "lng": 139.416183,
    "geo": "gsi",
    "gsi": "東京都立川市曙町二丁目１６番１号",
@@ -21605,8 +21644,7 @@
      "立川北",
      333
     ]
-   ],
-   "stacked": 2
+   ]
   },
   {
    "id": "tachikawa-akebono-stand",

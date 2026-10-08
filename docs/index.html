@@ -1,0 +1,1967 @@
+<!doctype html>
+<html lang="ja" data-theme="night">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>東京のんべえ地図 — 立ち飲み・角打ち・せんべろ・横丁</title>
+<meta name="description" content="東京の立ち飲み・角打ち・せんべろ・飲み屋横丁・小さなバーを、人と話しやすいかで探せる地図。営業時間・予算・チャージ・客層・混む時間・店の決まり・名物と値段まで。">
+<meta name="theme-color" content="#0b0f19">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="東京のんべえ地図">
+<meta property="og:description" content="立ち飲み・角打ち・せんべろ・横丁。今夜、誰かと話せる一軒を地図で探す。">
+<meta property="og:image" content="https://skikkh.github.io/nonbei/og.png">
+<meta property="og:url" content="https://skikkh.github.io/nonbei/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Shippori+Mincho+B1:wght@600;800&display=swap">
+<link rel="preload" href="data/spots.json" as="fetch" crossorigin>
+<link rel="preload" href="data/base.json" as="fetch" crossorigin>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.js"></script>
+<style>.maplibregl-map{font:12px/20px Helvetica Neue,Arial,Helvetica,sans-serif;overflow:hidden;position:relative;-webkit-tap-highlight-color:rgb(0 0 0/0)}.maplibregl-canvas{left:0;position:absolute;top:0}.maplibregl-map:fullscreen{height:100%;width:100%}.maplibregl-ctrl-group button.maplibregl-ctrl-compass{touch-action:none}.maplibregl-canvas-container.maplibregl-interactive,.maplibregl-ctrl-group button.maplibregl-ctrl-compass{cursor:grab;-webkit-user-select:none;-moz-user-select:none;user-select:none}.maplibregl-canvas-container.maplibregl-interactive.maplibregl-track-pointer{cursor:pointer}.maplibregl-canvas-container.maplibregl-interactive:active,.maplibregl-ctrl-group button.maplibregl-ctrl-compass:active{cursor:grabbing}.maplibregl-canvas-container.maplibregl-touch-zoom-rotate,.maplibregl-canvas-container.maplibregl-touch-zoom-rotate .maplibregl-canvas{touch-action:pan-x pan-y}.maplibregl-canvas-container.maplibregl-touch-drag-pan,.maplibregl-canvas-container.maplibregl-touch-drag-pan .maplibregl-canvas{touch-action:pinch-zoom}.maplibregl-canvas-container.maplibregl-touch-zoom-rotate.maplibregl-touch-drag-pan,.maplibregl-canvas-container.maplibregl-touch-zoom-rotate.maplibregl-touch-drag-pan .maplibregl-canvas{touch-action:none}.maplibregl-canvas-container.maplibregl-touch-drag-pan.maplibregl-cooperative-gestures,.maplibregl-canvas-container.maplibregl-touch-drag-pan.maplibregl-cooperative-gestures .maplibregl-canvas{touch-action:pan-x pan-y}.maplibregl-ctrl-bottom-left,.maplibregl-ctrl-bottom-right,.maplibregl-ctrl-top-left,.maplibregl-ctrl-top-right{pointer-events:none;position:absolute;z-index:2}.maplibregl-ctrl-top-left{left:0;top:0}.maplibregl-ctrl-top-right{right:0;top:0}.maplibregl-ctrl-bottom-left{bottom:0;left:0}.maplibregl-ctrl-bottom-right{bottom:0;right:0}.maplibregl-ctrl{clear:both;pointer-events:auto;transform:translate(0)}.maplibregl-ctrl-top-left .maplibregl-ctrl{float:left;margin:10px 0 0 10px}.maplibregl-ctrl-top-right .maplibregl-ctrl{float:right;margin:10px 10px 0 0}.maplibregl-ctrl-bottom-left .maplibregl-ctrl{float:left;margin:0 0 10px 10px}.maplibregl-ctrl-bottom-right .maplibregl-ctrl{float:right;margin:0 10px 10px 0}.maplibregl-ctrl-group{background:#fff;border-radius:4px}.maplibregl-ctrl-group:not(:empty){box-shadow:0 0 0 2px rgba(0,0,0,.1)}@media (forced-colors:active){.maplibregl-ctrl-group:not(:empty){box-shadow:0 0 0 2px ButtonText}}.maplibregl-ctrl-group button{background-color:transparent;border:0;box-sizing:border-box;cursor:pointer;display:block;height:29px;outline:none;padding:0;width:29px}.maplibregl-ctrl-group button+button{border-top:1px solid #ddd}.maplibregl-ctrl button .maplibregl-ctrl-icon{background-position:50%;background-repeat:no-repeat;display:block;height:100%;width:100%}@media (forced-colors:active){.maplibregl-ctrl-icon{background-color:transparent}.maplibregl-ctrl-group button+button{border-top:1px solid ButtonText}}.maplibregl-ctrl button::-moz-focus-inner{border:0;padding:0}.maplibregl-ctrl-attrib-button:focus,.maplibregl-ctrl-group button:focus{box-shadow:0 0 2px 2px #0096ff}.maplibregl-ctrl button:disabled{cursor:not-allowed}.maplibregl-ctrl button:disabled .maplibregl-ctrl-icon{opacity:.25}.maplibregl-ctrl button:not(:disabled):hover{background-color:rgb(0 0 0/5%)}.maplibregl-ctrl-group button:focus:focus-visible{box-shadow:0 0 2px 2px #0096ff}.maplibregl-ctrl-group button:focus:not(:focus-visible){box-shadow:none}.maplibregl-ctrl-group button:focus:first-child{border-radius:4px 4px 0 0}.maplibregl-ctrl-group button:focus:last-child{border-radius:0 0 4px 4px}.maplibregl-ctrl-group button:focus:only-child{border-radius:inherit}.maplibregl-ctrl button.maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='M10 13c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h9c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='M14.5 8.5c-.75 0-1.5.75-1.5 1.5v3h-3c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h3v3c0 .75.75 1.5 1.5 1.5S16 19.75 16 19v-3h3c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13h-3v-3c0-.75-.75-1.5-1.5-1.5'/%3E%3C/svg%3E")}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M10 13c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h9c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M14.5 8.5c-.75 0-1.5.75-1.5 1.5v3h-3c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h3v3c0 .75.75 1.5 1.5 1.5S16 19.75 16 19v-3h3c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13h-3v-3c0-.75-.75-1.5-1.5-1.5'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M10 13c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h9c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M14.5 8.5c-.75 0-1.5.75-1.5 1.5v3h-3c-.75 0-1.5.75-1.5 1.5S9.25 16 10 16h3v3c0 .75.75 1.5 1.5 1.5S16 19.75 16 19v-3h3c.75 0 1.5-.75 1.5-1.5S19.75 13 19 13h-3v-3c0-.75-.75-1.5-1.5-1.5'/%3E%3C/svg%3E")}}.maplibregl-ctrl button.maplibregl-ctrl-fullscreen .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='M24 16v5.5c0 1.75-.75 2.5-2.5 2.5H16v-1l3-1.5-4-5.5 1-1 5.5 4 1.5-3zM6 16l1.5 3 5.5-4 1 1-4 5.5 3 1.5v1H7.5C5.75 24 5 23.25 5 21.5V16zm7-11v1l-3 1.5 4 5.5-1 1-5.5-4L6 13H5V7.5C5 5.75 5.75 5 7.5 5zm11 2.5c0-1.75-.75-2.5-2.5-2.5H16v1l3 1.5-4 5.5 1 1 5.5-4 1.5 3h1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-shrink .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M18.5 16c-1.75 0-2.5.75-2.5 2.5V24h1l1.5-3 5.5 4 1-1-4-5.5 3-1.5v-1zM13 18.5c0-1.75-.75-2.5-2.5-2.5H5v1l3 1.5L4 24l1 1 5.5-4 1.5 3h1zm3-8c0 1.75.75 2.5 2.5 2.5H24v-1l-3-1.5L25 5l-1-1-5.5 4L17 5h-1zM10.5 13c1.75 0 2.5-.75 2.5-2.5V5h-1l-1.5 3L5 4 4 5l4 5.5L5 12v1z'/%3E%3C/svg%3E")}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-fullscreen .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M24 16v5.5c0 1.75-.75 2.5-2.5 2.5H16v-1l3-1.5-4-5.5 1-1 5.5 4 1.5-3zM6 16l1.5 3 5.5-4 1 1-4 5.5 3 1.5v1H7.5C5.75 24 5 23.25 5 21.5V16zm7-11v1l-3 1.5 4 5.5-1 1-5.5-4L6 13H5V7.5C5 5.75 5.75 5 7.5 5zm11 2.5c0-1.75-.75-2.5-2.5-2.5H16v1l3 1.5-4 5.5 1 1 5.5-4 1.5 3h1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-shrink .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='M18.5 16c-1.75 0-2.5.75-2.5 2.5V24h1l1.5-3 5.5 4 1-1-4-5.5 3-1.5v-1zM13 18.5c0-1.75-.75-2.5-2.5-2.5H5v1l3 1.5L4 24l1 1 5.5-4 1.5 3h1zm3-8c0 1.75.75 2.5 2.5 2.5H24v-1l-3-1.5L25 5l-1-1-5.5 4L17 5h-1zM10.5 13c1.75 0 2.5-.75 2.5-2.5V5h-1l-1.5 3L5 4 4 5l4 5.5L5 12v1z'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-fullscreen .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M24 16v5.5c0 1.75-.75 2.5-2.5 2.5H16v-1l3-1.5-4-5.5 1-1 5.5 4 1.5-3zM6 16l1.5 3 5.5-4 1 1-4 5.5 3 1.5v1H7.5C5.75 24 5 23.25 5 21.5V16zm7-11v1l-3 1.5 4 5.5-1 1-5.5-4L6 13H5V7.5C5 5.75 5.75 5 7.5 5zm11 2.5c0-1.75-.75-2.5-2.5-2.5H16v1l3 1.5-4 5.5 1 1 5.5-4 1.5 3h1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-shrink .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='M18.5 16c-1.75 0-2.5.75-2.5 2.5V24h1l1.5-3 5.5 4 1-1-4-5.5 3-1.5v-1zM13 18.5c0-1.75-.75-2.5-2.5-2.5H5v1l3 1.5L4 24l1 1 5.5-4 1.5 3h1zm3-8c0 1.75.75 2.5 2.5 2.5H24v-1l-3-1.5L25 5l-1-1-5.5 4L17 5h-1zM10.5 13c1.75 0 2.5-.75 2.5-2.5V5h-1l-1.5 3L5 4 4 5l4 5.5L5 12v1z'/%3E%3C/svg%3E")}}.maplibregl-ctrl button.maplibregl-ctrl-compass .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 29 29'%3E%3Cpath d='m10.5 14 4-8 4 8z'/%3E%3Cpath fill='%23ccc' d='m10.5 16 4 8 4-8z'/%3E%3C/svg%3E")}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-compass .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 29 29'%3E%3Cpath d='m10.5 14 4-8 4 8z'/%3E%3Cpath fill='%23ccc' d='m10.5 16 4 8 4-8z'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-compass .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29'%3E%3Cpath d='m10.5 14 4-8 4 8z'/%3E%3Cpath fill='%23ccc' d='m10.5 16 4 8 4-8z'/%3E%3C/svg%3E")}}.maplibregl-ctrl button.maplibregl-ctrl-terrain .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='%23333' viewBox='0 0 22 22'%3E%3Cpath d='m1.754 13.406 4.453-4.851 3.09 3.09 3.281 3.277.969-.969-3.309-3.312 3.844-4.121 6.148 6.886h1.082v-.855l-7.207-8.07-4.84 5.187L6.169 6.57l-5.48 5.965v.871ZM.688 16.844h20.625v1.375H.688Zm0 0'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-terrain-enabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='%2333b5e5' viewBox='0 0 22 22'%3E%3Cpath d='m1.754 13.406 4.453-4.851 3.09 3.09 3.281 3.277.969-.969-3.309-3.312 3.844-4.121 6.148 6.886h1.082v-.855l-7.207-8.07-4.84 5.187L6.169 6.57l-5.48 5.965v.871ZM.688 16.844h20.625v1.375H.688Zm0 0'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23333' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate:disabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23aaa' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Cpath fill='red' d='m14 5 1 1-9 9-1-1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e58978' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e54e33' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-waiting .maplibregl-ctrl-icon{animation:maplibregl-spin 2s linear infinite}@media (forced-colors:active){.maplibregl-ctrl button.maplibregl-ctrl-geolocate .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23fff' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate:disabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23999' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Cpath fill='red' d='m14 5 1 1-9 9-1-1z'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-active-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e58978' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%2333b5e5' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate.maplibregl-ctrl-geolocate-background-error .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23e54e33' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl button.maplibregl-ctrl-geolocate .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/svg%3E")}.maplibregl-ctrl button.maplibregl-ctrl-geolocate:disabled .maplibregl-ctrl-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' fill='%23666' viewBox='0 0 20 20'%3E%3Cpath d='M10 4C9 4 9 5 9 5v.1A5 5 0 0 0 5.1 9H5s-1 0-1 1 1 1 1 1h.1A5 5 0 0 0 9 14.9v.1s0 1 1 1 1-1 1-1v-.1a5 5 0 0 0 3.9-3.9h.1s1 0 1-1-1-1-1-1h-.1A5 5 0 0 0 11 5.1V5s0-1-1-1m0 2.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 1 0-7'/%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Cpath fill='red' d='m14 5 1 1-9 9-1-1z'/%3E%3C/svg%3E")}}@keyframes maplibregl-spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}a.maplibregl-ctrl-logo{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='23' fill='none'%3E%3Cpath fill='%23000' fill-opacity='.4' fill-rule='evenodd' d='M17.408 16.796h-1.827l2.501-12.095h.198l3.324 6.533.988 2.19.988-2.19 3.258-6.533h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.929 5.644h-.098l-2.914-5.644-.757-1.71-.345 1.71zm1.958-3.42-.726 3.663a1.255 1.255 0 0 1-1.232 1.011h-1.827a1.255 1.255 0 0 1-1.229-1.509l2.501-12.095a1.255 1.255 0 0 1 1.23-1.001h.197a1.25 1.25 0 0 1 1.12.685l3.19 6.273 3.125-6.263a1.25 1.25 0 0 1 1.123-.695h.181a1.255 1.255 0 0 1 1.227.991l1.443 6.71a5 5 0 0 1 .314-.787l.009-.016a4.6 4.6 0 0 1 1.777-1.887c.782-.46 1.668-.667 2.611-.667a4.6 4.6 0 0 1 1.7.32l.306.134c.21-.16.474-.256.759-.256h1.694a1.255 1.255 0 0 1 1.212.925 1.255 1.255 0 0 1 1.212-.925h1.711c.284 0 .545.094.755.252.613-.3 1.312-.45 2.075-.45 1.356 0 2.557.445 3.482 1.4q.47.48.763 1.064V4.701a1.255 1.255 0 0 1 1.255-1.255h1.86A1.255 1.255 0 0 1 54.44 4.7v9.194h2.217c.19 0 .37.043.532.118v-4.77c0-.356.147-.678.385-.906a2.42 2.42 0 0 1-.682-1.71c0-.665.267-1.253.735-1.7a2.45 2.45 0 0 1 1.722-.674 2.43 2.43 0 0 1 1.705.675q.318.302.504.683V4.7a1.255 1.255 0 0 1 1.255-1.255h1.744A1.255 1.255 0 0 1 65.812 4.7v3.335a4.8 4.8 0 0 1 1.526-.246c.938 0 1.817.214 2.59.69a4.47 4.47 0 0 1 1.67 1.743v-.98a1.255 1.255 0 0 1 1.256-1.256h1.777c.233 0 .451.064.639.174a3.4 3.4 0 0 1 1.567-.372c.346 0 .861.02 1.285.232a1.25 1.25 0 0 1 .689 1.004 4.7 4.7 0 0 1 .853-.588c.795-.44 1.675-.647 2.61-.647 1.385 0 2.65.39 3.525 1.396.836.938 1.168 2.173 1.168 3.528q-.001.515-.056 1.051a1.255 1.255 0 0 1-.947 1.09l.408.952a1.255 1.255 0 0 1-.477 1.552c-.418.268-.92.463-1.458.612-.613.171-1.304.244-2.049.244-1.06 0-2.043-.207-2.886-.698l-.015-.008c-.798-.48-1.419-1.135-1.818-1.963l-.004-.008a5.8 5.8 0 0 1-.548-2.512q0-.429.053-.843a1.3 1.3 0 0 1-.333-.086l-.166-.004c-.223 0-.426.062-.643.228-.03.024-.142.139-.142.59v3.883a1.255 1.255 0 0 1-1.256 1.256h-1.777a1.255 1.255 0 0 1-1.256-1.256V15.69l-.032.057a4.8 4.8 0 0 1-1.86 1.833 5.04 5.04 0 0 1-2.484.634 4.5 4.5 0 0 1-1.935-.424 1.25 1.25 0 0 1-.764.258h-1.71a1.255 1.255 0 0 1-1.256-1.255V7.687a2.4 2.4 0 0 1-.428.625c.253.23.412.561.412.93v7.553a1.255 1.255 0 0 1-1.256 1.255h-1.843a1.25 1.25 0 0 1-.894-.373c-.228.23-.544.373-.894.373H51.32a1.255 1.255 0 0 1-1.256-1.255v-1.251l-.061.117a4.7 4.7 0 0 1-1.782 1.884 4.77 4.77 0 0 1-2.485.67 5.6 5.6 0 0 1-1.485-.188l.009 2.764a1.255 1.255 0 0 1-1.255 1.259h-1.729a1.255 1.255 0 0 1-1.255-1.255v-3.537a1.255 1.255 0 0 1-1.167.793h-1.679a1.25 1.25 0 0 1-.77-.263 4.5 4.5 0 0 1-1.945.429c-.885 0-1.724-.21-2.495-.632l-.017-.01a5 5 0 0 1-1.081-.836 1.255 1.255 0 0 1-1.254 1.312h-1.81a1.255 1.255 0 0 1-1.228-.99l-.782-3.625-2.044 3.939a1.25 1.25 0 0 1-1.115.676h-.098a1.25 1.25 0 0 1-1.116-.68l-2.061-3.994zM35.92 16.63l.207-.114.223-.15q.493-.356.735-.785l.061-.118.033 1.332h1.678V9.242h-1.694l-.033 1.267q-.133-.329-.526-.658l-.032-.028a3.2 3.2 0 0 0-.668-.428l-.27-.12a3.3 3.3 0 0 0-1.235-.23q-1.136-.001-1.974.493a3.36 3.36 0 0 0-1.3 1.382q-.445.89-.444 2.074 0 1.2.51 2.107a3.8 3.8 0 0 0 1.382 1.381 3.9 3.9 0 0 0 1.893.477q.795 0 1.455-.33zm-2.789-5.38q-.576.675-.575 1.762 0 1.102.559 1.794.576.675 1.645.675a2.25 2.25 0 0 0 .934-.19 2.2 2.2 0 0 0 .468-.29l.178-.161a2.2 2.2 0 0 0 .397-.561q.244-.5.244-1.15v-.115q0-.708-.296-1.267l-.043-.077a2.2 2.2 0 0 0-.633-.709l-.13-.086-.047-.028a2.1 2.1 0 0 0-1.073-.285q-1.052 0-1.629.692zm2.316 2.706c.163-.17.28-.407.28-.83v-.114c0-.292-.06-.508-.15-.68a.96.96 0 0 0-.353-.389.85.85 0 0 0-.464-.127c-.4 0-.56.114-.664.239l-.01.012c-.148.174-.275.45-.275.945 0 .506.122.801.27.99.097.11.266.224.68.224.303 0 .504-.09.687-.269zm7.545 1.705a2.6 2.6 0 0 0 .331.423q.319.33.755.548l.173.074q.65.255 1.49.255 1.02 0 1.844-.493a3.45 3.45 0 0 0 1.316-1.4q.493-.904.493-2.089 0-1.909-.988-2.913-.988-1.02-2.584-1.02-.898 0-1.575.347a3 3 0 0 0-.415.262l-.199.166a3.4 3.4 0 0 0-.64.82V9.242h-1.712v11.553h1.729l-.017-5.134zm.53-1.138q.206.29.48.5l.155.11.053.034q.51.296 1.119.297 1.07 0 1.645-.675.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.435 0-.835.16a2 2 0 0 0-.284.136 2 2 0 0 0-.363.254 2.2 2.2 0 0 0-.46.569l-.082.162a2.6 2.6 0 0 0-.213 1.072v.115q0 .707.296 1.267l.135.211zm.964-.818a1.1 1.1 0 0 0 .367.385.94.94 0 0 0 .476.118c.423 0 .59-.117.687-.23.159-.194.28-.478.28-.95 0-.53-.133-.8-.266-.952l-.021-.025c-.078-.094-.231-.221-.68-.221a1 1 0 0 0-.503.135l-.012.007a.86.86 0 0 0-.335.343c-.073.133-.132.324-.132.614v.115a1.4 1.4 0 0 0 .14.66zm15.7-6.222q.347-.346.346-.856a1.05 1.05 0 0 0-.345-.79 1.18 1.18 0 0 0-.84-.329q-.51 0-.855.33a1.05 1.05 0 0 0-.346.79q0 .51.346.855.345.346.856.346.51 0 .839-.346zm4.337 9.314.033-1.332q.191.403.59.747l.098.081a4 4 0 0 0 .316.224l.223.122a3.2 3.2 0 0 0 1.44.322 3.8 3.8 0 0 0 1.875-.477 3.5 3.5 0 0 0 1.382-1.366q.527-.89.526-2.09 0-1.184-.444-2.073a3.24 3.24 0 0 0-1.283-1.399q-.823-.51-1.942-.51a3.5 3.5 0 0 0-1.527.344l-.086.043-.165.09a3 3 0 0 0-.33.214q-.432.315-.656.707a2 2 0 0 0-.099.198l.082-1.283V4.701h-1.744v12.095zm.473-2.509a2.5 2.5 0 0 0 .566.7q.117.098.245.18l.144.08a2.1 2.1 0 0 0 .975.232q1.07 0 1.645-.675.576-.69.576-1.778 0-1.102-.576-1.777-.56-.691-1.645-.692a2.2 2.2 0 0 0-1.015.235q-.22.113-.415.282l-.15.142a2.1 2.1 0 0 0-.42.594q-.223.479-.223 1.1v.115q0 .705.293 1.26zm2.616-.293c.157-.191.28-.479.28-.967 0-.51-.13-.79-.276-.961l-.021-.026c-.082-.1-.232-.225-.67-.225a.87.87 0 0 0-.681.279l-.012.011c-.154.155-.274.38-.274.807v.115c0 .285.057.499.144.669a1.1 1.1 0 0 0 .367.405c.137.082.28.123.455.123.423 0 .59-.118.686-.23zm8.266-3.013q.345-.13.724-.14l.069-.002q.493 0 .642.099l.247-1.794q-.196-.099-.717-.099a2.3 2.3 0 0 0-.545.063 2 2 0 0 0-.411.148 2.2 2.2 0 0 0-.4.249 2.5 2.5 0 0 0-.485.499 2.7 2.7 0 0 0-.32.581l-.05.137v-1.48h-1.778v7.553h1.777v-3.884q0-.546.159-.943a1.5 1.5 0 0 1 .466-.636 2.5 2.5 0 0 1 .399-.253 2 2 0 0 1 .224-.099zm9.784 2.656.05-.922q0-1.743-.856-2.698-.838-.97-2.584-.97-1.119-.001-2.007.493a3.46 3.46 0 0 0-1.4 1.382q-.493.906-.493 2.106 0 1.07.428 1.975.428.89 1.332 1.432.906.526 2.255.526.973 0 1.668-.185l.044-.012.135-.04q.613-.184.984-.421l-.542-1.267q-.3.162-.642.274l-.297.087q-.51.131-1.3.131-.954 0-1.497-.444a1.6 1.6 0 0 1-.192-.193q-.366-.44-.512-1.234l-.004-.021zm-5.427-1.256-.003.022h3.752v-.138q-.011-.727-.288-1.118a1 1 0 0 0-.156-.176q-.46-.428-1.316-.428-.986 0-1.494.604-.379.45-.494 1.234zm-27.053 2.77V4.7h-1.86v12.095h5.333V15.15zm7.103-5.908v7.553h-1.843V9.242h1.843z'/%3E%3Cpath fill='%23fff' d='m19.63 11.151-.757-1.71-.345 1.71-1.12 5.644h-1.827L18.083 4.7h.197l3.325 6.533.988 2.19.988-2.19L26.839 4.7h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.93 5.644h-.098l-2.913-5.644zm14.836 5.81q-1.02 0-1.893-.478a3.8 3.8 0 0 1-1.381-1.382q-.51-.906-.51-2.106 0-1.185.444-2.074a3.36 3.36 0 0 1 1.3-1.382q.839-.494 1.974-.494a3.3 3.3 0 0 1 1.234.231 3.3 3.3 0 0 1 .97.575q.396.33.527.659l.033-1.267h1.694v7.553H37.18l-.033-1.332q-.279.593-1.02 1.053a3.17 3.17 0 0 1-1.662.444zm.296-1.482q.938 0 1.58-.642.642-.66.642-1.711v-.115q0-.708-.296-1.267a2.2 2.2 0 0 0-.807-.872 2.1 2.1 0 0 0-1.119-.313q-1.053 0-1.629.692-.575.675-.575 1.76 0 1.103.559 1.795.577.675 1.645.675zm6.521-6.237h1.711v1.4q.906-1.597 2.83-1.597 1.596 0 2.584 1.02.988 1.005.988 2.914 0 1.185-.493 2.09a3.46 3.46 0 0 1-1.316 1.399 3.5 3.5 0 0 1-1.844.493q-.954 0-1.662-.329a2.67 2.67 0 0 1-1.086-.97l.017 5.134h-1.728zm4.048 6.22q1.07 0 1.645-.674.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.592 0-1.12.296-.51.28-.822.823-.296.527-.296 1.234v.115q0 .708.296 1.267.313.543.823.855.51.296 1.119.297z'/%3E%3Cpath fill='%23e1e3e9' d='M51.325 4.7h1.86v10.45h3.473v1.646h-5.333zm7.12 4.542h1.843v7.553h-1.843zm.905-1.415a1.16 1.16 0 0 1-.856-.346 1.17 1.17 0 0 1-.346-.856 1.05 1.05 0 0 1 .346-.79q.346-.329.856-.329.494 0 .839.33a1.05 1.05 0 0 1 .345.79 1.16 1.16 0 0 1-.345.855q-.33.346-.84.346zm7.875 9.133a3.17 3.17 0 0 1-1.662-.444q-.723-.46-1.004-1.053l-.033 1.332h-1.71V4.701h1.743v4.657l-.082 1.283q.279-.658 1.086-1.119a3.5 3.5 0 0 1 1.778-.477q1.119 0 1.942.51a3.24 3.24 0 0 1 1.283 1.4q.445.888.444 2.072 0 1.201-.526 2.09a3.5 3.5 0 0 1-1.382 1.366 3.8 3.8 0 0 1-1.876.477zm-.296-1.481q1.069 0 1.645-.675.577-.69.577-1.778 0-1.102-.577-1.776-.56-.691-1.645-.692a2.12 2.12 0 0 0-1.58.659q-.642.641-.642 1.694v.115q0 .71.296 1.267a2.4 2.4 0 0 0 .807.872 2.1 2.1 0 0 0 1.119.313zm5.927-6.237h1.777v1.481q.263-.757.856-1.217a2.14 2.14 0 0 1 1.349-.46q.527 0 .724.098l-.247 1.794q-.149-.099-.642-.099-.774 0-1.416.494-.626.493-.626 1.58v3.883h-1.777V9.242zm9.534 7.718q-1.35 0-2.255-.526-.904-.543-1.332-1.432a4.6 4.6 0 0 1-.428-1.975q0-1.2.493-2.106a3.46 3.46 0 0 1 1.4-1.382q.889-.495 2.007-.494 1.744 0 2.584.97.855.956.856 2.7 0 .444-.05.92h-5.43q.18 1.005.708 1.45.542.443 1.497.443.79 0 1.3-.131a4 4 0 0 0 .938-.362l.542 1.267q-.411.263-1.119.46-.708.198-1.711.197zm1.596-4.558q.016-1.02-.444-1.432-.46-.428-1.316-.428-1.728 0-1.991 1.86z'/%3E%3Cpath d='M5.074 15.948a.484.657 0 0 0-.486.659v1.84a.484.657 0 0 0 .486.659h4.101a.484.657 0 0 0 .486-.659v-1.84a.484.657 0 0 0-.486-.659zm3.56 1.16H5.617v.838h3.017z' style='fill:%23fff;fill-rule:evenodd;stroke-width:1.03600001'/%3E%3Cg style='stroke-width:1.12603545'%3E%3Cpath d='M-9.408-1.416c-3.833-.025-7.056 2.912-7.08 6.615-.02 3.08 1.653 4.832 3.107 6.268.903.892 1.721 1.74 2.32 2.902l-.525-.004c-.543-.003-.992.304-1.24.639a1.87 1.87 0 0 0-.362 1.121l-.011 1.877c-.003.402.104.787.347 1.125.244.338.688.653 1.23.656l4.142.028c.542.003.99-.306 1.238-.641a1.87 1.87 0 0 0 .363-1.121l.012-1.875a1.87 1.87 0 0 0-.348-1.127c-.243-.338-.688-.653-1.23-.656l-.518-.004c.597-1.145 1.425-1.983 2.348-2.87 1.473-1.414 3.18-3.149 3.2-6.226-.016-3.59-2.923-6.684-6.993-6.707m-.006 1.1v.002c3.274.02 5.92 2.532 5.9 5.6-.017 2.706-1.39 4.026-2.863 5.44-1.034.994-2.118 2.033-2.814 3.633-.018.041-.052.055-.075.065q-.013.004-.02.01a.34.34 0 0 1-.226.084.34.34 0 0 1-.224-.086l-.092-.077c-.699-1.615-1.768-2.669-2.781-3.67-1.454-1.435-2.797-2.762-2.78-5.478.02-3.067 2.7-5.545 5.975-5.523m-.02 2.826c-1.62-.01-2.944 1.315-2.955 2.96-.01 1.646 1.295 2.988 2.916 2.999h.002c1.621.01 2.943-1.316 2.953-2.961.011-1.646-1.294-2.988-2.916-2.998m-.005 1.1c1.017.006 1.829.83 1.822 1.89s-.83 1.874-1.848 1.867c-1.018-.006-1.829-.83-1.822-1.89s.83-1.874 1.848-1.868m-2.155 11.857 4.14.025c.271.002.49.305.487.676l-.013 1.875c-.003.37-.224.67-.495.668l-4.14-.025c-.27-.002-.487-.306-.485-.676l.012-1.875c.003-.37.224-.67.494-.668' style='color:%23000;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:%23000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:evenodd;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:%23000;solid-opacity:1;vector-effect:none;fill:%23000;fill-opacity:.4;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-9.415-.316C-12.69-.338-15.37 2.14-15.39 5.207c-.017 2.716 1.326 4.041 2.78 5.477 1.013 1 2.081 2.055 2.78 3.67l.092.076a.34.34 0 0 0 .225.086.34.34 0 0 0 .227-.083l.019-.01c.022-.009.057-.024.074-.064.697-1.6 1.78-2.64 2.814-3.634 1.473-1.414 2.847-2.733 2.864-5.44.02-3.067-2.627-5.58-5.901-5.601m-.057 8.784c1.621.011 2.944-1.315 2.955-2.96.01-1.646-1.295-2.988-2.916-2.999-1.622-.01-2.945 1.315-2.955 2.96s1.295 2.989 2.916 3' style='clip-rule:evenodd;fill:%23e1e3e9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-11.594 15.465c-.27-.002-.492.297-.494.668l-.012 1.876c-.003.371.214.673.485.675l4.14.027c.271.002.492-.298.495-.668l.012-1.877c.003-.37-.215-.672-.485-.674z' style='clip-rule:evenodd;fill:%23fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3C/g%3E%3C/svg%3E");background-repeat:no-repeat;cursor:pointer;display:block;height:23px;margin:0 0 -4px -4px;overflow:hidden;width:88px}a.maplibregl-ctrl-logo.maplibregl-compact{width:14px}@media (forced-colors:active){a.maplibregl-ctrl-logo{background-color:transparent;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='23' fill='none'%3E%3Cpath fill='%23000' fill-opacity='.4' fill-rule='evenodd' d='M17.408 16.796h-1.827l2.501-12.095h.198l3.324 6.533.988 2.19.988-2.19 3.258-6.533h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.929 5.644h-.098l-2.914-5.644-.757-1.71-.345 1.71zm1.958-3.42-.726 3.663a1.255 1.255 0 0 1-1.232 1.011h-1.827a1.255 1.255 0 0 1-1.229-1.509l2.501-12.095a1.255 1.255 0 0 1 1.23-1.001h.197a1.25 1.25 0 0 1 1.12.685l3.19 6.273 3.125-6.263a1.25 1.25 0 0 1 1.123-.695h.181a1.255 1.255 0 0 1 1.227.991l1.443 6.71a5 5 0 0 1 .314-.787l.009-.016a4.6 4.6 0 0 1 1.777-1.887c.782-.46 1.668-.667 2.611-.667a4.6 4.6 0 0 1 1.7.32l.306.134c.21-.16.474-.256.759-.256h1.694a1.255 1.255 0 0 1 1.212.925 1.255 1.255 0 0 1 1.212-.925h1.711c.284 0 .545.094.755.252.613-.3 1.312-.45 2.075-.45 1.356 0 2.557.445 3.482 1.4q.47.48.763 1.064V4.701a1.255 1.255 0 0 1 1.255-1.255h1.86A1.255 1.255 0 0 1 54.44 4.7v9.194h2.217c.19 0 .37.043.532.118v-4.77c0-.356.147-.678.385-.906a2.42 2.42 0 0 1-.682-1.71c0-.665.267-1.253.735-1.7a2.45 2.45 0 0 1 1.722-.674 2.43 2.43 0 0 1 1.705.675q.318.302.504.683V4.7a1.255 1.255 0 0 1 1.255-1.255h1.744A1.255 1.255 0 0 1 65.812 4.7v3.335a4.8 4.8 0 0 1 1.526-.246c.938 0 1.817.214 2.59.69a4.47 4.47 0 0 1 1.67 1.743v-.98a1.255 1.255 0 0 1 1.256-1.256h1.777c.233 0 .451.064.639.174a3.4 3.4 0 0 1 1.567-.372c.346 0 .861.02 1.285.232a1.25 1.25 0 0 1 .689 1.004 4.7 4.7 0 0 1 .853-.588c.795-.44 1.675-.647 2.61-.647 1.385 0 2.65.39 3.525 1.396.836.938 1.168 2.173 1.168 3.528q-.001.515-.056 1.051a1.255 1.255 0 0 1-.947 1.09l.408.952a1.255 1.255 0 0 1-.477 1.552c-.418.268-.92.463-1.458.612-.613.171-1.304.244-2.049.244-1.06 0-2.043-.207-2.886-.698l-.015-.008c-.798-.48-1.419-1.135-1.818-1.963l-.004-.008a5.8 5.8 0 0 1-.548-2.512q0-.429.053-.843a1.3 1.3 0 0 1-.333-.086l-.166-.004c-.223 0-.426.062-.643.228-.03.024-.142.139-.142.59v3.883a1.255 1.255 0 0 1-1.256 1.256h-1.777a1.255 1.255 0 0 1-1.256-1.256V15.69l-.032.057a4.8 4.8 0 0 1-1.86 1.833 5.04 5.04 0 0 1-2.484.634 4.5 4.5 0 0 1-1.935-.424 1.25 1.25 0 0 1-.764.258h-1.71a1.255 1.255 0 0 1-1.256-1.255V7.687a2.4 2.4 0 0 1-.428.625c.253.23.412.561.412.93v7.553a1.255 1.255 0 0 1-1.256 1.255h-1.843a1.25 1.25 0 0 1-.894-.373c-.228.23-.544.373-.894.373H51.32a1.255 1.255 0 0 1-1.256-1.255v-1.251l-.061.117a4.7 4.7 0 0 1-1.782 1.884 4.77 4.77 0 0 1-2.485.67 5.6 5.6 0 0 1-1.485-.188l.009 2.764a1.255 1.255 0 0 1-1.255 1.259h-1.729a1.255 1.255 0 0 1-1.255-1.255v-3.537a1.255 1.255 0 0 1-1.167.793h-1.679a1.25 1.25 0 0 1-.77-.263 4.5 4.5 0 0 1-1.945.429c-.885 0-1.724-.21-2.495-.632l-.017-.01a5 5 0 0 1-1.081-.836 1.255 1.255 0 0 1-1.254 1.312h-1.81a1.255 1.255 0 0 1-1.228-.99l-.782-3.625-2.044 3.939a1.25 1.25 0 0 1-1.115.676h-.098a1.25 1.25 0 0 1-1.116-.68l-2.061-3.994zM35.92 16.63l.207-.114.223-.15q.493-.356.735-.785l.061-.118.033 1.332h1.678V9.242h-1.694l-.033 1.267q-.133-.329-.526-.658l-.032-.028a3.2 3.2 0 0 0-.668-.428l-.27-.12a3.3 3.3 0 0 0-1.235-.23q-1.136-.001-1.974.493a3.36 3.36 0 0 0-1.3 1.382q-.445.89-.444 2.074 0 1.2.51 2.107a3.8 3.8 0 0 0 1.382 1.381 3.9 3.9 0 0 0 1.893.477q.795 0 1.455-.33zm-2.789-5.38q-.576.675-.575 1.762 0 1.102.559 1.794.576.675 1.645.675a2.25 2.25 0 0 0 .934-.19 2.2 2.2 0 0 0 .468-.29l.178-.161a2.2 2.2 0 0 0 .397-.561q.244-.5.244-1.15v-.115q0-.708-.296-1.267l-.043-.077a2.2 2.2 0 0 0-.633-.709l-.13-.086-.047-.028a2.1 2.1 0 0 0-1.073-.285q-1.052 0-1.629.692zm2.316 2.706c.163-.17.28-.407.28-.83v-.114c0-.292-.06-.508-.15-.68a.96.96 0 0 0-.353-.389.85.85 0 0 0-.464-.127c-.4 0-.56.114-.664.239l-.01.012c-.148.174-.275.45-.275.945 0 .506.122.801.27.99.097.11.266.224.68.224.303 0 .504-.09.687-.269zm7.545 1.705a2.6 2.6 0 0 0 .331.423q.319.33.755.548l.173.074q.65.255 1.49.255 1.02 0 1.844-.493a3.45 3.45 0 0 0 1.316-1.4q.493-.904.493-2.089 0-1.909-.988-2.913-.988-1.02-2.584-1.02-.898 0-1.575.347a3 3 0 0 0-.415.262l-.199.166a3.4 3.4 0 0 0-.64.82V9.242h-1.712v11.553h1.729l-.017-5.134zm.53-1.138q.206.29.48.5l.155.11.053.034q.51.296 1.119.297 1.07 0 1.645-.675.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.435 0-.835.16a2 2 0 0 0-.284.136 2 2 0 0 0-.363.254 2.2 2.2 0 0 0-.46.569l-.082.162a2.6 2.6 0 0 0-.213 1.072v.115q0 .707.296 1.267l.135.211zm.964-.818a1.1 1.1 0 0 0 .367.385.94.94 0 0 0 .476.118c.423 0 .59-.117.687-.23.159-.194.28-.478.28-.95 0-.53-.133-.8-.266-.952l-.021-.025c-.078-.094-.231-.221-.68-.221a1 1 0 0 0-.503.135l-.012.007a.86.86 0 0 0-.335.343c-.073.133-.132.324-.132.614v.115a1.4 1.4 0 0 0 .14.66zm15.7-6.222q.347-.346.346-.856a1.05 1.05 0 0 0-.345-.79 1.18 1.18 0 0 0-.84-.329q-.51 0-.855.33a1.05 1.05 0 0 0-.346.79q0 .51.346.855.345.346.856.346.51 0 .839-.346zm4.337 9.314.033-1.332q.191.403.59.747l.098.081a4 4 0 0 0 .316.224l.223.122a3.2 3.2 0 0 0 1.44.322 3.8 3.8 0 0 0 1.875-.477 3.5 3.5 0 0 0 1.382-1.366q.527-.89.526-2.09 0-1.184-.444-2.073a3.24 3.24 0 0 0-1.283-1.399q-.823-.51-1.942-.51a3.5 3.5 0 0 0-1.527.344l-.086.043-.165.09a3 3 0 0 0-.33.214q-.432.315-.656.707a2 2 0 0 0-.099.198l.082-1.283V4.701h-1.744v12.095zm.473-2.509a2.5 2.5 0 0 0 .566.7q.117.098.245.18l.144.08a2.1 2.1 0 0 0 .975.232q1.07 0 1.645-.675.576-.69.576-1.778 0-1.102-.576-1.777-.56-.691-1.645-.692a2.2 2.2 0 0 0-1.015.235q-.22.113-.415.282l-.15.142a2.1 2.1 0 0 0-.42.594q-.223.479-.223 1.1v.115q0 .705.293 1.26zm2.616-.293c.157-.191.28-.479.28-.967 0-.51-.13-.79-.276-.961l-.021-.026c-.082-.1-.232-.225-.67-.225a.87.87 0 0 0-.681.279l-.012.011c-.154.155-.274.38-.274.807v.115c0 .285.057.499.144.669a1.1 1.1 0 0 0 .367.405c.137.082.28.123.455.123.423 0 .59-.118.686-.23zm8.266-3.013q.345-.13.724-.14l.069-.002q.493 0 .642.099l.247-1.794q-.196-.099-.717-.099a2.3 2.3 0 0 0-.545.063 2 2 0 0 0-.411.148 2.2 2.2 0 0 0-.4.249 2.5 2.5 0 0 0-.485.499 2.7 2.7 0 0 0-.32.581l-.05.137v-1.48h-1.778v7.553h1.777v-3.884q0-.546.159-.943a1.5 1.5 0 0 1 .466-.636 2.5 2.5 0 0 1 .399-.253 2 2 0 0 1 .224-.099zm9.784 2.656.05-.922q0-1.743-.856-2.698-.838-.97-2.584-.97-1.119-.001-2.007.493a3.46 3.46 0 0 0-1.4 1.382q-.493.906-.493 2.106 0 1.07.428 1.975.428.89 1.332 1.432.906.526 2.255.526.973 0 1.668-.185l.044-.012.135-.04q.613-.184.984-.421l-.542-1.267q-.3.162-.642.274l-.297.087q-.51.131-1.3.131-.954 0-1.497-.444a1.6 1.6 0 0 1-.192-.193q-.366-.44-.512-1.234l-.004-.021zm-5.427-1.256-.003.022h3.752v-.138q-.011-.727-.288-1.118a1 1 0 0 0-.156-.176q-.46-.428-1.316-.428-.986 0-1.494.604-.379.45-.494 1.234zm-27.053 2.77V4.7h-1.86v12.095h5.333V15.15zm7.103-5.908v7.553h-1.843V9.242h1.843z'/%3E%3Cpath fill='%23fff' d='m19.63 11.151-.757-1.71-.345 1.71-1.12 5.644h-1.827L18.083 4.7h.197l3.325 6.533.988 2.19.988-2.19L26.839 4.7h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.93 5.644h-.098l-2.913-5.644zm14.836 5.81q-1.02 0-1.893-.478a3.8 3.8 0 0 1-1.381-1.382q-.51-.906-.51-2.106 0-1.185.444-2.074a3.36 3.36 0 0 1 1.3-1.382q.839-.494 1.974-.494a3.3 3.3 0 0 1 1.234.231 3.3 3.3 0 0 1 .97.575q.396.33.527.659l.033-1.267h1.694v7.553H37.18l-.033-1.332q-.279.593-1.02 1.053a3.17 3.17 0 0 1-1.662.444zm.296-1.482q.938 0 1.58-.642.642-.66.642-1.711v-.115q0-.708-.296-1.267a2.2 2.2 0 0 0-.807-.872 2.1 2.1 0 0 0-1.119-.313q-1.053 0-1.629.692-.575.675-.575 1.76 0 1.103.559 1.795.577.675 1.645.675zm6.521-6.237h1.711v1.4q.906-1.597 2.83-1.597 1.596 0 2.584 1.02.988 1.005.988 2.914 0 1.185-.493 2.09a3.46 3.46 0 0 1-1.316 1.399 3.5 3.5 0 0 1-1.844.493q-.954 0-1.662-.329a2.67 2.67 0 0 1-1.086-.97l.017 5.134h-1.728zm4.048 6.22q1.07 0 1.645-.674.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.592 0-1.12.296-.51.28-.822.823-.296.527-.296 1.234v.115q0 .708.296 1.267.313.543.823.855.51.296 1.119.297z'/%3E%3Cpath fill='%23e1e3e9' d='M51.325 4.7h1.86v10.45h3.473v1.646h-5.333zm7.12 4.542h1.843v7.553h-1.843zm.905-1.415a1.16 1.16 0 0 1-.856-.346 1.17 1.17 0 0 1-.346-.856 1.05 1.05 0 0 1 .346-.79q.346-.329.856-.329.494 0 .839.33a1.05 1.05 0 0 1 .345.79 1.16 1.16 0 0 1-.345.855q-.33.346-.84.346zm7.875 9.133a3.17 3.17 0 0 1-1.662-.444q-.723-.46-1.004-1.053l-.033 1.332h-1.71V4.701h1.743v4.657l-.082 1.283q.279-.658 1.086-1.119a3.5 3.5 0 0 1 1.778-.477q1.119 0 1.942.51a3.24 3.24 0 0 1 1.283 1.4q.445.888.444 2.072 0 1.201-.526 2.09a3.5 3.5 0 0 1-1.382 1.366 3.8 3.8 0 0 1-1.876.477zm-.296-1.481q1.069 0 1.645-.675.577-.69.577-1.778 0-1.102-.577-1.776-.56-.691-1.645-.692a2.12 2.12 0 0 0-1.58.659q-.642.641-.642 1.694v.115q0 .71.296 1.267a2.4 2.4 0 0 0 .807.872 2.1 2.1 0 0 0 1.119.313zm5.927-6.237h1.777v1.481q.263-.757.856-1.217a2.14 2.14 0 0 1 1.349-.46q.527 0 .724.098l-.247 1.794q-.149-.099-.642-.099-.774 0-1.416.494-.626.493-.626 1.58v3.883h-1.777V9.242zm9.534 7.718q-1.35 0-2.255-.526-.904-.543-1.332-1.432a4.6 4.6 0 0 1-.428-1.975q0-1.2.493-2.106a3.46 3.46 0 0 1 1.4-1.382q.889-.495 2.007-.494 1.744 0 2.584.97.855.956.856 2.7 0 .444-.05.92h-5.43q.18 1.005.708 1.45.542.443 1.497.443.79 0 1.3-.131a4 4 0 0 0 .938-.362l.542 1.267q-.411.263-1.119.46-.708.198-1.711.197zm1.596-4.558q.016-1.02-.444-1.432-.46-.428-1.316-.428-1.728 0-1.991 1.86z'/%3E%3Cpath d='M5.074 15.948a.484.657 0 0 0-.486.659v1.84a.484.657 0 0 0 .486.659h4.101a.484.657 0 0 0 .486-.659v-1.84a.484.657 0 0 0-.486-.659zm3.56 1.16H5.617v.838h3.017z' style='fill:%23fff;fill-rule:evenodd;stroke-width:1.03600001'/%3E%3Cg style='stroke-width:1.12603545'%3E%3Cpath d='M-9.408-1.416c-3.833-.025-7.056 2.912-7.08 6.615-.02 3.08 1.653 4.832 3.107 6.268.903.892 1.721 1.74 2.32 2.902l-.525-.004c-.543-.003-.992.304-1.24.639a1.87 1.87 0 0 0-.362 1.121l-.011 1.877c-.003.402.104.787.347 1.125.244.338.688.653 1.23.656l4.142.028c.542.003.99-.306 1.238-.641a1.87 1.87 0 0 0 .363-1.121l.012-1.875a1.87 1.87 0 0 0-.348-1.127c-.243-.338-.688-.653-1.23-.656l-.518-.004c.597-1.145 1.425-1.983 2.348-2.87 1.473-1.414 3.18-3.149 3.2-6.226-.016-3.59-2.923-6.684-6.993-6.707m-.006 1.1v.002c3.274.02 5.92 2.532 5.9 5.6-.017 2.706-1.39 4.026-2.863 5.44-1.034.994-2.118 2.033-2.814 3.633-.018.041-.052.055-.075.065q-.013.004-.02.01a.34.34 0 0 1-.226.084.34.34 0 0 1-.224-.086l-.092-.077c-.699-1.615-1.768-2.669-2.781-3.67-1.454-1.435-2.797-2.762-2.78-5.478.02-3.067 2.7-5.545 5.975-5.523m-.02 2.826c-1.62-.01-2.944 1.315-2.955 2.96-.01 1.646 1.295 2.988 2.916 2.999h.002c1.621.01 2.943-1.316 2.953-2.961.011-1.646-1.294-2.988-2.916-2.998m-.005 1.1c1.017.006 1.829.83 1.822 1.89s-.83 1.874-1.848 1.867c-1.018-.006-1.829-.83-1.822-1.89s.83-1.874 1.848-1.868m-2.155 11.857 4.14.025c.271.002.49.305.487.676l-.013 1.875c-.003.37-.224.67-.495.668l-4.14-.025c-.27-.002-.487-.306-.485-.676l.012-1.875c.003-.37.224-.67.494-.668' style='color:%23000;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:%23000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:evenodd;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:%23000;solid-opacity:1;vector-effect:none;fill:%23000;fill-opacity:.4;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-9.415-.316C-12.69-.338-15.37 2.14-15.39 5.207c-.017 2.716 1.326 4.041 2.78 5.477 1.013 1 2.081 2.055 2.78 3.67l.092.076a.34.34 0 0 0 .225.086.34.34 0 0 0 .227-.083l.019-.01c.022-.009.057-.024.074-.064.697-1.6 1.78-2.64 2.814-3.634 1.473-1.414 2.847-2.733 2.864-5.44.02-3.067-2.627-5.58-5.901-5.601m-.057 8.784c1.621.011 2.944-1.315 2.955-2.96.01-1.646-1.295-2.988-2.916-2.999-1.622-.01-2.945 1.315-2.955 2.96s1.295 2.989 2.916 3' style='clip-rule:evenodd;fill:%23e1e3e9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-11.594 15.465c-.27-.002-.492.297-.494.668l-.012 1.876c-.003.371.214.673.485.675l4.14.027c.271.002.492-.298.495-.668l.012-1.877c.003-.37-.215-.672-.485-.674z' style='clip-rule:evenodd;fill:%23fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3C/g%3E%3C/svg%3E")}}@media (forced-colors:active) and (prefers-color-scheme:light){a.maplibregl-ctrl-logo{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='23' fill='none'%3E%3Cpath fill='%23000' fill-opacity='.4' fill-rule='evenodd' d='M17.408 16.796h-1.827l2.501-12.095h.198l3.324 6.533.988 2.19.988-2.19 3.258-6.533h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.929 5.644h-.098l-2.914-5.644-.757-1.71-.345 1.71zm1.958-3.42-.726 3.663a1.255 1.255 0 0 1-1.232 1.011h-1.827a1.255 1.255 0 0 1-1.229-1.509l2.501-12.095a1.255 1.255 0 0 1 1.23-1.001h.197a1.25 1.25 0 0 1 1.12.685l3.19 6.273 3.125-6.263a1.25 1.25 0 0 1 1.123-.695h.181a1.255 1.255 0 0 1 1.227.991l1.443 6.71a5 5 0 0 1 .314-.787l.009-.016a4.6 4.6 0 0 1 1.777-1.887c.782-.46 1.668-.667 2.611-.667a4.6 4.6 0 0 1 1.7.32l.306.134c.21-.16.474-.256.759-.256h1.694a1.255 1.255 0 0 1 1.212.925 1.255 1.255 0 0 1 1.212-.925h1.711c.284 0 .545.094.755.252.613-.3 1.312-.45 2.075-.45 1.356 0 2.557.445 3.482 1.4q.47.48.763 1.064V4.701a1.255 1.255 0 0 1 1.255-1.255h1.86A1.255 1.255 0 0 1 54.44 4.7v9.194h2.217c.19 0 .37.043.532.118v-4.77c0-.356.147-.678.385-.906a2.42 2.42 0 0 1-.682-1.71c0-.665.267-1.253.735-1.7a2.45 2.45 0 0 1 1.722-.674 2.43 2.43 0 0 1 1.705.675q.318.302.504.683V4.7a1.255 1.255 0 0 1 1.255-1.255h1.744A1.255 1.255 0 0 1 65.812 4.7v3.335a4.8 4.8 0 0 1 1.526-.246c.938 0 1.817.214 2.59.69a4.47 4.47 0 0 1 1.67 1.743v-.98a1.255 1.255 0 0 1 1.256-1.256h1.777c.233 0 .451.064.639.174a3.4 3.4 0 0 1 1.567-.372c.346 0 .861.02 1.285.232a1.25 1.25 0 0 1 .689 1.004 4.7 4.7 0 0 1 .853-.588c.795-.44 1.675-.647 2.61-.647 1.385 0 2.65.39 3.525 1.396.836.938 1.168 2.173 1.168 3.528q-.001.515-.056 1.051a1.255 1.255 0 0 1-.947 1.09l.408.952a1.255 1.255 0 0 1-.477 1.552c-.418.268-.92.463-1.458.612-.613.171-1.304.244-2.049.244-1.06 0-2.043-.207-2.886-.698l-.015-.008c-.798-.48-1.419-1.135-1.818-1.963l-.004-.008a5.8 5.8 0 0 1-.548-2.512q0-.429.053-.843a1.3 1.3 0 0 1-.333-.086l-.166-.004c-.223 0-.426.062-.643.228-.03.024-.142.139-.142.59v3.883a1.255 1.255 0 0 1-1.256 1.256h-1.777a1.255 1.255 0 0 1-1.256-1.256V15.69l-.032.057a4.8 4.8 0 0 1-1.86 1.833 5.04 5.04 0 0 1-2.484.634 4.5 4.5 0 0 1-1.935-.424 1.25 1.25 0 0 1-.764.258h-1.71a1.255 1.255 0 0 1-1.256-1.255V7.687a2.4 2.4 0 0 1-.428.625c.253.23.412.561.412.93v7.553a1.255 1.255 0 0 1-1.256 1.255h-1.843a1.25 1.25 0 0 1-.894-.373c-.228.23-.544.373-.894.373H51.32a1.255 1.255 0 0 1-1.256-1.255v-1.251l-.061.117a4.7 4.7 0 0 1-1.782 1.884 4.77 4.77 0 0 1-2.485.67 5.6 5.6 0 0 1-1.485-.188l.009 2.764a1.255 1.255 0 0 1-1.255 1.259h-1.729a1.255 1.255 0 0 1-1.255-1.255v-3.537a1.255 1.255 0 0 1-1.167.793h-1.679a1.25 1.25 0 0 1-.77-.263 4.5 4.5 0 0 1-1.945.429c-.885 0-1.724-.21-2.495-.632l-.017-.01a5 5 0 0 1-1.081-.836 1.255 1.255 0 0 1-1.254 1.312h-1.81a1.255 1.255 0 0 1-1.228-.99l-.782-3.625-2.044 3.939a1.25 1.25 0 0 1-1.115.676h-.098a1.25 1.25 0 0 1-1.116-.68l-2.061-3.994zM35.92 16.63l.207-.114.223-.15q.493-.356.735-.785l.061-.118.033 1.332h1.678V9.242h-1.694l-.033 1.267q-.133-.329-.526-.658l-.032-.028a3.2 3.2 0 0 0-.668-.428l-.27-.12a3.3 3.3 0 0 0-1.235-.23q-1.136-.001-1.974.493a3.36 3.36 0 0 0-1.3 1.382q-.445.89-.444 2.074 0 1.2.51 2.107a3.8 3.8 0 0 0 1.382 1.381 3.9 3.9 0 0 0 1.893.477q.795 0 1.455-.33zm-2.789-5.38q-.576.675-.575 1.762 0 1.102.559 1.794.576.675 1.645.675a2.25 2.25 0 0 0 .934-.19 2.2 2.2 0 0 0 .468-.29l.178-.161a2.2 2.2 0 0 0 .397-.561q.244-.5.244-1.15v-.115q0-.708-.296-1.267l-.043-.077a2.2 2.2 0 0 0-.633-.709l-.13-.086-.047-.028a2.1 2.1 0 0 0-1.073-.285q-1.052 0-1.629.692zm2.316 2.706c.163-.17.28-.407.28-.83v-.114c0-.292-.06-.508-.15-.68a.96.96 0 0 0-.353-.389.85.85 0 0 0-.464-.127c-.4 0-.56.114-.664.239l-.01.012c-.148.174-.275.45-.275.945 0 .506.122.801.27.99.097.11.266.224.68.224.303 0 .504-.09.687-.269zm7.545 1.705a2.6 2.6 0 0 0 .331.423q.319.33.755.548l.173.074q.65.255 1.49.255 1.02 0 1.844-.493a3.45 3.45 0 0 0 1.316-1.4q.493-.904.493-2.089 0-1.909-.988-2.913-.988-1.02-2.584-1.02-.898 0-1.575.347a3 3 0 0 0-.415.262l-.199.166a3.4 3.4 0 0 0-.64.82V9.242h-1.712v11.553h1.729l-.017-5.134zm.53-1.138q.206.29.48.5l.155.11.053.034q.51.296 1.119.297 1.07 0 1.645-.675.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.435 0-.835.16a2 2 0 0 0-.284.136 2 2 0 0 0-.363.254 2.2 2.2 0 0 0-.46.569l-.082.162a2.6 2.6 0 0 0-.213 1.072v.115q0 .707.296 1.267l.135.211zm.964-.818a1.1 1.1 0 0 0 .367.385.94.94 0 0 0 .476.118c.423 0 .59-.117.687-.23.159-.194.28-.478.28-.95 0-.53-.133-.8-.266-.952l-.021-.025c-.078-.094-.231-.221-.68-.221a1 1 0 0 0-.503.135l-.012.007a.86.86 0 0 0-.335.343c-.073.133-.132.324-.132.614v.115a1.4 1.4 0 0 0 .14.66zm15.7-6.222q.347-.346.346-.856a1.05 1.05 0 0 0-.345-.79 1.18 1.18 0 0 0-.84-.329q-.51 0-.855.33a1.05 1.05 0 0 0-.346.79q0 .51.346.855.345.346.856.346.51 0 .839-.346zm4.337 9.314.033-1.332q.191.403.59.747l.098.081a4 4 0 0 0 .316.224l.223.122a3.2 3.2 0 0 0 1.44.322 3.8 3.8 0 0 0 1.875-.477 3.5 3.5 0 0 0 1.382-1.366q.527-.89.526-2.09 0-1.184-.444-2.073a3.24 3.24 0 0 0-1.283-1.399q-.823-.51-1.942-.51a3.5 3.5 0 0 0-1.527.344l-.086.043-.165.09a3 3 0 0 0-.33.214q-.432.315-.656.707a2 2 0 0 0-.099.198l.082-1.283V4.701h-1.744v12.095zm.473-2.509a2.5 2.5 0 0 0 .566.7q.117.098.245.18l.144.08a2.1 2.1 0 0 0 .975.232q1.07 0 1.645-.675.576-.69.576-1.778 0-1.102-.576-1.777-.56-.691-1.645-.692a2.2 2.2 0 0 0-1.015.235q-.22.113-.415.282l-.15.142a2.1 2.1 0 0 0-.42.594q-.223.479-.223 1.1v.115q0 .705.293 1.26zm2.616-.293c.157-.191.28-.479.28-.967 0-.51-.13-.79-.276-.961l-.021-.026c-.082-.1-.232-.225-.67-.225a.87.87 0 0 0-.681.279l-.012.011c-.154.155-.274.38-.274.807v.115c0 .285.057.499.144.669a1.1 1.1 0 0 0 .367.405c.137.082.28.123.455.123.423 0 .59-.118.686-.23zm8.266-3.013q.345-.13.724-.14l.069-.002q.493 0 .642.099l.247-1.794q-.196-.099-.717-.099a2.3 2.3 0 0 0-.545.063 2 2 0 0 0-.411.148 2.2 2.2 0 0 0-.4.249 2.5 2.5 0 0 0-.485.499 2.7 2.7 0 0 0-.32.581l-.05.137v-1.48h-1.778v7.553h1.777v-3.884q0-.546.159-.943a1.5 1.5 0 0 1 .466-.636 2.5 2.5 0 0 1 .399-.253 2 2 0 0 1 .224-.099zm9.784 2.656.05-.922q0-1.743-.856-2.698-.838-.97-2.584-.97-1.119-.001-2.007.493a3.46 3.46 0 0 0-1.4 1.382q-.493.906-.493 2.106 0 1.07.428 1.975.428.89 1.332 1.432.906.526 2.255.526.973 0 1.668-.185l.044-.012.135-.04q.613-.184.984-.421l-.542-1.267q-.3.162-.642.274l-.297.087q-.51.131-1.3.131-.954 0-1.497-.444a1.6 1.6 0 0 1-.192-.193q-.366-.44-.512-1.234l-.004-.021zm-5.427-1.256-.003.022h3.752v-.138q-.011-.727-.288-1.118a1 1 0 0 0-.156-.176q-.46-.428-1.316-.428-.986 0-1.494.604-.379.45-.494 1.234zm-27.053 2.77V4.7h-1.86v12.095h5.333V15.15zm7.103-5.908v7.553h-1.843V9.242h1.843z'/%3E%3Cpath fill='%23fff' d='m19.63 11.151-.757-1.71-.345 1.71-1.12 5.644h-1.827L18.083 4.7h.197l3.325 6.533.988 2.19.988-2.19L26.839 4.7h.181l2.6 12.095h-1.81l-1.218-5.644-.362-1.71-.658 1.71-2.93 5.644h-.098l-2.913-5.644zm14.836 5.81q-1.02 0-1.893-.478a3.8 3.8 0 0 1-1.381-1.382q-.51-.906-.51-2.106 0-1.185.444-2.074a3.36 3.36 0 0 1 1.3-1.382q.839-.494 1.974-.494a3.3 3.3 0 0 1 1.234.231 3.3 3.3 0 0 1 .97.575q.396.33.527.659l.033-1.267h1.694v7.553H37.18l-.033-1.332q-.279.593-1.02 1.053a3.17 3.17 0 0 1-1.662.444zm.296-1.482q.938 0 1.58-.642.642-.66.642-1.711v-.115q0-.708-.296-1.267a2.2 2.2 0 0 0-.807-.872 2.1 2.1 0 0 0-1.119-.313q-1.053 0-1.629.692-.575.675-.575 1.76 0 1.103.559 1.795.577.675 1.645.675zm6.521-6.237h1.711v1.4q.906-1.597 2.83-1.597 1.596 0 2.584 1.02.988 1.005.988 2.914 0 1.185-.493 2.09a3.46 3.46 0 0 1-1.316 1.399 3.5 3.5 0 0 1-1.844.493q-.954 0-1.662-.329a2.67 2.67 0 0 1-1.086-.97l.017 5.134h-1.728zm4.048 6.22q1.07 0 1.645-.674.577-.69.576-1.762 0-1.119-.576-1.777-.558-.675-1.645-.675-.592 0-1.12.296-.51.28-.822.823-.296.527-.296 1.234v.115q0 .708.296 1.267.313.543.823.855.51.296 1.119.297z'/%3E%3Cpath fill='%23e1e3e9' d='M51.325 4.7h1.86v10.45h3.473v1.646h-5.333zm7.12 4.542h1.843v7.553h-1.843zm.905-1.415a1.16 1.16 0 0 1-.856-.346 1.17 1.17 0 0 1-.346-.856 1.05 1.05 0 0 1 .346-.79q.346-.329.856-.329.494 0 .839.33a1.05 1.05 0 0 1 .345.79 1.16 1.16 0 0 1-.345.855q-.33.346-.84.346zm7.875 9.133a3.17 3.17 0 0 1-1.662-.444q-.723-.46-1.004-1.053l-.033 1.332h-1.71V4.701h1.743v4.657l-.082 1.283q.279-.658 1.086-1.119a3.5 3.5 0 0 1 1.778-.477q1.119 0 1.942.51a3.24 3.24 0 0 1 1.283 1.4q.445.888.444 2.072 0 1.201-.526 2.09a3.5 3.5 0 0 1-1.382 1.366 3.8 3.8 0 0 1-1.876.477zm-.296-1.481q1.069 0 1.645-.675.577-.69.577-1.778 0-1.102-.577-1.776-.56-.691-1.645-.692a2.12 2.12 0 0 0-1.58.659q-.642.641-.642 1.694v.115q0 .71.296 1.267a2.4 2.4 0 0 0 .807.872 2.1 2.1 0 0 0 1.119.313zm5.927-6.237h1.777v1.481q.263-.757.856-1.217a2.14 2.14 0 0 1 1.349-.46q.527 0 .724.098l-.247 1.794q-.149-.099-.642-.099-.774 0-1.416.494-.626.493-.626 1.58v3.883h-1.777V9.242zm9.534 7.718q-1.35 0-2.255-.526-.904-.543-1.332-1.432a4.6 4.6 0 0 1-.428-1.975q0-1.2.493-2.106a3.46 3.46 0 0 1 1.4-1.382q.889-.495 2.007-.494 1.744 0 2.584.97.855.956.856 2.7 0 .444-.05.92h-5.43q.18 1.005.708 1.45.542.443 1.497.443.79 0 1.3-.131a4 4 0 0 0 .938-.362l.542 1.267q-.411.263-1.119.46-.708.198-1.711.197zm1.596-4.558q.016-1.02-.444-1.432-.46-.428-1.316-.428-1.728 0-1.991 1.86z'/%3E%3Cpath d='M5.074 15.948a.484.657 0 0 0-.486.659v1.84a.484.657 0 0 0 .486.659h4.101a.484.657 0 0 0 .486-.659v-1.84a.484.657 0 0 0-.486-.659zm3.56 1.16H5.617v.838h3.017z' style='fill:%23fff;fill-rule:evenodd;stroke-width:1.03600001'/%3E%3Cg style='stroke-width:1.12603545'%3E%3Cpath d='M-9.408-1.416c-3.833-.025-7.056 2.912-7.08 6.615-.02 3.08 1.653 4.832 3.107 6.268.903.892 1.721 1.74 2.32 2.902l-.525-.004c-.543-.003-.992.304-1.24.639a1.87 1.87 0 0 0-.362 1.121l-.011 1.877c-.003.402.104.787.347 1.125.244.338.688.653 1.23.656l4.142.028c.542.003.99-.306 1.238-.641a1.87 1.87 0 0 0 .363-1.121l.012-1.875a1.87 1.87 0 0 0-.348-1.127c-.243-.338-.688-.653-1.23-.656l-.518-.004c.597-1.145 1.425-1.983 2.348-2.87 1.473-1.414 3.18-3.149 3.2-6.226-.016-3.59-2.923-6.684-6.993-6.707m-.006 1.1v.002c3.274.02 5.92 2.532 5.9 5.6-.017 2.706-1.39 4.026-2.863 5.44-1.034.994-2.118 2.033-2.814 3.633-.018.041-.052.055-.075.065q-.013.004-.02.01a.34.34 0 0 1-.226.084.34.34 0 0 1-.224-.086l-.092-.077c-.699-1.615-1.768-2.669-2.781-3.67-1.454-1.435-2.797-2.762-2.78-5.478.02-3.067 2.7-5.545 5.975-5.523m-.02 2.826c-1.62-.01-2.944 1.315-2.955 2.96-.01 1.646 1.295 2.988 2.916 2.999h.002c1.621.01 2.943-1.316 2.953-2.961.011-1.646-1.294-2.988-2.916-2.998m-.005 1.1c1.017.006 1.829.83 1.822 1.89s-.83 1.874-1.848 1.867c-1.018-.006-1.829-.83-1.822-1.89s.83-1.874 1.848-1.868m-2.155 11.857 4.14.025c.271.002.49.305.487.676l-.013 1.875c-.003.37-.224.67-.495.668l-4.14-.025c-.27-.002-.487-.306-.485-.676l.012-1.875c.003-.37.224-.67.494-.668' style='color:%23000;font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:%23000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:evenodd;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:%23000;solid-opacity:1;vector-effect:none;fill:%23000;fill-opacity:.4;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-9.415-.316C-12.69-.338-15.37 2.14-15.39 5.207c-.017 2.716 1.326 4.041 2.78 5.477 1.013 1 2.081 2.055 2.78 3.67l.092.076a.34.34 0 0 0 .225.086.34.34 0 0 0 .227-.083l.019-.01c.022-.009.057-.024.074-.064.697-1.6 1.78-2.64 2.814-3.634 1.473-1.414 2.847-2.733 2.864-5.44.02-3.067-2.627-5.58-5.901-5.601m-.057 8.784c1.621.011 2.944-1.315 2.955-2.96.01-1.646-1.295-2.988-2.916-2.999-1.622-.01-2.945 1.315-2.955 2.96s1.295 2.989 2.916 3' style='clip-rule:evenodd;fill:%23e1e3e9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3Cpath d='M-11.594 15.465c-.27-.002-.492.297-.494.668l-.012 1.876c-.003.371.214.673.485.675l4.14.027c.271.002.492-.298.495-.668l.012-1.877c.003-.37-.215-.672-.485-.674z' style='clip-rule:evenodd;fill:%23fff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.47727823;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:.4' transform='translate(15.553 2.85)scale(.88807)'/%3E%3C/g%3E%3C/svg%3E")}}.maplibregl-ctrl.maplibregl-ctrl-attrib{background-color:hsla(0,0%,100%,.5);margin:0;padding:0 5px}@media screen{.maplibregl-ctrl-attrib.maplibregl-compact{background-color:#fff;border-radius:12px;box-sizing:content-box;color:#000;margin:10px;min-height:20px;padding:2px 24px 2px 0;position:relative}.maplibregl-ctrl-attrib.maplibregl-compact-show{padding:2px 28px 2px 8px;visibility:visible}.maplibregl-ctrl-bottom-left>.maplibregl-ctrl-attrib.maplibregl-compact-show,.maplibregl-ctrl-top-left>.maplibregl-ctrl-attrib.maplibregl-compact-show{border-radius:12px;padding:2px 8px 2px 28px}.maplibregl-ctrl-attrib.maplibregl-compact .maplibregl-ctrl-attrib-inner{display:none}.maplibregl-ctrl-attrib-button{background-color:hsla(0,0%,100%,.5);background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill-rule='evenodd' viewBox='0 0 20 20'%3E%3Cpath d='M4 10a6 6 0 1 0 12 0 6 6 0 1 0-12 0m5-3a1 1 0 1 0 2 0 1 1 0 1 0-2 0m0 3a1 1 0 1 1 2 0v3a1 1 0 1 1-2 0'/%3E%3C/svg%3E");border:0;border-radius:12px;box-sizing:border-box;cursor:pointer;display:none;height:24px;outline:none;position:absolute;right:0;top:0;width:24px}.maplibregl-ctrl-attrib summary.maplibregl-ctrl-attrib-button{-webkit-appearance:none;-moz-appearance:none;appearance:none;list-style:none}.maplibregl-ctrl-attrib summary.maplibregl-ctrl-attrib-button::-webkit-details-marker{display:none}.maplibregl-ctrl-bottom-left .maplibregl-ctrl-attrib-button,.maplibregl-ctrl-top-left .maplibregl-ctrl-attrib-button{left:0}.maplibregl-ctrl-attrib.maplibregl-compact .maplibregl-ctrl-attrib-button,.maplibregl-ctrl-attrib.maplibregl-compact-show .maplibregl-ctrl-attrib-inner{display:block}.maplibregl-ctrl-attrib.maplibregl-compact-show .maplibregl-ctrl-attrib-button{background-color:rgb(0 0 0/5%)}.maplibregl-ctrl-bottom-right>.maplibregl-ctrl-attrib.maplibregl-compact:after{bottom:0;right:0}.maplibregl-ctrl-top-right>.maplibregl-ctrl-attrib.maplibregl-compact:after{right:0;top:0}.maplibregl-ctrl-top-left>.maplibregl-ctrl-attrib.maplibregl-compact:after{left:0;top:0}.maplibregl-ctrl-bottom-left>.maplibregl-ctrl-attrib.maplibregl-compact:after{bottom:0;left:0}}@media screen and (forced-colors:active){.maplibregl-ctrl-attrib.maplibregl-compact:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23fff' fill-rule='evenodd' viewBox='0 0 20 20'%3E%3Cpath d='M4 10a6 6 0 1 0 12 0 6 6 0 1 0-12 0m5-3a1 1 0 1 0 2 0 1 1 0 1 0-2 0m0 3a1 1 0 1 1 2 0v3a1 1 0 1 1-2 0'/%3E%3C/svg%3E")}}@media screen and (forced-colors:active) and (prefers-color-scheme:light){.maplibregl-ctrl-attrib.maplibregl-compact:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill-rule='evenodd' viewBox='0 0 20 20'%3E%3Cpath d='M4 10a6 6 0 1 0 12 0 6 6 0 1 0-12 0m5-3a1 1 0 1 0 2 0 1 1 0 1 0-2 0m0 3a1 1 0 1 1 2 0v3a1 1 0 1 1-2 0'/%3E%3C/svg%3E")}}.maplibregl-ctrl-attrib a{color:rgba(0,0,0,.75);text-decoration:none}.maplibregl-ctrl-attrib a:hover{color:inherit;text-decoration:underline}.maplibregl-attrib-empty{display:none}.maplibregl-ctrl-scale{background-color:hsla(0,0%,100%,.75);border:2px solid #333;border-top:#333;box-sizing:border-box;color:#333;font-size:10px;padding:0 5px}.maplibregl-popup{display:flex;left:0;pointer-events:none;position:absolute;top:0;will-change:transform}.maplibregl-popup-anchor-top,.maplibregl-popup-anchor-top-left,.maplibregl-popup-anchor-top-right{flex-direction:column}.maplibregl-popup-anchor-bottom,.maplibregl-popup-anchor-bottom-left,.maplibregl-popup-anchor-bottom-right{flex-direction:column-reverse}.maplibregl-popup-anchor-left{flex-direction:row}.maplibregl-popup-anchor-right{flex-direction:row-reverse}.maplibregl-popup-tip{border:10px solid transparent;height:0;width:0;z-index:1}.maplibregl-popup-anchor-top .maplibregl-popup-tip{align-self:center;border-bottom-color:#fff;border-top:none}.maplibregl-popup-anchor-top-left .maplibregl-popup-tip{align-self:flex-start;border-bottom-color:#fff;border-left:none;border-top:none}.maplibregl-popup-anchor-top-right .maplibregl-popup-tip{align-self:flex-end;border-bottom-color:#fff;border-right:none;border-top:none}.maplibregl-popup-anchor-bottom .maplibregl-popup-tip{align-self:center;border-bottom:none;border-top-color:#fff}.maplibregl-popup-anchor-bottom-left .maplibregl-popup-tip{align-self:flex-start;border-bottom:none;border-left:none;border-top-color:#fff}.maplibregl-popup-anchor-bottom-right .maplibregl-popup-tip{align-self:flex-end;border-bottom:none;border-right:none;border-top-color:#fff}.maplibregl-popup-anchor-left .maplibregl-popup-tip{align-self:center;border-left:none;border-right-color:#fff}.maplibregl-popup-anchor-right .maplibregl-popup-tip{align-self:center;border-left-color:#fff;border-right:none}.maplibregl-popup-close-button{background-color:transparent;border:0;border-radius:0 3px 0 0;cursor:pointer;position:absolute;right:0;top:0}.maplibregl-popup-close-button:hover{background-color:rgb(0 0 0/5%)}.maplibregl-popup-content{background:#fff;border-radius:3px;box-shadow:0 1px 2px rgba(0,0,0,.1);padding:15px 10px;pointer-events:auto;position:relative}.maplibregl-popup-anchor-top-left .maplibregl-popup-content{border-top-left-radius:0}.maplibregl-popup-anchor-top-right .maplibregl-popup-content{border-top-right-radius:0}.maplibregl-popup-anchor-bottom-left .maplibregl-popup-content{border-bottom-left-radius:0}.maplibregl-popup-anchor-bottom-right .maplibregl-popup-content{border-bottom-right-radius:0}.maplibregl-popup-track-pointer{display:none}.maplibregl-popup-track-pointer *{pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.maplibregl-map:hover .maplibregl-popup-track-pointer{display:flex}.maplibregl-map:active .maplibregl-popup-track-pointer{display:none}.maplibregl-marker{left:0;position:absolute;top:0;transition:opacity .2s;will-change:transform}.maplibregl-user-location-dot,.maplibregl-user-location-dot:before{background-color:#1da1f2;border-radius:50%;height:15px;width:15px}.maplibregl-user-location-dot:before{animation:maplibregl-user-location-dot-pulse 2s infinite;content:"";position:absolute}.maplibregl-user-location-dot:after{border:2px solid #fff;border-radius:50%;box-shadow:0 0 3px rgba(0,0,0,.35);box-sizing:border-box;content:"";height:19px;left:-2px;position:absolute;top:-2px;width:19px}@keyframes maplibregl-user-location-dot-pulse{0%{opacity:1;transform:scale(1)}70%{opacity:0;transform:scale(3)}to{opacity:0;transform:scale(1)}}.maplibregl-user-location-dot-stale{background-color:#aaa}.maplibregl-user-location-dot-stale:after{display:none}.maplibregl-user-location-accuracy-circle{background-color:#1da1f233;border-radius:100%;height:1px;width:1px}.maplibregl-crosshair,.maplibregl-crosshair .maplibregl-interactive,.maplibregl-crosshair .maplibregl-interactive:active{cursor:crosshair}.maplibregl-boxzoom{background:#fff;border:2px dotted #202020;height:0;left:0;opacity:.5;position:absolute;top:0;width:0}.maplibregl-cooperative-gesture-screen{align-items:center;background:rgba(0,0,0,.4);color:#fff;display:flex;font-size:1.4em;inset:0;justify-content:center;line-height:1.2;opacity:0;padding:1rem;pointer-events:none;position:absolute;transition:opacity 1s ease 1s;z-index:99999}.maplibregl-cooperative-gesture-screen.maplibregl-show{opacity:1;transition:opacity .05s}.maplibregl-cooperative-gesture-screen .maplibregl-mobile-message{display:none}@media (hover:none),(width <= 480px){.maplibregl-cooperative-gesture-screen .maplibregl-desktop-message{display:none}.maplibregl-cooperative-gesture-screen .maplibregl-mobile-message{display:block}}.maplibregl-pseudo-fullscreen{height:100%!important;left:0!important;position:fixed!important;top:0!important;width:100%!important;z-index:99999}</style>
+<style>/* 東京のんべえ地図
+ * 夜: 藍墨の地に灯り。昼: 生成りの和紙に墨。名前は明朝、案内はUDゴシック。
+ */
+:root,
+[data-theme="night"] {
+  --bg: #0b0f19;
+  --rail-bg: #070a12;
+  --panel: #0f1420;
+  --panel-2: #151b29;
+  --glass: rgba(15, 20, 32, .86);
+  --hover: rgba(242, 233, 216, .055);
+  --line: rgba(242, 233, 216, .09);
+  --line-2: rgba(242, 233, 216, .2);
+  --text: #f2e9d8;
+  --text-2: #c8bda7;
+  --text-3: #8f8774;
+  --accent: #ff6a4a;
+  --accent-2: #ffb29d;
+  --gold: #f5b844;
+  --open: #74d6a4;
+  --seal-text: #0b0f19;
+  --shadow: 0 12px 40px rgba(0, 0, 0, .5);
+  --k-yokocho: #ff6a4a; --k-senbero: #f5b844; --k-tachinomi: #7aa2ff; --k-kakuuchi: #52c9a0; --k-bar: #b892f2; --k-social: #ff7fae;
+  color-scheme: dark;
+}
+[data-theme="day"] {
+  --bg: #f4f4f1;
+  --rail-bg: #ecece8;
+  --panel: #fbfbfa;
+  --panel-2: #f1f1ee;
+  --glass: rgba(251, 251, 250, .92);
+  --hover: rgba(28, 28, 27, .045);
+  --line: rgba(28, 28, 27, .1);
+  --line-2: rgba(28, 28, 27, .2);
+  --text: #1c1c1b;
+  --text-2: #4b4a46;
+  --text-3: #84837d;
+  --accent: #c8371f;
+  --accent-2: #b8361f;
+  --gold: #c8371f;
+  --open: #23845a;
+  --seal-text: #fffdf9;
+  --shadow: 0 12px 32px rgba(28, 28, 27, .12);
+  --k-yokocho: #c8371f; --k-senbero: #d08a0e; --k-tachinomi: #2f56b8; --k-kakuuchi: #18805f; --k-bar: #7c4cb3; --k-social: #c93a72;
+  color-scheme: light;
+}
+:root {
+  --serif: "Shippori Mincho B1", "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif CJK JP", "Noto Serif JP", serif;
+  --sans: "BIZ UDPGothic", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", Meiryo, "Noto Sans CJK JP", sans-serif;
+  --rail: 76px;
+  --drawer: 404px;
+  --peek: 148px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: var(--bg); color: var(--text); }
+body { font: 14px/1.6 var(--sans); -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; background: none; border: 0; padding: 0; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+svg { width: 18px; height: 18px; flex: none; }
+
+/* ------------------------------------------------------------------ frame */
+#app {
+  position: fixed; inset: 0;
+  display: grid; grid-template-columns: var(--rail) var(--drawer) 1fr;
+  transition: grid-template-columns .32s var(--ease);
+}
+#app.drawer-closed { --drawer: 0px; }
+#map { position: relative; grid-column: 3; grid-row: 1; min-width: 0; background: var(--bg); }
+#map .maplibregl-canvas { outline: none; }
+.nb-overlay { position: absolute; left: 0; top: 0; pointer-events: none; }
+
+/* ------------------------------------------------------------------ 看板 (signboard rail) */
+.kanban {
+  grid-column: 1; grid-row: 1; z-index: 3;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 20px 0 14px; background: var(--rail-bg);
+  border-right: 1px solid var(--line);
+}
+.mark { display: block; line-height: 0; }
+.mark svg { width: 30px; height: 40px; }
+[data-theme="night"] .mark svg { filter: drop-shadow(0 0 9px rgba(255, 106, 74, .55)); }
+.title {
+  margin: 18px 0 0; writing-mode: vertical-rl; text-orientation: upright;
+  font: 800 25px/1 var(--serif); letter-spacing: .16em; color: var(--text);
+}
+.title-mid { color: var(--accent); }
+[data-theme="night"] .title-mid { text-shadow: 0 0 14px rgba(255, 106, 74, .45); }
+.kanban-sub {
+  margin: 16px 0 0; writing-mode: vertical-rl;
+  font: 400 11px/1 var(--sans); letter-spacing: .22em; color: var(--text-3);
+}
+.kanban-nav { margin-top: auto; display: flex; flex-direction: column; gap: 2px; }
+.k-btn {
+  width: 58px; height: 54px; border-radius: 4px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  font: 400 10.5px/1 var(--sans); color: var(--text-3); letter-spacing: .04em;
+}
+.k-btn svg { width: 20px; height: 20px; }
+.k-btn:hover { color: var(--text); background: var(--hover); }
+.k-btn[aria-pressed="true"] { color: var(--text); }
+.k-btn[aria-pressed="true"] svg { color: var(--accent); }
+
+/* ------------------------------------------------------------------ drawer */
+#drawer {
+  grid-column: 2; grid-row: 1; z-index: 2; min-width: 0; overflow: hidden; position: relative;
+  background: var(--panel); border-right: 1px solid var(--line);
+}
+[data-theme="day"] #drawer::before { display: none; }
+#drawer::before { /* a faint paper grain */
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+#sheet-handle { display: none; }
+#browse { position: relative; display: flex; flex-direction: column; height: 100%; width: var(--drawer-w, 404px); }
+.tonight {
+  margin: 0; padding: 16px 22px 12px; display: flex; align-items: center; gap: 9px;
+  font-size: 12px; color: var(--text-2); letter-spacing: .02em;
+}
+.tonight time { font-variant-numeric: tabular-nums; }
+.tonight b { color: var(--text); font-weight: 700; }
+.tonight-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--open); box-shadow: 0 0 0 3px color-mix(in srgb, var(--open) 22%, transparent); }
+.find { padding: 2px 22px 14px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 13px; border-bottom: 1px solid var(--line); }
+.search {
+  display: flex; align-items: center; gap: 9px; padding: 6px 2px 9px;
+  border-bottom: 1.5px solid var(--line-2); color: var(--text-3); transition: border-color .2s;
+}
+.search:focus-within { border-color: var(--accent); color: var(--text); }
+.search input { flex: 1; min-width: 0; border: 0; outline: 0; background: none; font-size: 15px; color: var(--text); }
+.search input::placeholder { color: var(--text-3); }
+.search input::-webkit-search-cancel-button { filter: grayscale(1); opacity: .6; }
+
+/* 印 (seal) */
+.seal {
+  --c: var(--text-3);
+  width: 21px; height: 21px; flex: none; display: inline-grid; place-items: center;
+  font: 800 12.5px/1 var(--serif); color: var(--c);
+  border: 1.4px solid var(--c); border-radius: 3px;
+}
+.seal.on, .item .seal, .d-kind .seal, .near-item .seal, .legend .seal { background: var(--c); color: var(--seal-text); }
+.seals { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.seal-chip {
+  display: flex; align-items: center; gap: 6px; min-width: 0;
+  padding: 6px 7px; border: 1px solid var(--line); border-radius: 3px;
+  font-size: 12px; color: var(--text-2); text-align: left; transition: opacity .15s, border-color .15s, background .15s;
+}
+.seal-chip span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.seal-chip b { margin-left: auto; padding-left: 2px; font-weight: 400; font-size: 10.5px; color: var(--text-3); font-variant-numeric: tabular-nums; }
+.seal-chip[aria-pressed="true"] { border-color: var(--line-2); color: var(--text); }
+.seal-chip[aria-pressed="true"] .seal { background: var(--c); color: var(--seal-text); }
+.seal-chip[aria-pressed="false"] { opacity: .5; }
+.seal-chip:hover { background: var(--hover); opacity: 1; }
+
+/* 札 (condition tags) */
+.fudas { display: flex; flex-wrap: wrap; gap: 6px; }
+.fuda {
+  display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px;
+  border: 1px solid var(--line-2); border-radius: 2px;
+  font-size: 12px; line-height: 1.2; color: var(--text-2); transition: background .15s, color .15s;
+}
+.fuda:hover { background: var(--hover); color: var(--text); }
+.fuda[aria-pressed="true"] { background: var(--text); border-color: var(--text); color: var(--panel); }
+.lamp { width: 6px; height: 6px; border-radius: 50%; background: var(--open); }
+.selects { display: flex; gap: 14px; }
+.selects label { flex: 1; display: flex; align-items: center; gap: 8px; min-width: 0; font-size: 11px; color: var(--text-3); }
+.selects select {
+  flex: 1; min-width: 0; appearance: none; -webkit-appearance: none; padding: 5px 18px 5px 0;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23908f89' stroke-width='1.4'/%3E%3C/svg%3E") no-repeat right 2px center;
+  border: 0; border-bottom: 1px solid var(--line-2); border-radius: 0; font-size: 12.5px; color: var(--text);
+}
+.selects select option, .selects select optgroup { background: var(--panel); color: var(--text); }
+
+.listhead { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 11px 22px 9px; }
+.listhead p { margin: 0; font-size: 12px; color: var(--text-3); }
+#count { font: 800 19px/1 var(--serif); color: var(--text); margin-right: 3px; }
+.seg { display: inline-flex; border: 1px solid var(--line-2); border-radius: 2px; overflow: hidden; }
+.seg button { padding: 4px 9px; font-size: 11px; color: var(--text-3); }
+.seg button[aria-pressed="true"] { background: var(--text); color: var(--panel); }
+
+/* 一覧 */
+.list { list-style: none; margin: 0; padding: 0 0 24px; overflow-y: auto; flex: 1; overscroll-behavior: contain; border-top: 1px solid var(--line); }
+.list li { content-visibility: auto; contain-intrinsic-size: auto 92px; }
+.item {
+  width: 100%; display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 13px; align-items: start;
+  padding: 14px 22px 13px; border-bottom: 1px solid var(--line); text-align: left; transition: background .12s;
+}
+.item:hover, .item.hl { background: var(--hover); }
+.item .seal { margin-top: 15px; }
+.item-kana { display: block; font-size: 9.5px; line-height: 1.3; color: var(--text-3); letter-spacing: .08em; }
+.item-name { display: block; font: 800 16.5px/1.35 var(--serif); color: var(--text); letter-spacing: .02em; }
+.item-catch { display: block; margin-top: 2px; font-size: 12.5px; line-height: 1.55; color: var(--text-2); }
+.item-meta { display: flex; flex-wrap: wrap; gap: 3px 10px; margin-top: 6px; font-size: 11.5px; color: var(--text-3); }
+.item-side { text-align: right; font-size: 11px; color: var(--text-3); padding-top: 16px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.fav-mark { color: var(--gold); }
+.st { font-variant-numeric: tabular-nums; }
+.st-open { color: var(--open); }
+.st-soon { color: var(--gold); }
+.st-later { color: var(--text-2); }
+.st-off { color: var(--text-3); }
+.talk { display: inline-flex; align-items: center; gap: 2px; }
+.talk i { width: 5px; height: 5px; border-radius: 50%; border: 1px solid var(--text-3); }
+.talk i.on { background: var(--gold); border-color: var(--gold); }
+[data-theme="night"] .talk i.on { box-shadow: 0 0 4px rgba(245, 184, 68, .7); }
+.empty { padding: 36px 22px; color: var(--text-3); font-size: 13px; line-height: 1.8; }
+.empty button { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ------------------------------------------------------------------ 店のページ */
+.detail { position: absolute; inset: 0; overflow-y: auto; overscroll-behavior: contain; background: var(--panel); z-index: 1; }
+.d-bar {
+  position: sticky; top: 0; z-index: 2; display: flex; align-items: center; gap: 4px;
+  padding: 9px 12px; background: var(--glass); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.d-bar .sp { flex: 1; }
+.t-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 9px; border-radius: 3px; font-size: 12.5px; color: var(--text-2); }
+.t-btn:hover { background: var(--hover); color: var(--text); }
+.t-btn[aria-pressed="true"] { color: var(--gold); }
+.d-head { padding: 24px 26px 6px; }
+.d-kind { display: flex; align-items: center; gap: 9px; margin: 0; font-size: 12px; color: var(--text-2); letter-spacing: .04em; }
+.d-name { margin: 14px 0 0; font: 800 30px/1.3 var(--serif); letter-spacing: .03em; }
+.d-name rt { font: 400 10.5px/1 var(--sans); color: var(--text-3); letter-spacing: .14em; padding-bottom: 4px; }
+.d-name-note { display: block; margin-top: 2px; font: 600 15px/1.5 var(--serif); color: var(--text-2); letter-spacing: .02em; }
+.d-en { margin: 4px 0 0; font-size: 11.5px; color: var(--text-3); letter-spacing: .03em; }
+.d-catch { margin: 14px 0 0; font: 600 16px/1.6 var(--serif); color: var(--accent-2); }
+.d-desc { margin: 12px 0 0; font-size: 14px; line-height: 1.9; color: var(--text-2); }
+.d-alert { margin: 16px 26px 0; padding: 10px 12px; border-left: 3px solid var(--gold); background: var(--hover); font-size: 12.5px; line-height: 1.7; color: var(--text-2); }
+.d-now {
+  margin: 18px 26px 4px; padding: 12px 14px; display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; align-items: center;
+  border: 1px solid var(--line-2); border-radius: 3px;
+}
+.d-now .lamp { width: 9px; height: 9px; grid-row: span 2; }
+.d-now .lamp.off { background: var(--text-3); }
+.d-now .lamp.soon { background: var(--gold); }
+[data-theme="night"] .d-now .lamp:not(.off) { box-shadow: 0 0 10px currentColor; color: var(--open); }
+.d-now b { font-size: 14px; }
+.d-now span { font-size: 12px; color: var(--text-3); }
+.d-sec { padding: 20px 26px; border-top: 1px solid var(--line); }
+.d-sec:first-of-type { border-top: 0; }
+.d-sec h3 {
+  display: flex; align-items: baseline; gap: 10px; margin: 0 0 11px;
+  font: 800 15.5px/1.4 var(--serif); letter-spacing: .06em;
+}
+.d-sec h3 small, .src-tag { font: 400 10px/1 var(--sans); color: var(--text-3); letter-spacing: .04em; }
+.d-sec p { margin: 0; font-size: 13.5px; line-height: 1.85; color: var(--text-2); }
+.d-sec p + p { margin-top: 8px; }
+.d-sec p b { color: var(--text); font-weight: 700; }
+.d-sub { margin-top: 14px !important; }
+.d-sub em { font-style: normal; font-weight: 700; color: var(--text); margin-right: 6px; }
+.talk-big { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.talk-big .talk i { width: 9px; height: 9px; }
+.talk-big b { font: 800 14px/1 var(--serif); }
+.talk-big.solo { margin-top: -2px; }
+.talk-big.solo .talk i.on { background: var(--text-2); border-color: var(--text-2); box-shadow: none; }
+.talk-big span:not(.talk) { font-size: 12.5px; color: var(--text-2); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 12px 0 0; padding: 0; }
+.tags li { padding: 3px 8px; border: 1px solid var(--line-2); border-radius: 2px; font-size: 11.5px; color: var(--text-2); }
+.facts { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 10px 14px; margin: 0; font-size: 13.5px; line-height: 1.65; }
+.facts dt { color: var(--text-3); font-size: 12px; padding-top: 1px; }
+.facts dd { margin: 0; color: var(--text); }
+.facts dd .src-tag { margin-left: 6px; white-space: nowrap; }
+.facts dd small { display: block; color: var(--text-3); font-size: 11.5px; margin-top: 1px; }
+.facts a { text-decoration: none; border-bottom: 1px solid var(--line-2); }
+.menu { list-style: none; margin: 0; padding: 0; }
+.menu li { display: flex; align-items: baseline; gap: 8px; padding: 5px 0; }
+.menu .n { font: 600 15px/1.45 var(--serif); color: var(--text); }
+.menu .leader { flex: 1; min-width: 16px; border-bottom: 2px dotted var(--line-2); transform: translateY(-4px); }
+.menu .p { font-size: 13.5px; color: var(--text); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.menu-note { margin-top: 10px !important; font-size: 12.5px !important; color: var(--text-3) !important; }
+.rules { list-style: none; margin: 0; padding: 0; }
+.rules li { position: relative; padding: 3px 0 3px 2.3em; font-size: 13.5px; line-height: 1.75; color: var(--text-2); }
+.rules li::before { content: "一、"; position: absolute; left: 0; font-family: var(--serif); font-weight: 800; color: var(--accent); }
+.hours { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+.hours th { width: 64px; padding: 5px 0; text-align: left; font-weight: 400; color: var(--text-3); }
+.hours td { padding: 5px 0; color: var(--text); }
+.hours td.off { color: var(--text-3); }
+.hours tr.today th, .hours tr.today td { color: var(--text); font-weight: 700; }
+.hours tr.today th::after { content: "今日"; margin-left: 6px; padding: 1px 4px; font-size: 9.5px; font-weight: 700; color: var(--seal-text); background: var(--accent); border-radius: 2px; }
+.hours .lo { color: var(--text-3); font-weight: 400; font-size: 11.5px; margin-left: 4px; }
+.hours-note { margin-top: 10px !important; font-size: 12px !important; color: var(--text-3) !important; }
+.btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px;
+  border: 1px solid var(--line-2); border-radius: 2px; font-size: 12.5px; text-decoration: none; color: var(--text);
+}
+.btn:hover { background: var(--hover); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.primary:hover { filter: brightness(1.07); }
+.addr { display: flex; align-items: flex-start; gap: 6px; margin-top: 8px !important; }
+.addr button { color: var(--text-3); padding: 2px; }
+.addr button:hover { color: var(--text); }
+.near-list { list-style: none; margin: 0; padding: 0; }
+.near-item { width: 100%; display: grid; grid-template-columns: 21px minmax(0, 1fr) auto; gap: 11px; align-items: center; padding: 9px 0; text-align: left; border-top: 1px solid var(--line); }
+.near-list li:first-child .near-item { border-top: 0; }
+.near-item b { display: block; font: 800 14.5px/1.35 var(--serif); }
+.near-item span { display: block; font-size: 11.5px; color: var(--text-3); margin-top: 2px; }
+.near-item em { font-style: normal; font-size: 11.5px; color: var(--text-2); white-space: nowrap; }
+.near-item:hover b { color: var(--accent); }
+.src-list { list-style: none; margin: 8px 0 0; padding: 0; font-size: 12px; line-height: 1.8; }
+.src-list a { color: var(--text-2); text-decoration: none; border-bottom: 1px solid var(--line-2); word-break: break-all; }
+.src-meta { font-size: 12px !important; color: var(--text-3) !important; }
+.d-foot { padding: 18px 26px 40px; font-size: 11.5px; line-height: 1.8; color: var(--text-3); border-top: 1px solid var(--line); }
+
+/* ------------------------------------------------------------------ map furniture */
+.map-ctrl {
+  position: absolute; top: 16px; right: 16px; z-index: 2;
+  display: flex; flex-direction: column; background: var(--glass); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--line-2); border-radius: 3px; box-shadow: var(--shadow);
+}
+.m-btn { width: 38px; height: 38px; display: grid; place-items: center; color: var(--text-2); }
+.map-ctrl .m-btn + .m-btn { border-top: 1px solid var(--line); }
+.m-btn:hover { color: var(--text); background: var(--hover); }
+.m-btn[aria-pressed="true"] { color: var(--accent); }
+#north-icon { transition: transform .2s; }
+.legend {
+  position: absolute; z-index: 2; left: calc(var(--rail) + var(--drawer) + 16px); bottom: 16px;
+  padding: 9px 13px 8px; background: var(--glass); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--line); border-radius: 3px; transition: left .32s var(--ease);
+}
+.legend ul { display: flex; flex-wrap: wrap; gap: 6px 13px; list-style: none; margin: 0; padding: 0; font-size: 11.5px; color: var(--text-2); }
+.legend li { display: flex; align-items: center; gap: 6px; }
+.legend .seal { width: 17px; height: 17px; font-size: 10.5px; border-width: 1px; }
+.legend p { margin: 6px 0 0; font-size: 10.5px; color: var(--text-3); }
+.attrib {
+  position: absolute; z-index: 2; right: 12px; bottom: 8px; margin: 0; max-width: 46vw; text-align: right;
+  font-size: 10px; line-height: 1.5; color: var(--text-3); text-shadow: 0 0 4px var(--bg), 0 0 2px var(--bg);
+}
+.attrib a { color: inherit; }
+.map-status {
+  position: absolute; z-index: 3; left: calc(var(--rail) + var(--drawer) + 50% - (var(--rail) + var(--drawer)) / 2); top: 18px; transform: translateX(-50%);
+  margin: 0; padding: 8px 14px; font-size: 12.5px; color: var(--text); background: var(--glass); border: 1px solid var(--line-2); border-radius: 3px;
+}
+.poi-card {
+  position: absolute; z-index: 3; right: 66px; top: 16px; width: 290px;
+  padding: 14px 16px; background: var(--glass); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--line-2); border-radius: 3px; box-shadow: var(--shadow); font-size: 12.5px; color: var(--text-2);
+}
+.poi-card b { display: block; font: 800 16px/1.4 var(--serif); color: var(--text); margin: 4px 0 6px; padding-right: 22px; }
+.poi-card .tag { font-size: 10.5px; color: var(--text-3); letter-spacing: .04em; }
+.poi-card p { margin: 4px 0 0; line-height: 1.6; }
+.poi-card a { color: var(--text-2); }
+.poi-card .m-btn { position: absolute; right: 4px; top: 4px; width: 30px; height: 30px; }
+.me-dot { width: 16px; height: 16px; border-radius: 50%; background: #4aa8ff; border: 3px solid #fff; box-shadow: 0 0 0 6px rgba(74, 168, 255, .25); }
+
+/* ------------------------------------------------------------------ modal, toast */
+.modal { position: fixed; inset: 0; z-index: 10; display: grid; place-items: center; padding: 20px; background: rgba(5, 7, 12, .55); backdrop-filter: blur(3px); }
+.modal-box {
+  position: relative; width: min(600px, 100%); max-height: calc(100% - 20px); overflow-y: auto;
+  padding: 34px 36px 30px; background: var(--panel); border: 1px solid var(--line-2); border-radius: 3px; box-shadow: var(--shadow);
+}
+.modal-box h2 { margin: 0 0 14px; font: 800 24px/1.3 var(--serif); letter-spacing: .06em; }
+.modal-box h3 { margin: 24px 0 10px; font: 800 15.5px/1.4 var(--serif); letter-spacing: .06em; }
+.modal-box p { margin: 0 0 10px; font-size: 13.5px; line-height: 1.9; color: var(--text-2); }
+.modal-box .lead { font-size: 14.5px; color: var(--text); }
+.modal-x { position: absolute; top: 12px; right: 12px; }
+.scale { display: grid; grid-template-columns: 34px 1fr; gap: 6px 10px; margin: 0; font-size: 13px; line-height: 1.7; color: var(--text-2); }
+.scale dt { font: 800 15px/1.6 var(--serif); color: var(--gold); }
+.scale dd { margin: 0; }
+.note { margin-top: 18px !important; padding-top: 14px; border-top: 1px solid var(--line); font-size: 12px !important; color: var(--text-3) !important; }
+.toast {
+  position: fixed; z-index: 12; left: 50%; bottom: 28px; transform: translateX(-50%);
+  padding: 10px 16px; background: var(--text); color: var(--panel); border-radius: 3px; font-size: 13px; box-shadow: var(--shadow);
+}
+
+/* ------------------------------------------------------------------ phone */
+@media (max-width: 820px) {
+  :root { --rail: 0px; --drawer: 0px; }
+  #app { display: block; }
+  #map { position: absolute; inset: 0; }
+  .kanban {
+    position: absolute; left: 10px; right: 10px; top: calc(env(safe-area-inset-top) + 10px); height: 50px;
+    flex-direction: row; padding: 0 6px 0 12px; gap: 10px;
+    background: var(--glass); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--line); border-radius: 3px; box-shadow: var(--shadow);
+  }
+  .mark svg { width: 21px; height: 28px; }
+  .title { margin: 0; writing-mode: horizontal-tb; font-size: 18px; letter-spacing: .08em; white-space: nowrap; }
+  .kanban-sub { display: none; }
+  .kanban-nav { margin: 0 0 0 auto; flex-direction: row; gap: 0; }
+  .k-btn { width: 42px; height: 46px; }
+  .k-btn span, #nav-list { display: none; }
+  #drawer {
+    position: absolute; left: 0; right: 0; bottom: 0; z-index: 4;
+    height: calc(100% - env(safe-area-inset-top) - 70px);
+    border: 0; border-top: 1px solid var(--line-2); border-radius: 12px 12px 0 0; box-shadow: 0 -10px 40px rgba(0, 0, 0, .35);
+    transform: translateY(calc(100% - var(--vis, var(--peek)))); transition: transform .34s var(--ease);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  #drawer.dragging { transition: none; }
+  #drawer[data-sheet="half"] { --vis: 54%; }
+  #drawer[data-sheet="full"] { --vis: 100%; }
+  #sheet-handle { display: block; position: absolute; z-index: 3; top: 0; left: 0; right: 0; height: 22px; touch-action: none; }
+  #sheet-handle span { display: block; width: 38px; height: 4px; margin: 8px auto 0; border-radius: 2px; background: var(--line-2); }
+  #browse { width: auto; }
+  .tonight { padding: 20px 18px 8px; touch-action: none; }
+  .find { padding: 2px 18px 12px; }
+  .listhead, .item { padding-left: 18px; padding-right: 18px; }
+  .detail { border-radius: 12px 12px 0 0; }
+  .d-bar { padding-top: 16px; }
+  .d-head, .d-sec, .d-foot { padding-left: 20px; padding-right: 20px; }
+  .d-now, .d-alert { margin-left: 20px; margin-right: 20px; }
+  .d-name { font-size: 26px; }
+  .map-ctrl { top: auto; right: 10px; bottom: calc(var(--peek) + 14px); }
+  .legend { display: none; }
+  .attrib { left: 12px; right: auto; bottom: calc(var(--peek) + 6px); max-width: calc(100% - 70px); text-align: left; }
+  .poi-card { left: 10px; right: 10px; top: auto; bottom: calc(var(--peek) + 14px); width: auto; }
+  .map-status { left: 50%; top: calc(env(safe-area-inset-top) + 72px); }
+  .modal { padding: 10px; }
+  .modal-box { padding: 26px 22px 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-search" viewBox="0 0 20 20"><circle cx="8.6" cy="8.6" r="5.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.8 12.8 17 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-list" viewBox="0 0 20 20"><path d="M4 5.5h12M4 10h12M4 14.5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 20 20"><path d="M6.2 3.2 8.4 6 7 8.1a9 9 0 0 0 4.9 4.9L14 11.6l2.8 2.2-.9 2.4c-.3.7-1 1.1-1.8 1A13 13 0 0 1 3 6c-.1-.8.3-1.5 1-1.8z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 20 20"><path d="M11 4h5v5M16 4l-7 7M14 11.5V15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 20 20"><path d="m10 3 2.1 4.4 4.8.6-3.5 3.3.9 4.8L10 13.8 5.7 16.1l.9-4.8L3.1 8l4.8-.6z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></symbol>
+    <symbol id="i-star-f" viewBox="0 0 20 20"><path d="m10 3 2.1 4.4 4.8.6-3.5 3.3.9 4.8L10 13.8 5.7 16.1l.9-4.8L3.1 8l4.8-.6z" fill="currentColor"/></symbol>
+    <symbol id="i-back" viewBox="0 0 20 20"><path d="M12 4.5 6.5 10l5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 20 20"><rect x="7" y="7" width="9" height="9" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M13 4.5H5.6A1.6 1.6 0 0 0 4 6.1V13" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-info" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M10 9v4.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="10" cy="6.4" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 20 20"><path d="M10 4.5v11M4.5 10h11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 20 20"><path d="M4.5 10h11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 20 20"><path d="M10 2.5 13 10h-6z" fill="var(--accent)"/><path d="M10 17.5 7 10h6z" fill="currentColor" opacity=".5"/></symbol>
+    <symbol id="i-tilt" viewBox="0 0 20 20"><path d="M3 14.5 7.5 6h5L17 14.5z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M5.3 10.3h9.4" stroke="currentColor" stroke-width="1.1" opacity=".6"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 20 20"><path d="M15.5 12.6A6.6 6.6 0 0 1 7.4 4.5a6.6 6.6 0 1 0 8.1 8.1z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 20 20"><circle cx="10" cy="10" r="3.4" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 2.5v1.8M10 15.7v1.8M2.5 10h1.8M15.7 10h1.8M4.7 4.7l1.3 1.3M14 14l1.3 1.3M4.7 15.3 6 14M14 6l1.3-1.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-locate" viewBox="0 0 20 20"><circle cx="10" cy="10" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="10" r="1.8" fill="currentColor"/><path d="M10 2.5v2.4M10 15.1v2.4M2.5 10h2.4M15.1 10h2.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-x" viewBox="0 0 20 20"><path d="M5 5l10 10M15 5 5 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-share" viewBox="0 0 20 20"><path d="M10 12.5V3.5M6.5 7 10 3.5 13.5 7M5 10.5v5a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-route" viewBox="0 0 20 20"><circle cx="5.5" cy="15" r="1.8" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="14.5" cy="5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M7.3 15h5.2a2.5 2.5 0 0 0 0-5h-5a2.5 2.5 0 0 1 0-5h5.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 20 20"><rect x="3.5" y="3.5" width="13" height="13" rx="3.6" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="10" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="14" cy="6" r=".9" fill="currentColor"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M3 10h14M10 3c2.2 2.4 2.2 11.6 0 14M10 3c-2.2 2.4-2.2 11.6 0 14" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+    <symbol id="i-chochin" viewBox="0 0 24 32"><rect x="7" y="1.2" width="10" height="3" rx=".8" fill="#14100c"/><rect x="7" y="27.8" width="10" height="3" rx=".8" fill="#14100c"/><path d="M12 3.6c6.3 0 9.6 5.4 9.6 12.4S18.3 28.4 12 28.4 2.4 23 2.4 16 5.7 3.6 12 3.6z" fill="#e2432a"/><path d="M3.3 10.6h17.4M2.6 14.2h18.8M2.6 17.8h18.8M3.3 21.4h17.4M4.8 25h14.4M4.8 7h14.4" stroke="#8f2414" stroke-width=".7" opacity=".85"/><path d="M8 5.6c-2.6 2.2-3.6 6-3.6 10.4" stroke="#ffb59f" stroke-width="1.1" fill="none" stroke-linecap="round" opacity=".7"/></symbol>
+  </defs>
+</svg>
+
+<div id="app">
+  <header class="kanban">
+    <a class="mark" href="./" aria-label="東京のんべえ地図 トップ"><svg viewBox="0 0 24 32" aria-hidden="true"><use href="#i-chochin"/></svg></a>
+    <h1 class="title">東京<span class="title-mid">のんべえ</span>地図</h1>
+    <p class="kanban-sub">立ち飲み・角打ち・せんべろ・横丁</p>
+    <nav class="kanban-nav" aria-label="メニュー">
+      <button id="nav-list" class="k-btn" type="button" aria-pressed="true" title="一覧を開く・閉じる"><svg><use href="#i-list"/></svg><span>一覧</span></button>
+      <button id="nav-fav" class="k-btn" type="button" aria-pressed="false" title="行きたい店だけ"><svg><use href="#i-star"/></svg><span>行きたい</span></button>
+      <button id="nav-theme" class="k-btn" type="button" title="昼の地図／夜の地図"><svg><use href="#i-sun"/></svg><span>昼</span></button>
+      <button id="nav-about" class="k-btn" type="button" title="この地図について"><svg><use href="#i-info"/></svg><span>解説</span></button>
+    </nav>
+  </header>
+
+  <aside id="drawer" data-sheet="peek" aria-label="店をさがす">
+    <button id="sheet-handle" type="button" aria-label="一覧を広げる・たたむ"><span></span></button>
+    <div id="browse">
+      <p class="tonight"><span class="tonight-dot" aria-hidden="true"></span><time id="clock"></time><span id="open-count"></span></p>
+      <div class="find">
+        <label class="search">
+          <svg aria-hidden="true"><use href="#i-search"/></svg>
+          <span class="visually-hidden">店名・街・駅・名物で探す</span>
+          <input id="q" type="search" placeholder="店名・街・駅・名物で探す" autocomplete="off" enterkeyhint="search">
+        </label>
+        <div id="kinds" class="seals" role="group" aria-label="店の種類"></div>
+        <div class="fudas" role="group" aria-label="条件">
+          <button type="button" class="fuda" data-f="open"><i class="lamp" aria-hidden="true"></i>今営業中</button>
+          <button type="button" class="fuda" data-f="social">話しやすい</button>
+          <button type="button" class="fuda" data-f="solo">一人で入りやすい</button>
+          <button type="button" class="fuda" data-f="hiru">昼から飲める</button>
+          <button type="button" class="fuda" data-f="cheap">2千円まで</button>
+          <button type="button" class="fuda" data-f="card">カード・電子決済</button>
+          <button type="button" class="fuda" data-f="english">英語OK</button>
+        </div>
+        <div class="selects">
+          <label><span>街</span><select id="area"></select></label>
+          <label><span>並び</span>
+            <select id="sort">
+              <option value="social">話しやすい順</option>
+              <option value="near">地図の中心から近い順</option>
+              <option value="open">閉店が遅い順</option>
+              <option value="cheap">安い順</option>
+              <option value="name">名前順</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="listhead">
+        <p><b id="count"></b><span id="count-sub"></span></p>
+        <div id="scope" class="seg" role="group" aria-label="一覧の範囲">
+          <button type="button" data-v="view">地図の範囲</button>
+          <button type="button" data-v="all">全域</button>
+        </div>
+      </div>
+      <ol id="list" class="list"></ol>
+    </div>
+    <article id="detail" class="detail" hidden aria-live="polite"></article>
+  </aside>
+
+  <main id="map" aria-label="地図"></main>
+
+  <div class="map-ctrl" role="group" aria-label="地図の操作">
+    <button id="z-in" class="m-btn" type="button" title="拡大" aria-label="拡大"><svg><use href="#i-plus"/></svg></button>
+    <button id="z-out" class="m-btn" type="button" title="縮小" aria-label="縮小"><svg><use href="#i-minus"/></svg></button>
+    <button id="north" class="m-btn" type="button" title="北を上に" aria-label="北を上に"><svg id="north-icon"><use href="#i-compass"/></svg></button>
+    <button id="tilt" class="m-btn" type="button" title="傾ける／真上から" aria-pressed="true"><svg><use href="#i-tilt"/></svg></button>
+    <button id="locate" class="m-btn" type="button" title="現在地" aria-label="現在地"><svg><use href="#i-locate"/></svg></button>
+  </div>
+  <div class="legend" aria-label="凡例">
+    <ul id="legend-kinds"></ul>
+    <p>灯りの大きさは話しやすさ</p>
+  </div>
+  <p class="attrib">地図データ © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors · 住所 国土地理院 · 店舗情報 食べログ・ホットペッパーほか</p>
+  <div id="poi-card" class="poi-card" hidden></div>
+  <p id="map-status" class="map-status" hidden></p>
+</div>
+
+<div id="about" class="modal" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="about-title">
+    <button id="about-close" class="m-btn modal-x" type="button" aria-label="閉じる"><svg><use href="#i-x"/></svg></button>
+    <h2 id="about-title">この地図について</h2>
+    <p class="lead">東京23区と多摩の立ち飲み・角打ち・せんべろ酒場・飲み屋横丁・小さなバー<span id="about-count"></span>を、<b>人と話しやすいか</b>で探せる地図です。一軒ごとに、営業時間・予算・チャージ・支払い・席・客層・混む時間・店の決まり・名物と値段を載せています。</p>
+    <h3>話しやすさ</h3>
+    <dl class="scale">
+      <dt>五</dt><dd>極小の店、コの字カウンター、店主がつなぐ店。自然に会話が生まれる</dd>
+      <dt>四</dt><dd>立ち飲み・カウンター中心で、隣や常連と話しやすい</dd>
+      <dt>三</dt><dd>混んだときの相席などで、隣と話すこともある</dd>
+      <dt>二</dt><dd>グループ客が中心。一人でも入れる</dd>
+      <dt>一</dt><dd>会話より安さと味。さっと飲んで帰る店</dd>
+    </dl>
+    <h3>話しかけるなら</h3>
+    <ul class="rules">
+      <li>カウンターかコの字の席に。立ち飲みは入口より奥のほうが話が生まれやすい。</li>
+      <li>最初のひとことは店主に。「おすすめは」と聞くと、隣の常連も話に入りやすい。</li>
+      <li>隣の人が頼んだ酒や肴は、いちばん自然な話題になる。</li>
+      <li>混んできたら詰めて、長居しない。常連の席と店の決まりに合わせる。</li>
+      <li>ゴールデン街などのバーは席料（チャージ）がかかることがある。入口の表示を見てから入る。</li>
+    </ul>
+    <h3>情報の集め方</h3>
+    <p>店選びと紹介文は、公式サイト・記事・口コミを読み比べて<span id="updated"></span>にまとめました。営業時間・支払い・席数・喫煙・チャージ・電話は食べログとホットペッパーの店舗ページから住所で照合して取り込み、客層・混む時間・店の決まり・名物と値段は2026年の口コミと記事から要約しています。どの項目も出典を店のページに示しています。営業時間や値段は変わるので、出かける前に確かめてください。</p>
+    <p>店の位置は OpenStreetMap の店舗データと国土地理院の住所検索で決め、食べログの店舗地図と突き合わせました。<span id="accuracy"></span>背景の地図は OpenStreetMap のデータ（© OpenStreetMap contributors, ODbL）から、このページのために描いています。</p>
+    <p>紹介の縦動画（30秒）：<a href="media/nonbei-reel.mp4" target="_blank" rel="noopener">nonbei-reel.mp4</a>。ソースとデータは <a href="https://github.com/skikkh" target="_blank" rel="noopener">GitHub（skikkh）</a> で管理しています。</p>
+    <p class="note">お酒は二十歳になってから。飲んだら乗らない。店の決まりと常連さんへの敬意を。</p>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" hidden></div>
+
+<script>/* 東京のんべえ地図 — the map.
+ *
+ * MapLibre GL draws the city from OpenStreetMap data that ships with the page
+ * (data/base.json, base_hi.json, c/ street chunks, b/ building chunks; see
+ * scripts/build_*.py). A canvas laid over the WebGL canvas draws what needs
+ * Japanese typography: station names with their readings, place names, the
+ * OSM drinking spots and the lantern markers of the curated spots.
+ * Geometry arrives as polyline-encoded Web Mercator units at zoom 18.
+ */
+(function () {
+  "use strict";
+
+  const Z0 = 18;
+  const WU = 256 * 2 ** Z0;
+  const CHUNK = 256 * 2 ** (Z0 - 12);
+  const SIZE = { c: CHUNK, b: CHUNK / 2 };
+  // small map labels use the device's own gothic; names of the spots, the
+  // yokocho signs and ward names are set in Shippori Mincho (loaded on demand)
+  let SANS = '"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Yu Gothic",Meiryo,"Noto Sans CJK JP","Noto Sans JP",sans-serif';
+  const SERIF = '"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP","Noto Serif JP",serif';
+  const VROT = new Set([..."ー－―〜～…‥（）()「」『』-=＝"]);
+
+  // ------------------------------------------------------------------ geometry
+  const toLngLat = (x, y) => [x / WU * 360 - 180, Math.atan(Math.sinh(Math.PI * (1 - 2 * y / WU))) * 180 / Math.PI];
+  const fromLngLat = (lng, lat) => {
+    const s = Math.sin(lat * Math.PI / 180);
+    return [(lng + 180) / 360 * WU, (0.5 - Math.log((1 + s) / (1 - s)) / (4 * Math.PI)) * WU];
+  };
+
+  function dec(s, x, y) {
+    const out = [];
+    let i = 0, r, sh, b;
+    x = x || 0; y = y || 0;
+    while (i < s.length) {
+      r = 0; sh = 0;
+      do { b = s.charCodeAt(i++) - 63; r |= (b & 31) << sh; sh += 5; } while (b >= 32);
+      x += (r & 1) ? ~(r >> 1) : (r >> 1);
+      r = 0; sh = 0;
+      do { b = s.charCodeAt(i++) - 63; r |= (b & 31) << sh; sh += 5; } while (b >= 32);
+      y += (r & 1) ? ~(r >> 1) : (r >> 1);
+      out.push(x, y);
+    }
+    return out;
+  }
+
+  const POLY = new Set([1, 2, 3, 4, 5, 6]);
+
+  // [class, minzoom, attr, part...] → GeoJSON features
+  function toGeo(raw, origin, colours, out) {
+    const cls = raw[0], z = raw[1], attr = raw[2];
+    let cx = origin ? origin[0] : 0, cy = origin ? origin[1] : 0;
+    const rings = [];
+    for (let k = 3; k < raw.length; k++) {
+      const p = dec(raw[k], cx, cy);
+      if (p.length) { cx = p[p.length - 2]; cy = p[p.length - 1]; }
+      rings.push(p);
+    }
+    const props = { c: cls, z, a: attr };
+    if (cls % 100 >= 40 && cls % 100 < 50) props.col = (colours && colours[attr]) || "";
+    if (POLY.has(cls)) {
+      const polys = [];
+      for (const p of rings) {
+        let area = 0;
+        for (let i = 0, n = p.length; i < n; i += 2) {
+          const j = (i + 2) % n;
+          area += p[i] * p[j + 1] - p[j] * p[i + 1];
+        }
+        const ring = [];
+        for (let i = 0; i < p.length; i += 2) ring.push(toLngLat(p[i], p[i + 1]));
+        if (ring.length < 3) continue;
+        ring.push(ring[0]);
+        if (area > 0 || !polys.length) polys.push([ring]); else polys[polys.length - 1].push(ring);
+      }
+      if (polys.length) out.push({ type: "Feature", properties: props, geometry: polys.length === 1 ? { type: "Polygon", coordinates: polys[0] } : { type: "MultiPolygon", coordinates: polys } });
+    } else {
+      const lines = rings.filter((p) => p.length >= 4).map((p) => {
+        const l = [];
+        for (let i = 0; i < p.length; i += 2) l.push(toLngLat(p[i], p[i + 1]));
+        return l;
+      });
+      if (lines.length) out.push({ type: "Feature", properties: props, geometry: lines.length === 1 ? { type: "LineString", coordinates: lines[0] } : { type: "MultiLineString", coordinates: lines } });
+    }
+    return out;
+  }
+
+  // ------------------------------------------------------------------ palettes
+  // 夜: indigo ink with sodium-lit streets.  昼: washi paper and sumi ink.
+  const PAL = {
+    night: {
+      bg: "#0b0f19", park: "#0f1a18", forest: "#0d1715", cemetery: "#101716", grass: "#0f1b17", water: "#060a12", river: "#08101c",
+      bld: "#121722", bldLo: "#121824", bldHi: "#1e2536", bldLine: "#1a202d",
+      minor: "#1a202d", ped: "#2a2130", tert: "#252b37", sec: "#3a3021", pri: "#4c3a1f", mot: "#634820",
+      cas: "#0b0f19", tunnel: "#222936", path: "#2e3547", admin: "#2a2f3e", pref: "#3c3550",
+      rail: "#6d7487", railTun: 0.3, railOp: 0.78, railCase: "#0b0f19",
+      text: "#f2e9d8", halo: "#0b0f19", yomi: "#9c947f", place: "#8b8574", placeBig: "#b7ae97", parkText: "#6b8f74",
+      station: "#f2e9d8", stationRing: "#0b0f19", sign: "#d9432b", signText: "#fff6e6", signLine: "rgba(255,214,170,.55)",
+      poi: "#c98a5a", poiText: "#d8a47c",
+      glow: 0.6, ykFill: 0.11, ykLine: 0.8, dot: "#fff1d0",
+    },
+    day: {
+      bg: "#f4f4f1", park: "#dde8d6", forest: "#d3e0cb", cemetery: "#e5e9e2", grass: "#e1eadb", water: "#cdd9e2", river: "#c3d2dd",
+      bld: "#e9e8e4", bldLo: "#efeeea", bldHi: "#e0dfda", bldLine: "#d9d8d3",
+      minor: "#ffffff", ped: "#f0eeea", tert: "#ffffff", sec: "#ffffff", pri: "#ffffff", mot: "#fffcf6",
+      cas: "#d6d5d0", tunnel: "#d3d2cd", path: "#a6a5a0", admin: "#bab6c6", pref: "#a7a1b6",
+      rail: "#3d3d3b", railTun: 0.4, railOp: 0.85, railCase: "#f4f4f1",
+      text: "#1c1c1b", halo: "#f8f8f6", yomi: "#77766f", place: "#6c6b66", placeBig: "#3f3e3a", parkText: "#557550",
+      station: "#ffffff", stationRing: "#1c1c1b", sign: "#c8371f", signText: "#fffdf9", signLine: "rgba(28,28,27,.32)",
+      poi: "#ad5a3a", poiText: "#8e4a31",
+      glow: 0.14, ykFill: 0.1, ykLine: 0.7, dot: "#ffffff",
+    },
+  };
+  // 朱・山吹・群青・若竹・藤・桃
+  const KIND_COL = {
+    night: { yokocho: "#ff6a4a", senbero: "#f5b844", tachinomi: "#7aa2ff", kakuuchi: "#52c9a0", bar: "#b892f2", social: "#ff7fae" },
+    day: { yokocho: "#c8371f", senbero: "#d08a0e", tachinomi: "#2f56b8", kakuuchi: "#18805f", bar: "#7c4cb3", social: "#c93a72" },
+  };
+  const KIND_GLYPH = { yokocho: "横", senbero: "千", tachinomi: "立", kakuuchi: "角", bar: "酒", social: "交" };
+
+  // zoom → width stops
+  const w = (...stops) => ["interpolate", ["exponential", 1.6], ["zoom"], ...stops.flat()];
+  const wmap = (stops, f) => w(...stops.map(([z, v]) => [z, f(v)]));
+  const ROADS = [
+    { id: "service", c: [27], minz: 16, fill: "minor", st: [[16, 1], [18, 4], [20, 12]] },
+    { id: "minor", c: [25], minz: 13.5, fill: "minor", st: [[13.5, 0.4], [15, 1.2], [17, 4.5], [19, 13], [20, 20]] },
+    { id: "ped", c: [26], minz: 14, fill: "ped", st: [[14, 0.6], [16, 2.4], [18, 8], [20, 20]] },
+    { id: "tert", c: [24], minz: 12.5, fill: "tert", st: [[12.5, 0.6], [14, 1.6], [16, 4.6], [18, 11], [20, 26]] },
+    { id: "sec", c: [23], minz: 11, fill: "sec", st: [[11, 0.6], [13, 1.4], [15, 3.6], [17, 8], [19, 18], [20, 28]] },
+    { id: "pri", c: [22, 21], minz: 9, fill: "pri", st: [[9, 0.5], [11, 1], [13, 2.2], [15, 4.6], [17, 10], [19, 22], [20, 32]] },
+    { id: "mot", c: [20], minz: 8, fill: "mot", st: [[8, 0.6], [11, 1.4], [13, 2.6], [15, 5.4], [17, 11], [19, 24], [20, 34]] },
+  ];
+
+  function baseLayers(src, P, lo) {
+    const L = [];
+    const z = (a, b) => (lo ? { maxzoom: 12.5, ...(a != null ? { minzoom: a } : {}) } : { minzoom: Math.max(12.5, b == null ? 12.5 : b) });
+    const only = (...c) => ["in", ["get", "c"], ["literal", c]];
+    const minz = ["<=", ["get", "z"], ["+", ["zoom"], 0.5]];
+    L.push({ id: `${src}-green`, type: "fill", source: src, ...z(), filter: ["all", only(2, 3, 4, 5), minz],
+      paint: { "fill-color": ["match", ["get", "c"], 3, P.forest, 4, P.cemetery, 5, P.grass, P.park], "fill-antialias": true } });
+    L.push({ id: `${src}-river`, type: "line", source: src, ...z(), filter: only(10),
+      paint: { "line-color": P.river, "line-width": w([10, 0.6], [14, 2], [18, 8]) } });
+    L.push({ id: `${src}-stream`, type: "line", source: src, ...z(), filter: only(11),
+      paint: { "line-color": P.river, "line-width": w([12, 0.4], [16, 1.4], [18, 3]) } });
+    L.push({ id: `${src}-water`, type: "fill", source: src, ...z(), filter: ["all", only(1), minz], paint: { "fill-color": P.water } });
+    L.push({ id: `${src}-admin`, type: "line", source: src, ...z(null, 12.5), maxzoom: 15.5, filter: only(50, 51),
+      paint: { "line-color": ["match", ["get", "c"], 51, P.pref, P.admin], "line-width": ["match", ["get", "c"], 51, 1.4, 0.9], "line-dasharray": [3, 2.5] } });
+    return L;
+  }
+
+  function roadLayers(src, P, lo) {
+    const L = [];
+    const zr = (r) => (lo ? { minzoom: Math.min(r.minz, 12.4), maxzoom: 12.5 } : { minzoom: Math.max(12.5, r.minz) });
+    const minz = ["<=", ["get", "z"], ["+", ["zoom"], 0.5]];
+    for (const r of ROADS) {
+      if (lo && r.minz > 12.4) continue;
+      L.push({ id: `${src}-${r.id}-tun`, type: "line", source: src, ...zr(r), filter: ["all", ["in", ["get", "c"], ["literal", r.c.map((c) => c + 100)]], minz],
+        paint: { "line-color": P.tunnel, "line-width": wmap(r.st, (v) => v * 0.55), "line-dasharray": [2, 2], "line-opacity": 0.8 } });
+    }
+    for (const r of ROADS) {
+      if (lo && r.minz > 12.4) continue;
+      L.push({ id: `${src}-${r.id}-case`, type: "line", source: src, ...zr(r), minzoom: Math.max(zr(r).minzoom || 0, 13.5), filter: ["all", ["in", ["get", "c"], ["literal", r.c]], minz],
+        layout: { "line-join": "round", "line-cap": "round" }, paint: { "line-color": P.cas, "line-width": wmap(r.st, (v) => v + 1.6), "line-opacity": 0.9 } });
+    }
+    for (const r of ROADS) {
+      if (lo && r.minz > 12.4) continue;
+      L.push({ id: `${src}-${r.id}`, type: "line", source: src, ...zr(r), filter: ["all", ["in", ["get", "c"], ["literal", r.c]], minz],
+        layout: { "line-join": "round", "line-cap": "round" }, paint: { "line-color": P[r.fill], "line-width": w(...r.st) } });
+    }
+    return L;
+  }
+
+  function railLayers(src, P, lo) {
+    const z = lo ? { maxzoom: 12.5 } : { minzoom: 12.5 };
+    const col = ["case", ["!=", ["get", "col"], ""], ["get", "col"], P.rail];
+    const RW = [[8, 0.7], [11, 1.2], [13, 1.8], [15, 2.8], [17, 4], [19, 5.6]];
+    const width = w(...RW);
+    return [
+      { id: `${src}-rail-tun`, type: "line", source: src, ...z, filter: [">=", ["get", "c"], 140],
+        paint: { "line-color": col, "line-width": wmap(RW, (v) => v * 0.8), "line-opacity": P.railTun, "line-dasharray": [2.2, 1.6] } },
+      { id: `${src}-rail-case`, type: "line", source: src, ...z, filter: ["all", [">=", ["get", "c"], 40], ["<", ["get", "c"], 50]],
+        layout: { "line-join": "round", "line-cap": "round" }, paint: { "line-color": P.railCase, "line-width": wmap(RW, (v) => v + 2), "line-opacity": 0.85 } },
+      { id: `${src}-rail`, type: "line", source: src, ...z, filter: ["all", [">=", ["get", "c"], 40], ["<", ["get", "c"], 50]],
+        layout: { "line-join": "round", "line-cap": "round" }, paint: { "line-color": col, "line-width": width, "line-opacity": P.railOp } },
+    ];
+  }
+
+  function streetLayers(src, P) {
+    const minz = ["<=", ["get", "z"], ["+", ["zoom"], 0.5]];
+    return [
+      ...roadLayers(src, P, false).filter((l) => /-(minor|ped|tert)(-|$)/.test(l.id)),
+      { id: `${src}-poi`, type: "circle", source: src, minzoom: 15.5, filter: ["==", ["get", "c"], 90],
+        paint: { "circle-radius": ["interpolate", ["linear"], ["zoom"], 15.5, 1.6, 18, 3.6], "circle-color": P.poi, "circle-opacity": 0.85, "circle-stroke-color": P.bg, "circle-stroke-width": 1 } },
+    ];
+  }
+
+  function detailLayers(src, P) {
+    return [
+      { id: `${src}-path`, type: "line", source: src, minzoom: 15.5, filter: ["in", ["get", "c"], ["literal", [28, 128]]],
+        paint: { "line-color": P.path, "line-width": w([15.5, 0.6], [18, 1.6], [20, 3]), "line-dasharray": [1.6, 1.2] } },
+      { id: `${src}-steps`, type: "line", source: src, minzoom: 16, filter: ["in", ["get", "c"], ["literal", [29, 129]]],
+        paint: { "line-color": P.path, "line-width": w([16, 2], [19, 5]), "line-dasharray": [0.4, 0.5] } },
+      { id: `${src}-service`, type: "line", source: src, minzoom: 16, filter: ["==", ["get", "c"], 27],
+        layout: { "line-join": "round", "line-cap": "round" }, paint: { "line-color": P.minor, "line-width": w([16, 1], [18, 4], [20, 12]) } },
+      { id: `${src}-bld`, type: "fill", source: src, minzoom: 15, filter: ["==", ["get", "c"], 6],
+        paint: { "fill-color": P.bld, "fill-outline-color": P.bldLine, "fill-opacity": ["interpolate", ["linear"], ["zoom"], 15, 0, 15.6, 1] } },
+      { id: `${src}-bld3d`, type: "fill-extrusion", source: src, minzoom: 15.2, filter: ["==", ["get", "c"], 6],
+        paint: {
+          "fill-extrusion-color": ["interpolate", ["linear"], ["get", "a"], 4, P.bldLo, 60, P.bldHi],
+          "fill-extrusion-height": ["interpolate", ["linear"], ["zoom"], 15.2, 0, 16.2, ["get", "a"]],
+          "fill-extrusion-opacity": 0.9, "fill-extrusion-vertical-gradient": true,
+        } },
+    ];
+  }
+
+  // ------------------------------------------------------------------ the atlas
+  class Atlas {
+    constructor(el, opts) {
+      this.el = el;
+      this.o = opts;
+      this.theme = opts.theme || "night";
+      this.P = PAL[this.theme];
+      this.KC = KIND_COL[this.theme];
+      this.spots = opts.spots;
+      this.selected = null;
+      this.hover = null;
+      this.labels = new Map();   // cell -> labels
+      this.pois = [];
+      this.chunks = {};
+      this.chunkOrder = [];
+      this.colours = [];
+      this.visibleIds = new Set(this.spots.map((s) => s.id));
+      this.dpr = Math.min(window.devicePixelRatio || 1, 2);
+      this.three = opts.three !== false;
+      this.ready = false;
+      const P = this.P;
+      this.map = new maplibregl.Map({
+        container: el,
+        style: { version: 8, sources: {}, layers: [{ id: "bg", type: "background", paint: { "background-color": P.bg } },
+          ...["anchor-hi-ground", "anchor-streets", "anchor-hi-roads", "anchor-detail", "anchor-spots", "anchor-3d"].map((id) => ({ id, type: "background", layout: { visibility: "none" }, paint: {} }))] },
+        bounds: opts.bounds, fitBoundsOptions: { padding: opts.padding ? opts.padding() : 40 },
+        maxBounds: [[139.0, 35.3], [140.25, 36.0]], minZoom: 8.5, maxZoom: 19.5,
+        pitch: this.three ? 42 : 0, maxPitch: 70, antialias: true, attributionControl: false,
+        dragRotate: true, pitchWithRotate: true, touchPitch: true, fadeDuration: 0,
+        preserveDrawingBuffer: !!opts.capture,
+      });
+      this.map.touchZoomRotate.enableRotation();
+      this.ov = document.createElement("canvas");
+      this.ov.className = "nb-overlay";
+      this.map.getCanvasContainer().insertBefore(this.ov, this.map.getCanvas().nextSibling);
+      this.map.on("load", () => this._init());
+      this.map.on("render", () => this._schedule());
+      this.map.on("resize", () => this._schedule());
+      this.map.on("moveend", () => this._need());
+    }
+
+    // -------------------------------------------------------------- loading
+    async _init() {
+      const m = this.map, url = this.o.dataUrl || "data/";
+      m.addSource("spots", { type: "geojson", data: this._spotGeo() });
+      m.addSource("yk", { type: "geojson", data: this._ykGeo() });
+      this._addSpotLayers();
+      let base;
+      try {
+        base = await fetch(url + "base.json").then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+      } catch (e) {
+        this.o.onError && this.o.onError(e);
+        return;
+      }
+      this.colours = base.colours || [];
+      const lo = [];
+      base.lo.forEach((r) => toGeo(r, null, this.colours, lo));
+      m.addSource("lo", { type: "geojson", data: { type: "FeatureCollection", features: lo }, maxzoom: 12, tolerance: 0.45 });
+      [...baseLayers("lo", this.P, true), ...roadLayers("lo", this.P, true), ...railLayers("lo", this.P, true)].forEach((l) => m.addLayer(l, "anchor-hi-ground"));
+      base.labels.forEach((l) => this._addLabel(l[0], l[1], l[2], l[3], l[4], l[5], l[6]));
+      this.ready = true;
+      this._loadFont();
+      this._need();
+      this._schedule();
+      this.o.onReady && this.o.onReady();
+    }
+
+    async _loadHi() {
+      if (this.hiState) return;
+      this.hiState = "loading";
+      try {
+        const d = await fetch((this.o.dataUrl || "data/") + "base_hi.json").then((r) => r.json());
+        const f = [];
+        d.hi.forEach((r) => toGeo(r, null, this.colours, f));
+        const m = this.map;
+        m.addSource("hi", { type: "geojson", data: { type: "FeatureCollection", features: f }, maxzoom: 16, tolerance: 0.4 });
+        baseLayers("hi", this.P, false).forEach((l) => m.addLayer(l, "anchor-streets"));
+        [...roadLayers("hi", this.P, false).filter((l) => !/-(minor|ped|tert|service)(-|$)/.test(l.id)), ...railLayers("hi", this.P, false)].forEach((l) => m.addLayer(l, "anchor-detail"));
+        this.hiState = "done";
+      } catch (e) { this.hiState = null; }
+    }
+
+    _need() {
+      if (!this.ready) return;
+      const z = this.map.getZoom();
+      if (z >= 12) this._loadHi();
+      if (z < 12.8) return;
+      const b = this.map.getBounds();
+      const [x0, y1] = fromLngLat(b.getWest(), b.getSouth());
+      const [x1, y0] = fromLngLat(b.getEast(), b.getNorth());
+      const want = [];
+      for (const layer of z >= 14.6 ? ["c", "b"] : ["c"]) {
+        const sz = SIZE[layer], idx = (this.o.chunks || {})[layer] || {};
+        for (let x = Math.floor(x0 / sz); x <= Math.floor(x1 / sz); x++) {
+          for (let y = Math.floor(y0 / sz); y <= Math.floor(y1 / sz); y++) {
+            const key = `${x}_${y}`;
+            if (key in idx) want.push(layer + "/" + key);
+          }
+        }
+      }
+      want.forEach((id) => this._loadChunk(id));
+      this._evict(new Set(want));
+    }
+
+    async _loadChunk(id) {
+      if (this.chunks[id]) { this._touch(id); return; }
+      this.chunks[id] = { state: "loading" };
+      try {
+        const d = await fetch((this.o.dataUrl || "data/") + id + ".json").then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+        const f = [], o = d.o;
+        d.f.forEach((r) => toGeo(r, o, this.colours, f));
+        (d.p || []).forEach((p) => {
+          const ll = toLngLat(p[0] + o[0], p[1] + o[1]);
+          f.push({ type: "Feature", properties: { c: 90, n: p[2], k: p[3], osm: p[4], h: p[5] || "", lv: p[6] || "", ck: p[7] || "" }, geometry: { type: "Point", coordinates: ll } });
+          this.pois.push({ x: p[0] + o[0], y: p[1] + o[1], n: p[2], k: p[3], osm: p[4], h: p[5], lv: p[6], ck: p[7], chunk: id });
+        });
+        (d.l || []).forEach((l) => this._addLabel(l[0], l[1], l[2] + o[0], l[3] + o[1], l[4], l[5], "", id));
+        const m = this.map, sid = id.replace("/", ":");
+        if (!m.getSource(sid)) {
+          m.addSource(sid, { type: "geojson", data: { type: "FeatureCollection", features: f }, maxzoom: 16, tolerance: 0.3, buffer: 64 });
+          const isB = id[0] === "b";
+          const layers = (isB ? detailLayers(sid, this.P) : streetLayers(sid, this.P));
+          // streets sit under the main roads; paths and building footprints under the spots; extrusions on top
+          layers.forEach((l) => m.addLayer(l, !isB ? (l.id.endsWith("-poi") ? "anchor-spots" : "anchor-hi-roads") : l.type === "fill-extrusion" ? "anchor-3d" : "anchor-detail"));
+          this.chunks[id] = { state: "done", layers: layers.map((l) => l.id), sid };
+          this._touch(id);
+        }
+        this._schedule();
+      } catch (e) {
+        delete this.chunks[id];
+      }
+    }
+
+    _touch(id) { this.chunkOrder = this.chunkOrder.filter((x) => x !== id); this.chunkOrder.push(id); }
+    _evict(keep) {
+      const max = 18;
+      while (this.chunkOrder.length > max) {
+        const id = this.chunkOrder.find((x) => !keep.has(x));
+        if (!id) break;
+        const c = this.chunks[id];
+        this.chunkOrder = this.chunkOrder.filter((x) => x !== id);
+        if (c && c.layers) {
+          c.layers.forEach((l) => this.map.getLayer(l) && this.map.removeLayer(l));
+          this.map.getSource(c.sid) && this.map.removeSource(c.sid);
+        }
+        delete this.chunks[id];
+        this.pois = this.pois.filter((p) => p.chunk !== id);
+        this.labels.forEach((arr, k) => this.labels.set(k, arr.filter((l) => l.chunk !== id)));
+      }
+    }
+
+    // -------------------------------------------------------------- spots
+    _spotGeo() {
+      return { type: "FeatureCollection", features: this.spots.filter((s) => this.visibleIds.has(s.id)).map((s) => ({
+        type: "Feature", properties: { id: s.id, k: s.kind, s: s.social || 0, st: s.status },
+        geometry: { type: "Point", coordinates: [s.lng, s.lat] } })) };
+    }
+    _ykGeo() {
+      const f = [];
+      for (const s of this.spots) {
+        if (!s.shape || !this.visibleIds.has(s.id)) continue;
+        const parts = s.shape.p.map((e) => {
+          const a = dec(e), l = [];
+          for (let i = 0; i < a.length; i += 2) l.push(toLngLat(a[i], a[i + 1]));
+          return l;
+        });
+        if (s.shape.t === "poly") parts.forEach((r) => { r.push(r[0]); f.push({ type: "Feature", properties: { id: s.id, t: "p" }, geometry: { type: "Polygon", coordinates: [r] } }); });
+        else f.push({ type: "Feature", properties: { id: s.id, t: "l" }, geometry: { type: "MultiLineString", coordinates: parts } });
+      }
+      return { type: "FeatureCollection", features: f };
+    }
+    _addSpotLayers() {
+      const m = this.map, P = this.P, K = this.KC;
+      const kc = ["match", ["get", "k"], "yokocho", K.yokocho, "senbero", K.senbero, "tachinomi", K.tachinomi, "kakuuchi", K.kakuuchi, "bar", K.bar, K.social];
+      m.addLayer({ id: "spot-glow", type: "circle", source: "spots", filter: ["!=", ["get", "st"], "closed"],
+        paint: {
+          "circle-color": kc, "circle-blur": 1, "circle-pitch-alignment": "map",
+          "circle-radius": ["interpolate", ["exponential", 2], ["zoom"], 9, ["*", 1.6, ["+", 3, ["get", "s"]]], 13, ["*", 5, ["+", 3, ["get", "s"]]], 15, ["*", 8, ["+", 2, ["get", "s"]]], 18, ["*", 13, ["+", 2, ["get", "s"]]]],
+          "circle-opacity": ["interpolate", ["linear"], ["zoom"], 9, P.glow * 1.1, 13, P.glow, 16, P.glow * 0.75, 18, P.glow * 0.6],
+        } }, "anchor-spots");
+      m.addLayer({ id: "yk-fill", type: "fill", source: "yk", minzoom: 13.5, filter: ["==", ["get", "t"], "p"], paint: { "fill-color": K.yokocho, "fill-opacity": P.ykFill } }, "anchor-spots");
+      m.addLayer({ id: "yk-line", type: "line", source: "yk", minzoom: 13.5,
+        layout: { "line-join": "round", "line-cap": "round" },
+        paint: { "line-color": K.yokocho, "line-opacity": ["case", ["==", ["get", "t"], "l"], P.ykLine * 0.55, P.ykLine], "line-width": ["interpolate", ["exponential", 1.6], ["zoom"], 13.5, ["case", ["==", ["get", "t"], "l"], 3, 1], 17, ["case", ["==", ["get", "t"], "l"], 12, 2], 19, ["case", ["==", ["get", "t"], "l"], 30, 2.4]], "line-blur": ["case", ["==", ["get", "t"], "l"], 2, 0] } }, "anchor-spots");
+      m.addLayer({ id: "spot-dot", type: "circle", source: "spots", maxzoom: 13.2,
+        paint: {
+          "circle-color": kc, "circle-radius": ["interpolate", ["linear"], ["zoom"], 9, 1.8, 13, ["+", 2.4, ["*", 0.4, ["get", "s"]]]],
+          "circle-stroke-color": P.dot, "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 9, 0.5, 13, 1.2],
+          "circle-opacity": ["case", ["==", ["get", "st"], "closed"], 0.35, 1], "circle-stroke-opacity": ["case", ["==", ["get", "st"], "closed"], 0.35, 1],
+        } });
+    }
+    setVisible(ids) {
+      this.visibleIds = new Set(ids);
+      if (!this.map.getSource("spots")) return;
+      this.map.getSource("spots").setData(this._spotGeo());
+      this.map.getSource("yk").setData(this._ykGeo());
+      this._schedule();
+    }
+    select(id) { this.selected = id; this._schedule(); }
+    setHover(id) { if (this.hover !== id) { this.hover = id; this._schedule(); } }
+
+    // -------------------------------------------------------------- theme
+    setTheme(theme) {
+      if (theme === this.theme) return;
+      this.theme = theme;
+      this.P = PAL[theme];
+      this.KC = KIND_COL[theme];
+      const m = this.map;
+      if (!m.isStyleLoaded()) return;
+      m.setPaintProperty("bg", "background-color", this.P.bg);
+      const ids = m.getStyle().layers.map((l) => l.id);
+      const fresh = {};
+      const collect = (arr) => arr.forEach((l) => { fresh[l.id.replace(/^[^-]+-/, "")] = l; });
+      ["lo", "hi"].forEach((s) => { collect(baseLayers(s, this.P, s === "lo")); collect(roadLayers(s, this.P, s === "lo")); collect(railLayers(s, this.P, s === "lo")); });
+      collect(streetLayers("x", this.P)); collect(detailLayers("x", this.P));
+      for (const id of ids) {
+        const key = id.replace(/^[^-]+-/, "");
+        const spec = fresh[key];
+        if (!spec || !spec.paint) continue;
+        for (const [k, v] of Object.entries(spec.paint)) {
+          try { m.setPaintProperty(id, k, v); } catch (e) { /* layer type mismatch */ }
+        }
+      }
+      ["spot-glow", "yk-fill", "yk-line", "spot-dot"].forEach((l) => m.getLayer(l) && m.removeLayer(l));
+      this._addSpotLayers();
+      this._sprites = null;
+      this._schedule();
+    }
+
+    // -------------------------------------------------------------- labels
+    _addLabel(t, minz, x, y, n, r, yomi, chunk) {
+      const key = Math.floor(x / 8192) * 100000 + Math.floor(y / 8192);
+      let a = this.labels.get(key);
+      if (!a) { a = []; this.labels.set(key, a); }
+      a.push({ t, z: minz, x, y, n, r: r || 0, yomi: yomi || "", chunk, ll: toLngLat(x, y) });
+    }
+    _labelsIn(x0, y0, x1, y1) {
+      const out = [];
+      for (let gx = Math.floor(x0 / 8192); gx <= Math.floor(x1 / 8192); gx++) {
+        for (let gy = Math.floor(y0 / 8192); gy <= Math.floor(y1 / 8192); gy++) {
+          const a = this.labels.get(gx * 100000 + gy);
+          if (a) for (const l of a) if (l.x >= x0 && l.x <= x1 && l.y >= y0 && l.y <= y1) out.push(l);
+        }
+      }
+      return out;
+    }
+    // Mincho glyphs for spot names, signs and ward names; with opts.webSans
+    // (headless capture) the small labels get BIZ UDPGothic too.
+    _loadFont() {
+      if (!document.fonts || !document.fonts.load) return;
+      const serif = new Set(), sans = new Set();
+      this.spots.forEach((s) => { for (const ch of s.name) serif.add(ch); });
+      Object.values(KIND_GLYPH).forEach((g) => serif.add(g));
+      this.labels.forEach((a) => a.forEach((l) => {
+        const target = l.t === "p" && l.r >= 3 ? serif : sans;
+        for (const ch of l.n + l.yomi) target.add(ch);
+      }));
+      const jobs = [document.fonts.load(`800 13px "Shippori Mincho B1"`, [...serif].join(""))];
+      if (this.o.webSans) {
+        SANS = '"BIZ UDPGothic",' + SANS;
+        jobs.push(document.fonts.load(`700 12px "BIZ UDPGothic"`, [...sans].join("")), document.fonts.load(`400 11px "BIZ UDPGothic"`, [...sans].join("")));
+      }
+      Promise.all(jobs).then(() => { this._sprites = null; this.fontsReady = true; this._schedule(); }).catch(() => {});
+    }
+
+    _schedule() {
+      if (this._raf) return;
+      this._raf = requestAnimationFrame(() => { this._raf = 0; this._draw(); });
+    }
+
+    // lantern sprites per kind / state, drawn once per theme
+    _sprite(kind, big, dim) {
+      this._sprites = this._sprites || {};
+      const key = kind + (big ? "B" : "") + (dim ? "D" : "");
+      if (this._sprites[key]) return this._sprites[key];
+      const d = this.dpr, s = big ? 1.35 : 1;
+      const bw = 20 * s, bh = 25 * s, pad = 14 * s;
+      const c = document.createElement("canvas");
+      c.width = Math.ceil((bw + pad * 2) * d); c.height = Math.ceil((bh + pad * 2) * d);
+      const x = c.getContext("2d");
+      x.scale(d, d);
+      const col = this.KC[kind] || this.KC.bar;
+      const cx = pad + bw / 2, cy = pad + bh / 2;
+      if (this.theme === "night") {
+        const g = x.createRadialGradient(cx, cy, 2, cx, cy, bw * 1.15);
+        g.addColorStop(0, col + "aa"); g.addColorStop(1, col + "00");
+        x.fillStyle = g; x.fillRect(0, 0, bw + pad * 2, bh + pad * 2);
+      } else {
+        x.shadowColor = "rgba(20,24,32,.35)"; x.shadowBlur = 4 * s; x.shadowOffsetY = 1.5 * s;
+      }
+      // body
+      x.beginPath();
+      x.ellipse(cx, cy, bw / 2, bh / 2, 0, 0, Math.PI * 2);
+      x.fillStyle = col; x.fill();
+      x.shadowColor = "transparent";
+      // ribs
+      x.save(); x.clip();
+      x.strokeStyle = "rgba(0,0,0,.14)"; x.lineWidth = 1 * s;
+      for (let i = -2; i <= 2; i++) { x.beginPath(); x.moveTo(cx - bw, cy + i * 4.6 * s); x.lineTo(cx + bw, cy + i * 4.6 * s); x.stroke(); }
+      const hl = x.createLinearGradient(cx - bw / 2, 0, cx + bw / 2, 0);
+      hl.addColorStop(0, "rgba(255,255,255,.0)"); hl.addColorStop(0.32, "rgba(255,255,255,.26)"); hl.addColorStop(0.6, "rgba(255,255,255,0)");
+      x.fillStyle = hl; x.fillRect(cx - bw / 2, cy - bh / 2, bw, bh);
+      x.restore();
+      // caps
+      x.fillStyle = this.theme === "night" ? "#0b0e14" : "#20242d";
+      const capW = bw * 0.56, capH = 3.2 * s;
+      x.fillRect(cx - capW / 2, cy - bh / 2 - capH * 0.45, capW, capH);
+      x.fillRect(cx - capW / 2, cy + bh / 2 - capH * 0.55, capW, capH);
+      // glyph
+      x.fillStyle = kind === "senbero" ? "#2a1a03" : "#ffffff";
+      x.font = `800 ${12.5 * s}px ${SERIF}`;
+      x.textAlign = "center"; x.textBaseline = "middle";
+      x.fillText(KIND_GLYPH[kind] || "酒", cx, cy + 0.8 * s);
+      if (dim) { x.globalCompositeOperation = "source-atop"; x.fillStyle = "rgba(128,128,128,.55)"; x.fillRect(0, 0, c.width, c.height); }
+      const sp = { c, w: c.width / d, h: c.height / d, bw, bh };
+      this._sprites[key] = sp;
+      return sp;
+    }
+
+    // a vertical sign hanging just right of the lantern, its foot level with it
+    _signBox(text, x, y, fs) {
+      const n = [...text].length, h = n * fs * 1.04 + 10, w = fs + 9;
+      return [x, y + 6 - h, x + w, y + 6];
+    }
+    _sign(ctx, text, b, fs) {
+      const P = this.P, w2 = b[2] - b[0], h = b[3] - b[1];
+      ctx.save();
+      if (this.theme === "day") { ctx.shadowColor = "rgba(36,32,27,.28)"; ctx.shadowBlur = 3; ctx.shadowOffsetY = 1; }
+      else { ctx.shadowColor = "rgba(255,106,74,.55)"; ctx.shadowBlur = 10; }
+      ctx.fillStyle = P.sign; ctx.fillRect(b[0], b[1], w2, h);
+      ctx.restore();
+      ctx.fillStyle = "rgba(0,0,0,.22)"; ctx.fillRect(b[0], b[1], w2, 2);
+      ctx.strokeStyle = P.signLine; ctx.lineWidth = 0.8; ctx.strokeRect(b[0] + 2, b[1] + 3.5, w2 - 4, h - 6);
+      ctx.fillStyle = P.signText; ctx.font = `800 ${fs}px ${SERIF}`;
+      ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      const cx = b[0] + w2 / 2;
+      [...text].forEach((ch, i) => {
+        const cy = b[1] + 5.5 + fs * 1.04 * (i + 0.5);
+        if (VROT.has(ch) || /[A-Za-z]/.test(ch)) { ctx.save(); ctx.translate(cx, cy); ctx.rotate(Math.PI / 2); ctx.fillText(ch, 0, 0); ctx.restore(); }
+        else ctx.fillText(ch, cx, cy);
+      });
+      ctx.textAlign = "left";
+    }
+
+    _draw() {
+      const m = this.map, cv = this.ov, d = this.dpr;
+      const W = m.getCanvas().clientWidth, H = m.getCanvas().clientHeight;
+      if (cv.width !== Math.round(W * d) || cv.height !== Math.round(H * d)) {
+        cv.width = Math.round(W * d); cv.height = Math.round(H * d);
+        cv.style.width = W + "px"; cv.style.height = H + "px";
+      }
+      const ctx = cv.getContext("2d");
+      ctx.setTransform(d, 0, 0, d, 0, 0);
+      ctx.clearRect(0, 0, W, H);
+      if (!this.ready) return;
+      const z = m.getZoom(), P = this.P;
+      const bnd = m.getBounds();
+      const [x0, y1] = fromLngLat(bnd.getWest(), bnd.getSouth());
+      const [x1, y0] = fromLngLat(bnd.getEast(), bnd.getNorth());
+      const boxes = [];
+      const lboxes = [];   // lanterns: shop names avoid them, yokocho signs may overlap them
+      const hitsAny = (b, list) => { for (const o of list) if (b[0] < o[2] && b[2] > o[0] && b[1] < o[3] && b[3] > o[1]) return true; return false; };
+      const free = (b) => !hitsAny(b, boxes);
+      const freeAll = (b) => !hitsAny(b, boxes) && !hitsAny(b, lboxes);
+      const inView = (p) => p.x > -60 && p.x < W + 60 && p.y > -40 && p.y < H + 40;
+      this.hits = [];
+
+      // curated spots first so they win collisions
+      const lanternZ = 13.2, nameZ = 15.6;
+      const spots = [];
+      if (z >= lanternZ) {
+        for (const s of this.spots) {
+          if (!this.visibleIds.has(s.id) && s.id !== this.selected) continue;
+          const p = m.project([s.lng, s.lat]);
+          if (!inView(p)) continue;
+          spots.push({ s, p });
+        }
+        spots.sort((a, b) => (a.s.id === this.selected) - (b.s.id === this.selected) || a.p.y - b.p.y);
+      }
+      const scale = Math.max(0.62, Math.min(1, (z - lanternZ) / 2.2 + 0.62));
+      for (const { s, p } of spots) {
+        const big = s.id === this.selected || s.id === this.hover;
+        const sp = this._sprite(s.kind, big, s.status === "closed");
+        const k = big ? 1 : scale;
+        const wv = sp.w * k, hv = sp.h * k;
+        ctx.drawImage(sp.c, p.x - wv / 2, p.y - hv / 2 - sp.bh * k * 0.35, wv, hv);
+        const r = sp.bw * k / 2 + 2;
+        lboxes.push([p.x - r, p.y - sp.bh * k * 0.9, p.x + r, p.y + sp.bh * k * 0.25]);
+        this.hits.push({ x: p.x, y: p.y - sp.bh * k * 0.35, r: Math.max(12, r + 3), spot: s });
+        if (s.id === this.selected) {
+          ctx.beginPath();
+          ctx.ellipse(p.x, p.y + 1, 15, 6, 0, 0, Math.PI * 2);
+          ctx.strokeStyle = this.KC[s.kind]; ctx.lineWidth = 2; ctx.stroke();
+        }
+      }
+      // yokocho: vertical vermilion signs, like the ones over an alley entrance
+      if (z >= 12.6) {
+        for (const { s, p } of spots) {
+          if (s.kind !== "yokocho") continue;
+          const sel = s.id === this.selected || s.id === this.hover;
+          const fs = sel ? 14 : z >= 15 ? 13 : 11.5;
+          const b = this._signBox(s.name, p.x + 11 * scale, p.y - 6 * scale, fs);
+          if (!sel && !free(b)) continue;
+          boxes.push(b);
+          this._sign(ctx, s.name, b, fs);
+          this.hits.push({ x: (b[0] + b[2]) / 2, y: (b[1] + b[3]) / 2, r: Math.max(14, (b[3] - b[1]) / 2), spot: s });
+        }
+      }
+      // shop names
+      if (z >= nameZ || this.selected || this.hover) {
+        ctx.textBaseline = "middle";
+        for (const { s, p } of spots) {
+          if (s.kind === "yokocho") continue;
+          const sel = s.id === this.selected || s.id === this.hover;
+          if (z < nameZ && !sel) continue;
+          ctx.font = `800 ${sel ? 14 : 12.5}px ${SERIF}`;
+          const tw = ctx.measureText(s.name).width;
+          const tx = p.x + 13 * scale + 3, ty = p.y - 9 * scale;
+          const b = [tx - 3, ty - 10, tx + tw + 5, ty + 10];
+          if (!sel && !freeAll(b.map((v, i) => (i === 0 ? v + 4 : v)))) continue;
+          boxes.push(b);
+          if (sel) {
+            ctx.fillStyle = P.halo; ctx.globalAlpha = 0.92; ctx.fillRect(b[0], b[1], b[2] - b[0], b[3] - b[1]); ctx.globalAlpha = 1;
+            ctx.fillStyle = this.KC[s.kind]; ctx.fillRect(b[0], b[1], 2.5, b[3] - b[1]);
+          } else {
+            ctx.lineJoin = "round"; ctx.lineWidth = 3.6; ctx.strokeStyle = P.halo; ctx.strokeText(s.name, tx, ty);
+          }
+          ctx.fillStyle = P.text; ctx.fillText(s.name, tx + (sel ? 2 : 0), ty + 0.5);
+        }
+      }
+
+      // stations, places, parks
+      const zi = Math.floor(z + 0.35);
+      const cands = this._labelsIn(x0, y0, x1, y1).filter((l) => l.z <= zi);
+      const prio = (l) => (l.t === "s" ? 100 + l.r * 10 : l.t === "p" ? 40 + l.r * 15 : 30);
+      cands.sort((a, b) => prio(b) - prio(a));
+      for (const l of cands) {
+        const p = m.project(l.ll);
+        if (!inView(p)) continue;
+        if (l.t === "s") {
+          // station: a ringed dot with the name above it and the reading above that
+          const fs = (l.r >= 3 ? 13 : l.r === 2 ? 12 : 11) + (z >= 15 ? 1 : 0);
+          ctx.font = `700 ${fs}px ${SANS}`;
+          const tw = ctx.measureText(l.n).width;
+          const yomi = z >= 12.5 && l.yomi ? l.yomi : "";
+          ctx.font = `400 8.5px ${SANS}`;
+          const yw = yomi ? ctx.measureText(yomi).width : 0;
+          const half = Math.max(tw, yw) / 2 + 3;
+          const top = p.y - 6 - fs - (yomi ? 11 : 0);
+          const b = [p.x - half, top - 2, p.x + half, p.y + 5];
+          if (!freeAll(b)) continue;
+          boxes.push(b);
+          ctx.beginPath(); ctx.arc(p.x, p.y, l.r >= 3 ? 4 : 3.2, 0, Math.PI * 2);
+          ctx.fillStyle = P.station; ctx.fill(); ctx.lineWidth = 1.6; ctx.strokeStyle = P.stationRing; ctx.stroke();
+          ctx.textAlign = "center"; ctx.textBaseline = "alphabetic"; ctx.lineJoin = "round";
+          if (yomi) {
+            ctx.font = `400 8.5px ${SANS}`; ctx.lineWidth = 2.6; ctx.strokeStyle = P.halo;
+            ctx.strokeText(yomi, p.x, top + 8); ctx.fillStyle = P.yomi; ctx.fillText(yomi, p.x, top + 8);
+          }
+          ctx.font = `700 ${fs}px ${SANS}`; ctx.lineWidth = 3.4; ctx.strokeStyle = P.halo;
+          ctx.strokeText(l.n, p.x, p.y - 6); ctx.fillStyle = P.text; ctx.fillText(l.n, p.x, p.y - 6);
+          ctx.textAlign = "left"; ctx.textBaseline = "middle";
+        } else {
+          const big = l.r >= 3;
+          const fs = l.t === "g" ? 11 : big ? 14 : l.r === 2 ? 12 : l.r === 1 ? 11 : 10;
+          const wt = l.t === "g" ? 400 : big ? 700 : l.r === 2 ? 700 : 400;
+          const text = big && z < 13.5 ? [...l.n].join(" ") : l.n;
+          ctx.font = `${wt} ${fs}px ${big ? SERIF : SANS}`;
+          const tw = ctx.measureText(text).width;
+          const b = [p.x - tw / 2 - 3, p.y - fs / 2 - 2, p.x + tw / 2 + 3, p.y + fs / 2 + 3];
+          if (!freeAll(b)) continue;
+          boxes.push(b);
+          ctx.textAlign = "center"; ctx.textBaseline = "middle";
+          ctx.lineJoin = "round"; ctx.lineWidth = 3; ctx.strokeStyle = P.halo; ctx.strokeText(text, p.x, p.y);
+          ctx.fillStyle = l.t === "g" ? P.parkText : big ? P.placeBig : P.place; ctx.fillText(text, p.x, p.y);
+          ctx.textAlign = "left";
+        }
+      }
+
+      // OSM drinking spots (unverified): names from z17; dots are a GL layer
+      if (z >= 15.5 && this.o.showPoi && this.o.showPoi()) {
+        const skip = this.o.skipPoi || (() => false);
+        ctx.font = `400 10.5px ${SANS}`;
+        ctx.textBaseline = "middle";
+        for (const o of this.pois) {
+          if (o.x < x0 || o.x > x1 || o.y < y0 || o.y > y1 || skip(o)) continue;
+          const p = m.project(toLngLat(o.x, o.y));
+          if (!inView(p)) continue;
+          this.hits.push({ x: p.x, y: p.y, r: 8, poi: o });
+          if (z < 17) continue;
+          const tw = ctx.measureText(o.n).width;
+          const b = [p.x + 5, p.y - 7, p.x + 8 + tw, p.y + 7];
+          if (!freeAll(b)) continue;
+          boxes.push(b);
+          ctx.lineWidth = 3; ctx.strokeStyle = P.halo; ctx.strokeText(o.n, p.x + 6, p.y);
+          ctx.fillStyle = P.poiText; ctx.fillText(o.n, p.x + 6, p.y);
+        }
+      }
+      this.o.onDraw && this.o.onDraw(z);
+    }
+
+    // the curated spot nearest to a screen point, else the nearest OSM spot
+    hit(pt) {
+      let spot = null, poi = null, ds = Infinity, dp = Infinity;
+      for (const h of this.hits || []) {
+        const dx = h.x - pt.x, dy = h.y - pt.y, dd = dx * dx + dy * dy;
+        if (dd > h.r * h.r) continue;
+        if (h.spot && dd < ds) { ds = dd; spot = h; }
+        if (h.poi && dd < dp) { dp = dd; poi = h; }
+      }
+      return spot || poi;
+    }
+
+    // -------------------------------------------------------------- camera
+    flyToSpot(s, offset) {
+      const target = { center: [s.lng, s.lat], zoom: Math.max(this.map.getZoom(), s.kind === "yokocho" ? 16.8 : 17.6), offset: offset || [0, 0], duration: 1600, essential: true };
+      if (this.three) { target.pitch = 52; } else { target.pitch = 0; target.bearing = 0; }
+      this.map.flyTo(target);
+    }
+    setThree(on) {
+      this.three = on;
+      this.map.easeTo({ pitch: on ? 55 : 0, bearing: on ? this.map.getBearing() : 0, duration: 700 });
+    }
+  }
+
+  window.NBAtlas = { Atlas, toLngLat, fromLngLat, dec, PAL, KIND_COL, KIND_GLYPH };
+})();
+</script>
+<script>/* 東京のんべえ地図 — the page around the map: search, filters, the list,
+ * a page for every spot, what is open right now (Tokyo time, holidays
+ * included), favourites and the phone's bottom sheet.
+ */
+(function () {
+  "use strict";
+
+  const $ = (s, el) => (el || document).querySelector(s);
+  const $$ = (s, el) => [...(el || document).querySelectorAll(s)];
+  const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* private mode */ } },
+  };
+
+  const KINDS = [
+    ["yokocho", "飲み屋横丁", "横"], ["senbero", "せんべろ", "千"], ["tachinomi", "立ち飲み", "立"],
+    ["kakuuchi", "角打ち", "角"], ["bar", "小さなバー", "酒"], ["social", "交流酒場", "交"],
+  ];
+  const KIND = Object.fromEntries(KINDS.map(([k, label, glyph]) => [k, { label, glyph }]));
+  const SHORT = { yokocho: "横丁", senbero: "せんべろ", tachinomi: "立ち飲み", kakuuchi: "角打ち", bar: "バー", social: "交流酒場" };
+  const TALK = ["", "会話より酒と肴", "一人でも入れる", "隣と話すこともある", "隣や常連と話しやすい", "自然に会話が生まれる"];
+  const DAY_JP = { mon: "月", tue: "火", wed: "水", thu: "木", fri: "金", sat: "土", sun: "日", hol: "祝日", prehol: "祝前日", posthol: "祝後日" };
+  const DK = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+  const HOLIDAYS = new Set([
+    "2026-01-01", "2026-01-12", "2026-02-11", "2026-02-23", "2026-03-20", "2026-04-29", "2026-05-03", "2026-05-04", "2026-05-05", "2026-05-06",
+    "2026-07-20", "2026-08-11", "2026-09-21", "2026-09-22", "2026-09-23", "2026-10-12", "2026-11-03", "2026-11-23",
+    "2027-01-01", "2027-01-11", "2027-02-11", "2027-02-23", "2027-03-21", "2027-03-22", "2027-04-29", "2027-05-03", "2027-05-04", "2027-05-05",
+    "2027-07-19", "2027-08-11", "2027-09-20", "2027-09-23", "2027-10-11", "2027-11-03", "2027-11-23",
+  ]);
+
+  // ---------------------------------------------------------------- Tokyo time
+  const JST = 9 * 3600e3, DAY = 864e5;
+  const clockOverride = () => (window.NB_NOW ? new Date(window.NB_NOW).getTime() : Date.now());
+  const ymd = (t) => new Date(t).toISOString().slice(0, 10);
+  function dayInfo(t) {   // t: ms shifted to JST
+    const key = ymd(t);
+    return { key, dow: new Date(t).getUTCDay(), hol: HOLIDAYS.has(key), prehol: HOLIDAYS.has(ymd(t + DAY)), posthol: HOLIDAYS.has(ymd(t - DAY)) };
+  }
+  function rangesFor(w, di) {
+    if (di.hol && w.hol !== undefined) return w.hol;
+    if (di.prehol && w.prehol !== undefined) return w.prehol;
+    if (di.posthol && w.posthol !== undefined) return w.posthol;
+    return w[DK[di.dow]];
+  }
+  const hm = (m) => `${Math.floor(m / 60)}:${String(m % 60).padStart(2, "0")}`;
+  const hmNext = (m) => (m >= 1440 ? "翌" + hm(m - 1440) : hm(m));
+
+  /** {open, until, lo} | {open:false, opensAt} | {open:false, closedToday, next} | null (unknown) */
+  function openState(s, now) {
+    const w = s.week;
+    if (!w) return null;
+    const t = (now || clockOverride()) + JST;
+    const min = new Date(t).getUTCHours() * 60 + new Date(t).getUTCMinutes();
+    const today = dayInfo(t), yest = dayInfo(t - DAY);
+    const ry = rangesFor(w, yest);
+    if (ry) for (const [o, c, lo] of ry) if (c > 1440 && min + 1440 < c) return { open: true, until: c - 1440, lo: lo != null && lo >= 1440 ? lo - 1440 : null, left: c - 1440 - min };
+    const rt = rangesFor(w, today);
+    if (rt === undefined) return null;
+    for (const [o, c, lo] of rt) if (min >= o && min < c) return { open: true, until: c, lo, left: c - min };
+    const later = rt.filter((r) => r[0] > min).sort((a, b) => a[0] - b[0])[0];
+    if (later) return { open: false, opensAt: later[0] };
+    for (let k = 1; k <= 7; k++) {
+      const di = dayInfo(t + k * DAY), r = rangesFor(w, di);
+      if (r && r.length) return { open: false, closedToday: !rt.length, next: { k, di, o: r[0][0] } };
+    }
+    return { open: false, closedToday: true };
+  }
+  function stLabel(st, long) {
+    if (!st) return null;
+    if (st.open) {
+      const soon = st.left <= 45;
+      return { cls: soon ? "st-soon" : "st-open", text: soon ? `まもなく閉店 ${hmNext(st.until)}` : `営業中 〜${hmNext(st.until)}`, lamp: soon ? "soon" : "" };
+    }
+    if (st.opensAt != null) return { cls: "st-later", text: `${hm(st.opensAt)}から`, lamp: "off" };
+    const nx = st.next ? `次は${st.next.k === 1 ? "明日" : st.next.di.hol ? "祝日" : DAY_JP[DK[st.next.di.dow]] + "曜"} ${hm(st.next.o)}から` : "";
+    if (st.closedToday) return { cls: "st-off", text: long && nx ? `今日は休み・${nx}` : "今日は休み", lamp: "off" };
+    return { cls: "st-off", text: long && nx ? `今日は終了・${nx}` : "今日は終了", lamp: "off" };
+  }
+
+  // ---------------------------------------------------------------- text helpers
+  const kata2hira = (s) => s.replace(/[ァ-ヶ]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60));
+  const norm = (s) => kata2hira(String(s || "").normalize("NFKC").toLowerCase()).replace(/[\s・･·,、。.]/g, "");
+  const yen = (n) => n.toLocaleString("ja-JP");
+  const dist = (a, b) => {
+    const R = 6371e3, r = Math.PI / 180;
+    const dl = (b.lat - a.lat) * r, dn = (b.lng - a.lng) * r;
+    const x = Math.sin(dl / 2) ** 2 + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(dn / 2) ** 2;
+    return 2 * R * Math.asin(Math.sqrt(x));
+  };
+  const walk = (m) => `${m < 1000 ? Math.round(m / 10) * 10 + "m" : (m / 1000).toFixed(1) + "km"}・徒歩${Math.max(1, Math.round(m / 80))}分`;
+  const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return u; } };
+  const SRC_NAME = { "tabelog.com": "食べログ", "hotpepper.jp": "ホットペッパー", "retty.me": "Retty", "san-tatsu.jp": "さんたつ", "instagram.com": "Instagram", "x.com": "X", "twitter.com": "X" };
+  const srcName = (u) => { const h = host(u); for (const k in SRC_NAME) if (h === k || h.endsWith("." + k)) return SRC_NAME[k]; return h; };
+  const talkDots = (n, label) => `<span class="talk" aria-label="${label || "話しやすさ"}${n}">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= n ? "on" : ""}"></i>`).join("")}</span>`;
+  const seal = (k, on) => `<i class="seal${on ? " on" : ""}" style="--c:var(--k-${k})" aria-hidden="true">${KIND[k].glyph}</i>`;
+
+  // ---------------------------------------------------------------- state
+  const state = {
+    q: "", area: "", sort: "social", scope: "view", sel: null,
+    kinds: new Set(KINDS.map((k) => k[0])),
+    f: { open: false, social: false, solo: false, hiru: false, cheap: false, card: false, english: false, fav: false },
+    favs: new Set(store.get("nb-favs", [])),
+    theme: store.get("nb-theme", "night"),
+    three: store.get("nb-three", true),
+  };
+  let D, spots, byId, atlas;
+  const phone = () => matchMedia("(max-width: 820px)").matches;
+
+  function searchText(s) {
+    return norm([s.name, s.kana, s.en, s.area, s.ward, s.region, s.station, s.address, s.catch, (s.tags || []).join(" "),
+      (s.menu || []).map((m) => m.n).join(" "), KIND[s.kind].label].join(" "));
+  }
+  function cheap(s) { return s.kind === "senbero" || (s.budget_max && s.budget_max <= 2500); }
+  function pass(s, skip) {
+    if (s.status === "closed") return false;
+    if (skip !== "kind" && !state.kinds.has(s.kind)) return false;
+    const f = state.f;
+    if (f.open) { const st = openState(s); if (!st || !st.open) return false; }
+    if (f.social && (s.social || 0) < 4) return false;
+    if (f.solo && (s.solo || 0) < 4) return false;
+    if (f.hiru && !s.hiru) return false;
+    if (f.cheap && !cheap(s)) return false;
+    if (f.card && s.cash_only !== false) return false;
+    if (f.english && !s.english) return false;
+    if (f.fav && !state.favs.has(s.id)) return false;
+    if (state.area) {
+      const [t, v] = [state.area.slice(0, 2), state.area.slice(2)];
+      if (t === "r:" && s.region !== v) return false;
+      if (t === "a:" && s.area !== v) return false;
+    }
+    if (state.q) {
+      for (const tok of state.q.split(/\s+/).filter(Boolean)) if (!s._q.includes(norm(tok))) return false;
+    }
+    return true;
+  }
+
+  // ---------------------------------------------------------------- boot
+  async function boot() {
+    document.documentElement.dataset.theme = state.theme;
+    syncThemeButton();
+    try {
+      D = await fetch((window.NB_CONFIG && NB_CONFIG.dataUrl || "data/") + "spots.json").then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+    } catch (e) {
+      status("店のデータを読み込めませんでした。再読み込みしてください。");
+      return;
+    }
+    spots = D.spots;
+    spots.forEach((s) => { s._q = searchText(s); });
+    byId = Object.fromEntries(spots.map((s) => [s.id, s]));
+    buildFilters();
+    bindUI();
+    if (!window.maplibregl) { status("地図の部品を読み込めませんでした。通信状況を確かめて再読み込みしてください。"); renderList(); return; }
+    const live = spots.filter((s) => s.status !== "closed");
+    const cells = new Map();
+    live.forEach((s) => { const k = Math.floor(s.lng / 0.0005) + ":" + Math.floor(s.lat / 0.0005); if (!cells.has(k)) cells.set(k, []); cells.get(k).push(s); });
+    atlas = new NBAtlas.Atlas($("#map"), {
+      spots: live, chunks: D.chunks, theme: state.theme, three: state.three, capture: !!window.NB_CAPTURE, webSans: !!window.NB_CAPTURE,
+      bounds: [[139.63, 35.625], [139.85, 35.755]],
+      padding: () => (phone() ? { top: 80, bottom: 170, left: 20, right: 20 } : 50),
+      showPoi: () => true,
+      skipPoi: (o) => {
+        // OSM shops that are one of ours are drawn as our lantern only
+        if (o._skip === undefined) {
+          const [lng, lat] = NBAtlas.toLngLat(o.x, o.y), cx = Math.floor(lng / 0.0005), cy = Math.floor(lat / 0.0005);
+          o._skip = false;
+          for (let i = -1; i <= 1 && !o._skip; i++) for (let j = -1; j <= 1; j++) {
+            if ((cells.get((cx + i) + ":" + (cy + j)) || []).some((s) => Math.abs(s.lat - lat) < 0.00025 && Math.abs(s.lng - lng) < 0.0003)) { o._skip = true; break; }
+          }
+        }
+        return o._skip;
+      },
+      onReady: () => { renderList(); fromHash(); },
+      onError: () => status("地図のデータを読み込めませんでした。"),
+      onDraw: () => syncNorth(),
+    });
+    window.nbAtlas = atlas;
+    const m = atlas.map;
+    m.on("click", (e) => {
+      const h = atlas.hit(e.point);
+      if (h && h.spot) { select(h.spot.id, { fly: false }); hidePoi(); }
+      else if (h && h.poi) showPoi(h.poi);
+      else hidePoi();
+    });
+    m.on("mousemove", (e) => {
+      const h = atlas.hit(e.point);
+      m.getCanvas().style.cursor = h ? "pointer" : "";
+      atlas.setHover(h && h.spot ? h.spot.id : null);
+      hlItem(h && h.spot ? h.spot.id : null);
+    });
+    m.on("moveend", () => { if (state.scope === "view" || state.sort === "near") renderListSoon(); });
+    tick();
+    setInterval(tick, 20e3);
+    window.addEventListener("hashchange", fromHash);
+  }
+
+  // ---------------------------------------------------------------- filters
+  function buildFilters() {
+    const counts = {};
+    spots.forEach((s) => { if (s.status !== "closed") counts[s.kind] = (counts[s.kind] || 0) + 1; });
+    $("#kinds").innerHTML = KINDS.map(([k, label]) =>
+      `<button type="button" class="seal-chip" data-k="${k}" aria-pressed="true" title="${label}" style="--c:var(--k-${k})">${seal(k)}<span>${SHORT[k]}</span><b>${counts[k] || 0}</b></button>`).join("");
+    $("#legend-kinds").innerHTML = KINDS.map(([k, label]) => `<li>${seal(k, true)}${label}</li>`).join("");
+    const opts = ['<option value="">東京全域</option>'];
+    for (const r of D.regions) {
+      const areas = r.areas.filter((a) => spots.some((s) => s.area === a && s.status !== "closed"));
+      opts.push(`<optgroup label="${esc(r.name)}"><option value="r:${esc(r.name)}">${esc(r.name)} すべて</option>${areas.map((a) => `<option value="a:${esc(a)}">${esc(a)}</option>`).join("")}</optgroup>`);
+    }
+    $("#area").innerHTML = opts.join("");
+    $("#about-count").textContent = `${spots.filter((s) => s.status !== "closed").length}軒`;
+    if (D.updated) $("#updated").textContent = D.updated;
+    if (D.accuracy) $("#accuracy").textContent = `食べログの店舗地図と比べられた${D.accuracy.n}軒では、ずれの中央値が${D.accuracy.median}m、9割が${D.accuracy.p90}m以内です。`;
+    syncPressed();
+  }
+  function syncPressed() {
+    $$("#kinds .seal-chip").forEach((b) => b.setAttribute("aria-pressed", String(state.kinds.has(b.dataset.k))));
+    $$(".fuda").forEach((b) => b.setAttribute("aria-pressed", String(!!state.f[b.dataset.f])));
+    $$("#scope button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === state.scope)));
+    $("#nav-fav").setAttribute("aria-pressed", String(state.f.fav));
+  }
+
+  function bindUI() {
+    $("#kinds").addEventListener("click", (e) => {
+      const b = e.target.closest(".seal-chip");
+      if (!b) return;
+      const k = b.dataset.k;
+      // first click on a full set picks just that kind; clicking the last one restores all
+      if (state.kinds.size === KINDS.length) state.kinds = new Set([k]);
+      else if (state.kinds.has(k)) { state.kinds.delete(k); if (!state.kinds.size) state.kinds = new Set(KINDS.map((x) => x[0])); }
+      else state.kinds.add(k);
+      changed();
+    });
+    $$(".fuda").forEach((b) => b.addEventListener("click", () => { state.f[b.dataset.f] = !state.f[b.dataset.f]; changed(); }));
+    $("#nav-fav").addEventListener("click", () => { state.f.fav = !state.f.fav; changed(); if (phone()) sheet("half"); });
+    $("#scope").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { state.scope = b.dataset.v; syncPressed(); renderList(); } });
+    let qt;
+    $("#q").addEventListener("input", (e) => { clearTimeout(qt); qt = setTimeout(() => { state.q = e.target.value.trim(); if (state.q) state.scope = "all"; changed(); }, 120); });
+    $("#q").addEventListener("focus", () => { if (phone()) sheet("full"); });
+    $("#area").addEventListener("change", (e) => {
+      state.area = e.target.value;
+      state.scope = "all";
+      changed();
+      fitVisible();
+    });
+    $("#sort").addEventListener("change", (e) => { state.sort = e.target.value; renderList(); });
+    $("#list").addEventListener("click", (e) => { const b = e.target.closest(".item"); if (b) select(b.dataset.id); });
+    $("#list").addEventListener("mouseover", (e) => { const b = e.target.closest(".item"); if (atlas) atlas.setHover(b ? b.dataset.id : null); });
+    $("#list").addEventListener("mouseleave", () => atlas && atlas.setHover(null));
+    $("#nav-list").addEventListener("click", () => {
+      const app = $("#app"), closed = app.classList.toggle("drawer-closed");
+      $("#nav-list").setAttribute("aria-pressed", String(!closed));
+      setTimeout(() => atlas && atlas.map.resize(), 340);
+    });
+    $("#nav-theme").addEventListener("click", () => setTheme(state.theme === "night" ? "day" : "night"));
+    $("#nav-about").addEventListener("click", () => { $("#about").hidden = false; $("#about-close").focus(); });
+    $("#about-close").addEventListener("click", () => { $("#about").hidden = true; });
+    $("#about").addEventListener("click", (e) => { if (e.target.id === "about") $("#about").hidden = true; });
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      if (!$("#about").hidden) $("#about").hidden = true;
+      else if (!$("#poi-card").hidden) hidePoi();
+      else if (state.sel) back();
+    });
+    $("#z-in").addEventListener("click", () => atlas && atlas.map.zoomIn());
+    $("#z-out").addEventListener("click", () => atlas && atlas.map.zoomOut());
+    $("#north").addEventListener("click", () => atlas && atlas.map.easeTo({ bearing: 0, duration: 500 }));
+    $("#tilt").setAttribute("aria-pressed", String(state.three));
+    $("#tilt").addEventListener("click", () => {
+      state.three = !state.three; store.set("nb-three", state.three);
+      $("#tilt").setAttribute("aria-pressed", String(state.three));
+      if (atlas) atlas.setThree(state.three);
+    });
+    if (!("geolocation" in navigator)) $("#locate").hidden = true;
+    $("#locate").addEventListener("click", locate);
+    bindSheet();
+  }
+
+  function changed() {
+    syncPressed();
+    renderList();
+    if (atlas) atlas.setVisible(spots.filter((s) => pass(s)).map((s) => s.id));
+  }
+  function fitVisible() {
+    if (!atlas) return;
+    const vis = spots.filter((s) => pass(s));
+    if (!vis.length) return;
+    let w = 180, e = -180, so = 90, n = -90;
+    vis.forEach((s) => { w = Math.min(w, s.lng); e = Math.max(e, s.lng); so = Math.min(so, s.lat); n = Math.max(n, s.lat); });
+    const pad = phone() ? { top: 90, bottom: 200, left: 30, right: 30 } : 70;
+    atlas.map.fitBounds([[w - 0.004, so - 0.003], [e + 0.004, n + 0.003]], { padding: pad, maxZoom: 16, duration: 900, pitch: state.three ? 40 : 0 });
+  }
+
+  // ---------------------------------------------------------------- list
+  let listT;
+  function renderListSoon() { clearTimeout(listT); listT = setTimeout(renderList, 160); }
+  function inView(s) {
+    if (!atlas) return true;
+    const b = atlas.map.getBounds();
+    return s.lng >= b.getWest() && s.lng <= b.getEast() && s.lat >= b.getSouth() && s.lat <= b.getNorth();
+  }
+  function renderList() {
+    if (!spots) return;
+    const all = spots.filter((s) => pass(s));
+    let rows = state.scope === "view" ? all.filter(inView) : all;
+    const c = atlas ? atlas.map.getCenter() : { lat: 35.68, lng: 139.76 };
+    const sts = new Map(rows.map((s) => [s.id, openState(s)]));
+    const key = {
+      social: (a, b) => (b.social || 0) - (a.social || 0) || (b.solo || 0) - (a.solo || 0) || openRank(sts.get(b.id)) - openRank(sts.get(a.id)),
+      near: (a, b) => dist(c, a) - dist(c, b),
+      open: (a, b) => closeAt(sts.get(b.id)) - closeAt(sts.get(a.id)) || (b.social || 0) - (a.social || 0),
+      cheap: (a, b) => (a.budget_min || 9e3) - (b.budget_min || 9e3) || (a.budget_max || 9e3) - (b.budget_max || 9e3),
+      name: (a, b) => (a.kana || a.name).localeCompare(b.kana || b.name, "ja"),
+    }[state.sort];
+    rows = rows.slice().sort(key);
+    $("#count").textContent = rows.length;
+    $("#count-sub").textContent = state.scope === "view" ? `軒（全域 ${all.length}軒）` : "軒";
+    if (!rows.length) {
+      $("#list").innerHTML = `<li class="empty">${state.scope === "view" && all.length ? `地図の範囲に当てはまる店がありません。<br><button type="button" data-act="all">全域の${all.length}軒を見る</button>` : "当てはまる店がありません。条件を減らしてみてください。"}</li>`;
+      const b = $("#list [data-act=all]");
+      if (b) b.addEventListener("click", () => { state.scope = "all"; syncPressed(); renderList(); });
+      return;
+    }
+    const showDist = state.sort === "near";
+    $("#list").innerHTML = rows.map((s) => {
+      const st = stLabel(sts.get(s.id));
+      const meta = [
+        st ? `<span class="st ${st.cls}">${st.text}</span>` : "",
+        `<span>${esc(s.area)}</span>`,
+        s.budget ? `<span>${esc(shortBudget(s.budget))}</span>` : "",
+        s.kind !== "yokocho" ? talkDots(s.social || 0) : "",
+      ].filter(Boolean).join("");
+      return `<li><button type="button" class="item${s.id === state.sel ? " hl" : ""}" data-id="${s.id}">
+        ${seal(s.kind, true)}
+        <span><span class="item-kana">${esc(s.kana || "")}</span><span class="item-name">${esc(s.name)}</span>
+        <span class="item-catch">${esc(s.catch || firstSentence(s.desc))}</span>
+        <span class="item-meta">${meta}</span></span>
+        <span class="item-side">${state.favs.has(s.id) ? '<svg class="fav-mark" aria-label="行きたい"><use href="#i-star-f"/></svg>' : ""}${showDist ? `<br>${Math.round(dist(c, s) / 10) * 10}m` : ""}</span>
+      </button></li>`;
+    }).join("");
+  }
+  const openRank = (st) => (st && st.open ? 2 : st && st.opensAt != null ? 1 : 0);
+  const closeAt = (st) => (st && st.open ? 2000 + st.until : st && st.opensAt != null ? 1000 + st.opensAt : 0);
+  const firstSentence = (t) => (t || "").split("。")[0] + ((t || "").includes("。") ? "。" : "");
+  const shortBudget = (b) => b.replace(/（.*?）/g, "").replace(/円$/, "円").slice(0, 16);
+  function hlItem(id) {
+    $$("#list .item.hl").forEach((el) => { if (el.dataset.id !== state.sel) el.classList.remove("hl"); });
+    if (id) { const el = $(`#list .item[data-id="${CSS.escape(id)}"]`); if (el) el.classList.add("hl"); }
+  }
+
+  // ---------------------------------------------------------------- one spot
+  function select(id, opts) {
+    const s = byId[id];
+    if (!s) return;
+    opts = opts || {};
+    state.sel = id;
+    if (atlas) atlas.select(id);
+    $("#detail").innerHTML = detailHTML(s);
+    $("#detail").hidden = false;
+    $("#detail").scrollTop = 0;
+    bindDetail(s);
+    if (phone()) sheet(opts.sheet || "half");
+    else if ($("#app").classList.contains("drawer-closed")) $("#nav-list").click();
+    if (atlas && opts.fly !== false) atlas.flyToSpot(s, phone() ? [0, -Math.round(innerHeight * 0.2)] : [0, 0]);
+    if (location.hash.slice(1) !== id) history.replaceState(null, "", "#" + id);
+    document.title = `${s.name} — 東京のんべえ地図`;
+  }
+  function back() {
+    state.sel = null;
+    if (atlas) atlas.select(null);
+    $("#detail").hidden = true;
+    history.replaceState(null, "", location.pathname + location.search);
+    document.title = "東京のんべえ地図 — 立ち飲み・角打ち・せんべろ・横丁";
+    renderList();
+    if (phone()) sheet("half");
+  }
+  function fromHash() {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (id && byId && byId[id] && id !== state.sel) select(id, { sheet: "half" });
+  }
+
+  // furigana over the shop name only, not over a trailing note such as （角打ち明治屋）
+  function nameRuby(s) {
+    if (!s.kana) return esc(s.name);
+    const m = s.name.match(/^(.*?)([（(].*)$/);
+    return m ? `<ruby>${esc(m[1])}<rt>${esc(s.kana)}</rt></ruby><span class="d-name-note">${esc(m[2])}</span>` : `<ruby>${esc(s.name)}<rt>${esc(s.kana)}</rt></ruby>`;
+  }
+  function fact(label, value, src, sub) {
+    if (value == null || value === "" || (Array.isArray(value) && !value.length)) return "";
+    return `<dt>${label}</dt><dd>${value}${src ? `<span class="src-tag">${esc(src)}</span>` : ""}${sub ? `<small>${sub}</small>` : ""}</dd>`;
+  }
+  function weekTable(s) {
+    const w = s.week, t = clockOverride() + JST, today = dayInfo(t);
+    const todayKey = today.hol && w.hol !== undefined ? "hol" : today.prehol && w.prehol !== undefined ? "prehol" : DK[today.dow];
+    const rows = ["mon", "tue", "wed", "thu", "fri", "sat", "sun", "hol", "prehol"].filter((d) => w[d] !== undefined);
+    return `<table class="hours"><tbody>${rows.map((d) => {
+      const r = w[d];
+      const cell = !r.length ? '<td class="off">休み</td>' : `<td>${r.map(([o, c, lo]) => `${hm(o)}〜${hmNext(c)}${lo != null ? `<span class="lo">L.O.${hmNext(lo)}</span>` : ""}`).join("<br>")}</td>`;
+      return `<tr class="${d === todayKey ? "today" : ""}"><th>${DAY_JP[d]}</th>${cell}</tr>`;
+    }).join("")}</tbody></table>`;
+  }
+  function nearby(s) {
+    return spots.filter((o) => o.id !== s.id && o.status !== "closed")
+      .map((o) => ({ o, d: dist(s, o) })).filter((x) => x.d < 1500).sort((a, b) => a.d - b.d).slice(0, 4);
+  }
+  function detailHTML(s) {
+    const st = openState(s), sl = stLabel(st, true), src = s.src || {}, fav = state.favs.has(s.id);
+    const yk = s.kind === "yokocho";
+    const h = [];
+    h.push(`<div class="d-bar">
+      <button type="button" class="t-btn" data-act="back"><svg><use href="#i-back"/></svg>一覧</button><span class="sp"></span>
+      <button type="button" class="t-btn" data-act="fav" aria-pressed="${fav}"><svg><use href="#${fav ? "i-star-f" : "i-star"}"/></svg>行きたい</button>
+      <button type="button" class="t-btn" data-act="share"><svg><use href="#i-share"/></svg>共有</button></div>`);
+    h.push(`<header class="d-head">
+      <p class="d-kind">${seal(s.kind, true)}${KIND[s.kind].label}・${esc(s.area)}${s.ward && !s.area.includes(s.ward) ? `（${esc(s.ward)}）` : ""}</p>
+      <h2 class="d-name">${nameRuby(s)}</h2>
+      ${s.en ? `<p class="d-en">${esc(s.en)}</p>` : ""}
+      ${s.catch ? `<p class="d-catch">${esc(s.catch)}</p>` : ""}
+      <p class="d-desc">${esc(s.desc)}</p></header>`);
+    if (s.status === "uncertain" || s.status_note) {
+      h.push(`<p class="d-alert">${s.status_note === "closed" ? "最近の口コミや記事に閉店・休業の情報があります。" : "営業しているか確かめきれていません。"}出かける前に店の最新情報を確認してください。</p>`);
+    }
+    if (sl) h.push(`<div class="d-now"><i class="lamp ${sl.lamp}"></i><b class="${sl.cls}">${sl.text}</b><span>${st && st.open && st.lo != null ? `ラストオーダー ${hmNext(st.lo)}・` : ""}東京の現在時刻で判定${s.week_from_text ? "（調査メモの営業時間から）" : ""}</span></div>`);
+    else if (!yk) h.push(`<div class="d-now"><i class="lamp off"></i><b class="st-off">営業時間は下を確認</b><span>曜日ごとの時間が分からないため、今の営業は判定していません</span></div>`);
+
+    // 話しやすさ
+    if (!yk || s.talk) {
+      h.push(`<section class="d-sec"><h3>話しやすさ</h3>
+        ${!yk ? `<div class="talk-big">${talkDots(s.social || 0)}<b>${TALK[s.social || 0] || ""}</b></div>` : ""}
+        ${!yk && s.solo ? `<div class="talk-big solo">${talkDots(s.solo, "一人で入りやすさ")}<span>一人で入りやすさ ${["", "グループ向け", "グループ客が多い", "一人でも入れる", "一人客が多い", "一人客が大半"][s.solo] || ""}</span></div>` : ""}
+        ${s.talk ? `<p>${esc(s.talk)}</p>` : ""}${s.talk2 ? `<p>${esc(s.talk2)}</p>` : ""}
+        ${s.tags && s.tags.length ? `<ul class="tags">${s.tags.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}</section>`);
+    }
+    // facts
+    const budgetSub = [s.budget_dinner ? `食べログ・夜 ${s.budget_dinner}` : "", s.budget_lunch ? `昼 ${s.budget_lunch}` : ""].filter(Boolean).join("／");
+    const seats = s.seats ? `${s.seats}席${s.seats_note ? `（${esc(s.seats_note)}）` : ""}` : "";
+    const facts = [
+      fact("予算", s.budget ? esc(s.budget) : s.budget_dinner ? esc(s.budget_dinner) : "", s.budget ? "調査" : "食べログ", s.budget ? esc(budgetSub) : ""),
+      fact("チャージ", s.charge ? esc(s.charge) : "", src.charge),
+      fact("支払い", s.pay ? esc(s.pay) : "", src.pay),
+      fact("席", seats, src.seats),
+      fact("店内", s.seating ? esc(s.seating.join("・")) : ""),
+      fact("喫煙", s.smoking ? esc(s.smoking) : "", src.smoking),
+      fact("予約", s.reserve ? esc(s.reserve) : ""),
+      fact("酒", s.drinks ? esc(s.drinks.join("・")) : ""),
+      fact("電話", s.phone ? `<a href="tel:${esc(s.phone.replace(/[^\d+]/g, ""))}">${esc(s.phone)}</a>` : ""),
+      fact("創業", s.since ? esc(s.since) : s.opened ? esc(String(s.opened).replace(/^(\d{4})\.(\d{1,2}).*$/, "$1年$2月開店")) : ""),
+      fact("昼飲み", s.hiru ? "15時より前から飲める" : ""),
+      fact("英語", s.english ? "英語メニューや英語での対応あり" : ""),
+    ].join("");
+    if (facts) h.push(`<section class="d-sec"><h3>基本の情報</h3><dl class="facts">${facts}</dl></section>`);
+
+    if (s.vibe || s.crowd || s.busy) {
+      h.push(`<section class="d-sec"><h3>${yk ? "横丁の様子" : "店の様子"}<small>口コミ・記事から</small></h3>
+        ${s.vibe ? `<p>${esc(s.vibe)}</p>` : ""}
+        ${s.crowd ? `<p class="d-sub"><em>客層</em>${esc(s.crowd)}</p>` : ""}
+        ${s.busy ? `<p class="d-sub"><em>混む時間</em>${esc(s.busy)}</p>` : ""}</section>`);
+    }
+    if ((s.menu && s.menu.length) || s.price) {
+      h.push(`<section class="d-sec"><h3>品書き<small>${s.menu && s.menu.length ? "口コミ・記事に出てくる値段" : ""}</small></h3>
+        ${s.menu && s.menu.length ? `<ul class="menu">${s.menu.map((m) => `<li><span class="n">${esc(m.n)}</span><i class="leader"></i><span class="p">${m.p ? esc(m.p) : "—"}</span></li>`).join("")}</ul>` : ""}
+        ${s.price ? `<p class="menu-note">${esc(s.price)}</p>` : ""}</section>`);
+    }
+    if (s.rules && s.rules.length) h.push(`<section class="d-sec"><h3>店の決まり</h3><ul class="rules">${s.rules.map((r) => `<li>${esc(r)}</li>`).join("")}</ul></section>`);
+    if (s.first || s.tips) h.push(`<section class="d-sec"><h3>はじめて行くなら</h3>${s.first ? `<p>${esc(s.first)}</p>` : ""}${s.tips ? `<p>${esc(s.tips)}</p>` : ""}</section>`);
+    if (s.week || s.hours || s.closed) {
+      h.push(`<section class="d-sec"><h3>営業時間${src.hours ? `<small>${esc(src.hours)}</small>` : ""}</h3>
+        ${s.week ? weekTable(s) : `<p>${esc(s.hours || "")}</p>`}
+        ${s.closed ? `<p class="hours-note">定休日：${esc(s.closed)}</p>` : ""}
+        ${s.hours_research && s.hours_research !== s.hours ? `<p class="hours-note">調査メモ：${esc(s.hours_research)}</p>` : ""}</section>`);
+    }
+    // access
+    const gq = encodeURIComponent(`${s.name} ${s.address || ""}`.trim());
+    const nearSt = (s.near || []).slice(0, 2).map(([n, m]) => `${esc(n)}駅から${walk(m)}`).join("、");
+    h.push(`<section class="d-sec"><h3>行き方</h3>
+      ${s.station ? `<p>${esc(s.station)}</p>` : ""}${nearSt ? `<p class="hours-note">${nearSt}（直線距離）</p>` : ""}
+      ${s.address ? `<p class="addr"><span>${esc(s.address)}</span><button type="button" data-act="copy" title="住所をコピー" aria-label="住所をコピー"><svg><use href="#i-copy"/></svg></button></p>` : ""}
+      <div class="btns">
+        <a class="btn primary" href="https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lng}&travelmode=walking" target="_blank" rel="noopener"><svg><use href="#i-route"/></svg>経路を調べる</a>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=${gq}" target="_blank" rel="noopener"><svg><use href="#i-ext"/></svg>Googleマップ</a>
+        ${linkBtns(s)}
+      </div></section>`);
+    const nb = nearby(s);
+    if (nb.length) {
+      h.push(`<section class="d-sec"><h3>はしごするなら<small>近い順</small></h3><ul class="near-list">${nb.map(({ o, d }) => {
+        const ol = stLabel(openState(o));
+        return `<li><button type="button" class="near-item" data-id="${o.id}">${seal(o.kind, true)}<span><b>${esc(o.name)}</b><span>${esc(o.catch || KIND[o.kind].label)}${ol ? `・<span class="${ol.cls}">${ol.text}</span>` : ""}</span></span><em>${walk(d)}</em></button></li>`;
+      }).join("")}</ul></section>`);
+    }
+    // sources
+    const srcs = (s.sources || []).filter((u, i, a) => a.indexOf(u) === i);
+    h.push(`<section class="d-sec"><h3>出典と確認</h3>
+      ${s.checked ? `<p class="src-meta">紹介文：${esc(s.checked)}</p>` : ""}
+      ${s.checked_reviews ? `<p class="src-meta">店の様子・品書き：${esc(s.checked_reviews)}</p>` : ""}
+      ${srcs.length ? `<ul class="src-list">${srcs.map((u) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(srcName(u))}</a></li>`).join("")}</ul>` : ""}</section>`);
+    h.push(`<p class="d-foot">情報は変わります。営業時間・値段・決まりは出かける前に店の最新情報で確かめてください。位置は${s.geo === "osm" ? "OpenStreetMap の店舗" : "住所"}から求めています。</p>`);
+    return h.join("");
+  }
+  function linkBtns(s) {
+    const l = s.links || {}, out = [];
+    if (l.tabelog) out.push(`<a class="btn" href="${esc(l.tabelog)}" target="_blank" rel="noopener">食べログ</a>`);
+    if (l.hotpepper) out.push(`<a class="btn" href="${esc(l.hotpepper)}" target="_blank" rel="noopener">ホットペッパー</a>`);
+    if (l.web) out.push(`<a class="btn" href="${esc(l.web)}" target="_blank" rel="noopener"><svg><use href="#i-globe"/></svg>公式</a>`);
+    if (l.insta) out.push(`<a class="btn" href="${esc(l.insta)}" target="_blank" rel="noopener"><svg><use href="#i-insta"/></svg>Instagram</a>`);
+    if (l.x) out.push(`<a class="btn" href="${esc(l.x)}" target="_blank" rel="noopener">X</a>`);
+    return out.join("");
+  }
+  function bindDetail(s) {
+    const el = $("#detail");
+    el.querySelector("[data-act=back]").addEventListener("click", back);
+    el.querySelector("[data-act=fav]").addEventListener("click", (e) => {
+      const b = e.currentTarget;
+      if (state.favs.has(s.id)) state.favs.delete(s.id); else state.favs.add(s.id);
+      store.set("nb-favs", [...state.favs]);
+      const on = state.favs.has(s.id);
+      b.setAttribute("aria-pressed", String(on));
+      b.querySelector("use").setAttribute("href", on ? "#i-star-f" : "#i-star");
+      toast(on ? "行きたい店に入れました" : "行きたい店から外しました");
+    });
+    el.querySelector("[data-act=share]").addEventListener("click", async () => {
+      const url = location.origin + location.pathname + "#" + s.id;
+      const text = `${s.name}（${KIND[s.kind].label}・${s.area}）${s.catch ? " " + s.catch : ""}`;
+      if (navigator.share) { try { await navigator.share({ title: s.name, text, url }); return; } catch (e) { if (e.name === "AbortError") return; } }
+      copy(url, "リンクをコピーしました");
+    });
+    const c = el.querySelector("[data-act=copy]");
+    if (c) c.addEventListener("click", () => copy(s.address, "住所をコピーしました"));
+    el.querySelectorAll(".near-item").forEach((b) => b.addEventListener("click", () => select(b.dataset.id)));
+  }
+
+  // ---------------------------------------------------------------- OSM spots
+  function showPoi(o) {
+    const card = $("#poi-card");
+    const [type, id] = [{ n: "node", w: "way", r: "relation" }[o.osm[0]], o.osm.slice(1)];
+    card.innerHTML = `<button type="button" class="m-btn" aria-label="閉じる"><svg><use href="#i-x"/></svg></button>
+      <span class="tag">OpenStreetMap に登録された店・この地図では未確認</span><b>${esc(o.n)}</b>
+      <p>${esc(o.k)}${o.lv ? `・${esc(o.lv)}階` : ""}</p>${o.h ? `<p>営業時間（OSM）：${esc(o.h)}</p>` : ""}
+      <p><a href="https://www.openstreetmap.org/${type}/${id}" target="_blank" rel="noopener">OpenStreetMap で見る</a></p>`;
+    card.hidden = false;
+    card.querySelector("button").addEventListener("click", hidePoi);
+  }
+  function hidePoi() { $("#poi-card").hidden = true; }
+
+  // ---------------------------------------------------------------- clock
+  let lastMin = -1;
+  function tick() {
+    const t = new Date(clockOverride() + JST);
+    const min = t.getUTCHours() * 60 + t.getUTCMinutes();
+    if (min === lastMin) return;
+    lastMin = min;
+    const di = dayInfo(t.getTime());
+    $("#clock").textContent = `${t.getUTCMonth() + 1}月${t.getUTCDate()}日（${di.hol ? "祝" : DAY_JP[DK[di.dow]]}）${hm(min)}`;
+    const open = spots.filter((s) => s.status !== "closed" && (openState(s) || {}).open).length;
+    $("#open-count").innerHTML = `いま <b>${open}</b>軒が営業中`;
+    const list = $("#list"), top = list.scrollTop;
+    renderList();
+    list.scrollTop = top;
+    if (state.sel && !$("#detail").hidden) {
+      const now = $("#detail .d-now");
+      const s = byId[state.sel], sl = stLabel(openState(s), true);
+      if (now && sl) { now.querySelector("b").className = sl.cls; now.querySelector("b").textContent = sl.text; now.querySelector(".lamp").className = "lamp " + sl.lamp; }
+    }
+  }
+
+  // ---------------------------------------------------------------- theme, misc
+  function setTheme(t) {
+    state.theme = t;
+    store.set("nb-theme", t);
+    document.documentElement.dataset.theme = t;
+    $('meta[name="theme-color"]').setAttribute("content", t === "night" ? "#0b0f19" : "#f4f4f1");
+    syncThemeButton();
+    if (atlas) atlas.setTheme(t);
+  }
+  function syncThemeButton() {
+    const night = state.theme === "night";
+    $("#nav-theme use").setAttribute("href", night ? "#i-sun" : "#i-moon");
+    $("#nav-theme span").textContent = night ? "昼" : "夜";
+    $("#nav-theme").title = night ? "昼の地図にする" : "夜の地図にする";
+  }
+  function syncNorth() {
+    if (!atlas) return;
+    $("#north-icon").style.transform = `rotate(${-atlas.map.getBearing()}deg)`;
+  }
+  let me;
+  function locate() {
+    navigator.geolocation.getCurrentPosition((p) => {
+      const ll = [p.coords.longitude, p.coords.latitude];
+      if (!me) { const el = document.createElement("div"); el.className = "me-dot"; me = new maplibregl.Marker({ element: el }).setLngLat(ll).addTo(atlas.map); }
+      else me.setLngLat(ll);
+      atlas.map.flyTo({ center: ll, zoom: Math.max(atlas.map.getZoom(), 15.5), duration: 1200 });
+      state.sort = "near"; $("#sort").value = "near"; state.scope = "view"; syncPressed();
+    }, () => toast("現在地を取得できませんでした"), { enableHighAccuracy: true, timeout: 10e3 });
+  }
+  function copy(text, msg) {
+    (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(() => toast(msg), () => toast(text));
+  }
+  let toastT;
+  function toast(msg) {
+    const el = $("#toast");
+    el.textContent = msg; el.hidden = false;
+    clearTimeout(toastT); toastT = setTimeout(() => { el.hidden = true; }, 2200);
+  }
+  function status(msg) { const el = $("#map-status"); el.textContent = msg; el.hidden = !msg; }
+
+  // ---------------------------------------------------------------- phone sheet
+  function sheet(v) { if (phone()) $("#drawer").dataset.sheet = v; }
+  function bindSheet() {
+    const dr = $("#drawer");
+    let y0 = null, t0 = 0, base = 0, moved = false;
+    const H = () => dr.getBoundingClientRect().height;
+    const visOf = (v) => (v === "full" ? H() : v === "half" ? H() * 0.54 : 148);
+    const down = (e) => {
+      if (!phone()) return;
+      y0 = e.clientY; t0 = performance.now(); base = visOf(dr.dataset.sheet); moved = false;
+      dr.classList.add("dragging");
+      e.target.setPointerCapture && e.target.setPointerCapture(e.pointerId);
+    };
+    const move = (e) => {
+      if (y0 == null) return;
+      const dy = e.clientY - y0;
+      if (Math.abs(dy) > 4) moved = true;
+      const vis = Math.max(110, Math.min(H(), base - dy));
+      dr.style.transform = `translateY(${H() - vis}px)`;
+    };
+    const up = (e) => {
+      if (y0 == null) return;
+      const dy = e.clientY - y0, v = dy / Math.max(1, performance.now() - t0);
+      dr.classList.remove("dragging");
+      dr.style.transform = "";
+      y0 = null;
+      if (!moved) { dr.dataset.sheet = dr.dataset.sheet === "peek" ? "half" : dr.dataset.sheet === "half" ? "full" : "half"; return; }
+      const vis = base - dy, h = H();
+      const order = ["peek", "half", "full"];
+      let pick = order.reduce((a, b) => (Math.abs(visOf(b) - vis) < Math.abs(visOf(a) - vis) ? b : a));
+      if (Math.abs(v) > 0.6) pick = order[Math.max(0, Math.min(2, order.indexOf(dr.dataset.sheet) + (v < 0 ? 1 : -1)))];
+      if (h && pick) dr.dataset.sheet = pick;
+    };
+    for (const el of [$("#sheet-handle"), $(".tonight")]) {
+      el.addEventListener("pointerdown", down);
+      el.addEventListener("pointermove", move);
+      el.addEventListener("pointerup", up);
+      el.addEventListener("pointercancel", up);
+    }
+  }
+
+  window.NB = { select, back, state, openState, setTheme, renderList, changed, spots: () => spots, byId: () => byId };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
+})();
+</script>
+</body>
+</html>

@@ -561,7 +561,9 @@ def main():
         if cnt:
             regions.append({"name": r, "areas": sorted(cnt, key=lambda a: (-cnt[a], a))})
     spots.sort(key=lambda s: (region_order.index(s.get("region", "その他")), s["area"], s["kind"] != "yokocho", s["id"]))
-    out = {"updated": "2026年10月", "regions": regions, "spots": spots}
+    xs = sorted(s["xcheck"] for s in spots if s.get("xcheck") is not None and s["geo"] != "tabelog")
+    accuracy = {"n": len(xs), "median": xs[len(xs) // 2], "p90": xs[int(len(xs) * 0.9)]} if xs else None
+    out = {"updated": "2026年10月", "accuracy": accuracy, "regions": regions, "spots": spots}
     with open(os.path.join(ROOT, "data", "spots.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
     with open(os.path.join(ROOT, "data", "review.txt"), "w", encoding="utf-8") as f:

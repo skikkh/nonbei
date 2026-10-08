@@ -145,19 +145,11 @@ def build(lo, hi):
 
     for e in load("rail"):
         t = e.get("tags", {})
-        r, op = t.get("railway"), t.get("operator", "")
-        if r == "subway":
-            cls = SUBWAY
-        elif r in ("light_rail", "monorail", "tram", "narrow_gauge"):
-            cls = LIGHT
-        elif re.search(r"JR|東日本旅客鉄道|東海旅客鉄道|Japan Railway", op) and "貨物" not in op:
-            cls = RAIL_JR
-        else:
-            cls = RAIL
-        code = cls + (TUNNEL if is_tunnel(t) else 0)
+        code = rail_class(t) + (TUNNEL if is_tunnel(t) else 0)
         c = way_coords(e)
-        lo.line(code, 10, c)
-        hi.line(code, 10, c)
+        col = rail_colour(e["id"])
+        lo.line(code, 10, c, col)
+        hi.line(code, 10, c, col)
 
     best = {}
     for e in load("admin"):
@@ -224,12 +216,15 @@ def station_labels():
         nm = norm_station(n)
         sub = t.get("station") == "subway" or t.get("subway") == "yes"
         op = t.get("operator", "") or t.get("network", "")
+        yomi = t.get("name:ja-Hira") or t.get("name:ja_kana") or ""
+        yomi = re.sub(r"[ァ-ヶ]", lambda m: chr(ord(m.group()) - 0x60), re.sub(r"[（(].*?[)）]|えき$", "", yomi)).strip()
         for g in groups:
             if g["name"] == nm and math.hypot(g["x"] - x, g["y"] - y) < 1300:  # ~600 m
                 g["pts"].append((x, y, op, sub))
+                g["yomi"] = g.get("yomi") or yomi
                 break
         else:
-            groups.append({"name": nm, "x": x, "y": y, "pts": [(x, y, op, sub)]})
+            groups.append({"name": nm, "x": x, "y": y, "pts": [(x, y, op, sub)], "yomi": yomi})
     out = []
     for g in groups:
         surf = [p for p in g["pts"] if not p[3]] or g["pts"]
@@ -246,7 +241,7 @@ def station_labels():
             rank, minz = 1, 13
         else:
             rank, minz = 0, 13
-        out.append(["s", minz, round(x), round(y), g["name"], rank])
+        out.append(["s", minz, round(x), round(y), g["name"], rank, g.get("yomi") or ""])
     return out
 
 
@@ -275,6 +270,37 @@ def park_labels():
     return out
 
 
+COLOURS = [None]  # palette shared by every rail feature: attr = index (0 = no colour)
+_WAY_COLOUR = None
+NAMED = {"green": "#2e8b57", "orange": "#f08300", "red": "#e60012", "blue": "#0067c0", "yellow": "#f6d500",
+         "purple": "#8f76d6", "brown": "#8c6239", "gray": "#9a9a9a", "grey": "#9a9a9a", "black": "#333333"}
+
+
+def rail_colour(way_id):
+    """Palette index of the line colour of the OSM route relations that use this way."""
+    global _WAY_COLOUR
+    if _WAY_COLOUR is None:
+        best = {}
+        for r in load("rail_routes"):
+            c = (r.get("tags", {}).get("colour") or "").strip().lower()
+            c = NAMED.get(c, c)
+            if not re.fullmatch(r"#[0-9a-f]{6}|#[0-9a-f]{3}", c):
+                continue
+            if len(c) == 4:
+                c = "#" + "".join(ch * 2 for ch in c[1:])
+            ways = [m["ref"] for m in r.get("members", []) if m.get("type") == "way" and m.get("role") in ("", "forward", "backward")]
+            for w in ways:  # the most specific route (fewest ways) wins on shared track
+                if w not in best or len(ways) < best[w][0]:
+                    best[w] = (len(ways), c)
+        _WAY_COLOUR = {w: c for w, (_, c) in best.items()}
+    c = _WAY_COLOUR.get(way_id)
+    if not c:
+        return 0
+    if c not in COLOURS:
+        COLOURS.append(c)
+    return COLOURS.index(c)
+
+
 def rail_class(t):
     r, op = t.get("railway"), t.get("operator", "")
     if r == "subway":
@@ -292,7 +318,7 @@ def build_wide(lo):
                 tol=20, min_area=64 ** 2 * 6, minz=9)
     for e in load("wide_rail"):
         t = e.get("tags", {})
-        lo.line(rail_class(t) + (TUNNEL if is_tunnel(t) else 0), 9, way_coords(e))
+        lo.line(rail_class(t) + (TUNNEL if is_tunnel(t) else 0), 9, way_coords(e), rail_colour(e["id"]))
     for e in load("wide_roads"):
         t = e.get("tags", {})
         cls = ROAD.get(t.get("highway", "").replace("_link", ""))
@@ -352,9 +378,9 @@ def main():
     labels = station_labels() + place_labels() + park_labels() + wide_labels()
     # base.json is all the city-wide view needs; base_hi.json is fetched once the map reaches zoom 13
     out = {
-        "base.json": {"v": 3, "z0": 18, "bbox": [round(x0), round(y0), round(x1), round(y1)],
-                      "lo": sorted(lo.feats, key=lambda f: f[0]), "labels": labels},
-        "base_hi.json": {"v": 3, "hi": sorted(hi.feats, key=lambda f: f[0])},
+        "base.json": {"v": 4, "z0": 18, "bbox": [round(x0), round(y0), round(x1), round(y1)],
+                      "lo": sorted(lo.feats, key=lambda f: f[0]), "labels": labels, "colours": COLOURS},
+        "base_hi.json": {"v": 4, "hi": sorted(hi.feats, key=lambda f: f[0])},
     }
     for name, data in out.items():
         path = os.path.join(OUT, name)

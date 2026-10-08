@@ -1,6 +1,8 @@
 """Collect, generalise and encode map features for the browser renderer.
 
-A feature is [class, minzoom, part, part, ...]. Parts are polyline strings
+A feature is [class, minzoom, attr, part, part, ...]. `attr` is a small
+integer whose meaning depends on the class (rail: colour index, building:
+height in metres, otherwise 0). Parts are polyline strings
 whose deltas run on from the previous part (the first part starts at the
 collector's origin). With `bucket` set, nearby items of the same class and
 minzoom are packed into one feature, which keeps per-feature overhead low
@@ -35,11 +37,11 @@ class Collector:
         self.clip = clip
         self.origin = origin
         self.bucket = bucket
-        self.items = []          # (cls, minz, [coords, ...], is_polygon)
+        self.items = []          # (cls, minz, [coords, ...], is_polygon, attr)
         self._lines = defaultdict(list)
 
     # polygons ---------------------------------------------------------------
-    def polygons(self, cls, geoms, tol, min_area, minz=None, union=True, px2=40):
+    def polygons(self, cls, geoms, tol, min_area, minz=None, union=True, px2=40, attr=0):
         geoms = [g for g in geoms if g is not None and not g.is_empty]
         if not geoms:
             return
@@ -63,15 +65,15 @@ class Collector:
                             continue
                         q = orient(q, 1.0)  # holes run the other way: the renderer fills "nonzero"
                         rings = [list(q.exterior.coords)] + [list(r.coords) for r in q.interiors]
-                        self.items.append((cls, z, rings, True))
+                        self.items.append((cls, z, rings, True, attr))
 
     # lines -----------------------------------------------------------------
-    def line(self, cls, minz, coords):
+    def line(self, cls, minz, coords, attr=0):
         if len(coords) >= 2:
-            self._lines[(cls, minz)].append(LineString(coords))
+            self._lines[(cls, minz, attr)].append(LineString(coords))
 
     def flush_lines(self, tol, merge=True, max_pts=160):
-        for (cls, minz), ls in sorted(self._lines.items()):
+        for (cls, minz, attr), ls in sorted(self._lines.items()):
             g = MultiLineString(ls)
             if merge:
                 g = linemerge(g)
@@ -82,24 +84,24 @@ class Collector:
                 for m in lines(s):
                     for run in split_coords(m.coords, max_pts):
                         if len(run) >= 2:
-                            self.items.append((cls, minz, [run], False))
+                            self.items.append((cls, minz, [run], False, attr))
         self._lines.clear()
 
     # encoding --------------------------------------------------------------
     @property
     def feats(self):
         groups = defaultdict(list)
-        for i, (cls, z, parts, poly) in enumerate(self.items):
+        for i, (cls, z, parts, poly, attr) in enumerate(self.items):
             if self.bucket:
                 xs = [c[0] for c in parts[0]]
                 ys = [c[1] for c in parts[0]]
-                key = (cls, z, int((min(xs) + max(xs)) / 2 // self.bucket), int((min(ys) + max(ys)) / 2 // self.bucket))
+                key = (cls, z, attr, int((min(xs) + max(xs)) / 2 // self.bucket), int((min(ys) + max(ys)) / 2 // self.bucket))
             else:
-                key = (cls, z, i)
+                key = (cls, z, attr, i)
             groups[key].append((parts, poly))
         out = []
         for key in sorted(groups):
-            cls, z = key[0], key[1]
+            cls, z, attr = key[0], key[1], key[2]
             cur = self.origin
             strs = []
             for parts, poly in groups[key]:
@@ -109,5 +111,5 @@ class Collector:
                         strs.append(s)
                         cur = last
             if strs:
-                out.append([cls, z] + strs)
+                out.append([cls, z, attr] + strs)
         return out

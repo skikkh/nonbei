@@ -1,0 +1,1044 @@
+{
+ "yotsuya-suzuden": {
+  "address": "東京都新宿区四谷1-10",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1230,
+     1200
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1230,
+     1200
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1230,
+     1200
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1230,
+     1200
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1230,
+     1200
+    ]
+   ],
+   "sat": [],
+   "sun": [],
+   "hol": []
+  },
+  "hours": "月〜金 17:00〜20:30（L.O.20:00）／土・日・祝 定休",
+  "closed": "土・日・祝日 土日・お盆・年末年始",
+  "budget_dinner": "¥1,000〜¥1,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 40,
+  "seats_note": "立ち飲み40席（スタンディングルーム側の入口に『満席』の札が出ていたら入店不可。",
+  "url": "https://www.hotpepper.jp/strJ000865768/"
+ },
+ "shimbashi-kuri": {
+  "address": "東京都港区新橋２-20-15 新橋駅前ビル1号館1F",
+  "closed": "土、日、祝日 月曜日不定休（土曜日は営業している時もございます）年末年始・お盆などや勉強会出席の時はお休みすることもございます。",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 8,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001291412/"
+ },
+ "nihonbashi-citan": {
+  "address": "東京都中央区日本橋大伝馬町15-2 チョーヤビルB1",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 50,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001202429/"
+ },
+ "yurakucho-kikunoko": {
+  "address": "東京都千代田区有楽町１-7-1 有楽町電気ビルヂングＢ1",
+  "closed": "日 年末年始休業",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 50,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001295800/"
+ },
+ "yurakucho-manpuku-shokudo": {
+  "address": "東京都千代田区有楽町２-4-1",
+  "closed": "なし",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 38,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ000246377/"
+ },
+ "yurakucho-tonton": {
+  "address": "東京都千代田区有楽町2-1-10",
+  "week": {
+   "mon": [
+    [
+     810,
+     1365,
+     1335
+    ]
+   ],
+   "tue": [
+    [
+     810,
+     1365,
+     1335
+    ]
+   ],
+   "wed": [
+    [
+     810,
+     1365,
+     1335
+    ]
+   ],
+   "thu": [
+    [
+     810,
+     1365,
+     1335
+    ]
+   ],
+   "fri": [
+    [
+     810,
+     1365,
+     1335
+    ]
+   ],
+   "sat": [
+    [
+     720,
+     1350,
+     1320
+    ]
+   ],
+   "sun": [
+    [
+     720,
+     1290,
+     1260
+    ]
+   ],
+   "hol": [
+    [
+     720,
+     1290,
+     1260
+    ]
+   ]
+  },
+  "hours": "月〜金 13:30〜22:45（L.O.22:15）／土 12:00〜22:30（L.O.22:00）／日・祝 12:00〜21:30（L.O.21:00）",
+  "closed": "－",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 20,
+  "url": "https://www.hotpepper.jp/strJ000246490/"
+ },
+ "daimon-akitaya": {
+  "address": "東京都港区浜松町2-1-2",
+  "week": {
+   "mon": [
+    [
+     930,
+     1290,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     930,
+     1290,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     930,
+     1290,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     930,
+     1290,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     930,
+     1290,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     930,
+     1230,
+     null
+    ]
+   ],
+   "sun": [],
+   "hol": []
+  },
+  "hours": "月〜金 15:30〜21:30／土 15:30〜20:30／日・祝 定休",
+  "closed": "日・祝日 第3土曜日",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 54,
+  "url": "https://www.hotpepper.jp/strJ000121853/"
+ },
+ "jimbocho-yon": {
+  "address": "東京都千代田区神田神保町１-9-23",
+  "closed": "不定休",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 20,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ003984082/"
+ },
+ "kanda-ajinofue": {
+  "address": "東京都千代田区鍛冶町2-13-26",
+  "closed": "土・日・祝日",
+  "budget_dinner": "¥1,000〜¥1,999",
+  "pay": "現金・電子マネー可",
+  "cash_only": false,
+  "url": "https://www.hotpepper.jp/strJ000249207/"
+ },
+ "kayabacho-new-kayaba": {
+  "address": "東京都中央区日本橋茅場町2-17-11",
+  "closed": "土曜、日曜、祝日",
+  "budget_dinner": "¥1,000〜¥1,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "url": "https://www.hotpepper.jp/strJ000864152/"
+ },
+ "ueno-kadokura": {
+  "address": "東京都台東区上野６－１３－１ フォーラム味ビル１Ｆ",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 60,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ000000532/"
+ },
+ "ueno-niku-no-ohyama": {
+  "address": "東京都台東区上野６-13-2",
+  "closed": "毎年1月1日休業",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 73,
+  "seats_note": "20名程分",
+  "smoking": "分煙・喫煙所あり",
+  "url": "https://www.hotpepper.jp/strJ000233045/"
+ },
+ "ueno-takioka": {
+  "address": "東京都台東区上野6-9-14",
+  "closed": "年中無休",
+  "url": "https://www.hotpepper.jp/strJ000687486/"
+ },
+ "okachimachi-sawaraya": {
+  "address": "東京都台東区上野５-27-5",
+  "closed": "土、日、祝日 土日祝日",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 34,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ000245345/"
+ },
+ "asakusa-shochan": {
+  "address": "東京都台東区浅草2-7-13",
+  "week": {
+   "wed": [
+    [
+     720,
+     1260,
+     1230
+    ]
+   ],
+   "thu": [
+    [
+     720,
+     1260,
+     1230
+    ]
+   ],
+   "fri": [
+    [
+     720,
+     1260,
+     1230
+    ]
+   ],
+   "sat": [
+    [
+     720,
+     1260,
+     1230
+    ]
+   ],
+   "sun": [
+    [
+     720,
+     1260,
+     1230
+    ]
+   ],
+   "mon": [],
+   "tue": []
+  },
+  "hours": "月・火 定休／水〜日 12:00〜21:00（L.O.20:30）",
+  "closed": "月・火",
+  "budget_dinner": "¥1,000〜¥1,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 20,
+  "seats_note": "天気が佳い日はテラス席あり",
+  "url": "https://www.hotpepper.jp/strJ000126682/"
+ },
+ "uguisudani-kagiya": {
+  "address": "東京都台東区根岸3-6-23-18",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1200,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1200,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1200,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1200,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1200,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1200,
+     null
+    ]
+   ],
+   "sun": []
+  },
+  "hours": "月〜土 17:00〜20:00／日 定休",
+  "closed": "日",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 24,
+  "seats_note": "カウンター8席、小上がりは4人卓4",
+  "url": "https://www.hotpepper.jp/strJ000237943/"
+ },
+ "nakano-kamakura-saketen": {
+  "address": "東京都中野区中野２‐３０‐１４ １Ｆ",
+  "closed": "なし",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ000861520/"
+ },
+ "goldengai-albatross-g": {
+  "address": "東京都新宿区歌舞伎町１-1-7 ゴールデン街 5番街1-2F",
+  "closed": "※年中無休",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 30,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ000839548/"
+ },
+ "shinjuku2-campy-bar": {
+  "address": "東京都新宿区新宿2-13-10武蔵野ビル1階",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ001026650/"
+ },
+ "shinjuku3-nihon-saisei-sakaba": {
+  "address": "東京都新宿区新宿3-7-3丸中ビル１Ｆ",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000229782/"
+ },
+ "kyodo-sabanoyu": {
+  "address": "東京都世田谷区経堂2-6-6ｐｌｕｍｂｏｘ・5・1階",
+  "closed": "不定休",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 25,
+  "url": "https://www.hotpepper.jp/strJ000967095/"
+ },
+ "musashikoyama-gyutaro": {
+  "address": "東京都品川区小山4-3-13",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000232746/"
+ },
+ "numabukuro-tatsuya": {
+  "address": "東京都中野区沼袋3-27-6１F",
+  "closed": "－",
+  "budget_dinner": "¥4,000〜¥4,999",
+  "pay": "現金・カード・電子マネー可",
+  "cash_only": false,
+  "seats": 27,
+  "seats_note": "カウンター席のみ",
+  "url": "https://www.hotpepper.jp/strJ000854903/"
+ },
+ "oji-hirasawa-kamaboko": {
+  "address": "東京都北区岸町1-1-10ＮＵビル１Ｆ",
+  "week": {
+   "tue": [
+    [
+     660,
+     1350,
+     1320
+    ]
+   ],
+   "wed": [
+    [
+     660,
+     1350,
+     1320
+    ]
+   ],
+   "thu": [
+    [
+     660,
+     1350,
+     1320
+    ]
+   ],
+   "fri": [
+    [
+     660,
+     1350,
+     1320
+    ]
+   ],
+   "sat": [
+    [
+     660,
+     1260,
+     1230
+    ]
+   ],
+   "sun": [
+    [
+     660,
+     1260,
+     1230
+    ]
+   ],
+   "hol": [
+    [
+     660,
+     1260,
+     null
+    ]
+   ],
+   "mon": []
+  },
+  "hours": "月 定休／火〜金 11:00〜22:30（L.O.22:00）／土・日 11:00〜21:00（L.O.20:30）／祝 11:00〜21:00",
+  "closed": "月",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "pay": "現金・カード・QR決済可",
+  "cash_only": false,
+  "url": "https://www.hotpepper.jp/strJ000146789/"
+ },
+ "nogata-akimotoya": {
+  "address": "東京都中野区野方5-28-3",
+  "closed": "－",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "pay": "現金・QR決済可",
+  "cash_only": false,
+  "seats": 70,
+  "url": "https://www.hotpepper.jp/strJ000229593/"
+ },
+ "tateishi-bunkado": {
+  "address": "東京都葛飾区立石４-27-9",
+  "closed": "不定休です。臨時でお休みすることあります。",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 10,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001218776/"
+ },
+ "tateishi-kurai-store": {
+  "address": "東京都葛飾区立石2-18-4",
+  "week": {
+   "mon": [
+    [
+     630,
+     840,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     630,
+     840,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     630,
+     840,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     630,
+     840,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     630,
+     840,
+     null
+    ]
+   ],
+   "sat": [],
+   "sun": [],
+   "hol": []
+  },
+  "hours": "月〜金 10:30〜14:00／土・日・祝 定休",
+  "closed": "土・日・祝日",
+  "budget_lunch": "¥1,000〜¥1,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 28,
+  "seats_note": "テーブル7卓",
+  "url": "https://www.hotpepper.jp/strJ000798176/"
+ },
+ "tateishi-oden-maruchu": {
+  "address": "東京都葛飾区立石1-19-2",
+  "closed": "－",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "url": "https://www.hotpepper.jp/strJ001065708/"
+ },
+ "tateishi-uchida": {
+  "address": "東京都葛飾区立石1-18-8仲見世商店街",
+  "closed": "日曜、祝日",
+  "budget_dinner": "¥1,000〜¥1,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 39,
+  "url": "https://www.hotpepper.jp/strJ000657672/"
+ },
+ "kitasenju-nagami": {
+  "address": "東京都足立区千住2-62",
+  "week": {
+   "mon": [
+    [
+     900,
+     1320,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     900,
+     1320,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     900,
+     1320,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     900,
+     1320,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     900,
+     1320,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     900,
+     1320,
+     null
+    ]
+   ],
+   "sun": []
+  },
+  "hours": "月〜土 15:00〜22:00／日 定休",
+  "closed": "日",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 100,
+  "seats_note": "一階に一人来店者向きのカウンター席、二階に座敷席あり。",
+  "url": "https://www.hotpepper.jp/strJ000152237/"
+ },
+ "kitasenju-ohashi": {
+  "address": "東京都足立区千住3-46",
+  "week": {
+   "mon": [
+    [
+     990,
+     1230,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     990,
+     1230,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     990,
+     1230,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     990,
+     1230,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     990,
+     1230,
+     null
+    ]
+   ],
+   "sat": [],
+   "sun": []
+  },
+  "hours": "月〜金 16:30〜20:30／土・日 定休",
+  "closed": "土・日",
+  "budget_dinner": "¥1,000〜¥1,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 45,
+  "seats_note": "カウンター25席、テーブル5卓20席",
+  "url": "https://www.hotpepper.jp/strJ000104134/"
+ },
+ "kitasenju-stewya": {
+  "address": "東京都足立区千住1-32-4",
+  "week": {
+   "mon": [
+    [
+     690,
+     900,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     690,
+     900,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     690,
+     900,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     690,
+     900,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1320,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     990,
+     1320,
+     null
+    ]
+   ],
+   "sun": [],
+   "hol": []
+  },
+  "hours": "月・火 11:30〜15:00／水 17:00〜22:00／木・金 11:30〜15:00／土 16:30〜22:00／日・祝 定休",
+  "closed": "日・祝日",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "url": "https://www.hotpepper.jp/strJ000239133/"
+ },
+ "kitasenju-tenshichi": {
+  "address": "東京都足立区千住2-62",
+  "week": {
+   "tue": [
+    [
+     960,
+     1260,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     960,
+     1260,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     960,
+     1260,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     960,
+     1260,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     960,
+     1260,
+     null
+    ]
+   ],
+   "mon": [],
+   "sun": [],
+   "hol": []
+  },
+  "hours": "月 定休／火〜土 16:00〜21:00／日・祝 定休",
+  "closed": "月・日・祝日",
+  "budget_dinner": "¥1,000〜¥1,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 30,
+  "seats_note": "立ち飲み・立ち食い約50人",
+  "url": "https://www.hotpepper.jp/strJ000152232/"
+ },
+ "minamisenju-maruchiba": {
+  "address": "東京都台東区日本堤1-1-3",
+  "week": {
+   "mon": [
+    [
+     840,
+     1260,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     840,
+     1260,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     840,
+     1260,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     840,
+     1260,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     840,
+     1260,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     840,
+     1260,
+     null
+    ]
+   ],
+   "wed": []
+  },
+  "hours": "月・火 14:00〜21:00／水 定休／木〜日 14:00〜21:00",
+  "closed": "水",
+  "budget_dinner": "¥4,000〜¥4,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 30,
+  "seats_note": "カウンター18席、テーブル12席",
+  "url": "https://www.hotpepper.jp/strJ000128032/"
+ },
+ "minamisenju-uguisu": {
+  "address": "東京都荒川区南千住７丁目１－１",
+  "week": {
+   "mon": [
+    [
+     990,
+     1320,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     990,
+     1320,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     990,
+     1320,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     990,
+     1320,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     990,
+     1320,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     990,
+     1320,
+     null
+    ]
+   ],
+   "hol": [
+    [
+     990,
+     1320,
+     null
+    ]
+   ],
+   "prehol": [
+    [
+     990,
+     1320,
+     null
+    ]
+   ],
+   "posthol": [
+    [
+     990,
+     1320,
+     null
+    ]
+   ],
+   "sun": []
+  },
+  "hours": "月〜土 16:30〜22:00／日 定休／祝 16:30〜22:00／祝前日 16:30〜22:00／祝後日 16:30〜22:00",
+  "closed": "日 月中 (土)(日)又は、(日)(月)で連休します。主に、第三(日)(月) 祝日[ 5月の祝日]5月3日、4日、5日 連休します。5月6日（水）は 営業します。",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "pay": "現金・QR決済可",
+  "cash_only": false,
+  "seats": 20,
+  "seats_note": "テーブル 2 カウンター 12席",
+  "url": "https://www.hotpepper.jp/strJ003291422/"
+ },
+ "ayase-kotani": {
+  "address": "東京都足立区綾瀬2-24-9",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "wed": [],
+   "sun": []
+  },
+  "hours": "月・火 17:00〜23:00／水 定休／木〜土 17:00〜23:00／日 定休",
+  "closed": "水・日",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "pay": "現金・QR決済可",
+  "cash_only": false,
+  "seats": 96,
+  "seats_note": "カウンター10席、一階28席、二階58席全て椅子席。",
+  "url": "https://www.hotpepper.jp/strJ000151568/"
+ },
+ "aoto-chuji": {
+  "address": "東京都葛飾区青戸3-33-16",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "wed": [],
+   "thu": []
+  },
+  "hours": "月・火 17:00〜23:00／水・木 定休／金〜日 17:00〜23:00",
+  "closed": "水・木",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 16,
+  "url": "https://www.hotpepper.jp/strJ000153441/"
+ },
+ "aoto-isshoippai": {
+  "address": "東京都葛飾区青戸２丁目7-15 1F・2F",
+  "closed": "日、祝前日 定休日以外にお休みをいただく場合がございます",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 35,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ004576123/"
+ },
+ "aoto-koedo": {
+  "address": "東京都葛飾区青戸３-39-3-2F",
+  "closed": "月、火 ※GW・年末年始は不定休となります。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 40,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001195227/"
+ },
+ "tachikawa-akebono-stand": {
+  "address": "東京都立川市曙町２-14-25",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 10,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ004026496/"
+ }
+}

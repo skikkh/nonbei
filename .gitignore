@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 site/vendor/leaflet.js
 .DS_Store
+data/info.json

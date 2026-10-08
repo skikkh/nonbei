@@ -55,12 +55,30 @@ class Chunks:
         if len(coords) >= 2:
             self.col(layer, key_of(*bounds_center(coords), SIZE[layer])).line(cls, minz, coords)
 
-    def poly(self, layer, cls, geom, minz):
+    def poly(self, layer, cls, geom, minz, attr=0):
         c = geom.centroid
-        self.col(layer, key_of(c.x, c.y, SIZE[layer])).polygons(cls, [geom], tol=0.8, min_area=40, minz=minz, union=False)
+        self.col(layer, key_of(c.x, c.y, SIZE[layer])).polygons(cls, [geom], tol=0.8, min_area=40, minz=minz, union=False, attr=attr)
 
 
 SKIP_FOOT = {"sidewalk", "crossing", "traffic_island"}
+TYPE_HEIGHT = {"house": 7, "detached": 7, "residential": 10, "apartments": 14, "commercial": 14, "retail": 9,
+               "office": 24, "hotel": 30, "public": 12, "school": 14, "warehouse": 8, "industrial": 9,
+               "temple": 9, "shrine": 6, "roof": 4, "garage": 3, "shed": 3, "train_station": 12}
+
+
+def building_height(t):
+    """Height in metres from OSM tags (height, building:levels), else a typical one for the type."""
+    for k in ("height", "building:height"):
+        v = re.match(r"\s*([\d.]+)", t.get(k, ""))
+        if v:
+            try:
+                return max(2, min(300, round(float(v.group(1)))))
+            except ValueError:
+                pass
+    lv = re.match(r"\s*(\d+)", t.get("building:levels", ""))
+    if lv:
+        return max(3, min(300, round(int(lv.group(1)) * 3.3 + 1)))
+    return TYPE_HEIGHT.get(t.get("building"), 8)
 
 
 def main():
@@ -112,7 +130,7 @@ def main():
             g = relation_polygon(e) if e["type"] == "relation" else way_polygon(e)
             if g is None or g.is_empty:
                 continue
-            ch.poly("b", BUILDING, g, 16)
+            ch.poly("b", BUILDING, g, 16, building_height(e.get("tags", {})))
             nb += 1
 
     for (layer, _), col in ch.cols.items():

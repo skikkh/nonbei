@@ -1,669 +1,636 @@
-/* 東京のんべえ地図 — UI: filters, list, detail, markers. Data: window.NB_DATA */
-(() => {
+/* 東京のんべえ地図 — the page around the map: search, filters, the list,
+ * a page for every spot, what is open right now (Tokyo time, holidays
+ * included), favourites and the phone's bottom sheet.
+ */
+(function () {
   "use strict";
 
-  const D = window.NB_DATA;
-  const CFG = window.NB_CONFIG || {};
-  const SPOTS = D.spots;
-  const BYID = new Map(SPOTS.map((s) => [s.id, s]));
-  const KIND = {
-    yokocho: { label: "横丁", g: "横", note: "飲み屋横丁・ガード下・飲食街" },
-    senbero: { label: "センベロ", g: "千", note: "千〜二千円で酔える大衆酒場" },
-    tachinomi: { label: "立ち飲み", g: "立", note: "立って飲む店。隣との距離が近い" },
-    kakuuchi: { label: "角打ち", g: "角", note: "酒屋の店先で飲む" },
-    bar: { label: "バー・スナック", g: "酒", note: "店主や常連と話せる小さな店" },
-    social: { label: "交流型", g: "話", note: "交流そのものが売りの場所" },
+  const $ = (s, el) => (el || document).querySelector(s);
+  const $$ = (s, el) => [...(el || document).querySelectorAll(s)];
+  const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* private mode */ } },
   };
-  const KORDER = Object.keys(KIND);
-  const SOCIAL_TXT = ["", "交流はほぼない", "一人でも入れる", "隣と話すこともある", "隣や常連と話しやすい", "自然に会話が生まれる"];
-  const $ = (s, el = document) => el.querySelector(s);
-  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  const KINDS = [
+    ["yokocho", "飲み屋横丁", "横"], ["senbero", "せんべろ", "千"], ["tachinomi", "立ち飲み", "立"],
+    ["kakuuchi", "角打ち", "角"], ["bar", "小さなバー", "酒"], ["social", "交流酒場", "交"],
+  ];
+  const KIND = Object.fromEntries(KINDS.map(([k, label, glyph]) => [k, { label, glyph }]));
+  const SHORT = { yokocho: "横丁", senbero: "せんべろ", tachinomi: "立ち飲み", kakuuchi: "角打ち", bar: "バー", social: "交流酒場" };
+  const TALK = ["", "会話より酒と肴", "一人でも入れる", "隣と話すこともある", "隣や常連と話しやすい", "自然に会話が生まれる"];
+  const DAY_JP = { mon: "月", tue: "火", wed: "水", thu: "木", fri: "金", sat: "土", sun: "日", hol: "祝日", prehol: "祝前日", posthol: "祝後日" };
+  const DK = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+  const HOLIDAYS = new Set([
+    "2026-01-01", "2026-01-12", "2026-02-11", "2026-02-23", "2026-03-20", "2026-04-29", "2026-05-03", "2026-05-04", "2026-05-05", "2026-05-06",
+    "2026-07-20", "2026-08-11", "2026-09-21", "2026-09-22", "2026-09-23", "2026-10-12", "2026-11-03", "2026-11-23",
+    "2027-01-01", "2027-01-11", "2027-02-11", "2027-02-23", "2027-03-21", "2027-03-22", "2027-04-29", "2027-05-03", "2027-05-04", "2027-05-05",
+    "2027-07-19", "2027-08-11", "2027-09-20", "2027-09-23", "2027-10-11", "2027-11-03", "2027-11-23",
+  ]);
+
+  // ---------------------------------------------------------------- Tokyo time
+  const JST = 9 * 3600e3, DAY = 864e5;
+  const clockOverride = () => (window.NB_NOW ? new Date(window.NB_NOW).getTime() : Date.now());
+  const ymd = (t) => new Date(t).toISOString().slice(0, 10);
+  function dayInfo(t) {   // t: ms shifted to JST
+    const key = ymd(t);
+    return { key, dow: new Date(t).getUTCDay(), hol: HOLIDAYS.has(key), prehol: HOLIDAYS.has(ymd(t + DAY)), posthol: HOLIDAYS.has(ymd(t - DAY)) };
+  }
+  function rangesFor(w, di) {
+    if (di.hol && w.hol !== undefined) return w.hol;
+    if (di.prehol && w.prehol !== undefined) return w.prehol;
+    if (di.posthol && w.posthol !== undefined) return w.posthol;
+    return w[DK[di.dow]];
+  }
+  const hm = (m) => `${Math.floor(m / 60)}:${String(m % 60).padStart(2, "0")}`;
+  const hmNext = (m) => (m >= 1440 ? "翌" + hm(m - 1440) : hm(m));
+
+  /** {open, until, lo} | {open:false, opensAt} | {open:false, closedToday, next} | null (unknown) */
+  function openState(s, now) {
+    const w = s.week;
+    if (!w) return null;
+    const t = (now || clockOverride()) + JST;
+    const min = new Date(t).getUTCHours() * 60 + new Date(t).getUTCMinutes();
+    const today = dayInfo(t), yest = dayInfo(t - DAY);
+    const ry = rangesFor(w, yest);
+    if (ry) for (const [o, c, lo] of ry) if (c > 1440 && min + 1440 < c) return { open: true, until: c - 1440, lo: lo != null && lo >= 1440 ? lo - 1440 : null, left: c - 1440 - min };
+    const rt = rangesFor(w, today);
+    if (rt === undefined) return null;
+    for (const [o, c, lo] of rt) if (min >= o && min < c) return { open: true, until: c, lo, left: c - min };
+    const later = rt.filter((r) => r[0] > min).sort((a, b) => a[0] - b[0])[0];
+    if (later) return { open: false, opensAt: later[0] };
+    for (let k = 1; k <= 7; k++) {
+      const di = dayInfo(t + k * DAY), r = rangesFor(w, di);
+      if (r && r.length) return { open: false, closedToday: !rt.length, next: { k, di, o: r[0][0] } };
+    }
+    return { open: false, closedToday: true };
+  }
+  function stLabel(st, long) {
+    if (!st) return null;
+    if (st.open) {
+      const soon = st.left <= 45;
+      return { cls: soon ? "st-soon" : "st-open", text: soon ? `まもなく閉店 ${hmNext(st.until)}` : `営業中 〜${hmNext(st.until)}`, lamp: soon ? "soon" : "" };
+    }
+    if (st.opensAt != null) return { cls: "st-later", text: `${hm(st.opensAt)}から`, lamp: "off" };
+    const nx = st.next ? `次は${st.next.k === 1 ? "明日" : st.next.di.hol ? "祝日" : DAY_JP[DK[st.next.di.dow]] + "曜"} ${hm(st.next.o)}から` : "";
+    if (st.closedToday) return { cls: "st-off", text: long && nx ? `今日は休み・${nx}` : "今日は休み", lamp: "off" };
+    return { cls: "st-off", text: long && nx ? `今日は終了・${nx}` : "今日は終了", lamp: "off" };
+  }
+
+  // ---------------------------------------------------------------- text helpers
+  const kata2hira = (s) => s.replace(/[ァ-ヶ]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60));
+  const norm = (s) => kata2hira(String(s || "").normalize("NFKC").toLowerCase()).replace(/[\s・･·,、。.]/g, "");
+  const yen = (n) => n.toLocaleString("ja-JP");
+  const dist = (a, b) => {
+    const R = 6371e3, r = Math.PI / 180;
+    const dl = (b.lat - a.lat) * r, dn = (b.lng - a.lng) * r;
+    const x = Math.sin(dl / 2) ** 2 + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(dn / 2) ** 2;
+    return 2 * R * Math.asin(Math.sqrt(x));
+  };
+  const walk = (m) => `${m < 1000 ? Math.round(m / 10) * 10 + "m" : (m / 1000).toFixed(1) + "km"}・徒歩${Math.max(1, Math.round(m / 80))}分`;
+  const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return u; } };
+  const SRC_NAME = { "tabelog.com": "食べログ", "hotpepper.jp": "ホットペッパー", "retty.me": "Retty", "san-tatsu.jp": "さんたつ", "instagram.com": "Instagram", "x.com": "X", "twitter.com": "X" };
+  const srcName = (u) => { const h = host(u); for (const k in SRC_NAME) if (h === k || h.endsWith("." + k)) return SRC_NAME[k]; return h; };
+  const talkDots = (n) => `<span class="talk" aria-label="話しやすさ${n}">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= n ? "on" : ""}"></i>`).join("")}</span>`;
+  const seal = (k, on) => `<i class="seal${on ? " on" : ""}" style="--c:var(--k-${k})" aria-hidden="true">${KIND[k].glyph}</i>`;
 
   // ---------------------------------------------------------------- state
-  const store = {
-    get(k, d) { try { const v = localStorage.getItem("nb:" + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
-    set(k, v) { try { localStorage.setItem("nb:" + k, JSON.stringify(v)); } catch { /* storage unavailable */ } },
+  const state = {
+    q: "", area: "", sort: "social", scope: "view", sel: null,
+    kinds: new Set(KINDS.map((k) => k[0])),
+    f: { open: false, social: false, solo: false, hiru: false, cheap: false, card: false, english: false, fav: false },
+    favs: new Set(store.get("nb-favs", [])),
+    theme: store.get("nb-theme", "night"),
+    three: store.get("nb-three", true),
   };
-  const saved = store.get("filters", {});
-  const S = {
-    kinds: new Set(saved.kinds && saved.kinds.length ? saved.kinds : KORDER),
-    social: saved.social || 0,
-    solo: !!saved.solo,
-    hiru: !!saved.hiru,
-    english: !!saved.english,
-    favOnly: false,
-    closed: !!saved.closed,
-    area: "",
-    q: "",
-    sort: saved.sort || "social",
-    scope: "view",
-    selected: null,
-  };
-  const fav = new Set(store.get("fav", []));
-  const persist = () => store.set("filters", { kinds: [...S.kinds], social: S.social, solo: S.solo, hiru: S.hiru, english: S.english, closed: S.closed, sort: S.sort });
+  let D, spots, byId, atlas;
+  const phone = () => matchMedia("(max-width: 820px)").matches;
 
-  // ---------------------------------------------------------------- text search
-  const norm = (s) => String(s || "").normalize("NFKC").toLowerCase()
-    .replace(/[ァ-ヶ]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60))
-    .replace(/[\s・･\-ー]/g, "");
-  SPOTS.forEach((s) => {
-    s._k = norm([s.name, s.kana, s.en, s.area, s.ward, s.station, KIND[s.kind]?.label, (s.tags || []).join(" "), s.desc, s.talk, s.address, s.price].join(" "));
-    s._w = NBMap.project(s.lat, s.lng);
-  });
-
-  const matches = (s) => {
-    if (!S.kinds.has(s.kind)) return false;
-    if (s.status === "closed" && !S.closed) return false;
-    if (S.social && (s.social || 0) < S.social) return false;
-    if (S.solo && (s.solo || 0) < 4) return false;
-    if (S.hiru && !s.hiru) return false;
-    if (S.english && !s.english) return false;
-    if (S.favOnly && !fav.has(s.id)) return false;
-    if (S.area && s.area !== S.area) return false;
-    if (S.q) {
-      const terms = S.q.replace(/　/g, " ").trim().split(/\s+/).map(norm).filter(Boolean);
-      if (!terms.every((t) => s._k.includes(t))) return false;
+  function searchText(s) {
+    return norm([s.name, s.kana, s.en, s.area, s.ward, s.region, s.station, s.address, s.catch, (s.tags || []).join(" "),
+      (s.menu || []).map((m) => m.n).join(" "), KIND[s.kind].label].join(" "));
+  }
+  function cheap(s) { return s.kind === "senbero" || (s.budget_max && s.budget_max <= 2500); }
+  function pass(s, skip) {
+    if (s.status === "closed") return false;
+    if (skip !== "kind" && !state.kinds.has(s.kind)) return false;
+    const f = state.f;
+    if (f.open) { const st = openState(s); if (!st || !st.open) return false; }
+    if (f.social && (s.social || 0) < 4) return false;
+    if (f.solo && (s.solo || 0) < 4) return false;
+    if (f.hiru && !s.hiru) return false;
+    if (f.cheap && !cheap(s)) return false;
+    if (f.card && s.cash_only !== false) return false;
+    if (f.english && !s.english) return false;
+    if (f.fav && !state.favs.has(s.id)) return false;
+    if (state.area) {
+      const [t, v] = [state.area.slice(0, 2), state.area.slice(2)];
+      if (t === "r:" && s.region !== v) return false;
+      if (t === "a:" && s.area !== v) return false;
+    }
+    if (state.q) {
+      for (const tok of state.q.split(/\s+/).filter(Boolean)) if (!s._q.includes(norm(tok))) return false;
     }
     return true;
-  };
-
-  // ---------------------------------------------------------------- map
-  const isPhone = () => window.matchMedia("(max-width: 760px)").matches;
-  const map = L.map("map", {
-    zoomControl: false,
-    minZoom: 9,
-    maxZoom: 19,
-    maxBounds: [[35.3, 139.0], [36.0, 140.25]], // the context ring in base.json
-    maxBoundsViscosity: 0.7,
-    wheelPxPerZoomLevel: 100,
-    attributionControl: true,
-  });
-  map.attributionControl.setPrefix(false);
-  map.attributionControl.addAttribution('地図 © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors');
-  L.control.zoom({ position: "topright", zoomInTitle: "拡大", zoomOutTitle: "縮小" }).addTo(map);
-  L.control.scale({ imperial: false, position: "bottomright", maxWidth: 120 }).addTo(map);
-  map.createPane("yk").style.zIndex = 430;
-  map.createPane("spots").style.zIndex = 620;
-  map.createPane("areas").style.zIndex = 630;
-
-  const panelPad = () => {
-    const el = $("#panel");
-    if (isPhone()) {
-      const h = el.dataset.sheet === "peek" ? 210 : window.innerHeight * 0.56;
-      return { paddingTopLeft: [24, 24], paddingBottomRight: [24, Math.round(h) + 16] };
-    }
-    return { paddingTopLeft: [Math.round(el.getBoundingClientRect().right) + 24, 24], paddingBottomRight: [56, 24] };
-  };
-  const allBounds = L.latLngBounds(SPOTS.filter((s) => s.status !== "closed").map((s) => [s.lat, s.lng]));
-
-  // basemap ---------------------------------------------------------------
-  let base = null, labels = null, raster = null;
-  const matchedOsm = new Set(SPOTS.map((s) => s.osm).filter(Boolean));
-  const loadBase = () => fetch((CFG.dataUrl || "data/") + "base.json")
-    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then((b) => {
-      const st = new NBMap.Store(b, D.chunks, CFG.dataUrl || "data/");
-      base = new NBMap.VectorLayer(st).addTo(map);
-      labels = new NBMap.LabelLayer(st, {
-        reserved: markerBoxes,
-        skipPoi: (o) => !S.poi || matchedOsm.has(o.osm),
-      }).addTo(map);
-      base.onChunk = () => labels.redraw();
-      document.body.classList.add("base-ready");
-    })
-    .catch(() => {
-      $("#map-status").hidden = false;
-      $("#map-status").textContent = "背景地図を読み込めませんでした。店の位置は表示しています。";
-    });
-  S.poi = store.get("poi", true);
-
-  // optional aerial photo layer (only where the host allows remote tiles)
-  if (CFG.raster) {
-    raster = L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg", {
-      maxNativeZoom: 18, maxZoom: 19, opacity: 1,
-      attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">地理院タイル</a>',
-    });
   }
 
-  // markers -----------------------------------------------------------------
-  const spotLayer = L.layerGroup(); // syncZoom() puts it on the map from zoom 12
-  const areaLayer = L.layerGroup();
-  const ykLayer = L.layerGroup().addTo(map);
-  const markers = new Map();
-  const visible = new Set();
-
-  const pinHtml = (s) => {
-    const k = KIND[s.kind] || KIND.bar;
-    return `<div class="pin-wrap k-${s.kind} s${s.social || 0}${s.status !== "open" ? " st-" + s.status : ""}${fav.has(s.id) ? " is-fav" : ""}">` +
-      `<span class="pin"><span class="g">${k.g}</span></span><span class="pin-name">${esc(s.name)}</span></div>`;
-  };
-  SPOTS.forEach((s) => {
-    const m = L.marker([s.lat, s.lng], {
-      pane: "spots",
-      icon: L.divIcon({ className: "spot-icon", html: pinHtml(s), iconSize: [24, 30], iconAnchor: [12, 15] }),
-      title: s.name,
-      keyboard: false, // the list is the keyboard path; 350 tab stops on the map would trap focus
-      riseOnHover: true,
-      zIndexOffset: (s.kind === "yokocho" ? 400 : 0) + (s.social || 0) * 40,
+  // ---------------------------------------------------------------- boot
+  async function boot() {
+    document.documentElement.dataset.theme = state.theme;
+    syncThemeButton();
+    try {
+      D = await fetch((window.NB_CONFIG && NB_CONFIG.dataUrl || "data/") + "spots.json").then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+    } catch (e) {
+      status("店のデータを読み込めませんでした。再読み込みしてください。");
+      return;
+    }
+    spots = D.spots;
+    spots.forEach((s) => { s._q = searchText(s); });
+    byId = Object.fromEntries(spots.map((s) => [s.id, s]));
+    buildFilters();
+    bindUI();
+    if (!window.maplibregl) { status("地図の部品を読み込めませんでした。通信状況を確かめて再読み込みしてください。"); renderList(); return; }
+    const live = spots.filter((s) => s.status !== "closed");
+    const cells = new Map();
+    live.forEach((s) => { const k = Math.floor(s.lng / 0.0005) + ":" + Math.floor(s.lat / 0.0005); if (!cells.has(k)) cells.set(k, []); cells.get(k).push(s); });
+    atlas = new NBAtlas.Atlas($("#map"), {
+      spots: live, chunks: D.chunks, theme: state.theme, three: state.three, capture: !!window.NB_CAPTURE, webSans: !!window.NB_CAPTURE,
+      bounds: [[139.63, 35.625], [139.85, 35.755]],
+      padding: () => (phone() ? { top: 80, bottom: 170, left: 20, right: 20 } : 50),
+      showPoi: () => true,
+      skipPoi: (o) => {
+        // OSM shops that are one of ours are drawn as our lantern only
+        if (o._skip === undefined) {
+          const [lng, lat] = NBAtlas.toLngLat(o.x, o.y), cx = Math.floor(lng / 0.0005), cy = Math.floor(lat / 0.0005);
+          o._skip = false;
+          for (let i = -1; i <= 1 && !o._skip; i++) for (let j = -1; j <= 1; j++) {
+            if ((cells.get((cx + i) + ":" + (cy + j)) || []).some((s) => Math.abs(s.lat - lat) < 0.00025 && Math.abs(s.lng - lng) < 0.0003)) { o._skip = true; break; }
+          }
+        }
+        return o._skip;
+      },
+      onReady: () => { renderList(); fromHash(); },
+      onError: () => status("地図のデータを読み込めませんでした。"),
+      onDraw: () => syncNorth(),
     });
-    m.on("click", () => select(s.id, { fly: false }));
-    markers.set(s.id, m);
-    if (s.shape) {
-      const parts = s.shape.p.map((enc) => {
-        const a = NBMap.dec(enc), ll = [];
-        for (let i = 0; i < a.length; i += 2) ll.push(NBMap.unproject(a[i], a[i + 1]));
-        return ll;
-      });
-      const style = { pane: "yk", className: "yk-shape", weight: s.shape.t === "line" ? 7 : 2, interactive: true };
-      const layer = s.shape.t === "line" ? L.polyline(parts, style) : L.polygon(parts, style);
-      layer.on("click", () => select(s.id, { fly: false }));
-      s._shape = layer;
-    }
-  });
-  const refreshPin = (s) => {
-    const m = markers.get(s.id);
-    if (!m) return;
-    m.setIcon(L.divIcon({ className: "spot-icon", html: pinHtml(s), iconSize: [24, 30], iconAnchor: [12, 15] }));
-    s._tw = null;
-    if (s.id === S.selected) m.getElement()?.classList.add("is-selected");
-    declutter();
-  };
-
-  // screen boxes the label layer should keep clear
-  function markerBoxes(tl, s) {
-    const z = map.getZoom();
-    if (z < 13) return [];
-    const out = [];
-    const r = z >= 15 ? 14 : 7;
-    for (const id of visible) {
-      const sp = BYID.get(id);
-      const x = sp._w[0] * s - tl.x, y = sp._w[1] * s - tl.y;
-      out.push([x - r, y - r - 2, x + r + (sp._nameW || 0), y + r + 2]);
-    }
-    return out;
+    window.nbAtlas = atlas;
+    const m = atlas.map;
+    m.on("click", (e) => {
+      const h = atlas.hit(e.point);
+      if (h && h.spot) { select(h.spot.id, { fly: false }); hidePoi(); }
+      else if (h && h.poi) showPoi(h.poi);
+      else hidePoi();
+    });
+    m.on("mousemove", (e) => {
+      const h = atlas.hit(e.point);
+      m.getCanvas().style.cursor = h ? "pointer" : "";
+      atlas.setHover(h && h.spot ? h.spot.id : null);
+      hlItem(h && h.spot ? h.spot.id : null);
+    });
+    m.on("moveend", () => { if (state.scope === "view" || state.sort === "near") renderListSoon(); });
+    tick();
+    setInterval(tick, 20e3);
+    window.addEventListener("hashchange", fromHash);
   }
 
-  // hide pin names that would overlap a more important pin or name
-  const measure = document.createElement("canvas").getContext("2d");
-  const nameWidth = (s) => {
-    if (s._tw == null) {
-      measure.font = `700 ${s.kind === "yokocho" ? 13 : 12}px ${getComputedStyle(document.body).fontFamily}`;
-      s._tw = measure.measureText(s.name).width + (fav.has(s.id) ? 14 : 0);
+  // ---------------------------------------------------------------- filters
+  function buildFilters() {
+    const counts = {};
+    spots.forEach((s) => { if (s.status !== "closed") counts[s.kind] = (counts[s.kind] || 0) + 1; });
+    $("#kinds").innerHTML = KINDS.map(([k, label]) =>
+      `<button type="button" class="seal-chip" data-k="${k}" aria-pressed="true" title="${label}" style="--c:var(--k-${k})">${seal(k)}<span>${SHORT[k]}</span><b>${counts[k] || 0}</b></button>`).join("");
+    $("#legend-kinds").innerHTML = KINDS.map(([k, label]) => `<li>${seal(k, true)}${label}</li>`).join("");
+    const opts = ['<option value="">東京全域</option>'];
+    for (const r of D.regions) {
+      const areas = r.areas.filter((a) => spots.some((s) => s.area === a && s.status !== "closed"));
+      opts.push(`<optgroup label="${esc(r.name)}"><option value="r:${esc(r.name)}">${esc(r.name)} すべて</option>${areas.map((a) => `<option value="a:${esc(a)}">${esc(a)}</option>`).join("")}</optgroup>`);
     }
-    return s._tw;
-  };
-  const declutter = () => {
-    const z = map.getZoom();
-    const showNames = z >= 16;
-    const b = map.getBounds().pad(0.1);
-    const items = [...visible].map((id) => BYID.get(id)).filter((s) => b.contains([s.lat, s.lng]));
-    items.sort((a, c) => (c.id === S.selected) - (a.id === S.selected) || (c.kind === "yokocho") - (a.kind === "yokocho") || (c.social || 0) - (a.social || 0));
-    const boxes = [];
-    const hit = (q) => boxes.some((o) => q[0] < o[2] && q[2] > o[0] && q[1] < o[3] && q[3] > o[1]);
-    for (const s of items) {
-      const el = markers.get(s.id)?.getElement();
-      const p = map.latLngToContainerPoint([s.lat, s.lng]);
-      const pin = [p.x - 10, p.y - 13, p.x + 10, p.y + 13];
-      let ok = false;
-      if (showNames) {
-        const w = nameWidth(s);
-        const box = [p.x + 12, p.y - 9, p.x + 16 + w, p.y + 9];
-        ok = s.id === S.selected || !hit(box);
-        if (ok) boxes.push(box);
-        s._nameW = ok ? w + 8 : 0;
-      } else s._nameW = 0;
-      boxes.push(pin);
-      el?.classList.toggle("name-off", showNames && !ok);
-    }
-  };
+    $("#area").innerHTML = opts.join("");
+    $("#about-count").textContent = `${spots.filter((s) => s.status !== "closed").length}軒`;
+    if (D.updated) $("#updated").textContent = D.updated;
+    if (D.accuracy) $("#accuracy").textContent = `食べログの店舗地図と比べられた${D.accuracy.n}軒では、ずれの中央値が${D.accuracy.median}m、9割が${D.accuracy.p90}m以内です。`;
+    syncPressed();
+  }
+  function syncPressed() {
+    $$("#kinds .seal-chip").forEach((b) => b.setAttribute("aria-pressed", String(state.kinds.has(b.dataset.k))));
+    $$(".fuda").forEach((b) => b.setAttribute("aria-pressed", String(!!state.f[b.dataset.f])));
+    $$("#scope button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === state.scope)));
+    $("#nav-fav").setAttribute("aria-pressed", String(state.f.fav));
+  }
 
-  // bubbles for the city-wide view: regions up to z10, towns at z11, pins from z12
-  const regionLayer = L.layerGroup();
-  const REGION_SHORT = { "都心（新橋・銀座・神田）": "都心", "上野・浅草・日暮里": "上野・浅草", "新宿・中野・杉並": "新宿・中央線",
-    "渋谷・目黒・世田谷": "渋谷・城南", "池袋・赤羽・城北": "池袋・赤羽", "墨田・江東・江戸川": "城東" };
-  let bubbles = { area: [], region: [] };
-  const bubble = (layer, name, spots, cls) => {
-    const n = spots.length;
-    const social = spots.filter((s) => (s.social || 0) >= 4).length;
-    const lat = spots.reduce((a, s) => a + s.lat, 0) / n, lng = spots.reduce((a, s) => a + s.lng, 0) / n;
-    const icon = L.divIcon({ className: "area-icon", html: `<button class="area-bubble ${cls}" type="button"><span>${esc(name)}</span><b>${n}</b></button>`, iconSize: null, iconAnchor: [0, 0] });
-    const m = L.marker([lat, lng], { icon, pane: "areas", title: `${name}：${n}軒（交流しやすい店 ${social}軒）`, keyboard: false });
-    m.on("click", () => map.flyToBounds(L.latLngBounds(spots.map((s) => [s.lat, s.lng])), { ...panelPad(), maxZoom: 16, duration: 0.8 }));
-    layer.addLayer(m);
-    return { m, n, w: name.length * (cls === "a-r" ? 15 : 13) + 44, h: cls === "a-r" ? 34 : 28, ll: L.latLng(lat, lng) };
-  };
-  const group = (list, key) => {
-    const g = new Map();
-    list.forEach((s) => { const k = s[key] || "その他"; (g.get(k) || g.set(k, []).get(k)).push(s); });
-    return g;
-  };
-  const buildAreas = (list) => {
-    areaLayer.clearLayers();
-    regionLayer.clearLayers();
-    bubbles = { area: [], region: [] };
-    group(list, "area").forEach((spots, name) => {
-      bubbles.area.push(bubble(areaLayer, name, spots, spots.length >= 15 ? "a-l" : spots.length >= 7 ? "a-m" : "a-s"));
+  function bindUI() {
+    $("#kinds").addEventListener("click", (e) => {
+      const b = e.target.closest(".seal-chip");
+      if (!b) return;
+      const k = b.dataset.k;
+      // first click on a full set picks just that kind; clicking the last one restores all
+      if (state.kinds.size === KINDS.length) state.kinds = new Set([k]);
+      else if (state.kinds.has(k)) { state.kinds.delete(k); if (!state.kinds.size) state.kinds = new Set(KINDS.map((x) => x[0])); }
+      else state.kinds.add(k);
+      changed();
     });
-    group(list, "region").forEach((spots, name) => bubbles.region.push(bubble(regionLayer, REGION_SHORT[name] || name, spots, "a-r")));
-  };
-  // place bubbles biggest first; nudge a colliding one up, down or sideways, else hide it
-  const declutterAreas = () => {
-    const list = map.hasLayer(regionLayer) ? bubbles.region : map.hasLayer(areaLayer) ? bubbles.area : null;
-    if (!list) return;
-    const placed = [];
-    const free = (q) => !placed.some((o) => q[0] < o[2] && q[2] > o[0] && q[1] < o[3] && q[3] > o[1]);
-    [...list].sort((a, b) => b.n - a.n).forEach((b) => {
-      const p = map.latLngToContainerPoint(b.ll);
-      const tries = [[0, 0], [0, -b.h], [0, b.h], [b.w * 0.6, 0], [-b.w * 0.6, 0], [b.w * 0.5, -b.h], [-b.w * 0.5, b.h]];
-      let at = null;
-      for (const [dx, dy] of tries) {
-        const q = [p.x + dx - b.w / 2, p.y + dy - b.h / 2, p.x + dx + b.w / 2, p.y + dy + b.h / 2];
-        if (free(q)) { placed.push(q); at = [dx, dy]; break; }
-      }
-      const btn = b.m.getElement()?.firstElementChild;
-      if (!btn) return;
-      btn.style.visibility = at ? "" : "hidden";
-      btn.style.transform = at ? `translate(calc(-50% + ${at[0]}px), calc(-50% + ${at[1]}px))` : "";
+    $$(".fuda").forEach((b) => b.addEventListener("click", () => { state.f[b.dataset.f] = !state.f[b.dataset.f]; changed(); }));
+    $("#nav-fav").addEventListener("click", () => { state.f.fav = !state.f.fav; changed(); if (phone()) sheet("half"); });
+    $("#scope").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { state.scope = b.dataset.v; syncPressed(); renderList(); } });
+    let qt;
+    $("#q").addEventListener("input", (e) => { clearTimeout(qt); qt = setTimeout(() => { state.q = e.target.value.trim(); if (state.q) state.scope = "all"; changed(); }, 120); });
+    $("#q").addEventListener("focus", () => { if (phone()) sheet("full"); });
+    $("#area").addEventListener("change", (e) => {
+      state.area = e.target.value;
+      state.scope = "all";
+      changed();
+      fitVisible();
     });
-  };
+    $("#sort").addEventListener("change", (e) => { state.sort = e.target.value; renderList(); });
+    $("#list").addEventListener("click", (e) => { const b = e.target.closest(".item"); if (b) select(b.dataset.id); });
+    $("#list").addEventListener("mouseover", (e) => { const b = e.target.closest(".item"); if (atlas) atlas.setHover(b ? b.dataset.id : null); });
+    $("#list").addEventListener("mouseleave", () => atlas && atlas.setHover(null));
+    $("#nav-list").addEventListener("click", () => {
+      const app = $("#app"), closed = app.classList.toggle("drawer-closed");
+      $("#nav-list").setAttribute("aria-pressed", String(!closed));
+      setTimeout(() => atlas && atlas.map.resize(), 340);
+    });
+    $("#nav-theme").addEventListener("click", () => setTheme(state.theme === "night" ? "day" : "night"));
+    $("#nav-about").addEventListener("click", () => { $("#about").hidden = false; $("#about-close").focus(); });
+    $("#about-close").addEventListener("click", () => { $("#about").hidden = true; });
+    $("#about").addEventListener("click", (e) => { if (e.target.id === "about") $("#about").hidden = true; });
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      if (!$("#about").hidden) $("#about").hidden = true;
+      else if (!$("#poi-card").hidden) hidePoi();
+      else if (state.sel) back();
+    });
+    $("#z-in").addEventListener("click", () => atlas && atlas.map.zoomIn());
+    $("#z-out").addEventListener("click", () => atlas && atlas.map.zoomOut());
+    $("#north").addEventListener("click", () => atlas && atlas.map.easeTo({ bearing: 0, duration: 500 }));
+    $("#tilt").setAttribute("aria-pressed", String(state.three));
+    $("#tilt").addEventListener("click", () => {
+      state.three = !state.three; store.set("nb-three", state.three);
+      $("#tilt").setAttribute("aria-pressed", String(state.three));
+      if (atlas) atlas.setThree(state.three);
+    });
+    if (!("geolocation" in navigator)) $("#locate").hidden = true;
+    $("#locate").addEventListener("click", locate);
+    bindSheet();
+  }
 
-  const AREA_Z = 12, REGION_Z = 11;
-  const syncZoom = () => {
-    const z = map.getZoom();
-    const el = map.getContainer();
-    el.classList.toggle("z-mid", z >= AREA_Z && z < 15);
-    el.classList.toggle("z-high", z >= 15);
-    el.classList.toggle("z-name", z >= 16);
-    const want = z < REGION_Z ? regionLayer : z < AREA_Z ? areaLayer : spotLayer;
-    [regionLayer, areaLayer, spotLayer].forEach((l) => {
-      if (l === want && !map.hasLayer(l)) map.addLayer(l);
-      if (l !== want && map.hasLayer(l)) map.removeLayer(l);
-    });
-    declutterAreas();
-    const showYk = z >= 14;
-    SPOTS.forEach((s) => {
-      if (!s._shape) return;
-      const on = showYk && visible.has(s.id);
-      if (on && !ykLayer.hasLayer(s._shape)) ykLayer.addLayer(s._shape);
-      if (!on && ykLayer.hasLayer(s._shape)) ykLayer.removeLayer(s._shape);
-    });
-  };
+  function changed() {
+    syncPressed();
+    renderList();
+    if (atlas) atlas.setVisible(spots.filter((s) => pass(s)).map((s) => s.id));
+  }
+  function fitVisible() {
+    if (!atlas) return;
+    const vis = spots.filter((s) => pass(s));
+    if (!vis.length) return;
+    let w = 180, e = -180, so = 90, n = -90;
+    vis.forEach((s) => { w = Math.min(w, s.lng); e = Math.max(e, s.lng); so = Math.min(so, s.lat); n = Math.max(n, s.lat); });
+    const pad = phone() ? { top: 90, bottom: 200, left: 30, right: 30 } : 70;
+    atlas.map.fitBounds([[w - 0.004, so - 0.003], [e + 0.004, n + 0.003]], { padding: pad, maxZoom: 16, duration: 900, pitch: state.three ? 40 : 0 });
+  }
 
   // ---------------------------------------------------------------- list
-  const meter = (n, label) => `<span class="meter" role="img" aria-label="${label} ${n}/5">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= n ? "on" : ""}"></i>`).join("")}</span>`;
-  const yen = (s) => s.budget || (s.budget_min ? `¥${s.budget_min.toLocaleString()}〜` : "");
-
-  const sorters = {
-    social: (a, b) => (b.social || 0) - (a.social || 0) || (b.solo || 0) - (a.solo || 0) || (a.kind === "yokocho" ? -1 : 0) - (b.kind === "yokocho" ? -1 : 0) || a.name.localeCompare(b.name, "ja"),
-    cheap: (a, b) => (a.budget_min ?? 1e9) - (b.budget_min ?? 1e9) || (b.social || 0) - (a.social || 0),
-    near: (a, b) => a._d - b._d,
-    name: (a, b) => (a.kana || a.name).localeCompare(b.kana || b.name, "ja"),
-  };
-
-  let current = [];
-  const PAGE = 150;
-  let shown = PAGE;
-  const render = () => {
-    const filtered = SPOTS.filter(matches);
-    visible.clear();
-    filtered.forEach((s) => visible.add(s.id));
-    markers.forEach((m, id) => {
-      const on = visible.has(id);
-      if (on && !spotLayer.hasLayer(m)) spotLayer.addLayer(m);
-      if (!on && spotLayer.hasLayer(m)) spotLayer.removeLayer(m);
-    });
-    buildAreas(filtered);
-    syncZoom();
-    declutter();
-    if (labels) labels.redraw();
-    renderList(filtered);
-    $("#total").textContent = filtered.length;
-  };
-
-  const renderList = (filtered = SPOTS.filter(matches), keepPage = false) => {
-    if (!keepPage) shown = PAGE;
-    const c = map.getCenter();
-    const cw = NBMap.project(c.lat, c.lng);
-    let list = filtered;
-    const inView = S.scope === "view" && !S.q;
-    if (inView) {
-      const b = map.getBounds().pad(-0.02);
-      list = list.filter((s) => b.contains([s.lat, s.lng]));
-    }
-    list.forEach((s) => { s._d = Math.hypot(s._w[0] - cw[0], s._w[1] - cw[1]); });
-    list = [...list].sort(sorters[S.sort] || sorters.social);
-    current = list;
-    $("#count").textContent = inView ? `地図の範囲に ${list.length}軒` : `${list.length}軒`;
-    $("#scope-hint").hidden = !(inView && list.length < filtered.length);
-    const ol = $("#list");
-    if (!list.length) {
-      ol.innerHTML = `<li class="empty">${inView ? "この範囲に条件に合う店はありません。地図を動かすか、条件をゆるめてください。" : "条件に合う店はありません。"}</li>`;
+  let listT;
+  function renderListSoon() { clearTimeout(listT); listT = setTimeout(renderList, 160); }
+  function inView(s) {
+    if (!atlas) return true;
+    const b = atlas.map.getBounds();
+    return s.lng >= b.getWest() && s.lng <= b.getEast() && s.lat >= b.getSouth() && s.lat <= b.getNorth();
+  }
+  function renderList() {
+    if (!spots) return;
+    const all = spots.filter((s) => pass(s));
+    let rows = state.scope === "view" ? all.filter(inView) : all;
+    const c = atlas ? atlas.map.getCenter() : { lat: 35.68, lng: 139.76 };
+    const sts = new Map(rows.map((s) => [s.id, openState(s)]));
+    const key = {
+      social: (a, b) => (b.social || 0) - (a.social || 0) || (b.solo || 0) - (a.solo || 0) || openRank(sts.get(b.id)) - openRank(sts.get(a.id)),
+      near: (a, b) => dist(c, a) - dist(c, b),
+      open: (a, b) => closeAt(sts.get(b.id)) - closeAt(sts.get(a.id)) || (b.social || 0) - (a.social || 0),
+      cheap: (a, b) => (a.budget_min || 9e3) - (b.budget_min || 9e3) || (a.budget_max || 9e3) - (b.budget_max || 9e3),
+      name: (a, b) => (a.kana || a.name).localeCompare(b.kana || b.name, "ja"),
+    }[state.sort];
+    rows = rows.slice().sort(key);
+    $("#count").textContent = rows.length;
+    $("#count-sub").textContent = state.scope === "view" ? `軒（全域 ${all.length}軒）` : "軒";
+    if (!rows.length) {
+      $("#list").innerHTML = `<li class="empty">${state.scope === "view" && all.length ? `地図の範囲に当てはまる店がありません。<br><button type="button" data-act="all">全域の${all.length}軒を見る</button>` : "当てはまる店がありません。条件を減らしてみてください。"}</li>`;
+      const b = $("#list [data-act=all]");
+      if (b) b.addEventListener("click", () => { state.scope = "all"; syncPressed(); renderList(); });
       return;
     }
-    const near = (s) => s.near && s.near[0] ? `${esc(s.near[0][0])}駅 ${walk(s.near[0][1])}` : esc(s.station || "");
-    ol.innerHTML = list.slice(0, shown).map((s) => `
-      <li class="card k-${s.kind}${s.id === S.selected ? " is-sel" : ""}" data-id="${s.id}">
-        <button class="card-main" type="button" data-id="${s.id}">
-          <span class="mini-pin" aria-hidden="true">${KIND[s.kind].g}</span>
-          <span class="card-body">
-            <span class="card-top"><span class="card-name">${esc(s.name)}</span>${s.status === "uncertain" ? '<span class="flag">要確認</span>' : ""}${s.status === "closed" ? '<span class="flag closed">閉店</span>' : ""}</span>
-            <span class="card-meta">${esc(KIND[s.kind].label)} · ${esc(s.area_label || s.area)} · ${near(s)}</span>
-            <span class="card-row">${meter(s.social || 0, "交流度")}<span class="card-yen">${esc(yen(s))}</span></span>
-            ${s.talk ? `<span class="card-talk">${esc(s.talk)}</span>` : ""}
-          </span>
-        </button>
-        <button class="fav${fav.has(s.id) ? " on" : ""}" type="button" data-fav="${s.id}" aria-pressed="${fav.has(s.id)}" title="行きたいリスト">${fav.has(s.id) ? "★" : "☆"}</button>
-      </li>`).join("") + (list.length > shown ? `<li class="more"><button type="button" class="btn ghost" id="more">さらに表示（残り${list.length - shown}軒）</button></li>` : "");
-  };
-  const walk = (m) => (m < 1000 ? `${Math.max(1, Math.round(m / 80))}分` : `${(m / 1000).toFixed(1)}km`);
+    const showDist = state.sort === "near";
+    $("#list").innerHTML = rows.map((s) => {
+      const st = stLabel(sts.get(s.id));
+      const meta = [
+        st ? `<span class="st ${st.cls}">${st.text}</span>` : "",
+        `<span>${esc(s.area)}</span>`,
+        s.budget ? `<span>${esc(shortBudget(s.budget))}</span>` : "",
+        s.kind !== "yokocho" ? talkDots(s.social || 0) : "",
+      ].filter(Boolean).join("");
+      return `<li><button type="button" class="item${s.id === state.sel ? " hl" : ""}" data-id="${s.id}">
+        ${seal(s.kind, true)}
+        <span><span class="item-kana">${esc(s.kana || "")}</span><span class="item-name">${esc(s.name)}</span>
+        <span class="item-catch">${esc(s.catch || firstSentence(s.desc))}</span>
+        <span class="item-meta">${meta}</span></span>
+        <span class="item-side">${state.favs.has(s.id) ? '<svg class="fav-mark" aria-label="行きたい"><use href="#i-star-f"/></svg>' : ""}${showDist ? `<br>${Math.round(dist(c, s) / 10) * 10}m` : ""}</span>
+      </button></li>`;
+    }).join("");
+  }
+  const openRank = (st) => (st && st.open ? 2 : st && st.opensAt != null ? 1 : 0);
+  const closeAt = (st) => (st && st.open ? 2000 + st.until : st && st.opensAt != null ? 1000 + st.opensAt : 0);
+  const firstSentence = (t) => (t || "").split("。")[0] + ((t || "").includes("。") ? "。" : "");
+  const shortBudget = (b) => b.replace(/（.*?）/g, "").replace(/円$/, "円").slice(0, 16);
+  function hlItem(id) {
+    $$("#list .item.hl").forEach((el) => { if (el.dataset.id !== state.sel) el.classList.remove("hl"); });
+    if (id) { const el = $(`#list .item[data-id="${CSS.escape(id)}"]`); if (el) el.classList.add("hl"); }
+  }
 
-  // ---------------------------------------------------------------- detail
-  const gmaps = (s) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${s.name} ${s.address || s.area}`)}`;
-  const osmUrl = (s) => s.osm ? `https://www.openstreetmap.org/${{ n: "node", w: "way", r: "relation" }[s.osm[0]]}/${s.osm.slice(1)}` : `https://www.openstreetmap.org/?mlat=${s.lat}&mlon=${s.lng}#map=19/${s.lat}/${s.lng}`;
-  const GEO_TXT = {
-    osm: "OpenStreetMapの店舗データと一致",
-    "osm-area": "OpenStreetMapの横丁・通りの形",
-    gsi: "住所の建物位置（国土地理院の住所検索）",
-    "gsi-block": "住所の街区の中心（国土地理院の住所検索）。数十m ずれることがあります",
-    manual: "地図データから手作業で決めた位置",
-    tabelog: "食べログの店舗地図の位置（住所は街区までしか特定できないため）",
-    approx: "おおよその位置（要確認）",
-  };
-
-  const renderDetail = (s) => {
-    const k = KIND[s.kind];
-    const parent = s.yokocho && BYID.get(s.yokocho);
-    const kids = s.kind === "yokocho" ? SPOTS.filter((x) => x.yokocho === s.id && x.status !== "closed") : [];
-    const nearTxt = (s.near || []).map((n) => `${esc(n[0])}駅から約${Math.round(n[1] / 10) * 10}m（徒歩${walk(n[1])}）`).join("<br>");
-    const facts = [
-      ["住所", s.address ? `<span class="addr" id="addr-text">${esc(s.address)}${s.address_detail ? " " + esc(s.address_detail) : ""}</span> <button class="copy" type="button" data-copy="${esc(s.address + (s.address_detail ? " " + s.address_detail : ""))}">コピー</button>` : ""],
-      ["アクセス", [esc(s.station), nearTxt].filter(Boolean).join("<br>")],
-      ["営業時間", esc(s.hours)],
-      ["定休日", esc(s.closed)],
-      ["予算", esc(yen(s))],
-      ["名物・価格", esc(s.price)],
-      ["支払い", esc(s.payment)],
-      ["喫煙", esc(s.smoking)],
-      [s.kind === "yokocho" ? "店舗数" : "", s.shops ? `約${s.shops}軒` : ""],
-      ["創業・成立", esc(s.since)],
-    ].filter((f) => f[0] && f[1]);
-    const el = $("#detail");
-    el.innerHTML = `
-      <div class="d-head k-${s.kind}">
-        <button class="back" type="button" id="back">一覧にもどる</button>
-        <button class="fav big${fav.has(s.id) ? " on" : ""}" type="button" data-fav="${s.id}" aria-pressed="${fav.has(s.id)}">${fav.has(s.id) ? "★ 行きたい" : "☆ 行きたい"}</button>
-      </div>
-      <div class="d-title k-${s.kind}">
-        <span class="mini-pin big" aria-hidden="true">${k.g}</span>
-        <div>
-          <p class="d-kind">${esc(k.label)}${parent ? ` · <button class="link" type="button" data-go="${parent.id}">${esc(parent.name)}</button>の中` : ""}</p>
-          <h2>${esc(s.name)}</h2>
-          ${s.kana && s.kana !== s.name ? `<p class="d-kana">${esc(s.kana)}${s.en ? " · " + esc(s.en) : ""}</p>` : s.en ? `<p class="d-kana">${esc(s.en)}</p>` : ""}
-        </div>
-      </div>
-      ${s.status !== "open" ? `<p class="d-warn">${s.status === "closed" ? "閉店・消滅の情報があります。" : "最近の営業情報が少ない店です。行く前に確認してください。"}${s.checked ? " " + esc(s.checked) : ""}</p>` : ""}
-      <div class="d-scores">
-        <div><span class="d-label">交流度</span>${meter(s.social || 0, "交流度")}<span class="d-score-txt">${SOCIAL_TXT[s.social || 0] || ""}</span></div>
-        <div><span class="d-label">一人飲み</span>${meter(s.solo || 0, "一人飲みのしやすさ")}</div>
-      </div>
-      ${s.desc ? `<p class="d-desc">${esc(s.desc)}</p>` : ""}
-      ${s.talk ? `<div class="d-talk"><h3>人と話すなら</h3><p>${esc(s.talk)}</p></div>` : ""}
-      ${s.tips ? `<p class="d-tips"><b>行く前に</b>${esc(s.tips)}</p>` : ""}
-      ${(s.tags || []).length ? `<ul class="tags">${s.tags.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
-      <dl class="facts">${facts.map((f) => `<dt>${f[0]}</dt><dd>${f[1]}</dd>`).join("")}</dl>
-      ${kids.length ? `<div class="d-kids"><h3>この横丁の店（${kids.length}）</h3><ul>${kids.map((x) => `<li><button class="link" type="button" data-go="${x.id}"><span class="mini-pin k-${x.kind}">${KIND[x.kind].g}</span>${esc(x.name)}</button></li>`).join("")}</ul></div>` : ""}
-      <div class="d-links">
-        <a class="btn" href="${gmaps(s)}" target="_blank" rel="noopener">Googleマップで開く</a>
-        <a class="btn ghost" href="${osmUrl(s)}" target="_blank" rel="noopener">OpenStreetMap</a>
-      </div>
-      <div class="d-meta">
-        ${s.stacked ? `<p><b>注</b>同じ番地に${s.stacked}軒あるため、地図上では数mずらして表示しています。</p>` : ""}
-        <p><b>位置</b>${esc(GEO_TXT[s.geo] || "")}${s.gsi && /^gsi/.test(s.geo) ? `（${esc(s.gsi.replace(/^東京都/, ""))}）` : ""}　<span class="mono">${s.lat.toFixed(6)}, ${s.lng.toFixed(6)}</span></p>
-        ${s.xcheck != null && s.geo !== "tabelog" ? `<p><b>照合</b>食べログの店舗地図の位置との差は約${Math.max(1, Math.round(s.xcheck / 5) * 5)}m</p>` : ""}
-        ${s.checked ? `<p><b>営業確認</b>${esc(s.checked)}</p>` : ""}
-        ${(s.sources || []).length ? `<p><b>出典</b>${s.sources.map((u, i) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host(u))}</a>`).join("、")}</p>` : ""}
-      </div>`;
-    el.scrollTop = 0;
-  };
-  const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; } };
-
-  let selMarker = null;
-  const select = (id, { fly = true } = {}) => {
-    const s = BYID.get(id);
+  // ---------------------------------------------------------------- one spot
+  function select(id, opts) {
+    const s = byId[id];
     if (!s) return;
-    S.selected = id;
-    renderDetail(s);
-    document.body.classList.add("show-detail");
+    opts = opts || {};
+    state.sel = id;
+    if (atlas) atlas.select(id);
+    $("#detail").innerHTML = detailHTML(s);
     $("#detail").hidden = false;
-    if (selMarker) selMarker.getElement()?.classList.remove("is-selected");
-    const m = markers.get(id);
-    if (m && !spotLayer.hasLayer(m)) spotLayer.addLayer(m);
-    selMarker = m;
-    if (isPhone()) setSheet("half");
-    if (fly) {
-      const z = Math.max(map.getZoom(), s.kind === "yokocho" ? 17 : 17.5);
-      const target = s._shape && s.kind === "yokocho" ? s._shape.getBounds() : null;
-      if (target && target.isValid()) map.flyToBounds(target, { ...panelPad(), maxZoom: 18, duration: 0.8 });
-      else flyTo(s.lat, s.lng, Math.min(18, Math.round(z)));
-    }
-    setTimeout(() => m?.getElement()?.classList.add("is-selected"), fly ? 900 : 0);
-    try { history.replaceState(null, "", "#" + id); } catch { /* sandboxed */ }
-  };
-  const flyTo = (lat, lng, z) => {
-    // keep the point clear of the panel / sheet
-    const p = panelPad();
-    const target = map.project([lat, lng], z);
-    const off = L.point((p.paddingTopLeft[0] - p.paddingBottomRight[0]) / 2, (p.paddingTopLeft[1] - p.paddingBottomRight[1]) / 2);
-    map.flyTo(map.unproject(target.subtract(off), z), z, { duration: 0.8 });
-  };
-  const closeDetail = () => {
-    S.selected = null;
-    document.body.classList.remove("show-detail");
+    $("#detail").scrollTop = 0;
+    bindDetail(s);
+    if (phone()) sheet(opts.sheet || "half");
+    else if ($("#app").classList.contains("drawer-closed")) $("#nav-list").click();
+    if (atlas && opts.fly !== false) atlas.flyToSpot(s, phone() ? [0, -Math.round(innerHeight * 0.2)] : [0, 0]);
+    if (location.hash.slice(1) !== id) history.replaceState(null, "", "#" + id);
+    document.title = `${s.name} — 東京のんべえ地図`;
+  }
+  function back() {
+    state.sel = null;
+    if (atlas) atlas.select(null);
     $("#detail").hidden = true;
-    selMarker?.getElement()?.classList.remove("is-selected");
-    selMarker = null;
-    try { history.replaceState(null, "", location.pathname + location.search); } catch { /* sandboxed */ }
+    history.replaceState(null, "", location.pathname + location.search);
+    document.title = "東京のんべえ地図 — 立ち飲み・角打ち・せんべろ・横丁";
     renderList();
-  };
+    if (phone()) sheet("half");
+  }
+  function fromHash() {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (id && byId && byId[id] && id !== state.sel) select(id, { sheet: "half" });
+  }
 
-  // ---------------------------------------------------------------- controls
-  const kindsEl = $("#kinds");
-  kindsEl.innerHTML = KORDER.map((k) => `<button type="button" class="chip k-${k}" data-kind="${k}" aria-pressed="${S.kinds.has(k)}" title="${esc(KIND[k].note)}"><span class="mini-pin" aria-hidden="true">${KIND[k].g}</span>${KIND[k].label}<span class="n">${SPOTS.filter((s) => s.kind === k && s.status !== "closed").length}</span></button>`).join("");
-  kindsEl.addEventListener("click", (e) => {
-    const b = e.target.closest("[data-kind]");
-    if (!b) return;
-    const k = b.dataset.kind;
-    if (e.altKey || e.metaKey) { S.kinds = new Set([k]); }
-    else if (S.kinds.has(k)) { S.kinds.delete(k); if (!S.kinds.size) S.kinds = new Set(KORDER); }
-    else S.kinds.add(k);
-    kindsEl.querySelectorAll("[data-kind]").forEach((x) => x.setAttribute("aria-pressed", S.kinds.has(x.dataset.kind)));
-    persist(); render();
-  });
+  function fact(label, value, src, sub) {
+    if (value == null || value === "" || (Array.isArray(value) && !value.length)) return "";
+    return `<dt>${label}</dt><dd>${value}${src ? `<span class="src-tag">${esc(src)}</span>` : ""}${sub ? `<small>${sub}</small>` : ""}</dd>`;
+  }
+  function weekTable(s) {
+    const w = s.week, t = clockOverride() + JST, today = dayInfo(t);
+    const todayKey = today.hol && w.hol !== undefined ? "hol" : today.prehol && w.prehol !== undefined ? "prehol" : DK[today.dow];
+    const rows = ["mon", "tue", "wed", "thu", "fri", "sat", "sun", "hol", "prehol"].filter((d) => w[d] !== undefined);
+    return `<table class="hours"><tbody>${rows.map((d) => {
+      const r = w[d];
+      const cell = !r.length ? '<td class="off">休み</td>' : `<td>${r.map(([o, c, lo]) => `${hm(o)}〜${hmNext(c)}${lo != null ? `<span class="lo">L.O.${hmNext(lo)}</span>` : ""}`).join("<br>")}</td>`;
+      return `<tr class="${d === todayKey ? "today" : ""}"><th>${DAY_JP[d]}</th>${cell}</tr>`;
+    }).join("")}</tbody></table>`;
+  }
+  function nearby(s) {
+    return spots.filter((o) => o.id !== s.id && o.status !== "closed")
+      .map((o) => ({ o, d: dist(s, o) })).filter((x) => x.d < 1500).sort((a, b) => a.d - b.d).slice(0, 4);
+  }
+  function detailHTML(s) {
+    const st = openState(s), sl = stLabel(st, true), src = s.src || {}, fav = state.favs.has(s.id);
+    const yk = s.kind === "yokocho";
+    const h = [];
+    h.push(`<div class="d-bar">
+      <button type="button" class="t-btn" data-act="back"><svg><use href="#i-back"/></svg>一覧</button><span class="sp"></span>
+      <button type="button" class="t-btn" data-act="fav" aria-pressed="${fav}"><svg><use href="#${fav ? "i-star-f" : "i-star"}"/></svg>行きたい</button>
+      <button type="button" class="t-btn" data-act="share"><svg><use href="#i-share"/></svg>共有</button></div>`);
+    h.push(`<header class="d-head">
+      <p class="d-kind">${seal(s.kind, true)}${KIND[s.kind].label}・${esc(s.area)}${s.ward && !s.area.includes(s.ward) ? `（${esc(s.ward)}）` : ""}</p>
+      <h2 class="d-name">${s.kana ? `<ruby>${esc(s.name)}<rt>${esc(s.kana)}</rt></ruby>` : esc(s.name)}</h2>
+      ${s.en ? `<p class="d-en">${esc(s.en)}</p>` : ""}
+      ${s.catch ? `<p class="d-catch">${esc(s.catch)}</p>` : ""}
+      <p class="d-desc">${esc(s.desc)}</p></header>`);
+    if (s.status === "uncertain" || s.status_note) {
+      h.push(`<p class="d-alert">${s.status_note === "closed" ? "最近の口コミや記事に閉店・休業の情報があります。" : "営業しているか確かめきれていません。"}出かける前に店の最新情報を確認してください。</p>`);
+    }
+    if (sl) h.push(`<div class="d-now"><i class="lamp ${sl.lamp}"></i><b class="${sl.cls}">${sl.text}</b><span>${st && st.open && st.lo != null ? `ラストオーダー ${hmNext(st.lo)}・` : ""}東京の現在時刻で判定${s.week_from_text ? "（調査メモの営業時間から）" : ""}</span></div>`);
+    else if (!yk) h.push(`<div class="d-now"><i class="lamp off"></i><b class="st-off">営業時間は下を確認</b><span>曜日ごとの時間が分からないため、今の営業は判定していません</span></div>`);
 
-  const seg = (id, key, cast = (v) => v) => {
-    const el = $(id);
-    const sync = () => el.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(cast(b.dataset.v) === S[key])));
-    el.addEventListener("click", (e) => {
-      const b = e.target.closest("button[data-v]");
-      if (!b) return;
-      S[key] = cast(b.dataset.v);
-      sync(); persist(); key === "scope" || key === "sort" ? renderList() : render();
+    // 話しやすさ
+    if (!yk || s.talk) {
+      h.push(`<section class="d-sec"><h3>話しやすさ</h3>
+        ${!yk ? `<div class="talk-big">${talkDots(s.social || 0)}<b>${TALK[s.social || 0] || ""}</b></div>` : ""}
+        ${s.talk ? `<p>${esc(s.talk)}</p>` : ""}${s.talk2 ? `<p>${esc(s.talk2)}</p>` : ""}</section>`);
+    }
+    // facts
+    const budgetSub = [s.budget_dinner ? `食べログ・夜 ${s.budget_dinner}` : "", s.budget_lunch ? `昼 ${s.budget_lunch}` : ""].filter(Boolean).join("／");
+    const seats = s.seats ? `${s.seats}席${s.seats_note ? `（${esc(s.seats_note)}）` : ""}` : "";
+    const facts = [
+      fact("予算", s.budget ? esc(s.budget) : s.budget_dinner ? esc(s.budget_dinner) : "", s.budget ? "調査" : "食べログ", s.budget ? esc(budgetSub) : ""),
+      fact("チャージ", s.charge ? esc(s.charge) : "", src.charge),
+      fact("支払い", s.pay ? esc(s.pay) : "", src.pay),
+      fact("席", seats, src.seats),
+      fact("店内", s.seating ? esc(s.seating.join("・")) : ""),
+      fact("喫煙", s.smoking ? esc(s.smoking) : "", src.smoking),
+      fact("予約", s.reserve ? esc(s.reserve) : ""),
+      fact("酒", s.drinks ? esc(s.drinks.join("・")) : ""),
+      fact("電話", s.phone ? `<a href="tel:${esc(s.phone.replace(/[^\d+]/g, ""))}">${esc(s.phone)}</a>` : ""),
+      fact("創業", s.since ? esc(s.since) : s.opened ? esc(String(s.opened).replace(/^(\d{4})\.(\d{1,2}).*$/, "$1年$2月開店")) : ""),
+      fact("英語", s.english ? "英語メニューや英語での対応あり" : ""),
+    ].join("");
+    if (facts) h.push(`<section class="d-sec"><h3>基本の情報</h3><dl class="facts">${facts}</dl></section>`);
+
+    if (s.vibe || s.crowd || s.busy) {
+      h.push(`<section class="d-sec"><h3>${yk ? "横丁の様子" : "店の様子"}<small>口コミ・記事から</small></h3>
+        ${s.vibe ? `<p>${esc(s.vibe)}</p>` : ""}
+        ${s.crowd ? `<p class="d-sub"><em>客層</em>${esc(s.crowd)}</p>` : ""}
+        ${s.busy ? `<p class="d-sub"><em>混む時間</em>${esc(s.busy)}</p>` : ""}</section>`);
+    }
+    if ((s.menu && s.menu.length) || s.price) {
+      h.push(`<section class="d-sec"><h3>品書き<small>${s.menu && s.menu.length ? "口コミ・記事に出てくる値段" : ""}</small></h3>
+        ${s.menu && s.menu.length ? `<ul class="menu">${s.menu.map((m) => `<li><span class="n">${esc(m.n)}</span><i class="leader"></i><span class="p">${m.p ? esc(m.p) : "—"}</span></li>`).join("")}</ul>` : ""}
+        ${s.price ? `<p class="menu-note">${esc(s.price)}</p>` : ""}</section>`);
+    }
+    if (s.rules && s.rules.length) h.push(`<section class="d-sec"><h3>店の決まり</h3><ul class="rules">${s.rules.map((r) => `<li>${esc(r)}</li>`).join("")}</ul></section>`);
+    if (s.first || s.tips) h.push(`<section class="d-sec"><h3>はじめて行くなら</h3>${s.first ? `<p>${esc(s.first)}</p>` : ""}${s.tips ? `<p>${esc(s.tips)}</p>` : ""}</section>`);
+    if (s.week || s.hours || s.closed) {
+      h.push(`<section class="d-sec"><h3>営業時間${src.hours ? `<small>${esc(src.hours)}</small>` : ""}</h3>
+        ${s.week ? weekTable(s) : `<p>${esc(s.hours || "")}</p>`}
+        ${s.closed ? `<p class="hours-note">定休日：${esc(s.closed)}</p>` : ""}
+        ${s.hours_research && s.hours_research !== s.hours ? `<p class="hours-note">調査メモ：${esc(s.hours_research)}</p>` : ""}</section>`);
+    }
+    // access
+    const gq = encodeURIComponent(`${s.name} ${s.address || ""}`.trim());
+    const nearSt = (s.near || []).slice(0, 2).map(([n, m]) => `${esc(n)}駅から${walk(m)}`).join("、");
+    h.push(`<section class="d-sec"><h3>行き方</h3>
+      ${s.station ? `<p>${esc(s.station)}</p>` : ""}${nearSt ? `<p class="hours-note">${nearSt}（直線距離）</p>` : ""}
+      ${s.address ? `<p class="addr"><span>${esc(s.address)}</span><button type="button" data-act="copy" title="住所をコピー" aria-label="住所をコピー"><svg><use href="#i-copy"/></svg></button></p>` : ""}
+      <div class="btns">
+        <a class="btn primary" href="https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lng}&travelmode=walking" target="_blank" rel="noopener"><svg><use href="#i-route"/></svg>経路を調べる</a>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=${gq}" target="_blank" rel="noopener"><svg><use href="#i-ext"/></svg>Googleマップ</a>
+        ${linkBtns(s)}
+      </div></section>`);
+    const nb = nearby(s);
+    if (nb.length) {
+      h.push(`<section class="d-sec"><h3>はしごするなら<small>近い順</small></h3><ul class="near-list">${nb.map(({ o, d }) => {
+        const ol = stLabel(openState(o));
+        return `<li><button type="button" class="near-item" data-id="${o.id}">${seal(o.kind, true)}<span><b>${esc(o.name)}</b><span>${esc(o.catch || KIND[o.kind].label)}${ol ? `・<span class="${ol.cls}">${ol.text}</span>` : ""}</span></span><em>${walk(d)}</em></button></li>`;
+      }).join("")}</ul></section>`);
+    }
+    // sources
+    const srcs = (s.sources || []).filter((u, i, a) => a.indexOf(u) === i);
+    h.push(`<section class="d-sec"><h3>出典と確認</h3>
+      ${s.checked ? `<p class="src-meta">紹介文：${esc(s.checked)}</p>` : ""}
+      ${s.checked_reviews ? `<p class="src-meta">店の様子・品書き：${esc(s.checked_reviews)}</p>` : ""}
+      ${srcs.length ? `<ul class="src-list">${srcs.map((u) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(srcName(u))}</a></li>`).join("")}</ul>` : ""}</section>`);
+    h.push(`<p class="d-foot">情報は変わります。営業時間・値段・決まりは出かける前に店の最新情報で確かめてください。位置は${s.geo === "osm" ? "OpenStreetMap の店舗" : "住所"}から求めています。</p>`);
+    return h.join("");
+  }
+  function linkBtns(s) {
+    const l = s.links || {}, out = [];
+    if (l.tabelog) out.push(`<a class="btn" href="${esc(l.tabelog)}" target="_blank" rel="noopener">食べログ</a>`);
+    if (l.hotpepper) out.push(`<a class="btn" href="${esc(l.hotpepper)}" target="_blank" rel="noopener">ホットペッパー</a>`);
+    if (l.web) out.push(`<a class="btn" href="${esc(l.web)}" target="_blank" rel="noopener"><svg><use href="#i-globe"/></svg>公式</a>`);
+    if (l.insta) out.push(`<a class="btn" href="${esc(l.insta)}" target="_blank" rel="noopener"><svg><use href="#i-insta"/></svg>Instagram</a>`);
+    if (l.x) out.push(`<a class="btn" href="${esc(l.x)}" target="_blank" rel="noopener">X</a>`);
+    return out.join("");
+  }
+  function bindDetail(s) {
+    const el = $("#detail");
+    el.querySelector("[data-act=back]").addEventListener("click", back);
+    el.querySelector("[data-act=fav]").addEventListener("click", (e) => {
+      const b = e.currentTarget;
+      if (state.favs.has(s.id)) state.favs.delete(s.id); else state.favs.add(s.id);
+      store.set("nb-favs", [...state.favs]);
+      const on = state.favs.has(s.id);
+      b.setAttribute("aria-pressed", String(on));
+      b.querySelector("use").setAttribute("href", on ? "#i-star-f" : "#i-star");
+      toast(on ? "行きたい店に入れました" : "行きたい店から外しました");
     });
-    sync();
-  };
-  seg("#social", "social", Number);
-  seg("#scope", "scope");
+    el.querySelector("[data-act=share]").addEventListener("click", async () => {
+      const url = location.origin + location.pathname + "#" + s.id;
+      const text = `${s.name}（${KIND[s.kind].label}・${s.area}）${s.catch ? " " + s.catch : ""}`;
+      if (navigator.share) { try { await navigator.share({ title: s.name, text, url }); return; } catch (e) { if (e.name === "AbortError") return; } }
+      copy(url, "リンクをコピーしました");
+    });
+    const c = el.querySelector("[data-act=copy]");
+    if (c) c.addEventListener("click", () => copy(s.address, "住所をコピーしました"));
+    el.querySelectorAll(".near-item").forEach((b) => b.addEventListener("click", () => select(b.dataset.id)));
+  }
 
-  const toggle = (id, key) => {
-    const b = $(id);
-    b.setAttribute("aria-pressed", S[key]);
-    b.addEventListener("click", () => { S[key] = !S[key]; b.setAttribute("aria-pressed", S[key]); persist(); render(); });
-  };
-  toggle("#t-solo", "solo");
-  toggle("#t-hiru", "hiru");
-  toggle("#t-english", "english");
-  toggle("#t-fav", "favOnly");
-  toggle("#t-closed", "closed");
-  const poiBtn = $("#t-poi");
-  poiBtn.setAttribute("aria-pressed", S.poi);
-  poiBtn.addEventListener("click", () => { S.poi = !S.poi; poiBtn.setAttribute("aria-pressed", S.poi); store.set("poi", S.poi); labels?.redraw(); });
+  // ---------------------------------------------------------------- OSM spots
+  function showPoi(o) {
+    const card = $("#poi-card");
+    const [type, id] = [{ n: "node", w: "way", r: "relation" }[o.osm[0]], o.osm.slice(1)];
+    card.innerHTML = `<button type="button" class="m-btn" aria-label="閉じる"><svg><use href="#i-x"/></svg></button>
+      <span class="tag">OpenStreetMap に登録された店・この地図では未確認</span><b>${esc(o.n)}</b>
+      <p>${esc(o.k)}${o.lv ? `・${esc(o.lv)}階` : ""}</p>${o.h ? `<p>営業時間（OSM）：${esc(o.h)}</p>` : ""}
+      <p><a href="https://www.openstreetmap.org/${type}/${id}" target="_blank" rel="noopener">OpenStreetMap で見る</a></p>`;
+    card.hidden = false;
+    card.querySelector("button").addEventListener("click", hidePoi);
+  }
+  function hidePoi() { $("#poi-card").hidden = true; }
 
-  const areaSel = $("#area");
-  const live = SPOTS.filter((s) => s.status !== "closed");
-  const nArea = (a) => live.filter((s) => s.area === a).length;
-  const regions = D.regions && D.regions.length ? D.regions : [{ name: "エリア", areas: [...new Set(live.map((s) => s.area))] }];
-  areaSel.innerHTML = `<option value="">すべての街（${new Set(live.map((s) => s.area)).size}）</option>` +
-    regions.map((r) => `<optgroup label="${esc(r.name)}">${r.areas.map((a) => `<option value="${esc(a)}">${esc(a)}（${nArea(a)}）</option>`).join("")}</optgroup>`).join("");
-  areaSel.addEventListener("change", () => {
-    S.area = areaSel.value;
-    render();
-    const list = SPOTS.filter((s) => (S.area ? s.area === S.area : true) && s.status !== "closed");
-    if (list.length) map.flyToBounds(L.latLngBounds(list.map((s) => [s.lat, s.lng])), { ...panelPad(), maxZoom: 16, duration: 0.8 });
-  });
-
-  const sortSel = $("#sort");
-  sortSel.value = S.sort;
-  sortSel.addEventListener("change", () => { S.sort = sortSel.value; persist(); renderList(); });
-
-  const q = $("#q");
-  let qt = 0;
-  q.addEventListener("input", () => {
-    clearTimeout(qt);
-    qt = setTimeout(() => { S.q = q.value.trim(); render(); }, 120);
-  });
-  q.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" && current[0]) { select(current[0].id); q.blur(); }
-  });
-
-  $("#reset").addEventListener("click", () => {
-    S.kinds = new Set(KORDER); S.social = 0; S.solo = S.hiru = S.english = S.favOnly = S.closed = false; S.area = ""; S.q = ""; q.value = ""; areaSel.value = "";
-    kindsEl.querySelectorAll("[data-kind]").forEach((x) => x.setAttribute("aria-pressed", "true"));
-    ["#t-solo", "#t-hiru", "#t-english", "#t-fav", "#t-closed"].forEach((id) => $(id).setAttribute("aria-pressed", "false"));
-    $("#social").querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === "0")));
-    persist(); render();
-  });
-
-  // list & detail clicks
-  document.addEventListener("click", (e) => {
-    const f = e.target.closest("[data-fav]");
-    if (f) {
-      const id = f.dataset.fav;
-      fav.has(id) ? fav.delete(id) : fav.add(id);
-      store.set("fav", [...fav]);
-      refreshPin(BYID.get(id));
-      if (S.selected === id) renderDetail(BYID.get(id));
-      renderList();
-      return;
+  // ---------------------------------------------------------------- clock
+  let lastMin = -1;
+  function tick() {
+    const t = new Date(clockOverride() + JST);
+    const min = t.getUTCHours() * 60 + t.getUTCMinutes();
+    if (min === lastMin) return;
+    lastMin = min;
+    const di = dayInfo(t.getTime());
+    $("#clock").textContent = `${t.getUTCMonth() + 1}月${t.getUTCDate()}日（${di.hol ? "祝" : DAY_JP[DK[di.dow]]}）${hm(min)}`;
+    const open = spots.filter((s) => s.status !== "closed" && (openState(s) || {}).open).length;
+    $("#open-count").innerHTML = `いま <b>${open}</b>軒が営業中`;
+    renderList();
+    if (state.sel && !$("#detail").hidden) {
+      const now = $("#detail .d-now");
+      const s = byId[state.sel], sl = stLabel(openState(s), true);
+      if (now && sl) { now.querySelector("b").className = sl.cls; now.querySelector("b").textContent = sl.text; now.querySelector(".lamp").className = "lamp " + sl.lamp; }
     }
-    const go = e.target.closest("[data-go]");
-    if (go) { select(go.dataset.go); return; }
-    const card = e.target.closest(".card-main[data-id]");
-    if (card) { select(card.dataset.id); return; }
-    if (e.target.closest("#back")) { closeDetail(); return; }
-    if (e.target.closest("#more")) { shown += PAGE; renderList(undefined, true); return; }
-    const cp = e.target.closest("[data-copy]");
-    if (cp) {
-      const text = cp.dataset.copy;
-      const done = () => { cp.textContent = "コピーしました"; setTimeout(() => (cp.textContent = "コピー"), 1600); };
-      const fallback = () => { const r = document.createRange(); r.selectNodeContents($("#addr-text")); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); cp.textContent = "選択しました"; };
-      try { navigator.clipboard.writeText(text).then(done, fallback); } catch { fallback(); }
-    }
-  });
-  $("#list").addEventListener("mouseover", (e) => {
-    const li = e.target.closest(".card");
-    document.querySelectorAll(".pin-wrap.is-hover").forEach((x) => x.classList.remove("is-hover"));
-    if (li) markers.get(li.dataset.id)?.getElement()?.querySelector(".pin-wrap")?.classList.add("is-hover");
-  });
+  }
 
-  // OSM points (unverified) popup
-  map.on("click", (e) => {
-    if (!labels || !S.poi) return;
-    const o = labels.hit(e.containerPoint, 11);
-    if (!o) return;
-    const ll = NBMap.unproject(o.x, o.y);
-    const type = { n: "node", w: "way", r: "relation" }[o.osm[0]];
-    L.popup({ className: "poi-pop", maxWidth: 260, autoPanPaddingTopLeft: [isPhone() ? 10 : $("#panel").offsetWidth + 10, 10] })
-      .setLatLng(ll)
-      .setContent(`<p class="pp-kind">${esc(o.k)}<span>OSM登録・未検証</span></p><p class="pp-name">${esc(o.n)}</p>` +
-        (o.lv ? `<p class="pp-row">${esc(o.lv)}階</p>` : "") +
-        (o.h ? `<p class="pp-row">営業時間（OSM）: ${esc(o.h)}</p>` : "") +
-        (o.ck ? `<p class="pp-row">OSMでの確認日: ${esc(o.ck)}</p>` : "") +
-        `<p class="pp-links"><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(o.n + " " + ll.lat.toFixed(5) + "," + ll.lng.toFixed(5))}" target="_blank" rel="noopener">Googleマップ</a><a href="https://www.openstreetmap.org/${type}/${o.osm.slice(1)}" target="_blank" rel="noopener">OSM</a></p>`)
-      .openOn(map);
-  });
+  // ---------------------------------------------------------------- theme, misc
+  function setTheme(t) {
+    state.theme = t;
+    store.set("nb-theme", t);
+    document.documentElement.dataset.theme = t;
+    $('meta[name="theme-color"]').setAttribute("content", t === "night" ? "#0b0f19" : "#f2ece0");
+    syncThemeButton();
+    if (atlas) atlas.setTheme(t);
+  }
+  function syncThemeButton() {
+    const night = state.theme === "night";
+    $("#nav-theme use").setAttribute("href", night ? "#i-sun" : "#i-moon");
+    $("#nav-theme span").textContent = night ? "昼" : "夜";
+    $("#nav-theme").title = night ? "昼の地図にする" : "夜の地図にする";
+  }
+  function syncNorth() {
+    if (!atlas) return;
+    $("#north-icon").style.transform = `rotate(${-atlas.map.getBearing()}deg)`;
+  }
+  let me;
+  function locate() {
+    navigator.geolocation.getCurrentPosition((p) => {
+      const ll = [p.coords.longitude, p.coords.latitude];
+      if (!me) { const el = document.createElement("div"); el.className = "me-dot"; me = new maplibregl.Marker({ element: el }).setLngLat(ll).addTo(atlas.map); }
+      else me.setLngLat(ll);
+      atlas.map.flyTo({ center: ll, zoom: Math.max(atlas.map.getZoom(), 15.5), duration: 1200 });
+      state.sort = "near"; $("#sort").value = "near"; state.scope = "view"; syncPressed();
+    }, () => toast("現在地を取得できませんでした"), { enableHighAccuracy: true, timeout: 10e3 });
+  }
+  function copy(text, msg) {
+    (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(() => toast(msg), () => toast(text));
+  }
+  let toastT;
+  function toast(msg) {
+    const el = $("#toast");
+    el.textContent = msg; el.hidden = false;
+    clearTimeout(toastT); toastT = setTimeout(() => { el.hidden = true; }, 2200);
+  }
+  function status(msg) { const el = $("#map-status"); el.textContent = msg; el.hidden = !msg; }
 
   // ---------------------------------------------------------------- phone sheet
-  const panel = $("#panel");
-  const setSheet = (st) => {
-    panel.dataset.sheet = st;
-    $("#sheet-handle").setAttribute("aria-expanded", String(st !== "peek"));
-  };
-  $("#sheet-handle").addEventListener("click", () => setSheet(panel.dataset.sheet === "peek" ? "half" : panel.dataset.sheet === "half" ? "full" : "peek"));
-  let dragY = null, dragH = 0;
-  $("#sheet-handle").addEventListener("pointerdown", (e) => { if (!isPhone()) return; dragY = e.clientY; dragH = panel.getBoundingClientRect().height; panel.classList.add("dragging"); $("#sheet-handle").setPointerCapture(e.pointerId); });
-  $("#sheet-handle").addEventListener("pointermove", (e) => { if (dragY == null) return; panel.style.height = Math.max(120, Math.min(window.innerHeight * 0.92, dragH + dragY - e.clientY)) + "px"; });
-  $("#sheet-handle").addEventListener("pointerup", (e) => {
-    if (dragY == null) return;
-    const moved = Math.abs(e.clientY - dragY);
-    const h = panel.getBoundingClientRect().height / window.innerHeight;
-    panel.classList.remove("dragging"); panel.style.height = ""; dragY = null;
-    if (moved > 8) { e.preventDefault(); setSheet(h < 0.3 ? "peek" : h < 0.7 ? "half" : "full"); }
-  });
-  q.addEventListener("focus", () => { if (isPhone() && panel.dataset.sheet === "peek") setSheet("half"); });
-
-  // ---------------------------------------------------------------- about
-  $("#about-open").addEventListener("click", () => { $("#about").hidden = false; $("#about-close").focus(); });
-  $("#about-close").addEventListener("click", () => { $("#about").hidden = true; });
-  $("#about").addEventListener("click", (e) => { if (e.target.id === "about") $("#about").hidden = true; });
-  document.addEventListener("keydown", (e) => {
-    if (e.key !== "Escape") return;
-    if (!$("#about").hidden) $("#about").hidden = true;
-    else if (S.selected) closeDetail();
-  });
-
-  // locate (only where the host grants geolocation)
-  if (CFG.geo && navigator.geolocation) {
-    const b = $("#locate");
-    b.hidden = false;
-    let dot = null;
-    b.addEventListener("click", () => {
-      b.disabled = true;
-      navigator.geolocation.getCurrentPosition((p) => {
-        b.disabled = false;
-        const ll = [p.coords.latitude, p.coords.longitude];
-        if (!dot) dot = L.circleMarker(ll, { radius: 7, className: "me", pane: "areas" }).addTo(map);
-        dot.setLatLng(ll);
-        flyTo(ll[0], ll[1], 16);
-        S.sort = "near"; sortSel.value = "near";
-      }, () => { b.disabled = false; b.hidden = true; }, { enableHighAccuracy: true, timeout: 10000 });
-    });
-  }
-  if (raster) {
-    const b = $("#photo");
-    b.hidden = false;
-    b.addEventListener("click", () => {
-      const on = !map.hasLayer(raster);
-      on ? raster.addTo(map) : map.removeLayer(raster);
-      b.setAttribute("aria-pressed", String(on));
-    });
+  function sheet(v) { if (phone()) $("#drawer").dataset.sheet = v; }
+  function bindSheet() {
+    const dr = $("#drawer");
+    let y0 = null, t0 = 0, base = 0, moved = false;
+    const H = () => dr.getBoundingClientRect().height;
+    const visOf = (v) => (v === "full" ? H() : v === "half" ? H() * 0.54 : 148);
+    const down = (e) => {
+      if (!phone()) return;
+      y0 = e.clientY; t0 = performance.now(); base = visOf(dr.dataset.sheet); moved = false;
+      dr.classList.add("dragging");
+      e.target.setPointerCapture && e.target.setPointerCapture(e.pointerId);
+    };
+    const move = (e) => {
+      if (y0 == null) return;
+      const dy = e.clientY - y0;
+      if (Math.abs(dy) > 4) moved = true;
+      const vis = Math.max(110, Math.min(H(), base - dy));
+      dr.style.transform = `translateY(${H() - vis}px)`;
+    };
+    const up = (e) => {
+      if (y0 == null) return;
+      const dy = e.clientY - y0, v = dy / Math.max(1, performance.now() - t0);
+      dr.classList.remove("dragging");
+      dr.style.transform = "";
+      y0 = null;
+      if (!moved) { dr.dataset.sheet = dr.dataset.sheet === "peek" ? "half" : dr.dataset.sheet === "half" ? "full" : "half"; return; }
+      const vis = base - dy, h = H();
+      const order = ["peek", "half", "full"];
+      let pick = order.reduce((a, b) => (Math.abs(visOf(b) - vis) < Math.abs(visOf(a) - vis) ? b : a));
+      if (Math.abs(v) > 0.6) pick = order[Math.max(0, Math.min(2, order.indexOf(dr.dataset.sheet) + (v < 0 ? 1 : -1)))];
+      if (h && pick) dr.dataset.sheet = pick;
+    };
+    for (const el of [$("#sheet-handle"), $(".tonight")]) {
+      el.addEventListener("pointerdown", down);
+      el.addEventListener("pointermove", move);
+      el.addEventListener("pointerup", up);
+      el.addEventListener("pointercancel", up);
+    }
   }
 
-  // ---------------------------------------------------------------- theme
-  const repaint = () => { base?.refreshPalette(); labels?.refreshPalette(); };
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", repaint);
-  new MutationObserver(repaint).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme", "class"] });
-
-  // ---------------------------------------------------------------- go
-  map.on("zoomend", syncZoom);
-  map.on("moveend", () => { declutter(); declutterAreas(); if (S.scope === "view") renderList(); if (labels) labels.redraw(); });
-  setSheet("peek");
-  if (D.updated) $("#updated").textContent = D.updated;
-  const hash = decodeURIComponent((location.hash || "").slice(1));
-  map.fitBounds(allBounds, { ...panelPad(), maxZoom: 12 });
-  render();
-  loadBase();
-  if (hash && BYID.has(hash)) select(hash);
-  setTimeout(() => map.invalidateSize(), 50);
-  window.__nb = { map, S, select };
-  window.__ready = true;
+  window.NB = { select, back, state, openState, setTheme, renderList, changed, spots: () => spots, byId: () => byId };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot); else boot();
 })();

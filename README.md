@@ -77,7 +77,7 @@ python3 scripts/merge_enrich.py <要約の出力ディレクトリ>   # → data
 python3 scripts/build_site.py                 # → dist/site/（GitHub Pages にそのまま置ける）
 ```
 
-`build_site.py` は `build_info.py` を呼んで、店ごとの情報（`data/info.json`）を組み立ててからページを書き出します。公開は GitHub Actions（`.github/workflows/pages.yml`）がこのリポジトリの GitHub Pages に `dist/site/` を載せます（Settings → Pages の Source を「GitHub Actions」に）。skikkh.github.io リポジトリに置く場合は `scripts/publish_pages.sh` を使います。
+`build_site.py` は `build_info.py` を呼んで、店ごとの情報（`data/info.json`）を組み立ててからページを書き出します。公開は GitHub Actions（`.github/workflows/pages.yml`）が、main に push されるたびに `dist/site/` をこのリポジトリの GitHub Pages に載せます（Settings → Pages の Source は「GitHub Actions」）。skikkh.github.io リポジトリに置く場合は `scripts/publish_pages.sh` を使います。
 
 縦動画は `npm i playwright` のあと `node promo/capture.js frames` で900コマを撮り、`sh promo/encode.sh` で mp4 にします。
 

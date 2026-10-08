@@ -3,8 +3,22 @@
 #   nonbei-reel.mp4        1080×1920, 30 fps, 30 s, H.264 High@4.2, silent AAC track (high quality)
 #   nonbei-reel-light.mp4  the same at about 4.2 Mbps, for chat apps and slow uploads
 #   story-1.png … story-7.png  one still per scene for Stories (from promo/capture.js stills)
+# CUT=15 sh promo/encode.sh encodes the 15-second cut (frames15/) into
+#   nonbei-reel-15s.mp4 and cover-15s.jpg.
 set -eu
 cd "$(dirname "$0")/out"
+if [ "${CUT:-}" = "15" ]; then
+  VF="scale=1080:1920:flags=lanczos:in_range=full:out_range=tv:out_color_matrix=bt709,format=yuv420p"
+  ffmpeg -y -loglevel error -framerate 30 -i frames15/f%04d.jpg \
+    -f lavfi -i anullsrc=channel_layout=stereo:sample_rate=48000 \
+    -map 0:v -map 1:a -shortest -vf "$VF" \
+    -c:v libx264 -profile:v high -level:v 4.2 -preset slow -crf 19 -g 60 -keyint_min 30 \
+    -color_primaries bt709 -color_trc bt709 -colorspace bt709 -color_range tv \
+    -c:a aac -b:a 128k -ar 48000 -movflags +faststart nonbei-reel-15s.mp4
+  ffmpeg -y -loglevel error -i frames15/f0420.jpg -vf "scale=1080:1920" -frames:v 1 -q:v 2 cover-15s.jpg
+  ls -la nonbei-reel-15s.mp4 cover-15s.jpg
+  exit 0
+fi
 VF="scale=1080:1920:flags=lanczos:in_range=full:out_range=tv:out_color_matrix=bt709,format=yuv420p"
 COLOR="-color_primaries bt709 -color_trc bt709 -colorspace bt709 -color_range tv"
 

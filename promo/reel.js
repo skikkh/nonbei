@@ -1,9 +1,11 @@
-/* 東京のんべえ地図 — 30-second vertical reel, rendered frame by frame.
+/* 東京のんべえ地図 — vertical reels, rendered frame by frame.
  *
  * The page shows the real map (site/src/atlas.js with the site's data) and
- * lays seven scenes over it. reel.seek(t) puts the camera and every overlay
- * where they belong at t seconds, so promo/capture.js can step through
- * the frames one by one and wait for the map to finish drawing each one.
+ * lays scenes over it. reel.seek(t) puts the camera and every overlay where
+ * they belong at t seconds, so promo/capture.js can step through the frames
+ * one by one and wait for the map to finish drawing each one.
+ * reel.html is the 30-second cut (seven scenes); reel.html?cut=15 is the
+ * 15-second Instagram cut (five scenes).
  */
 (function () {
   "use strict";
@@ -13,27 +15,51 @@
     kakuuchi: ["角打ち", "角", "#52c9a0"], bar: ["バー", "酒", "#b892f2"], social: ["交流酒場", "交", "#ff7fae"],
   };
   const NUM = ["一", "二", "三", "四", "五", "六", "七"];
-  const CUTS = [13, 17.4, 21.6];
   const FRIDAY = Date.UTC(2026, 9, 9, 0, 0) - 9 * 3600e3;   // 2026-10-09 00:00 JST
   const SHOW = { card: "nippori-yomo-saketen", hop: ["akabane-ikoi-honten", "akabane-maruken-suisan", "akabane-marumasuya"],
     alley: ["shinjuku-golden-gai", "shinjuku-omoide-yokocho"] };
 
-  // [t, lng, lat, zoom, pitch, bearing, bottom padding]; equal times are cuts
-  const CAM = [
-    [0.0, 139.742, 35.693, 10.3, 0, 0, 0],
-    [4.4, 139.745, 35.697, 11.25, 32, -10, 0],
-    [7.7, 139.726, 35.696, 12.5, 44, -18, 0],
-    [9.0, 139.7058, 35.6935, 15.7, 54, -26, 0],
-    [13.0, 139.7056, 35.6934, 16.5, 60, 14, 0],
-    [13.0, 139.77722, 35.72860, 16.9, 56, -38, 430],
-    [17.4, 139.77722, 35.72860, 17.5, 60, 6, 430],
-    [17.4, 139.752, 35.700, 11.95, 34, -12, 0],
-    [21.6, 139.752, 35.701, 12.35, 40, -2, 0],
-    [21.6, 139.72125, 35.77915, 16.65, 50, -32, 60],
-    [25.8, 139.72125, 35.77920, 17.05, 56, -16, 60],
-    [27.7, 139.742, 35.712, 11.7, 22, 0, 0],
-    [30.0, 139.745, 35.700, 11.15, 8, 0, 0],
-  ];
+  // cam: [t, lng, lat, zoom, pitch, bearing, bottom padding]; equal times are cuts
+  const TIMELINES = {
+    30: {
+      T: 30, fade: [0.45, 0.35], stagger: 1, clock: [17.75, 3.4], route: [22.3, 2.4], veil: 25.9, url: false,
+      scenes: { s1: [0, 4.4], s2: [4.4, 8.6], s3: [8.6, 13], s4: [13, 17.4], s5: [17.4, 21.6], s6: [21.6, 25.8], s7: [25.8, 30.5] },
+      cam: [
+        [0.0, 139.742, 35.693, 10.3, 0, 0, 0],
+        [4.4, 139.745, 35.697, 11.25, 32, -10, 0],
+        [7.7, 139.726, 35.696, 12.5, 44, -18, 0],
+        [9.0, 139.7058, 35.6935, 15.7, 54, -26, 0],
+        [13.0, 139.7056, 35.6934, 16.5, 60, 14, 0],
+        [13.0, 139.77722, 35.72860, 16.9, 56, -38, 430],
+        [17.4, 139.77722, 35.72860, 17.5, 60, 6, 430],
+        [17.4, 139.752, 35.700, 11.95, 34, -12, 0],
+        [21.6, 139.752, 35.701, 12.35, 40, -2, 0],
+        [21.6, 139.72125, 35.77915, 16.65, 50, -32, 60],
+        [25.8, 139.72125, 35.77920, 17.05, 56, -16, 60],
+        [27.7, 139.742, 35.712, 11.7, 22, 0, 0],
+        [30.0, 139.745, 35.700, 11.15, 8, 0, 0],
+      ],
+    },
+    15: {
+      T: 15, fade: [0.28, 0.22], stagger: 0.5, clock: [9.65, 2.2], route: null, veil: 12.3, url: false,
+      scenes: { s1: [0, 3], s3: [3, 6.2], s4: [6.2, 9.4], s5: [9.4, 12.2], s7: [12.2, 15.5] },
+      cam: [
+        [0.0, 139.742, 35.693, 10.5, 0, 0, 0],
+        [2.5, 139.733, 35.695, 11.9, 30, -12, 0],
+        [3.5, 139.7058, 35.6935, 15.7, 52, -24, 0],
+        [6.2, 139.7056, 35.6934, 16.45, 60, 10, 0],
+        [6.2, 139.77722, 35.72860, 17.0, 56, -30, 430],
+        [9.4, 139.77722, 35.72860, 17.45, 60, 4, 430],
+        [9.4, 139.752, 35.700, 12.0, 34, -10, 0],
+        [12.2, 139.752, 35.701, 12.3, 38, -2, 0],
+        [15.0, 139.745, 35.700, 11.2, 8, 0, 0],
+      ],
+    },
+  };
+  const TL = TIMELINES[new URLSearchParams(location.search).get("cut") === "15" ? 15 : 30];
+  const CAM = TL.cam;
+  const CUTS = CAM.filter((k, i) => i && k[0] === CAM[i - 1][0]).map((k) => k[0]);
+  const IN = (t, sc) => !!sc && t >= sc[0] && t < sc[1];
 
   const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
   const ease = (u) => (u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2);
@@ -107,6 +133,13 @@
   })();
 
   function fill() {
+    document.querySelectorAll(".sc").forEach((el) => {
+      const key = [...el.classList].find((c) => /^s\d$/.test(c));
+      const w = TL.scenes[key];
+      el.dataset.a = w ? w[0] : -99; el.dataset.b = w ? w[1] : -99;
+      if (!w) el.hidden = true;
+    });
+    if (!TL.url) $(".s7 .url").hidden = true;
     const counts = {};
     live.forEach((s) => { counts[s.kind] = (counts[s.kind] || 0) + 1; });
     document.querySelectorAll('[data-n="all"]').forEach((el) => { el.textContent = live.length; });
@@ -142,34 +175,36 @@
     m.jumpTo(cam);
     // scene overlays
     let scene = 0;
-    document.querySelectorAll(".sc").forEach((el, i) => {
+    const shown = [...document.querySelectorAll(".sc")].filter((el) => !el.hidden);
+    const [fi, fo] = TL.fade, rise = fi + 0.25;
+    shown.forEach((el, i) => {
       const a = +el.dataset.a, b = +el.dataset.b;
       const local = t - a;
-      const fin = i === 0 ? clamp(local / 0.7 + 0.15) : clamp(local / 0.45);
-      const vis = fin * clamp((b - t) / 0.35);
+      const fin = i === 0 ? clamp(local / rise + 0.2) : clamp(local / fi);
+      const vis = fin * clamp((b - t) / fo);
       el.style.opacity = vis.toFixed(3);
       if (t >= a && t < b) scene = i;
       const h = el.querySelector(".v");
-      if (h) h.style.transform = (el.classList.contains("s7") ? "translateX(-50%) " : "") + `translateY(${((1 - easeOut(clamp(local / 0.7))) * 16).toFixed(2)}px)`;
+      if (h) h.style.transform = (el.classList.contains("s7") ? "translateX(-50%) " : "") + `translateY(${((1 - easeOut(clamp(local / rise))) * 16).toFixed(2)}px)`;
       el.querySelectorAll("[data-d]").forEach((c) => {
-        const u = clamp((local - +c.dataset.d) / 0.4);
+        const u = clamp((local - +c.dataset.d * TL.stagger) / (0.4 * Math.max(0.6, TL.stagger)));
         c.style.opacity = u.toFixed(3);
         c.style.transform = `translateY(${((1 - easeOut(u)) * 10).toFixed(2)}px)`;
       });
     });
-    $("#count").textContent = `${NUM[scene]}　／　七`;
+    $("#count").textContent = `${NUM[scene]}　／　${NUM[shown.length - 1]}`;
     // cut dips
     let dip = 0;
     for (const c of CUTS) dip = Math.max(dip, 1 - Math.abs(t - c) / 0.24);
     $("#dip").style.opacity = clamp(dip).toFixed(3);
-    $("#veil").style.opacity = (clamp((t - 25.9) / 0.8) * 0.85).toFixed(3);
+    $("#veil").style.opacity = (clamp((t - TL.veil) / 0.8) * 0.85).toFixed(3);
 
     // scene 4: the featured shop is selected
     // scene 5: the clock runs through a Friday and only open shops stay lit
     let want = null, select = null;
-    if (t >= 13 && t < 17.4) select = SHOW.card;
-    if (t >= 17.4 && t < 21.6) {
-      const u = clamp((t - 17.75) / 3.4);
+    if (IN(t, TL.scenes.s4)) select = SHOW.card;
+    if (IN(t, TL.scenes.s5)) {
+      const u = clamp((t - TL.clock[0]) / TL.clock[1]);
       const mins = 15 * 60 + Math.round(u * 9 * 6) * 10;   // 15:00 → 24:00 in 10-minute steps
       const now = FRIDAY + mins * 60e3;
       const ids = live.filter((s) => isOpen(s, now)).map((s) => s.id);
@@ -184,8 +219,8 @@
     const hop = SHOW.hop.map((id) => byId[id]);
     let coords = [];
     let reached = -1;
-    if (t >= 21.6 && t < 26) {
-      const u = clamp((t - 22.3) / 2.4);
+    if (TL.route && t >= TL.scenes.s6[0] && t < TL.scenes.s6[1] + 0.4) {
+      const u = clamp((t - TL.route[0]) / TL.route[1]);
       const legs = [dist(hop[0], hop[1]), dist(hop[1], hop[2])];
       const total = legs[0] + legs[1];
       let d = u * total;
@@ -206,9 +241,10 @@
     // labels that follow the map
     document.querySelectorAll(".stop").forEach((el) => {
       const i = +el.dataset.stop, s = hop[i], p = m.project([s.lng, s.lat]);
-      const on = reached >= i ? clamp((t - 22.3 - i * 1.15) / 0.35 + 1) : 0;
+      const r0 = TL.route ? TL.route[0] : 0;
+      const on = reached >= i ? clamp((t - r0 - i * 1.15) / 0.35 + 1) : 0;
       el.style.left = `${clamp(p.x, 130, 410)}px`; el.style.top = `${p.y - 30}px`;
-      el.style.opacity = (i === 0 ? clamp((t - 22.0) / 0.35) : on).toFixed(3);
+      el.style.opacity = (!TL.route ? 0 : i === 0 ? clamp((t - r0 + 0.3) / 0.35) : on).toFixed(3);
     });
     document.querySelectorAll(".walk").forEach((el) => {
       const i = +el.dataset.walk, a = m.project([hop[i].lng, hop[i].lat]), b = m.project([hop[i + 1].lng, hop[i + 1].lat]);
@@ -227,5 +263,5 @@
     await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
   }
 
-  window.reel = { ready: () => ready, seek, settled, T: 30, FPS: 30 };
+  window.reel = { ready: () => ready, seek, settled, T: TL.T, FPS: 30 };
 })();

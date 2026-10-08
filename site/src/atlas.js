@@ -98,21 +98,21 @@
       glow: 0.6, ykFill: 0.11, ykLine: 0.8, dot: "#fff1d0",
     },
     day: {
-      bg: "#f2ece0", park: "#dfe3c8", forest: "#d4dbbd", cemetery: "#e3e2d1", grass: "#e3e7ce", water: "#c8d5da", river: "#bccdd4",
-      bld: "#e6dfd1", bldLo: "#e9e2d4", bldHi: "#d3c9b5", bldLine: "#d4cab7",
-      minor: "#fcf9f2", ped: "#f4eadb", tert: "#fefbf5", sec: "#f8ebcd", pri: "#f3dcae", mot: "#eeca90",
-      cas: "#d8cbb4", tunnel: "#d1c7b6", path: "#a89d89", admin: "#bcaba1", pref: "#a8908a",
-      rail: "#4b453e", railTun: 0.4, railOp: 0.9, railCase: "#f2ece0",
-      text: "#24201b", halo: "#f7f2e8", yomi: "#7a6f60", place: "#6f6455", placeBig: "#4b4238", parkText: "#5a774b",
-      station: "#ffffff", stationRing: "#24201b", sign: "#c7361f", signText: "#fffaf0", signLine: "rgba(36,32,27,.35)",
-      poi: "#a3603a", poiText: "#8a4f2f",
-      glow: 0.22, ykFill: 0.12, ykLine: 0.7, dot: "#fffaf0",
+      bg: "#f4f4f1", park: "#dde8d6", forest: "#d3e0cb", cemetery: "#e5e9e2", grass: "#e1eadb", water: "#cdd9e2", river: "#c3d2dd",
+      bld: "#e9e8e4", bldLo: "#efeeea", bldHi: "#e0dfda", bldLine: "#d9d8d3",
+      minor: "#ffffff", ped: "#f0eeea", tert: "#ffffff", sec: "#ffffff", pri: "#ffffff", mot: "#fffcf6",
+      cas: "#d6d5d0", tunnel: "#d3d2cd", path: "#a6a5a0", admin: "#bab6c6", pref: "#a7a1b6",
+      rail: "#3d3d3b", railTun: 0.4, railOp: 0.85, railCase: "#f4f4f1",
+      text: "#1c1c1b", halo: "#f8f8f6", yomi: "#77766f", place: "#6c6b66", placeBig: "#3f3e3a", parkText: "#557550",
+      station: "#ffffff", stationRing: "#1c1c1b", sign: "#c8371f", signText: "#fffdf9", signLine: "rgba(28,28,27,.32)",
+      poi: "#ad5a3a", poiText: "#8e4a31",
+      glow: 0.14, ykFill: 0.1, ykLine: 0.7, dot: "#ffffff",
     },
   };
   // 朱・山吹・群青・若竹・藤・桃
   const KIND_COL = {
     night: { yokocho: "#ff6a4a", senbero: "#f5b844", tachinomi: "#7aa2ff", kakuuchi: "#52c9a0", bar: "#b892f2", social: "#ff7fae" },
-    day: { yokocho: "#c7361f", senbero: "#c98a14", tachinomi: "#2d55b5", kakuuchi: "#1b7f5f", bar: "#7b4bb0", social: "#c2386d" },
+    day: { yokocho: "#c8371f", senbero: "#d08a0e", tachinomi: "#2f56b8", kakuuchi: "#18805f", bar: "#7c4cb3", social: "#c93a72" },
   };
   const KIND_GLYPH = { yokocho: "横", senbero: "千", tachinomi: "立", kakuuchi: "角", bar: "酒", social: "交" };
 

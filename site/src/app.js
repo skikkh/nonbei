@@ -566,7 +566,7 @@
     state.theme = t;
     store.set("nb-theme", t);
     document.documentElement.dataset.theme = t;
-    $('meta[name="theme-color"]').setAttribute("content", t === "night" ? "#0b0f19" : "#f2ece0");
+    $('meta[name="theme-color"]').setAttribute("content", t === "night" ? "#0b0f19" : "#f4f4f1");
     syncThemeButton();
     if (atlas) atlas.setTheme(t);
   }

@@ -24,24 +24,24 @@
   color-scheme: dark;
 }
 [data-theme="day"] {
-  --bg: #f2ece0;
-  --rail-bg: #e8dfcc;
-  --panel: #f8f4eb;
-  --panel-2: #efe7d8;
-  --glass: rgba(248, 244, 235, .9);
-  --hover: rgba(36, 32, 27, .05);
-  --line: rgba(36, 32, 27, .1);
-  --line-2: rgba(36, 32, 27, .24);
-  --text: #24201b;
-  --text-2: #554c40;
-  --text-3: #8a7f6e;
-  --accent: #c7361f;
-  --accent-2: #a23a26;
-  --gold: #9c6c0c;
-  --open: #2e8558;
-  --seal-text: #fffaf0;
-  --shadow: 0 12px 32px rgba(36, 32, 27, .16);
-  --k-yokocho: #c7361f; --k-senbero: #c98a14; --k-tachinomi: #2d55b5; --k-kakuuchi: #1b7f5f; --k-bar: #7b4bb0; --k-social: #c2386d;
+  --bg: #f4f4f1;
+  --rail-bg: #ecece8;
+  --panel: #fbfbfa;
+  --panel-2: #f1f1ee;
+  --glass: rgba(251, 251, 250, .92);
+  --hover: rgba(28, 28, 27, .045);
+  --line: rgba(28, 28, 27, .1);
+  --line-2: rgba(28, 28, 27, .2);
+  --text: #1c1c1b;
+  --text-2: #4b4a46;
+  --text-3: #84837d;
+  --accent: #c8371f;
+  --accent-2: #b8361f;
+  --gold: #c8371f;
+  --open: #23845a;
+  --seal-text: #fffdf9;
+  --shadow: 0 12px 32px rgba(28, 28, 27, .12);
+  --k-yokocho: #c8371f; --k-senbero: #d08a0e; --k-tachinomi: #2f56b8; --k-kakuuchi: #18805f; --k-bar: #7c4cb3; --k-social: #c93a72;
   color-scheme: light;
 }
 :root {
@@ -111,6 +111,7 @@ svg { width: 18px; height: 18px; flex: none; }
   grid-column: 2; grid-row: 1; z-index: 2; min-width: 0; overflow: hidden; position: relative;
   background: var(--panel); border-right: 1px solid var(--line);
 }
+[data-theme="day"] #drawer::before { display: none; }
 #drawer::before { /* a faint paper grain */
   content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: soft-light;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -169,7 +170,7 @@ svg { width: 18px; height: 18px; flex: none; }
 .selects label { flex: 1; display: flex; align-items: center; gap: 8px; min-width: 0; font-size: 11px; color: var(--text-3); }
 .selects select {
   flex: 1; min-width: 0; appearance: none; -webkit-appearance: none; padding: 5px 18px 5px 0;
-  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23998f7c' stroke-width='1.4'/%3E%3C/svg%3E") no-repeat right 2px center;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23908f89' stroke-width='1.4'/%3E%3C/svg%3E") no-repeat right 2px center;
   border: 0; border-bottom: 1px solid var(--line-2); border-radius: 0; font-size: 12.5px; color: var(--text);
 }
 .selects select option, .selects select optgroup { background: var(--panel); color: var(--text); }

@@ -3305,9 +3305,9 @@
    "price": "寿司・和食・おでんの居酒屋・ビストロ・小さなバーが並ぶ。かくれんぼ横丁のちょうちんは夜4,000〜5,000円台",
    "region": "都心（新橋・銀座・神田）",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "}~|tpBgwrkq@JYN_@Zw@\\}@^cATq@DO~@}BFQ"
+     "iw|tpB{}rkq@hAcDQGDIQIEH_@MWt@OGZy@SIHUQIMZUK[t@QGAB]MIPOG@Ce@S@Ca@MKVs@WDKq@SM`@oD{AIP~@^]~@b@NCD\\LITWKGLg@SABu@WKVGCIRHBWt@z@ZDOnA`@@Ex@ZUh@v@ZEHgBq@Oj@BHjCfAnAd@DKRFEH\\NGNRFHUtA`A\\q@UMJUn@XP_@NFFORHLk@Zs@WKQZkAa@N_@h@TXq@"
     ]
    },
    "lat": 35.7019633,
@@ -3373,9 +3373,9 @@
    "price": "パブ・バー・小料理屋・鉄板焼などの小さな店が点在。ザ・ロイヤルスコッツマンは3,000〜4,000円",
    "region": "都心（新橋・銀座・神田）",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "c`}tpBgiskq@DQ\\}@@EL_@@AfAMrB[jASp@G"
+     "qt|tpBmoskq@REQo@[H?Ca@FAE[D?DYFG]e@FAC[FRnAm@JKm@MBASOBAKO@Wt@MGL]KEJAEIXGEUD?WeAe@H?KS@?Hc@??H_@GUtA^FGN[IMd@d@NERj@NEN\\LUn@XJKZRFHWb@NZ}@FBHSRC@HLA?GHAAGZCPJL]THJANJJOIGRE@HZE?BH?`@q@CIZE"
     ]
    },
    "lat": 35.7009942,
@@ -3442,6 +3442,12 @@
    "price": "居酒屋・小さなバー・スナック・中華・そば店などが短い路地に並ぶ。表の東邦ビルには神楽坂飯店のジャンボ餃子などのデカ盛りの店",
    "region": "都心（新橋・銀座・神田）",
    "area_label": "神楽坂（飯田橋）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "{q}tpB_qskq@SIJUSGGPa@O[z@HBSh@oAg@}@xBhBt@[z@GXu@zAPHt@}AFWZNZs@A?L]HBXu@JBHUq@WJ]PH"
+    ]
+   },
    "lat": 35.700867,
    "lng": 139.742706,
    "geo": "gsi-block",
@@ -5809,9 +5815,9 @@
    "price": "おでん千の里で2,400円ほど（2023年の訪問記）、エルマンは平均2,000円〜（スナック横丁）",
    "region": "上野・浅草・日暮里",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "kieupBsagkq@SHwAj@mFdA"
+     "_jeupB}`gkq@ZMIQ]LGMKDCEg@RWF?@KBCGe@H@DOBAESDBFa@FACuAXODF\\OBDRNCP`@l@QtAWZIAAfAQIa@XMFPJEb@Q"
     ]
    },
    "lat": 35.7286282,
@@ -6477,18 +6483,24 @@
    "en": "Hatsune-koji, Asakusa",
    "price": "昼から店先のテーブルで生ビールともつ煮を出す店がある（2019年の訪問記）",
    "region": "上野・浅草・日暮里",
-   "lat": 35.715107,
-   "lng": 139.794113,
-   "geo": "gsi-block",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "ippupBqdmkq@QcB_@DAISB?DSBTfBWBNdAr@JMcApC[CY"
+    ]
+   },
+   "lat": 35.714886,
+   "lng": 139.7943761,
+   "geo": "outline",
    "gsi": "東京都台東区浅草二丁目７番",
    "near": [
     [
      "浅草",
-     283
+     251
     ],
     [
      "田原町",
-     660
+     650
     ]
    ]
   },
@@ -7577,6 +7589,12 @@
    "en": "Obake Yokocho, Yushima",
    "price": "立ち飲み、居酒屋、小料理屋、スナックまで価格帯は店による",
    "region": "上野・浅草・日暮里",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "gvgupBujpkq@F??W{@GCaAC?AWWA@m@[A?SW?@NsAG?j@e@AEaAU?B`A_@@@j@m@BAw@Q@Cu@i@C?KW??F[@@f@J??`@q@BBh@M@@Xi@B@RO@?VLA@^dACAa@x@CH|CV??GL?Ac@b@ACuBXA@|@x@C@^a@@?^DA@j@^@?DV??A^@Bq@d@@Er@j@DAIN?@N|ADDIBAHIDWi@@GiBd@C"
+    ]
+   },
    "lat": 35.7073741013295,
    "lng": 139.77034,
    "geo": "gsi",
@@ -8142,6 +8160,12 @@
    "en": "Yanaka Hatsune-koji",
    "price": "例: 谷中イタリアンバール nenecoloでローストポークとアラビアータ、ワイン2杯で4,000円弱（2019年の訪問記）",
    "region": "上野・浅草・日暮里",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "ibgupByqgkq@?[qCDBl@k@@PVXC?HjCEAq@"
+    ]
+   },
    "lat": 35.727188101329496,
    "lng": 139.768356,
    "geo": "gsi",
@@ -9255,6 +9279,12 @@
    "en": "Shin-Okubo Korean Yokocho",
    "price": "1階に韓国料理の専門店10店（チヂミ・豚足・チキン・サムギョプサル・海鮮ポチャ・ホルモン・家庭料理・韓国式中華など）、2階にカラオケ・フリーラウンジ・K-POPバー・スナック",
    "region": "新宿・中野・杉並",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "i_ptpBwcskq@t@FAPh@DPuBYCHgAgAI"
+    ]
+   },
    "lat": 35.701233,
    "lng": 139.704773,
    "geo": "gsi",
@@ -9429,9 +9459,9 @@
    "region": "新宿・中野・杉並",
    "area_label": "新宿（歌舞伎町）",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "qootpBedvkq@u@O[GMA[EQ?Of@Qh@"
+     "}ootpB}bvkq@OEJ[NBDSMCZaAi@OGNi@KUt@kBe@a@vALTd@JABPFBEj@JADPDBEj@JFADGFQND"
     ]
    },
    "lat": 35.6948837,
@@ -9639,6 +9669,12 @@
    "price": "全17店舗・約1,000席。博多屋台・貝・肉・鉄板・韓国料理・中華などの業態が入り、予約なしで使える",
    "region": "新宿・中野・杉並",
    "area_label": "新宿（東口）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "c|ntpBa`xkq@Bs@qBMGd@RN"
+    ]
+   },
    "lat": 35.690651,
    "lng": 139.702179,
    "geo": "gsi",
@@ -9712,6 +9748,12 @@
    "price": "小さなバーが多く、チャージ・エントランス料のある店が多い（cafe&bar VOICE 550円、ニューサザエ1ドリンク込み1,000円など）。Campy! Bar のようにノーチャージのキャッシュオンの店もある",
    "region": "新宿・中野・杉並",
    "area_label": "新宿二丁目",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "kxptpBifxkq@^qBo@[Te@UKq@xA[MWn@sAo@Rg@TLb@aAqAk@YFXw@UI]x@GWUK@CcAa@Yn@THWn@cBy@NYHBFKF@Xo@o@YBGaAa@Vg@UKk@lAYKOZVLuAzCwBdGcCUCNG?Q`E@FFDhC\\Jb@B?PdANCCVrB|@{@pBE\\?f@V@@g@BWN_@B@EZPVTDDo@T@JkAQE_@Nj@uAT|@ZH`@kBvDv@FWQEV}@IQZFFWgCg@Nu@lIpBVDh@IIg@c@Fg@MTMHo@m@YGLE@Yr@mAYjAoCvCrAJUyCsAVm@n@XVk@hAf@JS"
+    ]
+   },
    "lat": 35.6901168,
    "lng": 139.7081857,
    "geo": "osm-area",
@@ -9769,6 +9811,12 @@
    "price": "韓国料理の GANTZ.、泡とワインの awato など5軒が入るフードコート型の横丁",
    "region": "新宿・中野・杉並",
    "area_label": "新宿二丁目",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "inqtpBs}wkq@d@F\\u@u@S"
+    ]
+   },
    "lat": 35.690887,
    "lng": 139.708847,
    "geo": "gsi",
@@ -9826,10 +9874,9 @@
    "region": "新宿・中野・杉並",
    "area_label": "新宿三丁目",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "qoptpBy`xkq@gAlDgApD_@lAEDYPk@N",
-     "qoptpBy`xkq@JWFMl@sAN_@"
+     "wlptpBixwkq@HQa@QTm@UKUl@e@STg@gA[`A{CdAcCQIgAbCSl@e@Q_AlCj@RGRk@O{@rCQGApBTHYNm@PDPn@QTREL~@XVy@y@UGIJ[^LNi@MEWHRo@HVZJr@{B`@J?Bn@VF]"
     ]
    },
    "lat": 35.6911498,
@@ -9893,6 +9940,12 @@
    "price": "九州の肉料理・琉球中華・カジュアルフレンチ・焼鳥・唐揚げの店が1フロアに並ぶ。琉球チャイニーズ シシシの夜の目安は3,500〜4,500円",
    "region": "新宿・中野・杉並",
    "area_label": "新宿三丁目",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "uiotpB{~vkq@t@iBa@Qo@~ADN"
+    ]
+   },
    "lat": 35.692783,
    "lng": 139.703033,
    "geo": "gsi",
@@ -9959,9 +10012,9 @@
    "region": "新宿・中野・杉並",
    "area_label": "新宿三丁目",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "quptpBedxkq@f@RvCvAlAj@`Bx@PFtBbAnBz@XL"
+     "ueptpByzwkq@bCfAHQkGsCrAqCQIWl@ESq@Y]t@_@QGDSIYn@oEuBk@UIPz@\\Q^t@^S|@h@LVeAVNJQrBbAKb@^Hq@~BXNNEIVe@OKVDBGPEA]dAe@OIR@Hz@VXGQl@GQYI_BbFh@PQl@PFTq@t@TRo@b@Lb@mAo@UZw@OEPi@WGQFRs@HZl@PBKXHFONFUj@PH"
     ]
    },
    "lat": 35.6907961,
@@ -12148,6 +12201,12 @@
    "price": "元料亭・旅館を改装した居酒屋の品川亭、昭和からの鳥料理の志な川、馬肉料理、ラーメンなど数軒",
    "region": "新宿・中野・杉並",
    "area_label": "西新宿（十二社）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "cjitpBogxkq@]u@A@KSEBKYEBQa@s@XSe@]LGMq@ZPb@kBl@@DC?RdA^v@NPMJP`@U`@e@VJPh@[~@_Bh@S\\l@p@a@[]fB}@~@K`@SKQ[P"
+    ]
+   },
    "lat": 35.690308,
    "lng": 139.68692,
    "geo": "gsi",
@@ -13626,10 +13685,9 @@
    "price": "学生向けの安い居酒屋・チェーンの大衆酒場・立ち飲み・焼き鳥・スナックが並ぶ。鳥やす本店の焼鳥盛り合わせ670円（税別）",
    "region": "新宿・中野・杉並",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "msotpB_tmkq@CV?FDL`@|@r@bAz@z@XRf@\\HFXVnAd@D@fA\\n@T|AZ",
-     "gbotpBifmkq@\\H\\F"
+     "s`otpBgfmkq@Ls@w@OMr@mAWd@{Au@WSh@a@MUp@YKTk@m@SABMEADYMIR[OTIGSa@[FCIOK?k@\\MIv@a@O_@w@`@NVCBq@q@d@]KQg@\\c@o@c@{@CKB_@WCCd@FVAj@Uv@BDEXCBp@XGF^Xd@a@FDeAjAb@\\b@i@^\\j@y@zAfAo@fB|@Df@sAl@RUt@f@BELRFz@D@CVF@CND@Cx@HBWx@PFW"
     ]
    },
    "lat": 35.7144767,
@@ -20201,10 +20259,9 @@
    "price": "約400mの通りに飲食店約100軒。まるます家など朝・昼から飲める老舗が並ぶ",
    "region": "池袋・赤羽・城北",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "}tutpBc}ojq@m@kAwAqCCqAAwA?g@",
-     "}tutpBc}ojq@f@`Df@hCHh@^~B^|BnAlIvAvI"
+     "ajutpBqxnjq@c@e@GF}@oFNABPt@KCWFACKNCIm@UBAEc@F@FUB?DM@EW~AUOoAaBTIc@x@OG[w@LG]j@IGe@]DKRYkBPCEWPCG[c@HGc@~@MQoAu@JGJKi@l@AKs@k@Ji@qCVD\\OKm@E@S_Bc@PELYk@ZDTMUg@MDKUJGoAcCIDEK_@PC_BLJz@AJ]D?Ae@{AA?s@[??v@{A?@`AnB@?HeAB?^M??BY??\\jAANQBb@y@B@j@P?HENTEB~@fB\\QDHULb@t@^OBDBRKEy@TRn@]FF`@`AOBNDAAXPNLMLl@SCSPNVKHIMw@j@b@l@OJT\\vAaALv@I@GYkAx@hAlBn@a@Jn@q@r@R~A|@MLr@aANDX^GBP`@GNbAkBZZRDLIBVTNCDTDABLFA@D`@IFMJr@QM_@DAHOBc@t@`@Zv@OJf@\\GBPi@HEHJj@PEFX\\G\\tBZGO_AZDRQUY"
     ]
    },
    "lat": 35.7796044,

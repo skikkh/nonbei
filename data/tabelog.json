@@ -1398,6 +1398,169 @@
   "categories": "Pub",
   "url": "https://tabelog.com/tokyo/A1319/A131902/13309927/"
  },
+ "nakano-robou": {
+  "score": 3.12,
+  "phone": "03-3387-0646",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1110,
+     1440,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     1110,
+     1440,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     1110,
+     1440,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     1110,
+     1440,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1110,
+     1440,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1110,
+     1440,
+     null
+    ]
+   ],
+   "sun": [],
+   "hol": []
+  },
+  "hours": "月〜土 18:30〜24:00／日・祝 定休",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 8,
+  "seating": [
+   "落ち着いた空間",
+   "カウンター席"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒"
+  ],
+  "categories": "Izakaya (Japanese style tavern), Japanese sake bar",
+  "url": "https://tabelog.com/tokyo/A1319/A131902/13013547/"
+ },
+ "nakano-vivo-daily-stand": {
+  "score": 3.22,
+  "phone": "03-5888-5476",
+  "reserve": "完全予約制",
+  "week": {
+   "mon": [
+    [
+     720,
+     1680,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     720,
+     1680,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     720,
+     1680,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     720,
+     1680,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     720,
+     1680,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     720,
+     1680,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     720,
+     1680,
+     null
+    ]
+   ],
+   "hol": [
+    [
+     720,
+     1680,
+     null
+    ]
+   ],
+   "prehol": [
+    [
+     720,
+     1680,
+     null
+    ]
+   ],
+   "posthol": [
+    [
+     720,
+     1680,
+     null
+    ]
+   ]
+  },
+  "hours": "月〜日・祝 12:00〜28:00／祝前日 12:00〜28:00／祝後日 12:00〜28:00",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "budget_lunch": "〜¥999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）・電子マネー（交通系IC）・QR決済（PayPay・d払い・楽天ペイ・au PAY）可",
+  "cash_only": false,
+  "charge": "チャージ無し",
+  "seats": 12,
+  "seating": [
+   "おしゃれ空間",
+   "カウンター席",
+   "Wi-Fi"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "ワイン",
+   "ワインにこだわり"
+  ],
+  "web": "https://vivodailystand-nakano-winebaru.officialblog.jp/",
+  "opened": "2007.5.17",
+  "categories": "Baru (Spanish style bar), Wine bar, Cafe",
+  "url": "https://tabelog.com/tokyo/A1319/A131902/13053321/"
+ },
  "nakano-yakuya": {
   "score": 3.52,
   "phone": "03-3387-8984",
@@ -1463,6 +1626,77 @@
   ],
   "categories": "Grilled tripe, Yakitori (Grilled chicken skewers), Izakaya (Japanese style tavern)",
   "url": "https://tabelog.com/tokyo/A1319/A131902/13047117/"
+ },
+ "nakanoshimbashi-teppo": {
+  "score": 3.05,
+  "phone": "03-3375-5865",
+  "reserve": "予約可",
+  "week": {
+   "tue": [
+    [
+     1020,
+     1320,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1320,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1320,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1320,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1320,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     720,
+     1020,
+     null
+    ]
+   ],
+   "mon": []
+  },
+  "hours": "月 定休／火〜土 17:00〜22:00／日 12:00〜17:00",
+  "budget_dinner": "¥5,000〜¥5,999",
+  "budget_lunch": "¥4,000〜¥4,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）・QR決済（PayPay）可",
+  "cash_only": false,
+  "seats": 9,
+  "seating": [
+   "おしゃれ空間",
+   "落ち着いた空間",
+   "カウンター席"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン",
+   "ワインにこだわり"
+  ],
+  "opened": "1978.12.3",
+  "categories": "Japanese Cuisine, Izakaya (Japanese style tavern), Seafood",
+  "url": "https://tabelog.com/tokyo/A1319/A131902/13045209/"
  },
  "okubo-tachinomi-pokapoko": {
   "score": 3.13,
@@ -2737,6 +2971,127 @@
   "categories": "Oden",
   "url": "https://tabelog.com/tokyo/A1305/A130504/13006140/"
  },
+ "higashinakano-ma-yan": {
+  "score": 3.03,
+  "phone": "03-3371-9637",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1140,
+     1500,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     1140,
+     1500,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     1140,
+     1500,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     1140,
+     1500,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1140,
+     1500,
+     null
+    ]
+   ],
+   "sat": [],
+   "sun": [],
+   "hol": []
+  },
+  "hours": "月〜金 19:00〜25:00／土・日・祝 定休",
+  "budget_dinner": "¥4,000〜¥4,999",
+  "pay": "現金・カード（JCB・AMEX）・QR決済可",
+  "cash_only": false,
+  "charge": "セット料金",
+  "seats": 30,
+  "seating": [
+   "カウンター席",
+   "ライブ"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒"
+  ],
+  "web": "http://mayan.sp.land.to/",
+  "categories": "Izakaya (Japanese style tavern), Bar",
+  "url": "https://tabelog.com/tokyo/A1319/A131901/13074860/"
+ },
+ "eifukucho-izakaya-onishi": {
+  "score": 3.05,
+  "week": {
+   "mon": [
+    [
+     1020,
+     1440,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1440,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1440,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1440,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1440,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1440,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     1020,
+     1440,
+     null
+    ]
+   ]
+  },
+  "hours": "月〜日 17:00〜24:00",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "categories": "Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1319/A131903/13084166/"
+ },
  "ogikubo-slainte": {
   "score": 3.07,
   "pay": "現金・カード・QR決済（PayPay）可",
@@ -2817,6 +3172,69 @@
   ],
   "categories": "Yakitori (Grilled chicken skewers), Grilled tripe, Seafood",
   "url": "https://tabelog.com/tokyo/A1319/A131906/13001103/"
+ },
+ "ogikubo-tsubaiso": {
+  "score": 3.07,
+  "phone": "03-3393-3792",
+  "reserve": "予約可",
+  "week": {
+   "tue": [
+    [
+     900,
+     1380,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     900,
+     1380,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     900,
+     1380,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     900,
+     1380,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     840,
+     1260,
+     null
+    ]
+   ],
+   "mon": [],
+   "sun": []
+  },
+  "hours": "月 定休／火〜金 15:00〜23:00／土 14:00〜21:00／日 定休",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）・電子マネー（交通系IC）・QR決済（PayPay・d払い・楽天ペイ・au PAY・Alipay）可",
+  "cash_only": false,
+  "charge": "お通し５００円（席料として）",
+  "seats": 16,
+  "seating": [
+   "落ち着いた空間",
+   "カウンター席",
+   "スポーツ観戦"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "opened": "1970.7.1",
+  "categories": "Izakaya (Japanese style tavern), Kushiyaki, Japanese Cuisine",
+  "url": "https://tabelog.com/tokyo/A1319/A131906/13149692/"
  },
  "nishiogikubo-18-ohako": {
   "score": 3.29,
@@ -2948,6 +3366,68 @@
   "categories": "Izakaya (Japanese style tavern), Yakitori (Grilled chicken skewers), Grilled tripe",
   "url": "https://tabelog.com/tokyo/A1319/A131907/13000711/"
  },
+ "nishiogikubo-nishiogi-hutte": {
+  "score": 3.07,
+  "phone": "090-9373-9511",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     960,
+     1380,
+     1290
+    ]
+   ],
+   "tue": [
+    [
+     960,
+     1380,
+     1290
+    ]
+   ],
+   "fri": [
+    [
+     960,
+     1380,
+     1290
+    ]
+   ],
+   "sat": [
+    [
+     960,
+     1380,
+     1290
+    ]
+   ],
+   "sun": [
+    [
+     960,
+     1380,
+     1290
+    ]
+   ],
+   "wed": [],
+   "thu": []
+  },
+  "hours": "月・火 16:00〜23:00（L.O.21:30）／水・木 定休／金〜日 16:00〜23:00（L.O.21:30）",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "charge": "お通し300円（税別）",
+  "seats": 17,
+  "seating": [
+   "おしゃれ空間",
+   "カウンター席"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "ワイン"
+  ],
+  "web": "http://www.osanaidesign.com/nishiogihutte/",
+  "opened": "2016.7.16",
+  "categories": "Bar",
+  "url": "https://tabelog.com/tokyo/A1319/A131907/13200386/"
+ },
  "asagaya-annaijo": {
   "score": 3.18,
   "phone": "03-6338-1965",
@@ -3006,6 +3486,50 @@
   "opened": "2019.10.29",
   "categories": "Stand-up bar",
   "url": "https://tabelog.com/tokyo/A1319/A131905/13240683/"
+ },
+ "asagaya-daikonya": {
+  "score": 3.11,
+  "phone": "03-3338-7791",
+  "reserve": "予約可",
+  "week": {
+   "thu": [
+    [
+     1080,
+     1380,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1080,
+     1380,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1080,
+     1380,
+     null
+    ]
+   ],
+   "mon": [],
+   "tue": [],
+   "wed": [],
+   "sun": []
+  },
+  "hours": "月〜水 定休／木〜土 18:00〜23:00／日 定休",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒"
+  ],
+  "categories": "Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1319/A131905/13011883/"
  },
  "asagaya-futakun": {
   "score": 3.43,
@@ -4119,6 +4643,14 @@
   ],
   "categories": "Stand-up bar",
   "url": "https://tabelog.com/tokyo/A1318/A131802/13097375/"
+ },
+ "sakurajosui-ippei": {
+  "score": 3.05,
+  "reserve": "予約可",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "categories": "Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1318/A131809/13184203/"
  },
  "nakameguro-samon": {
   "score": 3.48,
@@ -9179,6 +9711,67 @@
   ],
   "categories": "Izakaya (Japanese style tavern), Cafeteria, Seafood",
   "url": "https://tabelog.com/tokyo/A1305/A130501/13047450/"
+ },
+ "numabukuro-manryo": {
+  "score": 3.25,
+  "phone": "03-3389-7009",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "sun": []
+  },
+  "hours": "月〜土 17:00〜23:00／日 定休",
+  "seats": 10,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "categories": "Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1321/A132104/13142117/"
  },
  "numabukuro-tatsuya": {
   "score": 3.43,

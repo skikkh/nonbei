@@ -66,6 +66,17 @@
     }
     return { open: false, closedToday: true };
   }
+  /** how the lantern is lit: "on" open now, "off" outside its hours, "unk" hours unknown.
+      A yokocho is lit while any of its shops is open, and dark only when two or more known ones are all shut. */
+  function litState(s) {
+    if (s.kind === "yokocho") {
+      const sts = (kids[s.id] || []).map((o) => openState(o)).filter(Boolean);
+      if (sts.some((x) => x.open)) return "on";
+      return sts.length >= 2 ? "off" : "unk";
+    }
+    const st = openState(s);
+    return !st ? "unk" : st.open ? "on" : "off";
+  }
   function stLabel(st, long) {
     if (!st) return null;
     if (st.open) {
@@ -104,7 +115,7 @@
     theme: store.get("nb-theme", "night"),
     three: store.get("nb-three2", false),
   };
-  let D, spots, byId, atlas;
+  let D, spots, byId, atlas, kids = {};
   const phone = () => matchMedia("(max-width: 820px)").matches;
 
   function searchText(s) {
@@ -148,6 +159,7 @@
     spots = D.spots;
     spots.forEach((s) => { s._q = searchText(s); });
     byId = Object.fromEntries(spots.map((s) => [s.id, s]));
+    spots.forEach((o) => { if (o.yokocho && o.status !== "closed") (kids[o.yokocho] = kids[o.yokocho] || []).push(o); });
     buildFilters();
     bindUI();
     if (!window.maplibregl) { status("地図の部品を読み込めませんでした。通信状況を確かめて再読み込みしてください。"); renderList(); return; }
@@ -568,6 +580,7 @@
     $("#clock").textContent = `${t.getUTCMonth() + 1}月${t.getUTCDate()}日（${di.hol ? "祝" : DAY_JP[DK[di.dow]]}）${hm(min)}`;
     const open = spots.filter((s) => s.status !== "closed" && (openState(s) || {}).open).length;
     $("#open-count").innerHTML = `いま <b>${open}</b>軒が営業中`;
+    if (atlas) atlas.setLit(new Map(spots.filter((s) => s.status !== "closed").map((s) => [s.id, litState(s)])));
     const list = $("#list"), top = list.scrollTop;
     renderList();
     list.scrollTop = top;

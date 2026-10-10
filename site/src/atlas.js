@@ -116,6 +116,7 @@
     night: { yokocho: "#ff6a4a", senbero: "#f5b844", tachinomi: "#7aa2ff", kakuuchi: "#52c9a0", bar: "#b892f2", social: "#ff7fae" },
     day: { yokocho: "#c8371f", senbero: "#d08a0e", tachinomi: "#2f56b8", kakuuchi: "#18805f", bar: "#7c4cb3", social: "#c93a72" },
   };
+  const LIT = { on: 1, unk: 0.45, off: 0 };
   const KIND_GLYPH = { yokocho: "横", senbero: "千", tachinomi: "立", kakuuchi: "角", bar: "酒", social: "交" };
 
   // zoom → width stops
@@ -223,6 +224,7 @@
       this.P = PAL[this.theme];
       this.KC = KIND_COL[this.theme];
       this.spots = opts.spots;
+      this.lit = new Map();      // id -> "on" | "off" | "unk" (open now / outside its hours / hours unknown); missing = on
       this.selected = null;
       this.hover = null;
       this.labels = new Map();   // cell -> labels
@@ -369,7 +371,7 @@
     // -------------------------------------------------------------- spots
     _spotGeo() {
       return { type: "FeatureCollection", features: this.spots.filter((s) => this.visibleIds.has(s.id)).map((s) => ({
-        type: "Feature", properties: { id: s.id, k: s.kind, s: s.social || 0, st: s.status },
+        type: "Feature", properties: { id: s.id, k: s.kind, s: s.social || 0, st: s.status, on: LIT[this.lit.get(s.id) || "on"] },
         geometry: { type: "Point", coordinates: [s.lng, s.lat] } })) };
     }
     _ykGeo() {
@@ -389,11 +391,12 @@
     _addSpotLayers() {
       const m = this.map, P = this.P, K = this.KC;
       const kc = ["match", ["get", "k"], "yokocho", K.yokocho, "senbero", K.senbero, "tachinomi", K.tachinomi, "kakuuchi", K.kakuuchi, "bar", K.bar, K.social];
-      m.addLayer({ id: "spot-glow", type: "circle", source: "spots", filter: ["!=", ["get", "st"], "closed"],
+      m.addLayer({ id: "spot-glow", type: "circle", source: "spots", filter: ["all", ["!=", ["get", "st"], "closed"], [">", ["get", "on"], 0]],
         paint: {
           "circle-color": kc, "circle-blur": 1, "circle-pitch-alignment": "map",
           "circle-radius": ["interpolate", ["exponential", 2], ["zoom"], 9, ["*", 1.6, ["+", 3, ["get", "s"]]], 13, ["*", 5, ["+", 3, ["get", "s"]]], 15, ["*", 8, ["+", 2, ["get", "s"]]], 18, ["*", 13, ["+", 2, ["get", "s"]]]],
-          "circle-opacity": ["interpolate", ["linear"], ["zoom"], 9, P.glow * 1.1, 13, P.glow, 16, P.glow * 0.75, 18, P.glow * 0.6],
+          "circle-opacity": ["interpolate", ["linear"], ["zoom"], 9, ["*", P.glow * 1.1, ["get", "on"]], 13, ["*", P.glow, ["get", "on"]],
+            16, ["*", P.glow * 0.75, ["get", "on"]], 18, ["*", P.glow * 0.6, ["get", "on"]]],
         } }, "anchor-spots");
       m.addLayer({ id: "yk-fill", type: "fill", source: "yk", minzoom: 13.5, filter: ["==", ["get", "t"], "p"], paint: { "fill-color": K.yokocho, "fill-opacity": P.ykFill } }, "anchor-spots");
       m.addLayer({ id: "yk-line", type: "line", source: "yk", minzoom: 13.5,
@@ -403,7 +406,8 @@
         paint: {
           "circle-color": kc, "circle-radius": ["interpolate", ["linear"], ["zoom"], 9, 1.8, 13, ["+", 2.4, ["*", 0.4, ["get", "s"]]]],
           "circle-stroke-color": P.dot, "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 9, 0.5, 13, 1.2],
-          "circle-opacity": ["case", ["==", ["get", "st"], "closed"], 0.35, 1], "circle-stroke-opacity": ["case", ["==", ["get", "st"], "closed"], 0.35, 1],
+          "circle-opacity": ["case", ["==", ["get", "st"], "closed"], 0.35, ["==", ["get", "on"], 0], 0.42, 1],
+          "circle-stroke-opacity": ["case", ["==", ["get", "st"], "closed"], 0.35, ["==", ["get", "on"], 0], 0.42, 1],
         } });
     }
     setVisible(ids) {
@@ -414,6 +418,15 @@
       this._schedule();
     }
     select(id) { this.selected = id; this._schedule(); }
+    /** lit: Map id -> "on" | "off" | "unk"; lanterns and glows follow it */
+    setLit(lit) {
+      const key = [...lit].map(([k, v]) => k + v).join();
+      if (key === this._litKey) return;
+      this._litKey = key;
+      this.lit = lit;
+      if (this.map.getSource("spots")) this.map.getSource("spots").setData(this._spotGeo());
+      this._schedule();
+    }
     setHover(id) { if (this.hover !== id) { this.hover = id; this._schedule(); } }
 
     // -------------------------------------------------------------- theme
@@ -486,9 +499,10 @@
     }
 
     // lantern sprites per kind / state, drawn once per theme
-    _sprite(kind, big, dim) {
+    // mode: "on" lit, "unk" hours unknown (a faint glow), "off" outside its hours (unlit), "closed" closed for good
+    _sprite(kind, big, mode) {
       this._sprites = this._sprites || {};
-      const key = kind + (big ? "B" : "") + (dim ? "D" : "");
+      const key = kind + (big ? "B" : "") + mode;
       if (this._sprites[key]) return this._sprites[key];
       const d = this.dpr, s = big ? 1.35 : 1;
       const bw = 20 * s, bh = 25 * s, pad = 14 * s;
@@ -498,11 +512,12 @@
       x.scale(d, d);
       const col = this.KC[kind] || this.KC.bar;
       const cx = pad + bw / 2, cy = pad + bh / 2;
-      if (this.theme === "night") {
+      const lit = mode === "on" || mode === "unk";
+      if (this.theme === "night" && lit) {
         const g = x.createRadialGradient(cx, cy, 2, cx, cy, bw * 1.15);
-        g.addColorStop(0, col + "aa"); g.addColorStop(1, col + "00");
+        g.addColorStop(0, col + (mode === "on" ? "aa" : "40")); g.addColorStop(1, col + "00");
         x.fillStyle = g; x.fillRect(0, 0, bw + pad * 2, bh + pad * 2);
-      } else {
+      } else if (this.theme !== "night") {
         x.shadowColor = "rgba(20,24,32,.35)"; x.shadowBlur = 4 * s; x.shadowOffsetY = 1.5 * s;
       }
       // body
@@ -528,7 +543,15 @@
       x.font = `800 ${12.5 * s}px ${SERIF}`;
       x.textAlign = "center"; x.textBaseline = "middle";
       x.fillText(KIND_GLYPH[kind] || "酒", cx, cy + 0.8 * s);
-      if (dim) { x.globalCompositeOperation = "source-atop"; x.fillStyle = "rgba(128,128,128,.55)"; x.fillRect(0, 0, c.width, c.height); }
+      if (mode === "closed") { x.globalCompositeOperation = "source-atop"; x.fillStyle = "rgba(128,128,128,.55)"; x.fillRect(0, 0, c.width, c.height); }
+      if (mode === "off") {  // an unlit paper lantern: the colour sinks into the dark, the glyph fades
+        x.globalCompositeOperation = "source-atop";
+        x.fillStyle = this.theme === "night" ? "rgba(14,19,30,.66)" : "rgba(236,236,232,.62)";
+        x.fillRect(0, 0, c.width, c.height);
+        x.globalCompositeOperation = "source-over";
+        x.beginPath(); x.ellipse(cx, cy, bw / 2 - 0.4, bh / 2 - 0.4, 0, 0, Math.PI * 2);
+        x.strokeStyle = this.theme === "night" ? col + "66" : col + "88"; x.lineWidth = 1 * s; x.stroke();
+      }
       const sp = { c, w: c.width / d, h: c.height / d, bw, bh };
       this._sprites[key] = sp;
       return sp;
@@ -602,7 +625,7 @@
       const scale = Math.max(0.62, Math.min(1, (z - lanternZ) / 2.2 + 0.62));
       for (const { s, p } of spots) {
         const big = s.id === this.selected || s.id === this.hover;
-        const sp = this._sprite(s.kind, big, s.status === "closed");
+        const sp = this._sprite(s.kind, big, s.status === "closed" ? "closed" : this.lit.get(s.id) || "on");
         const k = big ? 1 : scale;
         const wv = sp.w * k, hv = sp.h * k;
         ctx.drawImage(sp.c, p.x - wv / 2, p.y - hv / 2 - sp.bh * k * 0.35, wv, hv);

@@ -407,6 +407,32 @@ def clean(s):
     return out
 
 
+def link_members(spots):
+    """A shop the research lists among a nearby yokocho's members belongs to that yokocho."""
+    generic = {norm_name(g) for g in GENERIC} | ASCII_STOP
+
+    def cores(name):
+        return {c for c in (norm_name(v) for v in _variants(re.sub(r"[（(].*?[)）]", " ", name)))
+                if len(c) >= 2 and c not in generic}
+
+    yks = [(y, [cores(m) for m in y["members"]]) for y in spots if y["kind"] == "yokocho" and y.get("members")]
+    n = 0
+    for s in spots:
+        if s["kind"] == "yokocho" or s.get("yokocho"):
+            continue
+        mine, best = cores(s["name"]), None
+        for y, mem in yks:
+            d = meters((s["lat"], s["lng"]), (y["lat"], y["lng"]))
+            if d > 350 or (best and d >= best[0]):
+                continue
+            if any(a == b or (min(len(a), len(b)) >= 3 and (a in b or b in a)) for m in mem for a in mine for b in m):
+                best = (d, y["id"])
+        if best:
+            s["yokocho"] = best[1]
+            n += 1
+    print(f"linked {n} shops to the yokocho that list them", file=sys.stderr)
+
+
 def prefetch(spots, workers=3):
     """Warm the Overpass cache in parallel; the main loop then runs from cache."""
     from concurrent.futures import ThreadPoolExecutor
@@ -547,6 +573,7 @@ def main():
             near = min(known, key=lambda k: meters((s["lat"], s["lng"]), (k["lat"], k["lng"])))
             s["region"] = near["region"]
     ids = {s["id"] for s in spots}
+    link_members(spots)
     for s in spots:
         if s["yokocho"] and s["yokocho"] not in ids:
             review.append((s["id"], "unknown parent yokocho", s["yokocho"]))

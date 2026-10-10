@@ -9790,6 +9790,63 @@
   "categories": "Izakaya (Japanese style tavern)",
   "url": "https://tabelog.com/tokyo/A1323/A132304/13003785/"
  },
+ "jujo-taya": {
+  "score": 3.47,
+  "phone": "03-3909-1881",
+  "reserve": "予約可",
+  "week": {
+   "tue": [
+    [
+     1050,
+     1380,
+     1350
+    ]
+   ],
+   "wed": [
+    [
+     1050,
+     1380,
+     1350
+    ]
+   ],
+   "thu": [
+    [
+     1050,
+     1380,
+     1350
+    ]
+   ],
+   "fri": [
+    [
+     1050,
+     1380,
+     1350
+    ]
+   ],
+   "sat": [
+    [
+     1050,
+     1380,
+     1350
+    ]
+   ],
+   "mon": [],
+   "sun": []
+  },
+  "hours": "月 定休／火〜土 17:30〜23:00（L.O.22:30）／日 定休",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "分煙・喫煙所あり",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "categories": "Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1323/A132304/13044760/"
+ },
  "otsuka-edoichi": {
   "score": 3.44,
   "phone": "03-3945-3032",
@@ -10081,6 +10138,70 @@
   "categories": "Izakaya (Japanese style tavern), Stand-up bar",
   "url": "https://tabelog.com/tokyo/A1323/A132301/13254317/"
  },
+ "sugamo-nikomi-sennari": {
+  "score": 3.48,
+  "phone": "03-3918-9479",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     960,
+     1320,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     960,
+     1320,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     960,
+     1320,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     960,
+     1320,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     960,
+     1320,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     960,
+     1260,
+     null
+    ]
+   ],
+   "sun": []
+  },
+  "hours": "月〜金 16:00〜22:00／土 16:00〜21:00／日 定休",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "budget_lunch": "¥2,000〜¥2,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 20,
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "categories": "Izakaya (Japanese style tavern), Yakitori (Grilled chicken skewers), Japanese Cuisine",
+  "url": "https://tabelog.com/tokyo/A1323/A132301/13044980/"
+ },
  "higashijujo-niigataya": {
   "score": 3.54,
   "week": {
@@ -10239,6 +10360,94 @@
   ],
   "categories": "Grilled tripe, Izakaya (Japanese style tavern)",
   "url": "https://tabelog.com/tokyo/A1323/A132304/13003792/"
+ },
+ "tobunerima-tachinomi-nonbe": {
+  "score": 3.05,
+  "phone": "03-3931-2383",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "opened": "2016.7.1",
+  "categories": "Stand-up bar, Asian, Ethnic",
+  "url": "https://tabelog.com/tokyo/A1322/A132203/13215045/"
+ },
+ "itabashi-shogetsu": {
+  "score": 3.38,
+  "phone": "03-3916-1572",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "sun": [],
+   "hol": []
+  },
+  "hours": "月〜土 17:00〜23:00／日・祝 定休",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）・電子マネー（交通系IC）可",
+  "cash_only": false,
+  "charge": "サービス料、チャージ料なし",
+  "seats": 30,
+  "seating": [
+   "カウンター席",
+   "スポーツ観戦",
+   "電源"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "opened": "1970.1.12",
+  "categories": "Japanese Cuisine, Izakaya (Japanese style tavern), Italian",
+  "url": "https://tabelog.com/tokyo/A1322/A132201/13069802/"
  },
  "ekoda-yakiton-kimura": {
   "score": 3.54,
@@ -11503,6 +11712,26 @@
   ],
   "categories": "Grilled tripe, Izakaya (Japanese style tavern)",
   "url": "https://tabelog.com/tokyo/A1321/A132104/13006667/"
+ },
+ "komagome-tachinomi-hiroshi": {
+  "score": 3.36,
+  "phone": "03-5394-5168",
+  "reserve": "予約不可",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "charge": "サービス料、チャージ、お通し代なし",
+  "seats": 20,
+  "seating": [
+   "スポーツ観戦"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "categories": "Stand-up bar, Izakaya (Japanese style tavern), Dining bar",
+  "url": "https://tabelog.com/tokyo/A1323/A132301/13111349/"
  },
  "kitasenju-kakinuma-nomiyoko": {
   "score": 3.44,

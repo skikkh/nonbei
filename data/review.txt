@@ -4,4 +4,5 @@ shinjuku-ucchan	osm match too far 188m	もつ焼き　ウッチャン
 ikebukuro-snack-bell	osm match too far 388m	スナック パンザマスト
 shinjuku2-cafe-bar-voice	osm match too far 211m	cafe&bar chaos
 akasaka-marushige	osm 102m from address	赤坂　まるしげ
+tobunerima-snack-shureijin	osm match too far 248m	パブスナック 南条
 kunitachi-macchan	osm 119m from address	まっちゃん

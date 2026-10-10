@@ -605,6 +605,24 @@
   "closed": "－",
   "url": "https://www.hotpepper.jp/strJ000232746/"
  },
+ "ekoda-shubo-miyama": {
+  "address": "東京都練馬区栄町４‐５ Ａ／Ｔコーポ１Ｆ",
+  "closed": "なし",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 17,
+  "smoking": "分煙・喫煙所あり",
+  "url": "https://www.hotpepper.jp/strJ000609911/"
+ },
+ "ikebukuro-minori": {
+  "address": "東京都豊島区西池袋３-30-8",
+  "closed": "日、祝日",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 20,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ000860670/"
+ },
  "numabukuro-tatsuya": {
   "address": "東京都中野区沼袋3-27-6１F",
   "closed": "－",
@@ -684,6 +702,16 @@
   "cash_only": false,
   "seats": 70,
   "url": "https://www.hotpepper.jp/strJ000229593/"
+ },
+ "komagome-tachinomi-hiroshi": {
+  "address": "東京都北区中里2-2-11F",
+  "closed": "－",
+  "budget_dinner": "¥1,000〜¥1,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 20,
+  "seats_note": "立ち飲みカウンター＋テーブル３つ",
+  "url": "https://www.hotpepper.jp/strJ000855280/"
  },
  "tateishi-bunkado": {
   "address": "東京都葛飾区立石４-27-9",

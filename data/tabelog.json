@@ -13114,6 +13114,151 @@
   "categories": "Izakaya (Japanese style tavern), Seafood",
   "url": "https://tabelog.com/tokyo/A1313/A131303/13003007/"
  },
+ "mitaka-basara": {
+  "score": 3.43,
+  "phone": "0422-54-1666",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "sun": [],
+   "hol": []
+  },
+  "hours": "月〜土 17:00〜22:00（L.O.21:30）／日・祝 定休",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 15,
+  "seating": [
+   "落ち着いた空間",
+   "カウンター席"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "web": "http://www10.plala.or.jp/basara/",
+  "categories": "Izakaya (Japanese style tavern), Japanese shochu (Spirits) bar, Seafood",
+  "url": "https://tabelog.com/tokyo/A1320/A132002/13034285/"
+ },
+ "mitaka-mago-panda-dx": {
+  "score": 3.08,
+  "phone": "070-7657-5884",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1560,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1560,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1560,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1560,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1560,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     900,
+     1560,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     900,
+     1560,
+     null
+    ]
+   ]
+  },
+  "hours": "月〜金 17:00〜26:00／土・日 15:00〜26:00",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "charge": "チャージなし",
+  "seats": 25,
+  "seating": [
+   "カウンター席",
+   "ライブ",
+   "スポーツ観戦",
+   "電源",
+   "車椅子可"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "categories": "Izakaya (Japanese style tavern), Stand-up bar",
+  "url": "https://tabelog.com/tokyo/A1320/A132002/13224607/"
+ },
  "mitaka-oshima-sakaba": {
   "score": 3.33,
   "phone": "0422-48-4434",
@@ -13231,6 +13376,133 @@
   "opened": "2010.4.6",
   "categories": "Grilled tripe, Izakaya (Japanese style tavern), Tripe",
   "url": "https://tabelog.com/tokyo/A1320/A132002/13123751/"
+ },
+ "nakagawara-yakitori-takechan": {
+  "score": 3.17,
+  "phone": "042-334-5770",
+  "reserve": "予約不可",
+  "week": {
+   "tue": [
+    [
+     960,
+     1380,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     960,
+     1380,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     960,
+     1380,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     960,
+     1380,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     960,
+     1380,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     780,
+     1260,
+     null
+    ]
+   ],
+   "mon": []
+  },
+  "hours": "月 定休／火〜土 16:00〜23:00／日 13:00〜21:00",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "喫煙可",
+  "categories": "Izakaya (Japanese style tavern), Yakitori (Grilled chicken skewers)",
+  "url": "https://tabelog.com/tokyo/A1326/A132602/13105000/"
+ },
+ "sengawa-kikuya": {
+  "score": 3.4,
+  "phone": "03-3309-5622",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     960,
+     1440,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     960,
+     1440,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     960,
+     1440,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     960,
+     1440,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     960,
+     1440,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     960,
+     1380,
+     null
+    ]
+   ],
+   "hol": [
+    [
+     960,
+     1380,
+     null
+    ]
+   ],
+   "tue": []
+  },
+  "hours": "月 16:00〜24:00／火 定休／水〜土 16:00〜24:00／日・祝 16:00〜23:00",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 55,
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "categories": "Yakitori (Grilled chicken skewers), Izakaya (Japanese style tavern), Grilled tripe",
+  "url": "https://tabelog.com/tokyo/A1326/A132601/13063829/"
  },
  "hachioji-kakuuchi-tsukumo": {
   "score": 3.29,
@@ -13507,6 +13779,70 @@
   ],
   "categories": "Izakaya (Japanese style tavern), Japanese shochu (Spirits) bar, Stand-up bar",
   "url": "https://tabelog.com/tokyo/A1329/A132904/13121974/"
+ },
+ "bubaigawara-ogiya": {
+  "score": 3.32,
+  "phone": "042-368-2036",
+  "reserve": "予約可",
+  "week": {
+   "tue": [
+    [
+     1020,
+     1260,
+     1200
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1260,
+     1200
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1260,
+     1200
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1260,
+     1200
+    ]
+   ],
+   "fri": [
+    [
+     1050,
+     1260,
+     1200
+    ]
+   ],
+   "sun": [
+    [
+     1050,
+     1260,
+     1200
+    ]
+   ],
+   "mon": []
+  },
+  "hours": "月 定休／火〜木 17:00〜21:00（L.O.20:00）／金 17:30〜21:00（L.O.20:00）／土 17:00〜21:00（L.O.20:00）／日 17:30〜21:00（L.O.20:00）",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 30,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "categories": "Izakaya (Japanese style tavern), Yakitori (Grilled chicken skewers), Grilled tripe",
+  "url": "https://tabelog.com/tokyo/A1326/A132602/13065345/"
  },
  "kichijoji-irodori": {
   "score": 3.06,
@@ -14314,6 +14650,78 @@
   "categories": "Stand-up bar",
   "url": "https://tabelog.com/tokyo/A1325/A132503/13270995/"
  },
+ "kodaira-torikatsu": {
+  "score": 3.07,
+  "phone": "042-343-7775",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     990,
+     1440,
+     1410
+    ]
+   ],
+   "tue": [
+    [
+     990,
+     1440,
+     1410
+    ]
+   ],
+   "wed": [
+    [
+     990,
+     1440,
+     1410
+    ]
+   ],
+   "thu": [
+    [
+     990,
+     1440,
+     1410
+    ]
+   ],
+   "fri": [
+    [
+     990,
+     1440,
+     1410
+    ]
+   ],
+   "sat": [
+    [
+     990,
+     1440,
+     1410
+    ]
+   ],
+   "sun": [
+    [
+     990,
+     1440,
+     1410
+    ]
+   ]
+  },
+  "hours": "月〜日 16:30〜24:00（L.O.23:30）",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）可",
+  "cash_only": false,
+  "charge": "お通し210円",
+  "seats": 95,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "categories": "Izakaya (Japanese style tavern), Yakitori (Grilled chicken skewers)",
+  "url": "https://tabelog.com/tokyo/A1328/A132804/13075714/"
+ },
  "higashikoganei-yakiton-sutton": {
   "score": 3.07,
   "phone": "042-407-2022",
@@ -14684,6 +15092,50 @@
   "categories": "Izakaya (Japanese style tavern), Stand-up bar",
   "url": "https://tabelog.com/tokyo/A1320/A132003/13250157/"
  },
+ "kiyose-miyuki-shokudo": {
+  "score": 3.48,
+  "phone": "042-491-4006",
+  "reserve": "予約不可",
+  "week": {
+   "tue": [
+    [
+     660,
+     1260,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     660,
+     1260,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     660,
+     1260,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     660,
+     1260,
+     null
+    ]
+   ],
+   "mon": [],
+   "thu": [],
+   "sun": []
+  },
+  "hours": "月 定休／火・水 11:00〜21:00／木 定休／金・土 11:00〜21:00／日 定休",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "smoking": "全席禁煙",
+  "categories": "Cafeteria, Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1328/A132803/13040781/"
+ },
  "machida-kakishimaya": {
   "score": 3.51,
   "phone": "050-5597-7086",
@@ -14903,6 +15355,70 @@
   "smoking": "喫煙可",
   "categories": "Stand-up bar",
   "url": "https://tabelog.com/tokyo/A1327/A132701/13025293/"
+ },
+ "akitsu-yakitori-nojima": {
+  "score": 3.44,
+  "phone": "042-397-3455",
+  "reserve": "予約不可",
+  "week": {
+   "mon": [
+    [
+     780,
+     1380,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     780,
+     1380,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     780,
+     1380,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     780,
+     1380,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     780,
+     1380,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     720,
+     1380,
+     null
+    ]
+   ],
+   "sun": [],
+   "hol": []
+  },
+  "hours": "月〜金 13:00〜23:00／土 12:00〜23:00／日・祝 定休",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "categories": "Izakaya (Japanese style tavern), Yakitori (Grilled chicken skewers)",
+  "url": "https://tabelog.com/tokyo/A1328/A132806/13046331/"
  },
  "tachikawa-daruma": {
   "score": 3.3,
@@ -15247,5 +15763,71 @@
   "web": "https://shops.alwayssaisei.co.jp/detail/1490001/",
   "categories": "Izakaya (Japanese style tavern), Grilled tripe",
   "url": "https://tabelog.com/tokyo/A1326/A132601/13017603/"
+ },
+ "takanodai-nakatoya": {
+  "score": 3.22,
+  "phone": "042-313-6005",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     840,
+     1380,
+     1350
+    ]
+   ],
+   "wed": [
+    [
+     840,
+     1380,
+     1350
+    ]
+   ],
+   "thu": [
+    [
+     840,
+     1380,
+     1350
+    ]
+   ],
+   "fri": [
+    [
+     840,
+     1380,
+     1350
+    ]
+   ],
+   "sat": [
+    [
+     780,
+     1380,
+     1350
+    ]
+   ],
+   "hol": [
+    [
+     780,
+     1380,
+     1350
+    ]
+   ],
+   "sun": [
+    [
+     780,
+     1260,
+     1230
+    ]
+   ],
+   "tue": []
+  },
+  "hours": "月 14:00〜23:00（L.O.22:30）／火 定休／水〜金 14:00〜23:00（L.O.22:30）／土 13:00〜23:00（L.O.22:30）／日 13:00〜21:00（L.O.20:30）／祝 13:00〜23:00（L.O.22:30）",
+  "budget_dinner": "¥1,000〜¥1,999",
+  "budget_lunch": "¥1,000〜¥1,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX）・電子マネー（交通系IC）・QR決済（PayPay・d払い・楽天ペイ・au PAY）可",
+  "cash_only": false,
+  "smoking": "全席禁煙",
+  "opened": "2019.9.2",
+  "categories": "Japanese sake bar",
+  "url": "https://tabelog.com/tokyo/A1328/A132804/13236968/"
  }
 }

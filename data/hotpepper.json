@@ -235,6 +235,15 @@
   "cash_only": true,
   "url": "https://www.hotpepper.jp/strJ000864152/"
  },
+ "higashiueno-toranoko": {
+  "address": "東京都台東区東上野２－２０－９",
+  "closed": "日、祝日",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 48,
+  "smoking": "分煙・喫煙所あり",
+  "url": "https://www.hotpepper.jp/strJ000003420/"
+ },
  "ueno-kadokura": {
   "address": "東京都台東区上野６－１３－１ フォーラム味ビル１Ｆ",
   "closed": "なし",
@@ -267,6 +276,69 @@
   "seats": 34,
   "smoking": "喫煙可",
   "url": "https://www.hotpepper.jp/strJ000245345/"
+ },
+ "asakusa-mogamiya": {
+  "address": "東京都台東区浅草4-6-8",
+  "week": {
+   "tue": [
+    [
+     1050,
+     1320,
+     1290
+    ]
+   ],
+   "wed": [
+    [
+     1050,
+     1320,
+     1290
+    ]
+   ],
+   "thu": [
+    [
+     1050,
+     1320,
+     1290
+    ]
+   ],
+   "fri": [
+    [
+     1050,
+     1320,
+     1290
+    ]
+   ],
+   "sat": [
+    [
+     1050,
+     1320,
+     1290
+    ]
+   ],
+   "sun": [
+    [
+     1050,
+     1320,
+     1290
+    ]
+   ],
+   "mon": []
+  },
+  "hours": "月 定休／火〜日 17:30〜22:00（L.O.21:30）",
+  "closed": "月",
+  "budget_dinner": "¥10,000〜¥14,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "url": "https://www.hotpepper.jp/strJ000247963/"
+ },
+ "asakusa-nakajima": {
+  "address": "東京都台東区浅草５-37-6（千束通り）",
+  "closed": "木 水曜日臨時休業あり",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 65,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ000126936/"
  },
  "asakusa-shochan": {
   "address": "東京都台東区浅草2-7-13",
@@ -317,6 +389,15 @@
   "seats": 20,
   "seats_note": "天気が佳い日はテラス席あり",
   "url": "https://www.hotpepper.jp/strJ000126682/"
+ },
+ "yanaka-asato": {
+  "address": "東京都台東区谷中７-18-13",
+  "closed": "なし",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 8,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ000749319/"
  },
  "uguisudani-kagiya": {
   "address": "東京都台東区根岸3-6-23-18",

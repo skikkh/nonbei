@@ -918,6 +918,67 @@
   "categories": "Stand-up bar",
   "url": "https://tabelog.com/tokyo/A1311/A131102/13188839/"
  },
+ "yushima-fukuroutei": {
+  "score": 3.22,
+  "phone": "03-3834-2960",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "wed": [],
+   "sun": [],
+   "hol": []
+  },
+  "hours": "月・火 17:00〜23:00／水 定休／木〜土 17:00〜23:00／日・祝 定休",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）可",
+  "cash_only": false,
+  "charge": "お通し (400円)",
+  "seats": 20,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "categories": "Japanese Cuisine, Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1311/A131101/13170966/"
+ },
  "kuramae-hitotonari": {
   "score": 3.27,
   "phone": "03-6755-1345",

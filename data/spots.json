@@ -495,6 +495,12 @@
    "en": "Araki-cho (Yotsuya)",
    "price": "女将や店主が切り盛りする小料理屋・割烹・酒場とバーが中心で、ミシュランガイド掲載店もある",
    "region": "都心（新橋・銀座・神田）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "_avtpBe|xkq@_@BE_@LAAUZECYgAL?Yp@ECi@E@Am@E?AY_@??o@W??r@aA??jAZ?AhCQ??h@qAGCb@iA?@a@c@CBc@p@B@u@^BHo@uAM@Kb@DBQe@ELmCWCCt@k@IGj@D?G~Ae@EC\\t@FGv@\\BAJc@CEl@OA?b@y@CB]u@GEr@u@EFVH@Ml@\\FJq@fAH?f@^@?XC??FY??Do@@SCCLUCCZq@CCVR@ERd@J@Et@@@d@C?Bl@jAEAQVAHYb@A?DL??Pm@LOXH?Ar@WAAnAg@IChARf@R@BIPHv@R\\{AB?AlAF?CbBdA@?IjAB?DV??g@^Y?]V?NQZXPQ[Yp@o@E??MH?@YM?BkAm@A?Mn@?Ae@B?Cm@BA?_@A]q@B?u@n@AE_DXAAYJA"
+    ]
+   },
    "lat": 35.689621,
    "lng": 139.722351,
    "geo": "gsi-block",
@@ -1712,6 +1718,12 @@
    "en": "Yaesu Underground Mall (Yaechika)",
    "price": "居酒屋 初藤（朝定食あり、店内にトイレなし）、立ち飲みの鉄板酒場 鐵一、酒屋のリカーズハセガワ本店など",
    "region": "都心（新橋・銀座・神田）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "{qgupB{l|kq@l@X}BdFdDzA~BeFb@RdDsGjAgEbAiE|@kEn@oCiB{@_FrK[OsBlEqWqKyApDhWnK"
+    ]
+   },
    "lat": 35.6795527,
    "lng": 139.7706738,
    "geo": "osm-area",
@@ -2536,6 +2548,12 @@
    "en": "Kanda Station Under-the-Tracks Bars",
    "price": "立ち飲みが多く、味の笛はつまみが最高でも1皿350円（2014年）",
    "region": "都心（新橋・銀座・神田）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "sbhupBmqwkq@tBkH`D?r@sF~@qEr@uCb@gCwFdBqAxI]~A[tB_@xA{B~G"
+    ]
+   },
    "lat": 35.6915431013295,
    "lng": 139.771164,
    "geo": "gsi",
@@ -3109,18 +3127,24 @@
    "en": "Joyful Minowa Shopping Street",
    "price": "揚げたて天ぷらの惣菜店、持ち帰り餃子の名店など、安い惣菜をつまみに飲める",
    "region": "上野・浅草・日暮里",
-   "lat": 35.733391,
-   "lng": 139.790298,
-   "geo": "gsi",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "uroupBifekq@AANYc@UOV_@SLU_@SLc@jA`@HWOEFOUOBIEAFUPFFSq@SFMg@Q@G_@CCROCAFKCKZ]Q]n@`Ab@KPECU`@j@\\IVf@NGH?b@JFVc@x@d@Wd@b@TXg@a@U"
+    ]
+   },
+   "lat": 35.7324318,
+   "lng": 139.7920659,
+   "geo": "outline",
    "gsi": "東京都荒川区南千住一丁目１９番１号",
    "near": [
     [
-     "荒川一中前",
-     129
+     "三ノ輪橋",
+     56
     ],
     [
-     "三ノ輪橋",
-     182
+     "荒川一中前",
+     317
     ]
    ]
   },
@@ -9762,6 +9786,12 @@
    "en": "Asagaya Star Road",
    "price": "キャッシュオンの立呑風太くんなど、小さな個人店の飲み屋・バーが並ぶ",
    "region": "新宿・中野・杉並",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "inuspBeqqkq@?YS??Qu@?AI_@@Dv@Q?CgAe@@@\\oBDAOgABCa@_@B?LC?B`@c@B@Tg@BAa@g@@Im@O@?c@yCHw@F?@kDPCcCY@BxB{Op@GBa@`@WA}@@?XbAC@~@VAIPHBBJjAUJ`ATCBPv@Yd@IACd@IJn@VGOcALCX?Gw@fDa@RjBUBBVb@EFKEi@bAGAa@I?EWNA?EV@Ea@NA@`@p@I?D^CAG~@GBRBAFh@`@EFZFA?b@`@??j@t@@p@AAq@B??M\\A@Bh@AAe@P?Bd@bAECc@V?@h@ZA?H\\A?a@p@??Vf@A?EjAE@NbAC?S~@C?a@LAAW"
+    ]
+   },
    "lat": 35.705128,
    "lng": 139.634705,
    "geo": "gsi",
@@ -10847,12 +10877,9 @@
    "price": "焼きとん、日本酒の立ち飲み、スナック、居酒屋が密集。例：いざかや ほしぐみ（三軒茶屋2-13-10）の塩煮込み500円（税抜）",
    "region": "渋谷・目黒・世田谷",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "ilctpBcxllq@AMs@kICe@",
-     "{hctpBcfmlq@kBs@aBo@",
-     "qkctpBmemlq@c@QQGe@S_A[",
-     "glctpBwgmlq@OROZ"
+     "_wbtpB}qmlq@DSSGKe@OCR}@s@Q]~ASEAHEAKx@YCK~@aAOR{@CANcA}@EFOSGIVk@MUbAd@JWt@Mn@CAELOE@M_@KQh@KEGPECCDICUl@[jAQGCBKEABqBeAIRMIKPJFY`@MGIPJDEJDBKNWKIRLDU\\QGGPlAh@_@??XzAAVJJWNEXE^NDM\\@?O^EIm@V?Jb@d@G@JRCAKd@GE{@Qy@j@y@BIZFHa@XFDSXDBMx@PA@X@?[L@J_AdBXFCDO^FHe@"
     ]
    },
    "lat": 35.643379,
@@ -11130,9 +11157,9 @@
    "price": "小さなバーやスナック、酒場が約10軒（2003年時点ではバー・スナック17店）",
    "region": "渋谷・目黒・世田谷",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "ikctpBgudlq@cA?"
+     "ckctpBatdlq@A}@uA@@z@"
     ]
    },
    "lat": 35.6624408,
@@ -24109,9 +24136,9 @@
    "price": "マグロ専門店の「アゲ鮪」、生煎饅頭、大判焼き、オリオンの提灯が目印の沖縄料理店、人気ラーメン店など",
    "region": "多摩",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "czrqpBuuzmq@dBwAzAmAz@s@"
+     "iqrqpBu{zmq@i@o@e@^BDYTII[XFFgDhCHHA@LN@AJJ~AoAPBb@XrAcAW]XWGG"
     ]
    },
    "lat": 35.5415778,
@@ -24334,35 +24361,24 @@
    "kana": "ふっさべーすさいどすとりーと",
    "en": "Fussa Base Side Street",
    "price": "アメリカンダイナー、カフェ、バー、古着・雑貨店など約150店。英語メニューやドル払いに対応する店もある",
-   "lat": 35.74379,
-   "lng": 139.33779,
+   "lat": 35.7421939,
+   "lng": 139.3378181,
    "region": "多摩",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "_tkppBe~dkq@jAtFlAdEb@rAvCzJdBxFhCrIbDhK`BpFtAxErAjEd@~AbAbDn@xBPv@ThBJlANdEd@nHP`E",
-     "yikppBs|{jq@pCkIrF}O~Pod@bAsC",
-     "qejppBkl~jq@PaDCgDuB}a@",
-     "oijppBab~jq@|AiE^_C",
-     "yhjppBsy_kq@eA{W",
-     "wjjppByz`kq@VvFn@hM`@`JPnD`@tI^lI\\jKC~CIn@e@|Bg@`BGPmBfFw@rBy@xBIN}@bCcB~EyKvYkCxH",
-     "}kjppBsz`kq@sAyY",
-     "_kjppBor`kq@]cG",
-     "skjppBceakq@ZhI",
-     "oojppBa}akq@]oBSkAaBcGiF_Q",
-     "qnjppBmuakq@]sF",
-     "m{jppBa}bkq@kAqD"
+     "egjppBew`kq@Au@Ig@aA?CWKgCl@A?mAb@A?k@c@A?sC{A?z@dShAAN]?]"
     ]
    },
-   "geo": "manual",
+   "geo": "outline",
    "near": [
     [
      "東福生",
-     273
+     429
     ],
     [
      "福生",
-     909
+     897
     ]
    ]
   },
@@ -24405,6 +24421,12 @@
    "lat": 35.6994369,
    "lng": 139.416183,
    "region": "多摩",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "uzfqpB{atkq@GuAoBLAhA"
+    ]
+   },
    "geo": "manual",
    "near": [
     [
@@ -24711,9 +24733,9 @@
    "price": "立ち飲み串揚げ「フジヤマテキサス」（串170円前後）などが入る",
    "region": "多摩",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "yevrpBypilq@cAlHQjACP"
+     "igvrpBsdilq@tAqJ]IBKSCAH[Gy@lGC?]`B`@HEVRBDS"
     ]
    },
    "lat": 35.6520222,

@@ -6698,6 +6698,12 @@
    "en": "Kannon-ura, Asakusa",
    "price": "観音裏のスナックは平均4,000円程度〜（スナック横丁の紹介）。料亭・割烹は別格",
    "region": "上野・浅草・日暮里",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "_`pupB{xkkq@?w@iA??Rk@??d@KC?c@cBc@Ob@OEDQmAYDQ_@IAFg@MFSm@OQr@sCi@FWa@IDQWE@Go@MOp@QCLk@a@IJi@w@OFYi@MEROCF[sBc@CJ[GCLWEH_@gCk@I^WGDUc@IH]m@MEV]IIZSEGZTFEPz@PEP{@QOt@{Ey@Nw@_@IGXyAWG\\WGDYc@IDSWG[CKl@e@IDSa@IBSuAUIj@[GJw@s@KEXy@IEZeAOBSw@KCT_@GEZZDCRf@HCLh@H?EXDF_@XDIj@n@HADh@HBKPBFc@VDIj@v@L@K\\DF_@f@H[zBkASG\\lARGXg@IQ`AZFRMOdAk@GGf@G?M`Ap@HETm@IKv@n@HKt@h@??D\\DLcAe@Gr@iFHRTDJm@TDHa@F@BOVDDSLBCPl@JI`@\\HF[l@LFWVDS|@bARBOp@LH[d@JDS^FEX^FEZ\\FBKZFJg@n@LQt@t@PCJz@PTeAVDIVd@JNs@C?Ja@_@IK^QEJi@w@QDU|@PLk@RDIX|@RADnAZLi@NDOp@l@LFQzA\\Jk@PBKf@|@RBMl@NH]r@LGV|A\\CL`@H@EbCp@DOXFFWRDMf@ZH@Ev@RHWH@GVp@N?Hh@??s@X??n@V??o@fA??["
+    ]
+   },
    "lat": 35.717117,
    "lng": 139.795959,
    "geo": "gsi",
@@ -18186,7 +18192,13 @@
    "en": "Maruyoshi Yokocho",
    "price": "せんべろの立ち飲み・大久酒店はチューハイ300円から。スナック、バー、居酒屋、中華（胡同三㐂）などが入る",
    "region": "渋谷・目黒・世田谷",
-   "lat": 35.6438591013295,
+   "shape": {
+    "t": "poly",
+    "p": [
+     "udmspB}~llq@~CC?Ss@@?GG??WO?C{@uAB"
+    ]
+   },
+   "lat": 35.643913,
    "lng": 139.60907,
    "geo": "gsi",
    "gsi": "東京都世田谷区祖師谷一丁目８番１７号",
@@ -18199,8 +18211,7 @@
      "成城学園前",
      1057
     ]
-   ],
-   "stacked": 2
+   ]
   },
   {
    "id": "soshigaya-daikyu-saketen",
@@ -18240,22 +18251,20 @@
    "kana": "だいきゅうさけてん そしがやおおくらてん",
    "en": "Daikyu Saketen Soshigaya-Okura",
    "price": "チューハイ300円、ガリチューハイ500円、枝豆200円、タコさんウインナー・アジフライ各300円（2022〜2025年の口コミ）",
+   "lat": 35.6438668,
+   "lng": 139.6090274,
    "region": "渋谷・目黒・世田谷",
-   "lat": 35.6439668986705,
-   "lng": 139.60907,
-   "geo": "gsi",
-   "gsi": "東京都世田谷区祖師谷一丁目８番１７号",
+   "geo": "manual",
    "near": [
     [
      "祖師ヶ谷大蔵",
-     93
+     92
     ],
     [
      "成城学園前",
-     1057
+     1051
     ]
-   ],
-   "stacked": 2
+   ]
   },
   {
    "id": "soshigaya-makabe",

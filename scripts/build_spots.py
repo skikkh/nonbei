@@ -432,7 +432,8 @@ def prefetch(spots, workers=3):
 
 def main():
     files = sorted(glob.glob(sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "research", "*.json")))
-    skip = os.environ.get("NONBEI_SKIP")  # e.g. NONBEI_SKIP=sweep- leaves out research files still being written
+    # e.g. NONBEI_SKIP=sweep-g01,sweep-g02 leaves out research files still being written
+    skip = tuple(p for p in os.environ.get("NONBEI_SKIP", "").split(",") if p)
     if skip:
         files = [f for f in files if not os.path.basename(f).startswith(skip)]
     overrides = {}

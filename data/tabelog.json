@@ -356,6 +356,65 @@
   "categories": "Japanese sake bar, Bar, Stand-up bar",
   "url": "https://tabelog.com/tokyo/A1314/A131401/13253180/"
  },
+ "kagurazaka-taruhachi": {
+  "score": 3.19,
+  "week": {
+   "tue": [
+    [
+     1050,
+     1290,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     1050,
+     1290,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     1050,
+     1290,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1050,
+     1290,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1050,
+     1290,
+     null
+    ]
+   ],
+   "mon": [],
+   "sun": [],
+   "hol": []
+  },
+  "hours": "月 定休／火〜土 17:30〜21:30／日・祝 定休",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 10,
+  "seating": [
+   "落ち着いた空間",
+   "カウンター席"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "categories": "Yakitori (Grilled chicken skewers), Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1309/A130905/13064905/"
+ },
  "kanda-yattarude": {
   "score": 3.18,
   "reserve": "予約不可",
@@ -991,6 +1050,62 @@
   ],
   "categories": "Stand-up bar",
   "url": "https://tabelog.com/tokyo/A1311/A131105/13099213/"
+ },
+ "nakai-gonpachi": {
+  "score": 3.29,
+  "phone": "03-3952-2898",
+  "reserve": "予約不可",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1320,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1320,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1320,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1320,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     1020,
+     1320,
+     null
+    ]
+   ],
+   "wed": [],
+   "thu": []
+  },
+  "hours": "月・火 17:00〜22:00／水・木 定休／金〜日 17:00〜22:00",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒"
+  ],
+  "categories": "Yakitori (Grilled chicken skewers), Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1321/A132104/13064981/"
  },
  "nakano-dainichikara-shuzo": {
   "score": 3.55,
@@ -1783,6 +1898,152 @@
   "categories": "Bar",
   "url": "https://tabelog.com/tokyo/A1304/A130401/13144076/"
  },
+ "kabukicho-mantarou": {
+  "score": 3.48,
+  "phone": "03-3209-4253",
+  "reserve": "予約不可",
+  "week": {
+   "mon": [
+    [
+     990,
+     1410,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     990,
+     1410,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     990,
+     1410,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     990,
+     1410,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     990,
+     1410,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     990,
+     1410,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     990,
+     1410,
+     null
+    ]
+   ]
+  },
+  "hours": "月〜日 16:30〜23:30",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "pay": "現金・カード・電子マネー・QR決済可",
+  "cash_only": false,
+  "seats": 23,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "categories": "Yakitori (Grilled chicken skewers), Japanese sake bar, Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1304/A130401/13006186/"
+ },
+ "shinjuku-berg": {
+  "score": 3.73,
+  "phone": "03-3226-1288",
+  "reserve": "予約不可",
+  "week": {
+   "mon": [
+    [
+     420,
+     1380,
+     1350
+    ]
+   ],
+   "tue": [
+    [
+     420,
+     1380,
+     1350
+    ]
+   ],
+   "wed": [
+    [
+     420,
+     1380,
+     1350
+    ]
+   ],
+   "thu": [
+    [
+     420,
+     1380,
+     1350
+    ]
+   ],
+   "fri": [
+    [
+     420,
+     1380,
+     1350
+    ]
+   ],
+   "sat": [
+    [
+     420,
+     1380,
+     1350
+    ]
+   ],
+   "sun": [
+    [
+     420,
+     1380,
+     1350
+    ]
+   ]
+  },
+  "hours": "月〜日 7:00〜23:00（L.O.22:30）",
+  "budget_dinner": "¥1,000〜¥1,999",
+  "budget_lunch": "〜¥999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）・電子マネー（交通系IC）・QR決済（PayPay・d払い・楽天ペイ・au PAY）可",
+  "cash_only": false,
+  "charge": "サービス料チャージ料なし",
+  "seats": 45,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "ワイン",
+   "ワインにこだわり"
+  ],
+  "web": "https://berg.official.ec/",
+  "categories": "Cafe, Beer bar, Bread",
+  "url": "https://tabelog.com/tokyo/A1304/A130401/13004332/"
+ },
  "shinjuku-gifuya": {
   "score": 3.49,
   "phone": "03-3342-6858",
@@ -2171,6 +2432,26 @@
   "categories": "Bar",
   "url": "https://tabelog.com/tokyo/A1304/A130401/13292721/"
  },
+ "shinjuku2-kintaro": {
+  "score": 3.39,
+  "phone": "03-3226-4193",
+  "reserve": "予約可",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "charge": "550円",
+  "seats": 22,
+  "seating": [
+   "落ち着いた空間",
+   "カウンター席"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "categories": "Izakaya (Japanese style tavern), Gyutan (Beef tongue), Creative",
+  "url": "https://tabelog.com/tokyo/A1304/A130401/13045924/"
+ },
  "shinjuku3-tachinomi-arigatou": {
   "score": 3.34,
   "phone": "03-3356-6007",
@@ -2334,6 +2615,66 @@
   "opened": "2014.11.1",
   "categories": "Stand-up bar, Japanese sake bar",
   "url": "https://tabelog.com/tokyo/A1304/A130401/13174784/"
+ },
+ "waseda-shinobu": {
+  "score": 3.38,
+  "phone": "03-3203-1648",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "wed": [],
+   "sun": [],
+   "hol": []
+  },
+  "hours": "月・火 17:00〜22:00（L.O.21:30）／水 定休／木〜土 17:00〜22:00（L.O.21:30）／日・祝 定休",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 26,
+  "seating": [
+   "落ち着いた空間",
+   "カウンター席"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "焼酎"
+  ],
+  "categories": "Oden",
+  "url": "https://tabelog.com/tokyo/A1305/A130504/13006140/"
  },
  "ogikubo-slainte": {
   "score": 3.07,
@@ -3154,6 +3495,77 @@
   "opened": "2017.12.10",
   "categories": "Grilled tripe, Izakaya (Japanese style tavern), Tripe",
   "url": "https://tabelog.com/tokyo/A1305/A130503/13215812/"
+ },
+ "takadanobaba-toriyasu-honten": {
+  "score": 3.48,
+  "phone": "03-3368-6459",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1410,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1410,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1410,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1410,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1410,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1410,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     1020,
+     1410,
+     null
+    ]
+   ]
+  },
+  "hours": "月〜日 17:00〜23:30",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 100,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "分煙・喫煙所あり",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "categories": "Yakitori (Grilled chicken skewers), Chicken dishes, Kushiyaki",
+  "url": "https://tabelog.com/tokyo/A1305/A130503/13001029/"
  },
  "sangenjaya-oomoriya": {
   "score": 3.43,

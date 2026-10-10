@@ -19,12 +19,15 @@
 - 一覧に無いものも探す。担当地域の **すべての駅** を頭の中で順に思い浮かべ、駅ごとに「この駅の前に横丁・飲み屋街・ガード下・古い市場・スナック街はあるか」を確かめる。
 - 情報源: 東京DEEP案内（tokyodeep.info）、さんたつ（san-tatsu.jp）、Time Out Tokyo、はまれぽ等の地域記事、商店街・自治体のページ、
   アド街ック天国、Wikipedia、食べログまとめ、個人ブログ・X（日付の新しいもの）、Retty、ぐるなび、ホットペッパー。
-- WebSearch は **40回まで**。あとは WebFetch で記事を直接読む。
+- WebSearch は **30回まで**（検索枠は他の調査員と共有なので節約する）。一覧性のあるページ（東京DEEP案内の駅別ページ、snackyokocho.com、さんたつ、Time Out、アド街のバックナンバー、商店街連合会の名簿など）を WebFetch で直接読むほうが効率がよい。
+- 住所の確かめには国土地理院の住所検索（`https://msearch.gsi.go.jp/address-search/AddressSearch?q=住所`）を curl で使ってよい。
 
 ## 書き出すもの（`OUT` に JSON 配列。既存の地図にあるものは書かない）
 1. **横丁・飲み屋街**（kind=`yokocho`）: 見つかったものは全部。閉鎖・消滅が確認できたものも `status: "closed"` で記録してよい（2024年以降に消えたものだけ）。
-2. **その横丁の名物店**（任意・横丁1つにつき0〜2軒）: 話しやすい店、老舗、立ち飲み。`yokocho` に親横丁の id。
-3. **地域の名物酒場**（最大12軒）: 横丁の外でも、その街を代表する大衆酒場・立ち飲み・角打ち・せんべろ（酒場放浪記やアド街で紹介された老舗、コの字カウンターの店など）で地図に無いもの。「人と話しやすい」店を優先。
+2. **その横丁の名物店**（任意・横丁1つにつき0〜1軒）: 特に話しやすい店・老舗・立ち飲み。`yokocho` に親横丁の id。
+3. **地域の名物酒場**（最大6軒）: 横丁の外でも、その街を代表する大衆酒場・立ち飲み・角打ち・せんべろ（酒場放浪記やアド街で紹介された老舗、コの字カウンターの店など）で地図に無いもの。「人と話しやすい」店を優先。
+
+**横丁・飲み屋街を見つけて書くことが最優先**。店は横丁を一通り書き終えてから。
 
 各エントリーは `research/SPEC.md` と同じ形式（id, name, name_kana, name_en, kind, yokocho, area, ward, address, address_detail, station, hours, closed,
 budget, budget_min, budget_max, price_note, social, solo, hiru, tags, payment, smoking, english, desc, talk, tips, shops, since, status, checked, sources）で、
@@ -48,7 +51,9 @@ budget, budget_min, budget_max, price_note, social, solo, hiru, tags, payment, s
 - **営業中の確認**: 2024年以降の口コミ・記事・SNS で営業が確認できたものだけ `open`。確認できなければ `uncertain`、閉店は `closed`。`checked` に何で確認したかを日付つきで。
 - 推測で埋めない。分からない項目は null。説明（desc/talk/tips）は事実に基づき、誇張しない。常体（〜だ・〜する）か体言止め。
 - id は `エリア名-名前ローマ字`（英小文字・数字・ハイフン）。既存の id と重ならないように。
-- 作業の途中でも **5件ごとに OUT を書き出す**（python で読み込んで追記して書き戻す）。
+- **3件ごとに OUT を書き出す**（python で既存の OUT を読み込み、id で上書き・追記して書き戻す）。途中で作業が止まっても成果が残るように。
+- 始める前に OUT がすでにあれば読み、書いてある分は飛ばして続きから進める。
+- 調べた駅と結論（「横丁なし」も）を `OUT` と同じ名前の `.notes.md`（例 `research/sweep-g01-toshin.notes.md`）に1行ずつ追記していく。止まって再開したときに、どこまで確かめたか分かるように。
 
 ## 最後に
 件数（横丁 / 店）、open/closed/uncertain の内訳、確かめきれなかった駅・候補を 5〜8 行で報告する。

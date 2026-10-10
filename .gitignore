@@ -9,3 +9,4 @@ promo/out/
 work/
 # research files the sweep agents are still writing (taken out of here when they are merged)
 research/sweep-*.json
+research/sweep-*.notes.md

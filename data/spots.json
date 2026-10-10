@@ -1185,6 +1185,12 @@
    "en": "Hibiya OKUROJI",
    "price": "英国パブのスタンディング（PUBLIC HOUSE Little GANG）、ウイスキーバー、日本酒バル、八戸酒場などが入る",
    "region": "都心（新橋・銀座・神田）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "aadupBmj`lq@`Ocb@kC_AeObb@"
+    ]
+   },
    "lat": 35.6699798,
    "lng": 139.7588628,
    "geo": "osm-area",
@@ -1239,6 +1245,13 @@
    "en": "Yurakucho Under-the-Tracks Bars",
    "price": "もつ焼き ふじのもつ焼きは各180円、もつ煮込み400円（2024年）。登運とんのホイスサワー",
    "region": "都心（新橋・銀座・神田）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "{udupBwt_lq@{@z@kAxG@\\J?lFuFBS",
+     "amdupBcw_lq@`CiDh@cA_DMq@bAuCjDvBxA"
+    ]
+   },
    "lat": 35.67343288178225,
    "lng": 139.761093,
    "geo": "gsi-block",
@@ -1292,6 +1305,12 @@
    "en": "Yurakucho Sanchoku Yokocho",
    "price": "全国の産直食材やご当地B級グルメ。店をまたいで注文できる",
    "region": "都心（新橋・銀座・神田）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "cbdupBgh`lq@iCw@w@rBdCx@"
+    ]
+   },
    "lat": 35.6721326,
    "lng": 139.760328,
    "geo": "osm-area",
@@ -2870,25 +2889,23 @@
    "price": "ハムカツ・もつ煮込み・串焼きが1品300〜500円台。朝・昼から飲める立ち飲みや大衆酒場が密集",
    "region": "上野・浅草・日暮里",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "mkiupBwunkq@@SR{BHcB@OBsAAuACmAGkAMcBYiDIu@QeCGyAA_@?Q?M@eBDw@H}@De@VaCHu@",
-     "oqiupB_dpkq@bDX"
+     "ejiupBo`okq@EcDM_C{D?B`@eACCRa@IJc@]II^a@CAh@ICJf@A@CdAl@@AXd@@A^GAItBj@FGf@F@Ef@j@Fy@hDlCTpB@VsC"
     ]
    },
-   "lat": 35.7096984,
-   "lng": 139.7746477,
-   "geo": "osm-area",
-   "osm": "w509241395",
+   "lat": 35.7107962,
+   "lng": 139.7749469,
+   "geo": "outline",
    "gsi": "東京都台東区上野六丁目１０番７号",
    "near": [
     [
      "京成上野",
-     173
+     131
     ],
     [
-     "上野御徒町",
-     227
+     "上野",
+     325
     ]
    ]
   },
@@ -3802,19 +3819,24 @@
    "en": "Asakusa Underground Street",
    "price": "焼きそば店・英国風パブ・小さなバーなど約20店が並ぶ",
    "region": "上野・浅草・日暮里",
-   "lat": 35.7114425,
-   "lng": 139.7981663,
-   "geo": "osm-area",
-   "osm": "n6237192832",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "{pqupBwqnkq@?{@oFc@?x@"
+    ]
+   },
+   "lat": 35.7116558,
+   "lng": 139.7973887,
+   "geo": "outline",
    "gsi": "東京都台東区浅草一丁目１番１２号",
    "near": [
     [
      "浅草",
-     292
+     220
     ],
     [
-     "本所吾妻橋",
-     644
+     "田原町",
+     632
     ]
    ]
   },
@@ -3858,9 +3880,9 @@
    "price": "各店の牛すじ煮込み（500円前後）とホッピーが定番。軒先のテーブル席で昼から飲める",
    "region": "上野・浅草・日暮里",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "_npupBujnkq@m@rAe@|@[nCDb@?FDl@^bFR`CHhA\\fDJz@Hr@LhAFl@b@fE"
+     "ylpupB}wmkq@?w@M?As@Q?@u@m@]G@AKGEK@GLKoA_@B?D]KAL\\tD^bF]LN^a@RR`@~@g@`@vDi@FBTh@GBL^Ek@qFb@OAmAC?E[H??i@y@AAQ"
     ]
    },
    "lat": 35.7137902,
@@ -3918,6 +3940,12 @@
    "en": "Asakusa Yokocho",
    "price": "全国の祭りと食をテーマにした7店前後の飲食店が集まる屋内横丁。毎日イベントあり",
    "region": "上野・浅草・日暮里",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "wfpupBilmkq@F{CKU@q@GO]CEI_ElBVrC"
+    ]
+   },
    "lat": 35.713928,
    "lng": 139.793396,
    "geo": "gsi",
@@ -4542,10 +4570,9 @@
    "price": "手頃な居酒屋・バルからスナック、カラオケバーまで雑居ビルにぎっしり",
    "region": "上野・浅草・日暮里",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "i|hupBqqokq@b@?lDq@zCm@`Cc@nDs@HAJC",
-     "sfhupBowokq@JAjGcAnGaANC`@G"
+     "wtgupBkyokq@EaAE@?_@i@HIu@u@D{Df@J`ASDIq@gADLz@a@FO_A{AHDVo@DHx@[FGcBu@@AQ_@@Hz@WB@Te@D@PO@@N[DB^QDEo@wBNCw@{@BBh@cABA^X?@P[AE~@{Dv@[??b@^?NCETR\\b@FL?@IvAU?Cf@KPADVXGYyAzAYLp@h@KFV`@GCK^I@Fz@OPz@f@ISgALCFV`@GAKx@OOaAOGr@MGNDZr@IFf@RC@Dr@MUwAjGaAPfANC@FNCF^VCOkALCJr@\\EGe@"
     ]
    },
    "lat": 35.7093371,
@@ -5157,19 +5184,24 @@
    "en": "Nakano North Exit Bar District (Fureai Road / Showa Shindo)",
    "price": "第二力酒蔵（1962年創業）、カウンター7席の石松、八九屋など大衆酒場・もつ焼き店が集まる",
    "region": "新宿・中野・杉並",
-   "lat": 35.7085208,
-   "lng": 139.6649001,
-   "geo": "osm-area",
-   "osm": "w155948806",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "ewatpBoypkq@KeC[@?KY@@HmAB\\_@OOYV?Gu@??JFH@nA}BBGwEW@?FgA@?dAD??f@l@??RF?@v@SE]@AW[?@Eo@CA^IAGTbDt@DlBU@?DG?FtB^HAPcB[AKW?@Pk@@D`BTABv@rBIDj@\\C@b@k@DFtAw@D?IY@@F{@@?p@N?@ZC?JrCp@ADxAs@BBnA^ADbAPA@TyADBp@ZA@NG?@f@RABfBhAC@J_ABHjCRA@r@PA@`@VA?]RA?q@l@C@\\E??Vf@A?HVA?]^A?_@I?AuA[?Ag@f@??OF?Ai@s@?K}DhA?A_As@@CmAVAA[Q@?IE@?GE?A]`@A?_@?GB?AQ`@ACe@}@BAk@|AEC{@eABC}@Q?Cu@T??QHAGgBgABQgFPAAM`ACFwAbAGL]@v@fACAe@"
+    ]
+   },
+   "lat": 35.7081153,
+   "lng": 139.6666147,
+   "geo": "outline",
    "gsi": "東京都中野区中野五丁目５０番９号",
    "near": [
     [
      "中野",
-     305
+     272
     ],
     [
      "新井薬師前",
-     1059
+     1003
     ]
    ]
   },
@@ -5590,18 +5622,24 @@
    "price": "北海道・東北・関東・中部・近畿・中四国・九州沖縄・横浜中華・韓国の各「食祭」とKABUKI CAFEが集まるフードホール",
    "region": "新宿・中野・杉並",
    "area_label": "新宿（歌舞伎町）",
-   "lat": 35.695492,
-   "lng": 139.700806,
-   "geo": "gsi",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "ikntpBoqukq@N}@QEHe@a@e@e@KCJYLIS_@E]lB"
+    ]
+   },
+   "lat": 35.6959775,
+   "lng": 139.7006622,
+   "geo": "outline",
    "gsi": "東京都新宿区歌舞伎町一丁目２９番１号",
    "near": [
     [
      "西武新宿",
-     71
+     86
     ],
     [
      "新宿西口",
-     300
+     343
     ]
    ]
   },
@@ -5653,7 +5691,7 @@
    "shape": {
     "t": "poly",
     "p": [
-     "iwotpBstvkq@cFwAoBzHlDdAg@xAh@P\\_AHBtBcIBM"
+     "kwotpB}svkq@F@FU{FcBIVLDMd@KCGVB?Kd@CAGVHBERICITLDERKCWnAB@ITICGTxEvAENTH`BmGJBFWKC"
     ]
    },
    "lat": 35.6940637,
@@ -5716,12 +5754,9 @@
    "region": "新宿・中野・杉並",
    "area_label": "新宿（西口）",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "eantpBadwkq@LdBNfB",
-     "icntpBodwkq@C\\h@hEZjC",
-     "cbntpBg}vkq@z@KD?HAp@G",
-     "a`ntpBs}vkq@LbC@L"
+     "_~mtpBwzvkq@a@mG{B[WFAHfAzINK\\BTIFIXQ"
     ]
    },
    "lat": 35.6928662,
@@ -7772,6 +7807,12 @@
    "en": "Koenji Daiichi Ichiba",
    "price": "焼肉・ホルモンの「焼肉ここち 市場店」（2023年開店、カウンター16席）などが入居",
    "region": "新宿・中野・杉並",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "kq{spBgeqkq@C?JQ}Au@ITC?O`@XHUl@VJFKHDBE^LPU"
+    ]
+   },
    "lat": 35.705994,
    "lng": 139.648849,
    "geo": "gsi",
@@ -7825,6 +7866,12 @@
    "en": "Koenji Mashita",
    "price": "焼きとん99円〜の「立呑み 焼きとん 大黒」、天ぷらと魚の「立呑み 魚椿」（英語メニューあり）などの立ち飲みが入居",
    "region": "新宿・中野・杉並",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "mv{spBopqkq@_@`CjFa@?_B"
+    ]
+   },
    "lat": 35.705254,
    "lng": 139.648987,
    "geo": "gsi-block",
@@ -8756,6 +8803,12 @@
    "en": "Nakameguro Koukashita",
    "price": "鶏だしおでん「さもん」、日本酒バル、立ち食い焼肉、うどん居酒屋などが並ぶ",
    "region": "渋谷・目黒・世田谷",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "gxltpBa{mlq@i@y@aAl@gAz@mCbCuDvDyCjDaArAwB~BmBbBnApA`CiD~CyDxHiInCcC"
+    ]
+   },
    "lat": 35.642216,
    "lng": 139.696548,
    "geo": "gsi-block",
@@ -9239,6 +9292,12 @@
    "en": "Ebisu Yokocho",
    "price": "焼鳥、おでん、鮮魚、キノコ料理、ワインバー、肉寿司など約20店",
    "region": "渋谷・目黒・世田谷",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "}`rtpBqbklq@n@i@s@{@m@f@^d@OJiAqAY`ARDHEbAnAFGJNh@a@"
+    ]
+   },
    "lat": 35.6481446,
    "lng": 139.7106592,
    "geo": "osm-area",
@@ -9630,10 +9689,9 @@
    "price": "1932年創業の焼鳥「鳥福」、おでんの「なだ一」など、数席規模の極小店が並ぶ",
    "region": "渋谷・目黒・世田谷",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "{vntpByzelq@]?EdACrA^@",
-     "cwntpB}uelq@F{C"
+     "wvntpB}zelq@?Ec@AEBCHC?E|@C?Cz@?ZB@?RV@?IX?@ED?FcD"
     ]
    },
    "lat": 35.6599887,
@@ -9695,7 +9753,7 @@
    "shape": {
     "t": "poly",
     "p": [
-     "_zntpBwrelq@gAhISlCN@bByLA]"
+     "wvntpBirelq@oB?kAdKbA?^oEfA?"
     ]
    },
    "lat": 35.660899,
@@ -13017,6 +13075,12 @@
    "en": "Tokyo Otsuka Noren-gai",
    "price": "たこ焼の上木屋、肉ビストロ、寿司店など11軒",
    "region": "池袋・赤羽・城北",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "c~xtpBc`ekq@Yy@W{Am@BB`@PpAa@BFnAD?@VI@BXRJh@QEg@Q@GiABAL`@"
+    ]
+   },
    "lat": 35.7327,
    "lng": 139.729675,
    "geo": "gsi",
@@ -13603,9 +13667,9 @@
    "price": "最古参はおでん屋台が起源のずぼら",
    "region": "池袋・赤羽・城北",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "sattpByxfkq@zBA@QnCA"
+     "uystpBcyfkq@T?AUS??QuA@?BU??AiA??B[??LU?APW??RN?ARz@??C`A??c@\\??PZ??P|@?"
     ]
    },
    "lat": 35.7290857,
@@ -13659,6 +13723,12 @@
    "en": "Sakaecho-dori",
    "price": "最古参の酒場・江戸一（大塚の江戸一とは別店）は3代目の家庭料理、銀たら煮が評判",
    "region": "池袋・赤羽・城北",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "kvstpBosfkq@EoDKE?_@S??RU@Bt@AvAM?@JS?@TPA?R"
+    ]
+   },
    "lat": 35.729443,
    "lng": 139.715332,
    "geo": "gsi",
@@ -14483,9 +14553,9 @@
    "price": "約100mの路地に約30軒。立ち呑み処 順貴はビール・サワー400円以下、おばんざい300円均一",
    "region": "池袋・赤羽・城北",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "arutpBy~ojq@sB_Ea@w@oAA"
+     "yputpB_`pjq@{A{CUYKHKQJGQ]_@RKKuAA?RR?@x@r@CRb@ZO\\p@[NDLRb@HEb@z@TIHNPIMWL@"
     ]
    },
    "lat": 35.7797967,
@@ -14540,6 +14610,12 @@
    "en": "Akabane Ichibangai Silk Road",
    "price": "立ち飲みおでんの丸健水産が名物。おでん種の練り物店で出汁割りが飲める",
    "region": "池袋・赤羽・城北",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "kwutpBq}ojq@Ye@OJKSPMMU@Au@oAMJEKAe@a@@AKS@@HiALP^LAACt@Iu@b@dA`BA@R\\LNDCNVDCDHFCNVPKNVPKGKTOOU"
+    ]
+   },
    "lat": 35.780067,
    "lng": 139.72084,
    "geo": "gsi",
@@ -15381,6 +15457,12 @@
    "en": "Tateishi Nakamise Arcade",
    "price": "宇ち多゛のもつ焼き・梅割り、栄寿司の立ち食い寿司、丸忠のおでんなどではしご酒",
    "region": "北千住・葛飾",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "_ldvpBivbkq@W_BSBIk@l@IAMJCGc@o@H?Sl@GOeAZEGa@G?AWFAMu@YBOgAQBCKKB?C[DG[SBF^[Pv@|GK@N`AFAJt@G@N`Af@IBHRCCK"
+    ]
+   },
    "lat": 35.737999,
    "lng": 139.849045,
    "geo": "gsi",
@@ -15919,18 +16001,24 @@
    "en": "Kitasenju Nomiyoko (Tokiwa-dori)",
    "price": "天七の串カツ、千住の永見の千寿揚げ、シチュー屋の牡蠣鍋など老舗と新店が混在",
    "region": "北千住・葛飾",
-   "lat": 35.749016,
-   "lng": 139.803711,
-   "geo": "gsi-block",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "qysupBke~jq@_AEA^a@??QB??{@Q@?q@H??s@U?@e@Q?@]EA?Sh@_@XYN_@CADEu@w@sAG?DE??Jc@CC\\C?ChAD?CRF@Eb@CAKd@qB~LVDEXIA?JQ?Mx@V@ARYACZt@DCTy@GId@zANGn@MLMr@TDDQ|AO@m@L@@Uo@EDk@T@B_@`@DL{@iAMLgASCHu@H@Hk@QCBKb@FHy@d@B?EdBF?@j@?@q@J?ASLAZDHo@"
+    ]
+   },
+   "lat": 35.7484921,
+   "lng": 139.8037997,
+   "geo": "outline",
    "gsi": "東京都足立区千住二丁目６２番地",
    "near": [
     [
      "北千住",
-     112
+     130
     ],
     [
      "牛田",
-     901
+     864
     ]
    ]
   },
@@ -17427,18 +17515,24 @@
    "kana": "かめくろよこちょう",
    "en": "Kamekuro Yokocho",
    "region": "墨田・江東・江戸川",
-   "lat": 35.696602,
-   "lng": 139.829208,
-   "geo": "gsi",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "q`}upBsoukq@AMmAcAMuDYBDv@KBRvDJABZ"
+    ]
+   },
+   "lat": 35.6959897,
+   "lng": 139.8289007,
+   "geo": "outline",
    "gsi": "東京都江東区亀戸六丁目３１番６号",
    "near": [
     [
      "亀戸",
-     230
+     247
     ],
     [
      "亀戸水神",
-     550
+     619
     ]
    ]
   },
@@ -17698,24 +17792,23 @@
    "en": "Koiwa Flower Road",
    "region": "墨田・江東・江戸川",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "alpvpBmjekq@?EbBwMDYb@iD@S@Q@Q?_@MsB]yFq@oL?GKgBEw@QwBKm@My@cBoIqAaHS}@K[eAkC]s@OUOSk@k@aB_BSSq@m@sCkCWW"
+     "{dpvpBkkfkq@Cc@c@@Cq@q@BAO`AEAg@a@BAUTAASG?Cc@J?C_@{@BIuAaAFLrBqBIEhAdBH?x@B?FvAE?@XB?@VU?@ZS@@\\H?Bp@H?Bb@P?@|@p@B@`AQzA[ECLm@IEhA`@PBO\\Do@~EqAQGd@J@ERGACLGAEf@If@CAEd@VBE^WCGf@\\DKr@b@FIr@LBNOD]|@Jr@wFZFd@mDB?L_Ab@FFg@UEHk@XDHi@iAOFk@t@HPsA{@]Cm@j@WASC?Ai@A?Co@PACq@D?Ak@K@C]"
     ]
    },
-   "lat": 35.7287773,
-   "lng": 139.88259,
-   "geo": "osm-area",
-   "osm": "w58631778",
+   "lat": 35.730859,
+   "lng": 139.8813431,
+   "geo": "outline",
    "gsi": "東京都江戸川区南小岩七丁目１３番１２号",
    "near": [
     [
      "小岩",
-     500
+     268
     ],
     [
      "京成小岩",
-     1519
+     1298
     ]
    ]
   },
@@ -18139,10 +18232,9 @@
    "en": "Shin-Koiwa Lumiere Shopping Street",
    "region": "墨田・江東・江戸川",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "s`hvpByplkq@}AkBmB}BmBwBSWqAaBsBcCqB}BoAuASU",
-     "}whvpBckmkq@uBeCiFaGmBaCwBiC"
+     "a`hvpBaqlkq@DFfA}@w@aAURi@o@QL[c@ZUo@u@SPY]g@b@i@o@`@_@sAuALKEELIi@o@UPWYc@\\a@g@[VHHy@r@\\`@`@_@PPe@b@LNBCNPt@o@r@x@i@b@TVMJt@|@v@q@LPm@f@DDGFVZ`@]RVBAJJe@`@t@z@NMZ`@HGl@n@ZWDD"
     ]
    },
    "lat": 35.7153711,
@@ -18463,6 +18555,12 @@
    "kana": "つきしまもんじゃすとりーと",
    "en": "Tsukishima Monja Street (Nishinaka-dori)",
    "region": "墨田・江東・江戸川",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "{dkupBwydlq@UYw@r@ACMHg@f@AAKJCCURGGYTJLg@d@KHCCYTk@p@CESPHJSPLN_@\\[_@m@f@Z\\URWYm@d@WVDB]ZMOWTDD}@x@IIYTEGOLXZ[TIIMLXZMJ[]yJjIX^KHSWa@\\CA[RX\\kHdGd@j@xDaD`@`@RSCAp@o@CCROBDXUCCt@s@UY\\Y^Zr@s@DFLM@@JKMMZ[JLVWCCjAeABBHIB@VWMO\\YLPNMCAl@e@[]TQPRJIQSlBaBd@j@ZWOQNMB@JIV\\PMSUPOXZXUg@m@v@i@BDz@s@Y]`@]d@j@t@m@e@k@pHmGe@k@"
+    ]
+   },
    "lat": 35.6642849,
    "lng": 139.782458,
    "geo": "osm-area",
@@ -19498,6 +19596,12 @@
    "kana": "たつみしんみち",
    "en": "Tatsumi Shindo",
    "region": "墨田・江東・江戸川",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "_aqupBm|_lq@UI@C_@KTu@WIFYOEGROEK\\WfAB?GfATDATP@BMJBCPPBBOTFJ_@CA"
+    ]
+   },
    "lat": 35.6732131013295,
    "lng": 139.795898,
    "geo": "gsi",

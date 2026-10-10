@@ -59,6 +59,15 @@
   "smoking": "全席禁煙",
   "url": "https://www.hotpepper.jp/strJ001291412/"
  },
+ "shimbashi-new-izumi": {
+  "address": "東京都港区新橋３-19-6新陽ビルディングＢ1",
+  "closed": "日、祝日",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 25,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001294271/"
+ },
  "nihonbashi-citan": {
   "address": "東京都中央区日本橋大伝馬町15-2 チョーヤビルB1",
   "closed": "なし",
@@ -227,6 +236,62 @@
   "cash_only": false,
   "url": "https://www.hotpepper.jp/strJ000249207/"
  },
+ "kanda-mimasuya": {
+  "address": "東京都千代田区神田司町2-15-2",
+  "week": {
+   "mon": [
+    [
+     690,
+     810,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     690,
+     810,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     690,
+     810,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     690,
+     810,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     690,
+     810,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1290,
+     null
+    ]
+   ],
+   "sun": [],
+   "hol": []
+  },
+  "hours": "月〜金 11:30〜13:30／土 17:00〜21:30／日・祝 定休",
+  "closed": "日・祝日",
+  "budget_dinner": "¥4,000〜¥4,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 130,
+  "url": "https://www.hotpepper.jp/strJ000622146/"
+ },
  "kayabacho-new-kayaba": {
   "address": "東京都中央区日本橋茅場町2-17-11",
   "closed": "土曜、日曜、祝日",
@@ -234,6 +299,33 @@
   "pay": "現金のみ",
   "cash_only": true,
   "url": "https://www.hotpepper.jp/strJ000864152/"
+ },
+ "toranomon-kakuuchi-kan": {
+  "address": "東京都港区虎ノ門２-6-2 虎ノ門ヒルズステーションタワー B2F T-MARKET",
+  "closed": "虎ノ門ヒルズの休みに準じます",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 39,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ003828884/"
+ },
+ "akasaka-marushige": {
+  "address": "東京都港区赤坂２-14-8 山口ビル2階",
+  "closed": "日、祝日 土曜日は不定休です。詳しくは店舗にご確認下さい。",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 75,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ000240293/"
+ },
+ "ginza-shimada": {
+  "address": "東京都中央区銀座８-2-8 高坂ビル1F",
+  "closed": "日、祝日",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 14,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001001099/"
  },
  "higashiueno-toranoko": {
   "address": "東京都台東区東上野２－２０－９",

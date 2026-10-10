@@ -5478,6 +5478,68 @@
   "categories": "Izakaya (Japanese style tavern), Oden",
   "url": "https://tabelog.com/tokyo/A1318/A131808/13067740/"
  },
+ "gakudai-kujigawa": {
+  "score": 3.05,
+  "phone": "03-3793-9661",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1080,
+     1380,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     1080,
+     1380,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     1080,
+     1380,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1080,
+     1380,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1080,
+     1380,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     1080,
+     1380,
+     null
+    ]
+   ],
+   "tue": []
+  },
+  "hours": "月 18:00〜23:00／火 定休／水〜日 18:00〜23:00",
+  "pay": "現金・QR決済可",
+  "cash_only": false,
+  "seating": [
+   "カウンター席"
+  ],
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "categories": "Japanese Cuisine",
+  "url": "https://tabelog.com/tokyo/A1317/A131702/13081657/"
+ },
  "gakudai-nishiguchi-aogiri": {
   "score": 3.43,
   "phone": "050-5456-0861",
@@ -5731,6 +5793,105 @@
   "opened": "2018.9.19",
   "categories": "Stand-up bar, Izakaya (Japanese style tavern), Japanese sake bar",
   "url": "https://tabelog.com/tokyo/A1303/A130302/13227987/"
+ },
+ "ebisu-kaoru": {
+  "score": 3.19,
+  "phone": "03-3496-4435",
+  "reserve": "予約可",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "categories": "Kushiyaki, Izakaya (Japanese style tavern), Yoshoku (Japanese style western cuisine)",
+  "url": "https://tabelog.com/tokyo/A1303/A130302/13113276/"
+ },
+ "ebisu-makura-toyokatsu": {
+  "score": 3.41,
+  "phone": "03-3461-8539",
+  "reserve": "予約不可",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "prehol": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "posthol": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "sun": [],
+   "hol": []
+  },
+  "hours": "月〜土 17:00〜22:00（L.O.21:30）／日・祝 定休／祝前日 17:00〜22:00（L.O.21:30）／祝後日 17:00〜22:00（L.O.21:30）",
+  "budget_dinner": "¥1,000〜¥1,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 20,
+  "seats_note": "カウンター 席: 20",
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワインにこだわり"
+  ],
+  "categories": "Grilled tripe, Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1303/A130302/13024498/"
  },
  "ebisu-nawanoren": {
   "score": 3.53,
@@ -6915,6 +7076,175 @@
   ],
   "categories": "Yakitori (Grilled chicken skewers), Grilled tripe, Izakaya (Japanese style tavern)",
   "url": "https://tabelog.com/tokyo/A1318/A131814/13064224/"
+ },
+ "shinsen-senba": {
+  "score": 3.13,
+  "phone": "03-3780-0285",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1140,
+     1440,
+     1410
+    ]
+   ],
+   "tue": [
+    [
+     1140,
+     1440,
+     1410
+    ]
+   ],
+   "wed": [
+    [
+     1140,
+     1440,
+     1410
+    ]
+   ],
+   "thu": [
+    [
+     1140,
+     1440,
+     1410
+    ]
+   ],
+   "fri": [
+    [
+     1140,
+     1440,
+     1410
+    ]
+   ],
+   "sat": [
+    [
+     1140,
+     1440,
+     1410
+    ]
+   ],
+   "sun": [
+    [
+     1140,
+     1440,
+     1410
+    ]
+   ]
+  },
+  "hours": "月〜日 19:00〜24:00（L.O.23:30）",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）・QR決済（PayPay・d払い・楽天ペイ・au PAY）可",
+  "cash_only": false,
+  "charge": "お通し400円",
+  "seats": 20,
+  "seating": [
+   "落ち着いた空間",
+   "カウンター席",
+   "Wi-Fi"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "categories": "Izakaya (Japanese style tavern), Yakitori (Grilled chicken skewers)",
+  "url": "https://tabelog.com/tokyo/A1303/A130301/13036896/"
+ },
+ "sasazuka-hidechan": {
+  "score": 3.12,
+  "phone": "03-3377-8826",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     690,
+     840,
+     null
+    ],
+    [
+     1020,
+     1500,
+     1470
+    ]
+   ],
+   "tue": [
+    [
+     690,
+     840,
+     null
+    ],
+    [
+     1020,
+     1500,
+     1470
+    ]
+   ],
+   "thu": [
+    [
+     690,
+     840,
+     null
+    ],
+    [
+     1020,
+     1500,
+     1470
+    ]
+   ],
+   "fri": [
+    [
+     690,
+     840,
+     null
+    ],
+    [
+     1020,
+     1500,
+     1470
+    ]
+   ],
+   "wed": [
+    [
+     690,
+     840,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1500,
+     1470
+    ]
+   ],
+   "sun": [
+    [
+     1020,
+     1500,
+     1470
+    ]
+   ],
+   "hol": [
+    [
+     1020,
+     1500,
+     1470
+    ]
+   ]
+  },
+  "hours": "月・火 11:30〜14:00・17:00〜25:00（L.O.24:30）／水 11:30〜14:00／木・金 11:30〜14:00・17:00〜25:00（L.O.24:30）／土・日・祝 17:00〜25:00（L.O.24:30）",
+  "budget_dinner": "¥6,000〜¥7,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "charge": "お通し330円",
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "categories": "Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1318/A131808/13074842/"
  },
  "kyodo-hyakushotei": {
   "score": 3.27,
@@ -9048,6 +9378,71 @@
   ],
   "categories": "Stand-up bar, Unagi (Eel)",
   "url": "https://tabelog.com/tokyo/A1315/A131503/13023403/"
+ },
+ "nishikoyama-dontaro": {
+  "score": 3.11,
+  "phone": "03-3711-1642",
+  "reserve": "予約可",
+  "week": {
+   "tue": [
+    [
+     1020,
+     1260,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1260,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1260,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1260,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1260,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     1020,
+     1260,
+     null
+    ]
+   ],
+   "mon": []
+  },
+  "hours": "月 定休／火〜日 17:00〜21:00",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 24,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "web": "http://nagashimayuki.net/dontaro/index.html",
+  "categories": "Grilled tripe, Soba (Buckwheat noodles), Motsu-nabe",
+  "url": "https://tabelog.com/tokyo/A1317/A131710/13064113/"
  },
  "zoshiki-mannen": {
   "score": 3.19,

@@ -574,6 +574,15 @@
   "closed": "－",
   "url": "https://www.hotpepper.jp/strJ000229782/"
  },
+ "gakudai-manpine": {
+  "address": "東京都目黒区鷹番２丁目20-4 学大十字街ビル105",
+  "closed": "休まず毎日営業してます！ ※臨時休業、イベント等はインスタグラムにてご確認ください。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 26,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ003624395/"
+ },
  "kyodo-sabanoyu": {
   "address": "東京都世田谷区経堂2-6-6ｐｌｕｍｂｏｘ・5・1階",
   "closed": "不定休",
@@ -581,6 +590,15 @@
   "cash_only": true,
   "seats": 25,
   "url": "https://www.hotpepper.jp/strJ000967095/"
+ },
+ "jiyugaoka-awanosato": {
+  "address": "東京都目黒区自由が丘１-12-19センタービル 1F",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 20,
+  "smoking": "分煙・喫煙所あり",
+  "url": "https://www.hotpepper.jp/strJ004403132/"
  },
  "musashikoyama-gyutaro": {
   "address": "東京都品川区小山4-3-13",

@@ -600,6 +600,11 @@
   "smoking": "分煙・喫煙所あり",
   "url": "https://www.hotpepper.jp/strJ004403132/"
  },
+ "togoshiginza-ootaki": {
+  "address": "東京都品川区平塚2-18-3",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000608201/"
+ },
  "musashikoyama-gyutaro": {
   "address": "東京都品川区小山4-3-13",
   "closed": "－",
@@ -1250,6 +1255,14 @@
   "seats": 40,
   "smoking": "全席禁煙",
   "url": "https://www.hotpepper.jp/strJ001195227/"
+ },
+ "funabori-teradaya": {
+  "address": "東京都江戸川区船堀3-9-6",
+  "closed": "－",
+  "budget_dinner": "¥6,000〜¥7,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "url": "https://www.hotpepper.jp/strJ000733103/"
  },
  "tachikawa-akebono-stand": {
   "address": "東京都立川市曙町２-14-25",

@@ -66,16 +66,17 @@
     }
     return { open: false, closedToday: true };
   }
-  /** how the lantern is lit: "on" open now, "off" outside its hours, "unk" hours unknown.
-      A yokocho is lit while any of its shops is open, and dark only when two or more known ones are all shut. */
+  /** the lantern is lit only while the shop is open ("on"); outside its hours, or with no known hours, it is dark ("off").
+      A yokocho is lit while any of its shops is open; one with no shop hours on the map is lit 17:00–24:00, the usual drinking hours. */
   function litState(s) {
     if (s.kind === "yokocho") {
       const sts = (kids[s.id] || []).map((o) => openState(o)).filter(Boolean);
-      if (sts.some((x) => x.open)) return "on";
-      return sts.length >= 2 ? "off" : "unk";
+      if (sts.length) return sts.some((x) => x.open) ? "on" : "off";
+      const t = new Date(clockOverride() + JST), min = t.getUTCHours() * 60 + t.getUTCMinutes();
+      return min >= 17 * 60 ? "on" : "off";
     }
     const st = openState(s);
-    return !st ? "unk" : st.open ? "on" : "off";
+    return st && st.open ? "on" : "off";
   }
   function stLabel(st, long) {
     if (!st) return null;

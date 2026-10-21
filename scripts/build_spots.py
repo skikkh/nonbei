@@ -561,6 +561,8 @@ def main():
         s.update(pos)
         s["gsi"] = g.get("title")
         s["near"] = nearest_stations(stations, s["lat"], s["lng"])
+        if not s.get("area"):  # entries from media articles may lack a town name: use the nearest station
+            s["area"] = s["near"][0][0] if s["near"] else (s.get("ward") or "東京")
         if i % 20 == 0:
             save_cache()
             print(f"{i}/{len(spots)}", file=sys.stderr)

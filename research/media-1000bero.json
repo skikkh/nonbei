@@ -316,71 +316,6 @@
   "status_src": "media"
  },
  {
-  "id": "bero-438",
-  "name": "馬の串ん",
-  "name_kana": null,
-  "name_en": null,
-  "kind": "senbero",
-  "yokocho": null,
-  "area": "板橋",
-  "ward": "北区",
-  "address": "東京都北区上十条1-15-8",
-  "address_detail": null,
-  "station": null,
-  "hours": null,
-  "closed": null,
-  "budget": null,
-  "budget_min": null,
-  "budget_max": null,
-  "price_note": "酎ハイは290円、生ビールは490円で、ちょい飲みなら1500円前後が目安。（記事の時点）",
-  "social": 3,
-  "solo": 4,
-  "hiru": false,
-  "tags": [
-   "一人飲み歓迎",
-   "ホッピー",
-   "チャージなし"
-  ],
-  "payment": null,
-  "smoking": null,
-  "english": false,
-  "desc": "板橋駅東口から目と鼻の先、2階にある居酒屋で、カウンターとテーブルを合わせて40名ほど入る。名物は1本190円の馬刺しで、肩ロースや胸椎後方の肉が特に美味しいと紹介されている。",
-  "talk": "店内はワイワイと賑やかで2～3名のグループが多く、一人でも立ち寄りやすいが、静かに話したい人には向かない。",
-  "tips": "馬刺しは数量限定メニューなので、お目当てがあれば早めに頼みたい。",
-  "shops": null,
-  "since": null,
-  "status": "open",
-  "checked": "せんべろnetの記事（2026年07月更新）と食べログの口コミ（2026年8月訪問まで）",
-  "sources": [
-   "https://1000bero.net/restaurant-438/",
-   "https://tabelog.com/tokyo/A1301/A130101/13146883/"
-  ],
-  "catch": "板橋駅前で馬刺しを気軽につまめる居酒屋",
-  "menu": [
-   {
-    "n": "馬刺し（1本）",
-    "p": "190円"
-   },
-   {
-    "n": "白菜漬け",
-    "p": "90円"
-   },
-   {
-    "n": "馬串",
-    "p": "120円"
-   },
-   {
-    "n": "馬肉タタキ",
-    "p": "380円"
-   },
-   {
-    "n": "きんぴらゴボウ",
-    "p": "160円"
-   }
-  ],
-  "status_src": "media"
- },
- {
   "id": "bero-525",
   "name": "熟成古酒処",
   "name_kana": null,
@@ -434,73 +369,6 @@
    {
     "n": "利き酒セット（3種）",
     "p": "1000円"
-   }
-  ],
-  "status_src": "media"
- },
- {
-  "id": "bero-576",
-  "name": "やきとん みつぼ",
-  "name_kana": null,
-  "name_en": null,
-  "kind": "senbero",
-  "yokocho": null,
-  "area": "高田馬場",
-  "ward": "新宿区",
-  "address": "東京都新宿区歌舞伎町1-15-13建成産業ビルB1F",
-  "address_detail": null,
-  "station": null,
-  "hours": null,
-  "closed": null,
-  "budget": null,
-  "budget_min": null,
-  "budget_max": null,
-  "price_note": "生ビール450円、ホッピーセット400円、チューハイ290円、串はやきとん1本90円から。（記事の時点）",
-  "social": 3,
-  "solo": 3,
-  "hiru": false,
-  "tags": [
-   "焼きとん",
-   "ホッピー",
-   "刺身",
-   "煮込み",
-   "チャージなし"
-  ],
-  "payment": null,
-  "smoking": null,
-  "english": false,
-  "desc": "高田馬場駅の戸山口から目と鼻の先にあるやきとん店で、扉がなく吹き抜けのように開放的な店内だ。やきとんは16種類あり、1本90円からと安い。",
-  "talk": "外国人の店員さんが笑顔で声をかけてくれ、賑やかな雰囲気の中で一人でも2～3名でも飲みやすい。",
-  "tips": "価格は税抜き表記で、会計時に消費税が加わる。ジャンボ酎ハイ（ジャン酎）は1100円で、酎ハイを4杯以上飲むならお得。",
-  "shops": null,
-  "since": null,
-  "status": "open",
-  "checked": "せんべろnetの記事（2025年05月更新）と食べログの口コミ（2026年9月訪問まで）",
-  "sources": [
-   "https://1000bero.net/restaurant-576/",
-   "https://tabelog.com/tokyo/A1301/A130101/13056731/"
-  ],
-  "catch": "高田馬場駅前の開放的なやきとん居酒屋",
-  "menu": [
-   {
-    "n": "やきとん（1本）",
-    "p": "90円"
-   },
-   {
-    "n": "テッチゃん焼",
-    "p": "380円"
-   },
-   {
-    "n": "生レバニラ炒め",
-    "p": "380円"
-   },
-   {
-    "n": "豚しっぽ煮",
-    "p": "350円"
-   },
-   {
-    "n": "和牛ハツ刺し",
-    "p": "400円"
    }
   ],
   "status_src": "media"
@@ -1208,71 +1076,6 @@
   ],
   "catch": "高円寺の広島風お好み焼き立ち飲み",
   "menu": null,
-  "status_src": "media"
- },
- {
-  "id": "bero-803",
-  "name": "餃子酒場 たっちゃん",
-  "name_kana": null,
-  "name_en": null,
-  "kind": "senbero",
-  "yokocho": null,
-  "area": "高田馬場",
-  "ward": "新宿区",
-  "address": "東京都新宿区高田馬場3-4-17",
-  "address_detail": null,
-  "station": null,
-  "hours": null,
-  "closed": null,
-  "budget": null,
-  "budget_min": null,
-  "budget_max": null,
-  "price_note": "檸檬フィズは通常380円だが、16～18時の早割なら190円、焼き餃子7個も140円と激安。（記事の時点）",
-  "social": 3,
-  "solo": 4,
-  "hiru": false,
-  "tags": [
-   "一人飲み歓迎",
-   "レモンサワー",
-   "チャージなし"
-  ],
-  "payment": null,
-  "smoking": null,
-  "english": false,
-  "desc": "高田馬場駅から徒歩10分ほど、早稲田通り沿いにある餃子酒場。テーブル席とカウンター席で40～50名入る広さで、店先にはテラス席もあり、焼き餃子を中心に檸檬フィズとの組み合わせが定番だ。",
-  "talk": "店員さんが元気で明るく、気軽に立ち寄りやすい雰囲気で、女性一人でも利用しやすいと記事は紹介している。",
-  "tips": "16～18時の早割ハッピーアワーが特に安い（2017年9月時点）。",
-  "shops": null,
-  "since": null,
-  "status": "open",
-  "checked": "せんべろnetの記事（2020年07月更新）と食べログの口コミ（2026年8月訪問まで）",
-  "sources": [
-   "https://1000bero.net/restaurant-803/",
-   "https://tabelog.com/tokyo/A1301/A130101/13211613/"
-  ],
-  "catch": "福岡小倉の人気店が東京に進出した餃子酒場",
-  "menu": [
-   {
-    "n": "檸檬フィズ（早割）",
-    "p": "190円"
-   },
-   {
-    "n": "焼き餃子7個（早割）",
-    "p": "140円"
-   },
-   {
-    "n": "肉汁餃子（4個）",
-    "p": "480円"
-   },
-   {
-    "n": "餃子の皮せんべい",
-    "p": "220円"
-   },
-   {
-    "n": "ひな鶏の半身揚げ（1/4）",
-    "p": "680円～"
-   }
-  ],
   "status_src": "media"
  },
  {
@@ -3363,73 +3166,6 @@
   "status_src": "media"
  },
  {
-  "id": "bero-1309",
-  "name": "はちまる",
-  "name_kana": null,
-  "name_en": null,
-  "kind": "senbero",
-  "yokocho": null,
-  "area": "巣鴨",
-  "ward": "豊島区",
-  "address": "東京都豊島区巣鴨4-24-13",
-  "address_detail": null,
-  "station": null,
-  "hours": null,
-  "closed": null,
-  "budget": null,
-  "budget_min": null,
-  "budget_max": null,
-  "price_note": "生ビール480円、ホッピーセット380円（中180円）、サワー・ハイボール380円、おつまみは300円ほどから、ハーフサイズもある。（記事の時点）",
-  "social": 3,
-  "solo": 5,
-  "hiru": true,
-  "tags": [
-   "昼飲み",
-   "一人飲み歓迎",
-   "ホッピー",
-   "刺身",
-   "チャージなし"
-  ],
-  "payment": null,
-  "smoking": null,
-  "english": false,
-  "desc": "巣鴨駅から徒歩10分ほど、地蔵通り商店街の脇道を入ったところにある「ちょい飲み」の居酒屋だ。カウンターとテーブル席があり、おつまみは天ぷら盛合せ（650円）や豊洲市場直送の刺身などが豊富だ。",
-  "talk": "店主と店員さんの二人で切り盛りし、「一名様大歓迎」を掲げているので、一人でも入りやすい。",
-  "tips": "平日19時まで生ビールが半額のタイムサービス（貼り紙より）。ランチ客が引いた昼過ぎは落ち着いている。",
-  "shops": null,
-  "since": null,
-  "status": "open",
-  "checked": "せんべろnetの記事（2019年05月更新）と食べログの口コミ（2026年9月訪問まで）",
-  "sources": [
-   "https://1000bero.net/restaurant-1309/",
-   "https://tabelog.com/tokyo/A1301/A130101/13170670/"
-  ],
-  "catch": "昼から天ぷらで飲める巣鴨の居酒屋",
-  "menu": [
-   {
-    "n": "天ぷら盛合せ",
-    "p": "650円"
-   },
-   {
-    "n": "茅ヶ崎産たけのこ土佐煮",
-    "p": "480円"
-   },
-   {
-    "n": "スナップエンドウ",
-    "p": "400円"
-   },
-   {
-    "n": "ホッピーセット",
-    "p": "380円"
-   },
-   {
-    "n": "ポテトサラダ",
-    "p": "150円"
-   }
-  ],
-  "status_src": "media"
- },
- {
   "id": "bero-1330",
   "name": "やんばるミートセンター",
   "name_kana": null,
@@ -3485,55 +3221,6 @@
    {
     "n": "ゴーヤー チーズ巻き",
     "p": "280円"
-   }
-  ],
-  "status_src": "media"
- },
- {
-  "id": "bero-1337",
-  "name": "独楽寿司",
-  "name_kana": null,
-  "name_en": null,
-  "kind": "senbero",
-  "yokocho": null,
-  "area": "八王子",
-  "ward": "八王子市",
-  "address": "東京都八王子市旭町9−1",
-  "address_detail": null,
-  "station": null,
-  "hours": null,
-  "closed": null,
-  "budget": null,
-  "budget_min": null,
-  "budget_max": null,
-  "price_note": "アルコール飲み放題は90分500円（セルフ式）。価格は税抜き表記で、会計時に消費税がかかる。（記事の時点）",
-  "social": 3,
-  "solo": 4,
-  "hiru": true,
-  "tags": [
-   "昼飲み",
-   "一人飲み歓迎",
-   "チャージなし"
-  ],
-  "payment": null,
-  "smoking": null,
-  "english": false,
-  "desc": "八王子駅から目と鼻の先、八王子オクトーレ9階にある回転寿司だ。カウンターと約90席のテーブル席があり、小田原港直送の活魚の寿司とセルフの飲み放題が名物だ。",
-  "talk": "職人さんの声が響く活気ある店内で、一人でもグループでも気軽に利用できる雰囲気だ。",
-  "tips": "注文はタッチパネル式。飲み放題は90分500円（セルフ式）で、連休などは提供時間が変わる場合があるので公式サイトで確認。",
-  "shops": null,
-  "since": null,
-  "status": "open",
-  "checked": "せんべろnetの記事（2026年06月更新）と食べログの口コミ（2026年9月訪問まで）",
-  "sources": [
-   "https://1000bero.net/restaurant-1337/",
-   "https://tabelog.com/tokyo/A1301/A130101/13016426/"
-  ],
-  "catch": "90分飲み放題が500円の八王子の回転寿司",
-  "menu": [
-   {
-    "n": "アルコール飲み放題（90分・セルフ式）",
-    "p": "500円"
    }
   ],
   "status_src": "media"
@@ -5007,134 +4694,6 @@
    {
     "n": "熱燗二合・生酒",
     "p": "400円"
-   }
-  ],
-  "status_src": "media"
- },
- {
-  "id": "bero-1614",
-  "name": "うどん処 硯家 南池袋店",
-  "name_kana": null,
-  "name_en": null,
-  "kind": "senbero",
-  "yokocho": null,
-  "area": "池袋",
-  "ward": "豊島区",
-  "address": "東京都豊島区南池袋1-9-24",
-  "address_detail": null,
-  "station": null,
-  "hours": null,
-  "closed": null,
-  "budget": null,
-  "budget_min": null,
-  "budget_max": null,
-  "price_note": "エビス生ビール・角ハイボール・生レモンサワー・ジャスミン茶ハイは各300円、サワー類は390円から、うどんは380円から。（記事の時点）",
-  "social": 3,
-  "solo": 4,
-  "hiru": true,
-  "tags": [
-   "昼飲み",
-   "一人飲み歓迎",
-   "日本酒",
-   "チャージなし"
-  ],
-  "payment": null,
-  "smoking": null,
-  "english": false,
-  "desc": "池袋駅東口から歩いて10分ほど、明治通り沿いの地下にあるうどん居酒屋だ。カウンターとテーブル席で30名足らず入る店内で、天ぷらやだし巻き玉子などの一品が並ぶ。",
-  "talk": "店主のお兄さんとお姉さんが切り盛りし、気軽に飲める雰囲気で一人でも入りやすい。",
-  "tips": "おつまみの天ぷらは17時から提供。座っても席料やお通しはかからない。",
-  "shops": null,
-  "since": null,
-  "status": "open",
-  "checked": "せんべろnetの記事（2023年09月更新）と食べログの口コミ（2026年9月訪問まで）",
-  "sources": [
-   "https://1000bero.net/restaurant-1614/",
-   "https://tabelog.com/tokyo/A1301/A130101/13003886/"
-  ],
-  "catch": "池袋で昼飲みもできる気軽なうどん居酒屋",
-  "menu": [
-   {
-    "n": "生レモンサワー",
-    "p": "300円"
-   },
-   {
-    "n": "エビス生ビール",
-    "p": "300円"
-   },
-   {
-    "n": "だしまき玉子",
-    "p": "400円"
-   },
-   {
-    "n": "うどん",
-    "p": "380円"
-   }
-  ],
-  "status_src": "media"
- },
- {
-  "id": "bero-1618",
-  "name": "大衆焼肉ホルモン だるま",
-  "name_kana": null,
-  "name_en": null,
-  "kind": "senbero",
-  "yokocho": null,
-  "area": "新宿",
-  "ward": "渋谷区",
-  "address": "東京都渋谷区代々木2-20-19",
-  "address_detail": null,
-  "station": null,
-  "hours": null,
-  "closed": null,
-  "budget": null,
-  "budget_min": null,
-  "budget_max": null,
-  "price_note": "朝〆のホルモン焼きは280円から、一品ものは200円から、チューハイは330円から。（記事の時点）",
-  "social": 3,
-  "solo": 3,
-  "hiru": false,
-  "tags": [
-   "もつ焼き",
-   "煮込み",
-   "チャージなし",
-   "ホッピー"
-  ],
-  "payment": null,
-  "smoking": null,
-  "english": false,
-  "desc": "新宿駅南口から歩いて7〜8分ほど、新宿東洋ビルの1階にあるホルモン焼き酒場だ。芝浦ホルモン系列の店で、朝〆のホルモンが名物となっており、40名ほど入る広さだ。",
-  "talk": "店員さんは明るく活気があり、気軽に飲める雰囲気だ。",
-  "tips": "2021年3月末までのオープン記念でハイボールが1杯100円だった。ピークタイムは一人だと少し肩身が狭いかもしれない。",
-  "shops": null,
-  "since": null,
-  "status": "open",
-  "checked": "せんべろnetの記事（2025年09月更新）と食べログの口コミ（2026年10月訪問まで）",
-  "sources": [
-   "https://1000bero.net/restaurant-1618/",
-   "https://tabelog.com/tokyo/A1301/A130101/13181289/"
-  ],
-  "catch": "新宿南口で朝〆ホルモンを気軽に楽しめる店",
-  "menu": [
-   {
-    "n": "ホルモン焼き",
-    "p": "280円"
-   },
-   {
-    "n": "ホッピーセット",
-    "p": "480円"
-   },
-   {
-    "n": "チャミスル",
-    "p": "980円"
-   },
-   {
-    "n": "塩もつ煮込み",
-    "p": "480円"
-   },
-   {
-    "n": "低温調理の肉刺し",
-    "p": "380円"
    }
   ],
   "status_src": "media"
@@ -13315,73 +12874,6 @@
   "status_src": "media"
  },
  {
-  "id": "bero-2169",
-  "name": "たぬき",
-  "name_kana": null,
-  "name_en": null,
-  "kind": "senbero",
-  "yokocho": null,
-  "area": "大山",
-  "ward": "板橋区",
-  "address": "東京都板橋区大山金井町52-9",
-  "address_detail": null,
-  "station": null,
-  "hours": null,
-  "closed": null,
-  "budget": null,
-  "budget_min": null,
-  "budget_max": null,
-  "price_note": "サワー・チュウハイ類は450円から、ホッピーセット500円、ちょい飲みなら予算2,000円前後（記事の時点）",
-  "social": 3,
-  "solo": 5,
-  "hiru": false,
-  "tags": [
-   "一人飲み歓迎",
-   "ホッピー",
-   "日本酒",
-   "刺身",
-   "串カツ"
-  ],
-  "payment": null,
-  "smoking": null,
-  "english": false,
-  "desc": "大山駅から2分ほど、大山で数十年続く地元の大衆居酒屋で、1階はカウンターとテーブル席、2階は座敷で合計70席。注文が入ると活あじを水揚げして調理し、関西風の串かつなど豊富なおつまみが並ぶ。",
-  "talk": "大将がテキパキ切り盛りし、常連も多く和気あいあいとした雰囲気で、一人でも入りやすい。",
-  "tips": "伝票式の後払いで、お通し250円がかかる。豚汁は無料サービス。",
-  "shops": null,
-  "since": null,
-  "status": "open",
-  "checked": "せんべろnetの記事（2025年09月更新）と食べログの口コミ（2026年9月訪問まで）",
-  "sources": [
-   "https://1000bero.net/restaurant-2169/",
-   "https://tabelog.com/tokyo/A1301/A130101/13056015/"
-  ],
-  "catch": "大山の活あじと関西風串かつが名物の大衆居酒屋",
-  "menu": [
-   {
-    "n": "ホッピーセット",
-    "p": "500円"
-   },
-   {
-    "n": "サワー＆チュウハイ類",
-    "p": "450円〜"
-   },
-   {
-    "n": "ビール中生",
-    "p": "550円"
-   },
-   {
-    "n": "日本酒",
-    "p": "500円〜"
-   },
-   {
-    "n": "お通し（おでん）",
-    "p": "250円"
-   }
-  ],
-  "status_src": "media"
- },
- {
   "id": "bero-2172",
   "name": "崎陽軒",
   "name_kana": null,
@@ -17919,6 +17411,310 @@
    {
     "n": "足立サワー（ドライ酎ハイ）",
     "p": "390円～"
+   }
+  ],
+  "status_src": "media"
+ },
+ {
+  "id": "bero-2352",
+  "name": "サ・メーサ",
+  "name_kana": null,
+  "name_en": null,
+  "kind": "tachinomi",
+  "yokocho": null,
+  "area": "新宿",
+  "ward": "新宿区",
+  "address": "東京都新宿区新宿3-24-2",
+  "address_detail": null,
+  "station": null,
+  "hours": null,
+  "closed": null,
+  "budget": null,
+  "budget_min": null,
+  "budget_max": null,
+  "price_note": "グラスワインは500円から、生ハムは300円から。（記事の時点）",
+  "social": 3,
+  "solo": 4,
+  "hiru": true,
+  "tags": [
+   "昼飲み",
+   "ワイン",
+   "チャージなし"
+  ],
+  "payment": null,
+  "smoking": null,
+  "english": false,
+  "desc": "新宿駅東口から徒歩1分、新宿アオキビル9階にある、サルデーニャ島の料理とワインが楽しめるレストランだ。入口付近に5名ほどの立ち飲みカウンターがあり、グラスワインや生ハムで気軽に一杯できる。",
+  "talk": "親切なスタッフさんが案内してくれ、「こういうワインが飲みたい」とリクエストすると、おすすめを提案してくれる。",
+  "tips": "立ち飲みは番号札をもらい、都度口頭で注文して番号札で会計。立ち飲みのメニューは系列店より少なめ。",
+  "shops": null,
+  "since": null,
+  "status": "open",
+  "checked": "せんべろnetの記事（2026年10月更新）",
+  "sources": [
+   "https://1000bero.net/restaurant-2352/"
+  ],
+  "catch": "新宿の立ち飲みもできるサルデーニャ料理店",
+  "menu": [
+   {
+    "n": "グラスワイン",
+    "p": "500円～"
+   },
+   {
+    "n": "生ハム",
+    "p": "300円～"
+   }
+  ],
+  "status_src": "media"
+ },
+ {
+  "id": "bero-2359",
+  "name": "沼津港サンパチ酒場",
+  "name_kana": null,
+  "name_en": null,
+  "kind": "senbero",
+  "yokocho": null,
+  "area": "上野で昼飲み",
+  "ward": "台東区",
+  "address": "東京都台東区上野4-3-10",
+  "address_detail": null,
+  "station": null,
+  "hours": null,
+  "closed": null,
+  "budget": null,
+  "budget_min": null,
+  "budget_max": null,
+  "price_note": "お酒もおつまみも380円均一。平日18時までの飲み放題は60分600円。（記事の時点）",
+  "social": 2,
+  "solo": 5,
+  "hiru": true,
+  "tags": [
+   "昼飲み",
+   "一人飲み歓迎",
+   "現金のみ",
+   "刺身",
+   "おでん",
+   "チャージなし"
+  ],
+  "payment": null,
+  "smoking": null,
+  "english": false,
+  "desc": "御徒町駅から徒歩2分、上野駅から徒歩6分ほどの宮崎天盛堂ビル1階にある居酒屋だ。2～4名掛けのテーブル席が並び、沼津港直送の刺身や焼き物などの魚料理を、お酒もおつまみも380円均一で楽しめる。",
+  "talk": "一人飲みの男性から2～3名のグループまで、皆さん自分のペースで飲んでいて、一人でも入りやすい。",
+  "tips": "平日18時までのタイムサービス飲み放題（60分600円、料理1品以上が必要）が狙い目。支払いは現金のみ。",
+  "shops": null,
+  "since": null,
+  "status": "open",
+  "checked": "せんべろnetの記事（2026年01月更新）と食べログの口コミ（2026年10月訪問まで）",
+  "sources": [
+   "https://1000bero.net/restaurant-2359/",
+   "https://tabelog.com/tokyo/A1301/A130101/13302319/"
+  ],
+  "catch": "御徒町で沼津港直送の魚が均一価格の居酒屋",
+  "menu": [
+   {
+    "n": "タイムサービス飲み放題（平日18時まで・60分）",
+    "p": "600円"
+   },
+   {
+    "n": "飲み放題（通常・60分）",
+    "p": "900円"
+   },
+   {
+    "n": "お酒・おつまみ（単品）",
+    "p": "380円"
+   }
+  ],
+  "status_src": "media"
+ },
+ {
+  "id": "bero-2365",
+  "name": "陽のうえ",
+  "name_kana": null,
+  "name_en": null,
+  "kind": "senbero",
+  "yokocho": null,
+  "area": "高円寺で朝飲み・昼飲みできる居酒屋",
+  "ward": "杉並区",
+  "address": "東京都杉並区高円寺北3-22-12",
+  "address_detail": null,
+  "station": null,
+  "hours": null,
+  "closed": null,
+  "budget": null,
+  "budget_min": null,
+  "budget_max": null,
+  "price_note": "単品のお酒はほとんどが500円、やかんセットは700円、ゆで玉子は50円から。（記事の時点）",
+  "social": 3,
+  "solo": 5,
+  "hiru": true,
+  "tags": [
+   "朝飲み",
+   "昼飲み",
+   "一人飲み歓迎",
+   "ホッピー",
+   "日本酒",
+   "ワイン",
+   "チャージなし"
+  ],
+  "payment": null,
+  "smoking": null,
+  "english": false,
+  "desc": "高円寺駅北口から徒歩3分ほど、らーめん店の3階にある朝から開く居酒屋だ。2025年8月にオープンした高円寺の人気酒場「小粋」の新店で、朝7時から朝飲み・昼飲みができる。",
+  "talk": "スタッフのお姉さんが一人で切り盛りし、干渉されず自分のペースで飲める一方、カウンターは距離が近く自然と会話が生まれることもある。",
+  "tips": "口頭注文・伝票式の後払い。お通し・席料なし。ホッピー派は焼酎3杯分の「やかんセット」が使いやすい。",
+  "shops": null,
+  "since": null,
+  "status": "open",
+  "checked": "せんべろnetの記事（2025年12月更新）と食べログの口コミ（2026年10月訪問まで）",
+  "sources": [
+   "https://1000bero.net/restaurant-2365/",
+   "https://tabelog.com/tokyo/A1301/A130101/13312817/"
+  ],
+  "catch": "高円寺で朝から飲める創作おつまみの居酒屋",
+  "menu": [
+   {
+    "n": "やかんセット（焼酎3杯分・割り物・氷）",
+    "p": "700円"
+   },
+   {
+    "n": "イワシガリ巻",
+    "p": "380円"
+   },
+   {
+    "n": "ゆで玉子",
+    "p": "50円～"
+   },
+   {
+    "n": "単品のお酒（一部除く）",
+    "p": "500円"
+   }
+  ],
+  "status_src": "media"
+ },
+ {
+  "id": "bero-2366",
+  "name": "とん福や",
+  "name_kana": null,
+  "name_en": null,
+  "kind": "senbero",
+  "yokocho": null,
+  "area": "成増",
+  "ward": "板橋区",
+  "address": "東京都板橋区成増2-15-7",
+  "address_detail": null,
+  "station": null,
+  "hours": null,
+  "closed": null,
+  "budget": null,
+  "budget_min": null,
+  "budget_max": null,
+  "price_note": "お酒は390円から、ホッピーセットは470円、串焼き・やきとんは1本150円から。（記事の時点）",
+  "social": 3,
+  "solo": 5,
+  "hiru": false,
+  "tags": [
+   "一人飲み歓迎",
+   "焼きとん",
+   "煮込み",
+   "ホッピー",
+   "日本酒",
+   "ワイン",
+   "チャージなし"
+  ],
+  "payment": null,
+  "smoking": null,
+  "english": false,
+  "desc": "成増駅南口から徒歩3分ほど、スキップ村の小路を入った「すずらん通り沿い」にある、2010年11月創業のやきとん居酒屋だ。カウンター10席ほどと2名掛けのテーブル席があり、もつ刺しや串焼きが楽しめる。",
+  "talk": "常連さんが多い印象だが、イイ意味で干渉されることなく、アウェイ感もない。",
+  "tips": "口頭注文・伝票式の後払い。お通し・席料なし。串焼きは1種1本から、塩かタレを選べる。",
+  "shops": null,
+  "since": null,
+  "status": "open",
+  "checked": "せんべろnetの記事（2026年06月更新）と食べログの口コミ（2025年8月訪問まで）",
+  "sources": [
+   "https://1000bero.net/restaurant-2366/",
+   "https://tabelog.com/tokyo/A1301/A130101/13119200/"
+  ],
+  "catch": "成増で一人飲みもしやすいやきとん居酒屋",
+  "menu": [
+   {
+    "n": "ホッピーセット",
+    "p": "470円"
+   },
+   {
+    "n": "酎ハイ",
+    "p": "390円～"
+   },
+   {
+    "n": "串焼き・やきとん（1本）",
+    "p": "150円～"
+   },
+   {
+    "n": "コブクロ刺し（本日のおすすめ）",
+    "p": "460円"
+   },
+   {
+    "n": "ホッピー中おかわり",
+    "p": "220円"
+   }
+  ],
+  "status_src": "media"
+ },
+ {
+  "id": "bero-2371",
+  "name": "勝治",
+  "name_kana": null,
+  "name_en": null,
+  "kind": "senbero",
+  "yokocho": null,
+  "area": "御徒町",
+  "ward": "千代田区",
+  "address": "東京都千代田区外神田6-16-8",
+  "address_detail": null,
+  "station": null,
+  "hours": null,
+  "closed": null,
+  "budget": null,
+  "budget_min": null,
+  "budget_max": null,
+  "price_note": "お酒は438円から、小皿おつまみは219円均一、しゃぶしゃぶは438円から。（記事の時点）",
+  "social": 2,
+  "solo": 5,
+  "hiru": true,
+  "tags": [
+   "一人飲み歓迎",
+   "レモンサワー",
+   "チャージなし",
+   "昼飲み"
+  ],
+  "payment": null,
+  "smoking": null,
+  "english": false,
+  "desc": "末広町駅から徒歩3分、JR御徒町駅南口から徒歩6分ほどの中央通り沿いにあるアーバンホテルの1階で、2025年10月にオープンした大衆居酒屋だ。一人でもしゃぶしゃぶが楽しめ、小皿おつまみは219円均一だ。",
+  "talk": "店長さんをはじめ数名のスタッフさんが切り盛りし、イイ意味で干渉されず、自分のペースでのんびり過ごせる雰囲気が心地いい。",
+  "tips": "LINEモバイルオーダーの後会計。座れるがお通し・席料なし。",
+  "shops": null,
+  "since": null,
+  "status": "open",
+  "checked": "せんべろnetの記事（2026年02月更新）と食べログの口コミ（2026年10月訪問まで）",
+  "sources": [
+   "https://1000bero.net/restaurant-2371/",
+   "https://tabelog.com/tokyo/A1301/A130101/13314286/"
+  ],
+  "catch": "御徒町で一人しゃぶしゃぶが楽しめる大衆居酒屋",
+  "menu": [
+   {
+    "n": "レモンサワー・ウーハイ",
+    "p": "438円～"
+   },
+   {
+    "n": "こだわりのしゃぶしゃぶ",
+    "p": "438円～"
+   },
+   {
+    "n": "小皿おつまみ",
+    "p": "219円"
    }
   ],
   "status_src": "media"

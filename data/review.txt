@@ -1,5 +1,9 @@
 akabane-chikara	no geocode	None
 takenotsuka-elsa	osm match too far 395m	スナック　秀
+bero-657	tabelog pin 257m from our position	gsi
+bero-1479	osm match too far 259m	キッチン BAR ぼんぼん
+bero-1636	osm match too far 172m	まぐろ人
+bero-421	osm 121m from address	阿佐立ち
 shinjuku-ucchan	osm match too far 188m	もつ焼き　ウッチャン
 ikebukuro-snack-bell	osm match too far 388m	スナック パンザマスト
 shinjuku2-cafe-bar-voice	osm match too far 211m	cafe&bar chaos

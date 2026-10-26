@@ -534,9 +534,12 @@ def main():
             sh = shape_of(s, hits, cores)
             if sh:
                 s["shape"] = sh
-        # cross-check with the shop's Tabelog map pin (see scripts/tabelog_coords.py)
+        # cross-check with the shop's Tabelog (or Hotpepper) map pin (see scripts/tabelog_coords.py)
         m = re.search(r"tabelog\.com/(?:en/)?tokyo/A\d+/A\d+/(\d{8})", " ".join(s.get("sources") or []))
         pin = CACHE.get(f"tabelog:{m.group(1)}") if m and s["kind"] != "yokocho" else None  # a yokocho cites one of its shops
+        if not pin and s["kind"] != "yokocho":
+            m = re.search(r"hotpepper\.jp/(strJ\d+)", " ".join(s.get("sources") or []))
+            pin = CACHE.get(f"hotpepper:{m.group(1)}") if m else None
         if pin:
             d = meters((pos["lat"], pos["lng"]), tuple(pin))
             if pos["geo"] in ("gsi-block", "approx") and d < 600:

@@ -21,7 +21,7 @@
   --seal-text: #121a28;
   --shadow: 0 12px 40px rgba(0, 0, 0, .45);
   --vignette: rgba(6, 9, 16, .5);
-  --k-yokocho: #ff6a4a; --k-senbero: #f5b844; --k-tachinomi: #7aa2ff; --k-kakuuchi: #52c9a0; --k-bar: #b892f2; --k-social: #ff7fae;
+  --k-yokocho: #ff6a4a; --k-senbero: #f5b844; --k-tachinomi: #7aa2ff; --k-kakuuchi: #52c9a0; --k-bar: #b892f2; --k-social: #ff7fae; --k-sakaba: #e99b72;
   color-scheme: dark;
 }
 [data-theme="day"] {
@@ -43,7 +43,7 @@
   --seal-text: #fffdf9;
   --shadow: 0 12px 32px rgba(28, 28, 27, .12);
   --vignette: rgba(28, 28, 27, .07);
-  --k-yokocho: #c8371f; --k-senbero: #d08a0e; --k-tachinomi: #2f56b8; --k-kakuuchi: #18805f; --k-bar: #7c4cb3; --k-social: #c93a72;
+  --k-yokocho: #c8371f; --k-senbero: #d08a0e; --k-tachinomi: #2f56b8; --k-kakuuchi: #18805f; --k-bar: #7c4cb3; --k-social: #c93a72; --k-sakaba: #a54f2a;
   color-scheme: light;
 }
 :root {

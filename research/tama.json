@@ -1392,5 +1392,138 @@
     "status": "open",
     "checked": "公式サイトの営業案内（2026年10月閲覧）、2025年1月の来店ブログ、2025年4月更新の紹介記事で確認",
     "sources": ["https://stand-lowkey-kichijoji.com/", "https://kichifan.com/2024/08/23/stand-low-key/", "https://1000bero.net/restaurant-2209/", "https://kichijoji-gourmet.com/stand-low-key-kichijoji/"]
+  },
+  {
+    "id": "kichijoji-tonpa",
+    "name": "豚羽",
+    "name_kana": "とんぱ",
+    "kind": "sakaba",
+    "area": "吉祥寺",
+    "ward": "武蔵野市",
+    "address": "東京都武蔵野市吉祥寺本町1-34-10",
+    "station": "吉祥寺駅北口 徒歩約6分",
+    "pin": [
+      35.7047921386431,
+      139.58443378475002
+    ],
+    "social": 3,
+    "solo": 3,
+    "hiru": false,
+    "tags": [],
+    "desc": "豚足や手羽先を名物にする大衆酒場。カウンター席がある。",
+    "status": "open",
+    "checked": "食べログの2026年6月訪問の口コミと店舗掲載を2026年10月27日に確認",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13319455/",
+      "https://www.lemon8-app.com/%40kichijoji_gourmet/7677116333178585618?region=jp"
+    ]
+  },
+  {
+    "id": "kichijoji-chang",
+    "name": "Chang（チャーン）",
+    "name_kana": "ちゃーん",
+    "kind": "sakaba",
+    "yokocho": "kichijoji-harmonica-yokocho",
+    "area": "吉祥寺",
+    "ward": "武蔵野市",
+    "address": "東京都武蔵野市吉祥寺本町1-1-4",
+    "address_detail": "ハモニカ横丁 1F",
+    "station": "吉祥寺駅北口 徒歩約1分",
+    "pin": [
+      35.70358916692308,
+      139.5790827836654
+    ],
+    "social": 3,
+    "solo": 3,
+    "hiru": false,
+    "tags": [
+      "カウンターのみ"
+    ],
+    "desc": "ハモニカ横丁のカウンター席がある居酒屋・カレー店。2025年に訪問した記事がある。",
+    "status": "uncertain",
+    "checked": "2025年7月の訪問記事と食べログの店舗掲載を2026年10月27日に確認。現在の営業状況は未確認",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13166193/",
+      "https://ctkr.seesaa.net/article/516823638.html"
+    ]
+  },
+  {
+    "id": "kichijoji-momokichi",
+    "name": "もも吉",
+    "name_kana": "ももきち",
+    "kind": "sakaba",
+    "area": "吉祥寺",
+    "ward": "武蔵野市",
+    "address": "東京都武蔵野市吉祥寺本町1-34-3",
+    "pin": [
+      35.70378465864354,
+      139.58383188474025
+    ],
+    "social": 3,
+    "solo": 3,
+    "hiru": false,
+    "tags": [],
+    "desc": "骨付鳥を名物にする居酒屋。公式サイトによるとカウンター席がある。",
+    "status": "open",
+    "checked": "公式サイトの店舗情報と2026年10月の更新を2026年10月27日に確認",
+    "sources": [
+      "https://momokichi-kichijoji.net/",
+      "https://tabelog.com/tokyo/A1320/A132001/13052427/"
+    ]
+  },
+  {
+    "id": "kichijoji-lakota",
+    "name": "呑めるタイ料理屋 ラコタ",
+    "name_kana": "らこた",
+    "kind": "sakaba",
+    "area": "吉祥寺",
+    "ward": "武蔵野市",
+    "address": "東京都武蔵野市吉祥寺本町1-22-10",
+    "address_detail": "寿々木ビル1F",
+    "pin": [
+      35.70429463783727,
+      139.58203188358488
+    ],
+    "social": 3,
+    "solo": 3,
+    "hiru": false,
+    "tags": [
+      "日本酒"
+    ],
+    "desc": "タイ料理と日本酒などを楽しめる酒場。カウンター席がある。",
+    "status": "open",
+    "checked": "公式サイトと食べログの2026年8月訪問の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://www.lakota.tokyo/",
+      "https://tabelog.com/tokyo/A1320/A132001/13113814/"
+    ]
+  },
+  {
+    "id": "kichijoji-yakiton-naruse",
+    "name": "やきとんなるせ",
+    "name_kana": "やきとんなるせ",
+    "kind": "tachinomi",
+    "area": "吉祥寺",
+    "ward": "武蔵野市",
+    "address": "東京都武蔵野市吉祥寺本町1-23-6",
+    "address_detail": "2F",
+    "pin": [
+      35.70407801864276,
+      139.5819664947445
+    ],
+    "social": 4,
+    "solo": 3,
+    "hiru": false,
+    "tags": [
+      "焼きとん"
+    ],
+    "desc": "吉祥寺のやきとん店。立ち飲みと座り飲みの両方ができると紹介されている。",
+    "status": "open",
+    "checked": "地域の2026年10月イベント参加店情報と店舗案内を2026年10月27日に確認",
+    "sources": [
+      "https://may-money.com/event-kichijoji-world-beer-fes-20261009/",
+      "https://tabelog.com/tokyo/A1320/A132001/13131101/",
+      "https://izakaya.chillaxstyle.com/izakaya-kichijoji-yakitonnaruse-wave-bro-20221027/"
+    ]
   }
 ]

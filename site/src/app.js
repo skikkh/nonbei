@@ -15,10 +15,10 @@
 
   const KINDS = [
     ["yokocho", "飲み屋横丁", "横"], ["senbero", "せんべろ", "千"], ["tachinomi", "立ち飲み", "立"],
-    ["kakuuchi", "角打ち", "角"], ["bar", "小さなバー", "酒"], ["social", "交流酒場", "交"],
+    ["kakuuchi", "角打ち", "角"], ["bar", "小さなバー", "酒"], ["social", "交流酒場", "交"], ["sakaba", "酒場・居酒屋", "居"],
   ];
   const KIND = Object.fromEntries(KINDS.map(([k, label, glyph]) => [k, { label, glyph }]));
-  const SHORT = { yokocho: "横丁", senbero: "せんべろ", tachinomi: "立ち飲み", kakuuchi: "角打ち", bar: "バー", social: "交流酒場" };
+  const SHORT = { yokocho: "横丁", senbero: "せんべろ", tachinomi: "立ち飲み", kakuuchi: "角打ち", bar: "バー", social: "交流酒場", sakaba: "酒場" };
   const TALK = ["", "会話より酒と肴", "一人でも入れる", "隣と話すこともある", "隣や常連と話しやすい", "自然に会話が生まれる"];
   const DAY_JP = { mon: "月", tue: "火", wed: "水", thu: "木", fri: "金", sat: "土", sun: "日", hol: "祝日", prehol: "祝前日", posthol: "祝後日" };
   const DK = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
@@ -48,6 +48,7 @@
 
   /** {open, until, lo} | {open:false, opensAt} | {open:false, closedToday, next} | null (unknown) */
   function openState(s, now) {
+    if (s.status === "uncertain" || s.status_note === "uncertain" || s.status_note === "closed") return null;
     const w = s.week;
     if (!w) return null;
     const t = (now || clockOverride()) + JST;
@@ -66,14 +67,12 @@
     }
     return { open: false, closedToday: true };
   }
-  /** the lantern is lit only while the shop is open ("on"); outside its hours, or with no known hours, it is dark ("off").
-      A yokocho is lit while any of its shops is open; one with no shop hours on the map is lit 17:00–24:00, the usual drinking hours. */
+  /** The lantern is lit only when known hours indicate an open shop. */
   function litState(s) {
     if (s.kind === "yokocho") {
       const sts = (kids[s.id] || []).map((o) => openState(o)).filter(Boolean);
       if (sts.length) return sts.some((x) => x.open) ? "on" : "off";
-      const t = new Date(clockOverride() + JST), min = t.getUTCHours() * 60 + t.getUTCMinutes();
-      return min >= 17 * 60 ? "on" : "off";
+      return "off";
     }
     const st = openState(s);
     return st && st.open ? "on" : "off";

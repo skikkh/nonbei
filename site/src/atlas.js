@@ -113,11 +113,11 @@
   };
   // 朱・山吹・群青・若竹・藤・桃
   const KIND_COL = {
-    night: { yokocho: "#ff6a4a", senbero: "#f5b844", tachinomi: "#7aa2ff", kakuuchi: "#52c9a0", bar: "#b892f2", social: "#ff7fae" },
-    day: { yokocho: "#c8371f", senbero: "#d08a0e", tachinomi: "#2f56b8", kakuuchi: "#18805f", bar: "#7c4cb3", social: "#c93a72" },
+    night: { yokocho: "#ff6a4a", senbero: "#f5b844", tachinomi: "#7aa2ff", kakuuchi: "#52c9a0", bar: "#b892f2", social: "#ff7fae", sakaba: "#e99b72" },
+    day: { yokocho: "#c8371f", senbero: "#d08a0e", tachinomi: "#2f56b8", kakuuchi: "#18805f", bar: "#7c4cb3", social: "#c93a72", sakaba: "#a54f2a" },
   };
   const LIT = { on: 1, unk: 0.45, off: 0 };
-  const KIND_GLYPH = { yokocho: "横", senbero: "千", tachinomi: "立", kakuuchi: "角", bar: "酒", social: "交" };
+  const KIND_GLYPH = { yokocho: "横", senbero: "千", tachinomi: "立", kakuuchi: "角", bar: "酒", social: "交", sakaba: "居" };
 
   // zoom → width stops
   const w = (...stops) => ["interpolate", ["exponential", 1.6], ["zoom"], ...stops.flat()];
@@ -390,7 +390,7 @@
     }
     _addSpotLayers() {
       const m = this.map, P = this.P, K = this.KC;
-      const kc = ["match", ["get", "k"], "yokocho", K.yokocho, "senbero", K.senbero, "tachinomi", K.tachinomi, "kakuuchi", K.kakuuchi, "bar", K.bar, K.social];
+      const kc = ["match", ["get", "k"], "yokocho", K.yokocho, "senbero", K.senbero, "tachinomi", K.tachinomi, "kakuuchi", K.kakuuchi, "bar", K.bar, "sakaba", K.sakaba, K.social];
       m.addLayer({ id: "spot-glow", type: "circle", source: "spots", filter: ["all", ["!=", ["get", "st"], "closed"], [">", ["get", "on"], 0]],
         paint: {
           "circle-color": kc, "circle-blur": 1, "circle-pitch-alignment": "map",

@@ -1,0 +1,97 @@
+[
+  {
+    "name": "豚羽",
+    "aliases": [
+      "とんぱ"
+    ],
+    "area": "吉祥寺",
+    "spot_id": "kichijoji-tonpa",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13319455/"
+    ],
+    "note": "2026年6月訪問口コミ。一般の大衆酒場。"
+  },
+  {
+    "name": "Chang（チャーン）",
+    "aliases": [
+      "Chang",
+      "チャーン"
+    ],
+    "area": "吉祥寺",
+    "spot_id": "kichijoji-chang",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13166193/",
+      "https://ctkr.seesaa.net/article/516823638.html"
+    ],
+    "note": "2025年訪問記事。直近の営業は未確認。"
+  },
+  {
+    "name": "開運酒場ガッツ輝き",
+    "aliases": [
+      "ガッツ輝き"
+    ],
+    "area": "吉祥寺",
+    "spot_id": "tl-13317252",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13317252/"
+    ],
+    "note": "既存データにあったが横丁との関連がなかった。"
+  },
+  {
+    "name": "もも吉",
+    "area": "吉祥寺",
+    "sources": [
+      "https://momokichi-kichijoji.net/",
+      "https://tabelog.com/tokyo/A1320/A132001/13052427/"
+    ],
+    "note": "公式サイトと2026年10月の更新を確認し、追加。",
+    "spot_id": "kichijoji-momokichi"
+  },
+  {
+    "name": "呑めるタイ料理屋 ラコタ",
+    "aliases": [
+      "ラコタ"
+    ],
+    "area": "吉祥寺",
+    "sources": [
+      "https://www.lakota.tokyo/",
+      "https://tabelog.com/tokyo/A1320/A132001/13113814/"
+    ],
+    "note": "公式サイトと2026年8月訪問の口コミを確認し、追加。",
+    "spot_id": "kichijoji-lakota"
+  },
+  {
+    "name": "立ち飲み処 彩",
+    "aliases": [
+      "立ち飲み処 彩（いろどり）"
+    ],
+    "area": "吉祥寺",
+    "spot_id": "kichijoji-irodori",
+    "sources": [
+      "https://kichion.com/2025/wp-content/uploads/2025/04/c5b8adc48c21eebe1581a98469cba64b.pdf"
+    ],
+    "note": "2025年地域イベント掲載。地図に掲載済み。"
+  },
+  {
+    "name": "立ち呑みおでん屋 つかだ",
+    "area": "吉祥寺",
+    "spot_id": "kichijoji-tsukada",
+    "sources": [
+      "https://gourmet.aumo.jp/areas/193/categories/c142"
+    ],
+    "note": "地域別一覧。地図に掲載済み。"
+  },
+  {
+    "name": "やきとんなるせ",
+    "aliases": [
+      "なるせ"
+    ],
+    "area": "吉祥寺",
+    "spot_id": "kichijoji-yakiton-naruse",
+    "sources": [
+      "https://may-money.com/event-kichijoji-world-beer-fes-20261009/",
+      "https://tabelog.com/tokyo/A1320/A132001/13131101/"
+    ],
+    "note": "2026年地域イベント参加店情報と住所・業態を確認し、追加。"
+  }
+]

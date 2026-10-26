@@ -79169,6 +79169,46 @@
    ]
   },
   {
+   "id": "kichijoji-chang",
+   "name": "Chang（チャーン）",
+   "kind": "sakaba",
+   "yokocho": "kichijoji-harmonica-yokocho",
+   "area": "吉祥寺",
+   "ward": "武蔵野市",
+   "address": "東京都武蔵野市吉祥寺本町1-1-4",
+   "address_detail": "ハモニカ横丁 1F",
+   "station": "吉祥寺駅北口 徒歩約1分",
+   "social": 3,
+   "solo": 3,
+   "hiru": false,
+   "tags": [
+    "カウンターのみ"
+   ],
+   "english": false,
+   "desc": "ハモニカ横丁のカウンター席がある居酒屋・カレー店。2025年に訪問した記事がある。",
+   "status": "uncertain",
+   "checked": "2025年7月の訪問記事と食べログの店舗掲載を2026年10月27日に確認。現在の営業状況は未確認",
+   "sources": [
+    "https://tabelog.com/tokyo/A1320/A132001/13166193/",
+    "https://ctkr.seesaa.net/article/516823638.html"
+   ],
+   "lat": 35.7035892,
+   "lng": 139.5790828,
+   "kana": "ちゃーん",
+   "region": "多摩",
+   "geo": "listing",
+   "near": [
+    [
+     "吉祥寺",
+     149
+    ],
+    [
+     "井の頭公園",
+     752
+    ]
+   ]
+  },
+  {
    "id": "kichijoji-irodori",
    "name": "立ち飲み処 彩",
    "kind": "tachinomi",
@@ -79336,6 +79376,78 @@
     [
      "井の頭公園",
      769
+    ]
+   ]
+  },
+  {
+   "id": "kichijoji-lakota",
+   "name": "呑めるタイ料理屋 ラコタ",
+   "kind": "sakaba",
+   "area": "吉祥寺",
+   "ward": "武蔵野市",
+   "address": "東京都武蔵野市吉祥寺本町1-22-10",
+   "address_detail": "寿々木ビル1F",
+   "social": 3,
+   "solo": 3,
+   "hiru": false,
+   "tags": [
+    "日本酒"
+   ],
+   "english": false,
+   "desc": "タイ料理と日本酒などを楽しめる酒場。カウンター席がある。",
+   "status": "open",
+   "checked": "公式サイトと食べログの2026年8月訪問の口コミを2026年10月27日に確認",
+   "sources": [
+    "https://www.lakota.tokyo/",
+    "https://tabelog.com/tokyo/A1320/A132001/13113814/"
+   ],
+   "lat": 35.7042946,
+   "lng": 139.5820319,
+   "kana": "らこた",
+   "region": "多摩",
+   "geo": "listing",
+   "near": [
+    [
+     "吉祥寺",
+     238
+    ],
+    [
+     "井の頭公園",
+     758
+    ]
+   ]
+  },
+  {
+   "id": "kichijoji-momokichi",
+   "name": "もも吉",
+   "kind": "sakaba",
+   "area": "吉祥寺",
+   "ward": "武蔵野市",
+   "address": "東京都武蔵野市吉祥寺本町1-34-3",
+   "social": 3,
+   "solo": 3,
+   "hiru": false,
+   "english": false,
+   "desc": "骨付鳥を名物にする居酒屋。公式サイトによるとカウンター席がある。",
+   "status": "open",
+   "checked": "公式サイトの店舗情報と2026年10月の更新を2026年10月27日に確認",
+   "sources": [
+    "https://momokichi-kichijoji.net/",
+    "https://tabelog.com/tokyo/A1320/A132001/13052427/"
+   ],
+   "lat": 35.7037847,
+   "lng": 139.5838319,
+   "kana": "ももきち",
+   "region": "多摩",
+   "geo": "listing",
+   "near": [
+    [
+     "吉祥寺",
+     342
+    ],
+    [
+     "井の頭公園",
+     706
     ]
    ]
   },
@@ -79621,6 +79733,41 @@
    ]
   },
   {
+   "id": "kichijoji-tonpa",
+   "name": "豚羽",
+   "kind": "sakaba",
+   "area": "吉祥寺",
+   "ward": "武蔵野市",
+   "address": "東京都武蔵野市吉祥寺本町1-34-10",
+   "station": "吉祥寺駅北口 徒歩約6分",
+   "social": 3,
+   "solo": 3,
+   "hiru": false,
+   "english": false,
+   "desc": "豚足や手羽先を名物にする大衆酒場。カウンター席がある。",
+   "status": "open",
+   "checked": "食べログの2026年6月訪問の口コミと店舗掲載を2026年10月27日に確認",
+   "sources": [
+    "https://tabelog.com/tokyo/A1320/A132001/13319455/",
+    "https://www.lemon8-app.com/%40kichijoji_gourmet/7677116333178585618?region=jp"
+   ],
+   "lat": 35.7047921,
+   "lng": 139.5844338,
+   "kana": "とんぱ",
+   "region": "多摩",
+   "geo": "listing",
+   "near": [
+    [
+     "吉祥寺",
+     441
+    ],
+    [
+     "井の頭公園",
+     825
+    ]
+   ]
+  },
+  {
    "id": "kichijoji-tsukada",
    "name": "立ち呑みおでん屋 つかだ",
    "kind": "tachinomi",
@@ -79674,6 +79821,45 @@
     [
      "井の頭公園",
      791
+    ]
+   ]
+  },
+  {
+   "id": "kichijoji-yakiton-naruse",
+   "name": "やきとんなるせ",
+   "kind": "tachinomi",
+   "area": "吉祥寺",
+   "ward": "武蔵野市",
+   "address": "東京都武蔵野市吉祥寺本町1-23-6",
+   "address_detail": "2F",
+   "social": 4,
+   "solo": 3,
+   "hiru": false,
+   "tags": [
+    "焼きとん"
+   ],
+   "english": false,
+   "desc": "吉祥寺のやきとん店。立ち飲みと座り飲みの両方ができると紹介されている。",
+   "status": "open",
+   "checked": "地域の2026年10月イベント参加店情報と店舗案内を2026年10月27日に確認",
+   "sources": [
+    "https://may-money.com/event-kichijoji-world-beer-fes-20261009/",
+    "https://tabelog.com/tokyo/A1320/A132001/13131101/",
+    "https://izakaya.chillaxstyle.com/izakaya-kichijoji-yakitonnaruse-wave-bro-20221027/"
+   ],
+   "lat": 35.704078,
+   "lng": 139.5819665,
+   "kana": "やきとんなるせ",
+   "region": "多摩",
+   "geo": "listing",
+   "near": [
+    [
+     "吉祥寺",
+     216
+    ],
+    [
+     "井の頭公園",
+     734
     ]
    ]
   },
@@ -80002,6 +80188,7 @@
    "id": "tl-13317252",
    "name": "開運酒場ガッツ輝き",
    "kind": "tachinomi",
+   "yokocho": "kichijoji-harmonica-yokocho",
    "area": "吉祥寺",
    "ward": "武蔵野市",
    "address": "東京都武蔵野市吉祥寺本町1-1-4ハモニカ横丁",

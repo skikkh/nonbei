@@ -26,7 +26,7 @@ from overpass import CACHE as OSM_CACHE, query  # noqa: E402
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 CACHE_PATH = os.path.join(ROOT, "data", "geocode_cache.json")
 UA = "nonbei-map/1.0 (github.com/skikkh/nonbei)"
-KINDS = ["yokocho", "senbero", "tachinomi", "kakuuchi", "bar", "social"]
+KINDS = ["yokocho", "senbero", "tachinomi", "kakuuchi", "bar", "social", "sakaba"]
 REGIONS = [  # research file stem -> region, in display order
     ("toshin", "都心（新橋・銀座・神田）"),
     ("ueno-asakusa", "上野・浅草・日暮里"),
@@ -582,6 +582,8 @@ def main():
         if s["region"] == "その他" and known:
             near = min(known, key=lambda k: meters((s["lat"], s["lng"]), (k["lat"], k["lng"])))
             s["region"] = near["region"]
+        if overrides.get(s["id"], {}).get("region"):
+            s["region"] = overrides[s["id"]]["region"]
     ids = {s["id"] for s in spots}
     link_members(spots)
     for s in spots:

@@ -1,0 +1,316 @@
+[
+ {
+  "name": "田舎や",
+  "area": "京急蒲田",
+  "yokocho": "keikyukamata-harmonica-yokocho",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20140118/98172.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "小雪",
+  "area": "京急蒲田",
+  "yokocho": "keikyukamata-harmonica-yokocho",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20140118/98172.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "むつ",
+  "area": "京急蒲田",
+  "yokocho": "keikyukamata-harmonica-yokocho",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20140118/98172.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "こむつ",
+  "area": "京急蒲田",
+  "yokocho": "keikyukamata-harmonica-yokocho",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20140118/98172.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "うるわし",
+  "area": "京急蒲田",
+  "yokocho": "keikyukamata-yanagi-dori",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20140118/98146.html",
+   "https://bs.tbs.co.jp/sakaba/shop/424.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "スナック みき",
+  "area": "京急蒲田",
+  "yokocho": "keikyukamata-yanagi-dori",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20140118/98146.html",
+   "https://bs.tbs.co.jp/sakaba/shop/424.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "すなっく つむぎ",
+  "area": "京急蒲田",
+  "yokocho": "keikyukamata-yanagi-dori",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20140118/98146.html",
+   "https://bs.tbs.co.jp/sakaba/shop/424.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "スナック 薫",
+  "area": "京急蒲田",
+  "yokocho": "keikyukamata-yanagi-dori",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20140118/98146.html",
+   "https://bs.tbs.co.jp/sakaba/shop/424.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "山陰海鮮 炉端かば 品川ゴールデン横丁店",
+  "area": "品川",
+  "yokocho": "shinagawa-golden-yokocho",
+  "sources": [
+   "https://www.mec-h.com/town/mh-shinagawa/336",
+   "https://www.hotpepper.jp/strJ000960845/",
+   "https://www.hotpepper.jp/strJ001279378/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "韓チャン 輝け！品川ゴールデン横丁店",
+  "area": "品川",
+  "yokocho": "shinagawa-golden-yokocho",
+  "sources": [
+   "https://www.mec-h.com/town/mh-shinagawa/336",
+   "https://www.hotpepper.jp/strJ000960845/",
+   "https://www.hotpepper.jp/strJ001279378/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "餃子酒菜暖暖 輝け！品川ゴールデン横丁店",
+  "area": "品川",
+  "yokocho": "shinagawa-golden-yokocho",
+  "sources": [
+   "https://www.mec-h.com/town/mh-shinagawa/336",
+   "https://www.hotpepper.jp/strJ000960845/",
+   "https://www.hotpepper.jp/strJ001279378/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "香辛中華 来来羊",
+  "area": "大井町",
+  "yokocho": "oimachi-bal-yokocho",
+  "sources": [
+   "https://www.ana.co.jp/travelandlife/article/001907/3/",
+   "https://www.hotpepper.jp/strJ003624165/",
+   "https://tabelog.com/en/tokyo/A1315/A131501/13253781/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "中華居酒屋 マルチュー",
+  "area": "大井町",
+  "yokocho": "oimachi-bal-yokocho",
+  "sources": [
+   "https://www.ana.co.jp/travelandlife/article/001907/3/",
+   "https://www.hotpepper.jp/strJ003624165/",
+   "https://tabelog.com/en/tokyo/A1315/A131501/13253781/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "Beer Yado Maribana 大井町",
+  "area": "大井町",
+  "yokocho": "oimachi-bal-yokocho",
+  "sources": [
+   "https://www.ana.co.jp/travelandlife/article/001907/3/",
+   "https://www.hotpepper.jp/strJ003624165/",
+   "https://tabelog.com/en/tokyo/A1315/A131501/13253781/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "宮崎辛麺酒場 大井町バル横丁店",
+  "area": "大井町",
+  "yokocho": "oimachi-bal-yokocho",
+  "sources": [
+   "https://www.ana.co.jp/travelandlife/article/001907/3/",
+   "https://www.hotpepper.jp/strJ003624165/",
+   "https://tabelog.com/en/tokyo/A1315/A131501/13253781/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "味の磯平",
+  "area": "大井町",
+  "yokocho": "oimachi-oi-chika-inshokugai",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20180915/137965.html",
+   "https://www.nikkan-gendai.com/articles/view/life/263068",
+   "https://tabelog.com/en/tokyo/A1315/A131501/13156499/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "ひまわり",
+  "area": "大井町",
+  "yokocho": "oimachi-oi-chika-inshokugai",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20180915/137965.html",
+   "https://www.nikkan-gendai.com/articles/view/life/263068",
+   "https://tabelog.com/en/tokyo/A1315/A131501/13156499/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "Shot Bar THE NIGHTFLY",
+  "area": "大井町",
+  "yokocho": "oimachi-oi-chika-inshokugai",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20180915/137965.html",
+   "https://www.nikkan-gendai.com/articles/view/life/263068",
+   "https://tabelog.com/en/tokyo/A1315/A131501/13156499/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "スナック大金",
+  "area": "大森",
+  "yokocho": "omori-inshokugai-bldg",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20220820/143108.html",
+   "https://tokyodeep.info/oomoriginza/",
+   "https://tabelog.com/en/tokyo/A1315/A131502/13237268/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "煮込 蔦八 離れ",
+  "area": "大森",
+  "yokocho": "omori-inshokugai-bldg",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20220820/143108.html",
+   "https://tokyodeep.info/oomoriginza/",
+   "https://tabelog.com/en/tokyo/A1315/A131502/13237268/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "炭火焼 Ko-chan",
+  "area": "大森",
+  "yokocho": "omori-inshokugai-bldg",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20220820/143108.html",
+   "https://tokyodeep.info/oomoriginza/",
+   "https://tabelog.com/en/tokyo/A1315/A131502/13237268/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "銀座 おぐ羅 羽田空港店",
+  "area": "羽田空港",
+  "yokocho": "haneda-edo-koji",
+  "sources": [
+   "https://skywardplus.jal.co.jp/?p=1679",
+   "https://tabelog.com/en/tokyo/A1315/A131504/13117555/",
+   "https://tabelog.com/en/tokyo/A1315/A131504/13118037/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "焼鳥 蕎麦 二尺五寸 羽田空港国際線店",
+  "area": "羽田空港",
+  "yokocho": "haneda-edo-koji",
+  "sources": [
+   "https://skywardplus.jal.co.jp/?p=1679",
+   "https://tabelog.com/en/tokyo/A1315/A131504/13117555/",
+   "https://tabelog.com/en/tokyo/A1315/A131504/13118037/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "つるとんたん 羽田空港店",
+  "area": "羽田空港",
+  "yokocho": "haneda-edo-koji",
+  "sources": [
+   "https://skywardplus.jal.co.jp/?p=1679",
+   "https://tabelog.com/en/tokyo/A1315/A131504/13117555/",
+   "https://tabelog.com/en/tokyo/A1315/A131504/13118037/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "忠さん劇場 くいしん坊",
+  "area": "荏原中延",
+  "yokocho": "ebaranakanobu-mutsumi-koji",
+  "sources": [
+   "https://www.tokyu.co.jp/area/ebara-nakanobu/article/arti-01KG19WS4CB0EJC33VP2PWV7T0/",
+   "https://tabelog.com/en/tokyo/A1317/A131712/13202143/",
+   "https://tokyodeep.info/guide/shinagawa-ku/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "焼鳥 Torimatsu（中延2-8-13）",
+  "area": "荏原中延",
+  "yokocho": "ebaranakanobu-mutsumi-koji",
+  "sources": [
+   "https://www.tokyu.co.jp/area/ebara-nakanobu/article/arti-01KG19WS4CB0EJC33VP2PWV7T0/",
+   "https://tabelog.com/en/tokyo/A1317/A131712/13202143/",
+   "https://tokyodeep.info/guide/shinagawa-ku/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "西庵（魚と日本酒の立ち飲み）",
+  "area": "蒲田",
+  "yokocho": "kamata-bal-yokocho",
+  "sources": [
+   "https://1000bero.net/kamata_yoko/",
+   "https://www.hotpepper.jp/strJ001171341/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "咲良（串揚げ）",
+  "area": "蒲田",
+  "yokocho": "kamata-bal-yokocho",
+  "sources": [
+   "https://1000bero.net/kamata_yoko/",
+   "https://www.hotpepper.jp/strJ001171341/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "Hanoi Bar（ベトナム料理）",
+  "area": "蒲田",
+  "yokocho": "kamata-bal-yokocho",
+  "sources": [
+   "https://1000bero.net/kamata_yoko/",
+   "https://www.hotpepper.jp/strJ001171341/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "BAR黒ばら",
+  "area": "蒲田・蓮沼",
+  "yokocho": "kamata-nishikamata-suzuran-ura",
+  "sources": [
+   "https://tokyodeep.info/nishikamata-tokuingai/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20120512/67946.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ }
+]

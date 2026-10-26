@@ -1,0 +1,896 @@
+[
+ {
+  "name": "もへじ 両国江戸NOREN店",
+  "area": "両国",
+  "yokocho": "ryogoku-edo-noren",
+  "sources": [
+   "https://media.jreast.co.jp/articles/2752"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "ちゃんこ霧島 両国江戸NOREN店",
+  "area": "両国",
+  "yokocho": "ryogoku-edo-noren",
+  "sources": [
+   "https://media.jreast.co.jp/articles/2752"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "根津 鶏はな 両国江戸NOREN店",
+  "area": "両国",
+  "yokocho": "ryogoku-edo-noren",
+  "sources": [
+   "https://media.jreast.co.jp/articles/2752"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "佃瀧三郎すしうなぎ 両国江戸NOREN店",
+  "area": "両国",
+  "yokocho": "ryogoku-edo-noren",
+  "sources": [
+   "https://media.jreast.co.jp/articles/2752"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "日本橋やぶ久 両国江戸NOREN店",
+  "area": "両国",
+  "yokocho": "ryogoku-edo-noren",
+  "sources": [
+   "https://media.jreast.co.jp/articles/2752"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "麺場 田所商店 両国江戸NOREN店",
+  "area": "両国",
+  "yokocho": "ryogoku-edo-noren",
+  "sources": [
+   "https://media.jreast.co.jp/articles/2752"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "築地食堂 源ちゃん 両国江戸NOREN店",
+  "area": "両国",
+  "yokocho": "ryogoku-edo-noren",
+  "sources": [
+   "https://media.jreast.co.jp/articles/2752"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "パリス＆キャンディ",
+  "area": "両国",
+  "yokocho": "ryogoku-edo-noren",
+  "sources": [
+   "https://media.jreast.co.jp/articles/2752"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "文殊 両国駅前店",
+  "area": "両国",
+  "yokocho": "ryogoku-yokozuna-yokocho",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2017/11/blog-post_3.html",
+   "https://tokyoexplorersmap.blogspot.com/2018/11/drinking-districts-in-tokyo.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "ニューストン",
+  "area": "両国",
+  "yokocho": "ryogoku-yokozuna-yokocho",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2017/11/blog-post_3.html",
+   "https://tokyoexplorersmap.blogspot.com/2018/11/drinking-districts-in-tokyo.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "ぎょうざ会館 磐梯山",
+  "area": "両国",
+  "yokocho": "ryogoku-yokozuna-yokocho",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2017/11/blog-post_3.html",
+   "https://tokyoexplorersmap.blogspot.com/2018/11/drinking-districts-in-tokyo.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "トウキョウ立呑倶楽部 両国",
+  "area": "両国",
+  "yokocho": "ryogoku-yokozuna-yokocho",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2017/11/blog-post_3.html",
+   "https://tokyoexplorersmap.blogspot.com/2018/11/drinking-districts-in-tokyo.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "食祭処 亀楽",
+  "area": "亀戸",
+  "yokocho": "kameido-kameido-yokocho",
+  "sources": [
+   "https://www.snackyokocho.com/article/14337/",
+   "https://www.timeout.jp/tokyo/ja/ナイトライフ/東京の横丁ガイド",
+   "https://r.gnavi.co.jp/k73rrm030000/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "やきとりさんきゅう 亀戸本店",
+  "area": "亀戸",
+  "yokocho": "kameido-kameido-yokocho",
+  "sources": [
+   "https://www.snackyokocho.com/article/14337/",
+   "https://www.timeout.jp/tokyo/ja/ナイトライフ/東京の横丁ガイド",
+   "https://r.gnavi.co.jp/k73rrm030000/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "ラリグラス 亀戸横丁",
+  "area": "亀戸",
+  "yokocho": "kameido-kameido-yokocho",
+  "sources": [
+   "https://www.snackyokocho.com/article/14337/",
+   "https://www.timeout.jp/tokyo/ja/ナイトライフ/東京の横丁ガイド",
+   "https://r.gnavi.co.jp/k73rrm030000/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "居酒屋 とんぼ（3階）",
+  "area": "亀戸",
+  "yokocho": "kameido-kameido-yokocho",
+  "sources": [
+   "https://www.snackyokocho.com/article/14337/",
+   "https://www.timeout.jp/tokyo/ja/ナイトライフ/東京の横丁ガイド",
+   "https://r.gnavi.co.jp/k73rrm030000/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "亀戸ホルモン 本店",
+  "area": "亀戸",
+  "yokocho": "kameido-kitaguchi-horumon-gai",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2022/09/kameidokitaguchinorojiura.html",
+   "https://tabelog.com/en/tokyo/A1312/A131202/13008099/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "亀戸餃子 本店",
+  "area": "亀戸",
+  "yokocho": "kameido-kitaguchi-horumon-gai",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2022/09/kameidokitaguchinorojiura.html",
+   "https://tabelog.com/en/tokyo/A1312/A131202/13008099/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "でかんしょ",
+  "area": "亀戸",
+  "yokocho": "kameido-kitaguchi-horumon-gai",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2022/09/kameidokitaguchinorojiura.html",
+   "https://tabelog.com/en/tokyo/A1312/A131202/13008099/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "立ち酔い 超人",
+  "area": "亀戸",
+  "yokocho": "kameido-kitaguchi-horumon-gai",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2022/09/kameidokitaguchinorojiura.html",
+   "https://tabelog.com/en/tokyo/A1312/A131202/13008099/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "仙人鳥",
+  "area": "亀戸",
+  "yokocho": "kameido-rokuchome-ekiura-yokocho",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2022/08/kameidorokuchyoumehaneikai.html",
+   "https://tokyodeep.info/kameido-higashiguchi/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "もつ焼 植むら",
+  "area": "小岩",
+  "yokocho": "koiwa-jizo-dori",
+  "sources": [
+   "https://godproperty.jp/news/report/13536/",
+   "https://deepland.blog/koiwa-jizoudoori/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "もつやき 阿波屋",
+  "area": "小岩",
+  "yokocho": "koiwa-jizo-dori",
+  "sources": [
+   "https://godproperty.jp/news/report/13536/",
+   "https://deepland.blog/koiwa-jizoudoori/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "立ち飲み処 くら",
+  "area": "小岩",
+  "yokocho": "koiwa-jizo-dori",
+  "sources": [
+   "https://godproperty.jp/news/report/13536/",
+   "https://deepland.blog/koiwa-jizoudoori/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "小岩 肉寿司",
+  "area": "小岩",
+  "yokocho": "koiwa-jizo-dori",
+  "sources": [
+   "https://godproperty.jp/news/report/13536/",
+   "https://deepland.blog/koiwa-jizoudoori/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "ナイトパブ ダンディ",
+  "area": "小岩",
+  "yokocho": "koiwa-jizo-dori",
+  "sources": [
+   "https://godproperty.jp/news/report/13536/",
+   "https://deepland.blog/koiwa-jizoudoori/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "豚小家",
+  "area": "小岩",
+  "yokocho": "koiwa-kitaguchi-nomiyagai",
+  "sources": [
+   "https://san-tatsu.jp/collects/499610/",
+   "https://tabelog.com/matome/15521/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "八丈島郷土料理 源八船頭 小岩店",
+  "area": "小岩",
+  "yokocho": "koiwa-kitaguchi-nomiyagai",
+  "sources": [
+   "https://san-tatsu.jp/collects/499610/",
+   "https://tabelog.com/matome/15521/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "六人衆",
+  "area": "小岩",
+  "yokocho": "koiwa-kitaguchi-nomiyagai",
+  "sources": [
+   "https://san-tatsu.jp/collects/499610/",
+   "https://tabelog.com/matome/15521/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "FROGPLACE",
+  "area": "小岩",
+  "yokocho": "koiwa-kitaguchi-nomiyagai",
+  "sources": [
+   "https://san-tatsu.jp/collects/499610/",
+   "https://tabelog.com/matome/15521/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "菊乃家本店",
+  "area": "小岩",
+  "yokocho": "koiwa-kitaguchi-nomiyagai",
+  "sources": [
+   "https://san-tatsu.jp/collects/499610/",
+   "https://tabelog.com/matome/15521/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "江戸政",
+  "area": "小岩",
+  "yokocho": "koiwa-kitaguchi-nomiyagai",
+  "sources": [
+   "https://san-tatsu.jp/collects/499610/",
+   "https://tabelog.com/matome/15521/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "鳥正",
+  "area": "小岩",
+  "yokocho": "koiwa-showa-dori",
+  "sources": [
+   "https://godproperty.jp/news/report/13536/",
+   "https://san-tatsu.jp/articles/9270/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20160618/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "鳥勢",
+  "area": "小岩",
+  "yokocho": "koiwa-showa-dori",
+  "sources": [
+   "https://godproperty.jp/news/report/13536/",
+   "https://san-tatsu.jp/articles/9270/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20160618/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "一力",
+  "area": "小岩",
+  "yokocho": "koiwa-showa-dori",
+  "sources": [
+   "https://godproperty.jp/news/report/13536/",
+   "https://san-tatsu.jp/articles/9270/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20160618/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "まじま",
+  "area": "平井",
+  "yokocho": "hirai-minamiguchi-kyukagai",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2025/11/hiraishinwakairojiura.html",
+   "https://tokyodeep.info/hirai/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "志のぶ（旧料亭・志のぶビル）",
+  "area": "平井",
+  "yokocho": "hirai-minamiguchi-kyukagai",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2025/11/hiraishinwakairojiura.html",
+   "https://tokyodeep.info/hirai/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "スナック アイドル",
+  "area": "新小岩",
+  "yokocho": "shinkoiwa-matsushima-snack-gai",
+  "sources": [
+   "https://deepland.blog/shinkoiwa-akasen/",
+   "https://tokyodeep.info/shinkoiwa-maruken/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20141108/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "スナック クイーン",
+  "area": "新小岩",
+  "yokocho": "shinkoiwa-matsushima-snack-gai",
+  "sources": [
+   "https://deepland.blog/shinkoiwa-akasen/",
+   "https://tokyodeep.info/shinkoiwa-maruken/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20141108/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "寿花",
+  "area": "新小岩",
+  "yokocho": "shinkoiwa-matsushima-snack-gai",
+  "sources": [
+   "https://deepland.blog/shinkoiwa-akasen/",
+   "https://tokyodeep.info/shinkoiwa-maruken/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20141108/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "きゃんどる",
+  "area": "新小岩",
+  "yokocho": "shinkoiwa-matsushima-snack-gai",
+  "sources": [
+   "https://deepland.blog/shinkoiwa-akasen/",
+   "https://tokyodeep.info/shinkoiwa-maruken/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20141108/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "たちのみ 新ちゅう",
+  "area": "新小岩",
+  "yokocho": "shinkoiwa-pacific-inshokutengai",
+  "sources": [
+   "https://shinkoiwa-magazine.com/shinchu/",
+   "https://ameblo.jp/kobaden-shoutengai/entry-12895865169.html",
+   "https://tabelog.com/tokyo/A1312/A131204/13284428/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "マリカ（ネパール料理）",
+  "area": "新小岩",
+  "yokocho": "shinkoiwa-subaru-inshokugai",
+  "sources": [
+   "https://ameblo.jp/pias-202/entry-12974953723.html",
+   "https://ameblo.jp/kobaden-shoutengai/entry-12895865169.html",
+   "https://tokyodeep.info/shinkoiwa-subaru-inshokugai/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "立ち飲み処 縁",
+  "area": "新小岩",
+  "yokocho": "shinkoiwa-subaru-inshokugai",
+  "sources": [
+   "https://ameblo.jp/pias-202/entry-12974953723.html",
+   "https://ameblo.jp/kobaden-shoutengai/entry-12895865169.html",
+   "https://tokyodeep.info/shinkoiwa-subaru-inshokugai/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "MUSIC BAR しあわせランプ",
+  "area": "新小岩",
+  "yokocho": "shinkoiwa-subaru-inshokugai",
+  "sources": [
+   "https://ameblo.jp/pias-202/entry-12974953723.html",
+   "https://ameblo.jp/kobaden-shoutengai/entry-12895865169.html",
+   "https://tokyodeep.info/shinkoiwa-subaru-inshokugai/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "あづさ",
+  "area": "新小岩",
+  "yokocho": "shinkoiwa-subaru-inshokugai",
+  "sources": [
+   "https://ameblo.jp/pias-202/entry-12974953723.html",
+   "https://ameblo.jp/kobaden-shoutengai/entry-12895865169.html",
+   "https://tokyodeep.info/shinkoiwa-subaru-inshokugai/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "たこ焼き27",
+  "area": "新小岩",
+  "yokocho": "shinkoiwa-subaru-inshokugai",
+  "sources": [
+   "https://ameblo.jp/pias-202/entry-12974953723.html",
+   "https://ameblo.jp/kobaden-shoutengai/entry-12895865169.html",
+   "https://tokyodeep.info/shinkoiwa-subaru-inshokugai/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "居酒屋むさし",
+  "area": "曳舟",
+  "yokocho": "hikifune-higashiguchi-sakaba-dori",
+  "sources": [
+   "https://san-tatsu.jp/collects/447430/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "銘酒と珍味 東西南北",
+  "area": "曳舟",
+  "yokocho": "hikifune-higashiguchi-sakaba-dori",
+  "sources": [
+   "https://san-tatsu.jp/collects/447430/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "七々",
+  "area": "曳舟",
+  "yokocho": "hikifune-higashiguchi-sakaba-dori",
+  "sources": [
+   "https://san-tatsu.jp/collects/447430/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "THE ALL DAY",
+  "area": "曳舟",
+  "yokocho": "hikifune-higashiguchi-sakaba-dori",
+  "sources": [
+   "https://san-tatsu.jp/collects/447430/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "三保保三",
+  "area": "曳舟",
+  "yokocho": "hikifune-higashiguchi-sakaba-dori",
+  "sources": [
+   "https://san-tatsu.jp/collects/447430/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "にこみ家",
+  "area": "東陽町・木場",
+  "yokocho": "toyocho-shouben-yokocho",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20230520/143860.html",
+   "https://bs.tbs.co.jp/sakaba/shop/1128.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "たつみや",
+  "area": "東陽町・木場",
+  "yokocho": "toyocho-shouben-yokocho",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20230520/143860.html",
+   "https://bs.tbs.co.jp/sakaba/shop/1128.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "おかめ",
+  "area": "東陽町・木場",
+  "yokocho": "toyocho-shouben-yokocho",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20230520/143860.html",
+   "https://bs.tbs.co.jp/sakaba/shop/1128.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "築地魚場 リトル築地場外",
+  "area": "築地",
+  "yokocho": "tsukiji-jogai-shijo",
+  "sources": [
+   "https://www.tsukiji.or.jp/",
+   "https://www.hotpepper.jp/strJ003581926/",
+   "https://www.hotpepper.jp/strJ001251200/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "干しもの 立ち呑み 大東",
+  "area": "築地",
+  "yokocho": "tsukiji-jogai-shijo",
+  "sources": [
+   "https://www.tsukiji.or.jp/",
+   "https://www.hotpepper.jp/strJ003581926/",
+   "https://www.hotpepper.jp/strJ001251200/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "つきじ小路",
+  "area": "築地",
+  "yokocho": "tsukiji-jogai-shijo",
+  "sources": [
+   "https://www.tsukiji.or.jp/",
+   "https://www.hotpepper.jp/strJ003581926/",
+   "https://www.hotpepper.jp/strJ001251200/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "錦糸町酒場うえじ",
+  "area": "錦糸町",
+  "yokocho": "kinshicho-derby-dori",
+  "sources": [
+   "https://estate.deepannai.info/kinshicho-derby-street/",
+   "https://1000bero.net/restaurant-1345/",
+   "https://apese.net/?id=5509025"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "米とサーカス 錦糸町ダービー通り店",
+  "area": "錦糸町",
+  "yokocho": "kinshicho-derby-dori",
+  "sources": [
+   "https://estate.deepannai.info/kinshicho-derby-street/",
+   "https://1000bero.net/restaurant-1345/",
+   "https://apese.net/?id=5509025"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "錦糸町酒場 ご当地横丁 うさぎや",
+  "area": "錦糸町",
+  "yokocho": "kinshicho-gotochi-yokocho",
+  "sources": [
+   "http://gotouti-yokocho-kinshicho.com/",
+   "https://www.hotpepper.jp/strJ003693976/report/",
+   "https://www.hotpepper.jp/strJ003716116/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "郷土料理居酒屋 いちえ 錦糸町店",
+  "area": "錦糸町",
+  "yokocho": "kinshicho-gotochi-yokocho",
+  "sources": [
+   "http://gotouti-yokocho-kinshicho.com/",
+   "https://www.hotpepper.jp/strJ003693976/report/",
+   "https://www.hotpepper.jp/strJ003716116/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "馬刺し 居酒屋",
+  "area": "錦糸町",
+  "yokocho": "kinshicho-kadangai",
+  "sources": [
+   "https://real-hunter.com/machi/tokyo/20250205.html",
+   "https://estate.deepannai.info/kinshicho-kadangai/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20210206/141421.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "焼肉 三千里 花壇街店",
+  "area": "錦糸町",
+  "yokocho": "kinshicho-kadangai",
+  "sources": [
+   "https://real-hunter.com/machi/tokyo/20250205.html",
+   "https://estate.deepannai.info/kinshicho-kadangai/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20210206/141421.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "蕎麦 竹むら",
+  "area": "錦糸町",
+  "yokocho": "kinshicho-kadangai",
+  "sources": [
+   "https://real-hunter.com/machi/tokyo/20250205.html",
+   "https://estate.deepannai.info/kinshicho-kadangai/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20210206/141421.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "蕎麦 みつまさ",
+  "area": "錦糸町",
+  "yokocho": "kinshicho-kadangai",
+  "sources": [
+   "https://real-hunter.com/machi/tokyo/20250205.html",
+   "https://estate.deepannai.info/kinshicho-kadangai/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20210206/141421.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "喫茶 桃山",
+  "area": "錦糸町",
+  "yokocho": "kinshicho-kadangai",
+  "sources": [
+   "https://real-hunter.com/machi/tokyo/20250205.html",
+   "https://estate.deepannai.info/kinshicho-kadangai/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20210206/141421.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "もつ焼き 涌谷",
+  "area": "錦糸町",
+  "yokocho": "kinshicho-kitaguchi-nomiyagai",
+  "sources": [
+   "https://tabelog.com/matome/17085/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "鳥平",
+  "area": "錦糸町",
+  "yokocho": "kinshicho-kitaguchi-nomiyagai",
+  "sources": [
+   "https://tabelog.com/matome/17085/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "なすび",
+  "area": "錦糸町",
+  "yokocho": "kinshicho-kitaguchi-nomiyagai",
+  "sources": [
+   "https://tabelog.com/matome/17085/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "はし臓",
+  "area": "錦糸町",
+  "yokocho": "kinshicho-kitaguchi-nomiyagai",
+  "sources": [
+   "https://tabelog.com/matome/17085/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "錦糸町ホルモン 天狗",
+  "area": "錦糸町",
+  "yokocho": "kinshicho-kitaguchi-nomiyagai",
+  "sources": [
+   "https://tabelog.com/matome/17085/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "井のなか",
+  "area": "錦糸町",
+  "yokocho": "kinshicho-kitaguchi-nomiyagai",
+  "sources": [
+   "https://tabelog.com/matome/17085/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "亀屋",
+  "area": "鐘ヶ淵",
+  "yokocho": "kanegafuchi-chuhai-kaido",
+  "sources": [
+   "https://getnavi.jp/gourmet/1020819/",
+   "https://getnavi.jp/gourmet/594187/",
+   "https://tokyoexplorersmap.blogspot.com/2021/04/kanegafuchidoori.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "三河屋",
+  "area": "鐘ヶ淵",
+  "yokocho": "kanegafuchi-chuhai-kaido",
+  "sources": [
+   "https://getnavi.jp/gourmet/1020819/",
+   "https://getnavi.jp/gourmet/594187/",
+   "https://tokyoexplorersmap.blogspot.com/2021/04/kanegafuchidoori.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "牛太郎",
+  "area": "鐘ヶ淵",
+  "yokocho": "kanegafuchi-chuhai-kaido",
+  "sources": [
+   "https://getnavi.jp/gourmet/1020819/",
+   "https://getnavi.jp/gourmet/594187/",
+   "https://tokyoexplorersmap.blogspot.com/2021/04/kanegafuchidoori.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "三祐酒場 八広店",
+  "area": "鐘ヶ淵",
+  "yokocho": "kanegafuchi-chuhai-kaido",
+  "sources": [
+   "https://getnavi.jp/gourmet/1020819/",
+   "https://getnavi.jp/gourmet/594187/",
+   "https://tokyoexplorersmap.blogspot.com/2021/04/kanegafuchidoori.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "丸好酒場本店",
+  "area": "鐘ヶ淵",
+  "yokocho": "kanegafuchi-chuhai-kaido",
+  "sources": [
+   "https://getnavi.jp/gourmet/1020819/",
+   "https://getnavi.jp/gourmet/594187/",
+   "https://tokyoexplorersmap.blogspot.com/2021/04/kanegafuchidoori.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "魚真",
+  "area": "鐘ヶ淵",
+  "yokocho": "kanegafuchi-chuhai-kaido",
+  "sources": [
+   "https://getnavi.jp/gourmet/1020819/",
+   "https://getnavi.jp/gourmet/594187/",
+   "https://tokyoexplorersmap.blogspot.com/2021/04/kanegafuchidoori.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "ひえき",
+  "area": "鐘ヶ淵",
+  "yokocho": "kanegafuchi-chuhai-kaido",
+  "sources": [
+   "https://getnavi.jp/gourmet/1020819/",
+   "https://getnavi.jp/gourmet/594187/",
+   "https://tokyoexplorersmap.blogspot.com/2021/04/kanegafuchidoori.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "大衆酒場 魚三",
+  "area": "門前仲町",
+  "yokocho": "monzennakacho-tomioka-roji",
+  "sources": [
+   "https://www.snackyokocho.com/article/10229/",
+   "https://san-tatsu.jp/collects/12738/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20141122/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "山幸",
+  "area": "門前仲町",
+  "yokocho": "monzennakacho-tomioka-roji",
+  "sources": [
+   "https://www.snackyokocho.com/article/10229/",
+   "https://san-tatsu.jp/collects/12738/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20141122/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "ますらお",
+  "area": "門前仲町",
+  "yokocho": "monzennakacho-tomioka-roji",
+  "sources": [
+   "https://www.snackyokocho.com/article/10229/",
+   "https://san-tatsu.jp/collects/12738/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20141122/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "あらばしり",
+  "area": "門前仲町",
+  "yokocho": "monzennakacho-tomioka-roji",
+  "sources": [
+   "https://www.snackyokocho.com/article/10229/",
+   "https://san-tatsu.jp/collects/12738/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20141122/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "酒亭 沿露目",
+  "area": "門前仲町",
+  "yokocho": "monzennakacho-tomioka-roji",
+  "sources": [
+   "https://www.snackyokocho.com/article/10229/",
+   "https://san-tatsu.jp/collects/12738/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20141122/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "ラパン",
+  "area": "門前仲町",
+  "yokocho": "monzennakacho-tomioka-roji",
+  "sources": [
+   "https://www.snackyokocho.com/article/10229/",
+   "https://san-tatsu.jp/collects/12738/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20141122/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "snack bar e.t",
+  "area": "門前仲町",
+  "yokocho": "monzennakacho-tomioka-roji",
+  "sources": [
+   "https://www.snackyokocho.com/article/10229/",
+   "https://san-tatsu.jp/collects/12738/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20141122/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ }
+]

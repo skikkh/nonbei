@@ -1,0 +1,305 @@
+[
+  {
+    "id": "discovery-tl-13062526",
+    "name": "新珍味",
+    "kind": "sakaba",
+    "area": "池袋",
+    "ward": "豊島区",
+    "address": "東京都豊島区西池袋1-23-4",
+    "pin": [
+      35.73204218866578,
+      139.7099994849372
+    ],
+    "desc": "池袋西口にある中華料理とお酒を楽しめる店。",
+    "checked": "2026年10月の訪問記事と食べログの口コミを2026年10月27日に確認",
+    "sources": [
+      "https://1000bero.net/restaurant-2494/",
+      "https://tabelog.com/tokyo/A1305/A130501/13062526/"
+    ],
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "tags": []
+  },
+  {
+    "id": "discovery-tl-13250498",
+    "name": "鶴亀八番 池袋店",
+    "kind": "sakaba",
+    "area": "池袋",
+    "ward": "豊島区",
+    "address": "東京都豊島区西池袋3-29-14 一平ビルB1F",
+    "pin": [
+      35.73151203785981,
+      139.70708198377216
+    ],
+    "desc": "池袋西口の大衆酒場。高田馬場の同名店とは別店舗。",
+    "checked": "2026年9月の訪問記事と食べログの口コミを2026年10月27日に確認",
+    "sources": [
+      "https://1000bero.net/restaurant-1556/",
+      "https://tabelog.com/tokyo/A1305/A130501/13250498/"
+    ],
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "tags": []
+  },
+  {
+    "id": "discovery-tl-13326088",
+    "name": "いたりあんばー へちま",
+    "kind": "tachinomi",
+    "area": "大森",
+    "ward": "大田区",
+    "address": "東京都大田区山王2-2-15",
+    "pin": [
+      35.5893035287622,
+      139.72811160348274
+    ],
+    "desc": "大森の山王小路飲食店街にある立ち飲みバー。ピザや飲み物を気軽に楽しめる。",
+    "checked": "2026年8月の訪問記事と店舗掲載を2026年10月27日に確認",
+    "sources": [
+      "https://1000bero.net/restaurant-2462/",
+      "https://tabelog.com/tokyo/A1315/A131502/13326088/"
+    ],
+    "yokocho": "omori-sanno-koji",
+    "talk": "少人数の立ち飲みで、店主や隣の客との会話も楽しめる。",
+    "social": 4,
+    "solo": 3,
+    "status": "open",
+    "tags": []
+  },
+  {
+    "id": "discovery-tl-13325740",
+    "name": "餃子とビール屋",
+    "kind": "sakaba",
+    "area": "大森",
+    "ward": "大田区",
+    "address": "東京都大田区大森北1-16-8 第16大協ビル B1F",
+    "pin": [
+      35.58628007876467,
+      139.729835423451
+    ],
+    "desc": "大森で餃子とビールを楽しめる酒場。",
+    "checked": "2026年8月の訪問記事と店舗掲載を2026年10月27日に確認",
+    "sources": [
+      "https://1000bero.net/restaurant-2461/",
+      "https://tabelog.com/tokyo/A1315/A131502/13325740/"
+    ],
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "tags": []
+  },
+  {
+    "id": "discovery-tl-13312520",
+    "name": "食酒 秀",
+    "kind": "sakaba",
+    "area": "曳舟",
+    "ward": "墨田区",
+    "address": "東京都墨田区東向島2-15-10",
+    "pin": [
+      35.71773367741726,
+      139.81600896943672
+    ],
+    "desc": "曳舟の小さな酒場。",
+    "checked": "2026年7月の訪問記事と食べログの口コミを2026年10月27日に確認",
+    "sources": [
+      "https://1000bero.net/restaurant-2452/",
+      "https://tabelog.com/tokyo/A1312/A131203/13312520/"
+    ],
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "tags": []
+  },
+  {
+    "id": "discovery-tl-13321018",
+    "name": "もつ焼き にんべん 大塚店",
+    "kind": "sakaba",
+    "area": "大塚",
+    "ward": "豊島区",
+    "address": "東京都豊島区南大塚3-48-7",
+    "pin": [
+      35.73035371661557,
+      139.72741945098554
+    ],
+    "desc": "大塚に移転した、もつ焼きを楽しめる酒場。",
+    "checked": "2026年4月の訪問記事と食べログの口コミを2026年10月27日に確認",
+    "sources": [
+      "https://1000bero.net/restaurant-2048/",
+      "https://tabelog.com/tokyo/A1323/A132302/13321018/"
+    ],
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "tags": []
+  },
+  {
+    "id": "discovery-tl-13063928",
+    "name": "ジャンボ大塚",
+    "kind": "sakaba",
+    "area": "雑色",
+    "ward": "大田区",
+    "address": "東京都大田区東六郷1-25-11",
+    "pin": [
+      35.55224547878291,
+      139.71922153311468
+    ],
+    "desc": "雑色の焼き鳥やもつ焼きを楽しめる酒場。",
+    "checked": "2026年3月の訪問記事と食べログの口コミを2026年10月27日に確認",
+    "sources": [
+      "https://1000bero.net/restaurant-2421/",
+      "https://tabelog.com/tokyo/A1315/A131503/13063928/"
+    ],
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "tags": []
+  },
+  {
+    "id": "discovery-tl-13276868",
+    "name": "めしと酒 と㐂",
+    "kind": "tachinomi",
+    "area": "亀戸",
+    "ward": "江東区",
+    "address": "東京都江東区亀戸3-61-12 リックアート亀戸 1F",
+    "pin": [
+      35.702871048721036,
+      139.8253561845617
+    ],
+    "desc": "亀戸のカウンター席と立ち飲みスペースがある酒場。日替わりの料理や季節の日本酒を楽しめる。",
+    "checked": "2026年8月の地域取材と食べログの口コミを2026年10月27日に確認",
+    "sources": [
+      "https://kotomise.jp/shops/%E3%82%81%E3%81%97%E3%81%A8%E9%85%92-%E3%81%A8%E3%90%82/",
+      "https://tabelog.com/tokyo/A1312/A131202/13276868/"
+    ],
+    "talk": "取材ではカウンター越しに店主との会話を楽しめる店として紹介されている。",
+    "social": 4,
+    "solo": 3,
+    "status": "open",
+    "tags": []
+  },
+  {
+    "id": "discovery-tl-13321365",
+    "name": "酒仙坊 神田店",
+    "kind": "sakaba",
+    "area": "神田",
+    "ward": "千代田区",
+    "address": "東京都千代田区鍛冶町2-12-10 一番街共同ビル 1F",
+    "pin": [
+      35.693083878710155,
+      139.77163094450052
+    ],
+    "desc": "神田の酒場。北千住の同名店とは別店舗。",
+    "checked": "2026年5月の訪問記事と食べログの口コミを2026年10月27日に確認",
+    "sources": [
+      "https://1000bero.net/restaurant-2434/",
+      "https://tabelog.com/tokyo/A1310/A131002/13321365/"
+    ],
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "tags": []
+  },
+  {
+    "id": "discovery-tl-13321958",
+    "name": "晩杯屋 八王子店",
+    "kind": "tachinomi",
+    "area": "八王子",
+    "ward": "八王子市",
+    "address": "東京都八王子市東町13-12 八王子OMビル 1F",
+    "pin": [
+      35.65861643859403,
+      139.33827938445611
+    ],
+    "desc": "八王子駅近くに2026年に開いた立ち飲み酒場。",
+    "checked": "2026年4月の地域記事と食べログの口コミを2026年10月27日に確認",
+    "sources": [
+      "https://8dabe.com/2026/04/30/bampire-hachioji/",
+      "https://tabelog.com/tokyo/A1329/A132904/13321958/"
+    ],
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "tags": []
+  },
+  {
+    "id": "discovery-tl-13297160",
+    "name": "八王子よこやま商店",
+    "kind": "tachinomi",
+    "area": "八王子",
+    "ward": "八王子市",
+    "address": "東京都八王子市横山町8-10",
+    "pin": [
+      35.65927296859277,
+      139.3356425744646
+    ],
+    "desc": "八王子の大衆酒場。2026年に立ち飲み席が加わった。",
+    "checked": "2026年10月の地域取材と店舗掲載を2026年10月27日に確認",
+    "sources": [
+      "https://8dabe.com/2026/10/02/yokoyamashoten/",
+      "https://tabelog.com/tokyo/A1329/A132904/13297160/"
+    ],
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "tags": []
+  },
+  {
+    "id": "discovery-tl-13323289",
+    "name": "SOSTA - PIZZA & LEGAME -",
+    "kind": "tachinomi",
+    "area": "五反田",
+    "ward": "品川区",
+    "address": "東京都品川区西五反田1-32-9 西五反田1丁目ビル",
+    "pin": [
+      35.624132408738035,
+      139.72170371383905
+    ],
+    "desc": "五反田でピザとお酒を楽しめる立ち飲みの店。",
+    "checked": "2026年7月の地域記事と食べログの口コミを2026年10月27日に確認",
+    "sources": [
+      "https://shinagawa.keizai.biz/headline/5048/",
+      "https://tabelog.com/tokyo/A1316/A131603/13323289/"
+    ],
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "tags": []
+  },
+  {
+    "id": "discover-osaki-aeon-liquor",
+    "name": "イオンリカー 大崎ブライトコア店",
+    "kind": "kakuuchi",
+    "area": "大崎",
+    "ward": "品川区",
+    "address": "東京都品川区北品川5-5-15 大崎ブライトコア1階",
+    "desc": "大崎ブライトコアの酒販店。店内で角打ちを楽しめる。",
+    "checked": "2026年5月の訪問記事と2026年10月の訪問記録を2026年10月27日に確認",
+    "sources": [
+      "https://1000bero.net/restaurant-2438/",
+      "https://note.com/eiji1975/n/n34000d3b9a42"
+    ],
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "tags": []
+  },
+  {
+    "id": "discover-wakabayashi-aozara",
+    "name": "ザ・青皿",
+    "kind": "tachinomi",
+    "area": "若林",
+    "ward": "世田谷区",
+    "address": "東京都世田谷区若林4-1-10",
+    "desc": "若林にある中華料理を楽しめる立ち飲み。",
+    "checked": "2026年5月と8月の店舗取材を2026年10月27日に確認",
+    "sources": [
+      "https://food-stadium.com/headline/39404/",
+      "https://www.elle.com/jp/gourmet/gourmet-restaurants/g73458222/theaozara-2608/"
+    ],
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "tags": []
+  }
+]

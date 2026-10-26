@@ -1,0 +1,571 @@
+[
+ {
+  "name": "馬山館",
+  "area": "上野",
+  "yokocho": "higashiueno-kimchi-yokocho",
+  "sources": [
+   "https://san-tatsu.jp/articles/500470/",
+   "https://tabelog.com/tokyo/A1311/A131101/13003589/",
+   "https://tokyodeep.info/higashiueno-koreatown-2018/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "板門店",
+  "area": "上野",
+  "yokocho": "higashiueno-kimchi-yokocho",
+  "sources": [
+   "https://san-tatsu.jp/articles/500470/",
+   "https://tabelog.com/tokyo/A1311/A131101/13003589/",
+   "https://tokyodeep.info/higashiueno-koreatown-2018/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "東京苑",
+  "area": "上野",
+  "yokocho": "higashiueno-kimchi-yokocho",
+  "sources": [
+   "https://san-tatsu.jp/articles/500470/",
+   "https://tabelog.com/tokyo/A1311/A131101/13003589/",
+   "https://tokyodeep.info/higashiueno-koreatown-2018/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "京城苑",
+  "area": "上野",
+  "yokocho": "higashiueno-kimchi-yokocho",
+  "sources": [
+   "https://san-tatsu.jp/articles/500470/",
+   "https://tabelog.com/tokyo/A1311/A131101/13003589/",
+   "https://tokyodeep.info/higashiueno-koreatown-2018/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "海雲台",
+  "area": "上野",
+  "yokocho": "higashiueno-kimchi-yokocho",
+  "sources": [
+   "https://san-tatsu.jp/articles/500470/",
+   "https://tabelog.com/tokyo/A1311/A131101/13003589/",
+   "https://tokyodeep.info/higashiueno-koreatown-2018/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "大門",
+  "area": "上野",
+  "yokocho": "higashiueno-kimchi-yokocho",
+  "sources": [
+   "https://san-tatsu.jp/articles/500470/",
+   "https://tabelog.com/tokyo/A1311/A131101/13003589/",
+   "https://tokyodeep.info/higashiueno-koreatown-2018/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "にしくら",
+  "area": "千駄木",
+  "yokocho": "sendagi-suzuran-dori",
+  "sources": [
+   "https://www.snackyokocho.com/article/22056/",
+   "https://tokyoexplorersmap.blogspot.com/2023/10/202310.html",
+   "https://tokyoexplorersmap.blogspot.com/2017/11/blog-post_69.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "おでん 千の里",
+  "area": "千駄木",
+  "yokocho": "sendagi-suzuran-dori",
+  "sources": [
+   "https://www.snackyokocho.com/article/22056/",
+   "https://tokyoexplorersmap.blogspot.com/2023/10/202310.html",
+   "https://tokyoexplorersmap.blogspot.com/2017/11/blog-post_69.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "そば処 あかしや",
+  "area": "千駄木",
+  "yokocho": "sendagi-suzuran-dori",
+  "sources": [
+   "https://www.snackyokocho.com/article/22056/",
+   "https://tokyoexplorersmap.blogspot.com/2023/10/202310.html",
+   "https://tokyoexplorersmap.blogspot.com/2017/11/blog-post_69.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "エルマン",
+  "area": "千駄木",
+  "yokocho": "sendagi-suzuran-dori",
+  "sources": [
+   "https://www.snackyokocho.com/article/22056/",
+   "https://tokyoexplorersmap.blogspot.com/2023/10/202310.html",
+   "https://tokyoexplorersmap.blogspot.com/2017/11/blog-post_69.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "天才ブラジル 千駄木すずらん通り店",
+  "area": "千駄木",
+  "yokocho": "sendagi-suzuran-dori",
+  "sources": [
+   "https://www.snackyokocho.com/article/22056/",
+   "https://tokyoexplorersmap.blogspot.com/2023/10/202310.html",
+   "https://tokyoexplorersmap.blogspot.com/2017/11/blog-post_69.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "佐原屋 本店",
+  "area": "御徒町",
+  "yokocho": "okachimachi-gard-shita",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20140405/100721.html",
+   "https://sawaraya-honten.owst.jp/",
+   "https://san-tatsu.jp/collects/9791/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "味の笛 本店",
+  "area": "御徒町",
+  "yokocho": "okachimachi-gard-shita",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20140405/100721.html",
+   "https://sawaraya-honten.owst.jp/",
+   "https://san-tatsu.jp/collects/9791/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "大衆酒場 江戸一",
+  "area": "御徒町",
+  "yokocho": "okachimachi-gard-shita",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20140405/100721.html",
+   "https://sawaraya-honten.owst.jp/",
+   "https://san-tatsu.jp/collects/9791/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "本格焼酎の店 金魚",
+  "area": "御徒町",
+  "yokocho": "okachimachi-gard-shita",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20140405/100721.html",
+   "https://sawaraya-honten.owst.jp/",
+   "https://san-tatsu.jp/collects/9791/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "立ち飲み 釧路",
+  "area": "御徒町",
+  "yokocho": "okachimachi-gard-shita",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20140405/100721.html",
+   "https://sawaraya-honten.owst.jp/",
+   "https://san-tatsu.jp/collects/9791/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "笑和酒場",
+  "area": "御徒町",
+  "yokocho": "okachimachi-gard-shita",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20140405/100721.html",
+   "https://sawaraya-honten.owst.jp/",
+   "https://san-tatsu.jp/collects/9791/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "スナック 豊",
+  "area": "浅草",
+  "yokocho": "asakusa-hisago-dori",
+  "sources": [
+   "https://www.snackyokocho.com/article/17470/",
+   "https://tokyodeep.info/asakusa-hanayashikiura/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "よたか",
+  "area": "浅草",
+  "yokocho": "asakusa-hisago-dori",
+  "sources": [
+   "https://www.snackyokocho.com/article/17470/",
+   "https://tokyodeep.info/asakusa-hanayashikiura/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "Cuzn Homeground",
+  "area": "浅草",
+  "yokocho": "asakusa-hisago-dori",
+  "sources": [
+   "https://www.snackyokocho.com/article/17470/",
+   "https://tokyodeep.info/asakusa-hanayashikiura/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "大衆酒場 さくま",
+  "area": "浅草",
+  "yokocho": "asakusa-kannon-ura",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20120825/",
+   "https://bs.tbs.co.jp/sakaba/shop/1176.html",
+   "https://www.snackyokocho.com/article/17470/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "もがみや",
+  "area": "浅草",
+  "yokocho": "asakusa-kannon-ura",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20120825/",
+   "https://bs.tbs.co.jp/sakaba/shop/1176.html",
+   "https://www.snackyokocho.com/article/17470/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "入母屋",
+  "area": "浅草",
+  "yokocho": "asakusa-kannon-ura",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20120825/",
+   "https://bs.tbs.co.jp/sakaba/shop/1176.html",
+   "https://www.snackyokocho.com/article/17470/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "鳥善",
+  "area": "浅草",
+  "yokocho": "asakusa-kannon-ura",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20120825/",
+   "https://bs.tbs.co.jp/sakaba/shop/1176.html",
+   "https://www.snackyokocho.com/article/17470/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "三豊",
+  "area": "浅草",
+  "yokocho": "asakusa-kannon-ura",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20120825/",
+   "https://bs.tbs.co.jp/sakaba/shop/1176.html",
+   "https://www.snackyokocho.com/article/17470/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "FOS",
+  "area": "浅草",
+  "yokocho": "asakusa-kannon-ura",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20120825/",
+   "https://bs.tbs.co.jp/sakaba/shop/1176.html",
+   "https://www.snackyokocho.com/article/17470/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "三玄路（micro）",
+  "area": "浅草",
+  "yokocho": "asakusa-kannon-ura",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20120825/",
+   "https://bs.tbs.co.jp/sakaba/shop/1176.html",
+   "https://www.snackyokocho.com/article/17470/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "ベニラン",
+  "area": "浅草",
+  "yokocho": "asakusa-kannon-ura",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20120825/",
+   "https://bs.tbs.co.jp/sakaba/shop/1176.html",
+   "https://www.snackyokocho.com/article/17470/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "スナック ティンカーベル",
+  "area": "浅草",
+  "yokocho": "asakusa-kannon-ura",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20120825/",
+   "https://bs.tbs.co.jp/sakaba/shop/1176.html",
+   "https://www.snackyokocho.com/article/17470/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "捕鯨船",
+  "area": "浅草",
+  "yokocho": "asakusa-rokku-dori",
+  "sources": [
+   "https://www.snackyokocho.com/article/22222/",
+   "https://tokyoexplorersmap.blogspot.com/2023/10/asakusarokkustreet.html",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20220924/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "川よん",
+  "area": "浅草",
+  "yokocho": "asakusa-rokku-dori",
+  "sources": [
+   "https://www.snackyokocho.com/article/22222/",
+   "https://tokyoexplorersmap.blogspot.com/2023/10/asakusarokkustreet.html",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20220924/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "一八",
+  "area": "浅草",
+  "yokocho": "asakusa-rokku-dori",
+  "sources": [
+   "https://www.snackyokocho.com/article/22222/",
+   "https://tokyoexplorersmap.blogspot.com/2023/10/asakusarokkustreet.html",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20220924/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "立ち飲み居酒屋ドラム缶 湯島本店",
+  "area": "湯島",
+  "yokocho": "yushima-obake-yokocho",
+  "sources": [
+   "https://yushima-jct.com/archives/5",
+   "https://tokyodeep.info/yushima-obake-yokocho/",
+   "https://bs.tbs.co.jp/sakaba/shop/835.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "MUSIC BAR 道",
+  "area": "湯島",
+  "yokocho": "yushima-obake-yokocho",
+  "sources": [
+   "https://yushima-jct.com/archives/5",
+   "https://tokyodeep.info/yushima-obake-yokocho/",
+   "https://bs.tbs.co.jp/sakaba/shop/835.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "ふくろう亭",
+  "area": "湯島",
+  "yokocho": "yushima-obake-yokocho",
+  "sources": [
+   "https://yushima-jct.com/archives/5",
+   "https://tokyodeep.info/yushima-obake-yokocho/",
+   "https://bs.tbs.co.jp/sakaba/shop/835.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "玉善",
+  "area": "湯島",
+  "yokocho": "yushima-obake-yokocho",
+  "sources": [
+   "https://yushima-jct.com/archives/5",
+   "https://tokyodeep.info/yushima-obake-yokocho/",
+   "https://bs.tbs.co.jp/sakaba/shop/835.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "あおもり湯島",
+  "area": "湯島",
+  "yokocho": "yushima-obake-yokocho",
+  "sources": [
+   "https://yushima-jct.com/archives/5",
+   "https://tokyodeep.info/yushima-obake-yokocho/",
+   "https://bs.tbs.co.jp/sakaba/shop/835.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "南部百姓家",
+  "area": "湯島",
+  "yokocho": "yushima-obake-yokocho",
+  "sources": [
+   "https://yushima-jct.com/archives/5",
+   "https://tokyodeep.info/yushima-obake-yokocho/",
+   "https://bs.tbs.co.jp/sakaba/shop/835.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "一力",
+  "area": "谷中",
+  "yokocho": "yanaka-hatsune-koji",
+  "sources": [
+   "https://www.snackyokocho.com/article/22149/",
+   "https://tokyoexplorersmap.blogspot.com/2019/03/hatsunekouji.html",
+   "https://www.hotpepper.jp/strJ000749319/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "谷中イタリアンバール nenecolo",
+  "area": "谷中",
+  "yokocho": "yanaka-hatsune-koji",
+  "sources": [
+   "https://www.snackyokocho.com/article/22149/",
+   "https://tokyoexplorersmap.blogspot.com/2019/03/hatsunekouji.html",
+   "https://www.hotpepper.jp/strJ000749319/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "やきとり 鳥真",
+  "area": "谷中",
+  "yokocho": "yanaka-hatsune-koji",
+  "sources": [
+   "https://www.snackyokocho.com/article/22149/",
+   "https://tokyoexplorersmap.blogspot.com/2019/03/hatsunekouji.html",
+   "https://www.hotpepper.jp/strJ000749319/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "ワインバー C'EST QUI?",
+  "area": "谷中",
+  "yokocho": "yanaka-hatsune-koji",
+  "sources": [
+   "https://www.snackyokocho.com/article/22149/",
+   "https://tokyoexplorersmap.blogspot.com/2019/03/hatsunekouji.html",
+   "https://www.hotpepper.jp/strJ000749319/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "谷中の雀",
+  "area": "谷中",
+  "yokocho": "yanaka-hatsune-koji",
+  "sources": [
+   "https://www.snackyokocho.com/article/22149/",
+   "https://tokyoexplorersmap.blogspot.com/2019/03/hatsunekouji.html",
+   "https://www.hotpepper.jp/strJ000749319/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "沖縄家庭料理あさと",
+  "area": "谷中",
+  "yokocho": "yanaka-hatsune-koji",
+  "sources": [
+   "https://www.snackyokocho.com/article/22149/",
+   "https://tokyoexplorersmap.blogspot.com/2019/03/hatsunekouji.html",
+   "https://www.hotpepper.jp/strJ000749319/"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "炭焼き やきとり ささのや",
+  "area": "鶯谷",
+  "yokocho": "uguisudani-asagao-dori",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2019/06/asagaodori.html",
+   "https://tokyodeep.info/sumitakunai-uguisudani/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20160514/124470.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "鳥椿",
+  "area": "鶯谷",
+  "yokocho": "uguisudani-asagao-dori",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2019/06/asagaodori.html",
+   "https://tokyodeep.info/sumitakunai-uguisudani/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20160514/124470.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "ビストロ酒場 五感",
+  "area": "鶯谷",
+  "yokocho": "uguisudani-asagao-dori",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2019/06/asagaodori.html",
+   "https://tokyodeep.info/sumitakunai-uguisudani/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20160514/124470.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "かぶら屋",
+  "area": "鶯谷",
+  "yokocho": "uguisudani-asagao-dori",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2019/06/asagaodori.html",
+   "https://tokyodeep.info/sumitakunai-uguisudani/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20160514/124470.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "焼貝 うぐいす",
+  "area": "鶯谷",
+  "yokocho": "uguisudani-asagao-dori",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2019/06/asagaodori.html",
+   "https://tokyodeep.info/sumitakunai-uguisudani/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20160514/124470.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "ゴールデン酒場",
+  "area": "鶯谷",
+  "yokocho": "uguisudani-asagao-dori",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2019/06/asagaodori.html",
+   "https://tokyodeep.info/sumitakunai-uguisudani/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20160514/124470.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "浅草弥太郎",
+  "area": "鶯谷",
+  "yokocho": "uguisudani-asagao-dori",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2019/06/asagaodori.html",
+   "https://tokyodeep.info/sumitakunai-uguisudani/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20160514/124470.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ },
+ {
+  "name": "錦華楼",
+  "area": "鶯谷",
+  "yokocho": "uguisudani-asagao-dori",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2019/06/asagaodori.html",
+   "https://tokyodeep.info/sumitakunai-uguisudani/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20160514/124470.html"
+  ],
+  "note": "既存の横丁所属店名から抽出。情報源の記載内容、同一店舗、営業状況、業態、住所および位置は個別に要確認。"
+ }
+]

@@ -33,7 +33,7 @@ def compare(candidates, spots):
             continue
         matches = [s for s in spots if normalize(s.get('name', '')) in names and
                    (not area or area in {normalize(s.get('area', '')), normalize(s.get('ward', ''))})]
-        results.append(('候補一致・要確認' if matches else '未掲載・要確認', candidate, matches))
+        results.append(('候補一致・要確認' if matches else '一致未確認', candidate, matches))
     return results
 
 
@@ -47,7 +47,7 @@ def main():
     for state, candidate, matches in results:
         ids = ', '.join(s['id'] for s in matches)
         print(f'{state}\t{candidate["name"]}\t{ids}')
-    print(f'候補 {len(results)}件、未掲載・要確認 {sum(s == "未掲載・要確認" for s, _, _ in results)}件、参照不備 {sum(s in ("参照先なし", "参照不一致") for s, _, _ in results)}件')
+    print(f'候補 {len(results)}件、一致未確認 {sum(s == "一致未確認" for s, _, _ in results)}件、参照不備 {sum(s in ("参照先なし", "参照不一致") for s, _, _ in results)}件')
     return int(any(s in ('参照先なし', '参照不一致') for s, _, _ in results))
 
 

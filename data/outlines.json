@@ -138,6 +138,26 @@
   ],
   "width": 5
  },
+ "aoto-kitaguchi-nakadori": {
+  "center": [
+   35.7457552,
+   139.8556004
+  ],
+  "exclude": [
+   "w736532808"
+  ],
+  "fronting": true,
+  "max_building": 900,
+  "note": "京成青砥駅北口の目の前から北西へ延びる「青砥北口中通り商店街」の細い路地（OSMのW63、約60m）と、その両側に面した小さな飲み屋・店舗の建物。とり家ゑび寿・筑前屋・灯・樹里などが並ぶ。",
+  "sources": [
+   "https://www.snackyokocho.com/article/13509/",
+   "https://deepland.blog/aoto-kitaguti/"
+  ],
+  "ways": [
+   252639292
+  ],
+  "width": 4
+ },
  "asagaya-ichibangai": {
   "center": [
    35.7046,
@@ -643,6 +663,85 @@
   "sources": [
    "https://asakusayokocho.com/",
    "https://www.timeout.jp/tokyo/ja/news/new-yokocho-to-enjoy-japanese-festivals-and-food-in-asakusa-060822"
+  ]
+ },
+ "ayase-higashiguchi-nomiyagai": {
+  "buildings": [
+   "w226997288",
+   "w226997352",
+   "w226997281",
+   "w226997292",
+   "w226997330",
+   "w226997268",
+   "w226997326",
+   "w226997309",
+   "w226997313",
+   "w226997267",
+   "w226997334",
+   "w226997270",
+   "w226997319",
+   "w226990479"
+  ],
+  "center": [
+   35.7613,
+   139.8265
+  ],
+  "exclude": [
+   "w226997296"
+  ],
+  "fronting": true,
+  "max_building": 900,
+  "note": "綾瀬2丁目24番を中心とする、W10の南・東口駅前から南東に入った一角。大松のある建物の脇を南北に抜ける路地と、その東側の串のこたにや寿司・スナックの並ぶ建物群、通りを挟んだ東側のマルイチ・まの/山笠/すみれの建物までをひとまとめにした。",
+  "sources": [
+   "https://tokyodeep.info/adachi-ayase/",
+   "https://bs.tbs.co.jp/sakaba/shop/1219.html"
+  ],
+  "ways": [
+   226997346
+  ],
+  "width": 4
+ },
+ "ayase-nishiguchi-koukashita": {
+  "center": [
+   35.7617,
+   139.8219
+  ],
+  "note": "綾瀬駅西口から西（綾瀬川方向）へ延びるJR常磐線・千代田線の高架下。西端のかね匠・Lounge Bar Travisから、もつ焼き やまざき・ぼんた・いける鮨・烏勢のある東側までの約100mの高架の幅を囲んだ。",
+  "polys": [
+   [
+    [
+     35.7617791,
+     139.8214074
+    ],
+    [
+     35.7618392,
+     139.8219
+    ],
+    [
+     35.7618904,
+     139.8224812
+    ],
+    [
+     35.7617108,
+     139.8224867
+    ],
+    [
+     35.7616892,
+     139.8222321
+    ],
+    [
+     35.7616407,
+     139.8219
+    ],
+    [
+     35.7615787,
+     139.8214074
+    ]
+   ]
+  ],
+  "sources": [
+   "https://1000bero.net/restaurant-801/",
+   "https://tabelog.com/tokyo/A1324/A132404/13189331/"
   ]
  },
  "bubaigawara-mirakugai": {
@@ -1660,6 +1759,29 @@
   ],
   "width": 2.5
  },
+ "hikifune-higashiguchi-sakaba-dori": {
+  "center": [
+   35.718235,
+   139.81749
+  ],
+  "exclude": [
+   "w1527444699",
+   "w1527444700",
+   "w1527441971"
+  ],
+  "fronting": true,
+  "max_building": 900,
+  "note": "曳舟駅東口を出てすぐ、東京曳舟病院の脇を水戸街道へ抜ける裏道（W14からW13）と、その沿いの小さな店舗建物（立呑み処 呑も呑もなど）。東向島2丁目の酒場は約250mに点在するとされるが、飲み屋が固まるこの駅前の路地だけに絞った。",
+  "sources": [
+   "https://tabelog.com/tokyo/A1312/A131203/13074915/dtlrvwlst/",
+   "https://san-tatsu.jp/collects/447430/"
+  ],
+  "ways": [
+   43679376,
+   43679377
+  ],
+  "width": 4
+ },
  "hino-hoshizora-yokocho": {
   "buildings": [
    "w1422461375"
@@ -1673,6 +1795,30 @@
    "https://hino.goguynet.jp/2022/10/09/hinohoshizora/",
    "https://hino.goguynet.jp/2025/03/09/adlib/"
   ]
+ },
+ "hirai-minamiguchi-kyukagai": {
+  "center": [
+   35.70514,
+   139.84214
+  ],
+  "exclude": [
+   "w988983984",
+   "w988984005",
+   "w988984027",
+   "w988984039"
+  ],
+  "fronting": true,
+  "max_building": 900,
+  "note": "平井駅南口の裏手、旧平井三業地の一角。この地図で細い路地として描かれているW153（北東の道から南西へ約100m）と、その両側に面した建物、および料亭跡らしい大きな建物（もつ焼居酒屋 松ちゃんのある側）を囲んだ。三業地の正確な範囲は資料で確認できず、範囲は推定。",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2025/11/hiraishinwakairojiura.html",
+   "https://deepland.blog/hirai-sangyouti/",
+   "https://tokyodeep.info/hirai/"
+  ],
+  "ways": [
+   1338766817
+  ],
+  "width": 4
  },
  "ikebukuro-mikuni-koji": {
   "center": [
@@ -2318,6 +2464,67 @@
    "https://www.tv-tokyo.co.jp/adomachi/backnumber/20120512/67946.html"
   ]
  },
+ "kameari-kitaguchi-inshokugai": {
+  "buildings": [
+   "w1149580267",
+   "w1149580266",
+   "w1149580265",
+   "w725329195",
+   "w1149580264",
+   "w1149580263",
+   "w1149580268",
+   "w1552212059"
+  ],
+  "center": [
+   35.76815,
+   139.8489
+  ],
+  "note": "亀有駅北口の東側、環七通りの手前（亀有5丁目44〜45番）にある小さな店舗建物の集まりと、その南側の裏路地。スナック ロマンス・ゆき智などのOSMの店があるあたりを囲んだ。この路地はOSMに無く、範囲は推定で、現在の営業は不確か。",
+  "polys": [
+   [
+    [
+     35.7681211,
+     139.848726
+    ],
+    [
+     35.7681404,
+     139.8488763
+    ],
+    [
+     35.7681115,
+     139.8489474
+    ],
+    [
+     35.7680762,
+     139.8490582
+    ],
+    [
+     35.7680666,
+     139.8492321
+    ],
+    [
+     35.7680441,
+     139.8492321
+    ],
+    [
+     35.7680473,
+     139.8490582
+    ],
+    [
+     35.7680858,
+     139.8489158
+    ],
+    [
+     35.7680858,
+     139.848726
+    ]
+   ]
+  ],
+  "sources": [
+   "https://tokyodeep.info/kameari-kitaguchi-inshokugai/",
+   "https://tokyosnack.jp/shops/snack-romance-kameari"
+  ]
+ },
  "kameido-kameido-yokocho": {
   "buildings": [
    "w184700141"
@@ -2625,6 +2832,56 @@
   ],
   "width": 5
  },
+ "kanegafuchi-chuhai-kaido": {
+  "buildings": [
+   "w1168962120",
+   "w1168962119",
+   "w1545700866",
+   "w1530998235",
+   "w1537879122",
+   "w1530998231",
+   "w1545700867",
+   "w1545700868",
+   "w1545700869"
+  ],
+  "center": [
+   35.7290091,
+   139.8246105
+  ],
+  "note": "鐘ヶ淵通り（酎ハイ街道）は2km強に酒場が点在する通りで、範囲は定まらない。ここでは亀屋・河内のある東向島5丁目の角と、その裏の細い路地（三河屋・牛太郎のような路地裏の酒場が点在する一帯）だけを囲んだ。通り全体ではない。",
+  "polys": [
+   [
+    [
+     35.72917,
+     139.823828
+    ],
+    [
+     35.7291926,
+     139.8240714
+    ],
+    [
+     35.7292096,
+     139.8242279
+    ],
+    [
+     35.7291728,
+     139.8242279
+    ],
+    [
+     35.7291531,
+     139.8240714
+    ],
+    [
+     35.7291333,
+     139.823828
+    ]
+   ]
+  ],
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2021/04/kanegafuchidoori.html",
+   "https://getnavi.jp/gourmet/1020819/"
+  ]
+ },
  "keikyukamata-harmonica-yokocho": {
   "buildings": [
    "w689934524"
@@ -2856,6 +3113,35 @@
   "sources": [
    "https://tabelog.com/matome/17085/"
   ]
+ },
+ "kitasenju-mainichi-dori": {
+  "center": [
+   35.7523,
+   139.804
+  ],
+  "exclude": [
+   "w1087616956",
+   "w1087616954",
+   "w1087616955",
+   "w1087616953",
+   "w1559008743",
+   "w1087616952",
+   "w455183688",
+   "w455183698",
+   "w455183700",
+   "w455183699"
+  ],
+  "fronting": true,
+  "max_building": 900,
+  "note": "OSMで「毎日通り飲食店街」と名づけられた小路（宿場通り東側の入口から東へ約50m入り、奥でコの字に折れて戻る路地）と、その内側・南側に面した小さな店舗建物。宿場通り沿いの大きな建物や北側の住宅列は除いた。",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2022/04/mainichidoori.html",
+   "https://note.com/azabu_mamiana/n/nc47040c503a2"
+  ],
+  "ways": [
+   185586323
+  ],
+  "width": 3
  },
  "kitasenju-nomiyoko": {
   "buildings": [
@@ -6571,6 +6857,107 @@
    "https://www.lumiere-shoppingstreet.com/",
    "https://www.tv-tokyo.co.jp/adomachi/backnumber/20141108/107898.html"
   ]
+ },
+ "shinkoiwa-matsushima-snack-gai": {
+  "center": [
+   35.7127,
+   139.86268
+  ],
+  "exclude": [
+   "w1363329732",
+   "w1363329734",
+   "w1555009213",
+   "w1555010959"
+  ],
+  "fronting": true,
+  "max_building": 900,
+  "note": "松島3丁目の旧丸健カフェー街の名残として、ルミエール商店街の延長の通りに北東へ入る短い細路地（OSMのW89、約30m）と、その両側の小さな建物だけを囲んだ。旧カフェー街の大半は更地・マンションになっており、範囲は推定。",
+  "sources": [
+   "https://deepland.blog/shinkoiwa-akasen/",
+   "https://tokyodeep.info/shinkoiwa-maruken/"
+  ],
+  "ways": [
+   1363329763
+  ],
+  "width": 4
+ },
+ "shinkoiwa-pacific-inshokutengai": {
+  "center": [
+   35.7166,
+   139.86025
+  ],
+  "note": "平和橋通りの東側、ほっともっとの隣から入り、マンション（新小岩2丁目7番）の1階を北東へ抜けて、裏のスバル飲食街の路地に出る通路。OSMに通路が無いため、シート上で手描きで囲んだ（位置は推定）。",
+  "polys": [
+   [
+    [
+     35.7164341,
+     139.860024
+    ],
+    [
+     35.7164941,
+     139.8600935
+    ],
+    [
+     35.7165894,
+     139.8601718
+    ],
+    [
+     35.7166423,
+     139.8602413
+    ],
+    [
+     35.7166176,
+     139.8602674
+    ],
+    [
+     35.7165682,
+     139.8601978
+    ],
+    [
+     35.716473,
+     139.8601283
+    ],
+    [
+     35.7164059,
+     139.8600674
+    ]
+   ]
+  ],
+  "sources": [
+   "https://shinkoiwa-magazine.com/shinchu/",
+   "https://ameblo.jp/kobaden-shoutengai/entry-12895865169.html"
+  ]
+ },
+ "shinkoiwa-subaru-inshokugai": {
+  "buildings": [
+   "w1308540365"
+  ],
+  "center": [
+   35.7166,
+   139.86025
+  ],
+  "exclude": [
+   "w1308540351",
+   "w1308540361",
+   "w1554770426",
+   "w1555003131",
+   "w1555002725",
+   "w1171853008",
+   "w1171853009",
+   "w1555004599",
+   "w1171853007"
+  ],
+  "fronting": true,
+  "max_building": 900,
+  "note": "新小岩2丁目7番の裏路地（OSMのW170）。西側（駅寄り）の通りから東の末広商店街側の通りまで約50mの細い路地と、その両側に面した小さな店舗建物を囲んだ。中ほどに接するマンション（サンシティ新小岩）の本体は除いた。",
+  "sources": [
+   "https://ameblo.jp/kobaden-shoutengai/entry-12895865169.html",
+   "https://ameblo.jp/pias-202/entry-12974953723.html"
+  ],
+  "ways": [
+   1308540356
+  ],
+  "width": 4
  },
  "shinokubo-kankoku-yokocho": {
   "buildings": [

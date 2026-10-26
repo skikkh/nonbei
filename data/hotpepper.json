@@ -1,4 +1,59 @@
 {
+ "hp-strj000120126": {
+  "address": "東京都港区芝５-20-19",
+  "closed": "月、土、日、祝日",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 23,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ000120126/"
+ },
+ "hp-strj004660859": {
+  "address": "東京都港区芝５-24-5 エクセル三田",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 30,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ004660859/"
+ },
+ "hp-strj000247860": {
+  "address": "東京都中央区日本橋室町1-12-14磯野ビル1F",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000247860/"
+ },
+ "hp-strj000855343": {
+  "address": "東京都中央区日本橋人形町3-4-13",
+  "closed": "日曜、祝日",
+  "url": "https://www.hotpepper.jp/strJ000855343/"
+ },
+ "hp-strj004678082": {
+  "address": "東京都港区六本木６-2-31 六本木ヒルズノースタワー 1F",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 22,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ004678082/"
+ },
+ "hp-strj001048726": {
+  "address": "東京都港区新橋２-8-17 新橋KIビル1F",
+  "closed": "日",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 28,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001048726/"
+ },
+ "hp-strj004612825": {
+  "address": "東京都新宿区四谷２丁目3-3森ビル1階2階",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 40,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ004612825/"
+ },
  "yotsuya-suzuden": {
   "address": "東京都新宿区四谷1-10",
   "week": {
@@ -50,6 +105,60 @@
   "seats_note": "立ち飲み40席（スタンディングルーム側の入口に『満席』の札が出ていたら入店不可。",
   "url": "https://www.hotpepper.jp/strJ000865768/"
  },
+ "hp-strj000685937": {
+  "address": "東京都港区芝公園２－３－６",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 70,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ000685937/"
+ },
+ "hp-strj001269789": {
+  "address": "東京都中央区八丁堀２-3-3",
+  "closed": "月、火、水、木、金、土、祝日",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ001269789/"
+ },
+ "hp-strj001041063": {
+  "address": "東京都千代田区神田小川町1-11前田ビル1F",
+  "closed": "日祝定休",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 20,
+  "url": "https://www.hotpepper.jp/strJ001041063/"
+ },
+ "hp-strj003829063": {
+  "address": "東京都千代田区神田小川町１-11 小西ビル1F",
+  "closed": "日、祝日 毎週日曜日・祝日",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 47,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ003829063/"
+ },
+ "tl-13287015": {
+  "address": "東京都千代田区神田東松下町49",
+  "closed": "日、祝日",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 30,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ003893668/"
+ },
+ "hp-strj000884338": {
+  "address": "東京都文京区242",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000884338/"
+ },
+ "hp-strj000118931": {
+  "address": "東京都中央区日本橋室町4-2-13",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000118931/"
+ },
  "bero-1145": {
   "address": "東京都港区新橋３-18-4",
   "closed": "なし",
@@ -58,6 +167,61 @@
   "seats": 30,
   "smoking": "喫煙可",
   "url": "https://www.hotpepper.jp/strJ000120890/"
+ },
+ "hp-strj000003196": {
+  "address": "東京都港区新橋3-12-31F",
+  "closed": "日曜・祝日",
+  "url": "https://www.hotpepper.jp/strJ000003196/"
+ },
+ "hp-strj000013882": {
+  "address": "東京都中央区銀座８－１２－６ 小野商ビルＢ１Ｆ",
+  "closed": "※スタンディングバーなので、席の確保はございません、ご了承ください※",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 20,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ000013882/"
+ },
+ "hp-strj000248714": {
+  "address": "東京都港区新橋2-16-1ニュー新橋ビル１Ｆ",
+  "closed": "日曜日",
+  "url": "https://www.hotpepper.jp/strJ000248714/"
+ },
+ "hp-strj000651274": {
+  "address": "東京都港区新橋２-20-15 新橋駅前ビル１号館",
+  "closed": "日、祝日 第２、第３土曜日",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 15,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ000651274/"
+ },
+ "hp-strj001250966": {
+  "address": "東京都港区新橋２丁目９－１３",
+  "closed": "日、祝日",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 35,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001250966/"
+ },
+ "hp-strj004049902": {
+  "address": "東京都港区新橋３-18-5 美濃屋ビル 4F",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 32,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ004049902/"
+ },
+ "hp-strj004699011": {
+  "address": "東京都港区新橋３-18-5 美濃屋ビル 5F",
+  "closed": "年中無休",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 48,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ004699011/"
  },
  "shimbashi-kuri": {
   "address": "東京都港区新橋２-20-15 新橋駅前ビル1号館1F",
@@ -77,6 +241,20 @@
   "smoking": "全席禁煙",
   "url": "https://www.hotpepper.jp/strJ001294271/"
  },
+ "tl-13095248": {
+  "address": "東京都港区新橋2-21-1",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000640863/"
+ },
+ "tl-13219446": {
+  "address": "東京都港区新橋２-20-15 新橋駅前ビルB1",
+  "closed": "土、日、祝日 営業時間等変更になる場合がありますのでお電話にてお問合せください。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 20,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ003366331/"
+ },
  "nihonbashi-citan": {
   "address": "東京都中央区日本橋大伝馬町15-2 チョーヤビルB1",
   "closed": "なし",
@@ -85,6 +263,11 @@
   "seats": 50,
   "smoking": "全席禁煙",
   "url": "https://www.hotpepper.jp/strJ001202429/"
+ },
+ "hp-strj000010696": {
+  "address": "東京都千代田区内幸町1-7-21有楽町ガード下",
+  "closed": "日定休",
+  "url": "https://www.hotpepper.jp/strJ000010696/"
  },
  "yurakucho-kikunoko": {
   "address": "東京都千代田区有楽町１-7-1 有楽町電気ビルヂングＢ1",
@@ -172,6 +355,51 @@
   "seats": 20,
   "url": "https://www.hotpepper.jp/strJ000246490/"
  },
+ "hp-strj000240414": {
+  "address": "東京都千代田区丸の内2-7-3東京ビルＴＯＫＩＡＢ１Ｆ",
+  "closed": "1/1～1/3",
+  "url": "https://www.hotpepper.jp/strJ000240414/"
+ },
+ "hp-strj000979868": {
+  "address": "東京都中央区八重洲２-1 八重洲地下街 1番通り [23番(日本橋・神田)入口すぐ]",
+  "closed": "八重洲地下街に準ずる",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 20,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ000979868/"
+ },
+ "hp-strj001111198": {
+  "address": "東京都中央区日本橋３-３-１７ 中井ビル１F",
+  "closed": "日、祝日 土日祝 年末年始",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 5,
+  "url": "https://www.hotpepper.jp/strJ001111198/"
+ },
+ "hp-strj000731874": {
+  "address": "東京都中央区東日本橋1-2-16",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000731874/"
+ },
+ "hp-strj004049226": {
+  "address": "東京都中央区日本橋人形町２-1-7",
+  "closed": "日",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 12,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ004049226/"
+ },
+ "hp-strj004421443": {
+  "address": "東京都新宿区西五軒町９－５",
+  "closed": "月",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 10,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ004421443/"
+ },
  "daimon-akitaya": {
   "address": "東京都港区浜松町2-1-2",
   "week": {
@@ -228,6 +456,33 @@
   "seats": 54,
   "url": "https://www.hotpepper.jp/strJ000121853/"
  },
+ "hp-strj000004039": {
+  "address": "東京都港区芝５-34-7 田町センタービル3Ｆ",
+  "closed": "日、祝日 年末年始の休業日：12月29日～1月5日",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 87,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ000004039/"
+ },
+ "hp-strj003784340": {
+  "address": "東京都港区芝５‐34－6新田町ビル１F",
+  "closed": "土、日、祝日 年末年始、お休みをいただく場合がございます。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 23,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ003784340/"
+ },
+ "hp-strj001291913": {
+  "address": "東京都千代田区神田神保町１-18-10 三光ビル1F",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 28,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001291913/"
+ },
  "jimbocho-yon": {
   "address": "東京都千代田区神田神保町１-9-23",
   "closed": "不定休",
@@ -236,6 +491,86 @@
   "seats": 20,
   "smoking": "喫煙可",
   "url": "https://www.hotpepper.jp/strJ003984082/"
+ },
+ "hp-strj004004313": {
+  "address": "東京都新宿区矢来町-１２５ 2階",
+  "closed": "日 日曜日＋不定休",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 34,
+  "seats_note": "6席と8席",
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ004004313/"
+ },
+ "hp-strj000238179": {
+  "address": "東京都千代田区内神田1-17-1橋本ビル1F",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1350,
+     1320
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1350,
+     1320
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1350,
+     1320
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1350,
+     1320
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1350,
+     1320
+    ]
+   ],
+   "sat": [],
+   "sun": [],
+   "hol": []
+  },
+  "hours": "月〜金 17:00〜22:30（L.O.22:00）／土・日・祝 定休",
+  "closed": "土・日・祝日",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 23,
+  "seats_note": "立ち飲みカウンター席のみ",
+  "url": "https://www.hotpepper.jp/strJ000238179/"
+ },
+ "hp-strj000658858": {
+  "address": "東京都千代田区鍛冶町2-12-3一番街共同ビル１Ｆ",
+  "closed": "日曜、祝日",
+  "url": "https://www.hotpepper.jp/strJ000658858/"
+ },
+ "hp-strj000770862": {
+  "address": "東京都千代田区鍛冶町2-13-7",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000770862/"
+ },
+ "hp-strj001193064": {
+  "address": "東京都千代田区鍛冶町2-12-1",
+  "closed": "なし",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 53,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ001193064/"
  },
  "kanda-ajinofue": {
   "address": "東京都千代田区鍛冶町2-13-26",
@@ -301,6 +636,34 @@
   "seats": 130,
   "url": "https://www.hotpepper.jp/strJ000622146/"
  },
+ "hp-strj003560137": {
+  "address": "東京都千代田区神田佐久間町１-21 あつみ薬品ビル B1F",
+  "closed": "月 2024年は12月31日までの営業となります。 2025年は1月3日からの営業となります。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 15,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ003560137/"
+ },
+ "hp-strj000722637": {
+  "address": "東京都中央区築地2-12-6Sk東銀座ビル１Ｆ",
+  "closed": "日曜・祝日",
+  "url": "https://www.hotpepper.jp/strJ000722637/"
+ },
+ "tsukiji-hoshimono-daito": {
+  "address": "東京都中央区築地４-7-5 築地KYビル 1F",
+  "closed": "日、祝日 【不定休あり】 連休などは定休日が変わる場合がございます。営業日は店舗までお問い合わせ下さい。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 16,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001251200/"
+ },
+ "hp-strj000731909": {
+  "address": "東京都中央区日本橋茅場町2-11-1",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000731909/"
+ },
  "kayabacho-new-kayaba": {
   "address": "東京都中央区日本橋茅場町2-17-11",
   "closed": "土曜、日曜、祝日",
@@ -308,6 +671,16 @@
   "pay": "現金のみ",
   "cash_only": true,
   "url": "https://www.hotpepper.jp/strJ000864152/"
+ },
+ "hp-strj000249064": {
+  "address": "東京都文京区小日向4-6-3ＭＵビル１Ｆ",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000249064/"
+ },
+ "hp-strj000812413": {
+  "address": "東京都港区西新橋1-22-2",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000812413/"
  },
  "toranomon-kakuuchi-kan": {
   "address": "東京都港区虎ノ門２-6-2 虎ノ門ヒルズステーションタワー B2F T-MARKET",
@@ -335,6 +708,44 @@
   "seats": 14,
   "smoking": "全席禁煙",
   "url": "https://www.hotpepper.jp/strJ001001099/"
+ },
+ "hp-strj000683103": {
+  "address": "東京都港区麻布十番2-1-10",
+  "week": {
+   "sat": [
+    [
+     690,
+     900,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     690,
+     900,
+     null
+    ]
+   ],
+   "hol": [
+    [
+     690,
+     900,
+     null
+    ]
+   ],
+   "mon": []
+  },
+  "hours": "月 定休／土・日・祝 11:30〜15:00",
+  "closed": "月曜日",
+  "url": "https://www.hotpepper.jp/strJ000683103/"
+ },
+ "tl-13099209": {
+  "address": "東京都荒川区東日暮里3-12-13",
+  "closed": "－",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 6,
+  "url": "https://www.hotpepper.jp/strJ000806518/"
  },
  "higashiueno-toranoko": {
   "address": "東京都台東区東上野２－２０－９",
@@ -369,6 +780,65 @@
   "closed": "年中無休",
   "url": "https://www.hotpepper.jp/strJ000687486/"
  },
+ "hp-strj001193065": {
+  "address": "東京都台東区上野６－11－17",
+  "closed": "なし",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 69,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001193065/"
+ },
+ "hp-strj001258526": {
+  "address": "東京都台東区上野２-１２-２ 上野池之端立田ビル １F",
+  "closed": "年中無休",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 42,
+  "smoking": "分煙・喫煙所あり",
+  "url": "https://www.hotpepper.jp/strJ001258526/"
+ },
+ "hp-strj001293154": {
+  "address": "東京都台東区上野４-7-8 アメ横センタービル1F53",
+  "closed": "定休日は第3水曜です。最新情報はSNSで発信しておりますのでご確認くださいますと確実です。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 20,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ001293154/"
+ },
+ "hp-strj001207672": {
+  "address": "東京都台東区入谷１丁目2番3号 今井ビル１Ｆ",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 55,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001207672/"
+ },
+ "hp-strj000821610": {
+  "address": "東京都台東区上野3-21-10長者ビル1階",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000821610/"
+ },
+ "hp-strj001161979": {
+  "address": "東京都台東区上野６-3-11",
+  "closed": "火",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 21,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ001161979/"
+ },
+ "hp-strj003872472": {
+  "address": "東京都台東区上野６丁目4-4",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 98,
+  "smoking": "分煙・喫煙所あり",
+  "url": "https://www.hotpepper.jp/strJ003872472/"
+ },
  "okachimachi-sawaraya": {
   "address": "東京都台東区上野５-27-5",
   "closed": "土、日、祝日 土日祝日",
@@ -377,6 +847,92 @@
   "seats": 34,
   "smoking": "喫煙可",
   "url": "https://www.hotpepper.jp/strJ000245345/"
+ },
+ "hp-strj000777791": {
+  "address": "東京都荒川区西日暮里2-20-1",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000777791/"
+ },
+ "hp-strj003763168": {
+  "address": "東京都荒川区西日暮里３-14-13 小西ビルB1",
+  "closed": "不定休",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 22,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ003763168/"
+ },
+ "nippori-okiri": {
+  "address": "東京都荒川区西日暮里2-52-6",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "sun": []
+  },
+  "hours": "月〜土 17:00〜22:00（L.O.21:30）／日 定休",
+  "closed": "日",
+  "budget_dinner": "¥5,000〜¥5,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "url": "https://www.hotpepper.jp/strJ000147738/"
+ },
+ "hp-strj001208810": {
+  "address": "東京都文京区本郷４-2-2 ムサシビル B１F",
+  "closed": "土、日 土曜、日曜不定休",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 20,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ001208810/"
+ },
+ "hp-strj001285639": {
+  "address": "東京都文京区根津２-18-3",
+  "closed": "店舗メンテナンスなどでお休みする場合がございます。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 25,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001285639/"
  },
  "asakusa-mogamiya": {
   "address": "東京都台東区浅草4-6-8",
@@ -491,6 +1047,84 @@
   "seats_note": "天気が佳い日はテラス席あり",
   "url": "https://www.hotpepper.jp/strJ000126682/"
  },
+ "hp-strj000864073": {
+  "address": "東京都台東区浅草2-11-12",
+  "week": {
+   "mon": [
+    [
+     540,
+     1200,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     540,
+     1200,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     540,
+     1200,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     540,
+     1200,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     540,
+     1200,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     540,
+     1200,
+     null
+    ]
+   ],
+   "thu": []
+  },
+  "hours": "月〜水 9:00〜20:00／木 定休／金〜日 9:00〜20:00",
+  "closed": "木",
+  "url": "https://www.hotpepper.jp/strJ000864073/"
+ },
+ "hp-strj001295201": {
+  "address": "東京都台東区浅草１-41-5",
+  "closed": "不定休あり。また、月曜日はお休みの場合もございます。来店前にお問い合わせくださいませ。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 11,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001295201/"
+ },
+ "hp-strj000248997": {
+  "address": "東京都台東区浅草橋１-9-9",
+  "closed": "日",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 34,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ000248997/"
+ },
+ "hp-strj001284540": {
+  "address": "東京都台東区台東１-27-6グランアセット秋葉原101号室",
+  "closed": "なし",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 3,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001284540/"
+ },
  "yanaka-asato": {
   "address": "東京都台東区谷中７-18-13",
   "closed": "なし",
@@ -556,6 +1190,15 @@
   "seats_note": "カウンター8席、小上がりは4人卓4",
   "url": "https://www.hotpepper.jp/strJ000237943/"
  },
+ "hp-strj001118683": {
+  "address": "東京都中野区中野５-３２-９ nakano329ビル１F",
+  "closed": "日 日曜日（月曜祝日の場合日曜営業します）(祝日営業します、※祝日連休の場合祝日初日のみ営業します）",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 23,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ001118683/"
+ },
  "nakano-kamakura-saketen": {
   "address": "東京都中野区中野２‐３０‐１４ １Ｆ",
   "closed": "なし",
@@ -563,6 +1206,50 @@
   "cash_only": true,
   "smoking": "全席禁煙",
   "url": "https://www.hotpepper.jp/strJ000861520/"
+ },
+ "tl-13041632": {
+  "address": "東京都中野区中野５‐４９‐３",
+  "closed": "日、祝日",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ000687051/"
+ },
+ "hp-strj001266418": {
+  "address": "東京都渋谷区千駄ヶ谷５-20-17",
+  "closed": "日、祝日",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 12,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001266418/"
+ },
+ "hp-strj004403658": {
+  "address": "東京都渋谷区代々木１丁目３３－４",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 82,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ004403658/"
+ },
+ "hp-strj003410978": {
+  "address": "東京都渋谷区千駄ヶ谷５-6-7 トーエーハイツ1-F",
+  "closed": "月、火",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 7,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ003410978/"
+ },
+ "hp-strj003850438": {
+  "address": "東京都中野区上高田３-40-8 キャピタルL 3F",
+  "closed": "月、火（第１）",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 26,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ003850438/"
  },
  "bero-2352": {
   "address": "東京都新宿区新宿３-24-2 新宿アオキビル9F",
@@ -592,6 +1279,189 @@
   "closed": "－",
   "url": "https://www.hotpepper.jp/strJ000229782/"
  },
+ "hp-strj000839248": {
+  "address": "東京都新宿区新宿1-16-16",
+  "closed": "日、祝日",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 22,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ000839248/"
+ },
+ "hp-strj000863606": {
+  "address": "東京都新宿区新宿1-31-3ダイアパレス新宿一丁目ビル１Ｆ",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000863606/"
+ },
+ "hp-strj003784416": {
+  "address": "東京都新宿区新宿１-32-12 ルネフラッツ新宿御苑前1階",
+  "closed": "不定休",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 21,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ003784416/"
+ },
+ "hp-strj001000375": {
+  "address": "東京都杉並区荻窪5-29-3",
+  "closed": "日曜日",
+  "url": "https://www.hotpepper.jp/strJ001000375/"
+ },
+ "hp-strj004402274": {
+  "address": "東京都杉並区荻窪５－２９－１１ プラザいなば",
+  "closed": "日",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 28,
+  "seats_note": "スタンディングもあります",
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ004402274/"
+ },
+ "hp-strj000246146": {
+  "address": "東京都新宿区西新宿7-4-7第一太田ビル1F",
+  "closed": "日曜日",
+  "url": "https://www.hotpepper.jp/strJ000246146/"
+ },
+ "hp-strj000684162": {
+  "address": "東京都新宿区歌舞伎町1-24-3新居ビル1F",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000684162/"
+ },
+ "hp-strj001027921": {
+  "address": "東京都新宿区歌舞伎町1-8-1佐藤ビル1F",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ001027921/"
+ },
+ "hp-strj001231793": {
+  "address": "東京都杉並区西荻南２-20-8 山田ビル１F",
+  "closed": "不定休",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 30,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ001231793/"
+ },
+ "hp-strj001284644": {
+  "address": "東京都杉並区西荻北３-20-8 2F",
+  "closed": "月 月曜日（たまに変更あり）",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 6,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001284644/"
+ },
+ "hp-strj003540006": {
+  "address": "東京都杉並区西荻北３－１８－１６ フリーダムビル１階",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 25,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ003540006/"
+ },
+ "hp-strj004698140": {
+  "address": "東京都杉並区高円寺北２-22-3 JIYUCHOHOUSE102",
+  "closed": "火",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 16,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ004698140/"
+ },
+ "hp-strj000864687": {
+  "address": "東京都世田谷区太子堂4-22-15",
+  "closed": "無休",
+  "url": "https://www.hotpepper.jp/strJ000864687/"
+ },
+ "hp-strj004049946": {
+  "address": "東京都世田谷区三軒茶屋２-14-2２ １F",
+  "closed": "日、祝日",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 20,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ004049946/"
+ },
+ "tl-13245976": {
+  "address": "東京都世田谷区三軒茶屋２丁目１３－７ラヂオ食堂",
+  "closed": "－",
+  "pay": "現金・カード・電子マネー可",
+  "cash_only": false,
+  "url": "https://www.hotpepper.jp/strJ001271380/"
+ },
+ "hp-strj000728811": {
+  "address": "東京都目黒区上目黒2-6-4",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000728811/"
+ },
+ "hp-strj000865835": {
+  "address": "東京都目黒区上目黒2-6-4",
+  "closed": "日曜日",
+  "url": "https://www.hotpepper.jp/strJ000865835/"
+ },
+ "hp-strj001226389": {
+  "address": "東京都目黒区中目黒３‐５‐１ 中目黒プレアタワー 1F",
+  "closed": "無休",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 22,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001226389/"
+ },
+ "hp-strj001232892": {
+  "address": "東京都目黒区上目黒１－５－１０ 中目黒マンション１階108",
+  "closed": "なし",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 30,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001232892/"
+ },
+ "hp-strj004422082": {
+  "address": "東京都目黒区上目黒３-16-2",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 30,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ004422082/"
+ },
+ "hp-strj004634139": {
+  "address": "東京都目黒区上目黒３-5-20 H-4区画",
+  "closed": "なし",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 15,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ004634139/"
+ },
+ "hp-strj000024456": {
+  "address": "東京都世田谷区玉川３-9-2 土屋ビル1F",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 46,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ000024456/"
+ },
+ "hp-strj003411085": {
+  "address": "東京都世田谷区船橋１-9-10 コーポ軽井沢 １F",
+  "closed": "水、木",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 10,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ003411085/"
+ },
+ "hp-strj003829282": {
+  "address": "東京都世田谷区奥沢５-12-3自由ヶ丘フェリース101",
+  "closed": "月 不定休、土日祝日はイベント等により、営業時間が変わります。Instagramをご確認いただくか、お店までお問い合わせください。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 10,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ003829282/"
+ },
  "gakudai-manpine": {
   "address": "東京都目黒区鷹番２丁目20-4 学大十字街ビル105",
   "closed": "休まず毎日営業してます！ ※臨時休業、イベント等はインスタグラムにてご確認ください。",
@@ -601,6 +1471,138 @@
   "smoking": "喫煙可",
   "url": "https://www.hotpepper.jp/strJ003624395/"
  },
+ "hp-strj001251190": {
+  "address": "東京都目黒区鷹番３-18-3",
+  "closed": "水 ※当面の間、不定期にて時短営業とさせていただきます。 お客様にはご不便をおかけいたしますが、直接店舗へお越しください。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 8,
+  "smoking": "分煙・喫煙所あり",
+  "url": "https://www.hotpepper.jp/strJ001251190/"
+ },
+ "hp-strj001283169": {
+  "address": "東京都渋谷区幡ヶ谷１-33-1 シティー幡ヶ谷1F",
+  "closed": "不定休",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 28,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001283169/"
+ },
+ "hp-strj001232008": {
+  "address": "東京都港区南麻布４丁目2番49号 麻布サンパレス203号",
+  "closed": "日 日曜定休となっております。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 41,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001232008/"
+ },
+ "hp-strj001262490": {
+  "address": "東京都渋谷区恵比寿南１-18-9 タイムゾーンビルヒルトップビル1階",
+  "closed": "不定休",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 27,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001262490/"
+ },
+ "hp-strj004508000": {
+  "address": "東京都渋谷区恵比寿１-12-5 萩原ビル3-1F",
+  "closed": "火 ＊祝日等の兼ね合いで定休日が変更される場合があります。 ＊臨時休業等のお休みは都度お知らせ致します。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 17,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ004508000/"
+ },
+ "hp-strj003941268": {
+  "address": "東京都渋谷区神宮前６-３１-２１ 東急プラザ原宿「ハラカド」 5階",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 30,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ003941268/"
+ },
+ "hp-strj004633880": {
+  "address": "東京都目黒区大橋１-3-6",
+  "closed": "不定休",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 32,
+  "seats_note": "カウンター10席 立ち飲み6席 個室12席 テーブル4席",
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ004633880/"
+ },
+ "hp-strj000014155": {
+  "address": "東京都渋谷区宇田川町３３－１４",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 60,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ000014155/"
+ },
+ "hp-strj001161279": {
+  "address": "東京都渋谷区宇田川町25－5 センタービル3階",
+  "closed": "無休",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 90,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ001161279/"
+ },
+ "hp-strj001259236": {
+  "address": "東京都渋谷区宇田川町36-2 ノア渋谷B1F",
+  "closed": "無休",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 120,
+  "smoking": "分煙・喫煙所あり",
+  "url": "https://www.hotpepper.jp/strJ001259236/"
+ },
+ "hp-strj000722434": {
+  "address": "東京都品川区上大崎２-13-45 グリーンビュー白金102",
+  "closed": "祝日、祝前日",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 20,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ000722434/"
+ },
+ "hp-strj001101953": {
+  "address": "東京都渋谷区神泉町１１－１０",
+  "closed": "日、祝日 第3土曜日も定休日となります。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 13,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001101953/"
+ },
+ "hp-strj001110653": {
+  "address": "東京都渋谷区神泉町8-13アーガス霜田ビル1F",
+  "closed": "第一、第三土曜日、日曜日",
+  "url": "https://www.hotpepper.jp/strJ001110653/"
+ },
+ "hp-strj001231612": {
+  "address": "東京都世田谷区宮坂２－１９－１",
+  "closed": "不定休 店舗にご確認ください",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 30,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001231612/"
+ },
+ "hp-strj003648738": {
+  "address": "東京都世田谷区経堂２丁目３３-１０ 1階",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 15,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ003648738/"
+ },
  "kyodo-sabanoyu": {
   "address": "東京都世田谷区経堂2-6-6ｐｌｕｍｂｏｘ・5・1階",
   "closed": "不定休",
@@ -608,6 +1610,15 @@
   "cash_only": true,
   "seats": 25,
   "url": "https://www.hotpepper.jp/strJ000967095/"
+ },
+ "hp-strj003872615": {
+  "address": "東京都目黒区自由が丘１-28-8 デパート 2階",
+  "closed": "水、日",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 10,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ003872615/"
  },
  "jiyugaoka-awanosato": {
   "address": "東京都目黒区自由が丘１-12-19センタービル 1F",
@@ -618,15 +1629,104 @@
   "smoking": "分煙・喫煙所あり",
   "url": "https://www.hotpepper.jp/strJ004403132/"
  },
+ "hp-strj000812445": {
+  "address": "東京都大田区蒲田4-14-9",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000812445/"
+ },
+ "tl-13269402": {
+  "address": "東京都大田区蒲田４－１９－１ 蒲田マロニエビル１F",
+  "closed": "日 日曜日＋不定休(SNSをご確認ください)",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 30,
+  "seats_note": "スタンディングカウンター約30人のご来店スペース",
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ004453000/"
+ },
+ "hp-strj000813250": {
+  "address": "東京都品川区南大井6-17-14",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000813250/"
+ },
+ "hp-strj000935628": {
+  "address": "東京都品川区南大井6-27-20",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000935628/"
+ },
+ "hp-strj001137044": {
+  "address": "東京都大田区大森北１－３－２ ２階・３階",
+  "closed": "なし",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 72,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ001137044/"
+ },
+ "hp-strj003411219": {
+  "address": "東京都大田区大森北１-3-1",
+  "closed": "年中無休",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 26,
+  "seats_note": "1階 スタンディング10名 2階 テーブル席 16名",
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ003411219/"
+ },
+ "hp-strj004469915": {
+  "address": "東京都品川区戸越３丁目2－3",
+  "closed": "月 連休の場合は火曜日がお休みの場合があります",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 36,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ004469915/"
+ },
  "togoshiginza-ootaki": {
   "address": "東京都品川区平塚2-18-3",
   "closed": "－",
   "url": "https://www.hotpepper.jp/strJ000608201/"
  },
+ "hp-strj003693213": {
+  "address": "東京都品川区小山３-13-4",
+  "closed": "木 場合によって水曜日もお休みする事がございます。詳しくはお問い合わせ下さい。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 23,
+  "smoking": "分煙・喫煙所あり",
+  "url": "https://www.hotpepper.jp/strJ003693213/"
+ },
  "musashikoyama-gyutaro": {
   "address": "東京都品川区小山4-3-13",
   "closed": "－",
   "url": "https://www.hotpepper.jp/strJ000232746/"
+ },
+ "hp-strj000136313": {
+  "address": "東京都大田区西蒲田７-６４-６",
+  "closed": "日、祝日",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 15,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ000136313/"
+ },
+ "hp-strj001104030": {
+  "address": "東京都大田区西蒲田８-１-１０",
+  "closed": "無し",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 50,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ001104030/"
+ },
+ "hp-strj001164698": {
+  "address": "東京都大田区西蒲田７-63-8",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 30,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ001164698/"
  },
  "bero-2185": {
   "address": "東京都北区上十条２-23-13",
@@ -637,6 +1737,33 @@
   "smoking": "喫煙可",
   "url": "https://www.hotpepper.jp/strJ003941146/"
  },
+ "hp-strj001185909": {
+  "address": "東京都板橋区成増２-17-33",
+  "closed": "無し",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 103,
+  "smoking": "分煙・喫煙所あり",
+  "url": "https://www.hotpepper.jp/strJ001185909/"
+ },
+ "hp-strj001116734": {
+  "address": "東京都豊島区南大塚３-54-5 1F",
+  "closed": "日",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 8,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ001116734/"
+ },
+ "hp-strj001161826": {
+  "address": "東京都豊島区東池袋４－２３－６ ドミー池袋１０４",
+  "closed": "日",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 28,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001161826/"
+ },
  "ekoda-shubo-miyama": {
   "address": "東京都練馬区栄町４‐５ Ａ／Ｔコーポ１Ｆ",
   "closed": "なし",
@@ -645,6 +1772,29 @@
   "seats": 17,
   "smoking": "分煙・喫煙所あり",
   "url": "https://www.hotpepper.jp/strJ000609911/"
+ },
+ "hp-strj000777475": {
+  "address": "東京都豊島区西池袋1-23-6桝本ビル１Ｆ",
+  "closed": "年中無休",
+  "url": "https://www.hotpepper.jp/strJ000777475/"
+ },
+ "hp-strj001220236": {
+  "address": "東京都豊島区西池袋３-29-11",
+  "closed": "不定休",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 16,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001220236/"
+ },
+ "hp-strj004634004": {
+  "address": "東京都豊島区池袋１-28-1 ヨドバシHD池袋 8F",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 51,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ004634004/"
  },
  "ikebukuro-minori": {
   "address": "東京都豊島区西池袋３-30-8",
@@ -734,6 +1884,48 @@
   "pay": "現金・カード・QR決済可",
   "cash_only": false,
   "url": "https://www.hotpepper.jp/strJ000146789/"
+ },
+ "hp-strj001065930": {
+  "address": "東京都練馬区豊玉北5-22-15",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ001065930/"
+ },
+ "hp-strj001267830": {
+  "address": "東京都練馬区練馬１-12-11 西口駅前ビルC棟1F",
+  "closed": "火 火曜日",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 8,
+  "seats_note": "現在はソーシャルディスタンスで5席で対応しております",
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001267830/"
+ },
+ "hp-strj004660338": {
+  "address": "東京都板橋区蓮根３丁目9-6サンビスタ西台2階",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 25,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ004660338/"
+ },
+ "hp-strj001249266": {
+  "address": "東京都北区赤羽１-1-7 新日本パレスビル1階",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 16,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001249266/"
+ },
+ "hp-strj001195502": {
+  "address": "東京都中野区野方５－２３－７",
+  "closed": "ネット予約は24時間受付しております。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 26,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001195502/"
  },
  "nogata-akimotoya": {
   "address": "東京都中野区野方5-28-3",
@@ -829,6 +2021,33 @@
   "cash_only": true,
   "seats": 39,
   "url": "https://www.hotpepper.jp/strJ000657672/"
+ },
+ "hp-strj000980144": {
+  "address": "東京都葛飾区金町６-2-1ヴィナシス金町１04",
+  "closed": "なし",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 24,
+  "smoking": "分煙・喫煙所あり",
+  "url": "https://www.hotpepper.jp/strJ000980144/"
+ },
+ "hp-strj001149391": {
+  "address": "東京都足立区千住３－５８－１０２",
+  "closed": "月（第１・第３）、日",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 10,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001149391/"
+ },
+ "hp-strj001277766": {
+  "address": "東京都足立区千住旭町11-10コルディアーレ1F",
+  "closed": "月、火 祝日に関わらず、月火は毎週定休をいただいております。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 24,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001277766/"
  },
  "kitasenju-nagami": {
   "address": "東京都足立区千住2-62",
@@ -1292,6 +2511,61 @@
   "smoking": "全席禁煙",
   "url": "https://www.hotpepper.jp/strJ001195227/"
  },
+ "hp-strj001082641": {
+  "address": "東京都江東区亀戸1-29-7",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ001082641/"
+ },
+ "hp-strj003648958": {
+  "address": "東京都墨田区京島３-9-10",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 20,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ003648958/"
+ },
+ "hp-strj000156776": {
+  "address": "東京都江戸川区南小岩8-7-7",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000156776/"
+ },
+ "hp-strj001251348": {
+  "address": "東京都江戸川区西小岩１-19-26奥田ハイツA号",
+  "closed": "不定休を頂く場合がございます。詳細はTwitter、Instagramでお知らせ致します。フォローお待ちしています☆",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 10,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001251348/"
+ },
+ "hp-strj001238205": {
+  "address": "東京都江東区東陽３丁目1-13",
+  "closed": "日 臨時休業あり",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 8,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001238205/"
+ },
+ "hp-strj003516426": {
+  "address": "東京都江東区富岡２-10-3",
+  "closed": "月、火 臨時休業あり",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 19,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ003516426/"
+ },
+ "hp-strj001066129": {
+  "address": "東京都中央区築地７-16-14",
+  "closed": "土、日、祝日 不定休 【お知らせ】8/11～8/15迄お休みとさせていただきます。何卒、よろしくお願い致します。",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 20,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001066129/"
+ },
  "funabori-teradaya": {
   "address": "東京都江戸川区船堀3-9-6",
   "closed": "－",
@@ -1299,6 +2573,15 @@
   "pay": "現金のみ",
   "cash_only": true,
   "url": "https://www.hotpepper.jp/strJ000733103/"
+ },
+ "hp-strj001294293": {
+  "address": "東京都墨田区錦糸３-6-2 1-3階",
+  "closed": "無休で営業しております。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 47,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001294293/"
  },
  "bero-2194": {
   "address": "東京都江東区富岡１‐26‐16 池原ビル1階",
@@ -1309,6 +2592,52 @@
   "smoking": "全席禁煙",
   "url": "https://www.hotpepper.jp/strJ004025062/"
  },
+ "hp-strj000981237": {
+  "address": "東京都江東区富岡1-13-11折原門仲ビル1F",
+  "closed": "無休",
+  "budget_dinner": "¥1,000〜¥1,999",
+  "pay": "現金・カード・電子マネー・QR決済可",
+  "cash_only": false,
+  "seats": 30,
+  "seats_note": "立ち席のみ",
+  "url": "https://www.hotpepper.jp/strJ000981237/"
+ },
+ "hp-strj001168006": {
+  "address": "東京都江東区富岡１-６-１０ １階",
+  "closed": "不定休",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 25,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ001168006/"
+ },
+ "hp-strj001200041": {
+  "address": "東京都江東区富岡１-9-3",
+  "closed": "水",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 24,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001200041/"
+ },
+ "hp-strj004694001": {
+  "address": "東京都江東区門前仲町１-17-1 池上ビル1F",
+  "closed": "なし",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 10,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ004694001/"
+ },
+ "tl-13308600": {
+  "address": "東京都小平市学園西町２－14－20",
+  "closed": "なし",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 20,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ004444640/"
+ },
  "bero-1946": {
   "address": "東京都三鷹市下連雀３-19-16 岡竹荘",
   "closed": "日",
@@ -1317,6 +2646,11 @@
   "seats": 15,
   "smoking": "分煙・喫煙所あり",
   "url": "https://www.hotpepper.jp/strJ003388627/"
+ },
+ "hp-strj000718743": {
+  "address": "東京都調布市仙川町3-1-4",
+  "closed": "木曜",
+  "url": "https://www.hotpepper.jp/strJ000718743/"
  },
  "hachioji-sumibi-rakuza": {
   "address": "東京都八王子市中町11-8",
@@ -1327,6 +2661,29 @@
   "smoking": "全席禁煙",
   "url": "https://www.hotpepper.jp/strJ003450060/"
  },
+ "hp-strj000247115": {
+  "address": "東京都武蔵野市吉祥寺本町１‐１‐２",
+  "closed": "なし",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 40,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ000247115/"
+ },
+ "hp-strj001027362": {
+  "address": "東京都国分寺市本町３－５－１４",
+  "closed": "★毎日元気に、国分寺の笑顔を作るお手伝い♪",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 60,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ001027362/"
+ },
+ "hp-strj001067264": {
+  "address": "東京都国分寺市本町2-8-6",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ001067264/"
+ },
  "kokubunji-odajima-sakaten": {
   "address": "東京都国分寺市高木町２-18-32",
   "closed": "木 変更となることもございますので事前に店舗にご確認ください",
@@ -1335,6 +2692,25 @@
   "seats": 12,
   "smoking": "全席禁煙",
   "url": "https://www.hotpepper.jp/strJ004444425/"
+ },
+ "hp-strj000749936": {
+  "address": "東京都府中市朝日町2-30-3",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000749936/"
+ },
+ "hp-strj001126501": {
+  "address": "東京都町田市南成瀬５-2-2",
+  "closed": "月 月曜日が祝日の場合は営業します。よく火曜日がお休みになります。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 48,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001126501/"
+ },
+ "haijima-toriyoshi": {
+  "address": "東京都昭島市松原町4-11-15",
+  "closed": "－",
+  "url": "https://www.hotpepper.jp/strJ000160951/"
  },
  "hino-bistro-gai": {
   "address": "東京都日野市日野本町3-12-8サニーハイツ80-1F",
@@ -1414,6 +2790,60 @@
   "smoking": "喫煙可",
   "url": "https://www.hotpepper.jp/strJ004536325/"
  },
+ "tl-13109091": {
+  "address": "東京都練馬区関町北４丁目4-3",
+  "closed": "日",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 12,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ003497591/"
+ },
+ "hp-strj000247600": {
+  "address": "東京都町田市原町田６－１４－７ 重南ビルディング１階１０１号",
+  "closed": "なし",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 30,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ000247600/"
+ },
+ "hp-strj001126664": {
+  "address": "東京都町田市原町田４－1－3第3丸町ビルB1F",
+  "closed": "なし",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 20,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ001126664/"
+ },
+ "hp-strj001185552": {
+  "address": "東京都町田市中町１-16-14 1F",
+  "closed": "なし",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 37,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ001185552/"
+ },
+ "hp-strj001218131": {
+  "address": "東京都町田市原町田６ 13-16 2階",
+  "closed": "★子連れ可能★ ※詳細は店舗へお問い合わせください。",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 90,
+  "smoking": "分煙・喫煙所あり",
+  "url": "https://www.hotpepper.jp/strJ001218131/"
+ },
+ "machida-kuraya-sakelabo": {
+  "address": "東京都町田市中町１‐１-４ NO.R町田北ビル１F",
+  "closed": "月",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 30,
+  "smoking": "全席禁煙",
+  "url": "https://www.hotpepper.jp/strJ004067029/"
+ },
  "tachikawa-akebono-stand": {
   "address": "東京都立川市曙町２-14-25",
   "closed": "なし",
@@ -1422,6 +2852,15 @@
   "seats": 10,
   "smoking": "全席禁煙",
   "url": "https://www.hotpepper.jp/strJ004026496/"
+ },
+ "hp-strj001144501": {
+  "address": "東京都調布市布田１丁目４９－７",
+  "closed": "水 ホットペッパー見ました！とお気軽にお問い合わせください♪",
+  "pay": "現金・カード可",
+  "cash_only": false,
+  "seats": 23,
+  "smoking": "喫煙可",
+  "url": "https://www.hotpepper.jp/strJ001144501/"
  },
  "ome-ginrei": {
   "address": "東京都青梅市住江町52",

@@ -61,6 +61,31 @@
   ],
   "width": 3
  },
+ "akitsu-nishi-no-hoppy-dori": {
+  "center": [
+   35.7778,
+   139.495
+  ],
+  "exclude": [
+   "w1108866999",
+   "w1108866754",
+   "w1108865985",
+   "w1108867008"
+  ],
+  "fronting": true,
+  "max_building": 450,
+  "note": "西武秋津駅南口から秋津停車場線を南西へ進み、秋津町5丁目の交差点で曲がってJR新秋津駅前まで続く約400mの商店街（通り型）。この道の両側に面した建物をまとめた。",
+  "sources": [
+   "https://tokyodeep.info/akitsu-yakitori-road/",
+   "https://zekkei-sakaba.com/blog/nikomist-akitsu-salaryman/"
+  ],
+  "ways": [
+   135982350,
+   135982348,
+   136018802
+  ],
+  "width": 5
+ },
  "asagaya-ichibangai": {
   "center": [
    35.7046,
@@ -85,6 +110,34 @@
   ],
   "ways": [
    100400065
+  ],
+  "width": 4
+ },
+ "asagaya-kawabata-icho-koji": {
+  "center": [
+   35.7042,
+   139.636
+  ],
+  "exclude": [
+   "w141976470",
+   "w307573609",
+   "w307573636",
+   "w761930317",
+   "w761930319"
+  ],
+  "fronting": true,
+  "max_building": 600,
+  "note": "川端通り（中杉通り寄りの駅前広場近くから西の阿佐谷南3-37付近まで、約130m）と、その中ほどから北へ入るいちょう小路（約50m）、これらに面した飲み屋の建物。",
+  "sources": [
+   "https://san-tatsu.jp/towns/232564/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20230325/143674.html"
+  ],
+  "ways": [
+   87702749,
+   87702453,
+   194848475,
+   87702638,
+   859932760
   ],
   "width": 4
  },
@@ -540,6 +593,48 @@
    "https://www.timeout.jp/tokyo/ja/news/new-yokocho-to-enjoy-japanese-festivals-and-food-in-asakusa-060822"
   ]
  },
+ "bubaigawara-mirakugai": {
+  "buildings": [
+   "w1462758897",
+   "w1462758896",
+   "w1443195881",
+   "w1462758895"
+  ],
+  "center": [
+   35.66885,
+   139.46885
+  ],
+  "fronting": false,
+  "note": "分倍河原駅（京王線）北側の改札を出てすぐ、線路沿いの2階建て長屋ビル（分倍ステーションプラザ、片町2-21-17）の1階と、その東側の細い通路（W58）に面した建物。アーケードの正確な形はOSMに無いので、扇家（B181付近）と宮一・とん勝（B183・B186）を含む通路沿いの建物でまとめた。",
+  "sources": [
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20200229/140453.html",
+   "https://www.nikkan-gendai.com/articles/view/life/264028"
+  ],
+  "ways": [
+   283327829
+  ],
+  "width": 4
+ },
+ "chitosekarasuyama-kyukoshu-nomiya": {
+  "center": [
+   35.669846,
+   139.59903
+  ],
+  "exclude": [
+   "w309843550"
+  ],
+  "fronting": true,
+  "max_building": 500,
+  "note": "千歳烏山駅西口通りから旧甲州街道を北へ渡った南烏山6-27〜6-29の路地（W13沿い）に集まるバー・スナック・居酒屋の建物群。",
+  "sources": [
+   "https://tabelog.com/en/tokyo/A1318/A131809/13027909/"
+  ],
+  "ways": [
+   55783742,
+   504134662
+  ],
+  "width": 4
+ },
  "chofu-hyakutengai": {
   "center": [
    35.65195,
@@ -578,6 +673,66 @@
    "https://ebisu-yokocho.com/access.html",
    "https://www.gotokyo.org/jp/spot/451/index.html",
    "https://www.gltjp.com/ja/directory/item/14105/"
+  ]
+ },
+ "fuchu-kokusai-dori": {
+  "center": [
+   35.67223,
+   139.47707
+  ],
+  "fronting": false,
+  "note": "府中駅南口のけやき並木を渡った西側、京王線の南を西へ延びる一方通行（国際通り）の南側の街区と北側の1階の店（府中グリーンハイツ南端）。和楽酔竹（西端）から大定の跡（東端、烏山通り側の角）まで約120 m。",
+  "polys": [
+   [
+    [
+     35.6722629,
+     139.4764065
+    ],
+    [
+     35.6722916,
+     139.4767351
+    ],
+    [
+     35.6723347,
+     139.4767351
+    ],
+    [
+     35.6723368,
+     139.4770574
+    ],
+    [
+     35.6722865,
+     139.47707
+    ],
+    [
+     35.6722762,
+     139.4774491
+    ],
+    [
+     35.6722865,
+     139.4776008
+    ],
+    [
+     35.6722762,
+     139.4777335
+    ],
+    [
+     35.6719323,
+     139.4777335
+    ],
+    [
+     35.6719066,
+     139.4774491
+    ],
+    [
+     35.6719477,
+     139.4764065
+    ]
+   ]
+  ],
+  "sources": [
+   "https://tokyofuchu.goguynet.jp/2024/12/19/shopclose-oosada/",
+   "https://tokyofuchu.goguynet.jp/2020/08/20/tsubame_kitchen/"
   ]
  },
  "fussa-base-side-street": {
@@ -752,6 +907,32 @@
    "https://tokyodeep.info/post_24/",
    "https://map.yahoo.co.jp/v3/place/R1S5_TA7v2o"
   ]
+ },
+ "futakotamagawa-yanagikoji": {
+  "buildings": [
+   "w176612283"
+  ],
+  "center": [
+   35.6131915,
+   139.6251446
+  ],
+  "exclude": [
+   "w176611815",
+   "w176614587",
+   "w176614580"
+  ],
+  "fronting": true,
+  "max_building": 380,
+  "note": "玉川3-11〜3-13にかけて、石畳の小路（東西のW4・W144）沿いに点在する7棟（東角・南角・西角・北角・仲角・錦町・まるうめ）。OSMにあるのは柳小路錦町（B251）だけで、他の棟の正確な位置は公式サイトにも載っておらず、小路に面した建物で近似した。",
+  "sources": [
+   "https://yanagikoji.com/store/",
+   "https://www.ryutsuu.biz/store/k120319.html"
+  ],
+  "ways": [
+   30975804,
+   1331826686
+  ],
+  "width": 4
  },
  "ginza-corridor": {
   "buildings": [
@@ -1793,6 +1974,56 @@
   ],
   "width": 4
  },
+ "kiyose-fureai-dori": {
+  "center": [
+   35.7708,
+   139.5188
+  ],
+  "exclude": [
+   "w435091320"
+  ],
+  "fronting": true,
+  "max_building": 700,
+  "note": "清瀬駅南口のロータリーから南西へ延びる商店街「南口ふれあいどーり」のうち、駅前から約150m（松山1丁目の飲み屋が集まる区間）。道の両側に面した店の建物をまとめた。さらに南西（春田屋・圭屋のあたり）まで店は続くが、飲み屋の多い前半に絞った。",
+  "polys": [
+   [
+    [
+     35.7704163,
+     139.518399
+    ],
+    [
+     35.7706132,
+     139.5186417
+    ],
+    [
+     35.7707433,
+     139.5184813
+    ],
+    [
+     35.7705431,
+     139.5182366
+    ],
+    [
+     35.7703446,
+     139.5180125
+    ],
+    [
+     35.7702211,
+     139.518179
+    ]
+   ]
+  ],
+  "sources": [
+   "https://higashikurume-kiyose.goguynet.jp/2025/10/04/keiyakaitenn/",
+   "https://higashikurume-kiyose.goguynet.jp/2023/04/15/motuyakiyoukiyoseten-o-pun/"
+  ],
+  "ways": [
+   1263392604,
+   921285537,
+   1389204021
+  ],
+  "width": 5
+ },
  "koenji-daiichi-ichiba": {
   "buildings": [
    "w308717647",
@@ -2035,6 +2266,34 @@
    1132579367
   ],
   "width": 3
+ },
+ "machida-premium-yokocho": {
+  "buildings": [
+   "w311087262"
+  ],
+  "center": [
+   35.544964,
+   139.44603
+  ],
+  "fronting": false,
+  "note": "屋内型（コマヤビル2階の1フロア）。住所は原町田6-15-16、小田急町田駅東口を出て踏切の手前のビル。正確なビルを特定できず、踏切（町田駅前通り）の手前・東側に面するB255で代表させた。休業の可能性あり。",
+  "sources": [
+   "https://www.hotpepper.jp/strJ001160758/"
+  ]
+ },
+ "machida-rengadori-ichibangai": {
+  "buildings": [
+   "w311087283"
+  ],
+  "center": [
+   35.5438498,
+   139.4460503
+  ],
+  "note": "町田中央商店街（レンガ通り）のW13とW15に挟まれた一棟で、OSMの「町田レンガ通り一番街」（原町田6-11-17付近、屋台風の建物に7店が入る）の点が入っている建物。",
+  "sources": [
+   "https://machida.goguynet.jp/2024/04/20/machida-rengadori-1bangai/",
+   "https://www.hotpepper.jp/strJ003829012/"
+  ]
  },
  "machida-yamato-yokocho": {
   "center": [
@@ -2357,6 +2616,28 @@
   ],
   "width": 4
  },
+ "nishichofu-ichibangai": {
+  "buildings": [
+   "w500635537"
+  ],
+  "center": [
+   35.657986,
+   139.530487
+  ],
+  "exclude": [
+   "w731221958"
+  ],
+  "fronting": true,
+  "max_building": 600,
+  "note": "西調布駅北口ロータリーの北から北東へ延びる細い路地（上石原1-26〜1-27、W8）と、その両側に並ぶ小料理屋・スナック・居酒屋の建物。",
+  "sources": [
+   "https://tabelog.com/en/tokyo/A1326/A132601/13158925/dtlrvwlst/"
+  ],
+  "ways": [
+   28777504
+  ],
+  "width": 4
+ },
  "nishikunitachi-nomi": {
   "center": [
    35.6929,
@@ -2427,6 +2708,29 @@
    "https://iine-tachikawa.net/tachikawagourmet/64721/",
    "https://iine-tachikawa.net/open/151365/"
   ]
+ },
+ "nishiogikubo-yanagi-koji": {
+  "center": [
+   35.70355,
+   139.59985
+  ],
+  "exclude": [
+   "w192233027",
+   "w192233030",
+   "w1551453738",
+   "w750975069"
+  ],
+  "fronting": true,
+  "max_building": 900,
+  "note": "西荻窪駅南口のすぐ南、線路と並行して東西に延びる長さ約50mの路地「柳小路」（OSMのW63）と、その両側の店の建物（北側の長屋ビル：やきとり戎・西荻ヒュッテ、南側の小さな店並び）。",
+  "sources": [
+   "https://san-tatsu.jp/collects/2468/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20221105/"
+  ],
+  "ways": [
+   162724381
+  ],
+  "width": 3.5
  },
  "nishishinjuku-juniso-roji": {
   "buildings": [
@@ -2574,6 +2878,32 @@
    131013046,
    131013047,
    131013048
+  ],
+  "width": 4
+ },
+ "ogikubo-kamiogi-1chome": {
+  "buildings": [
+   "w200860447",
+   "w200860441",
+   "w200860437"
+  ],
+  "center": [
+   35.705681,
+   139.618103
+  ],
+  "exclude": [
+   "w159126457"
+  ],
+  "fronting": true,
+  "max_building": 500,
+  "note": "荻窪駅西口の北、白山通りと青梅街道に挟まれた上荻1-15〜1-17の街区を斜めに抜ける2本の細い路地（W70・W66）と、その両側の雑居ビル（日の出ビル・栄ビル・共栄ビルなど）に入る居酒屋・スナック。",
+  "sources": [
+   "https://www.snackyokocho.com/article/23398/",
+   "https://bs.tbs.co.jp/sakaba/shop/735.html"
+  ],
+  "ways": [
+   107016928,
+   107016874
   ],
   "width": 4
  },
@@ -4582,6 +4912,26 @@
    332634092
   ],
   "width": 12
+ },
+ "tsutsujigaoka-fujimigai": {
+  "center": [
+   35.6574966,
+   139.5733742
+  ],
+  "exclude": [
+   "w1561919328"
+  ],
+  "fronting": true,
+  "max_building": 500,
+  "note": "つつじヶ丘駅北口から線路沿いを西へ進み、西つつじケ丘3-25で北へ入る長さ約50mの路地「富士見街」と、その両側の小さな店の建物（入口のBAR鋼鉄屋・酒場フクスケから、ルハンキッチン・居酒屋おふくろのあたりまで）。",
+  "sources": [
+   "https://chofu-komae.goguynet.jp/2022/08/16/ruhankitchen/",
+   "https://ja.wikipedia.org/wiki/つつじヶ丘駅"
+  ],
+  "ways": [
+   27696546
+  ],
+  "width": 4
  },
  "ueno-7chome-yokocho": {
   "center": [

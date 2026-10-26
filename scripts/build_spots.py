@@ -381,6 +381,9 @@ def clean(s):
         if isinstance(v, str):
             v = v.strip() or None
         out[k] = v
+    if s.get("pin"):  # [lat, lng] of the shop's own map pin on a listing site (Tabelog, Hotpepper)
+        out["lat"], out["lng"] = s["pin"]
+        out["pinned"] = True
     out["kana"] = out.pop("name_kana")
     out["en"] = out.pop("name_en")
     out["price"] = out.pop("price_note")
@@ -439,6 +442,8 @@ def prefetch(spots, workers=3):
     jobs = []
     for s in spots:
         if s.get("lat") and s.get("lng"):
+            if s["kind"] != "yokocho":
+                continue  # a set position is not matched against OpenStreetMap
             g = {"lat": s["lat"], "lng": s["lng"]}
         elif s["address"]:
             g = gsi(s["address"])
@@ -505,8 +510,8 @@ def main():
             continue
         pos = {"lat": g["lat"], "lng": g["lng"], "geo": {"号": "gsi", "番": "gsi-block"}.get(g["level"], "approx")}
         if g["level"] == "manual":
-            pos["geo"] = "manual"
-        hit = best_osm(s, g) if pos["geo"] != "manual" else None
+            pos["geo"] = "listing" if s.pop("pinned", False) else "manual"
+        hit = best_osm(s, g) if pos["geo"] not in ("manual", "listing") else None
         if hit:
             (score, negd), c, d = hit
             limit = {"号": 150, "番": 300}.get(g["level"], 700)

@@ -522,7 +522,7 @@
       ${s.checked ? `<p class="src-meta">紹介文：${esc(s.checked)}</p>` : ""}
       ${s.checked_reviews ? `<p class="src-meta">店の様子・品書き：${esc(s.checked_reviews)}</p>` : ""}
       ${srcs.length ? `<ul class="src-list">${srcs.map((u) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(srcName(u))}</a></li>`).join("")}</ul>` : ""}</section>`);
-    h.push(`<p class="d-foot">情報は変わります。営業時間・値段・決まりは出かける前に店の最新情報で確かめてください。${s.kind === "yokocho" && s.shape && s.shape.t === "poly" ? "横丁の範囲は、路地と店の建物の形（OpenStreetMap）から囲んでいます。" : `位置は${s.geo === "osm" ? "OpenStreetMap の店舗" : "住所"}から求めています。`}</p>`);
+    h.push(`<p class="d-foot">情報は変わります。営業時間・値段・決まりは出かける前に店の最新情報で確かめてください。${s.kind === "yokocho" && s.shape && s.shape.t === "poly" ? "横丁の範囲は、路地と店の建物の形（OpenStreetMap）から囲んでいます。" : `位置は${s.geo === "osm" ? "OpenStreetMap の店舗" : s.geo === "listing" || s.geo === "tabelog" ? "食べログ・ホットペッパーの店の地図" : "住所"}から求めています。`}</p>`);
     return h.join("");
   }
   function linkBtns(s) {

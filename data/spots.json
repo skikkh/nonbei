@@ -1,7 +1,7 @@
 {
  "updated": "2026年10月",
  "accuracy": {
-  "n": 1355,
+  "n": 1351,
   "median": 0,
   "p90": 11
  },
@@ -14,14 +14,14 @@
     "有楽町",
     "銀座",
     "神保町",
-    "内幸町",
     "東京",
     "人形町",
+    "内幸町",
     "神楽坂",
     "茅場町",
     "六本木",
-    "四ツ谷",
     "水道橋",
+    "四ツ谷",
     "小川町",
     "日本橋",
     "日比谷",
@@ -44,7 +44,6 @@
     "飯田橋",
     "八丁堀",
     "大手町",
-    "宝町",
     "新御茶ノ水",
     "東京駅",
     "東日本橋",
@@ -52,7 +51,6 @@
     "浜松町",
     "白金高輪",
     "神谷町",
-    "虎ノ門ヒルズ",
     "麹町",
     "丸の内・東京",
     "九段下",
@@ -64,6 +62,7 @@
     "六本木一丁目",
     "内幸町・日比谷",
     "四谷三丁目・荒木町",
+    "宝町",
     "市ケ谷",
     "市ヶ谷",
     "後楽園",
@@ -92,6 +91,7 @@
     "秋葉原の立ち飲み",
     "竹芝・浜松町",
     "茗荷谷",
+    "虎ノ門ヒルズ",
     "赤羽橋",
     "馬喰町",
     "麻布十番"
@@ -799,6 +799,12 @@
    "en": "Marunouchi House",
    "price": "ビストロ、魚料理、もんじゃ、タコス、鮨バー、蕎麦と酒、ワインバー、バー、昭和ムードのカフェ＆バーなど12店",
    "region": "都心（新橋・銀座・神田）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "yoeupBwl{kq@jBsKaHiAo@ZsAfID\\d@R"
+    ]
+   },
    "lat": 35.6824495,
    "lng": 139.7646788,
    "geo": "osm-area",
@@ -1039,9 +1045,9 @@
    "price": "老舗の和菓子・豆腐・煎餅・たい焼きの店に、笹新などの居酒屋がまじる",
    "region": "都心（新橋・銀座・神田）",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "izmupBerykq@ZS~B}ANKRM`BkA\\W|@y@b@YpEqCPMNIvE}CVQTOvDeCRMRMrBsAn@a@"
+     "mymupBypykq@`IsF|@{@fGwDzScNy@oA{SbNiGxD_A|@_InF"
     ]
    },
    "lat": 35.6861448,
@@ -1113,6 +1119,12 @@
    "en": "Hashigoro",
    "price": "1階にクラフトビールのスタンドと焼鳥、上の階にオイスタースタンド・串カツ・韓国屋台・おでんなど全18店",
    "region": "都心（新橋・銀座・神田）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "mblupB_dzkq@oAz@LRr@Ht@_@"
+    ]
+   },
    "lat": 35.68615,
    "lng": 139.782196,
    "geo": "gsi",
@@ -2166,40 +2178,6 @@
    ]
   },
   {
-   "id": "tl-13320048",
-   "name": "立呑み いさな",
-   "kind": "tachinomi",
-   "area": "内幸町",
-   "ward": "港区",
-   "address": "東京都港区西新橋2-6-1第2菊家ビル1F",
-   "social": 4,
-   "solo": 4,
-   "hiru": false,
-   "english": false,
-   "desc": "鯨料理が専門の立ち飲み。別の店の姉妹店だと口コミにある。",
-   "status": "open",
-   "checked": "食べログの口コミ（2026年10月訪問まで）",
-   "sources": [
-    "https://tabelog.com/tokyo/A1301/A130103/13320048/"
-   ],
-   "lat": 35.6670836,
-   "lng": 139.7532503,
-   "en": "Tachinomi Isana",
-   "region": "都心（新橋・銀座・神田）",
-   "xcheck": 0,
-   "geo": "listing",
-   "near": [
-    [
-     "内幸町",
-     326
-    ],
-    [
-     "虎ノ門",
-     450
-    ]
-   ]
-  },
-  {
    "id": "tl-13320547",
    "name": "新橋 立ち飲み 酔処",
    "kind": "tachinomi",
@@ -2277,6 +2255,12 @@
    "en": "Hibi Koji",
    "price": "九州料理・焼酎の「九州エリア」と、酒の肴の「下町エリア」。広島風お好み焼きと瀬戸田レモンのサワーの店、沖縄料理の大衆酒場など",
    "region": "都心（新橋・銀座・神田）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "}{aupBs_alq@nA_DsGiCqA~C"
+    ]
+   },
    "lat": 35.6703178,
    "lng": 139.7543354,
    "geo": "osm-area",
@@ -2378,43 +2362,6 @@
     [
      "四谷三丁目",
      536
-    ]
-   ]
-  },
-  {
-   "id": "tl-13006763",
-   "name": "スタンディングルーム鈴傳 四ツ谷",
-   "kind": "tachinomi",
-   "area": "四ツ谷",
-   "ward": "新宿区",
-   "address": "東京都新宿区四谷1-10鈴伝ビル",
-   "social": 4,
-   "solo": 4,
-   "hiru": false,
-   "tags": [
-    "日本酒"
-   ],
-   "english": false,
-   "desc": "四ツ谷駅から西へ歩いて三分ほどの店で、日本酒を立ち飲みで楽しめる。友人と飲みに訪れたという口コミもある。",
-   "status": "open",
-   "checked": "食べログの口コミ（2026年7月訪問まで）",
-   "sources": [
-    "https://tabelog.com/tokyo/A1309/A130902/13006763/"
-   ],
-   "lat": 35.6857189,
-   "lng": 139.7283817,
-   "en": "Standing Room Suzuden Yotsuya",
-   "region": "都心（新橋・銀座・神田）",
-   "xcheck": 0,
-   "geo": "listing",
-   "near": [
-    [
-     "四ツ谷",
-     205
-    ],
-    [
-     "四谷三丁目",
-     749
     ]
    ]
   },
@@ -2694,6 +2641,12 @@
    "en": "Otemachi Building Basement Dining",
    "price": "ビアホール、焼き鳥、ベトナム料理の酒場、昭和からの居酒屋など。昼は定食・カレー・そばの店",
    "region": "都心（新橋・銀座・神田）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "sneupB}wykq@VOh@uEqBOOjAkPmBHk@_CQc@dDLT"
+    ]
+   },
    "lat": 35.6864217,
    "lng": 139.7648635,
    "geo": "osm-area",
@@ -2893,39 +2846,6 @@
     [
      "モノレール浜松町",
      154
-    ]
-   ]
-  },
-  {
-   "id": "hp-strj001269789",
-   "name": "立ち飲みバル ハチョボリーノ",
-   "kind": "tachinomi",
-   "area": "宝町",
-   "ward": "中央区",
-   "address": "東京都中央区八丁堀2-3-3",
-   "social": 4,
-   "solo": 4,
-   "hiru": false,
-   "english": false,
-   "desc": "宝町駅から徒歩3分のイタリアン居酒屋で、窯焼きピッツァを出す。2時間と3時間の飲み放題付きの宴会コースもある。",
-   "status": "open",
-   "checked": "ホットペッパーグルメ掲載（2026年10月確認）",
-   "sources": [
-    "https://www.hotpepper.jp/strJ001269789/"
-   ],
-   "lat": 35.677013,
-   "lng": 139.7750534,
-   "region": "都心（新橋・銀座・神田）",
-   "xcheck": 0,
-   "geo": "listing",
-   "near": [
-    [
-     "宝町",
-     336
-    ],
-    [
-     "八丁堀",
-     355
     ]
    ]
   },
@@ -7294,6 +7214,12 @@
    "en": "Yurakucho–Tokyo Gard-shita (north of Yurakucho Station)",
    "price": "焼き鳥・もつ焼き・ホルモン・串カツ・九州の屋台料理など、高架下の居酒屋が並ぶ",
    "region": "都心（新橋・銀座・神田）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "i|eupBk~}kq@Hu@ZkAr@sBx@qBhAqBxAsBdAkAtAkAb@k@iF?_BrBmBvC}AxCmClG]f@"
+    ]
+   },
    "lat": 35.675877,
    "lng": 139.76445,
    "geo": "gsi",
@@ -8302,22 +8228,21 @@
    "shape": {
     "t": "poly",
     "p": [
-     "emfupBon{kq@YL@DBBVM"
+     "qfgupBws{kq@h@wEmBGaAxE"
     ]
    },
-   "lat": 35.6812764,
-   "lng": 139.7672607,
-   "geo": "osm-area",
-   "osm": "r12437450",
+   "lat": 35.6823829,
+   "lng": 139.7688228,
+   "geo": "outline",
    "gsi": "東京都千代田区丸の内一丁目９番",
    "near": [
     [
      "東京",
-     120
+     298
     ],
     [
-     "二重橋前〈丸の内〉",
-     521
+     "日本橋",
+     520
     ]
    ]
   },
@@ -8372,19 +8297,24 @@
    "en": "YAESU PUBLIC",
    "price": "大阪式の立喰酒場 金獅子、焼酎バーの Sho-chu ando、点心と羊料理に自然派ワインの好香味坊、タイ・イサーン料理など",
    "region": "都心（新橋・銀座・神田）",
-   "lat": 35.6804129,
-   "lng": 139.769843,
-   "geo": "osm-area",
-   "osm": "w1158747229",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "scgupB_g}kq@uGkCoA~Be@lA_@xAUjAdE`BLY|BwA"
+    ]
+   },
+   "lat": 35.6792942,
+   "lng": 139.7690921,
+   "geo": "outline",
    "gsi": "東京都中央区八重洲二丁目２番１号",
    "near": [
     [
      "東京",
-     274
+     232
     ],
     [
      "京橋",
-     414
+     302
     ]
    ]
   },
@@ -9129,6 +9059,12 @@
    "en": "Suidobashi South Bar District",
    "price": "やきとん・もつ焼き・ホルモン・おでんの店や、本格料理を出す立ち飲みがチェーン居酒屋にまじる",
    "region": "都心（新橋・銀座・神田）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "gxaupBm`skq@LkARs@\\_@C}@o@a@WKg@_Ay@y@SAkDp@`CtIXZ"
+    ]
+   },
    "lat": 35.70145,
    "lng": 139.754074,
    "geo": "gsi-block",
@@ -9487,7 +9423,7 @@
    "shape": {
     "t": "poly",
     "p": [
-     "{{dupBwnclq@~AkD|CsEW@bAcA_M[qAbCLhDj@pEV`Bf@dB"
+     "yydupBcxclq@lCcAN?`AoAcHQm@J[Tu@g@yA`Cl@^Yb@GP?TTTXFf@?@D_BRb@vErDa@bBqDu@u@"
     ]
    },
    "lat": 35.6648586,
@@ -9587,18 +9523,24 @@
    "en": "Hamamatsucho Neo Yokocho",
    "price": "とんかつ、米粉の天ぷら、イタリアン、トルコ料理、ビャンビャン麺、バーの6店",
    "region": "都心（新橋・銀座・神田）",
-   "lat": 35.656849,
-   "lng": 139.759186,
-   "geo": "gsi-block",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "qmcupBeeglq@qDo@u@`EpDp@"
+    ]
+   },
+   "lat": 35.6570253,
+   "lng": 139.7586397,
+   "geo": "outline",
    "gsi": "東京都港区海岸一丁目２番",
    "near": [
     [
-     "浜松町",
-     272
+     "モノレール浜松町",
+     250
     ],
     [
-     "モノレール浜松町",
-     275
+     "浜松町",
+     256
     ]
    ]
   },
@@ -11188,6 +11130,14 @@
    "en": "Kanda Nishiguchi Shotengai",
    "price": "ラーメン・定食の店にまじって、やきとん・焼き鳥・大衆酒場・郷土料理の居酒屋が並ぶ",
    "region": "都心（新橋・銀座・神田）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "yufupBiaxkq@XOLkAk@GGj@UCDc@a@G?Gk@GIt@m@GFe@AI]G?Em@GSnB{AKFg@F@Fi@{@KD]]EK`AUCIt@qAINsAWCGf@s@IE\\NTkAIVQDa@c@EBUqAM?IWAm@d@]AGDUW_@\\DXaB[GZ~AZ`CNM`Dp@DJuAN@HmAJ@@BM|Ap@B?OF@B{@E??Q|@FQLCn@lAFATf@DHuAN@G`Ad@BDaAdBLG`Ap@FHcAl@DYb@QvAFLn@FBSj@FFo@b@D@Il@FJeAT@Gv@^BFw@nAHB]",
+     "{ngupBk~wkq@gDUDy@{AIV~@I?CZR@HXb@DAJP@AX_@@BP]?Om@mAZ@@E@Kr@UFHZDAPt@rA]@Bd@KS{@`@BJd@jCH@Yj@BA\\F?ARp@??Bt@DDm@h@BA\\zCHCrA`AB@o@`A@@o@\\@CV~AJCXf@DB]dCVD]n@B@[m@EFo@yAOCNC?CPYECTSALiAqBSGb@G?Gj@WABq@g@CBi@]Eo@E?Bm@GEr@g@C?De@C?GOA?Lg@CCXi@CBq@oAEBs@}@E",
+     "yvgupBg~wkq@WcAO?MtA"
+    ]
+   },
    "lat": 35.6912988,
    "lng": 139.767947,
    "geo": "osm-area",
@@ -13105,7 +13055,7 @@
    "shape": {
     "t": "poly",
     "p": [
-     "atdupBeohlq@oDzFhEvCiAjBbNnI~FpBDWoAo@sCqAEaN"
+     "qedupBwuglq@AiNaGqDwFhJ`NpI"
     ]
    },
    "lat": 35.6549845,
@@ -13693,6 +13643,12 @@
    "en": "Kotora Komichi",
    "price": "焼鳥・海鮮の立ち飲みスタンド、九州料理、ジンギスカン、浜焼き、ビストロ風の大衆酒場など",
    "region": "都心（新橋・銀座・神田）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "_c`upBy~alq@KZnBl@Vy@LD^mA}Ag@GTq@Sa@tA"
+    ]
+   },
    "lat": 35.668488,
    "lng": 139.748856,
    "geo": "gsi-block",
@@ -13760,7 +13716,7 @@
    "shape": {
     "t": "poly",
     "p": [
-     "ah_upBmfblq@?NzABrEyFoNwEo@~BOf@Mh@g@hB"
+     "eh_upBifblq@?N~ABzE_GyN{EyBbI"
     ]
    },
    "lat": 35.6674701,
@@ -13964,41 +13920,6 @@
    ]
   },
   {
-   "id": "tl-13289968",
-   "name": "角打ち KAN",
-   "kind": "kakuuchi",
-   "yokocho": "toranomon-t-market",
-   "area": "虎ノ門ヒルズ",
-   "ward": "港区",
-   "address": "東京都港区虎ノ門2-6-2虎ノ門ヒルズステーションタワーB2FT-MARKET",
-   "social": 4,
-   "solo": 4,
-   "hiru": false,
-   "english": false,
-   "desc": "カウンターとテーブル席があり、気軽に立ち寄れる角打ちだ。フロアには飲食店が10店ほど入っている。",
-   "status": "open",
-   "checked": "食べログの口コミ（2026年10月訪問まで）",
-   "sources": [
-    "https://tabelog.com/tokyo/A1308/A130802/13289968/"
-   ],
-   "lat": 35.6678792,
-   "lng": 139.7467272,
-   "en": "Kakuuchi KAN",
-   "region": "都心（新橋・銀座・神田）",
-   "xcheck": 0,
-   "geo": "listing",
-   "near": [
-    [
-     "虎ノ門ヒルズ",
-     104
-    ],
-    [
-     "虎ノ門",
-     396
-    ]
-   ]
-  },
-  {
    "id": "akasaka-misuji-dori",
    "name": "赤坂みすじ通り・一ツ木通り界隈",
    "kind": "yokocho",
@@ -14044,6 +13965,12 @@
    "en": "Akasaka Misuji-dori & Hitotsugi-dori",
    "price": "立ち飲み、焼き鳥、韓国料理、寿司・割烹からバー・クラブまで幅広い",
    "region": "都心（新橋・銀座・神田）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "e`{tpBsn~kq@_BBw@TGQEKn@QWy@m@PMc@d@KG[k@DeBaKYmBl@a@AOs@LKq@bAQKo@aARG_@Um@cEeEIWScCq@sE_@iDSc@[PNXZvCM@CSo@HE]]D@La@FF`@C@BRO@U}@E@KYh@QQk@kBj@Mc@]JNh@a@JZhA]JK[[JSo@g@NQa@[NN\\a@JRr@@?HVq@P^xAXIDL[HNf@HCf@jBC@Ld@DAl@|BdAYFVWHPj@o@PRp@dAYzApF}@Vn@vBz@WRn@a@OSDC^l@xBB?HVt@SPj@w@T`@tAE@\\dAB?Vz@t@S`@xArAnFs@Jn@fCG@Jf@~@Ep@fC\\I[oARE@Fn@KAETGr@a@HX^KQo@l@WOc@k@R]qAz@SCKd@M[yAE@W_A_B`@ESv@UQm@w@TMi@l@OSs@k@NIWl@OGSHCEYm@NIWn@KACf@GBLZEHTdAY\\hAp@lBb@hBhAvD^KY_Ab@HNIUc@e@RK_@h@OAGFAW}@ODCIA?Oc@LE]uAJCXA@Bx@U"
+    ]
+   },
    "lat": 35.675938,
    "lng": 139.736816,
    "geo": "gsi-block",
@@ -24432,18 +24359,24 @@
    "en": "Hobo Shinjuku Norengai",
    "price": "シャンパンと餃子、牛タン、うな串・焼鳥、もつ焼き、馬肉、おでんと焼き魚、牡蠣とワイン、もんじゃ、韓国料理、カラオケバーなど21店",
    "region": "新宿・中野・杉並",
-   "lat": 35.682964,
-   "lng": 139.703049,
-   "geo": "gsi",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "}kotpB}m{kq@DBNQ_@[LMQQLMUWq@l@GG^_@WWYVTTIHUUe@f@B@MNHHWXHHGFPPFIx@z@`@e@"
+    ]
+   },
+   "lat": 35.6829842,
+   "lng": 139.7034449,
+   "geo": "outline",
    "gsi": "東京都渋谷区千駄ケ谷五丁目２０番１０号",
    "near": [
     [
      "代々木",
-     140
+     164
     ],
     [
      "南新宿",
-     388
+     422
     ]
    ]
   },
@@ -28904,9 +28837,9 @@
    "price": "マ・ヤンはミュージック・テーブルチャージ2,500円＋ドリンク500円〜、BARバレンタインはチャージ＋1ドリンク1,000円・2杯目から450円〜（さんたつ2022年）",
    "region": "新宿・中野・杉並",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "s`itpBa~pkq@?L?|@C^OXULSD}ACM@M@"
+     "q_itpBy{pkq@D?As@Y??WW??bAi@??k@gA??ZS??CM@?Ca@@DVMBBVPCFn@Q@BVVAD\\`BD?DR?p@s@LUB@JMKI"
     ]
    },
    "lat": 35.7066094,
@@ -36979,7 +36912,7 @@
    "shape": {
     "t": "poly",
     "p": [
-     "gyvtpBi|ulq@c@Om@tE`@T"
+     "cyvtpBk|ulq@i@So@|Eh@X"
     ]
    },
    "lat": 35.624223,
@@ -38601,18 +38534,24 @@
    "en": "Gakudai Yokocho",
    "price": "焼き鳥（武甲）、寿司（魚潮・湖山）、居酒屋（干支屋・京み・あそなる）、スナック（マキタ・互久楽・夜喫茶サヤシ）、カラオケバー、クラフトビールのボトルショップなど",
    "region": "渋谷・目黒・世田谷",
-   "lat": 35.630222,
-   "lng": 139.686417,
-   "geo": "gsi-block",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "saitpB_gslq@y@?sBlFz@?"
+    ]
+   },
+   "lat": 35.6302134,
+   "lng": 139.6861264,
+   "geo": "outline",
    "gsi": "東京都目黒区鷹番二丁目２１番",
    "near": [
     [
      "学芸大学",
-     172
+     157
     ],
     [
      "祐天寺",
-     917
+     930
     ]
    ]
   },
@@ -39605,6 +39544,12 @@
    "en": "Ebisu-minami Underground Dining Arcade",
    "price": "台湾料理と中国語カラオケのパブ「小城香」（25席）、ファッション好きのママのカラオケスナック「ココちゃん」（21時〜）など。2012年のアド街では15軒が入り、客が自分でたこ焼きを焼けるバー「ホナナ」が紹介された（ホナナの現況は未確認）",
    "region": "渋谷・目黒・世田谷",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "y`qtpB{hllq@\\b@j@i@yAgBsAZCEWb@lAvA"
+    ]
+   },
    "lat": 35.6455308986705,
    "lng": 139.708008,
    "geo": "gsi",
@@ -41312,6 +41257,12 @@
    "en": "Ikejiri Chokotto Yokocho",
    "price": "焼き鳥の山正、居酒屋そてつ、クラフトビールとおでんの立ち飲みビールマン、立ち食いそば兼立ち飲みの池尻蕎麦の4軒",
    "region": "渋谷・目黒・世田谷",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "chhtpBy_jlq@i@K?Gm@??NYNXl@RDADv@L"
+    ]
+   },
    "lat": 35.65051155910887,
    "lng": 139.68399601710163,
    "geo": "gsi",
@@ -41671,6 +41622,12 @@
    "price": "やきとり山家は中生340円・とり盛り5本860円（2025年）。千両は市場直送のもつ串焼と自家製コロッケ、やまがたは玉こんにゃくなど山形料理",
    "region": "渋谷・目黒・世田谷",
    "area_label": "渋谷（道玄坂）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "iumtpBmxflq@]q@s@TY}@i@NK^cA_DkGjBH`@fBfAy@XNf@YIODFTSFEOgAXPp@~Bq@r@tBd@RnDiAj@c@?g@Wy@BARXLBxA_@@KGY"
+    ]
+   },
    "lat": 35.6573876,
    "lng": 139.699063,
    "geo": "osm-area",
@@ -41743,6 +41700,12 @@
    "price": "立ち飲み（なぎ）、小料理屋（百けん）、酒場（萬斎・KAMERA・大人気）、串揚げ（串徳）、クラフトビール（Mikkeller Tokyo）、スナック・バーが入る都路ビルなど",
    "region": "渋谷・目黒・世田谷",
    "area_label": "渋谷（道玄坂）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "owltpBe_flq@Le@m@a@CBq@_@MI@Cc@YsBiAJWb@LPk@[IBKZH\\eASGPi@OEBMUGDSm@Qm@zBD@ENSMuAv@o@aAMH?Ne@k@QN`@f@a@\\l@|@RMJLPMb@j@XFETr@P?Bl@^EFr@f@GN^TDGHBXPCDf@^`@q@z@h@LS"
+    ]
+   },
    "lat": 35.6588211,
    "lng": 139.6972162,
    "geo": "osm-area",
@@ -41816,6 +41779,12 @@
    "price": "焼き鳥1本130円から（渋谷ザウルス）。焼肉・肉寿司・しゃぶしゃぶ・ステーキ・ハンバーグ・ハラール和牛など肉料理の専門店が15店以上で、食べ放題・飲み放題のコースを出す店が多い",
    "region": "渋谷・目黒・世田谷",
    "area_label": "渋谷（センター街）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "ormtpBwhelq@wAcAY|@MESz@zAdANQ"
+    ]
+   },
    "lat": 35.6610943,
    "lng": 139.6985034,
    "geo": "osm-area",
@@ -43832,6 +43801,12 @@
    "en": "Meguro Shinbashi",
    "price": "京おでんと週替わりの日本酒（べろべろばー）、手頃な寿司（Sushi bar COZY）、aki風もつ煮や激濃ハイボール（aki）、アジア各国の料理（スパイスバグ）など",
    "region": "渋谷・目黒・世田谷",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "gfrtpB{hqlq@^We@{@YNHLID?X"
+    ]
+   },
    "lat": 35.6340141013295,
    "lng": 139.710999,
    "geo": "gsi",
@@ -44630,6 +44605,12 @@
    "price": "創業45年の串焼き「千羽」（大山どり、カウンター20席）、いわし料理専門の「まるや」、カラオケスナックなど",
    "region": "渋谷・目黒・世田谷",
    "area_label": "神泉（円山町）",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "s~ktpBq|flq@Mo@WDY??S[@Bo@^??Et@AAYk@B?c@yAAAGc@H?BU@?EW@@^G?AVL??Vf@F?Dz@@APs@@u@DBVv@E@Lm@@@h@fACAc@~AC@Z"
+    ]
+   },
    "lat": 35.6572608986705,
    "lng": 139.694336,
    "geo": "gsi",
@@ -46528,6 +46509,12 @@
    "en": "Harmonica Yokocho (Keikyu Kamata)",
    "price": "2014年の放送では、田舎やのキビナゴの串干し・もつ煮込み、小雪の北海道産本ししゃも、立ち飲みのこむつなど",
    "region": "品川・大田",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "qevtpBgcrmq@g@AOTj@NXG"
+    ]
+   },
    "lat": 35.561039,
    "lng": 139.722061,
    "geo": "gsi",
@@ -46588,6 +46575,12 @@
    "en": "Yanagi-dori (Keikyu Kamata snack street)",
    "price": "ママが手料理を出すスナックが並ぶ（2014年の放送では、すいとん・冬の日替わり鍋・予約制のエビフライなど）",
    "region": "品川・大田",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "qmvtpBe|qmq@DQUGGP]MQj@aA]Sp@JDGND@Ob@^N?CTHIV\\@ABVHBIp@??QOEDOWIHM^Jd@wA"
+    ]
+   },
    "lat": 35.561657,
    "lng": 139.722916,
    "geo": "gsi",
@@ -46960,6 +46953,12 @@
    "en": "Kagayake! Shinagawa Golden Yokocho",
    "price": "山陰海鮮の炉端、韓国料理、餃子酒場、台湾料理、蕎麦など9業態",
    "region": "品川・大田",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "kb~tpB_vslq@mK_@KpClK^"
+    ]
+   },
    "lat": 35.629086,
    "lng": 139.743881,
    "geo": "gsi-block",
@@ -47226,6 +47225,12 @@
    "en": "Oimachi Bal Yokocho",
    "price": "来来羊のラム肉の串焼きは1本250円（2本から）。小皿中華、ワインバル、海鮮居酒屋、辛麺などの店が入る",
    "region": "品川・大田",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "qj{tpBcf}lq@ZECc@e@C[RSZd@Z"
+    ]
+   },
    "lat": 35.607632,
    "lng": 139.736191,
    "geo": "gsi",
@@ -47407,6 +47412,12 @@
    "en": "Oi Underground Dining Arcade",
    "price": "居酒屋・味の磯平の役職名の煮込み（係長・部長・社長で具が変わる）、スナック、ショットバーなど",
    "region": "品川・大田",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "gyytpBqc}lq@?i@uE[?h@"
+    ]
+   },
    "lat": 35.607777,
    "lng": 139.732224,
    "geo": "gsi",
@@ -48434,7 +48445,7 @@
    "shape": {
     "t": "poly",
     "p": [
-     "u_xtpBiqfmq@vBaFa@QsBhECJDJ"
+     "s_xtpBcqfmq@zBiFg@SwBjECLFL"
     ]
    },
    "lat": 35.5865416,
@@ -50222,6 +50233,12 @@
    "en": "Tachiaigawa Ekimae Shotenkai alley",
    "price": "地元向けの手頃な居酒屋が点在する（2020年の記事）",
    "region": "品川・大田",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "}b|tpBylamq@JSm@YqBiAUj@b@R]r@d@T@C`@RDIf@T@AXHVq@"
+    ]
+   },
    "lat": 35.5981068986705,
    "lng": 139.738617,
    "geo": "gsi",
@@ -50498,18 +50515,24 @@
    "en": "Haneda Airport Edo-koji",
    "price": "おでん（銀座 おぐ羅）、焼鳥と蕎麦と日本酒（二尺五寸）、うどん（つるとんたん）など",
    "region": "品川・大田",
-   "lat": 35.545406,
-   "lng": 139.767288,
-   "geo": "gsi-block",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "gegupBeaymq@kAwCgCdAcCsFpB_AiAaCqAn@r@|AqB~@xBxEbCz@t@jB"
+    ]
+   },
+   "lat": 35.5449754,
+   "lng": 139.7695369,
+   "geo": "outline",
    "gsi": "東京都大田区羽田空港二丁目６番",
    "near": [
     [
      "羽田空港第3ターミナル",
-     209
+     145
     ],
     [
-     "天空橋",
-     1234
+     "羽田空港第1ターミナル",
+     1436
     ]
    ]
   },
@@ -50554,19 +50577,24 @@
    "kana": "むつみこうじ",
    "en": "Mutsumi-koji (Ebara-Nakanobu)",
    "region": "品川・大田",
-   "lat": 35.6098834,
-   "lng": 139.712213,
-   "geo": "osm-area",
-   "osm": "w611249310",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "cqrtpBa_|lq@Le@KC@IQECHOEGA@EQKS^SKoArCTHCDPHFKZL@AZFCHRDn@sC"
+    ]
+   },
+   "lat": 35.6105163,
+   "lng": 139.7121856,
+   "geo": "outline",
    "gsi": "東京都品川区中延二丁目８番１４号",
    "near": [
     [
      "荏原中延",
-     20
+     65
     ],
     [
      "中延",
-     444
+     514
     ]
    ]
   },
@@ -50615,6 +50643,12 @@
    "en": "Kamata Bal Yokocho",
    "price": "メキシカン、ベトナム、中華たこ焼き、立ち焼肉、肉バル、串揚げ、オーガニック、魚と日本酒、スペインバルの9ジャンルが入る（2017年）",
    "region": "品川・大田",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "{{stpBwxpmq@_Ba@WfA^JHUz@R"
+    ]
+   },
    "lat": 35.564049,
    "lng": 139.715668,
    "geo": "gsi",
@@ -52182,19 +52216,24 @@
    "en": "Nishi-Kamata 7-chome back-alley bars (behind Suzuran-dori)",
    "price": "古い居酒屋とスナックが路地の両側に十数軒並ぶ（2014年の記事）",
    "region": "品川・大田",
-   "lat": 35.5644115,
-   "lng": 139.7114218,
-   "geo": "osm-area",
-   "osm": "n13190051886",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "qnrtpB_|pmq@?kAg@?@Sy@C?VO?@E]AAFG??p@H?EpAl@B?Tt@??a@n@A?a@o@@?M"
+    ]
+   },
+   "lat": 35.5636926,
+   "lng": 139.7119128,
+   "geo": "outline",
    "gsi": "東京都大田区西蒲田七丁目２４番",
    "near": [
     [
      "蓮沼",
-     263
+     313
     ],
     [
      "蒲田",
-     440
+     359
     ]
    ]
   },
@@ -53684,6 +53723,12 @@
    "en": "Engeijo-dori (Jujo Chuo Shotengai)",
    "price": "線路脇のやきとり神ちゃんはつくね220円・豚レバ120円、瓶ビール（エビス）650円（2023年の訪問記）",
    "region": "池袋・赤羽・城北",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "ijvtpBkpxjq@CGYSOPTP@fEq@B}@PDs@UB?RSDEYa@DBVYDDd@e@H?ZPCBh@bAG@HpAKAMb@CG_ANABdBb@?AiBj@E?Y]B"
+    ]
+   },
    "lat": 35.76149,
    "lng": 139.722885,
    "geo": "gsi",
@@ -53743,6 +53788,12 @@
    "en": "Jujo Ginza Higashi-dori & Petit Road",
    "price": "プチロードの斎藤酒場は清酒1合230円〜、もつにこみ340円、串かつ2本380円（2025年の記事）",
    "region": "池袋・赤羽・城北",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "q~utpB}fxjq@Kq@N??WW?Ig@]DCMi@A?UY??c@Y??GUAFeAQABSNJF?@_Ai@G@GWCAFc@G[PILANb@DC^C??r@m@?@~@\\@?X]??\\MACT@t@p@D?@f@D@KL@Fg@f@DCz@^??XT??Y|A??A"
+    ]
+   },
    "lat": 35.761127,
    "lng": 139.72168,
    "geo": "gsi-block",
@@ -54423,24 +54474,23 @@
    "price": "芸者を呼べる料亭和可月・浅元、割烹、すなっく琴音、燗酒と生ハムの29Rôtieなどが点在（2020年時点）",
    "region": "池袋・赤羽・城北",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "idytpBw~ekq@]GMGa@c@e@KgASeASYYQSa@q@_Ag@KIa@Wk@O_@IW?_@?o@?G?e@C[Kk@WwAgAQGa@UyAqBSUsCgBmAk@eBq@WSqAiAe@i@_@w@Og@EQSw@[kBMe@Om@Io@Bu@FY@U@YAk@Ks@Ka@KSm@mAc@q@O[[{@_@}@We@e@aAg@qAe@kBEGUc@CCMK"
+     "qeytpBu~ekq@h@JDWa@Io@i@oBc@DWIC@CSE@CYWEBYUWZIK`@e@ACRU[YBCi@YED]Sc@v@IGf@aAYOBEg@QQ^_@OJ_@q@BGTKW}@@?D_@?Ar@M?a@CeAa@uAgAUI\\Y{@gABCSWIFU]a@V[_@cAm@v@_BYOu@|AgAo@Tm@UICFMGQ`@a@QZw@u@YA@U]_@VQOFGa@a@e@b@c@_@Y[`@SEINGKUWLYq@FCSa@]REOhAg@Sg@cAb@G_@x@[O_@JEO_@y@ZGYbAc@[s@QFAEk@NIk@?Ev@KE[m@H@MFc@DVb@KIa@_@H@Sd@EAMRAEg@q@JMy@Sm@d@KAEHAa@iBQ_@c@TGKOa@REIWc@JGS\\ISs@TIg@k@y@l@_@u@v@_@m@iAOBKu@KBGWKBEQJCIq@G@AIi@JMSb@[QYc@XSOORRLq@TNb@l@SBF{Ap@\\v@zAs@Rr@d@pAUHL`@XKl@hAn@~Am@PDPOD@FE@HVZK@BPE@@ZKZd@i@LLh@RENd@b@MXp@e@FPtAC?JfAG@BXi@DFz@v@IFf@\\pA`@xBq@VPd@NVb@WDLm@ZVd@FCLV^SJPb@h@URCF?NNLQPBBMLZZTURTp@o@^Xc@~@t@^d@cAx@Z]d@j@\\FKl@`@STVRTSJH@CXZOLPPt@s@RLfB`Cm@b@X`@l@a@U_@v@^l@d@[T@BGFDFA@PVC@DDCD\\LLWb@PP_@HBKt@`@DHq@f@B?R`@@?Fh@@?_@X?\\Hh@Nj@\\CDe@Qe@xAb@NL_@b@N@CRFABn@NGRVHl@?ENIAOn@^JBKLFDOPBETrATCDjAVNEL@"
     ]
    },
-   "lat": 35.7284954,
-   "lng": 139.7327171,
-   "geo": "osm-area",
-   "osm": "w115507801",
+   "lat": 35.728535,
+   "lng": 139.7340179,
+   "geo": "outline",
    "gsi": "東京都豊島区南大塚一丁目４７番１号",
    "near": [
     [
      "新大塚",
-     393
+     480
     ],
     [
      "大塚駅前",
-     453
+     538
     ]
    ]
   },
@@ -54492,11 +54542,9 @@
    "price": "約100店。昭和4年創業の末廣鮨、花街ゆかりの大将が営むあら井、晩杯屋・四文屋など",
    "region": "池袋・赤羽・城北",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "coxtpBaffkq@TJlA`Ar@rA",
-     "wrxtpBegfkq@Mr@Mj@[`BCN",
-     "wpxtpBk`fkq@XuAX_B"
+     "cjxtpBmafkq@\\I}@sAs@uAq@\\UKLK]m@]RT^HBETwA[DUNBJOc@o@_@VGRRDIb@ICa@lBOCOr@ZHGZZFH_@\\FABNDj@LGZZFF]l@LH_@x@c@yA[BKhAT`@p@LFTKDHXM"
     ]
    },
    "lat": 35.7306134,
@@ -55070,18 +55118,24 @@
    "en": "Oyama Station Trackside Barrack Alley",
    "price": "1階が個人経営の居酒屋になったバラック長屋が密集",
    "region": "池袋・赤羽・城北",
-   "lat": 35.749866,
-   "lng": 139.702286,
-   "geo": "gsi",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "cxntpB_t}jq@PGWs@YDOcACIMiANCAICQQBGq@eBADVn@fA|@hBBAFb@r@~ARK"
+    ]
+   },
+   "lat": 35.749281,
+   "lng": 139.7017239,
+   "geo": "outline",
    "gsi": "東京都板橋区大山東町５９番１０号",
    "near": [
     [
      "大山",
-     139
+     97
     ],
     [
      "板橋区役所前",
-     719
+     785
     ]
    ]
   },
@@ -55492,6 +55546,12 @@
    "en": "Sugamo Station North Drinking Area",
    "price": "立ち飲みのほていちゃん、駅前の大衆酒場千成、やきとん多吉など。チェーン居酒屋も多い",
    "region": "池袋・赤羽・城北",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "s_|tpBundkq@gBcBDE_@_@CBoBmBGCI@uBfAQOSTJHi@XAA_@PAJGIURDDGHDDUZnAfAC@Z\\[\\PNTUj@j@f@e@LJRSMMv@w@?UtCnCN?\\]NP\\_@OOtAwAUS"
+    ]
+   },
    "lat": 35.734169,
    "lng": 139.739044,
    "geo": "gsi",
@@ -55823,18 +55883,25 @@
    "en": "Shimura Ginza Back-alley Eateries & Daiichi Store",
    "price": "第一ストアの出口の焼き鳥とき川は1本70円（2017年の記事）",
    "region": "池袋・赤羽・城北",
-   "lat": 35.77586,
-   "lng": 139.694046,
-   "geo": "gsi",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "c|ktpB}tqjq@L?@qBn@q@OMq@p@CTGM_@HNl@G?@dAb@@",
+     "avktpBauqjq@JINPPMy@gAk@`@DHMHR^p@?"
+    ]
+   },
+   "lat": 35.7760023,
+   "lng": 139.6936912,
+   "geo": "outline",
    "gsi": "東京都板橋区志村一丁目３５番１号",
    "near": [
     [
      "志村坂上",
-     135
+     170
     ],
     [
      "志村三丁目",
-     749
+     714
     ]
    ]
   },
@@ -56150,19 +56217,11 @@
    "price": "約160店の商店街。路地に昭和47年創業のコの字カウンターの大衆酒場杯一やスナックが並ぶ",
    "region": "池袋・赤羽・城北",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "oixtpBwjvjq@~EyB~BiA",
-     "clytpBqwujq@o@PyAVcAJcAHa@@g@Bw@JeBN}@FyCHiAFiANiDh@oBXsBZ",
-     "m`vtpBsrxjq@A`@BJ\\pCZvBLbADrD?lBAZ?f@ATK`C?FG|AAX?J?vC@h@?nB@tB@vBB^",
-     "w~utpBi`wjq@LbALbAXxBvAzI`AbDHT",
-     "_}ztpBamujq@f@U",
-     "oqxtpBcfvjq@]PuDbBcB|@_Bx@UJ",
-     "oqxtpBcfvjq@XOjB{@xBgA",
-     "ijytpBkxujq@y@X",
-     "}~xtpBi~ujq@WLgD~A",
-     "}dytpB{zujq@gBp@cA\\",
-     "w{ztpBwmujq@VMfF_A"
+     "c~wtpBkqvjq@LSYSOP",
+     "s~wtpBiqvjq@ULBWi@a@ORg@RFNc@RLZTBg@VBOO_@g@VKY_@NGQWJLZSJIOKFKU{@^CNFLE@d@bAUJQi@{@ZHVSHCCYLKUa@NFNWLOa@e@LEMa@Nl@`BWLJTXO?Tl@xAz@[FP{@ZFPSHHTpCaAPd@rBs@Qg@JEIUKBQc@{@ZYu@[LGM`@OEKNG@Dh@SYu@f@UIX`@`AbAa@FPb@Qw@eBzBcARj@r@WGMNGGQTKJT^Sa@_@NG",
+     "gywtpBmmvjq@SHm@]Yb@CEmAd@BHm@VHPYJM]YJ\\v@p@]Nb@l@SQe@|CkA"
     ]
    },
    "lat": 35.7655395,
@@ -57077,6 +57136,12 @@
    "en": "Horoyoi Yokocho (Itabashi)",
    "price": "2012年の訪問記で、よし野のほろ酔セット（肴3品と飲み物）900円",
    "region": "池袋・赤羽・城北",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "koutpBkj_kq@ICGTYi@RJTk@[MUj@WWwB}@ITrBz@VVUf@b@RkApEI?Nd@UKA@A?Yn@o@YYl@`@NBGf@XD?JYPHN]FEBKTFJc@MEQYDMZJPk@FBFWKCHSFe@WIFUZHJi@YGJc@PDBM"
+    ]
+   },
    "lat": 35.74585,
    "lng": 139.720093,
    "geo": "gsi",
@@ -57138,6 +57203,12 @@
    "en": "Itabashi Station West Exit Drinking Street",
    "price": "板橋のご当地ハイともいわれる牛乳ハイの北海、昭和39年創業のやきとん喜多八、カラオケ付き居酒屋の十代、スナック数軒",
    "region": "池袋・赤羽・城北",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "c~ttpB_}~jq@BKm@Ka@Mc@SBIYKCF{BaAU?Q@]R{@hBYJHXZIj@`@RWFOB@PSICLYh@RHSx@Za@bAKIu@z@JHSROIa@v@h@T`@w@RS@NVLr@iA`@REF^PDIb@BPeAb@LTcA"
+    ]
+   },
    "lat": 35.7468071013295,
    "lng": 139.718765,
    "geo": "gsi",
@@ -58100,6 +58171,12 @@
    "en": "Ikebukuro West Exit Drinking Streets (Romance-dori)",
    "price": "昭和24年創業の千登利（牛肉豆腐）、昭和31年創業の三福、ロサ会館2階で昭和47年から続くおでんやま、酒屋の三兵酒店など",
    "region": "池袋・赤羽・城北",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "gpqtpBkdekq@DUOOfAA?YcDDa@GP_@?_EL@?jAbB?AyAu@F?Qy@A?Wz@@@a@}@AAcDW@?r@QOU@B|@U@Bz@U@}@@GyCY@@^wAFA_@W@@d@uBHAg@W@LnEa@BASu@BRPo@B@XrBIDtA[B@LwAF@Xf@C@h@j@C@Ns@D^T}@B@Vj@AKP?Vh@ADl@k@DB|@TP~@I?JXAAI`@CEw@`BGDx@XAADVDhCW?LV??QRACWO@?M\\?CeAv@?@R\\CAM"
+    ]
+   },
    "lat": 35.7321161013295,
    "lng": 139.709366,
    "geo": "gsi",
@@ -58203,11 +58280,9 @@
    "price": "酒場が多いがほぼチェーン店",
    "region": "池袋・赤羽・城北",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "e|rtpBchfkq@s@C{EKIAcCE_@?",
-     "}dstpBwcfkq@?QFiC",
-     "_estpBuhfkq@HcGX_@Xc@"
+     "i~rtpBygfkq@fAB@[kEKBgB^?BOm@[Zc@qA}@r@cAWQs@bA{@CAt@G?A\\D?AZC?Cz@k@ACjAHJu@C?\\t@@KHAXtA@ExAb@A?XZ@@_@T@@c@N?@KJ??l@z@A@o@P@An@FATK"
     ]
    },
    "lat": 35.7298761,
@@ -60246,6 +60321,13 @@
    "en": "Sakura Shinmichi",
    "price": "火災前は十数軒〜20軒超の居酒屋・バーが並んだ。2017年時点で営業は1軒のみ",
    "region": "池袋・赤羽・城北",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "yw{tpBsf|jq@`@hATIq@iBW_@g@g@aBqCSJ~AtC[\\VXDEVTEDf@f@",
+     "au{tpBgf|jq@KYK?KMOLTf@"
+    ]
+   },
    "lat": 35.752411,
    "lng": 139.737488,
    "geo": "gsi",
@@ -60299,6 +60381,12 @@
    "en": "Yanagi-koji",
    "price": "居酒屋・スナックに、近年はカフェや個性的な新店が混じる",
    "region": "池袋・赤羽・城北",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "mf|tpBaz{jq@NOUUMCuCm@IBAJc@?BlA\\?Aj@[?AZ?|@Z?]`@j@b@HKVPLSd@ZJQc@YLWCATc@h@VHQa@Qt@_BKEHM"
+    ]
+   },
    "lat": 35.753967,
    "lng": 139.738815,
    "geo": "gsi",
@@ -61016,9 +61104,10 @@
    "price": "昭和22年創業のうなぎ・鳥料理の川栄、ミルクホール三珍亭など。奥にスナックが点在",
    "region": "池袋・赤羽・城北",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "usutpBaxojq@vA{@c@{C"
+     "eputpB_|ojq@JCYeB_@RAIWDDZICQHXxAm@JJl@L@a@VLR|AaA@GEWXE",
+     "etutpBexojq@@QCO[DAXPN"
     ]
    },
    "lat": 35.7801915,
@@ -62916,18 +63005,24 @@
    "en": "Komagome East Exit Back Alleys (Satsuki-dori)",
    "price": "極小のスナックや立ち飲みが点在",
    "region": "池袋・赤羽・城北",
-   "lat": 35.736881,
-   "lng": 139.749512,
-   "geo": "gsi",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "kw_upBsnbkq@i@]g@t@Oq@BCNVb@w@o@_@Sb@GQd@y@UOGJ[WBEOKPWUWEBGIj@g@_@a@^_@U[oA|@Og@j@WIOKD]k@RMa@cAi@RSi@XIDLXIQo@FAIYu@d@CK[DHb@c@RRd@]PNXz@c@DL_@R\\j@TQPb@WRV\\MJ\\j@s@h@d@d@NODDJILPWTb@^UVVVj@q@\\`Ai@f@JJEDXDCXb@DJOJv@ZECYf@\\"
+    ]
+   },
+   "lat": 35.7381036,
+   "lng": 139.7487543,
+   "geo": "outline",
    "gsi": "東京都北区中里一丁目６番１号",
    "near": [
     [
      "駒込",
-     208
+     217
     ],
     [
      "巣鴨",
-     989
+     991
     ]
    ]
   },
@@ -63483,6 +63578,12 @@
    "kana": "かめありきたぐちいんしょくがい",
    "en": "Kameari North Exit Inshokugai",
    "region": "北千住・葛飾",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "sjdvpBeiujq@?EkA?Uu@SD@BG@@FQD@Hy@A?PJ@b@xAlCc@@@^I@UIY"
+    ]
+   },
    "lat": 35.768188,
    "lng": 139.84874,
    "geo": "gsi",
@@ -64721,6 +64822,12 @@
    "en": "Keisei Takasago North Exit Bar Quarter",
    "price": "立ち呑みのみこしは食べログの予算が1,000円台。やきそば 和は焼きそばセット（カクカップ付き）820円（2026年6月の口コミ）。焼き鳥の鳥ひろと居酒屋 ゆうゆうは予算3,000円台",
    "region": "北千住・葛飾",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "}hkvpB}t|jq@P?H_FW??Ho@EWv@E@I?C\\OXH@q@tABVhCH"
+    ]
+   },
    "lat": 35.751266,
    "lng": 139.867752,
    "geo": "gsi",
@@ -64874,9 +64981,9 @@
    "price": "スナックD2は90分4,000円前後（割り物付き）、スナック アムールは焼酎ボトル飲み放題2時間3,000円＋チャージ1,000円、入口のBAR Blue Caneはサービス料500円",
    "region": "北千住・葛飾",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "g}supBwj|jq@IC}Dy@XmA`B^b@?z@RH@"
+     "i|supBmn|jq@s@MCPMCBQ[G?DYKc@GETQEDUa@KABm@MEX\\FKh@EAK`@VFAHBDlE~@DSwAYHc@NDDQB@BMfATDSKC"
     ]
    },
    "lat": 35.7522277,
@@ -67634,6 +67741,12 @@
    "en": "Takenotsuka Little Manila (Philippine pub area)",
    "price": "1セット60分3,000円前後が相場（2025年の訪問記）。キャストのドリンクは1杯1,000〜2,000円。開店から18時ごろまでは60〜90分2,000〜2,500円で飲み放題・歌い放題の店もある（AERA dot.）",
    "region": "北千住・葛飾",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "}ioupBi`jjq@dBaAOWoAv@Qe@?SIOo@OADcAQIh@B@ERWIGXPFWp@bADCVl@F?IvANFk@"
+    ]
+   },
    "lat": 35.793098,
    "lng": 139.791199,
    "geo": "gsi",
@@ -67793,19 +67906,26 @@
    "en": "Ayase Station East Exit Bar Quarter",
    "price": "串のこたには「こたにサワー」が100円台、立ち飲みマルイチは予算1,000〜2,000円、和はいわし料理が約20種",
    "region": "北千住・葛飾",
-   "lat": 35.761762,
-   "lng": 139.827653,
-   "geo": "osm-area",
-   "osm": "n11040588031",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "ud|upBchxjq@UyCu@FCc@WB?HY@?C[BAKg@DAMc@CKFFd@LzBp@EBXVCF^~@IBNVCCU",
+     "al|upB}gxjq@Eg@E@MsBD?Ci@KG]CDx@W@AGUBB\\F?Dp@Q@B`@NA@FNAD`@HA?F",
+     "yr{upBmjxjq@RmA[GUlA"
+    ]
+   },
+   "lat": 35.7612946,
+   "lng": 139.8265646,
+   "geo": "outline",
    "gsi": "東京都足立区綾瀬二丁目２４番１２号",
    "near": [
     [
      "綾瀬",
-     255
+     179
     ],
     [
-     "青井",
-     1293
+     "小菅",
+     1289
     ]
    ]
   },
@@ -67856,6 +67976,12 @@
    "en": "Ayase Station West Exit Under-the-Tracks Bars",
    "price": "立ち飲みの晩杯屋、もつ焼き やまざき（もつ焼き1本150円〜・2017年時点）、焼き鳥のふだに（席料・お通しなし）、日本酒の和酒楽房 かね匠、セット料金1時間3,000円のLounge Bar Travis",
    "region": "北千住・葛飾",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "ilzupBucxjq@?eByHr@aBH@zA|EW"
+    ]
+   },
    "lat": 35.761635,
    "lng": 139.822021,
    "geo": "gsi",
@@ -68563,6 +68689,12 @@
    "en": "Kanamachi Sakae-dori Shotengai",
    "price": "もつ焼き・焼き鳥の店が並ぶ。酒肴大黒は予算3,000〜4,000円（食べログ）",
    "region": "北千住・葛飾",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "ealvpBivujq@Am@I?Q[GDU[_An@`@^A@iAe@Ql@UEYxA`@HGTYGGb@VJE^LBCJ{AMFz@F`@@??NNz@CNLVLQl@JRo@F@DOMCH]g@OBKd@LTo@JBDYC?HYSIDSRFPg@HDHQEAL[IEHSVY@B\\SAI"
+    ]
+   },
    "lat": 35.767971,
    "lng": 139.87059,
    "geo": "gsi",
@@ -68833,9 +68965,9 @@
    "price": "焼き鳥・もつ焼き・寿司・小料理・スナックが混在。とり家ゑび寿はエビスの大ジョッキ650円、ハイボール450円",
    "region": "北千住・葛飾",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "uwfvpB_h_kq@_EqBIE"
+     "uwfvpBmh_kq@`@a@uCyAEHq@[O\\KEKRLHOZ^PGL|@b@CD`@RJSl@XLYVLJU"
     ]
    },
    "lat": 35.7457552,
@@ -69105,6 +69237,12 @@
    "kana": "りょうごくえどのれん",
    "en": "Ryogoku Edo NOREN",
    "region": "墨田・江東・江戸川",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "}youpByoukq@HcCU??SqBA?dDbB@@M"
+    ]
+   },
    "lat": 35.6961854,
    "lng": 139.7924286,
    "geo": "osm-area",
@@ -69162,9 +69300,9 @@
    "en": "Yokozuna Yokocho",
    "region": "墨田・江東・江戸川",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "qkpupBeyukq@?SIiDGwCKaEA_@"
+     "sipupBq_vkq@EeCy@?GIK?CNa@??^y@@?~@b@?@b@"
     ]
    },
    "lat": 35.695012,
@@ -69499,6 +69637,12 @@
    "en": "Kameido Yokocho",
    "price": "ラリグラス（ネパール料理）の平均予算は1,500円（ぐるなび）。やきとりさんきゅう 亀戸本店は『焼き鳥全品39円』をうたう（ホットペッパーの紹介文）",
    "region": "墨田・江東・江戸川",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "uc|upBqitkq@qBFDzApBG"
+    ]
+   },
    "lat": 35.699047,
    "lng": 139.826126,
    "geo": "gsi",
@@ -69613,6 +69757,12 @@
    "kana": "かめいどえききたぐちのほるもんがい",
    "en": "Kameido North Exit Horumon Alley",
    "region": "墨田・江東・江戸川",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "gj|upBsntkq@C{CsEQ?lDvATbA@FO"
+    ]
+   },
    "lat": 35.6984361013295,
    "lng": 139.826859,
    "geo": "gsi",
@@ -69666,6 +69816,12 @@
    "kana": "かめいどえきひがしぐちのえきうらよこちょう",
    "en": "Kameido Station Back Alley (Rokuchome)",
    "region": "墨田・江東・江戸川",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "ai|upB_fukq@Y??e@K@Ac@_O^?@_@@@`@E??j@[J@RfAI?@`@?`AC?Cz@E|AC?Ex@C~@C?Fb@A?Gf@A?HzAA"
+    ]
+   },
    "lat": 35.696995,
    "lng": 139.827332,
    "geo": "gsi",
@@ -71040,11 +71196,9 @@
    "en": "Koiwa Jizo-dori",
    "region": "墨田・江東・江戸川",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "ukqvpBkrdkq@T?`Db@`BT`EoA@AHK",
-     "ovpvpBgydkq@t@y@pBwA",
-     "m|pvpBosdkq@HQTg@Xe@Zc@^a@d@O`@A"
+     "}opvpBe}dkq@[GQW{@j@OU{B|AIMIBCEQBPr@SHk@n@CCuA`@\\z@Q`@RJFIHV`Au@^_@@@XSCCNQFDLMfA{@GMi@BAGdAQ"
     ]
    },
    "lat": 35.7333768,
@@ -71167,9 +71321,9 @@
    "price": "一力はもつ焼き1本110円、カミナリハイボール400円（2019年・さんたつ）",
    "region": "墨田・江東・江戸川",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "cqpvpBkbekq@e@_@yAqAiBaBsBmBoAiAmGmFoC}B"
+     "sxpvpBmjekq@\\o@g@YABMGMDAA]DHUG[La@}@WITKEFSc@KIX}DiDi@l@zF~EEn@N@lAfAv@KQQZ]"
     ]
    },
    "lat": 35.7320757,
@@ -71865,6 +72019,13 @@
    "kana": "ひらいえきみなみぐちのきゅうさんぎょうちのろじ",
    "en": "Hirai Former Geisha District Alleys",
    "region": "墨田・江東・江戸川",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "euavpBwoqkq@n@k@s@y@k@f@MP?H",
+     "kwavpBqpqkq@IU]L{@c@CBKKABOMCBCAKJYJEGTQSYURMOi@b@h@t@OJDDWPFHWRIIYVg@i@_@ZVVa@^NPE@HVfAa@HVbAK\\M@@vAc@GUvAe@K["
+    ]
+   },
    "lat": 35.7049401013295,
    "lng": 139.842224,
    "geo": "gsi",
@@ -72251,6 +72412,12 @@
    "kana": "しんこいわまつしまさんちょうめのすなっくがい",
    "en": "Shin-Koiwa Matsushima Snack Street",
    "region": "墨田・江東・江戸川",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "wpivpBebnkq@bA_AKMLKOQMJOOmB~APPPQNPRQ"
+    ]
+   },
    "lat": 35.712704,
    "lng": 139.862976,
    "geo": "gsi-block",
@@ -72311,21 +72478,26 @@
    "en": "Pacific Inshokuten-gai",
    "price": "新ちゅうのせんべろセット1,200円（ドリンク最大4杯＋天ぷら盛り合わせか牛すじ煮込み）、からし焼き500円",
    "region": "墨田・江東・江戸川",
-   "lat": 35.7166028986705,
-   "lng": 139.860458,
-   "geo": "gsi",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "enhvpBunlkq@WSq@lA[XLP\\[\\k@"
+    ]
+   },
+   "lat": 35.716531,
+   "lng": 139.8601458,
+   "geo": "outline",
    "gsi": "東京都葛飾区新小岩二丁目７番１５号",
    "near": [
     [
      "新小岩",
-     228
+     201
     ],
     [
      "平井",
-     1974
+     1950
     ]
-   ],
-   "stacked": 2
+   ]
   },
   {
    "id": "shinkoiwa-subaru-inshokugai",
@@ -72373,18 +72545,24 @@
    "en": "Subaru Inshokugai",
    "price": "MUSIC BAR しあわせランプは生演奏カラオケのバー。立ち飲み処 縁はカウンター6席の焼き鳥の立ち飲み",
    "region": "墨田・江東・江戸川",
-   "lat": 35.716465,
-   "lng": 139.859985,
-   "geo": "gsi",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "aohvpBsilkq@ALVBB]AOSUq@YKA@K}AOALKACXN@CRr@FCPj@J"
+    ]
+   },
+   "lat": 35.7166962,
+   "lng": 139.8602424,
+   "geo": "outline",
    "gsi": "東京都葛飾区新小岩二丁目７番４号",
    "near": [
     [
      "新小岩",
-     189
+     207
     ],
     [
      "平井",
-     1934
+     1967
     ]
    ]
   },
@@ -72804,7 +72982,7 @@
    "en": "Tachinomi Shinchu",
    "price": "せんべろセット1,200円（バット4本でドリンク最大4杯＋天ぷら盛り合わせ・牛すじ煮込みから1品、19時まで）、からし焼き500円、ハイボール380円（食べログの口コミ）",
    "region": "墨田・江東・江戸川",
-   "lat": 35.7164951013295,
+   "lat": 35.716549,
    "lng": 139.860458,
    "geo": "gsi",
    "gsi": "東京都葛飾区新小岩二丁目７番１５号",
@@ -72817,8 +72995,7 @@
      "平井",
      1974
     ]
-   ],
-   "stacked": 2
+   ]
   },
   {
    "id": "shinkoiwa-torimasu",
@@ -73256,6 +73433,12 @@
    "en": "Hikifune East Exit Bar Street",
    "price": "THE ALL DAYは自家製ソーセージ1,080円、三保保三はサラミ2種700円・デュクセル450円（2025年・さんたつ）",
    "region": "墨田・江東・江戸川",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "kzxupBqukkq@C@Bq@UHEEU@[No@kAg@e@WWQR\\VSRj@n@MJLRGHBHE@HNEBDLCBDFC@P^HE@@LE@@HE@@TMJVLJ`@OCGBA@c@TE"
+    ]
+   },
    "lat": 35.718235,
    "lng": 139.81749,
    "geo": "gsi",
@@ -74313,6 +74496,12 @@
    "kana": "しょうべんよこちょう",
    "en": "Shouben Yokocho (Susaki)",
    "region": "墨田・江東・江戸川",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "cnvupB{yalq@xBSEc@kBR@DG?@HG?"
+    ]
+   },
    "lat": 35.668785,
    "lng": 139.810333,
    "geo": "gsi",
@@ -75504,6 +75693,12 @@
    "en": "Derby-dori",
    "price": "うえじは串焼き1本100円〜、ホッピーセット400円（2019年・税抜）",
    "region": "墨田・江東・江戸川",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "gnwupByhvkq@HI?SCGIEwHVeADKFe@@@\\RABLJDFCJMd@A?FzFQ@FtAA"
+    ]
+   },
    "lat": 35.694561,
    "lng": 139.814163,
    "geo": "gsi",
@@ -75559,6 +75754,12 @@
    "en": "Gotochi Yokocho Kinshicho Sakaba",
    "price": "いちえは予算3,000円前後（ホットペッパー）",
    "region": "墨田・江東・江戸川",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "omwupBkrukq@Da@Am@BIO_@i@?@z@a@@@b@`@A@\\"
+    ]
+   },
    "lat": 35.6960315,
    "lng": 139.8134433,
    "geo": "osm-area",
@@ -75619,18 +75820,25 @@
    "en": "Kadan-gai",
    "price": "馬刺し 居酒屋は予算4,000円〜（ホットペッパー）。熊本直送の馬刺し、馬のレバ刺しなど",
    "region": "墨田・江東・江戸川",
-   "lat": 35.695259,
-   "lng": 139.817154,
-   "geo": "gsi",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "e|xupBk`vkq@@XfAEGcCgADBhAG?@\\",
+     "wgxupBgcvkq@EaA[@CiAY@AWW?@\\g@@Bz@Q@C{@a@@BhAg@B?\\O@k@a@MRn@d@H@Bj@S?GF]@DfAZA@LVAAOlCI@TkCJBn@{@BAq@aAB@Zc@@?T]@?V|IWDICgA\\AGaC"
+    ]
+   },
+   "lat": 35.6950015,
+   "lng": 139.8158675,
+   "geo": "outline",
    "gsi": "東京都墨田区江東橋四丁目２１番６号",
    "near": [
     [
      "錦糸町",
-     333
+     260
     ],
     [
      "住吉",
-     709
+     668
     ]
    ]
   },
@@ -75677,6 +75885,12 @@
    "kana": "きんしちょうえききたぐちののみやがい",
    "en": "Kinshicho North Exit Izakaya Area",
    "region": "墨田・江東・江戸川",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "_~vupBuutkq@]?X[CqBSIoFHQB?rBLLjCA?nAd@N?`@~A?"
+    ]
+   },
    "lat": 35.69799,
    "lng": 139.811966,
    "geo": "gsi",
@@ -76294,26 +76508,23 @@
    "price": "亀屋は焼酎ハイボール300円、マグロぶつ切400円、納豆オムレツ450円（2021年・税込）",
    "region": "墨田・江東・江戸川",
    "shape": {
-    "t": "line",
+    "t": "poly",
     "p": [
-     "_dyupByhdkq@WGCCOG[WcCiCKMaLyLUWUWUUCEIIECCEqHcIiAoAkDuD}@_AIICE_FqFa@a@m@o@{@}@s@y@qC_DoAsA",
-     "ib{upBajfkq@oHaIUW",
-     "ol{upB{tfkq@aBcBeAkAgCoCa@W"
+     "{g{upBuufkq@EgAO??QXAAe@_@@AQq@@Bv@M@Ck@k@??Hc@FFb@I@?XZC~@x@"
     ]
    },
-   "lat": 35.7290091,
-   "lng": 139.8246105,
-   "geo": "osm-area",
-   "osm": "w518647359",
+   "lat": 35.7291905,
+   "lng": 139.8240064,
+   "geo": "outline",
    "gsi": "東京都墨田区東向島五丁目４２番１１号",
    "near": [
     [
      "八広",
-     385
+     442
     ],
     [
      "鐘ヶ淵",
-     642
+     595
     ]
    ]
   },
@@ -76425,6 +76636,12 @@
    "en": "Tomioka 1-chome Alleys (Monzen-Nakacho)",
    "price": "ますらおは塩もつ煮378円、穴子握りとアサリ握り440円（2020年・税込）",
    "region": "墨田・江東・江戸川",
+   "shape": {
+    "t": "poly",
+    "p": [
+     "ynqupBsw`lq@?mEcBm@gHgDO[a@PeBnEZj@`IhElCF"
+    ]
+   },
    "lat": 35.670609,
    "lng": 139.797684,
    "geo": "gsi",

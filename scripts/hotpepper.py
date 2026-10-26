@@ -80,12 +80,56 @@ def parse_hp_hours(t):
     return week
 
 
+WEEK = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
+DAY = r"(?:祝前日|祝後日|祝日|[月火水木金土日])"
+SEG = re.compile(rf"((?:{DAY}(?:\s*[~〜～]\s*{DAY})?\s*[、・,]?\s*)+)?[:：]?\s*(翌)?(\d{{1,2}}):(\d{{2}})\s*[~〜～]\s*(翌)?(\d{{1,2}}):(\d{{2}})"
+                 r"(?:\s*[(（][^)）]*?L\.O\.\s*(翌)?(\d{1,2}):(\d{2})[^)）]*[)）])?")
+
+
+def hp_days(spec):
+    out = []
+    for a, b in re.findall(rf"({DAY})(?:\s*[~〜～]\s*({DAY}))?", spec):
+        if b and a in "月火水木金土日" and b in "月火水木金土日":
+            i, j = "月火水木金土日".index(a), "月火水木金土日".index(b)
+            out += [WEEK[k % 7] for k in range(i, (j if j >= i else j + 7) + 1)]
+        else:
+            out += [JDAYS[a]] + ([JDAYS[b]] if b else [])
+    return out
+
+
+def parse_hp_hours_v2(t, closed=""):
+    """The current Hotpepper format: 「火～金: 16:30～22:30 （料理L.O. 22:00） 土: 12:00～翌0:00」, or a bare 「16:00～23:00」."""
+    t = t.split("【")[0]
+    week, shut = {}, []
+    if not re.search(r"なし|^[－-]$|不定休", closed or ""):
+        shut = hp_days(re.sub(r"曜日?", "", (closed or "").split("※")[0]))
+    for m in SEG.finditer(t):
+        o = int(m.group(3)) * 60 + int(m.group(4)) + (1440 if m.group(2) else 0)
+        c = int(m.group(6)) * 60 + int(m.group(7)) + (1440 if m.group(5) else 0)
+        if c <= o:
+            c += 1440
+        lo = None
+        if m.group(9):
+            lo = int(m.group(9)) * 60 + int(m.group(10)) + (1440 if m.group(8) else 0)
+            if lo < o:
+                lo += 1440
+        days = hp_days(m.group(1)) if m.group(1) else [d for d in WEEK + ["hol"] if d not in shut]
+        for d in days:
+            week.setdefault(d, []).append([o, c, lo])
+    if week:
+        for d in shut:
+            week.setdefault(d, [])
+    return week
+
+
 def parse_store(p):
     rows = {clean(a): clean(b) for a, b in re.findall(r"<th[^>]*>(.*?)</th>\s*<td[^>]*>(.*?)</td>", p, re.S)}
     out = {"address": rows.get("住所")}
     hrs = rows.get("営業時間", "")
-    week = parse_hp_hours(hrs)
     cl = rows.get("定休日", "")
+    week = parse_hp_hours(hrs) or parse_hp_hours_v2(hrs, cl)
+    if week and sum(c - o for rs in week.values() for o, c, _ in rs) < 120:
+        week, out["dormant"] = {}, True  # 「日: 00:00～00:30」 and the rest closed: a page left up while the shop is shut
     if week:
         for d in re.findall(r"祝前日|祝後日|祝日|月|火|水|木|金|土|日", cl.split("※")[0]):
             if JDAYS[d] not in week:

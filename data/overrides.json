@@ -64,5 +64,21 @@
  "soshigaya-daikyu-saketen": {
   "lat": 35.6438668,
   "lng": 139.6090274
+ },
+ "tl-13320048": {
+  "exclude": true,
+  "why": "same shop as an existing entry at the same address"
+ },
+ "tl-13006763": {
+  "exclude": true,
+  "why": "same shop as an existing entry at the same address"
+ },
+ "tl-13289968": {
+  "exclude": true,
+  "why": "same shop as an existing entry at the same address"
+ },
+ "hp-strj001269789": {
+  "exclude": true,
+  "why": "Hotpepper page left up with the shop shut six days a week and open 30 minutes"
  }
 }

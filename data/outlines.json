@@ -23,6 +23,28 @@
   ],
   "width": 5
  },
+ "akabane-meitengai": {
+  "center": [
+   35.7801915,
+   139.720285
+  ],
+  "exclude": [
+   "w245984805",
+   "w245984897",
+   "w245984843"
+  ],
+  "fronting": true,
+  "max_building": 300,
+  "note": "赤羽1丁目19番付近の明店街。OK横丁の北側にあるL字の細い路地（約50m）とその両側の飲み屋・商店の建物。",
+  "sources": [
+   "https://www.snackyokocho.com/article/802/",
+   "https://tokyodeep.info/post_663/"
+  ],
+  "ways": [
+   166874637
+  ],
+  "width": 4
+ },
  "akabane-ok-yokocho": {
   "center": [
    35.7797,
@@ -1319,6 +1341,95 @@
    "https://www.clubjt.jp/place/spot/pref-13/city-13030/area-1603/izakaya/"
   ]
  },
+ "hamamatsucho-neo-yokocho": {
+  "buildings": [
+   "w151480057"
+  ],
+  "center": [
+   35.656849,
+   139.759186
+  ],
+  "note": "海岸1-2-3の汐留芝離宮ビルディング（地下1階が浜松町ネオ横丁）の建物。地下1階の正確な範囲は不明なので建物の外形で囲んだ。隣の汐留ビルディング（海岸1-2-20）とは別。",
+  "sources": [
+   "https://www.enjoytokyo.jp/news/203920/",
+   "https://www.hotpepper.jp/strJ003829391/"
+  ]
+ },
+ "haneda-edo-koji": {
+  "center": [
+   35.5452,
+   139.7693
+  ],
+  "note": "羽田空港第3ターミナル（国際線）4階の江戸小路。OSMの屋内エリア「Edo Market」（level 4）の範囲を、3階の出発ロビー吹き抜けを囲む形でそのまま写した（約3800m²）。",
+  "polys": [
+   [
+    [
+     35.5454798,
+     139.7686171
+    ],
+    [
+     35.5451654,
+     139.7688126
+    ],
+    [
+     35.5453142,
+     139.7691738
+    ],
+    [
+     35.545218,
+     139.7692338
+    ],
+    [
+     35.5451987,
+     139.7692464
+    ],
+    [
+     35.5451808,
+     139.7692574
+    ],
+    [
+     35.5447701,
+     139.7695413
+    ],
+    [
+     35.5446302,
+     139.7692353
+    ],
+    [
+     35.544362,
+     139.7694214
+    ],
+    [
+     35.5444557,
+     139.7696249
+    ],
+    [
+     35.5446597,
+     139.7694845
+    ],
+    [
+     35.5448009,
+     139.7697921
+    ],
+    [
+     35.545268,
+     139.7694688
+    ],
+    [
+     35.5453989,
+     139.7691155
+    ],
+    [
+     35.5456273,
+     139.7689719
+    ]
+   ]
+  ],
+  "sources": [
+   "https://www.openstreetmap.org/way/677982878",
+   "https://skywardplus.jal.co.jp/?p=1679"
+  ]
+ },
  "hasune-gardshita": {
   "center": [
    35.783,
@@ -1360,6 +1471,31 @@
    "https://www.bring-you.info/zh-hans/hibiya-okuroji",
    "https://www.enjoytokyo.jp/article/201744/"
   ]
+ },
+ "higashijujo-shotengai": {
+  "center": [
+   35.7659,
+   139.72745
+  ],
+  "exclude": [
+   "w250067167",
+   "w250065619"
+  ],
+  "fronting": true,
+  "max_building": 450,
+  "note": "東十条駅北口を出て東へ延びる東十条商店街のメイン通り（駅前からW242交差点付近まで）と、その北側で飲み屋・スナックが並ぶ路地（駅前の杯一・水源・友のある路地、東十条4丁目5番の和風スナックゆうこのある路地）。正確な境界は確認できていない。",
+  "sources": [
+   "https://www.snackyokocho.com/article/16771/",
+   "https://tokyoexplorersmap.blogspot.com/2023/02/higashijuujousyoutengai.html"
+  ],
+  "ways": [
+   204908485,
+   204908488,
+   1097714104,
+   32595623,
+   1063496547
+  ],
+  "width": 4
  },
  "higashinakano-moon-road": {
   "center": [
@@ -1593,6 +1729,74 @@
    143028209
   ],
   "width": 3
+ },
+ "jujo-engeijo-dori": {
+  "buildings": [
+   "w504759044",
+   "w504759046",
+   "w504759048",
+   "w504759089",
+   "w504759088",
+   "w504759087",
+   "w504759091",
+   "w504759090",
+   "w504759052",
+   "w504759025",
+   "w504759024",
+   "w504759020",
+   "w504759023",
+   "w504759021"
+  ],
+  "center": [
+   35.76149,
+   139.722885
+  ],
+  "fronting": false,
+  "note": "十条駅の踏切（埼京線）を東へ渡った演芸場通りの入口から田や・船忠あたり（約70m）までの両側の飲み屋の建物と、駅東口へ線路沿いに南へ続く細い路地（やきとり神ちゃんのある路地）。",
+  "polys": [
+   [
+    [
+     35.7613912,
+     139.7222674
+    ],
+    [
+     35.7613559,
+     139.7222674
+    ],
+    [
+     35.7613771,
+     139.7225371
+    ],
+    [
+     35.7614589,
+     139.722885
+    ],
+    [
+     35.76149,
+     139.7230416
+    ],
+    [
+     35.7615323,
+     139.7230416
+    ],
+    [
+     35.7615084,
+     139.722885
+    ],
+    [
+     35.7614222,
+     139.7225371
+    ]
+   ]
+  ],
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2023/02/juujouchyuousyoutengai.html",
+   "https://tokyodeep.info/jujo-3/"
+  ],
+  "ways": [
+   181126643
+  ],
+  "width": 4
  },
  "kabukicho-kabuki-yokocho": {
   "center": [
@@ -4361,6 +4565,20 @@
    "https://www.tv-tokyo.co.jp/adomachi/backnumber/20240706/"
   ]
  },
+ "shinagawa-golden-yokocho": {
+  "buildings": [
+   "w157084828"
+  ],
+  "center": [
+   35.629086,
+   139.743881
+  ],
+  "note": "港南2-3-13の品川フロントビル（地下1階が品川ゴールデン横丁）の建物全体。地下1階の飲食フロアの正確な範囲は不明なので建物の外形で囲んだ。",
+  "sources": [
+   "https://www.mec-h.com/town/mh-shinagawa/336",
+   "https://www.hotpepper.jp/strJ000960845/"
+  ]
+ },
  "shinagawa-konan-yokocho": {
   "buildings": [
    "w157573126"
@@ -5136,6 +5354,21 @@
   ],
   "width": 4
  },
+ "shiodome-yokocho": {
+  "buildings": [
+   "w151481755",
+   "w151481854"
+  ],
+  "center": [
+   35.6648586,
+   139.7622185
+  ],
+  "note": "東新橋1-8-2の電通本社ビル（カレッタ汐留）地下2階の汐留横丁。OSMの汐留横丁の点がある電通本社ビルと、カレッタ汐留の建物の2棟の外形で囲んだ。地下2階の正確な範囲は特定できておらず、実際の横丁はこの内側の一部。",
+  "sources": [
+   "https://redine.jp/shiodome",
+   "https://www.timeout.jp/tokyo/ja/news/shiodome-yokotyo-open-081623"
+  ]
+ },
  "soshigaya-maruyoshi-yokocho": {
   "buildings": [
    "w511747084",
@@ -5301,6 +5534,20 @@
    1478715543
   ],
   "width": 4
+ },
+ "takeshiba-minato-yokocho": {
+  "buildings": [
+   "w436096964"
+  ],
+  "center": [
+   35.6549845,
+   139.7609347
+  ],
+  "note": "東京ポートシティ竹芝（海岸1-7-1）のオフィスタワー2階にあるみなと横丁・竹芝グルメリウム。2階のどの部分かをOSMや公式資料から特定できなかったため、建物の外形全体で囲んだ（実際の横丁はその一部）。",
+  "sources": [
+   "https://tokyo-portcity-takeshiba.jp/floor/",
+   "https://kushi-tanaka.com/restaurant/detail/takeshiba-minatoyokocho"
+  ]
  },
  "tamacenter-ochiai-yokocho": {
   "buildings": [
@@ -5485,6 +5732,32 @@
    640882975
   ],
   "width": 4
+ },
+ "toranomon-kotora-komichi": {
+  "buildings": [
+   "w148693457"
+  ],
+  "center": [
+   35.668488,
+   139.748856
+  ],
+  "note": "虎ノ門1-16-4のアーバン虎ノ門ビル（地下1階が小虎小路）の建物。地下1階の飲食フロア全体が横丁なので建物の外形で囲んだ。",
+  "sources": [
+   "https://www.hotpepper.jp/strJ003958890/"
+  ]
+ },
+ "toranomon-t-market": {
+  "buildings": [
+   "w1158726591"
+  ],
+  "center": [
+   35.6674701,
+   139.7468787
+  ],
+  "note": "虎ノ門2-6-3の虎ノ門ヒルズ ステーションタワー（地下2階がT-MARKET）の建物全体。角打ちKANの2つの位置情報（建物の南東角と北西側）が食い違い、地下2階のどの区画か特定できなかったため、建物の外形で囲んだ（実際の横丁はその一部）。",
+  "sources": [
+   "https://www.toranomonhills.com/t-market/"
+  ]
  },
  "toranomon-yokocho": {
   "center": [
@@ -5811,6 +6084,20 @@
    27696546
   ],
   "width": 4
+ },
+ "uchisaiwaicho-hibikoji": {
+  "buildings": [
+   "w145403170"
+  ],
+  "center": [
+   35.6703178,
+   139.7543354
+  ],
+  "note": "内幸町2-2-3の日比谷国際ビル（地下2階「ヒビコクチカシタ」の日ゞ小路）の建物。地下2階の屋台風の通路の正確な範囲は不明なので建物の外形で囲んだ（実際の横丁はその一部）。",
+  "sources": [
+   "https://news.mynavi.jp/article/20200225-979397/",
+   "https://www.hotpepper.jp/strJ001263293/"
+  ]
  },
  "ueno-7chome-yokocho": {
   "center": [

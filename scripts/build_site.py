@@ -19,7 +19,7 @@ DATA = os.path.join(ROOT, "site", "data")
 STATIC = os.path.join(ROOT, "site", "static")
 VENDOR = os.path.join(ROOT, "site", "vendor")
 
-KEEP = ("id", "name", "kana", "en", "kind", "area", "ward", "region", "address", "station", "near", "lat", "lng", "shape",
+KEEP = ("id", "name", "kana", "en", "aliases", "kind", "area", "ward", "region", "address", "station", "near", "lat", "lng", "shape",
         "social", "solo", "hiru", "english", "tags", "status", "since", "desc", "talk", "tips", "price", "budget",
         "budget_min", "budget_max", "checked", "sources", "geo", "yokocho", "where", "members")
 

@@ -14,8 +14,24 @@ def normalize(value):
     return re.sub(r'[\s・･（）()\-－ー]', '', value)
 
 
+def address_key(value):
+    """建物名より前の番地までを照合する。同一店舗かどうかは判定しない。"""
+    value = unicodedata.normalize('NFKC', value or '')
+    value = re.sub(r'(?<=\d)号.*$', '', value)
+    value = re.sub(r'(?<=\D)\s+(?=\d)|\s+(?=\D)', '', value)
+    value = value.replace('丁目', '-').replace('番地', '-').replace('番', '-').replace('号', '')
+    value = re.sub(r'[−－‐–—]', '-', value)
+    match = re.match(r'^(東京都.+?[区市町村].*?\d+(?:-\d+){1,2})', value)
+    return match.group(1) if match else ''
+
+
 def compare(candidates, spots):
     by_id = {s['id']: s for s in spots}
+    by_address = {}
+    for spot in spots:
+        key = address_key(spot.get('address'))
+        if key:
+            by_address.setdefault(key, []).append(spot)
     results = []
     for candidate in candidates:
         sid = candidate.get('spot_id')
@@ -33,7 +49,11 @@ def compare(candidates, spots):
             continue
         matches = [s for s in spots if normalize(s.get('name', '')) in names and
                    (not area or area in {normalize(s.get('area', '')), normalize(s.get('ward', ''))})]
-        results.append(('候補一致・要確認' if matches else '一致未確認', candidate, matches))
+        if matches:
+            results.append(('候補一致・要確認', candidate, matches))
+        else:
+            same_address = by_address.get(address_key(candidate.get('address')), [])
+            results.append(('住所候補・要確認' if same_address else '一致未確認', candidate, same_address))
     return results
 
 

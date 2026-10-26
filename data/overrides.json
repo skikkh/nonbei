@@ -92,5 +92,23 @@
  },
  "discover-osaki-aeon-liquor": {
   "region": "品川・大田"
+ },
+ "kaburaya-1b7bdb5977": {
+  "region": "品川・大田"
+ },
+ "koenji-kidofuji": {
+  "aliases": [
+   "立呑み きど藤"
+  ]
+ },
+ "tl-13222067": {
+  "aliases": [
+   "立呑み晩杯屋 池袋東口"
+  ]
+ },
+ "tl-13272239": {
+  "aliases": [
+   "スタンドひおき 品川"
+  ]
  }
 }

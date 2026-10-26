@@ -1,0 +1,1891 @@
+[
+  {
+    "id": "kaburaya-a6eecb48d8",
+    "name": "かぶら屋 池袋2号店",
+    "kind": "sakaba",
+    "area": "池袋",
+    "ward": "豊島区",
+    "address": "東京都豊島区南池袋2-26-2 イワオビル1F、2F",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.72766858768219,
+      139.7131346256796
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-e93eda2f09",
+    "name": "かぶら屋 池袋3号店",
+    "kind": "tachinomi",
+    "area": "池袋",
+    "ward": "豊島区",
+    "address": "東京都豊島区東池袋1-41-14",
+    "social": 3,
+    "solo": 3,
+    "desc": "立ち飲みスペースのある大衆酒場。やきとんやおでんを楽しめる。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/",
+      "https://japanida.com/2025/03/23/tachinomiikebukuro/"
+    ],
+    "official_pin": [
+      35.73193628115044,
+      139.71298073022308
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-d3fa94a5e7",
+    "name": "かぶら屋 池袋4号店",
+    "kind": "tachinomi",
+    "area": "池袋",
+    "ward": "豊島区",
+    "address": "東京都豊島区東池袋4-8-8",
+    "social": 3,
+    "solo": 3,
+    "desc": "立ち飲みスペースのある大衆酒場。やきとんやおでんを楽しめる。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/",
+      "https://japanida.com/2025/03/23/tachinomiikebukuro/"
+    ],
+    "official_pin": [
+      35.72738095673305,
+      139.71865073881887
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-4060eec0f5",
+    "name": "かぶら屋 池袋6号店",
+    "kind": "sakaba",
+    "area": "池袋",
+    "ward": "豊島区",
+    "address": "東京都豊島区西池袋1−35−4　ネスパビルB1F",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.73253545637994,
+      139.70994215164316
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-e409e8fe85",
+    "name": "かぶら屋 池袋7号店",
+    "kind": "tachinomi",
+    "area": "池袋",
+    "ward": "豊島区",
+    "address": "東京都豊島区西池袋3-23-5　芹沢ビル1F",
+    "social": 3,
+    "solo": 3,
+    "desc": "立ち飲みスペースのある大衆酒場。やきとんやおでんを楽しめる。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/",
+      "https://japanida.com/2025/03/23/tachinomiikebukuro/"
+    ],
+    "official_pin": [
+      35.730359677186335,
+      139.7069113332941
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-9c6fe4b773",
+    "name": "かぶら屋 北千住店",
+    "kind": "tachinomi",
+    "area": "北千住",
+    "ward": "足立区",
+    "address": "東京都足立区千住2-64",
+    "social": 3,
+    "solo": 3,
+    "desc": "立ち飲みスペースのある大衆酒場。やきとんやおでんを楽しめる。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/",
+      "https://japanida.com/2026/06/18/tachinomikitasenju/"
+    ],
+    "official_pin": [
+      35.74885244567897,
+      139.80410807189176
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-6b188780de",
+    "name": "かぶら屋 綾瀬店",
+    "kind": "sakaba",
+    "area": "綾瀬",
+    "ward": "足立区",
+    "address": "東京都足立区綾瀬4-6-13",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.76200557975777,
+      139.82300777574298
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-5befabc392",
+    "name": "かぶら屋 西新井店",
+    "kind": "sakaba",
+    "area": "西新井",
+    "ward": "足立区",
+    "address": "東京都足立区西新井栄町2-6-9",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.777010300262496,
+      139.78935121034266
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-f24e0adff9",
+    "name": "かぶら屋 大山店",
+    "kind": "sakaba",
+    "area": "大山",
+    "ward": "板橋区",
+    "address": "東京都板橋区大山東町59-20",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.74907064420919,
+      139.70271741719273
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-e7c068128c",
+    "name": "かぶら屋 上板橋店",
+    "kind": "sakaba",
+    "area": "上板橋",
+    "ward": "板橋区",
+    "address": "東京都板橋区常盤台4-32-9 泉ビル1F",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.763724852872386,
+      139.67747877048876
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-6eaa830586",
+    "name": "かぶら屋 板橋2号店",
+    "kind": "sakaba",
+    "area": "板橋",
+    "ward": "板橋区",
+    "address": "東京都板橋区板橋1-13-8 協立コーポレーション第3ビル1F",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.74631230003112,
+      139.71893444041999
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-5c1cd0e0d7",
+    "name": "かぶら屋 西台店",
+    "kind": "sakaba",
+    "area": "西台",
+    "ward": "板橋区",
+    "address": "東京都板橋区蓮根3-9-7 メトロード西台2番館",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.78699157134846,
+      139.6744895471759
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-00cbc6a16e",
+    "name": "かぶら屋 高島平店",
+    "kind": "sakaba",
+    "area": "高島平",
+    "ward": "板橋区",
+    "address": "東京都板橋区高島平8-4-1 篠本ビル103",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.78917002410409,
+      139.66167203917863
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-fdc593158c",
+    "name": "かぶら屋 一之江店",
+    "kind": "sakaba",
+    "area": "一之江",
+    "ward": "江戸川区",
+    "address": "東京都江戸川区一之江8-18-1 みづえ薬局ビル1F",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.68588653555242,
+      139.88377335696728
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-aa28d26d30",
+    "name": "かぶら屋 平井店",
+    "kind": "sakaba",
+    "area": "平井",
+    "ward": "江戸川区",
+    "address": "東京都江戸川区平井5-15-8 平井駅前北口ビル1F",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.70676434766215,
+      139.84176842690803
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-813b8a016a",
+    "name": "かぶら屋 雑色店",
+    "kind": "sakaba",
+    "area": "雑色",
+    "ward": "大田区",
+    "address": "東京都大田区仲六郷2-42-3",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.54992583465771,
+      139.7156392686208
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-0d95f1d0a7",
+    "name": "かぶら屋 糀谷店",
+    "kind": "sakaba",
+    "area": "糀谷",
+    "ward": "大田区",
+    "address": "東京都大田区南蒲田3-12-12",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.5532140862089,
+      139.72972126248655
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-2f0e5d4576",
+    "name": "かぶら屋 平和島店",
+    "kind": "sakaba",
+    "area": "平和島",
+    "ward": "大田区",
+    "address": "東京都大田区大森北6-27-5",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.57827341683161,
+      139.73459625673323
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-fdeaf0fa03",
+    "name": "かぶら屋 蒲田店",
+    "kind": "sakaba",
+    "area": "蒲田",
+    "ward": "大田区",
+    "address": "東京都大田区西蒲田7-69-1",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.56194067119362,
+      139.71469615691427
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-7f913e859a",
+    "name": "かぶら屋 青砥店",
+    "kind": "sakaba",
+    "area": "青砥",
+    "ward": "葛飾区",
+    "address": "東京都葛飾区青戸1-10-4　富士プラザ青砥1F",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.74531188017942,
+      139.85614492747084
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-7037594d52",
+    "name": "かぶら屋 十条店",
+    "kind": "sakaba",
+    "area": "十条",
+    "ward": "北区",
+    "address": "東京都北区上十条1-13-8",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.76108068017636,
+      139.72253234465182
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-e7329ce762",
+    "name": "かぶら屋 駒込店",
+    "kind": "tachinomi",
+    "area": "駒込",
+    "ward": "北区",
+    "address": "東京都北区中里2-1-10",
+    "social": 3,
+    "solo": 3,
+    "desc": "立ち飲みスペースのある大衆酒場。やきとんやおでんを楽しめる。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/",
+      "https://japanida.com/2025/05/05/tachinomikomagome/"
+    ],
+    "official_pin": [
+      35.73762528319836,
+      139.74925318075384
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-233d59fb34",
+    "name": "かぶら屋 赤羽店",
+    "kind": "sakaba",
+    "area": "赤羽",
+    "ward": "北区",
+    "address": "東京都北区赤羽1-15-1",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.77944638017151,
+      139.72112479802402
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-d59b8fa0ce",
+    "name": "かぶら屋 赤羽2号店",
+    "kind": "sakaba",
+    "area": "赤羽",
+    "ward": "北区",
+    "address": "東京都北区赤羽1-12-2",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.77947709216932,
+      139.7213778980239
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-c15c9a66ab",
+    "name": "かぶら屋 赤羽3号店",
+    "kind": "sakaba",
+    "area": "赤羽",
+    "ward": "北区",
+    "address": "東京都北区赤羽1-14-3",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.7793245688097,
+      139.72104380371658
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-1b7bdb5977",
+    "name": "かぶら屋 五反田店",
+    "kind": "tachinomi",
+    "area": "五反田",
+    "ward": "品川区",
+    "address": "東京都品川区西五反田２-4-6",
+    "social": 3,
+    "solo": 3,
+    "desc": "立ち飲みスペースのある大衆酒場。やきとんやおでんを楽しめる。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/",
+      "https://japanida.com/2025/02/13/tachinomigotanda/"
+    ],
+    "official_pin": [
+      35.62711183062521,
+      139.72170918022965
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-b199cbfc59",
+    "name": "かぶら屋 阿佐ヶ谷店",
+    "kind": "sakaba",
+    "area": "阿佐ヶ谷",
+    "ward": "杉並区",
+    "address": "東京都杉並区阿佐谷北2-1-5",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/",
+      "https://tabelog.com/tokyo/A1319/A131905/13120815/"
+    ],
+    "pin": [
+      35.705170418659065,
+      139.63534181471815
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-b2ab59f67e",
+    "name": "かぶら屋 曳舟店",
+    "kind": "sakaba",
+    "area": "曳舟",
+    "ward": "墨田区",
+    "address": "東京都墨田区東向島2-16-16",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.7179543130441,
+      139.81631398084355
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-3ab85bed6a",
+    "name": "かぶら屋 両国店",
+    "kind": "tachinomi",
+    "area": "両国",
+    "ward": "墨田区",
+    "address": "東京都墨田区横網1-3-7 JR高架下",
+    "social": 3,
+    "solo": 3,
+    "desc": "立ち飲みスペースのある大衆酒場。やきとんやおでんを楽しめる。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/",
+      "https://japanida.com/2026/03/04/tachinomiryogoku/",
+      "https://tabelog.com/tokyo/A1312/A131201/13196579/"
+    ],
+    "pin": [
+      35.69573217871548,
+      139.79365990451183
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-b5a02fe9aa",
+    "name": "かぶら屋 千歳船橋店",
+    "kind": "sakaba",
+    "area": "千歳船橋",
+    "ward": "世田谷区",
+    "address": "東京都世田谷区桜丘2-29-6",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.64672775198514,
+      139.62362515630377
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-c2a9db09bc",
+    "name": "かぶら屋 東上野店",
+    "kind": "sakaba",
+    "area": "東上野",
+    "ward": "台東区",
+    "address": "東京都台東区東上野3-19-15",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.71132343572038,
+      139.77798699805246
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-2be5302032",
+    "name": "かぶら屋 鶯谷店",
+    "kind": "tachinomi",
+    "area": "鶯谷",
+    "ward": "台東区",
+    "address": "東京都台東区根岸1-3-21",
+    "social": 3,
+    "solo": 3,
+    "desc": "立ち飲みスペースのある大衆酒場。やきとんやおでんを楽しめる。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/",
+      "https://japanida.com/2025/05/06/tachinomiuguisudani/"
+    ],
+    "official_pin": [
+      35.720751691380535,
+      139.77971742750296
+    ],
+    "skip_yokocho_link": true,
+    "yokocho": "uguisudani-asagao-dori"
+  },
+  {
+    "id": "kaburaya-03ff441272",
+    "name": "かぶら屋 御茶ノ水店",
+    "kind": "sakaba",
+    "area": "御茶ノ水",
+    "ward": "千代田区",
+    "address": "東京都千代田区神田駿河台2-10-5",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.6989829148069,
+      139.76437556921664
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-bef09330a3",
+    "name": "かぶら屋 石神井公園店",
+    "kind": "sakaba",
+    "area": "石神井公園",
+    "ward": "練馬区",
+    "address": "東京都練馬区石神井町3-21-6 中村ビル1F",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.74329003556913,
+      139.606741275207
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-8b3d22c52a",
+    "name": "かぶら屋 祐天寺店",
+    "kind": "sakaba",
+    "area": "祐天寺",
+    "ward": "目黒区",
+    "address": "東京都目黒区祐天寺2-1-5",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/",
+      "https://tabelog.com/tokyo/A1317/A131701/13154656/"
+    ],
+    "pin": [
+      35.63800664871973,
+      139.6918790340001
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-e6d5155146",
+    "name": "かぶら屋 一橋学園店",
+    "kind": "sakaba",
+    "area": "一橋学園",
+    "ward": "小平市",
+    "address": "東京都小平市学園東町1-4-2　小菅ビル1F",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.723293157725806,
+      139.48012102750062
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-ea4104998d",
+    "name": "かぶら屋 昭島店",
+    "kind": "sakaba",
+    "area": "昭島",
+    "ward": "昭島市",
+    "address": "東京都昭島市昭和町2丁目1−12　第二栄ビル1",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.71315788018676,
+      139.36157445694826
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-a8d47ed73a",
+    "name": "かぶら屋 新秋津店",
+    "kind": "sakaba",
+    "area": "新秋津",
+    "ward": "東村山市",
+    "address": "東京都東村山市秋津町5-13-35 新秋津駅前柴田ビル1F",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.77737992418752,
+      139.49329736860633
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-cdb6c87fe4",
+    "name": "かぶら屋 三鷹店",
+    "kind": "sakaba",
+    "area": "三鷹",
+    "ward": "武蔵野市",
+    "address": "東京都武蔵野市中町1-21-10 都築ビル1F",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.7029891356653,
+      139.56203215694796
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-b58f67ba37",
+    "name": "かぶら屋 町田2号店",
+    "kind": "sakaba",
+    "area": "町田",
+    "ward": "町田市",
+    "address": "東京都町田市森野1-37-10 きめたハウジング第23ビル1F",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.5457039346299,
+      139.44539426860086
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-ebf039ac96",
+    "name": "かぶら屋 立川店",
+    "kind": "sakaba",
+    "area": "立川",
+    "ward": "立川市",
+    "address": "東京都立川市柴崎町3-4-7",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.6970231682375,
+      139.41523798578336
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-da781fc742",
+    "name": "かぶら屋 ひばりヶ丘南口店",
+    "kind": "sakaba",
+    "area": "ひばりヶ丘南口",
+    "ward": "西東京市",
+    "address": "東京都西東京市ひばりヶ丘1-3-2 永山ビル1F",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.75090121499867,
+      139.5440474397699
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-e3fbd6bab7",
+    "name": "かぶら屋 ひばりヶ丘店",
+    "kind": "sakaba",
+    "area": "ひばりヶ丘",
+    "ward": "西東京市",
+    "address": "東京都西東京市ひばりヶ丘北3-3-18 芦田ビル1F",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.752024371944046,
+      139.54497214369297
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-1059448ad1",
+    "name": "かぶら屋 田無店",
+    "kind": "sakaba",
+    "area": "田無",
+    "ward": "西東京市",
+    "address": "東京都西東京市南町5-8-21 新正第一ビル2F",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/"
+    ],
+    "official_pin": [
+      35.72703768803611,
+      139.5395541770829
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "kaburaya-8664995770",
+    "name": "かぶら屋 練馬店",
+    "kind": "sakaba",
+    "area": "練馬",
+    "ward": "練馬区",
+    "address": "東京都練馬区豊玉北５丁目１８−６ 上武ビル １階",
+    "social": 3,
+    "solo": 3,
+    "desc": "やきとんやおでんを楽しめる大衆酒場。",
+    "status": "open",
+    "checked": "運営会社の店舗一覧を2026年10月27日に確認",
+    "sources": [
+      "https://foodexgroup.com/brands/kaburaya/",
+      "https://tabelog.com/tokyo/A1321/A132102/13292415/"
+    ],
+    "pin": [
+      35.736907918644874,
+      139.6540564250256
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "sweep-tl-13091937",
+    "name": "ごっつり",
+    "kind": "tachinomi",
+    "area": "北千住",
+    "ward": "足立区",
+    "address": "東京都足立区千住旭町41-17",
+    "pin": [
+      35.74957688868522,
+      139.80601035504702
+    ],
+    "social": 3,
+    "solo": 3,
+    "desc": "北千住駅東口近くの立ち飲みもできる酒場。青森の魚料理や串焼きを楽しめる。",
+    "status": "open",
+    "checked": "2026年7月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://japanida.com/2026/04/04/tachinomiyagottsuri/",
+      "https://tabelog.com/tokyo/A1324/A132402/13091937/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "sweep-tl-13075556",
+    "name": "串あげ 光家",
+    "kind": "tachinomi",
+    "area": "浅草",
+    "ward": "台東区",
+    "address": "東京都台東区花川戸1-6-5",
+    "pin": [
+      35.712565308706196,
+      139.79806983467876
+    ],
+    "social": 3,
+    "solo": 3,
+    "desc": "浅草駅近くで串揚げとお酒を楽しめる立ち飲み。",
+    "status": "open",
+    "checked": "2026年の立ち飲み紹介と2026年1月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://japanida.com/2026/02/14/tachinomiasakusa/",
+      "https://tabelog.com/tokyo/A1311/A131102/13075556/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "sweep-tl-13052416",
+    "name": "元気再生酒場なおとん69",
+    "kind": "tachinomi",
+    "area": "田町",
+    "ward": "港区",
+    "address": "東京都港区芝5-30-4",
+    "pin": [
+      35.646690608731284,
+      139.74547038405024
+    ],
+    "social": 3,
+    "solo": 3,
+    "desc": "田町の酒場。1階に立ち飲みスペース、2階にテーブル席がある。",
+    "status": "open",
+    "checked": "2026年7月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://japanida.com/2025/04/06/tachinomitamachi/",
+      "https://tabelog.com/tokyo/A1314/A131402/13052416/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "sweep-tl-13280496",
+    "name": "酒の店 ななや",
+    "kind": "tachinomi",
+    "area": "両国",
+    "ward": "墨田区",
+    "address": "東京都墨田区両国3-23-6",
+    "pin": [
+      35.69518093791052,
+      139.79385848334437
+    ],
+    "social": 3,
+    "solo": 3,
+    "desc": "両国駅近くで魚料理と日本酒を楽しめる立ち飲み。",
+    "status": "open",
+    "checked": "2026年の立ち飲み紹介と2026年1月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://japanida.com/2026/03/04/tachinomiryogoku/",
+      "https://tabelog.com/tokyo/A1312/A131201/13280496/",
+      "https://1000bero.net/restaurant-1925/"
+    ],
+    "skip_yokocho_link": true,
+    "yokocho": "ryogoku-yokozuna-yokocho"
+  },
+  {
+    "id": "sweep-tl-13263266",
+    "name": "イエロ 秋葉原",
+    "kind": "tachinomi",
+    "area": "秋葉原",
+    "ward": "千代田区",
+    "address": "東京都千代田区神田佐久間町3-37-58 コートモデリア秋葉原 1F",
+    "pin": [
+      35.6983576787088,
+      139.77791885454937
+    ],
+    "social": 3,
+    "solo": 3,
+    "desc": "秋葉原の立ち飲み。レモンサワーや唐揚げを楽しめる。",
+    "status": "open",
+    "checked": "2026年9月の取材と食べログの口コミを2026年10月27日に確認",
+    "sources": [
+      "https://japanida.com/2026/09/11/tachinomiyayelloakihabara/",
+      "https://tabelog.com/tokyo/A1310/A131001/13263266/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "sweep-tl-13243379",
+    "name": "THE DAY east tokyo",
+    "kind": "tachinomi",
+    "area": "浅草",
+    "ward": "台東区",
+    "address": "東京都台東区花川戸1-13-3",
+    "pin": [
+      35.7133137587062,
+      139.79957279468528
+    ],
+    "social": 3,
+    "solo": 3,
+    "desc": "浅草のビアバー。立ち飲みスペースでクラフトビールと料理を楽しめる。",
+    "status": "open",
+    "checked": "公式サイトと2026年8月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://www.theday.beer/",
+      "https://tabelog.com/tokyo/A1311/A131102/13243379/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "sweep-tl-13276074",
+    "name": "Dochaku",
+    "kind": "tachinomi",
+    "area": "浅草",
+    "ward": "台東区",
+    "address": "東京都台東区西浅草2-17-11",
+    "pin": [
+      35.71341183870321,
+      139.7903784846927
+    ],
+    "social": 3,
+    "solo": 3,
+    "desc": "西浅草のワインと野菜料理の店。1階に立ち飲みスペースがある。",
+    "status": "open",
+    "checked": "公式サイトと2026年3月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://dochaku.foodre.jp/",
+      "https://tabelog.com/tokyo/A1311/A131102/13276074/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "sweep-tl-13278311",
+    "name": "バー ギフ",
+    "kind": "tachinomi",
+    "area": "浅草",
+    "ward": "台東区",
+    "address": "東京都台東区浅草2-21-1 2F",
+    "pin": [
+      35.71636213789691,
+      139.79334568355864
+    ],
+    "social": 3,
+    "solo": 3,
+    "desc": "浅草の立ち飲みバー。日本酒やワイン、おつまみを楽しめる。",
+    "status": "open",
+    "checked": "2026年の立ち飲み紹介を2026年10月27日に確認",
+    "sources": [
+      "https://japanida.com/2026/02/14/tachinomiasakusa/",
+      "https://tabelog.com/tokyo/A1311/A131102/13278311/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "sweep-tl-13232741",
+    "name": "座魚場まるこ",
+    "kind": "tachinomi",
+    "area": "浜松町",
+    "ward": "港区",
+    "address": "東京都港区浜松町2-12-11",
+    "pin": [
+      35.65357839873007,
+      139.75542332411285
+    ],
+    "social": 3,
+    "solo": 3,
+    "desc": "浜松町の酒場。1階に立ち飲み、2階に着席スペースがある。",
+    "status": "open",
+    "checked": "公式サイトと2026年7月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://kojima-showten.com/?page_id=41",
+      "https://tabelog.com/tokyo/A1314/A131401/13232741/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "sweep-tl-13273472",
+    "name": "ICHIGOYA 谷中銀座店",
+    "kind": "tachinomi",
+    "area": "谷中",
+    "ward": "台東区",
+    "address": "東京都台東区谷中3-11-12 1、2F",
+    "pin": [
+      35.727658237881066,
+      139.76611388369184
+    ],
+    "social": 4,
+    "solo": 3,
+    "desc": "谷中銀座の小さな立ち飲みワインバー。",
+    "status": "open",
+    "checked": "2026年の地域イベント掲載と店舗情報を2026年10月27日に確認",
+    "sources": [
+      "https://www.yanesen-shops.com/shopdata/ichigoya_yanaka",
+      "https://tabelog.com/tokyo/A1311/A131106/13273472/"
+    ],
+    "talk": "地域の店舗紹介では、コンパクトな店内で会話を楽しめる店として紹介されている。",
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "sweep-tl-13232616",
+    "name": "大衆酒場神田屋 中野北口店",
+    "kind": "tachinomi",
+    "area": "中野",
+    "ward": "中野区",
+    "address": "東京都中野区中野5-56-15 三京ビル 1F",
+    "pin": [
+      35.708337488666956,
+      139.66641993472834
+    ],
+    "social": 3,
+    "solo": 3,
+    "desc": "中野駅北口の立ち飲みもできる大衆酒場。",
+    "status": "open",
+    "checked": "2026年の立ち飲み紹介と2026年10月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://japanida.com/2026/08/12/tachinominakano/",
+      "https://tabelog.com/tokyo/A1319/A131902/13232616/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "sweep-tl-13235450",
+    "name": "錦糸町 もつ焼のんき",
+    "kind": "tachinomi",
+    "area": "錦糸町",
+    "ward": "墨田区",
+    "address": "東京都墨田区錦糸3-6-1 クリハラビル 1F",
+    "pin": [
+      35.6982698787202,
+      139.81352516452353
+    ],
+    "social": 3,
+    "solo": 3,
+    "desc": "錦糸町で、もつ焼きなどを楽しめる酒場。立ち飲み利用も紹介されている。",
+    "status": "open",
+    "checked": "2026年の立ち飲み紹介と2026年9月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://japanida.com/2026/05/09/tachinomikinshicho/",
+      "https://tabelog.com/tokyo/A1312/A131201/13235450/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "sweep-tabata-asuka",
+    "name": "立ち飲み あすか",
+    "kind": "tachinomi",
+    "area": "田端",
+    "ward": "北区",
+    "address": "東京都北区田端1-21-8 NSKビル101号",
+    "social": 4,
+    "solo": 4,
+    "desc": "田端駅近くの小さな立ち飲みバー。",
+    "status": "open",
+    "checked": "2026年10月の訪問記録と店舗サイトを2026年10月27日に確認",
+    "sources": [
+      "https://bar-asuka.com/",
+      "https://ameblo.jp/beat0224/video-12974176382.html"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "sweep-tabatabar",
+    "name": "タバタバー",
+    "kind": "tachinomi",
+    "area": "田端",
+    "ward": "荒川区",
+    "address": "東京都荒川区東尾久4-52-14-103",
+    "social": 4,
+    "solo": 4,
+    "desc": "田端の地域情報を発信する小さな立ち飲みバー。",
+    "status": "uncertain",
+    "checked": "店舗サイトと紹介記事。最近の営業は未確認を2026年10月27日に確認",
+    "sources": [
+      "https://bar.tabatime.net/",
+      "https://japanida.com/2025/05/10/tachinomiyatabatabar/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "hotei-tl-13236856",
+    "name": "ほていちゃん 上野3号店",
+    "area": "上野",
+    "ward": "台東区",
+    "address": "東京都台東区上野7-2-5 ニュー上野ビル 1F",
+    "kind": "tachinomi",
+    "pin": [
+      35.712645208699655,
+      139.77769040469383
+    ],
+    "desc": "気軽に立ち寄れる大衆酒場。立ち飲みスペースもある。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "店舗の公式情報を2026年10月27日に確認",
+    "sources": [
+      "https://www.hoteichan-tokyo.com/ueno3",
+      "https://tabelog.com/tokyo/A1311/A131101/13236856/",
+      "https://japanida.com/2025/02/02/tachinomiueno/"
+    ],
+    "hours": "平日 15:00〜23:15／土・日・祝 13:00〜23:15",
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "hotei-tl-13252108",
+    "name": "ほていちゃん 上野4号店",
+    "area": "上野",
+    "ward": "台東区",
+    "address": "東京都台東区上野6-13-2 渡辺上野ビル 2F",
+    "kind": "sakaba",
+    "pin": [
+      35.710459078700275,
+      139.77527466467345
+    ],
+    "desc": "気軽に立ち寄れる大衆酒場。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "店舗の公式情報を2026年10月27日に確認",
+    "sources": [
+      "https://www.hoteichan-tokyo.com/ueno4",
+      "https://tabelog.com/tokyo/A1311/A131101/13252108/"
+    ],
+    "hours": "月〜木 13:00〜23:00／金・祝前日 13:00〜23:15／土 11:30〜23:15／日・祝 11:30〜23:00",
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "hotei-tl-13245205",
+    "name": "ほていちゃん 浅草店",
+    "area": "浅草",
+    "ward": "台東区",
+    "address": "東京都台東区浅草2-15-2",
+    "kind": "tachinomi",
+    "pin": [
+      35.715397498703034,
+      139.79377648471038
+    ],
+    "desc": "気軽に立ち寄れる大衆酒場。立ち飲みスペースもある。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "店舗の公式情報を2026年10月27日に確認",
+    "sources": [
+      "https://www.hoteichan-tokyo.com/asakusa",
+      "https://tabelog.com/tokyo/A1311/A131102/13245205/",
+      "https://japanida.com/2026/02/14/tachinomiasakusa/"
+    ],
+    "hours": "平日 12:00〜22:30／土・日・祝 11:00〜22:30",
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "hotei-tl-13247863",
+    "name": "ほていちゃん 池袋東口店",
+    "area": "池袋",
+    "ward": "豊島区",
+    "address": "東京都豊島区南池袋1-19-12 山の手ビル 東館 1F",
+    "kind": "tachinomi",
+    "pin": [
+      35.72773283786397,
+      139.71261898373007
+    ],
+    "desc": "気軽に立ち寄れる大衆酒場。立ち飲みスペースもある。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "店舗の公式情報を2026年10月27日に確認",
+    "sources": [
+      "https://www.hoteichan-tokyo.com/ikebukuro-higashiguchi",
+      "https://tabelog.com/tokyo/A1305/A130501/13247863/"
+    ],
+    "hours": "月〜木 15:00〜23:00／金・祝前日 15:00〜23:30／土 12:00〜23:30／日・祝 12:00〜23:00",
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "hotei-tl-13262959",
+    "name": "ほていちゃん 有楽町店",
+    "area": "有楽町",
+    "ward": "千代田区",
+    "address": "東京都千代田区丸の内3-6-4",
+    "kind": "tachinomi",
+    "pin": [
+      35.676243548718716,
+      139.7649304143351
+    ],
+    "desc": "気軽に立ち寄れる大衆酒場。立ち飲みスペースもある。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "店舗の公式情報を2026年10月27日に確認",
+    "sources": [
+      "https://www.hoteichan-tokyo.com/yurakucho",
+      "https://tabelog.com/tokyo/A1301/A130102/13262959/",
+      "https://japanida.com/2025/02/20/tachinomiyurakucho/"
+    ],
+    "hours": "平日 15:00〜23:00／土・日・祝 13:00〜23:00",
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "hotei-tl-13262075",
+    "name": "ほていちゃん 立川南口店",
+    "area": "立川",
+    "ward": "立川市",
+    "address": "東京都立川市柴崎町3-5-3 立川第一ビル 1F",
+    "kind": "sakaba",
+    "pin": [
+      35.696463838236305,
+      139.41445818426865
+    ],
+    "desc": "気軽に立ち寄れる大衆酒場。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "店舗の公式情報を2026年10月27日に確認",
+    "sources": [
+      "https://www.hoteichan-tokyo.com/tachikawa-minamiguchi",
+      "https://tabelog.com/tokyo/A1329/A132901/13262075/"
+    ],
+    "hours": "平日 15:00〜23:15／土・日・祝 12:00〜23:15",
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "hotei-tl-13325479",
+    "name": "ほていちゃん 国分寺南口店",
+    "area": "国分寺",
+    "ward": "国分寺市",
+    "address": "東京都国分寺市南町2-16-19 加藤ビル 1F",
+    "kind": "tachinomi",
+    "pin": [
+      35.69935227861363,
+      139.48107275476747
+    ],
+    "desc": "気軽に立ち寄れる大衆酒場。立ち飲みスペースもある。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "店舗の公式情報を2026年10月27日に確認",
+    "sources": [
+      "https://www.hoteichan-tokyo.com/kokubunji-minamiguchi",
+      "https://tabelog.com/tokyo/A1325/A132502/13325479/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "regional-tl-13272876",
+    "name": "ミケトラ STAND WINE BAR",
+    "area": "赤羽",
+    "ward": "北区",
+    "address": "東京都北区赤羽1-19-3 内藤ビル 1F",
+    "kind": "tachinomi",
+    "pin": [
+      35.780119837833055,
+      139.72000618425406
+    ],
+    "desc": "赤羽のスタンディングワインバー。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "公式サイトを確認を2026年10月27日に確認",
+    "sources": [
+      "https://miketora.com/",
+      "https://tabelog.com/tokyo/A1323/A132305/13272876/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "regional-tl-13095821",
+    "name": "フェッテパニッサ",
+    "area": "浅草",
+    "ward": "台東区",
+    "address": "東京都台東区浅草2-5-4",
+    "kind": "tachinomi",
+    "pin": [
+      35.71362817870413,
+      139.7936807546926
+    ],
+    "desc": "浅草でイタリアの料理とお酒を楽しめる立ち飲み。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "2026年の立ち飲み紹介と2026年9月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://japanida.com/2026/02/14/tachinomiasakusa/",
+      "https://tabelog.com/tokyo/A1311/A131102/13095821/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "regional-tl-13123270",
+    "name": "浅草サンボア",
+    "area": "浅草",
+    "ward": "台東区",
+    "address": "東京都台東区浅草1-16-8",
+    "kind": "tachinomi",
+    "pin": [
+      35.71189946870547,
+      139.79447522467453
+    ],
+    "desc": "浅草のスタンディングバー。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "2026年の立ち飲み紹介と2026年10月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://japanida.com/2026/02/14/tachinomiasakusa/",
+      "https://tabelog.com/tokyo/A1311/A131102/13123270/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "regional-tl-13300987",
+    "name": "クラノバ",
+    "area": "五反田",
+    "ward": "品川区",
+    "address": "東京都品川区東五反田2-2-16 富久屋ニッカ共同ビル 1F",
+    "kind": "tachinomi",
+    "pin": [
+      35.62560583873813,
+      139.72492848385164
+    ],
+    "desc": "五反田駅近くで日本酒を楽しめる立ち飲み。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "2026年7月の口コミと店舗掲載を2026年10月27日に確認",
+    "sources": [
+      "https://tabelog.com/tokyo/A1316/A131603/13300987/dtlrvwlst/",
+      "https://tabelog.com/tokyo/A1316/A131603/13300987/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "regional-tl-13127353",
+    "name": "かん田新月",
+    "area": "神田",
+    "ward": "千代田区",
+    "address": "東京都千代田区内神田2-12-12 北川ビル１Ｆ",
+    "kind": "tachinomi",
+    "pin": [
+      35.69141664820436,
+      139.76814119511585
+    ],
+    "desc": "神田の立ち飲みバー。",
+    "social": 3,
+    "solo": 3,
+    "status": "uncertain",
+    "checked": "店舗紹介と2025年12月の口コミ。最近の営業は未確認を2026年10月27日に確認",
+    "sources": [
+      "https://japanida.com/2025/03/19/tachinomikanda/",
+      "https://tabelog.com/tokyo/A1310/A131002/13127353/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "regional-tl-13283709",
+    "name": "酒パチパチ",
+    "area": "中野",
+    "ward": "中野区",
+    "address": "東京都中野区中野5-55-10",
+    "kind": "tachinomi",
+    "pin": [
+      35.70872578866664,
+      139.66621376473242
+    ],
+    "desc": "中野の酒場。立ち飲み利用もできる。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "2026年の立ち飲み紹介と2026年10月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://japanida.com/2026/08/12/tachinominakano/",
+      "https://tabelog.com/tokyo/A1319/A131902/13283709/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "regional-tl-13168602",
+    "name": "中野ビール工房",
+    "area": "中野",
+    "ward": "中野区",
+    "address": "東京都中野区中野5-53-4",
+    "kind": "tachinomi",
+    "pin": [
+      35.70918001866649,
+      139.6666375547367
+    ],
+    "desc": "中野の店内醸造のクラフトビールを楽しめる店。立ち飲み利用も紹介されている。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "公式サイトと2026年9月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://www.beerkobo.com/shop/detail.html?id=213",
+      "https://tabelog.com/tokyo/A1319/A131902/13168602/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "regional-tl-13207988",
+    "name": "ANOTHER8",
+    "area": "目黒",
+    "ward": "目黒区",
+    "address": "東京都目黒区下目黒1-2-18 横河ビルヂング 1F",
+    "kind": "tachinomi",
+    "pin": [
+      35.63378393872925,
+      139.71333573394242
+    ],
+    "desc": "目黒のクラフトビールと料理を楽しめるバー。立ち飲み利用も紹介されている。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "2026年の取材と2026年9月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://otonano-shumatsu.com/articles/567308/2",
+      "https://tabelog.com/tokyo/A1316/A131601/13207988/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "regional-tl-13299115",
+    "name": "5bottles",
+    "area": "恵比寿",
+    "ward": "渋谷区",
+    "address": "東京都渋谷区恵比寿南1-14-1 山口ビル 1F",
+    "kind": "tachinomi",
+    "pin": [
+      35.64521267872103,
+      139.7103541640599
+    ],
+    "desc": "恵比寿の小さなバル。コの字カウンターでお酒を楽しめる。",
+    "social": 4,
+    "solo": 3,
+    "status": "open",
+    "checked": "公式サイトと2026年6月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://5bottles.jp/",
+      "https://tabelog.com/tokyo/A1303/A130302/13299115/"
+    ],
+    "skip_yokocho_link": true,
+    "talk": "店の公式サイトでは、コの字カウンターを囲んで会話を楽しむ雰囲気が紹介されている。"
+  },
+  {
+    "id": "regional-tl-13272497",
+    "name": "TAP&TUMBLER 恵比寿店",
+    "area": "恵比寿",
+    "ward": "渋谷区",
+    "address": "東京都渋谷区恵比寿4-6-1 恵比寿ＭＦビル 1F",
+    "kind": "tachinomi",
+    "pin": [
+      35.64591193872125,
+      139.71240838406553
+    ],
+    "desc": "恵比寿でクラフトビールの量り売りを楽しめる店。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "公式サイトと2026年7月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://www.craftbeers.tokyo/tap-tumbler-ebisu",
+      "https://tabelog.com/tokyo/A1303/A130302/13272497/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "regional-tl-13219234",
+    "name": "かめじま商店",
+    "area": "茅場町",
+    "ward": "中央区",
+    "address": "東京都中央区日本橋茅場町1-12-11 1F",
+    "kind": "tachinomi",
+    "pin": [
+      35.679461998721656,
+      139.78058923435663
+    ],
+    "desc": "茅場町のビストロ。スタンディング席もある。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "公式予約ページと2026年7月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://yoyaku.toreta.in/kamejimasyouten",
+      "https://tabelog.com/tokyo/A1302/A130203/13219234/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "regional-tl-13284453",
+    "name": "座standbar Base",
+    "area": "新橋",
+    "ward": "港区",
+    "address": "東京都港区新橋4-19-10 タカソビル B1F",
+    "kind": "tachinomi",
+    "pin": [
+      35.66427815872391,
+      139.75738762421952
+    ],
+    "desc": "新橋の酒場。立ち飲みとテーブル席を選べる。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "店舗情報と2026年10月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://r.gnavi.co.jp/cxac7g270000/",
+      "https://tabelog.com/tokyo/A1301/A130103/13284453/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "regional-tl-13151226",
+    "name": "静岡の美味しいもの ガッツ",
+    "area": "高田馬場",
+    "ward": "新宿区",
+    "address": "東京都新宿区高田馬場2-19-8 阿部ビル 1F",
+    "kind": "tachinomi",
+    "pin": [
+      35.71428162867533,
+      139.70456424476166
+    ],
+    "desc": "高田馬場で静岡おでんや郷土料理を楽しめる酒場。立ち飲み利用も紹介されている。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "公式サイトと2026年7月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://shizokaoden-guts.red/about-guts/",
+      "https://tabelog.com/tokyo/A1305/A130503/13151226/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "regional-tl-13195960",
+    "name": "JOLLYS LIQUOR STORE",
+    "area": "恵比寿",
+    "ward": "渋谷区",
+    "address": "東京都渋谷区東3-15-12 第2阿波屋ビル 1F",
+    "kind": "kakuuchi",
+    "pin": [
+      35.64990001871794,
+      139.70997662410753
+    ],
+    "desc": "恵比寿の酒販店。購入したお酒を店内で楽しめる角打ち。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "公式サイトと2026年8月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://www.jollys.jp/store/",
+      "https://tabelog.com/tokyo/A1303/A130302/13195960/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "regional-tl-13209933",
+    "name": "目黒日本酒バル いと。スタンド",
+    "area": "目黒",
+    "ward": "目黒区",
+    "address": "東京都目黒区目黒1-4-12",
+    "kind": "tachinomi",
+    "pin": [
+      35.63444607872891,
+      139.71358436394888
+    ],
+    "desc": "目黒の日本酒を楽しめる立ち飲み。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "2026年5月の口コミと店舗掲載を2026年10月27日に確認",
+    "sources": [
+      "https://map.yahoo.co.jp/v3/place/RjPtcPQkWqY",
+      "https://tabelog.com/tokyo/A1316/A131601/13209933/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "regional-tl-13219649",
+    "name": "晩杯屋 思い出横丁店",
+    "area": "新宿",
+    "ward": "新宿区",
+    "address": "東京都新宿区西新宿1-2-8 湊屋ビル 1F・2F",
+    "kind": "tachinomi",
+    "pin": [
+      35.692701704316605,
+      139.699709041455
+    ],
+    "desc": "新宿西口の思い出横丁にある立ち飲み酒場。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "店舗の公式情報と2026年7月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://stores.toridoll.com/910039",
+      "https://tabelog.com/tokyo/A1304/A130401/13219649/"
+    ],
+    "skip_yokocho_link": true,
+    "yokocho": "shinjuku-omoide-yokocho"
+  },
+  {
+    "id": "regional-tl-13110466",
+    "name": "立呑み ひなどり",
+    "area": "新宿",
+    "ward": "新宿区",
+    "address": "東京都新宿区西新宿1-16-8",
+    "kind": "tachinomi",
+    "pin": [
+      35.689001937883816,
+      139.69766468334936
+    ],
+    "desc": "新宿西口の小さな立ち飲み。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "2026年8月の取材と2026年5月の訪問記録を2026年10月27日に確認",
+    "sources": [
+      "https://japanida.com/2026/08/14/tachinomiyahinadori/",
+      "https://tabelog.com/tokyo/A1304/A130401/13110466/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "regional-tl-13208803",
+    "name": "Mikkeller Tokyo",
+    "area": "渋谷",
+    "ward": "渋谷区",
+    "address": "東京都渋谷区道玄坂2-19-11 中村ビル 1F",
+    "kind": "tachinomi",
+    "pin": [
+      35.659471828707424,
+      139.696032144214
+    ],
+    "desc": "渋谷で各地のクラフトビールを楽しめる立ち飲みバー。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "公式サイトと2026年9月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://www.mikkeller.com/locations/mikkeller-tokyo",
+      "https://tabelog.com/tokyo/A1303/A130301/13208803/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "regional-tl-13199539",
+    "name": "TITANS Craft Beer Taproom & Bottle Shop",
+    "area": "大塚",
+    "ward": "豊島区",
+    "address": "東京都豊島区南大塚3-53-7",
+    "kind": "tachinomi",
+    "pin": [
+      35.73075512867246,
+      139.72842669491132
+    ],
+    "desc": "大塚のクラフトビール店。立ち飲みと着席の利用ができる。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "2026年10月のイベント告知と2026年8月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://www.souvenirshopshop.com/blog/2026/10/10/140155",
+      "https://tabelog.com/tokyo/A1323/A132302/13199539/"
+    ],
+    "skip_yokocho_link": true
+  },
+  {
+    "id": "regional-tl-13263442",
+    "name": "花街ノ酒場 TORA",
+    "area": "渋谷",
+    "ward": "渋谷区",
+    "address": "東京都渋谷区道玄坂2-19-10",
+    "kind": "tachinomi",
+    "pin": [
+      35.65938422870745,
+      139.69597597421316
+    ],
+    "desc": "渋谷・百軒店の酒場。立ち飲み利用も紹介されている。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "公式サイトと2026年の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://hanamachitora.madoapp.net/",
+      "https://tabelog.com/tokyo/A1303/A130301/13263442/"
+    ],
+    "skip_yokocho_link": true,
+    "yokocho": "shibuya-hyakkendana"
+  },
+  {
+    "id": "regional-tl-13043384",
+    "name": "野焼 新橋総本店",
+    "area": "新橋",
+    "ward": "港区",
+    "address": "東京都港区新橋2-8-16 石田ビル 1F",
+    "kind": "tachinomi",
+    "pin": [
+      35.667344237916254,
+      139.75632958308947
+    ],
+    "desc": "新橋のもつ焼きを楽しめる酒場。立ち飲み利用も紹介されている。",
+    "social": 3,
+    "solo": 3,
+    "status": "open",
+    "checked": "立ち飲み紹介と2026年6月の口コミを2026年10月27日に確認",
+    "sources": [
+      "https://japanida.com/2025/03/04/tachinomishimbashi/",
+      "https://tabelog.com/tokyo/A1301/A130103/13043384/"
+    ],
+    "skip_yokocho_link": true
+  }
+]

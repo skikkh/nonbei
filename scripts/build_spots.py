@@ -384,6 +384,11 @@ def clean(s):
     if s.get("pin"):  # [lat, lng] of the shop's own map pin on a listing site (Tabelog, Hotpepper)
         out["lat"], out["lng"] = s["pin"]
         out["pinned"] = True
+    if s.get("official_pin"):  # [lat, lng] on the operator's own shop map
+        out["lat"], out["lng"] = s["official_pin"]
+        out["pinned"] = "official"
+    if s.get("skip_yokocho_link"):
+        out["_skip_yokocho_link"] = True
     out["kana"] = out.pop("name_kana")
     out["en"] = out.pop("name_en")
     out["price"] = out.pop("price_note")
@@ -421,7 +426,7 @@ def link_members(spots):
     yks = [(y, [cores(m) for m in y["members"]]) for y in spots if y["kind"] == "yokocho" and y.get("members")]
     n = 0
     for s in spots:
-        if s["kind"] == "yokocho" or s.get("yokocho"):
+        if s["kind"] == "yokocho" or s.get("yokocho") or s.get("_skip_yokocho_link"):
             continue
         mine, best = cores(s["name"]), None
         for y, mem in yks:
@@ -510,8 +515,9 @@ def main():
             continue
         pos = {"lat": g["lat"], "lng": g["lng"], "geo": {"号": "gsi", "番": "gsi-block"}.get(g["level"], "approx")}
         if g["level"] == "manual":
-            pos["geo"] = "listing" if s.pop("pinned", False) else "manual"
-        hit = best_osm(s, g) if pos["geo"] not in ("manual", "listing") else None
+            pinned = s.pop("pinned", False)
+            pos["geo"] = "official" if pinned == "official" else "listing" if pinned else "manual"
+        hit = best_osm(s, g) if pos["geo"] not in ("manual", "listing", "official") else None
         if hit:
             (score, negd), c, d = hit
             limit = {"号": 150, "番": 300}.get(g["level"], 700)

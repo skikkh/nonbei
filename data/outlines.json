@@ -83,6 +83,36 @@
   ],
   "width": 3
  },
+ "akasaka-misuji-dori": {
+  "center": [
+   35.6745,
+   139.7368
+  ],
+  "fronting": true,
+  "max_building": 700,
+  "note": "赤坂3丁目の飲食店街を、一ツ木通り・赤坂みすじ通り・エスプラナード赤坂通りの3本の通りと、それらをつなぐ横道（北は青山通り側から南は赤坂通りまで）に面した建物でまとめて囲んだ。範囲が広い界隈なので、通りに面した建物（6m以内）を中心にしている。",
+  "sources": [
+   "https://4travel.jp/dm_shisetsu/11328641",
+   "https://www.openstreetmap.org/way/560240403",
+   "https://townphoto.net/tokyo/akasakamitsuke11.html"
+  ],
+  "ways": [
+   40969711,
+   48682925,
+   145661178,
+   560240403,
+   40969713,
+   40969742,
+   44075223,
+   116433052,
+   161956593,
+   454590638,
+   454590639,
+   454590640,
+   454590644
+  ],
+  "width": 6
+ },
  "akitsu-nishi-no-hoppy-dori": {
   "center": [
    35.7778,
@@ -1635,6 +1665,27 @@
   ],
   "width": 3
  },
+ "ikebukuro-sunshine-chuo-dori": {
+  "center": [
+   35.7298761,
+   139.7135683
+  ],
+  "exclude": [
+   "w99288996"
+  ],
+  "fronting": true,
+  "max_building": 900,
+  "note": "池袋駅東口前、サンシャイン60通りとグリーン大通りの間を十字に走るサンシャイン中央通り（OSMの同名3本）と、その通りに面したビル群を囲んだ。東西の通りは明治通り側から特別区道まで、南北の通りはサンシャイン60通りからグリーン大通りまで。",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2023/04/sunshinechyuuoudoori.html"
+  ],
+  "ways": [
+   116846622,
+   116846623,
+   116846624
+  ],
+  "width": 5
+ },
  "ikejiri-chokotto-yokocho": {
   "buildings": [
    "w589401989",
@@ -1670,6 +1721,100 @@
    "https://san-tatsu.jp/articles/116640/",
    "https://www.tv-tokyo.co.jp/adomachi/backnumber/20240525/144960.html"
   ]
+ },
+ "itabashi-horoyoi-yokocho": {
+  "buildings": [
+   "w1516217120",
+   "w1516217118",
+   "w519107906",
+   "w1516217119",
+   "w1516217123"
+  ],
+  "center": [
+   35.74585,
+   139.720093
+  ],
+  "fronting": true,
+  "max_building": 200,
+  "note": "板橋駅東口の北、埼京線（赤羽線）の線路の東側に沿う細い路地（河内屋のある滝野川7-1付近）と、その線路側に並ぶ小さな長屋の建物、さらに北の踏切脇（松月の滝野川6-86付近）の線路沿いの小さな建物を囲んだ。",
+  "polys": [
+   [
+    [
+     35.7463794,
+     139.7202669
+    ],
+    [
+     35.7463652,
+     139.7203539
+    ],
+    [
+     35.7463045,
+     139.7203852
+    ],
+    [
+     35.746313,
+     139.7203226
+    ]
+   ]
+  ],
+  "sources": [
+   "https://tokyodeep.info/guide/kita-ku/",
+   "https://tabelog.com/en/tokyo/A1322/A132201/13120905/"
+  ],
+  "ways": [
+   787790848
+  ],
+  "width": 4
+ },
+ "itabashi-nishiguchi-shokai": {
+  "buildings": [
+   "w684947682",
+   "w684947681",
+   "w684947678",
+   "w684947679",
+   "w684947674",
+   "w684947675",
+   "w684947676"
+  ],
+  "center": [
+   35.7468071,
+   139.718765
+  ],
+  "fronting": true,
+  "max_building": 600,
+  "note": "板橋駅西口を出て北（左）へ、板橋1丁目16〜19番の飲み屋が並ぶ一画。北海 三四郎（板橋1-19-3）のある通りから、駅前ロータリー側の雑居ビル群（スナックが入るビル）まで、間を斜めに通る裏道とグリーンロード沿いの小さな建物を囲んだ。範囲は住所の番地と店の位置からの推定。",
+  "polys": [
+   [
+    [
+     35.74692,
+     139.7187041
+    ],
+    [
+     35.746913,
+     139.7187737
+    ],
+    [
+     35.7466165,
+     139.7186989
+    ],
+    [
+     35.7466306,
+     139.7186119
+    ]
+   ]
+  ],
+  "sources": [
+   "https://www.nikkan-gendai.com/articles/view/life/219931",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20231007/144284.html",
+   "https://www.rehouse.co.jp/relifemode/column/burarehouse/itabashi/"
+  ],
+  "ways": [
+   182552400,
+   1086853532,
+   1086853533,
+   177769589
+  ],
+  "width": 5
  },
  "jiyugaoka-bikangai": {
   "center": [
@@ -1795,6 +1940,29 @@
   ],
   "ways": [
    181126643
+  ],
+  "width": 4
+ },
+ "jujo-ginza-higashidori": {
+  "center": [
+   35.761127,
+   139.72168
+  ],
+  "exclude": [
+   "w247979091"
+  ],
+  "fronting": true,
+  "max_building": 500,
+  "note": "十条銀座商店街の本通りから東へ、埼京線の踏切に出るまでの十条銀座東通り（約80m）と、香港亭の脇から南へ入る路地プチロード（斎藤酒場のある路地、約65m）、およびそれらに面した建物を囲んだ。",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2023/03/juujouginzahigashi.html",
+   "https://san-tatsu.jp/articles/446292/"
+  ],
+  "ways": [
+   177942844,
+   181321259,
+   181321250,
+   181321261
   ],
   "width": 4
  },
@@ -2782,6 +2950,20 @@
   ],
   "width": 5
  },
+ "meguro-meguro-shinbashi": {
+  "buildings": [
+   "w684192331"
+  ],
+  "center": [
+   35.63425,
+   139.71085
+  ],
+  "note": "目黒通り沿い、目黒新橋の北東たもとにある目黒新橋マンション（目黒1-24-19）。1階の屋内横丁なので、べろべろばーの位置に面する建物1棟を囲んだ。建物の特定は住所の位置情報からの推定。",
+  "sources": [
+   "https://www.timeout.jp/tokyo/ja/nightlife/yokocho-guide-meguro-shinbashi",
+   "https://retty.news/35800/"
+  ]
+ },
  "meidaimae-suzuran-dori": {
   "center": [
    35.66939,
@@ -3729,6 +3911,74 @@
   ],
   "width": 2.5
  },
+ "oji-sakura-shinmichi": {
+  "buildings": [
+   "w1123330937",
+   "w1123330936",
+   "w561330064",
+   "w561330068"
+  ],
+  "center": [
+   35.752411,
+   139.737488
+  ],
+  "fronting": true,
+  "max_building": 200,
+  "note": "王子駅中央口の西、飛鳥山公園の崖下とJR線路の間の路地（王子1-3-18）。2012年の火事で長屋の大半が焼けたため、いま残る木造の建物（路地沿いの4棟）と、長屋があった路地（北の小路から線路沿いの歩道の入口まで約80m）を囲んだ。位置は住所の番地と訪問記からの推定。",
+  "polys": [
+   [
+    [
+     35.7524265,
+     139.7374045
+    ],
+    [
+     35.7524463,
+     139.7374428
+    ],
+    [
+     35.7521329,
+     139.737695
+    ],
+    [
+     35.7521131,
+     139.7376567
+    ]
+   ]
+  ],
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2017/11/blog-post_5.html",
+   "https://tokyodeep.info/oji-sakurashimmichi/"
+  ],
+  "ways": [
+   1346181293
+  ],
+  "width": 4
+ },
+ "oji-yanagi-koji": {
+  "buildings": [
+   "w1164433817",
+   "w1091617721",
+   "w1164433818"
+  ],
+  "center": [
+   35.753967,
+   139.738815
+  ],
+  "fronting": true,
+  "max_building": 200,
+  "note": "王子駅北口前の明治通り東側（王子1-5付近）、迷路のように折れ曲がる小路と、そこに面した小さな店舗の建物群（約40棟の小さな建物のかたまり）を囲んだ。",
+  "sources": [
+   "https://www.snackyokocho.com/article/654/",
+   "https://tokyoexplorersmap.blogspot.com/2017/10/blog-post_30.html"
+  ],
+  "ways": [
+   35536088,
+   35536089,
+   35536090,
+   156344580
+  ],
+  "width": 3
+ },
  "okachimachi-gard-shita": {
   "center": [
    35.707387,
@@ -3855,6 +4105,44 @@
    "https://www.atpress.ne.jp/news/7854102",
    "https://news.allabout.co.jp/articles/o/24354/"
   ]
+ },
+ "otsuka-sangyo-dori": {
+  "center": [
+   35.7297,
+   139.732
+  ],
+  "fronting": true,
+  "max_building": 400,
+  "note": "OSMの「大塚三業通り」（谷端川暗渠に沿って蛇行する細い通り）の全長を囲んだ。大塚駅南口のプラタナス通りを渡った先から、南東のプラタナス通りに突き当たるまで。料亭・割烹・スナックが通り沿いに点在するため区間は絞らず、通りに面した建物（6m以内）を含めた。",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2020/03/ootsukasangyoudoori.html",
+   "https://yuru-rekishi-sanpo.com/231114-otsuka"
+  ],
+  "ways": [
+   115507801
+  ],
+  "width": 4
+ },
+ "otsuka-sunmall": {
+  "center": [
+   35.7306134,
+   139.7283196
+  ],
+  "fronting": true,
+  "max_building": 900,
+  "note": "大塚駅南口の正面、天祖神社へ向かう参道のサンモール大塚商店街のうち、OSMで同名の通り（3本）と飲み屋・スナックが固まる路地（W262）に面した建物を囲んだ。商店街は約100店と長いので、駅側の入口から飲食店が集まるV字の一画に絞った。",
+  "sources": [
+   "https://tokyoexplorersmap.blogspot.com/2023/04/sunmallootsuka.html",
+   "https://bs.tbs.co.jp/sakaba/shop/1202.html"
+  ],
+  "ways": [
+   696974195,
+   696974196,
+   115507743,
+   184543378,
+   1419598379
+  ],
+  "width": 5
  },
  "oyama-ekimae-roji": {
   "center": [
@@ -5405,6 +5693,37 @@
    "https://www.snackyokocho.com/article/1296/",
    "https://www.tv-tokyo.co.jp/adomachi/backnumber/20230218/143585.html"
   ]
+ },
+ "sugamo-ekimae-kitagawa": {
+  "center": [
+   35.734169,
+   139.739044
+  ],
+  "exclude": [
+   "w176206148",
+   "w176206159",
+   "w176206112",
+   "w176206096",
+   "w176206145",
+   "w1348770150",
+   "w1348770148"
+  ],
+  "fronting": true,
+  "max_building": 900,
+  "note": "巣鴨駅北口から白山通りの北側にある、千成（巣鴨2-3-8）とほていちゃん（巣鴨2-1-5）を含む駅前の飲み屋ビルの一画。内側を通る2本の小路（OSMの住宅道2本）とビル裏手の歩道に面した建物を囲んだ。範囲は店の固まりと所属店の位置からの推定。",
+  "sources": [
+   "https://tokyodeep.info/sugamo-2010/",
+   "https://www.tv-tokyo.co.jp/adomachi/backnumber/20150110/"
+  ],
+  "ways": [
+   132857164,
+   176325619,
+   176325623,
+   176325618,
+   176326404,
+   115511558
+  ],
+  "width": 5
  },
  "tachikawa-galera-food-market": {
   "buildings": [

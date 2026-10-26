@@ -135,6 +135,15 @@ def main():
     for s in spots:
         if s["kind"] == "yokocho" or s["status"] == "closed" or (s["id"] in have and have[s["id"]].get("week")):
             continue
+        direct = next((m.group(1) for u in s.get("sources") or [] for m in [re.search(r"hotpepper\.jp/(strJ\d+)", u)] if m), None)
+        if direct:  # the research already names the store page
+            try:
+                info = parse_store(get(f"https://www.hotpepper.jp/{direct}/", direct))
+                info["url"] = f"https://www.hotpepper.jp/{direct}/"
+                res[s["id"]] = info
+            except Exception as e:
+                print("store failed", direct, e, file=sys.stderr)
+            continue
         cores = name_cores(s["name"], place_words(s), [s.get("en")])
         if not cores or not s.get("address"):
             continue

@@ -230,6 +230,9 @@
       this.labels = new Map();   // cell -> labels
       this.pois = [];
       this.chunks = {};
+      this._chunkActive = 0;
+      this._chunkQueue = [];
+      this._wanted = new Set();
       this.chunkOrder = [];
       this.colours = [];
       this.visibleIds = new Set(this.spots.map((s) => s.id));
@@ -252,9 +255,14 @@
       this.ov.className = "nb-overlay";
       this.map.getCanvasContainer().insertBefore(this.ov, this.map.getCanvas().nextSibling);
       this.map.on("load", () => this._init());
-      this.map.on("render", () => this._schedule());
+      this.map.on("render", () => this._schedule(false));
       this.map.on("resize", () => this._schedule());
       this.map.on("moveend", () => this._need());
+      document.addEventListener("visibilitychange", () => { if (!document.hidden) this._schedule(); });
+      window.addEventListener("nb-fonts-ready", () => this._loadFont());
+      if (document.fonts) document.fonts.addEventListener("loadingdone", () => {
+        this._sprites = null; this._schedule();
+      });
     }
 
     // -------------------------------------------------------------- loading
@@ -300,24 +308,39 @@
 
     _need() {
       if (!this.ready) return;
+      this._loadFont();
       const z = this.map.getZoom();
       if (z >= 12) this._loadHi();
-      if (z < 12.8) return;
       const b = this.map.getBounds();
       const [x0, y1] = fromLngLat(b.getWest(), b.getSouth());
       const [x1, y0] = fromLngLat(b.getEast(), b.getNorth());
+      const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
       const want = [];
-      for (const layer of z >= 14.6 ? ["c", "b"] : ["c"]) {
+      for (const layer of z < 12.8 ? [] : z >= 14.6 ? ["c", "b"] : ["c"]) {
         const sz = SIZE[layer], idx = (this.o.chunks || {})[layer] || {};
         for (let x = Math.floor(x0 / sz); x <= Math.floor(x1 / sz); x++) {
           for (let y = Math.floor(y0 / sz); y <= Math.floor(y1 / sz); y++) {
             const key = `${x}_${y}`;
-            if (key in idx) want.push(layer + "/" + key);
+            if (key in idx) want.push({ id: layer + "/" + key,
+              priority: (layer === "b" ? 1e12 : 0) + ((x + 0.5) * sz - cx) ** 2 + ((y + 0.5) * sz - cy) ** 2 });
           }
         }
       }
-      want.forEach((id) => this._loadChunk(id));
-      this._evict(new Set(want));
+      const ids = want.sort((a, b) => a.priority - b.priority).map((w) => w.id);
+      this._wanted = new Set(ids);
+      ids.forEach((id) => { if (this.chunks[id] && this.chunks[id].state === "done") this._touch(id); });
+      this._chunkQueue = ids.filter((id) => !this.chunks[id]);
+      this._pumpChunks();
+      this._evict(this._wanted);
+    }
+    _pumpChunks() {
+      // Keep bandwidth available for the current view and for shop details.
+      while (this._chunkActive < 4 && this._chunkQueue.length) {
+        const id = this._chunkQueue.shift();
+        if (!this._wanted.has(id) || this.chunks[id]) continue;
+        this._chunkActive++;
+        this._loadChunk(id).finally(() => { this._chunkActive--; this._pumpChunks(); });
+      }
     }
 
     async _loadChunk(id) {
@@ -325,6 +348,7 @@
       this.chunks[id] = { state: "loading" };
       try {
         const d = await fetch((this.o.dataUrl || "data/") + id + ".json").then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+        if (!this._wanted.has(id)) { delete this.chunks[id]; return; }
         const f = [], o = d.o;
         d.f.forEach((r) => toGeo(r, o, this.colours, f));
         (d.p || []).forEach((p) => {
@@ -344,6 +368,8 @@
           this.chunks[id] = { state: "done", layers: layers.map((l) => l.id), sid };
           this._touch(id);
         }
+        this._evict(this._wanted);
+        this._loadFont();
         this._schedule();
       } catch (e) {
         delete this.chunks[id];
@@ -419,7 +445,7 @@
       this.map.getSource("yk").setData(this._ykGeo());
       this._schedule();
     }
-    select(id) { this.selected = id; this._schedule(); }
+    select(id) { this.selected = id; this._loadFont(); this._schedule(); }
     /** lit: Map id -> "on" | "off" | "unk"; lanterns and glows follow it */
     setLit(lit) {
       const key = [...lit].map(([k, v]) => k + v).join();
@@ -429,7 +455,7 @@
       if (this.map.getSource("spots")) this.map.getSource("spots").setData(this._spotGeo());
       this._schedule();
     }
-    setHover(id) { if (this.hover !== id) { this.hover = id; this._schedule(); } }
+    setHover(id) { if (this.hover !== id) { this.hover = id; this._loadFont(); this._schedule(); } }
 
     // -------------------------------------------------------------- theme
     setTheme(theme) {
@@ -437,8 +463,11 @@
       this.theme = theme;
       this.P = PAL[theme];
       this.KC = KIND_COL[theme];
+      if (!this.map.getSource("spots")) { this.map.once("load", () => this._applyTheme()); return; }
+      this._applyTheme();
+    }
+    _applyTheme() {
       const m = this.map;
-      if (!m.isStyleLoaded()) return;
       m.setPaintProperty("bg", "background-color", this.P.bg);
       const ids = m.getStyle().layers.map((l) => l.id);
       const fresh = {};
@@ -479,25 +508,65 @@
     // Mincho glyphs for spot names, signs and ward names; with opts.webSans
     // (headless capture) the small labels get BIZ UDPGothic too.
     _loadFont() {
+      clearTimeout(this._fontTimer);
+      this._fontTimer = setTimeout(() => this._loadVisibleFont(), 100);
+    }
+    _loadVisibleFont() {
       if (!document.fonts || !document.fonts.load) return;
+      const sheet = document.getElementById("web-fonts");
+      if (sheet && !sheet.sheet) return;
+      const m = this.map, b = m.getBounds(), z = m.getZoom();
+      const canvas = m.getCanvas(), pad = Math.max(0.3, 120 / Math.max(1, Math.min(canvas.clientWidth, canvas.clientHeight)));
+      const dx = (b.getEast() - b.getWest()) * pad, dy = (b.getNorth() - b.getSouth()) * pad;
       const serif = new Set(), sans = new Set();
-      this.spots.forEach((s) => { for (const ch of s.name) serif.add(ch); });
+      this.spots.forEach((s) => {
+        if (s.id !== this.selected && s.id !== this.hover &&
+          (z < (s.kind === "yokocho" ? 13.2 : 15.6) || s.lng < b.getWest() - dx || s.lng > b.getEast() + dx || s.lat < b.getSouth() - dy || s.lat > b.getNorth() + dy)) return;
+        for (const ch of s.name) serif.add(ch);
+      });
       Object.values(KIND_GLYPH).forEach((g) => serif.add(g));
-      this.labels.forEach((a) => a.forEach((l) => {
+      const [x0, y1] = fromLngLat(b.getWest(), b.getSouth()), [x1, y0] = fromLngLat(b.getEast(), b.getNorth());
+      this._labelsIn(x0, y0, x1, y1).forEach((l) => {
+        if (l.z > Math.floor(z + 0.35)) return;
         const target = l.t === "p" && l.r >= 3 ? serif : sans;
         for (const ch of l.n + l.yomi) target.add(ch);
-      }));
-      const jobs = [document.fonts.load(`800 13px "Shippori Mincho B1"`, [...serif].join(""))];
-      if (this.o.webSans) {
-        SANS = '"BIZ UDPGothic",' + SANS;
-        jobs.push(document.fonts.load(`700 12px "BIZ UDPGothic"`, [...sans].join("")), document.fonts.load(`400 11px "BIZ UDPGothic"`, [...sans].join("")));
+      });
+      this._fontChars = this._fontChars || { serif: new Set(), sans: new Set() };
+      const fresh = (chars, seen) => [...chars].filter((c) => !seen.has(c));
+      const sc = fresh(serif, this._fontChars.serif), nc = fresh(sans, this._fontChars.sans);
+      const jobs = [];
+      if (sc.length) {
+        sc.forEach((c) => this._fontChars.serif.add(c));
+        jobs.push(document.fonts.load(`800 13px "Shippori Mincho B1"`, sc.join("")));
       }
-      Promise.all(jobs).then(() => { this._sprites = null; this.fontsReady = true; this._schedule(); }).catch(() => {});
+      if (this.o.webSans) {
+        if (!this._webSansSet) { SANS = '"BIZ UDPGothic",' + SANS; this._webSansSet = true; }
+        if (nc.length) {
+          nc.forEach((c) => this._fontChars.sans.add(c));
+          jobs.push(document.fonts.load(`700 12px "BIZ UDPGothic"`, nc.join("")), document.fonts.load(`400 11px "BIZ UDPGothic"`, nc.join("")));
+        }
+      }
+      if (!jobs.length) return;
+      Promise.all(jobs).then(() => {
+        this._sprites = null; this.fontsReady = true; this._schedule();
+      }).catch(() => {
+        sc.forEach((c) => this._fontChars.serif.delete(c)); nc.forEach((c) => this._fontChars.sans.delete(c));
+      });
     }
 
-    _schedule() {
-      if (this._raf) return;
-      this._raf = requestAnimationFrame(() => { this._raf = 0; this._draw(); });
+    _schedule(force = true) {
+      // GL also renders while sources load; the overlay only needs changed pixels.
+      if (force) this._dirty = true;
+      if (this._raf || (document.hidden && !this.o.capture)) return;
+      this._raf = requestAnimationFrame(() => {
+        this._raf = 0;
+        if (document.hidden && !this.o.capture) return;
+        const m = this.map, c = m.getCenter(), canvas = m.getCanvas(), p = m.getPadding();
+        const key = [c.lng, c.lat, m.getZoom(), m.getPitch(), m.getBearing(), p.top, p.bottom, p.left, p.right, canvas.width, canvas.height].join();
+        if (!this._dirty && key === this._cameraKey) return;
+        this._dirty = false; this._cameraKey = key;
+        this._draw();
+      });
     }
 
     // lantern sprites per kind / state, drawn once per theme

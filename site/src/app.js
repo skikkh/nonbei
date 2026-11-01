@@ -212,6 +212,7 @@
     m.on("moveend", () => { if (state.scope === "view" || state.sort === "near") renderListSoon(); });
     tick();
     setInterval(tick, 20e3);
+    document.addEventListener("visibilitychange", () => { if (!document.hidden) tick(); });
     window.addEventListener("hashchange", fromHash);
   }
 
@@ -320,7 +321,7 @@
   }
 
   // ---------------------------------------------------------------- list
-  let listT, listRows = [], listSts, listDistances, listEnd = 0, listSignature = "";
+  let listT, listRows = [], listSts, listDistances, listEnd = 0, listSignature = "", listHTML = "", listItemsHTML = "";
   const LIST_BATCH = 60;
   function renderListSoon() { clearTimeout(listT); listT = setTimeout(renderList, 160); }
   function inView(s, b) {
@@ -352,15 +353,19 @@
     listEnd = same ? Math.min(listEnd, rows.length) : 0;
     if (!same) $("#list").scrollTop = 0;
     if (!rows.length) {
-      $("#list").innerHTML = `<li class="empty">${state.scope === "view" && all.length ? `地図の範囲に当てはまる店がありません。<br><button type="button" data-act="all">全域の${all.length}軒を見る</button>` : "当てはまる店がありません。条件を減らしてみてください。"}</li>`;
-      const b = $("#list [data-act=all]");
-      if (b) b.addEventListener("click", () => { state.scope = "all"; syncPressed(); renderList(); });
+      listItemsHTML = "";
+      const html = `<li class="empty">${state.scope === "view" && all.length ? `地図の範囲に当てはまる店がありません。<br><button type="button" data-act="all">全域の${all.length}軒を見る</button>` : "当てはまる店がありません。条件を減らしてみてください。"}</li>`;
+      if (html !== listHTML) {
+        $("#list").innerHTML = html; listHTML = html;
+        const b = $("#list [data-act=all]");
+        if (b) b.addEventListener("click", () => { state.scope = "all"; syncPressed(); renderList(); });
+      }
       return;
     }
-    const end = Math.min(rows.length, Math.max(LIST_BATCH, listEnd));
-    listEnd = 0;
-    $("#list").innerHTML = "";
-    appendRows(false, end);
+    listEnd = Math.min(rows.length, Math.max(LIST_BATCH, listEnd));
+    listItemsHTML = rows.slice(0, listEnd).map(rowHTML).join("");
+    const html = listItemsHTML + moreHTML();
+    if (html !== listHTML) { $("#list").innerHTML = html; listHTML = html; }
   }
   function rowHTML(s) {
       const st = stLabel(listSts.get(s.id));
@@ -378,14 +383,19 @@
         <span class="item-side">${state.favs.has(s.id) ? '<svg class="fav-mark" aria-label="行きたい"><use href="#i-star-f"/></svg>' : ""}${listDistances ? `<br>${Math.round(listDistances.get(s.id) / 10) * 10}m` : ""}</span>
       </button></li>`;
   }
-  function appendRows(focus, limit) {
+  function moreHTML() {
+    return listEnd < listRows.length ? `<li class="list-more"><button type="button" data-more>もっと表示（残り${listRows.length - listEnd}軒）</button></li>` : "";
+  }
+  function appendRows(focus) {
     if (listEnd >= listRows.length) return;
     const list = $("#list"), old = listEnd;
     const more = list.querySelector(".list-more");
     if (more) more.remove();
-    listEnd = Math.min(listRows.length, limit || listEnd + LIST_BATCH);
-    list.insertAdjacentHTML("beforeend", listRows.slice(old, listEnd).map(rowHTML).join("") +
-      (listEnd < listRows.length ? `<li class="list-more"><button type="button" data-more>もっと表示（残り${listRows.length - listEnd}軒）</button></li>` : ""));
+    listEnd = Math.min(listRows.length, listEnd + LIST_BATCH);
+    const added = listRows.slice(old, listEnd).map(rowHTML).join("");
+    listItemsHTML += added;
+    listHTML = listItemsHTML + moreHTML();
+    list.insertAdjacentHTML("beforeend", added + moreHTML());
     if (focus) { const item = list.querySelectorAll(".item")[old]; if (item) item.focus(); }
   }
   const openRank = (st) => (st && st.open ? 2 : st && st.opensAt != null ? 1 : 0);
@@ -399,17 +409,20 @@
 
   // ---------------------------------------------------------------- one spot
   const detailChunks = new Map();
+  const detailRetry = new Set();
   let selectionSerial = 0;
   async function loadDetail(s) {
     const bucket = s._bucket;
     if (!detailChunks.has(bucket)) {
       const path = `details/${D.detail_version}/${bucket.toString(16).padStart(2, "0")}.json`;
-      const request = fetch(dataUrl() + path).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+      const request = fetch(dataUrl() + path, { cache: detailRetry.has(bucket) ? "reload" : "force-cache" })
+        .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then((data) => { detailRetry.delete(bucket); return data; });
       detailChunks.set(bucket, request);
-      request.catch(() => { if (detailChunks.get(bucket) === request) detailChunks.delete(bucket); });
+      request.catch(() => { detailRetry.add(bucket); if (detailChunks.get(bucket) === request) detailChunks.delete(bucket); });
     }
     const data = await detailChunks.get(bucket);
-    if (!data[s.id]) { detailChunks.delete(bucket); throw new Error("missing detail"); }
+    if (!data[s.id]) { detailRetry.add(bucket); detailChunks.delete(bucket); throw new Error("missing detail"); }
     Object.assign(s, data[s.id]);
     s._detailLoaded = true;
   }
@@ -648,6 +661,7 @@
   // ---------------------------------------------------------------- clock
   let lastMin = -1;
   function tick() {
+    if (document.hidden) return;
     const t = new Date(clockOverride() + JST);
     const min = t.getUTCHours() * 60 + t.getUTCMinutes();
     const minute = Math.floor((t.getTime() - JST) / 60000);
@@ -683,9 +697,13 @@
     $("#nav-theme span").textContent = night ? "昼" : "夜";
     $("#nav-theme").title = night ? "昼の地図にする" : "夜の地図にする";
   }
+  let northBearing;
   function syncNorth() {
     if (!atlas) return;
-    $("#north-icon").style.transform = `rotate(${-atlas.map.getBearing()}deg)`;
+    const bearing = atlas.map.getBearing();
+    if (bearing === northBearing) return;
+    northBearing = bearing;
+    $("#north-icon").style.transform = `rotate(${-bearing}deg)`;
   }
   let me;
   function locate() {

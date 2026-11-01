@@ -67,14 +67,22 @@
     }
     return { open: false, closedToday: true };
   }
+  let openMinute = null;
+  const openCache = new Map();
+  function cachedOpenState(s) {
+    const now = clockOverride(), minute = Math.floor(now / 60000);
+    if (minute !== openMinute) { openMinute = minute; openCache.clear(); }
+    if (!openCache.has(s.id)) openCache.set(s.id, openState(s, now));
+    return openCache.get(s.id);
+  }
   /** The lantern is lit only when known hours indicate an open shop. */
   function litState(s) {
     if (s.kind === "yokocho") {
-      const sts = (kids[s.id] || []).map((o) => openState(o)).filter(Boolean);
+      const sts = (kids[s.id] || []).map(cachedOpenState).filter(Boolean);
       if (sts.length) return sts.some((x) => x.open) ? "on" : "off";
       return "off";
     }
-    const st = openState(s);
+    const st = cachedOpenState(s);
     return st && st.open ? "on" : "off";
   }
   function stLabel(st, long) {
@@ -127,7 +135,7 @@
     if (s.status === "closed") return false;
     if (skip !== "kind" && !state.kinds.has(s.kind)) return false;
     const f = state.f;
-    if (f.open) { const st = openState(s); if (!st || !st.open) return false; }
+    if (f.open) { const st = cachedOpenState(s); if (!st || !st.open) return false; }
     if (f.social && (s.social || 0) < 4) return false;
     if (f.solo && (s.solo || 0) < 4) return false;
     if (f.hiru && !s.hiru) return false;
@@ -255,7 +263,15 @@
       fitVisible();
     });
     $("#sort").addEventListener("change", (e) => { state.sort = e.target.value; renderList(); });
-    $("#list").addEventListener("click", (e) => { const b = e.target.closest(".item"); if (b) select(b.dataset.id); });
+    $("#list").addEventListener("click", (e) => {
+      const more = e.target.closest("[data-more]");
+      if (more) { appendRows(true); return; }
+      const b = e.target.closest(".item"); if (b) select(b.dataset.id);
+    });
+    $("#list").addEventListener("scroll", () => {
+      const list = $("#list");
+      if (list.clientHeight && list.scrollHeight - list.scrollTop - list.clientHeight < 500) appendRows(false);
+    }, { passive: true });
     $("#list").addEventListener("mouseover", (e) => { const b = e.target.closest(".item"); if (atlas) atlas.setHover(b ? b.dataset.id : null); });
     $("#list").addEventListener("mouseleave", () => atlas && atlas.setHover(null));
     $("#nav-list").addEventListener("click", () => {
@@ -303,22 +319,24 @@
   }
 
   // ---------------------------------------------------------------- list
-  let listT;
+  let listT, listRows = [], listSts, listDistances, listEnd = 0, listSignature = "";
+  const LIST_BATCH = 60;
   function renderListSoon() { clearTimeout(listT); listT = setTimeout(renderList, 160); }
-  function inView(s) {
-    if (!atlas) return true;
-    const b = atlas.map.getBounds();
+  function inView(s, b) {
+    if (!b) return true;
     return s.lng >= b.getWest() && s.lng <= b.getEast() && s.lat >= b.getSouth() && s.lat <= b.getNorth();
   }
   function renderList() {
     if (!spots) return;
     const all = spots.filter((s) => pass(s));
-    let rows = state.scope === "view" ? all.filter(inView) : all;
+    const bounds = atlas && atlas.map.getBounds();
+    let rows = state.scope === "view" ? all.filter((s) => inView(s, bounds)) : all;
     const c = atlas ? atlas.map.getCenter() : { lat: 35.68, lng: 139.76 };
-    const sts = new Map(rows.map((s) => [s.id, openState(s)]));
+    const sts = new Map(rows.map((s) => [s.id, cachedOpenState(s)]));
+    const distances = state.sort === "near" ? new Map(rows.map((s) => [s.id, dist(c, s)])) : null;
     const key = {
       social: (a, b) => (b.social || 0) - (a.social || 0) || (b.solo || 0) - (a.solo || 0) || openRank(sts.get(b.id)) - openRank(sts.get(a.id)),
-      near: (a, b) => dist(c, a) - dist(c, b),
+      near: (a, b) => distances.get(a.id) - distances.get(b.id),
       open: (a, b) => closeAt(sts.get(b.id)) - closeAt(sts.get(a.id)) || (b.social || 0) - (a.social || 0),
       cheap: (a, b) => (a.budget_min || 9e3) - (b.budget_min || 9e3) || (a.budget_max || 9e3) - (b.budget_max || 9e3),
       name: (a, b) => (a.kana || a.name).localeCompare(b.kana || b.name, "ja"),
@@ -326,15 +344,25 @@
     rows = rows.slice().sort(key);
     $("#count").textContent = rows.length;
     $("#count-sub").textContent = state.scope === "view" ? `軒（全域 ${all.length}軒）` : "軒";
+    const signature = JSON.stringify([state.q, state.area, state.scope, state.sort, [...state.kinds], state.f, [...state.favs]]);
+    const same = signature === listSignature;
+    listSignature = signature;
+    listRows = rows; listSts = sts; listDistances = distances;
+    listEnd = same ? Math.min(listEnd, rows.length) : 0;
+    if (!same) $("#list").scrollTop = 0;
     if (!rows.length) {
       $("#list").innerHTML = `<li class="empty">${state.scope === "view" && all.length ? `地図の範囲に当てはまる店がありません。<br><button type="button" data-act="all">全域の${all.length}軒を見る</button>` : "当てはまる店がありません。条件を減らしてみてください。"}</li>`;
       const b = $("#list [data-act=all]");
       if (b) b.addEventListener("click", () => { state.scope = "all"; syncPressed(); renderList(); });
       return;
     }
-    const showDist = state.sort === "near";
-    $("#list").innerHTML = rows.map((s) => {
-      const st = stLabel(sts.get(s.id));
+    const end = Math.min(rows.length, Math.max(LIST_BATCH, listEnd));
+    listEnd = 0;
+    $("#list").innerHTML = "";
+    appendRows(false, end);
+  }
+  function rowHTML(s) {
+      const st = stLabel(listSts.get(s.id));
       const meta = [
         st ? `<span class="st ${st.cls}">${st.text}</span>` : "",
         `<span>${esc(s.area)}</span>`,
@@ -346,9 +374,18 @@
         <span><span class="item-kana">${esc(s.kana || "")}</span><span class="item-name">${esc(s.name)}</span>
         <span class="item-catch">${esc(s.catch || firstSentence(s.desc))}</span>
         <span class="item-meta">${meta}</span></span>
-        <span class="item-side">${state.favs.has(s.id) ? '<svg class="fav-mark" aria-label="行きたい"><use href="#i-star-f"/></svg>' : ""}${showDist ? `<br>${Math.round(dist(c, s) / 10) * 10}m` : ""}</span>
+        <span class="item-side">${state.favs.has(s.id) ? '<svg class="fav-mark" aria-label="行きたい"><use href="#i-star-f"/></svg>' : ""}${listDistances ? `<br>${Math.round(listDistances.get(s.id) / 10) * 10}m` : ""}</span>
       </button></li>`;
-    }).join("");
+  }
+  function appendRows(focus, limit) {
+    if (listEnd >= listRows.length) return;
+    const list = $("#list"), old = listEnd;
+    const more = list.querySelector(".list-more");
+    if (more) more.remove();
+    listEnd = Math.min(listRows.length, limit || listEnd + LIST_BATCH);
+    list.insertAdjacentHTML("beforeend", listRows.slice(old, listEnd).map(rowHTML).join("") +
+      (listEnd < listRows.length ? `<li class="list-more"><button type="button" data-more>もっと表示（残り${listRows.length - listEnd}軒）</button></li>` : ""));
+    if (focus) { const item = list.querySelectorAll(".item")[old]; if (item) item.focus(); }
   }
   const openRank = (st) => (st && st.open ? 2 : st && st.opensAt != null ? 1 : 0);
   const closeAt = (st) => (st && st.open ? 2000 + st.until : st && st.opensAt != null ? 1000 + st.opensAt : 0);
@@ -574,11 +611,12 @@
   function tick() {
     const t = new Date(clockOverride() + JST);
     const min = t.getUTCHours() * 60 + t.getUTCMinutes();
-    if (min === lastMin) return;
-    lastMin = min;
+    const minute = Math.floor((t.getTime() - JST) / 60000);
+    if (minute === lastMin) return;
+    lastMin = minute;
     const di = dayInfo(t.getTime());
     $("#clock").textContent = `${t.getUTCMonth() + 1}月${t.getUTCDate()}日（${di.hol ? "祝" : DAY_JP[DK[di.dow]]}）${hm(min)}`;
-    const open = spots.filter((s) => s.status !== "closed" && (openState(s) || {}).open).length;
+    const open = spots.filter((s) => s.status !== "closed" && (cachedOpenState(s) || {}).open).length;
     $("#open-count").innerHTML = `いま <b>${open}</b>軒が営業中`;
     if (atlas) atlas.setLit(new Map(spots.filter((s) => s.status !== "closed").map((s) => [s.id, litState(s)])));
     const list = $("#list"), top = list.scrollTop;

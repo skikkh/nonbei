@@ -67,6 +67,8 @@ def build(out=os.path.join(ROOT, "dist", "site")):
     os.makedirs(out, exist_ok=True)
     with open(os.path.join(out, "index.html"), "w", encoding="utf-8") as f:
         f.write(page)
+    os.makedirs(os.path.join(out, "vendor"), exist_ok=True)
+    shutil.copyfile(os.path.join(VENDOR, "maplibre-gl.js"), os.path.join(out, "vendor", "maplibre-gl.js"))
     shutil.copytree(DATA, os.path.join(out, "data"), ignore=shutil.ignore_patterns("chunks.json"))
     with open(os.path.join(out, "data", "spots.json"), "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, separators=(",", ":"))

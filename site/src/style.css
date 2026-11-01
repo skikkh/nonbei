@@ -192,6 +192,8 @@ svg { width: 18px; height: 18px; flex: none; }
 /* 一覧 */
 .list { list-style: none; margin: 0; padding: 0 0 24px; overflow-y: auto; flex: 1; overscroll-behavior: contain; border-top: 1px solid var(--line); }
 .list li { content-visibility: auto; contain-intrinsic-size: auto 92px; }
+.list li.list-more { content-visibility: visible; contain-intrinsic-size: none; padding: 12px 22px; text-align: center; }
+.list-more button { color: var(--text-2); background: transparent; border: 1px solid var(--line); border-radius: 8px; padding: 10px 16px; cursor: pointer; }
 .item {
   width: 100%; display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 13px; align-items: start;
   padding: 14px 22px 13px; border-bottom: 1px solid var(--line); text-align: left; transition: background .12s;

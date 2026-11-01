@@ -411,7 +411,9 @@
         } });
     }
     setVisible(ids) {
-      this.visibleIds = new Set(ids);
+      const next = new Set(ids);
+      if (next.size === this.visibleIds.size && [...next].every((id) => this.visibleIds.has(id))) return;
+      this.visibleIds = next;
       if (!this.map.getSource("spots")) return;
       this.map.getSource("spots").setData(this._spotGeo());
       this.map.getSource("yk").setData(this._ykGeo());
@@ -614,8 +616,14 @@
       const lanternZ = 13.2, nameZ = 15.6;
       const spots = [];
       if (z >= lanternZ) {
+        // On the flat map, skip projection for points well outside the viewport.
+        // Leave pitched maps unchanged, where perspective makes bounds nonlinear.
+        const pad = Math.max(0.3, 120 / Math.max(1, Math.min(W, H)));
+        const dx = (bnd.getEast() - bnd.getWest()) * pad, dy = (bnd.getNorth() - bnd.getSouth()) * pad;
+        const flat = m.getPitch() === 0;
         for (const s of this.spots) {
           if (!this.visibleIds.has(s.id) && s.id !== this.selected) continue;
+          if (flat && (s.lng < bnd.getWest() - dx || s.lng > bnd.getEast() + dx || s.lat < bnd.getSouth() - dy || s.lat > bnd.getNorth() + dy)) continue;
           const p = m.project([s.lng, s.lat]);
           if (!inView(p)) continue;
           spots.push({ s, p });

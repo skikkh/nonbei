@@ -81,6 +81,8 @@ python3 scripts/build_site.py                 # → dist/site/（GitHub Pages �
 
 `build_site.py` は `build_info.py` を呼んで、店ごとの情報（`data/info.json`）を組み立ててからページを書き出します。公開は GitHub Actions（`.github/workflows/pages.yml`）が、main に push されるたびに `dist/site/` をこのリポジトリの GitHub Pages に載せます（Settings → Pages の Source は「GitHub Actions」）。skikkh.github.io リポジトリに置く場合は `scripts/publish_pages.sh` を使います。
 
+公開ページは最初に `dist/site/data/spots-index.json` を読み込み、店の詳細は選択時に `data/details/` から取得します。完全な店舗データの `dist/site/data/spots.json` も、動画など既存の利用先向けに出力します。
+
 縦動画は `npm i playwright` のあと `node promo/capture.js frames` で900コマを撮り、`sh promo/encode.sh` で mp4 にします。
 
 ## データと出典

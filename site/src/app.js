@@ -124,6 +124,7 @@
     three: store.get("nb-three2", false),
   };
   let D, spots, byId, atlas, kids = {};
+  const dataUrl = () => (window.NB_CONFIG && NB_CONFIG.dataUrl || "data/");
   const phone = () => matchMedia("(max-width: 820px)").matches;
 
   function searchText(s) {
@@ -159,7 +160,7 @@
     document.documentElement.dataset.theme = state.theme;
     syncThemeButton();
     try {
-      D = await fetch((window.NB_CONFIG && NB_CONFIG.dataUrl || "data/") + "spots.json").then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+      D = await fetch(dataUrl() + "spots-index.json").then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
     } catch (e) {
       status("店のデータを読み込めませんでした。再読み込みしてください。");
       return;
@@ -397,16 +398,53 @@
   }
 
   // ---------------------------------------------------------------- one spot
+  const detailChunks = new Map();
+  let selectionSerial = 0;
+  async function loadDetail(s) {
+    const bucket = s._bucket;
+    if (!detailChunks.has(bucket)) {
+      const path = `details/${D.detail_version}/${bucket.toString(16).padStart(2, "0")}.json`;
+      const request = fetch(dataUrl() + path).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+      detailChunks.set(bucket, request);
+      request.catch(() => { if (detailChunks.get(bucket) === request) detailChunks.delete(bucket); });
+    }
+    const data = await detailChunks.get(bucket);
+    if (!data[s.id]) { detailChunks.delete(bucket); throw new Error("missing detail"); }
+    Object.assign(s, data[s.id]);
+    s._detailLoaded = true;
+  }
+  function showDetail(s) {
+    $("#detail").innerHTML = detailHTML(s);
+    bindDetail(s);
+  }
+  function detailPending(s, failed) {
+    const el = $("#detail");
+    el.innerHTML = `<div class="d-bar"><button type="button" class="t-btn" data-act="back"><svg><use href="#i-back"/></svg>一覧</button></div>
+      <header class="d-head"><h2 class="d-name">${nameRuby(s)}</h2>
+      <p role="status">${failed ? "店の詳しい情報を読み込めませんでした。" : "店の詳しい情報を読み込んでいます。"}</p>
+      ${failed ? '<button type="button" class="btn" data-act="retry">もう一度読み込む</button>' : ""}</header>`;
+    el.querySelector("[data-act=back]").addEventListener("click", back);
+    const retry = el.querySelector("[data-act=retry]");
+    if (retry) retry.addEventListener("click", () => select(s.id, { fly: false }));
+  }
   function select(id, opts) {
     const s = byId[id];
     if (!s) return;
     opts = opts || {};
+    const serial = ++selectionSerial;
     state.sel = id;
     if (atlas) atlas.select(id);
-    $("#detail").innerHTML = detailHTML(s);
     $("#detail").hidden = false;
     $("#detail").scrollTop = 0;
-    bindDetail(s);
+    if (s._detailLoaded) showDetail(s);
+    else {
+      detailPending(s, false);
+      loadDetail(s).then(() => {
+        if (selectionSerial === serial && state.sel === id) showDetail(s);
+      }).catch(() => {
+        if (selectionSerial === serial && state.sel === id) detailPending(s, true);
+      });
+    }
     if (phone()) sheet(opts.sheet || "half");
     else if ($("#app").classList.contains("drawer-closed")) $("#nav-list").click();
     if (atlas && opts.fly !== false) atlas.flyToSpot(s, phone() ? [0, -Math.round(innerHeight * 0.2)] : [0, 0]);
@@ -414,6 +452,7 @@
     document.title = `${s.name} — 東京のんべえ地図`;
   }
   function back() {
+    selectionSerial++;
     state.sel = null;
     if (atlas) atlas.select(null);
     $("#detail").hidden = true;

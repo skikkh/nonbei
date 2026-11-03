@@ -1,0 +1,2198 @@
+[
+  {
+    "name": "菱田屋酒場",
+    "area": "駒場東大前",
+    "address": "東京都目黒区駒場1-11-12 1F",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131801/13261928/",
+      "https://komabatodaimae.com/hishidayasakaba/"
+    ],
+    "hours_note": "掲載元の営業時間が一致せず、営業中判定に使用しない。",
+    "spot_id": "inokashira-tl-13261928",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年8月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都目黒区駒場1-11-12",
+      "resolved": "東京都目黒区駒場一丁目１１番１２号",
+      "level": "号",
+      "distance_m": 2
+    }
+  },
+  {
+    "name": "熊八",
+    "area": "池ノ上",
+    "address": "東京都世田谷区北沢1-32-5",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131801/13094096/",
+      "https://zekkei-sakaba.com/blog/nikomist-ikenoue-kuma8/"
+    ],
+    "spot_id": "inokashira-tl-13094096",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年7月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都世田谷区北沢1-32-5",
+      "resolved": "東京都世田谷区北沢一丁目３２番５号",
+      "level": "号",
+      "distance_m": 3
+    }
+  },
+  {
+    "name": "台湾料理 光春",
+    "area": "池ノ上",
+    "address": "東京都世田谷区代沢2-45-9 飛田ビル 1F",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131801/13001813/",
+      "https://koushun.owst.jp/"
+    ],
+    "spot_id": "inokashira-tl-13001813",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年8月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都世田谷区代沢2-45-9",
+      "resolved": "東京都世田谷区代沢二丁目４５番９号",
+      "level": "号",
+      "distance_m": 12
+    }
+  },
+  {
+    "name": "近近",
+    "area": "下北沢",
+    "address": "東京都世田谷区北沢2-8-5 2F",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131802/13268865/",
+      "https://love-shimokitazawa.jp/archives/49046"
+    ],
+    "spot_id": "inokashira-tl-13268865",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年3月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都世田谷区北沢2-8-5",
+      "resolved": "東京都世田谷区北沢二丁目８番５号",
+      "level": "号",
+      "distance_m": 6
+    }
+  },
+  {
+    "name": "臺クラフトビール",
+    "area": "下北沢",
+    "address": "東京都世田谷区北沢2-22-10 下北沢リライアンスビル 1F-D",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131802/13310040/",
+      "https://prtimes.jp/main/html/rd/p/000000003.000165462.html"
+    ],
+    "spot_id": "inokashira-tl-13310040",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年10月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都世田谷区北沢2-22-10",
+      "resolved": "東京都世田谷区北沢二丁目２２番１０号",
+      "level": "号",
+      "distance_m": 38
+    }
+  },
+  {
+    "name": "ひげちょうちん",
+    "area": "下北沢",
+    "address": "東京都世田谷区北沢2-19-5",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131802/13111895/",
+      "https://shimokitazawa.org/archives/596"
+    ],
+    "spot_id": "inokashira-tl-13111895",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年8月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都世田谷区北沢2-19-5",
+      "resolved": "東京都世田谷区北沢二丁目１９番５号",
+      "level": "号",
+      "distance_m": 6
+    }
+  },
+  {
+    "name": "光の森 下北沢本店",
+    "area": "下北沢",
+    "address": "東京都世田谷区北沢2-14-5 イスズビル 1F",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131802/13205774/"
+    ],
+    "state": "確認待ち",
+    "note": "最近の訪問日・営業告知を確認しきれず保留。閉店とは断定しない。"
+  },
+  {
+    "name": "ケムリ",
+    "area": "新代田",
+    "address": "東京都世田谷区代田4-7-16",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131803/13006623/",
+      "https://www.hotpepper.jp/strJ000138807/"
+    ],
+    "hours_note": "掲載元の営業時間が一致せず、営業中判定に使用しない。",
+    "spot_id": "inokashira-tl-13006623",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年6月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都世田谷区代田4-7-16",
+      "resolved": "東京都世田谷区代田四丁目７番１６号",
+      "level": "号",
+      "distance_m": 9
+    }
+  },
+  {
+    "name": "真心酒菜 一帆",
+    "area": "東松原",
+    "address": "東京都世田谷区松原5-2-5 東松原ユニオンビル Ｂ１",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131803/13145361/",
+      "https://www.magokoro-ippo.com/"
+    ],
+    "hours_note": "掲載元の営業時間が一致せず、営業中判定に使用しない。",
+    "spot_id": "inokashira-tl-13145361",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年7月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都世田谷区松原5-2-5",
+      "resolved": "東京都世田谷区松原五丁目２番５号",
+      "level": "号",
+      "distance_m": 15
+    }
+  },
+  {
+    "name": "まとい",
+    "area": "東松原",
+    "address": "東京都世田谷区松原5-22-10",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131803/13070514/",
+      "https://saka-navi.com/archives/77986"
+    ],
+    "hours_note": "掲載元の営業時間が一致せず、営業中判定に使用しない。",
+    "spot_id": "inokashira-tl-13070514",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年5月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都世田谷区松原5-22-10",
+      "resolved": "東京都世田谷区松原五丁目２２番１０号",
+      "level": "号",
+      "distance_m": 8
+    }
+  },
+  {
+    "name": "VERTERE Eifuku Taproom",
+    "area": "永福町",
+    "address": "東京都杉並区永福1-44-8 中根ビル 1F",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131805/13304958/",
+      "https://verterebrew.com/2815/"
+    ],
+    "spot_id": "inokashira-tl-13304958",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年6月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都杉並区永福1-44-8",
+      "resolved": "東京都杉並区永福一丁目４４番８号",
+      "level": "号",
+      "distance_m": 7
+    }
+  },
+  {
+    "name": "イタリア酒場and",
+    "area": "西永福",
+    "address": "東京都杉並区永福3-55-3 峯村ビル B1F",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131805/13301631/",
+      "https://nishieifukuand.owst.jp/"
+    ],
+    "spot_id": "inokashira-tl-13301631",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年10月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都杉並区永福3-55-3",
+      "resolved": "東京都杉並区永福三丁目５５番３号",
+      "level": "号",
+      "distance_m": 15
+    }
+  },
+  {
+    "name": "上々や 西永福店",
+    "area": "西永福",
+    "address": "東京都杉並区永福3-56-30 レムカ西永福ビル 1F",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131805/13283733/",
+      "https://www.hotpepper.jp/strJ000783444/",
+      "https://kenkou-uplus.metro.tokyo.lg.jp/shspot/detail/sh380.html",
+      "https://jyoujyouya.jp/blog/20220815-1593/"
+    ],
+    "spot_id": "inokashira-tl-13283733",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年2月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都杉並区永福3-56-30",
+      "resolved": "東京都杉並区永福三丁目５６番３０号",
+      "level": "号",
+      "distance_m": 3
+    }
+  },
+  {
+    "name": "居間居酒屋 ハマヤマ",
+    "area": "浜田山",
+    "address": "東京都杉並区浜田山1-23-4 さんまたビル 1F",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131805/13153607/",
+      "https://www.hotpepper.jp/strJ003365004/"
+    ],
+    "spot_id": "inokashira-tl-13153607",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年10月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都杉並区浜田山1-23-4",
+      "resolved": "東京都杉並区浜田山一丁目２３番４号",
+      "level": "号",
+      "distance_m": 12
+    }
+  },
+  {
+    "name": "炭火焼きと羽釜ご飯 あいたか",
+    "area": "高井戸",
+    "address": "東京都杉並区高井戸東3-8-13 ＨＰビル １Ｆ",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131806/13033699/",
+      "https://www.aitaka-takaido.jp/"
+    ],
+    "spot_id": "inokashira-tl-13033699",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年6月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都杉並区高井戸東3-8-13",
+      "resolved": "東京都杉並区高井戸東三丁目８番１３号",
+      "level": "号",
+      "distance_m": 15
+    }
+  },
+  {
+    "name": "バーカロ フェッロ",
+    "area": "富士見ヶ丘",
+    "address": "東京都杉並区高井戸西1-33-12 富士見ヶ丘センタービル 101",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131806/13121054/",
+      "https://san-tatsu.jp/collects/50808/"
+    ],
+    "spot_id": "inokashira-tl-13121054",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年6月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都杉並区高井戸西1-33-12",
+      "resolved": "東京都杉並区高井戸西一丁目３３番１２号",
+      "level": "号",
+      "distance_m": 8
+    }
+  },
+  {
+    "name": "いざかや",
+    "area": "富士見ヶ丘",
+    "address": "東京都杉並区高井戸西1-21-16 田熊ビル106",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131806/13318692/",
+      "https://food-stadium.com/headline/37071/"
+    ],
+    "spot_id": "inokashira-tl-13318692",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年6月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都杉並区高井戸西1-21-16",
+      "resolved": "東京都杉並区高井戸西一丁目２１番１６号",
+      "level": "号",
+      "distance_m": 11
+    }
+  },
+  {
+    "name": "やきとん あかね",
+    "area": "久我山",
+    "address": "東京都杉並区久我山2-12-7",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131806/13124477/",
+      "https://kugayama-minamiginza.com/tenpo.html"
+    ],
+    "spot_id": "inokashira-tl-13124477",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年3月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都杉並区久我山2-12-7",
+      "resolved": "東京都杉並区久我山二丁目１２番７号",
+      "level": "号",
+      "distance_m": 10
+    }
+  },
+  {
+    "name": "炉端焼 じゅん",
+    "area": "三鷹台",
+    "address": "東京都三鷹市井の頭1-24-19",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131806/13063930/",
+      "https://www.hotpepper.jp/strJ000159500/"
+    ],
+    "hours_note": "掲載元の営業時間が一致せず、営業中判定に使用しない。",
+    "spot_id": "inokashira-tl-13063930",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年7月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都三鷹市井の頭1-24-19",
+      "resolved": "東京都三鷹市井の頭一丁目２４番１９号",
+      "level": "号",
+      "distance_m": 21
+    }
+  },
+  {
+    "name": "ニューイノカシラ",
+    "area": "三鷹台",
+    "address": "東京都三鷹市井の頭1-31-28",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131806/13297920/",
+      "https://www.hotpepper.jp/strJ003806704/"
+    ],
+    "hours_note": "掲載元の営業時間が一致せず、営業中判定に使用しない。",
+    "spot_id": "inokashira-tl-13297920",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年6月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都三鷹市井の頭1-31-28",
+      "resolved": "東京都三鷹市井の頭一丁目３１番２８号",
+      "level": "号",
+      "distance_m": 18
+    }
+  },
+  {
+    "name": "YAMATO",
+    "area": "三鷹台",
+    "address": "東京都三鷹市井の頭2-7-2 1F",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131806/13125942/"
+    ],
+    "spot_id": "inokashira-tl-13125942",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年4月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都三鷹市井の頭2-7-2",
+      "resolved": "東京都三鷹市井の頭二丁目７番２号",
+      "level": "号",
+      "distance_m": 2
+    }
+  },
+  {
+    "name": "Craft beer TOCA",
+    "area": "井の頭公園",
+    "address": "東京都三鷹市井の頭3-12-13 早志ビル",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13281727/",
+      "https://kichifan.com/2023/06/06/craft-beer-toca_report/"
+    ],
+    "spot_id": "inokashira-tl-13281727",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年5月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都三鷹市井の頭3-12-13",
+      "resolved": "東京都三鷹市井の頭三丁目１２番１３号",
+      "level": "号",
+      "distance_m": 7
+    }
+  },
+  {
+    "name": "さわやか",
+    "area": "駒場東大前",
+    "address": "東京都目黒区駒場1-27-1",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131801/13105495/",
+      "https://komabatodaimae.com/sawayaka/"
+    ],
+    "spot_id": "inokashira-tl-13105495",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年5月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都目黒区駒場1-27-1",
+      "resolved": "東京都目黒区駒場一丁目２７番１号",
+      "level": "号",
+      "distance_m": 1
+    }
+  },
+  {
+    "name": "三木松",
+    "area": "東松原",
+    "address": "東京都世田谷区松原5-3-13",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131804/13155577/",
+      "https://bs.tbs.co.jp/sakaba/shop/543.html"
+    ],
+    "spot_id": "inokashira-tl-13155577",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年2月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都世田谷区松原5-3-13",
+      "resolved": "東京都世田谷区松原五丁目３番１３号",
+      "level": "号",
+      "distance_m": 42
+    }
+  },
+  {
+    "name": "宮古2号店",
+    "area": "明大前",
+    "address": "東京都世田谷区松原2-41-5",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131804/13053212/",
+      "https://www.hotpepper.jp/strJ000139123/"
+    ],
+    "spot_id": "inokashira-tl-13053212",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年10月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都世田谷区松原2-41-5",
+      "resolved": "東京都世田谷区松原二丁目４１番５号",
+      "level": "号",
+      "distance_m": 9
+    }
+  },
+  {
+    "name": "桃串",
+    "area": "浜田山",
+    "address": "東京都杉並区浜田山3-32-6 熊倉ビル B1F",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131805/13130893/",
+      "https://www.hamadayama-izakaya.jp/"
+    ],
+    "spot_id": "inokashira-tl-13130893",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年7月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都杉並区浜田山3-32-6",
+      "resolved": "東京都杉並区浜田山三丁目３２番６号",
+      "level": "号",
+      "distance_m": 10
+    }
+  },
+  {
+    "name": "ヨイノフネ",
+    "area": "久我山",
+    "address": "東京都杉並区久我山4-1-4 松村ビル103",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131806/13284066/",
+      "https://yoinofune.jp/blog/"
+    ],
+    "hours_note": "掲載元の営業時間が一致せず、営業中判定に使用しない。",
+    "spot_id": "inokashira-tl-13284066",
+    "state": "追加",
+    "note": "2026年11月3日確認：公式ブログの2026年10月5日営業案内",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都杉並区久我山4-1-4",
+      "resolved": "東京都杉並区久我山四丁目１番４号",
+      "level": "号",
+      "distance_m": 11
+    }
+  },
+  {
+    "name": "呑み処 たいほう",
+    "area": "久我山",
+    "address": "東京都杉並区久我山1-5-2 久我山ロータリーマンション 1F",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131806/13167401/"
+    ],
+    "state": "確認待ち",
+    "note": "公式サイトと掲載ページはあるが最近の営業を確認しきれず保留。"
+  },
+  {
+    "name": "串焼きとお酒 かんむり",
+    "area": "久我山",
+    "address": "東京都杉並区久我山4-1-9 久我山ビル 1F",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131806/13253196/",
+      "https://www.kanmuri-cocoterrace.com/"
+    ],
+    "spot_id": "inokashira-tl-13253196",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年7月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都杉並区久我山4-1-9",
+      "resolved": "東京都杉並区久我山四丁目１番９号",
+      "level": "号",
+      "distance_m": 13
+    }
+  },
+  {
+    "name": "カッパ",
+    "area": "吉祥寺",
+    "address": "東京都武蔵野市吉祥寺南町1-5-9",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13010009/"
+    ],
+    "spot_id": "inokashira-tl-13010009",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年10月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都武蔵野市吉祥寺南町1-5-9",
+      "resolved": "東京都武蔵野市吉祥寺南町一丁目５番９号",
+      "level": "号",
+      "distance_m": 9
+    }
+  },
+  {
+    "name": "ささの葉",
+    "area": "吉祥寺",
+    "address": "東京都武蔵野市吉祥寺本町1-1-4",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13047814/"
+    ],
+    "spot_id": "inokashira-tl-13047814",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年10月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都武蔵野市吉祥寺本町1-1-4",
+      "resolved": "東京都武蔵野市吉祥寺本町一丁目１番４号",
+      "level": "号",
+      "distance_m": 47
+    }
+  },
+  {
+    "name": "コパンダ",
+    "area": "吉祥寺",
+    "address": "東京都武蔵野市吉祥寺本町1-1-4 ハーモニカ横丁内",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13045448/"
+    ],
+    "spot_id": "inokashira-tl-13045448",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年9月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都武蔵野市吉祥寺本町1-1-4",
+      "resolved": "東京都武蔵野市吉祥寺本町一丁目１番４号",
+      "level": "号",
+      "distance_m": 34
+    }
+  },
+  {
+    "name": "酒とさか菜",
+    "area": "神泉",
+    "address": "東京都渋谷区神泉町12-4 アーガス神泉ビル 1F",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13143480/",
+      "https://saketosakana.net/"
+    ],
+    "spot_id": "inokashira-tl-13143480",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年5月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都渋谷区神泉町12-4",
+      "resolved": "東京都渋谷区神泉町１２番４号",
+      "level": "号",
+      "distance_m": 10
+    }
+  },
+  {
+    "name": "文房具居酒屋 どろぼう堂",
+    "area": "久我山",
+    "address": "東京都杉並区久我山4-2-24",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131806/13117100/",
+      "https://kugayamatown.com/shops/doroboudou.html"
+    ],
+    "spot_id": "inokashira-tl-13117100",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年4月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都杉並区久我山4-2-24",
+      "resolved": "東京都杉並区久我山四丁目２番２４号",
+      "level": "号",
+      "distance_m": 8
+    }
+  },
+  {
+    "name": "KAMERA",
+    "area": "神泉",
+    "address": "東京都渋谷区道玄坂2-20-5 1F",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13264889/",
+      "https://www.timeout.jp/tokyo/ja/レストラン/kamera"
+    ],
+    "spot_id": "inokashira-tl-13264889",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年10月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都渋谷区道玄坂2-20-5",
+      "resolved": "東京都渋谷区道玄坂二丁目２０番５号",
+      "level": "号",
+      "distance_m": 8
+    }
+  },
+  {
+    "name": "楽椿",
+    "area": "神泉",
+    "address": "東京都渋谷区円山町23-10 渋谷ATビル 1F",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13151557/",
+      "https://raku-co.com/?page_id=252"
+    ],
+    "spot_id": "inokashira-tl-13151557",
+    "state": "追加",
+    "note": "2026年11月3日確認：運営会社の現行店舗一覧。食べログは2025年5月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都渋谷区円山町23-10",
+      "resolved": "東京都渋谷区円山町２３番１０号",
+      "level": "号",
+      "distance_m": 4
+    }
+  },
+  {
+    "name": "ONDO",
+    "area": "渋谷",
+    "address": "東京都渋谷区渋谷3-21-3 渋谷ストリーム 1F",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13314055/"
+    ],
+    "state": "確認待ち",
+    "note": "食べログが掲載保留で閉店を示唆する記載あり。閉店・移転の確定まで新規掲載しない。"
+  },
+  {
+    "name": "かる小屋 池ノ上店",
+    "area": "池ノ上",
+    "address": "東京都世田谷区代沢2-45-5 ソフィア下北 1F",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131801/13060120/",
+      "https://karugoya-ikenoue.owst.jp/",
+      "https://www.hotpepper.jp/strJ000940812/"
+    ],
+    "hours_note": "掲載元の営業時間が一致せず、営業中判定に使用しない。",
+    "spot_id": "inokashira-tl-13060120",
+    "state": "追加",
+    "note": "2026年11月3日確認：ホットペッパーの2026年3月22日訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都世田谷区代沢2-45-5",
+      "resolved": "東京都世田谷区代沢二丁目４５番５号",
+      "level": "号",
+      "distance_m": 8
+    }
+  },
+  {
+    "name": "北沢小西",
+    "area": "下北沢",
+    "address": "東京都世田谷区代沢5-28-16",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131802/13176289/",
+      "https://kitazawakonishi.com/"
+    ],
+    "hours_note": "営業時間・開栓料は公式案内を採用。不定休と祝日の火曜の扱いを確定できないため営業中判定は保留。",
+    "spot_id": "inokashira-tl-13176289",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年5月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都世田谷区代沢5-28-16",
+      "resolved": "東京都世田谷区代沢五丁目２８番１６号",
+      "level": "号",
+      "distance_m": 9
+    }
+  },
+  {
+    "name": "reverb",
+    "area": "高井戸",
+    "address": "東京都杉並区高井戸東2-25-11 1F",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131806/13282963/",
+      "https://note.com/craft_beer/n/nf187841e1fd0"
+    ],
+    "hours_note": "掲載元の営業時間が一致せず、営業中判定に使用しない。",
+    "spot_id": "inokashira-tl-13282963",
+    "state": "追加",
+    "note": "2026年11月3日確認：2026年4月24日の訪問記事",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都杉並区高井戸東2-25-11",
+      "resolved": "東京都杉並区高井戸東二丁目２５番１１号",
+      "level": "号",
+      "distance_m": 19
+    }
+  },
+  {
+    "name": "Mountain River Brewery",
+    "area": "久我山",
+    "address": "東京都杉並区久我山3-17-18 ウッディ久我山",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131806/13312524/",
+      "https://revomax.jp/craftbeer/mountain-river-brewery-kugayama/"
+    ],
+    "hours_note": "直売時間と有料試飲時間を区別できないため、営業中判定に使用しない。",
+    "spot_id": "inokashira-tl-13312524",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年2月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都杉並区久我山3-17-18",
+      "resolved": "東京都杉並区久我山三丁目１７番１８号",
+      "level": "号",
+      "distance_m": 13
+    }
+  },
+  {
+    "name": "みらい水産",
+    "area": "永福町",
+    "address": "東京都杉並区和泉3-52-15",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131805/13279899/",
+      "https://miraisuisan.co.jp/storeinformation/"
+    ],
+    "spot_id": "inokashira-tl-13279899",
+    "state": "追加",
+    "note": "2026年11月3日確認：食べログの2026年10月訪問記録",
+    "position_check": {
+      "source": "国土地理院 住所検索",
+      "query": "東京都杉並区和泉3-52-15",
+      "resolved": "東京都杉並区和泉三丁目５２番１５号",
+      "level": "号",
+      "distance_m": 10
+    }
+  },
+  {
+    "name": "きくらげ",
+    "area": "富士見ヶ丘",
+    "station": "富士見ヶ丘",
+    "spot_id": "tl-13295934",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131806/13295934/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "居酒屋 大西",
+    "area": "永福町",
+    "station": "永福町",
+    "spot_id": "eifukucho-izakaya-onishi",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://bs.tbs.co.jp/sakaba/shop/1191.html",
+      "https://tabelog.com/en/tokyo/A1319/A131903/13084166/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "エノテカバールヤマザキヤ",
+    "area": "永福町",
+    "station": "永福町",
+    "spot_id": "tl-13305252",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131805/13305252/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "永福スタンド SOU",
+    "area": "永福町",
+    "station": "永福町",
+    "spot_id": "tl-13323484",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131805/13323484/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "鈴なり横丁",
+    "area": "下北沢",
+    "station": "下北沢",
+    "spot_id": "shimokitazawa-suzunari-yokocho",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://www.timeout.com/tokyo/restaurants/suzunari-yokocho",
+      "https://www.tv-tokyo.co.jp/adomachi/backnumber/20240706/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "落合酒店",
+    "area": "下北沢",
+    "station": "下北沢",
+    "spot_id": "bero-2317",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://1000bero.net/restaurant-2317/",
+      "https://tabelog.com/tokyo/A1301/A130101/13211400/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "NEVER NEVER LAND（ネヴァーネヴァーランド）",
+    "area": "下北沢",
+    "station": "下北沢",
+    "spot_id": "shimokitazawa-never-never-land",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/en/tokyo/A1318/A131802/13238857/",
+      "https://tabelog.com/en/tokyo/A1318/A131802/13238857/dtlrvwlst/B431740682/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "SHARE（シェア）",
+    "area": "下北沢",
+    "station": "下北沢",
+    "spot_id": "shimokitazawa-share",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/en/tokyo/A1318/A131802/13141179/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "大衆酒場 よっちゃん",
+    "area": "下北沢",
+    "station": "下北沢",
+    "spot_id": "shimokitazawa-yocchan",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/en/tokyo/A1318/A131802/13097375/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "梅干しサワー専門店",
+    "area": "下北沢",
+    "station": "下北沢",
+    "spot_id": "tl-13233370",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131802/13233370/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "wine laundry",
+    "area": "下北沢",
+    "station": "下北沢",
+    "spot_id": "tl-13288715",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131802/13288715/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "野菜巻き串 下北ホール",
+    "area": "下北沢",
+    "station": "下北沢",
+    "spot_id": "tl-13301460",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131802/13301460/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "-酒とおばんざい-おむすびスタンド シモキタ",
+    "area": "下北沢",
+    "station": "下北沢",
+    "spot_id": "tl-13319362",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131802/13319362/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "飲み屋 えるえふる",
+    "area": "新代田",
+    "station": "新代田",
+    "spot_id": "tl-13185218",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131803/13185218/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "すずらん通り（明大前）",
+    "area": "明大前",
+    "station": "明大前",
+    "spot_id": "meidaimae-suzuran-dori",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://www.openstreetmap.org/way/31093096",
+      "https://tabelog.com/en/tokyo/A1318/A131804/13094478/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "立呑み 我海",
+    "area": "明大前",
+    "station": "明大前",
+    "spot_id": "tl-13275396",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131804/13275396/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "渋谷中央街",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "shibuya-chuogai",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://shibuyachuogai.com/shop/?page_id=105",
+      "https://www.nikkan-gendai.com/articles/view/life/379011",
+      "https://tokyoexplorersmap.blogspot.com/2023/03/wavestreet.html"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "しぶや百軒店",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "shibuya-hyakkendana",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://www.tv-tokyo.co.jp/adomachi/backnumber/20240330/",
+      "https://www.snackyokocho.com/article/1279/",
+      "https://tokyoexplorersmap.blogspot.com/2020/09/hyakkendana.html"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "渋谷肉横丁",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "shibuya-niku-yokocho",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://nikuyokocho.jp/shops/",
+      "https://prtimes.jp/main/html/rd/p/000000552.000001924.html",
+      "https://weekly.ascii.jp/elem/000/004/438/4438161/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "渋谷のんべい横丁",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "shibuya-nonbei-yokocho",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://www.mapple.net/spot/13029431/",
+      "https://www.timeout.jp/tokyo/ja/ニュース/渋谷で最も3密な場所？-のんべい横丁のこれから-052220",
+      "https://tabelog.com/en/tokyo/A1303/A130301/13002121/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "渋谷横丁",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "shibuya-yokocho-miyashita",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://mitsui-shopping-park.com/urban/miyashita/store/1568910.html",
+      "https://livejapan.com/ja/in-tokyo/in-pref-tokyo/in-shibuya/article-a0004242/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "シェアラウンジ（TSUTAYA）",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "bero-1599",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://1000bero.net/restaurant-1599/",
+      "https://tabelog.com/tokyo/A1301/A130101/13242376/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "おうどん とろとろ房",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "bero-1600",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://1000bero.net/restaurant-1600/",
+      "https://tabelog.com/tokyo/A1301/A130101/13151439/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "魚金醸造",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "bero-1738",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://1000bero.net/restaurant-1738/",
+      "https://tabelog.com/tokyo/A1301/A130101/13235051/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "あばらや 別館",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "bero-1919",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://1000bero.net/restaurant-1919/",
+      "https://tabelog.com/tokyo/A1301/A130101/13271317/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "多古菊",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "bero-1936",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://1000bero.net/restaurant-1936/",
+      "https://tabelog.com/tokyo/A1301/A130101/13075355/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "すし居酒屋 台所家",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "bero-1939",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://1000bero.net/restaurant-1939/",
+      "https://tabelog.com/tokyo/A1301/A130101/13278876/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "TASUICHI",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "hp-strj000014155",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://www.hotpepper.jp/strJ000014155/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "一軒め酒場 渋谷センター街店",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "hp-strj001161279",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://www.hotpepper.jp/strJ001161279/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "LUXURY STAND MILAS BAR & CAFE 渋谷店",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "hp-strj001259236",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://www.hotpepper.jp/strJ001259236/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "Mikkeller Tokyo",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "regional-tl-13208803",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://www.mikkeller.com/locations/mikkeller-tokyo",
+      "https://tabelog.com/tokyo/A1303/A130301/13208803/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "花街ノ酒場 TORA",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "regional-tl-13263442",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://hanamachitora.madoapp.net/",
+      "https://tabelog.com/tokyo/A1303/A130301/13263442/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "なぎ",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "shibuya-nagi",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/en/tokyo/A1303/A130301/13160127/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "スナック女豹（めひょう）",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "shibuya-snack-mehyo",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://www.timeout.jp/tokyo/ja/%E3%83%8A%E3%82%A4%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95/mehyo",
+      "https://www.timeout.jp/tokyo/ja/nightlife/tokyo-neo-snack"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "スナック 和（やわらぎ）",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "shibuya-snack-yawaragi",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://www.timeout.jp/tokyo/ja/%E3%83%8A%E3%82%A4%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95/snack-yawaragi",
+      "https://www.timeout.jp/tokyo/ja/nightlife/shibuya-hyakkendana",
+      "https://tabelog.com/en/tokyo/A1303/A130301/13292673/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "立呑 富士屋本店",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "shibuya-tachinomi-fujiya-honten",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/en/tokyo/A1303/A130301/13279361/",
+      "https://getnavi.jp/cuisine/856909/",
+      "https://san-tatsu.jp/collects/368072/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "THE ALDGATE British Pub（オールドゲイト）",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "shibuya-the-aldgate",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/en/tokyo/A1303/A130301/13007265/",
+      "https://tabelog.com/en/tokyo/A1303/A130301/13007265/dtlrvwlst/B525018493/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "鳥福",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "shibuya-torifuku",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/en/tokyo/A1303/A130301/13002121/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "鳥竹 総本店",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "shibuya-toritake-sohonten",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/en/tokyo/A1303/A130301/13001702/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "魚がし 福ちゃん 2号店",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "shibuya-uogashi-fukuchan-2",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/en/tokyo/A1303/A130301/13067049/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "やきとり山家",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "shibuya-yamaga",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://shibuyachuogai.com/shop/?p=263",
+      "https://www.nikkan-gendai.com/articles/view/life/379011",
+      "https://www.tv-tokyo.co.jp/adomachi/backnumber/20150418/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "夜のながさき（酒処ニュー萬斎）",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "shibuya-yoru-no-nagasaki",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://san-tatsu.jp/articles/312685/",
+      "https://www.timeout.jp/tokyo/ja/nightlife/shibuya-hyakkendana"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "タスイチ 渋谷店",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13020555",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13020555/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "キミドリ",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13023981",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13023981/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "恋文酒場 かっぱ 渋谷駅前店",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13039422",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13039422/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "かっぱ 恋文横丁店",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13102333",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13102333/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "銀だこハイボール酒場 渋谷東口店",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13116561",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13116561/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "大衆酒場 ひまわり",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13138750",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13138750/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "純米酒専門YATA 渋谷店",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13183727",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13183727/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "立吞酒場 ディプント",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13187233",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13187233/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "日本酒ギャラリー 壺の中",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13197481",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13197481/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "立飲みビールボーイ 渋谷パルコ店",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13241110",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13241110/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "立呑み天ぷらKIKU 渋谷パルコ店",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13241214",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13241214/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "立ち飲み居酒屋 ドラム缶 渋谷店",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13250545",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13250545/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "クラフトビール量り売り TAP&CROWLER 渋谷店",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13254079",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13254079/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "大衆スタンド 神田屋 渋谷センター街店",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13259815",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13259815/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "嚔",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13285754",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13285754/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "マンデガン",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13292207",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13292207/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "立ち呑み 山ちゃん",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13298895",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13298895/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "立食 型破離",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13308495",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13308495/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "渋タコ",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13325748",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13325748/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "Higgledy Piggledy",
+    "area": "渋谷",
+    "station": "渋谷",
+    "spot_id": "tl-13326212",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13326212/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "円山町（花街跡）・神泉駅前の飲み屋街",
+    "area": "神泉",
+    "station": "神泉",
+    "spot_id": "shinsen-maruyamacho",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tokyoexplorersmap.blogspot.com/2020/09/maruyamachokagai.html",
+      "https://tabelog.com/tokyo/A1303/A130301/13036896/",
+      "https://tabelog.com/tokyo/A1303/A130301/13020784/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "ビアスタンド 平野屋",
+    "area": "神泉",
+    "station": "神泉",
+    "spot_id": "hp-strj001101953",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://www.hotpepper.jp/strJ001101953/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "立ち飲み処 EVANS",
+    "area": "神泉",
+    "station": "神泉",
+    "spot_id": "hp-strj001110653",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://www.hotpepper.jp/strJ001110653/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "串焼き 千羽",
+    "area": "神泉",
+    "station": "神泉",
+    "spot_id": "shinsen-senba",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13036896/",
+      "https://bs.tbs.co.jp/sakaba/shop/545.html"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "みさわ",
+    "area": "神泉",
+    "station": "神泉",
+    "spot_id": "tl-13216724",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13216724/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "ボイジャースタンド渋谷",
+    "area": "神泉",
+    "station": "神泉",
+    "spot_id": "tl-13249696",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13249696/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "neo",
+    "area": "神泉",
+    "station": "神泉",
+    "spot_id": "tl-13262588",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13262588/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "SEN",
+    "area": "神泉",
+    "station": "神泉",
+    "spot_id": "tl-13288760",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1303/A130301/13288760/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "ときわ亭",
+    "area": "蛇口からレモンサワー飲み放題!渋谷",
+    "station": "渋谷",
+    "spot_id": "bero-1606",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://1000bero.net/restaurant-1606/",
+      "https://tabelog.com/tokyo/A1301/A130101/13247813/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "万星",
+    "area": "井の頭公園",
+    "station": "井の頭公園",
+    "spot_id": "tl-13155303",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13155303/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "ハモニカ横丁",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "kichijoji-harmonica-yokocho",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://www.mec-h.com/town/mh-mitaka/26",
+      "https://www.mapple.net/original/472306/",
+      "https://www.timeout.jp/tokyo/ja/nightlife/yokocho-guide-hamonica-yokocho"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "ハモニカキッチン",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "hp-strj000247115",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://www.hotpepper.jp/strJ000247115/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "Chang（チャーン）",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "kichijoji-chang",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13166193/",
+      "https://ctkr.seesaa.net/article/516823638.html"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "立ち飲み処 彩",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "kichijoji-irodori",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/en/tokyo/A1320/A132001/13253996/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "いせや 公園店",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "kichijoji-iseya-koenten",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/en/tokyo/A1320/A132001/13005878/",
+      "https://r.gnavi.co.jp/d3mfav0k0000/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "いせや総本店",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "kichijoji-iseya-sohonten",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/en/tokyo/A1320/A132001/13005894/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "呑めるタイ料理屋 ラコタ",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "kichijoji-lakota",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://www.lakota.tokyo/",
+      "https://tabelog.com/tokyo/A1320/A132001/13113814/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "もも吉",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "kichijoji-momokichi",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://momokichi-kichijoji.net/",
+      "https://tabelog.com/tokyo/A1320/A132001/13052427/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "ポヨ（POLLO）",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "kichijoji-pollo",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/en/tokyo/A1320/A132001/13043242/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "スタンドローキー 吉祥寺",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "kichijoji-stand-lowkey",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://stand-lowkey-kichijoji.com/",
+      "https://kichifan.com/2024/08/23/stand-low-key/",
+      "https://1000bero.net/restaurant-2209/",
+      "https://kichijoji-gourmet.com/stand-low-key-kichijoji/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "たちんぽやまちゃん 吉祥寺本店",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "kichijoji-tachinpo-yamachan",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/en/tokyo/A1320/A132001/13255761/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "てっちゃん",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "kichijoji-tetchan",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/en/tokyo/A1320/A132001/13024975/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "The Wigtown（ウィグタウン）",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "kichijoji-the-wigtown",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/en/tokyo/A1320/A132001/13213388/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "豚羽",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "kichijoji-tonpa",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13319455/",
+      "https://www.lemon8-app.com/%40kichijoji_gourmet/7677116333178585618?region=jp"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "立ち呑みおでん屋 つかだ",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "kichijoji-tsukada",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/en/tokyo/A1320/A132001/13238546/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "やきとんなるせ",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "kichijoji-yakiton-naruse",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://may-money.com/event-kichijoji-world-beer-fes-20261009/",
+      "https://tabelog.com/tokyo/A1320/A132001/13131101/",
+      "https://izakaya.chillaxstyle.com/izakaya-kichijoji-yakitonnaruse-wave-bro-20221027/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "Bocca",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "tl-13096304",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13096304/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "エイヒレ",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "tl-13103779",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13103779/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "プラットスタンド酛",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "tl-13152220",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13152220/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "立ち呑みばっかす",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "tl-13208931",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13208931/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "そとまろ",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "tl-13220323",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13220323/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "立飲ビストロ Ryo",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "tl-13253901",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13253901/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "wave",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "tl-13260613",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13260613/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "立呑み晩杯屋 吉祥寺店",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "tl-13284785",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13284785/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "4328 2号店",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "tl-13305160",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13305160/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "開運酒場ガッツ輝き",
+    "area": "吉祥寺",
+    "station": "吉祥寺",
+    "spot_id": "tl-13317252",
+    "state": "既存掲載の照合",
+    "checked": "2026-11-03",
+    "sources": [
+      "https://tabelog.com/tokyo/A1320/A132001/13317252/"
+    ],
+    "note": "地図上の既存掲載を照合。今回の調査で全店の営業状況を再確認したという意味ではない。"
+  },
+  {
+    "name": "明大前ばーる",
+    "area": "明大前",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131804/13286656/dtlmap/"
+    ],
+    "checked": "2026-11-03",
+    "state": "対象外・要確認",
+    "note": "閉店記載あり。3月2日閉店の店舗側告知があるため新規掲載しない。年・移転の詳細は要確認。"
+  },
+  {
+    "name": "立ち飲みクレヨン",
+    "area": "明大前",
+    "sources": [
+      "https://hitosara.com/0031766203/"
+    ],
+    "checked": "2026-11-03",
+    "state": "対象外・要確認",
+    "note": "検索エリアに明大前が出るが実所在地は渋谷区笹塚1-56-2。井の頭線沿線の追加対象としない。"
+  },
+  {
+    "name": "beenie Bar",
+    "area": "西永福",
+    "sources": [
+      "https://beeniebar.com/about"
+    ],
+    "checked": "2026-11-03",
+    "state": "確認待ち",
+    "note": "公式住所は永福3-35-11。カウンターのバーだが、直近の営業告知・訪問記録を要確認。"
+  },
+  {
+    "name": "呑処ゆぅちゃん",
+    "area": "神泉",
+    "sources": [
+      "https://www.i-tenpo.com/news/open/13701"
+    ],
+    "checked": "2026-11-03",
+    "state": "確認待ち",
+    "note": "2026年2月5日開業の紹介。番地と店舗位置の照合が済んでいない。"
+  },
+  {
+    "name": "半茶",
+    "area": "高井戸",
+    "sources": [
+      "https://www.ekiten.jp/shop_212899/"
+    ],
+    "checked": "2026-11-03",
+    "state": "確認待ち",
+    "note": "高井戸東2-25-17の掲載あり。現在の営業を裏付ける一次情報・訪問記録を要確認。"
+  },
+  {
+    "name": "酒房Zipangu",
+    "area": "高井戸",
+    "sources": [
+      "https://localplace.jp/t000028986/"
+    ],
+    "checked": "2026-11-03",
+    "state": "対象外・要確認",
+    "note": "所在地は下高井戸1-1-14。高井戸駅の店と取り違えない。"
+  },
+  {
+    "name": "とらさんのみせ",
+    "area": "浜田山",
+    "sources": [
+      "https://bs.tbs.co.jp/sakaba/shop/497.html"
+    ],
+    "checked": "2026-11-03",
+    "state": "確認待ち",
+    "note": "古い紹介があるが、現在の営業を確認できていない。"
+  },
+  {
+    "name": "三鷹バル",
+    "area": "三鷹台",
+    "sources": [
+      "https://tabelog.com/tokyo/A1318/A131806/13045858/"
+    ],
+    "checked": "2026-11-03",
+    "state": "確認待ち",
+    "note": "店舗単位で現在の営業と業態を要確認。"
+  },
+  {
+    "name": "おはら",
+    "area": "三鷹台",
+    "sources": [
+      "https://r.gnavi.co.jp/eki/0002563/izakaya/rs/"
+    ],
+    "checked": "2026-11-03",
+    "state": "確認待ち",
+    "note": "駅周辺の一覧で発見。住所・現在の営業・店内での飲酒形態を要確認。"
+  },
+  {
+    "name": "舷燈",
+    "area": "三鷹台",
+    "sources": [
+      "https://r.gnavi.co.jp/eki/0002563/izakaya/rs/"
+    ],
+    "checked": "2026-11-03",
+    "state": "確認待ち",
+    "note": "駅周辺の一覧で発見。住所・現在の営業・店内での飲酒形態を要確認。"
+  },
+  {
+    "name": "居酒屋あしおと",
+    "area": "三鷹台",
+    "sources": [
+      "https://r.gnavi.co.jp/eki/0002563/izakaya/rs/"
+    ],
+    "checked": "2026-11-03",
+    "state": "確認待ち",
+    "note": "駅周辺の一覧で発見。住所・現在の営業・店内での飲酒形態を要確認。"
+  },
+  {
+    "name": "あさぎ家",
+    "area": "久我山",
+    "sources": [
+      "https://kugayama-minamiginza.com/tenpo.html"
+    ],
+    "checked": "2026-11-03",
+    "state": "確認待ち",
+    "note": "商店街一覧から発見。店舗単位で現在の営業と店内の利用形態を要確認。"
+  },
+  {
+    "name": "鳥ダイニング大木家",
+    "area": "久我山",
+    "sources": [
+      "https://kugayama-minamiginza.com/tenpo.html"
+    ],
+    "checked": "2026-11-03",
+    "state": "確認待ち",
+    "note": "商店街一覧から発見。店舗単位で現在の営業と店内の利用形態を要確認。"
+  },
+  {
+    "name": "ふみきり",
+    "area": "浜田山",
+    "sources": [
+      "https://www.hamadayama-izakaya.jp/access/"
+    ],
+    "checked": "2026-11-03",
+    "state": "確認待ち",
+    "note": "運営店の一覧から発見。店舗単位で住所・業態・最近の営業を要確認。"
+  },
+  {
+    "name": "米日和",
+    "area": "浜田山",
+    "sources": [
+      "https://www.hamadayama-izakaya.jp/access/"
+    ],
+    "checked": "2026-11-03",
+    "state": "確認待ち",
+    "note": "運営店の一覧から発見。店舗単位で住所・業態・最近の営業を要確認。"
+  }
+]

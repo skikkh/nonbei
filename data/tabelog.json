@@ -93026,5 +93026,2057 @@
   ],
   "categories": "Izakaya (Japanese style tavern), Grilled tripe, Tripe",
   "url": "https://tabelog.com/tokyo/A1301/A130103/13043384/"
+ },
+ "inokashira-tl-13261928": {
+  "phone": "03-6336-8891",
+  "reserve": "予約可",
+  "budget_dinner": "¥4,000〜¥4,999",
+  "budget_lunch": "¥1,000〜¥1,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX）・電子マネー（交通系IC）可",
+  "cash_only": false,
+  "charge": "チャージなし",
+  "seats": 14,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン",
+   "ワインにこだわり",
+   "カクテルにこだわり"
+  ],
+  "opened": "2021.7.27",
+  "categories": "Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1318/A131801/13261928/"
+ },
+ "inokashira-tl-13094096": {
+  "phone": "03-6325-0429",
+  "reserve": "予約可",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 18,
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "categories": "Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1318/A131801/13094096/"
+ },
+ "inokashira-tl-13001813": {
+  "phone": "050-5600-7652",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1320,
+     1290
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1380,
+     1350
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1380,
+     1350
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1380,
+     1350
+    ]
+   ],
+   "sat": [
+    [
+     690,
+     870,
+     840
+    ],
+    [
+     1020,
+     1380,
+     1350
+    ]
+   ],
+   "sun": [
+    [
+     690,
+     870,
+     840
+    ],
+    [
+     1020,
+     1380,
+     1350
+    ]
+   ],
+   "tue": []
+  },
+  "hours": "月 17:00〜22:00（L.O.21:30）／火 定休／水〜金 17:00〜23:00（L.O.22:30）／土・日 11:30〜14:30（L.O.14:00）・17:00〜23:00（L.O.22:30）",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）・電子マネー（交通系IC）・QR決済（PayPay・d払い・楽天ペイ・au PAY・Alipay・WeChat Pay）可",
+  "cash_only": false,
+  "charge": "サービス料・チャージ料なし",
+  "seats": 34,
+  "seating": [
+   "落ち着いた空間",
+   "カウンター席"
+  ],
+  "smoking": "全席禁煙",
+  "web": "https://koushun-taiwan.com/",
+  "categories": "Taiwanese",
+  "url": "https://tabelog.com/tokyo/A1318/A131801/13001813/"
+ },
+ "inokashira-tl-13268865": {
+  "budget_dinner": "¥1,000〜¥1,999",
+  "budget_lunch": "¥1,000〜¥1,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）・電子マネー（交通系IC）・QR決済（PayPay・d払い・楽天ペイ・au PAY）可",
+  "cash_only": false,
+  "seating": [
+   "おしゃれ空間",
+   "落ち着いた空間",
+   "カウンター席",
+   "ライブ",
+   "スポーツ観戦",
+   "電源",
+   "Wi-Fi"
+  ],
+  "smoking": "分煙・喫煙所あり",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン",
+   "カクテルにこだわり"
+  ],
+  "opened": "2022.2.22",
+  "categories": "Bar",
+  "url": "https://tabelog.com/tokyo/A1318/A131802/13268865/"
+ },
+ "inokashira-tl-13310040": {
+  "phone": "03-6450-9699",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     780,
+     1320,
+     1290
+    ]
+   ],
+   "tue": [
+    [
+     780,
+     1320,
+     1290
+    ]
+   ],
+   "wed": [
+    [
+     780,
+     1320,
+     1290
+    ]
+   ],
+   "thu": [
+    [
+     780,
+     1320,
+     1290
+    ]
+   ],
+   "fri": [
+    [
+     780,
+     1380,
+     1350
+    ]
+   ],
+   "sat": [
+    [
+     660,
+     1380,
+     1350
+    ]
+   ],
+   "sun": [
+    [
+     660,
+     1320,
+     1290
+    ]
+   ],
+   "hol": [
+    [
+     660,
+     1320,
+     1290
+    ]
+   ]
+  },
+  "hours": "月〜木 13:00〜22:00（L.O.21:30）／金 13:00〜23:00（L.O.22:30）／土 11:00〜23:00（L.O.22:30）／日・祝 11:00〜22:00（L.O.21:30）",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "budget_lunch": "¥1,000〜¥1,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners・UnionPay）・電子マネー（交通系IC）・QR決済（PayPay・d払い・楽天ペイ・au PAY）可",
+  "cash_only": false,
+  "seats": 20,
+  "smoking": "全席禁煙",
+  "opened": "2025.6.15",
+  "categories": "Beer hall",
+  "url": "https://tabelog.com/tokyo/A1318/A131802/13310040/"
+ },
+ "inokashira-tl-13111895": {
+  "phone": "03-6902-0751",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1440,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1440,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1440,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1440,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1440,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1440,
+     null
+    ]
+   ],
+   "sun": []
+  },
+  "hours": "月〜土 17:00〜24:00／日 定休",
+  "budget_dinner": "¥1,000〜¥1,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 8,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "categories": "Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1318/A131802/13111895/"
+ },
+ "inokashira-tl-13006623": {
+  "phone": "03-3327-1028",
+  "reserve": "予約可",
+  "budget_dinner": "¥4,000〜¥4,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "charge": "お通し代300円",
+  "seats": 26,
+  "seating": [
+   "おしゃれ空間",
+   "落ち着いた空間",
+   "カウンター席"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "web": "http://www.yakitori-kemuri.com/access_honten.html",
+  "opened": "1999.7.14",
+  "categories": "Yakitori (Grilled chicken skewers), Izakaya (Japanese style tavern), Japanese sake bar",
+  "url": "https://tabelog.com/tokyo/A1318/A131803/13006623/"
+ },
+ "inokashira-tl-13145361": {
+  "phone": "03-6304-3866",
+  "reserve": "予約可",
+  "budget_dinner": "¥4,000〜¥4,999",
+  "budget_lunch": "¥1,000〜¥1,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）・電子マネー・QR決済可",
+  "cash_only": false,
+  "charge": "サービス料なし、お通しあり",
+  "seats": 32,
+  "seating": [
+   "落ち着いた空間",
+   "カウンター席"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "web": "http://www.magokoro-ippo.com/",
+  "opened": "2012.5.27",
+  "categories": "Japanese sake bar, Creative, Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1318/A131803/13145361/"
+ },
+ "inokashira-tl-13070514": {
+  "phone": "03-3325-0584",
+  "reserve": "予約可",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "charge": "お通し代あり",
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒"
+  ],
+  "categories": "Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1318/A131803/13070514/"
+ },
+ "inokashira-tl-13304958": {
+  "phone": "03-6304-3030",
+  "reserve": "予約不可",
+  "week": {
+   "mon": [
+    [
+     960,
+     1380,
+     1350
+    ]
+   ],
+   "tue": [
+    [
+     960,
+     1380,
+     1350
+    ]
+   ],
+   "wed": [
+    [
+     960,
+     1380,
+     1350
+    ]
+   ],
+   "thu": [
+    [
+     960,
+     1380,
+     1350
+    ]
+   ],
+   "fri": [
+    [
+     960,
+     1380,
+     1350
+    ]
+   ],
+   "sat": [
+    [
+     780,
+     1380,
+     1350
+    ]
+   ],
+   "sun": [
+    [
+     780,
+     1380,
+     1350
+    ]
+   ],
+   "hol": [
+    [
+     780,
+     1380,
+     1350
+    ]
+   ]
+  },
+  "hours": "月〜金 16:00〜23:00（L.O.22:30）／土・日・祝 13:00〜23:00（L.O.22:30）",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "budget_lunch": "¥3,000〜¥3,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners・UnionPay）・電子マネー（交通系IC）・QR決済可",
+  "cash_only": false,
+  "seating": [
+   "テラス"
+  ],
+  "opened": "2024.12.15",
+  "categories": "Beer bar",
+  "url": "https://tabelog.com/tokyo/A1318/A131805/13304958/"
+ },
+ "inokashira-tl-13301631": {
+  "phone": "050-5594-6481",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1050,
+     1440,
+     1410
+    ]
+   ],
+   "wed": [
+    [
+     1050,
+     1440,
+     1410
+    ]
+   ],
+   "thu": [
+    [
+     1050,
+     1440,
+     1410
+    ]
+   ],
+   "fri": [
+    [
+     1050,
+     1440,
+     1410
+    ]
+   ],
+   "sat": [
+    [
+     1050,
+     1440,
+     1410
+    ]
+   ],
+   "sun": [
+    [
+     1050,
+     1440,
+     1410
+    ]
+   ],
+   "hol": [
+    [
+     1050,
+     1440,
+     1410
+    ]
+   ],
+   "prehol": [
+    [
+     1050,
+     1440,
+     1410
+    ]
+   ],
+   "posthol": [
+    [
+     1050,
+     1440,
+     1410
+    ]
+   ],
+   "tue": []
+  },
+  "hours": "月 17:30〜24:00（L.O.23:30）／火 定休／水〜日・祝 17:30〜24:00（L.O.23:30）／祝前日 17:30〜24:00（L.O.23:30）／祝後日 17:30〜24:00（L.O.23:30）",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）・電子マネー（交通系IC）・QR決済（PayPay・d払い・au PAY）可",
+  "cash_only": false,
+  "seats": 22,
+  "seating": [
+   "おしゃれ空間",
+   "落ち着いた空間",
+   "カウンター席",
+   "電源"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "ワイン",
+   "ワインにこだわり"
+  ],
+  "opened": "2024.10.16",
+  "categories": "Baru (Spanish style bar), Italian, Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1318/A131805/13301631/"
+ },
+ "inokashira-tl-13283733": {
+  "phone": "03-3325-3128",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     690,
+     840,
+     810
+    ],
+    [
+     960,
+     1380,
+     1350
+    ]
+   ],
+   "tue": [
+    [
+     690,
+     840,
+     810
+    ],
+    [
+     960,
+     1380,
+     1350
+    ]
+   ],
+   "wed": [
+    [
+     690,
+     840,
+     810
+    ],
+    [
+     960,
+     1380,
+     1350
+    ]
+   ],
+   "thu": [
+    [
+     690,
+     840,
+     810
+    ],
+    [
+     960,
+     1380,
+     1350
+    ]
+   ],
+   "fri": [
+    [
+     690,
+     840,
+     810
+    ],
+    [
+     960,
+     1380,
+     1350
+    ]
+   ],
+   "sat": [
+    [
+     690,
+     840,
+     810
+    ],
+    [
+     960,
+     1380,
+     1350
+    ]
+   ],
+   "sun": [
+    [
+     690,
+     840,
+     810
+    ],
+    [
+     960,
+     1380,
+     1350
+    ]
+   ]
+  },
+  "hours": "月〜日 11:30〜14:00（L.O.13:30）・16:00〜23:00（L.O.22:30）",
+  "budget_dinner": "¥4,000〜¥4,999",
+  "budget_lunch": "¥1,000〜¥1,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）・電子マネー（交通系IC）・QR決済（PayPay・d払い・楽天ペイ・au PAY）可",
+  "cash_only": false,
+  "seats": 29,
+  "seating": [
+   "落ち着いた空間",
+   "カウンター席",
+   "スポーツ観戦",
+   "電源",
+   "Wi-Fi",
+   "車椅子可"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "web": "https://jyoujyouya.jp/",
+  "opened": "2023.1.6",
+  "categories": "Izakaya (Japanese style tavern), Seafood, Japanese sake bar",
+  "url": "https://tabelog.com/tokyo/A1318/A131805/13283733/"
+ },
+ "inokashira-tl-13153607": {
+  "phone": "050-5596-7259",
+  "reserve": "完全予約制",
+  "week": {
+   "mon": [
+    [
+     720,
+     1440,
+     1380
+    ]
+   ],
+   "thu": [
+    [
+     720,
+     1440,
+     1380
+    ]
+   ],
+   "tue": [
+    [
+     1050,
+     1440,
+     1380
+    ]
+   ],
+   "wed": [
+    [
+     1050,
+     1440,
+     1380
+    ]
+   ],
+   "fri": [
+    [
+     1050,
+     1440,
+     1380
+    ]
+   ],
+   "sat": [
+    [
+     1050,
+     1440,
+     1380
+    ]
+   ],
+   "sun": [
+    [
+     1050,
+     1440,
+     1380
+    ]
+   ]
+  },
+  "hours": "月 12:00〜24:00（L.O.23:00）／火・水 17:30〜24:00（L.O.23:00）／木 12:00〜24:00（L.O.23:00）／金〜日 17:30〜24:00（L.O.23:00）",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）・QR決済（PayPay・楽天ペイ）可",
+  "cash_only": false,
+  "charge": "チャージ料440円（税込） ※料理コースのご予約時は不要",
+  "seats": 70,
+  "seating": [
+   "おしゃれ空間",
+   "ゆったり席",
+   "カウンター席",
+   "ソファ席",
+   "電源",
+   "Wi-Fi",
+   "車椅子可"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "web": "https://hamayama.imaltd.biz/",
+  "opened": "2013.4.1",
+  "categories": "Izakaya (Japanese style tavern), Seafood, Japanese sake bar",
+  "url": "https://tabelog.com/tokyo/A1318/A131805/13153607/"
+ },
+ "inokashira-tl-13033699": {
+  "phone": "050-5595-2836",
+  "reserve": "予約可",
+  "week": {
+   "tue": [
+    [
+     960,
+     1350,
+     1320
+    ]
+   ],
+   "wed": [
+    [
+     960,
+     1350,
+     1320
+    ]
+   ],
+   "thu": [
+    [
+     960,
+     1350,
+     1320
+    ]
+   ],
+   "fri": [
+    [
+     690,
+     840,
+     825
+    ],
+    [
+     960,
+     1350,
+     1320
+    ]
+   ],
+   "sat": [
+    [
+     690,
+     840,
+     825
+    ],
+    [
+     960,
+     1350,
+     1350
+    ]
+   ],
+   "sun": [
+    [
+     690,
+     840,
+     825
+    ],
+    [
+     960,
+     1320,
+     1290
+    ]
+   ],
+   "hol": [
+    [
+     690,
+     840,
+     825
+    ],
+    [
+     960,
+     1320,
+     1290
+    ]
+   ],
+   "mon": []
+  },
+  "hours": "月 定休／火〜木 16:00〜22:30（L.O.22:00）／金 11:30〜14:00（L.O.13:45）・16:00〜22:30（L.O.22:00）／土 11:30〜14:00（L.O.13:45）・16:00〜22:30（L.O.22:30）／日・祝 11:30〜14:00（L.O.13:45）・16:00〜22:00（L.O.21:30）",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "budget_lunch": "¥1,000〜¥1,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）・QR決済（PayPay）可",
+  "cash_only": false,
+  "charge": "チャージ料なし",
+  "seats": 70,
+  "seating": [
+   "落ち着いた空間",
+   "ゆったり席",
+   "カウンター席",
+   "ソファ席"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン",
+   "ワインにこだわり"
+  ],
+  "web": "https://www.aitaka-takaido.jp/",
+  "opened": "2016.12.5",
+  "categories": "Izakaya (Japanese style tavern), Yakitori (Grilled chicken skewers), Japanese Cuisine",
+  "url": "https://tabelog.com/tokyo/A1318/A131806/13033699/"
+ },
+ "inokashira-tl-13121054": {
+  "reserve": "予約可",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 20,
+  "smoking": "全席禁煙",
+  "drinks": [
+   "ワインにこだわり"
+  ],
+  "web": "http://bferro.exblog.jp/",
+  "opened": "2011.1.4",
+  "categories": "Italian, Bar",
+  "url": "https://tabelog.com/tokyo/A1318/A131806/13121054/"
+ },
+ "inokashira-tl-13318692": {
+  "pay": "現金・カード・QR決済可",
+  "cash_only": false,
+  "categories": "Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1318/A131806/13318692/"
+ },
+ "inokashira-tl-13124477": {
+  "phone": "03-5941-6634",
+  "reserve": "予約可",
+  "week": {
+   "tue": [
+    [
+     1020,
+     1440,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1440,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1440,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1440,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     960,
+     1440,
+     null
+    ]
+   ],
+   "hol": [
+    [
+     960,
+     1440,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     960,
+     1380,
+     null
+    ]
+   ],
+   "mon": []
+  },
+  "hours": "月 定休／火〜金 17:00〜24:00／土 16:00〜24:00／日 16:00〜23:00／祝 16:00〜24:00",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 20,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "opened": "2011.4.1",
+  "categories": "Grilled tripe, Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1318/A131806/13124477/"
+ },
+ "inokashira-tl-13063930": {
+  "phone": "0422-46-6963",
+  "reserve": "予約可",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "pay": "現金・カード（JCB・AMEX・Diners）・QR決済可",
+  "cash_only": false,
+  "smoking": "全席禁煙",
+  "web": "https://robatayakijyun.owst.jp/",
+  "categories": "Izakaya (Japanese style tavern), Yakitori (Grilled chicken skewers), Robatayaki",
+  "url": "https://tabelog.com/tokyo/A1318/A131806/13063930/"
+ },
+ "inokashira-tl-13297920": {
+  "phone": "042-241-0777",
+  "reserve": "予約可",
+  "pay": "現金・電子マネー・QR決済可",
+  "cash_only": false,
+  "seating": [
+   "落ち着いた空間",
+   "カウンター席"
+  ],
+  "smoking": "分煙・喫煙所あり",
+  "opened": "2024.6.17",
+  "categories": "Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1318/A131806/13297920/"
+ },
+ "inokashira-tl-13125942": {
+  "phone": "0422-79-7781",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1080,
+     1440,
+     1410
+    ]
+   ],
+   "tue": [
+    [
+     1080,
+     1440,
+     1410
+    ]
+   ],
+   "wed": [
+    [
+     1080,
+     1440,
+     1410
+    ]
+   ],
+   "thu": [
+    [
+     1080,
+     1440,
+     1410
+    ]
+   ],
+   "fri": [
+    [
+     1080,
+     1440,
+     1410
+    ]
+   ],
+   "sat": [
+    [
+     1080,
+     1440,
+     1410
+    ]
+   ],
+   "sun": [
+    [
+     1080,
+     1440,
+     1410
+    ]
+   ]
+  },
+  "hours": "月〜日 18:00〜24:00（L.O.23:30）",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "pay": "現金・カード（VISA・Master・JCB）・電子マネー（交通系IC）可",
+  "cash_only": false,
+  "seats": 17,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "opened": "2011.4.17",
+  "categories": "Japanese sake bar, Japanese shochu (Spirits) bar, Other",
+  "url": "https://tabelog.com/tokyo/A1318/A131806/13125942/"
+ },
+ "inokashira-tl-13281727": {
+  "phone": "0422-88-7772",
+  "reserve": "予約不可",
+  "week": {
+   "mon": [
+    [
+     1080,
+     1380,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     990,
+     1380,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     990,
+     1380,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     990,
+     1380,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     990,
+     1380,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     990,
+     1380,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     990,
+     1380,
+     null
+    ]
+   ]
+  },
+  "hours": "月 18:00〜23:00／火〜日 16:30〜23:00",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "pay": "現金・カード（VISA）・電子マネー・QR決済可",
+  "cash_only": false,
+  "seating": [
+   "カウンター席",
+   "Wi-Fi"
+  ],
+  "smoking": "全席禁煙",
+  "opened": "2023.2.1",
+  "categories": "Beer bar",
+  "url": "https://tabelog.com/tokyo/A1320/A132001/13281727/"
+ },
+ "inokashira-tl-13105495": {
+  "phone": "03-3481-0638",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1380,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1365,
+     null
+    ]
+   ],
+   "sun": []
+  },
+  "hours": "月〜金 17:00〜23:00／土 17:00〜22:45／日 定休",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "charge": "お通しあり",
+  "seats": 38,
+  "seating": [
+   "落ち着いた空間"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "categories": "Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1318/A131801/13105495/"
+ },
+ "inokashira-tl-13155577": {
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seating": [
+   "落ち着いた空間",
+   "カウンター席"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "categories": "Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1318/A131804/13155577/"
+ },
+ "inokashira-tl-13053212": {
+  "phone": "03-3325-9735",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1440,
+     1380
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1440,
+     1380
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1440,
+     1380
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1440,
+     1380
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1440,
+     1380
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1440,
+     1380
+    ]
+   ],
+   "sun": []
+  },
+  "hours": "月〜土 17:00〜24:00（L.O.23:00）／日 定休",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "charge": "サービス料なし、チャージ料300円",
+  "seats": 30,
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "categories": "Izakaya (Japanese style tavern), Okinawa cuisine",
+  "url": "https://tabelog.com/tokyo/A1318/A131804/13053212/"
+ },
+ "inokashira-tl-13130893": {
+  "phone": "03-3304-8529",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     690,
+     1440,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     690,
+     1440,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     690,
+     1440,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     690,
+     1440,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     690,
+     1440,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     690,
+     1440,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     690,
+     1440,
+     null
+    ]
+   ]
+  },
+  "hours": "月〜日 11:30〜24:00",
+  "pay": "現金・カード（JCB・AMEX・Diners）可",
+  "cash_only": false,
+  "seats": 19,
+  "smoking": "喫煙可",
+  "categories": "Yakitori (Grilled chicken skewers), Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1318/A131805/13130893/"
+ },
+ "inokashira-tl-13284066": {
+  "phone": "03-6826-9895",
+  "reserve": "予約可",
+  "budget_dinner": "¥6,000〜¥7,999",
+  "pay": "現金・カード・電子マネー可",
+  "cash_only": false,
+  "seats": 14,
+  "seating": [
+   "カウンター席"
+  ],
+  "drinks": [
+   "日本酒",
+   "ワイン"
+  ],
+  "opened": "2023.4.12",
+  "categories": "Japanese Cuisine",
+  "url": "https://tabelog.com/tokyo/A1318/A131806/13284066/"
+ },
+ "inokashira-tl-13253196": {
+  "phone": "050-5571-1049",
+  "reserve": "予約可",
+  "week": {
+   "tue": [
+    [
+     1020,
+     1380,
+     1350
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1380,
+     1350
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1380,
+     1350
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1380,
+     1350
+    ]
+   ],
+   "hol": [
+    [
+     1020,
+     1380,
+     1350
+    ]
+   ],
+   "prehol": [
+    [
+     1020,
+     1380,
+     1350
+    ]
+   ],
+   "posthol": [
+    [
+     1020,
+     1380,
+     1350
+    ]
+   ],
+   "sat": [
+    [
+     780,
+     900,
+     900
+    ],
+    [
+     900,
+     1380,
+     1350
+    ]
+   ],
+   "sun": [
+    [
+     780,
+     900,
+     900
+    ],
+    [
+     900,
+     1380,
+     1350
+    ]
+   ],
+   "mon": []
+  },
+  "hours": "月 定休／火〜金 17:00〜23:00（L.O.22:30）／土・日 13:00〜15:00（L.O.15:00）・15:00〜23:00（L.O.22:30）／祝 17:00〜23:00（L.O.22:30）／祝前日 17:00〜23:00（L.O.22:30）／祝後日 17:00〜23:00（L.O.22:30）",
+  "budget_dinner": "¥5,000〜¥5,999",
+  "budget_lunch": "¥2,000〜¥2,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners・UnionPay）・電子マネー（交通系IC）・QR決済（PayPay・d払い・楽天ペイ・au PAY・Alipay）可",
+  "cash_only": false,
+  "charge": "お通し代649円(お通し1人2品)",
+  "seats": 41,
+  "seating": [
+   "おしゃれ空間",
+   "落ち着いた空間",
+   "ゆったり席",
+   "カウンター席",
+   "ソファ席",
+   "電源",
+   "Wi-Fi"
+  ],
+  "smoking": "分煙・喫煙所あり",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン",
+   "ワインにこだわり"
+  ],
+  "web": "https://www.kanmuri-cocoterrace.com/",
+  "opened": "2020.11.20",
+  "categories": "Yakitori (Grilled chicken skewers), Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1318/A131806/13253196/"
+ },
+ "inokashira-tl-13010009": {
+  "phone": "0422-43-7823",
+  "reserve": "予約不可",
+  "week": {
+   "mon": [
+    [
+     990,
+     1320,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     990,
+     1320,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     990,
+     1320,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     990,
+     1320,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     990,
+     1320,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     840,
+     1320,
+     null
+    ]
+   ],
+   "sun": [],
+   "hol": []
+  },
+  "hours": "月〜金 16:30〜22:00／土 14:00〜22:00／日・祝 定休",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "pay": "現金・カード・電子マネー・QR決済可",
+  "cash_only": false,
+  "seats": 20,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "web": "https://yokappa.com/",
+  "categories": "Grilled tripe, Kushiyaki",
+  "url": "https://tabelog.com/tokyo/A1320/A132001/13010009/"
+ },
+ "inokashira-tl-13047814": {
+  "phone": "0422-22-7676",
+  "reserve": "予約不可",
+  "week": {
+   "tue": [
+    [
+     1170,
+     1440,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     1170,
+     1440,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     1170,
+     1440,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     1170,
+     1440,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     1170,
+     1440,
+     null
+    ]
+   ],
+   "mon": [],
+   "sun": []
+  },
+  "hours": "月 定休／火〜土 19:30〜24:00／日 定休",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "charge": "チャージなし",
+  "seats": 8,
+  "seating": [
+   "落ち着いた空間",
+   "カウンター席"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "categories": "Izakaya (Japanese style tavern), Japanese sake bar, Japanese shochu (Spirits) bar",
+  "url": "https://tabelog.com/tokyo/A1320/A132001/13047814/"
+ },
+ "inokashira-tl-13045448": {
+  "phone": "0422-22-9300",
+  "reserve": "予約不可",
+  "week": {
+   "mon": [
+    [
+     960,
+     1560,
+     null
+    ]
+   ],
+   "tue": [
+    [
+     960,
+     1560,
+     null
+    ]
+   ],
+   "wed": [
+    [
+     960,
+     1560,
+     null
+    ]
+   ],
+   "thu": [
+    [
+     960,
+     1560,
+     null
+    ]
+   ],
+   "fri": [
+    [
+     960,
+     1560,
+     null
+    ]
+   ],
+   "sat": [
+    [
+     960,
+     1560,
+     null
+    ]
+   ],
+   "sun": [
+    [
+     960,
+     1560,
+     null
+    ]
+   ],
+   "hol": [
+    [
+     960,
+     1560,
+     null
+    ]
+   ]
+  },
+  "hours": "月〜日・祝 16:00〜26:00",
+  "pay": "現金のみ",
+  "cash_only": true,
+  "seats": 15,
+  "seating": [
+   "落ち着いた空間",
+   "カウンター席",
+   "テラス"
+  ],
+  "smoking": "喫煙可",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "web": "https://www.at-ml.jp/index.php?tn=index&in=59490&pan=29",
+  "categories": "Izakaya (Japanese style tavern), Bar",
+  "url": "https://tabelog.com/tokyo/A1320/A132001/13045448/"
+ },
+ "inokashira-tl-13143480": {
+  "phone": "050-5597-6101",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1050,
+     1440,
+     1410
+    ]
+   ],
+   "tue": [
+    [
+     1050,
+     1440,
+     1410
+    ]
+   ],
+   "wed": [
+    [
+     1050,
+     1440,
+     1410
+    ]
+   ],
+   "thu": [
+    [
+     1050,
+     1440,
+     1410
+    ]
+   ],
+   "fri": [
+    [
+     1050,
+     1440,
+     1410
+    ]
+   ],
+   "sat": [
+    [
+     1050,
+     1440,
+     1410
+    ]
+   ],
+   "hol": [
+    [
+     1050,
+     1440,
+     1410
+    ]
+   ],
+   "prehol": [
+    [
+     1050,
+     1440,
+     1410
+    ]
+   ],
+   "posthol": [
+    [
+     1050,
+     1440,
+     1410
+    ]
+   ],
+   "sun": []
+  },
+  "hours": "月〜土 17:30〜24:00（L.O.23:30）／日 定休／祝 17:30〜24:00（L.O.23:30）／祝前日 17:30〜24:00（L.O.23:30）／祝後日 17:30〜24:00（L.O.23:30）",
+  "budget_dinner": "¥5,000〜¥5,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）・電子マネー（交通系IC）・QR決済（PayPay）可",
+  "cash_only": false,
+  "charge": "サービス料無し、お通し￥440(税込)",
+  "seats": 17,
+  "seating": [
+   "落ち着いた空間",
+   "カウンター席",
+   "電源",
+   "Wi-Fi"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎"
+  ],
+  "web": "https://www.saketosakana.net/",
+  "categories": "Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1303/A130301/13143480/"
+ },
+ "inokashira-tl-13117100": {
+  "phone": "03-5370-0331",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1050,
+     1500,
+     1440
+    ]
+   ],
+   "tue": [
+    [
+     1050,
+     1500,
+     1440
+    ]
+   ],
+   "wed": [
+    [
+     1050,
+     1500,
+     1440
+    ]
+   ],
+   "thu": [
+    [
+     1050,
+     1500,
+     1440
+    ]
+   ],
+   "fri": [
+    [
+     1050,
+     1500,
+     1440
+    ]
+   ],
+   "sat": [
+    [
+     1050,
+     1500,
+     1440
+    ]
+   ],
+   "hol": [
+    [
+     1050,
+     1500,
+     1440
+    ]
+   ],
+   "sun": []
+  },
+  "hours": "月〜土 17:30〜25:00（L.O.24:00）／日 定休／祝 17:30〜25:00（L.O.24:00）",
+  "pay": "現金・カード（JCB・AMEX・Diners）可",
+  "cash_only": false,
+  "seats": 25,
+  "seating": [
+   "おしゃれ空間",
+   "落ち着いた空間",
+   "カウンター席",
+   "ソファ席"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "categories": "Izakaya (Japanese style tavern)",
+  "url": "https://tabelog.com/tokyo/A1318/A131806/13117100/"
+ },
+ "inokashira-tl-13264889": {
+  "phone": "050-5595-5412",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1080,
+     1440,
+     1380
+    ]
+   ],
+   "tue": [
+    [
+     1080,
+     1440,
+     1380
+    ]
+   ],
+   "wed": [
+    [
+     1080,
+     1440,
+     1380
+    ]
+   ],
+   "thu": [
+    [
+     1080,
+     1440,
+     1380
+    ]
+   ],
+   "fri": [
+    [
+     1080,
+     1440,
+     1380
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1440,
+     1380
+    ]
+   ],
+   "sun": [
+    [
+     1020,
+     1380,
+     1320
+    ]
+   ],
+   "hol": [
+    [
+     1020,
+     1380,
+     1320
+    ]
+   ]
+  },
+  "hours": "月〜金 18:00〜24:00（L.O.23:00）／土 17:00〜24:00（L.O.23:00）／日・祝 17:00〜23:00（L.O.22:00）",
+  "budget_dinner": "¥4,000〜¥4,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）・電子マネー（交通系IC）・QR決済（PayPay・d払い・au PAY）可",
+  "cash_only": false,
+  "charge": "チャージ料なし",
+  "seats": 30,
+  "seating": [
+   "おしゃれ空間",
+   "カウンター席",
+   "テラス",
+   "Wi-Fi"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "焼酎",
+   "ワイン",
+   "ワインにこだわり"
+  ],
+  "opened": "2021.10.26",
+  "categories": "Izakaya (Japanese style tavern), Dim sum & Yum cha, Asian, Ethnic",
+  "url": "https://tabelog.com/tokyo/A1303/A130301/13264889/"
+ },
+ "inokashira-tl-13151557": {
+  "phone": "03-3462-7425",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     1020,
+     1410,
+     1380
+    ]
+   ],
+   "tue": [
+    [
+     1020,
+     1410,
+     1380
+    ]
+   ],
+   "wed": [
+    [
+     1020,
+     1410,
+     1380
+    ]
+   ],
+   "thu": [
+    [
+     1020,
+     1410,
+     1380
+    ]
+   ],
+   "fri": [
+    [
+     1020,
+     1410,
+     1380
+    ]
+   ],
+   "sat": [
+    [
+     1020,
+     1410,
+     1380
+    ]
+   ],
+   "sun": [
+    [
+     1020,
+     1410,
+     1380
+    ]
+   ]
+  },
+  "hours": "月〜日 17:00〜23:30（L.O.23:00）",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）可",
+  "cash_only": false,
+  "seats": 40,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン"
+  ],
+  "opened": "2012.11.5",
+  "categories": "Izakaya (Japanese style tavern), Chicken dishes, Oden",
+  "url": "https://tabelog.com/tokyo/A1303/A130301/13151557/"
+ },
+ "inokashira-tl-13060120": {
+  "phone": "03-3468-8387",
+  "reserve": "予約可",
+  "budget_dinner": "¥3,000〜¥3,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners・UnionPay）・電子マネー（交通系IC）・QR決済（PayPay）可",
+  "cash_only": false,
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "喫煙可",
+  "categories": "Grilled tripe",
+  "url": "https://tabelog.com/tokyo/A1318/A131801/13060120/"
+ },
+ "inokashira-tl-13176289": {
+  "phone": "03-3421-0932",
+  "reserve": "予約不可",
+  "budget_dinner": "〜¥999",
+  "budget_lunch": "〜¥999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）・電子マネー（交通系IC）・QR決済（PayPay・d払い・au PAY）可",
+  "cash_only": false,
+  "smoking": "全席禁煙",
+  "web": "http://kitazawakonishi.com",
+  "opened": "1931.10.1",
+  "categories": "Other",
+  "url": "https://tabelog.com/tokyo/A1318/A131802/13176289/"
+ },
+ "inokashira-tl-13282963": {
+  "reserve": "予約不可",
+  "budget_dinner": "¥2,000〜¥2,999",
+  "pay": "現金・カード・電子マネー（交通系IC）・QR決済（PayPay・au PAY）可",
+  "cash_only": false,
+  "seats": 25,
+  "seats_note": "カウンター3席、テーブル12席、スタンディング10人",
+  "seating": [
+   "カウンター席"
+  ],
+  "smoking": "全席禁煙",
+  "categories": "Beer bar",
+  "url": "https://tabelog.com/tokyo/A1318/A131806/13282963/"
+ },
+ "inokashira-tl-13312524": {
+  "reserve": "予約不可",
+  "categories": "Beer bar",
+  "url": "https://tabelog.com/tokyo/A1318/A131806/13312524/"
+ },
+ "inokashira-tl-13279899": {
+  "phone": "050-5868-9057",
+  "reserve": "予約可",
+  "week": {
+   "mon": [
+    [
+     660,
+     1320,
+     1260
+    ]
+   ],
+   "tue": [
+    [
+     660,
+     1320,
+     1260
+    ]
+   ],
+   "wed": [
+    [
+     660,
+     1320,
+     1260
+    ]
+   ],
+   "thu": [
+    [
+     660,
+     1320,
+     1260
+    ]
+   ],
+   "fri": [
+    [
+     660,
+     1320,
+     1260
+    ]
+   ],
+   "sat": [
+    [
+     660,
+     1320,
+     1260
+    ]
+   ],
+   "sun": [
+    [
+     660,
+     1320,
+     1260
+    ]
+   ],
+   "hol": [
+    [
+     660,
+     1320,
+     1260
+    ]
+   ],
+   "prehol": [
+    [
+     660,
+     1320,
+     1260
+    ]
+   ],
+   "posthol": [
+    [
+     660,
+     1320,
+     1260
+    ]
+   ]
+  },
+  "hours": "月〜日・祝 11:00〜22:00（L.O.21:00）／祝前日 11:00〜22:00（L.O.21:00）／祝後日 11:00〜22:00（L.O.21:00）",
+  "budget_dinner": "¥5,000〜¥5,999",
+  "budget_lunch": "¥2,000〜¥2,999",
+  "pay": "現金・カード（VISA・Master・JCB・AMEX・Diners）・電子マネー（交通系IC）・QR決済（PayPay・d払い・楽天ペイ・au PAY）可",
+  "cash_only": false,
+  "charge": "アルコールご注文の方はお通しご提供 税込み550円",
+  "seats": 10,
+  "seats_note": "カウンター 席 / テーブル 席",
+  "seating": [
+   "おしゃれ空間",
+   "落ち着いた空間",
+   "ゆったり席",
+   "カウンター席",
+   "Wi-Fi",
+   "車椅子可"
+  ],
+  "smoking": "全席禁煙",
+  "drinks": [
+   "日本酒",
+   "焼酎",
+   "ワイン",
+   "ワインにこだわり"
+  ],
+  "web": "https://miraisuisan.co.jp/",
+  "opened": "2023.3.18",
+  "categories": "Seafood, Side dishes, Delicatessen",
+  "url": "https://tabelog.com/tokyo/A1318/A131805/13279899/"
  }
 }

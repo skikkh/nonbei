@@ -1,5 +1,5 @@
 {
- "updated": "2026年10月",
+ "updated": "2026年11月",
  "accuracy": {
   "n": 1351,
   "median": 0,
@@ -149,16 +149,18 @@
     "荻窪",
     "西武新宿",
     "高田馬場",
+    "久我山",
     "新宿三丁目",
     "東中野",
+    "永福町",
     "新中野",
     "中野坂上",
     "代々木",
     "初台",
     "南新宿",
     "大久保",
+    "富士見ヶ丘",
     "新宿御苑前",
-    "永福町",
     "西新宿",
     "阿佐ケ谷",
     "北参道",
@@ -170,11 +172,13 @@
     "新線新宿",
     "新高円寺",
     "早稲田",
+    "浜田山",
+    "西永福",
+    "高井戸",
     "上石神井",
     "中井",
     "中野新橋",
     "参宮橋",
-    "富士見ヶ丘",
     "新井薬師前",
     "東新宿",
     "西新宿五丁目",
@@ -195,10 +199,10 @@
     "恵比寿",
     "五反田",
     "中目黒",
+    "下北沢",
     "学芸大学",
     "自由が丘",
     "目黒",
-    "下北沢",
     "神泉",
     "池尻大橋",
     "表参道",
@@ -212,7 +216,10 @@
     "千歳船橋",
     "原宿",
     "広尾",
+    "明大前",
     "明治神宮前〈原宿〉",
+    "東松原",
+    "池ノ上",
     "石川台",
     "祐天寺",
     "祖師ヶ谷大蔵",
@@ -223,8 +230,9 @@
     "八幡山",
     "外苑前",
     "尾山台",
-    "明大前",
+    "新代田",
     "笹塚",
+    "駒場東大前",
     "駒沢大学",
     "お通しは食べ放題のサラダバー!?幡ヶ谷の安い・美味い・童心に帰れる焼鳥居酒屋",
     "上町",
@@ -236,7 +244,6 @@
     "大崎広小路",
     "奥沢",
     "恵比寿で朝飲み",
-    "新代田",
     "新宿から1駅】笹塚",
     "松陰神社前",
     "桜新町",
@@ -450,6 +457,7 @@
     "府中",
     "清瀬",
     "調布",
+    "三鷹台",
     "仙川",
     "分倍河原",
     "新秋津",
@@ -457,6 +465,7 @@
     "田無",
     "つつじヶ丘",
     "一橋学園",
+    "井の頭公園",
     "国立",
     "大泉学園",
     "小作",
@@ -471,7 +480,6 @@
     "ひばりヶ丘南口",
     "上石神井",
     "中河原",
-    "井の頭公園",
     "京王よみうりランド",
     "保谷",
     "和泉多摩川",
@@ -89300,6 +89308,1742 @@
     [
      "新小平",
      1231
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13261928",
+   "name": "菱田屋酒場",
+   "kind": "sakaba",
+   "area": "駒場東大前",
+   "ward": "目黒区",
+   "address": "東京都目黒区駒場1-11-12 1F",
+   "station": "駒場東大前駅周辺",
+   "hours": "掲載元で営業時間が異なるため要確認",
+   "budget": "4,000〜4,999円（掲載予算の目安）",
+   "budget_min": 4000,
+   "budget_max": 4999,
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "日本酒",
+    "焼酎",
+    "ワイン"
+   ],
+   "english": false,
+   "desc": "定食店「菱田屋」から生まれた酒場。小皿のあてと地酒・焼酎・ワインを、14席のカウンターで楽しめる。",
+   "talk": "小皿を選びながら一人でも飲めるカウンターの店。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年8月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131801/13261928/",
+    "https://komabatodaimae.com/hishidayasakaba/"
+   ],
+   "lat": 35.657613,
+   "lng": 139.686674,
+   "kana": "ひしだやさかば",
+   "region": "渋谷・目黒・世田谷",
+   "geo": "listing",
+   "near": [
+    [
+     "駒場東大前",
+     232
+    ],
+    [
+     "神泉",
+     617
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13094096",
+   "name": "熊八",
+   "kind": "sakaba",
+   "area": "池ノ上",
+   "ward": "世田谷区",
+   "address": "東京都世田谷区北沢1-32-5",
+   "station": "池ノ上駅周辺",
+   "hours": "営業時間は要確認",
+   "social": 4,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "煮込み",
+    "ホッピー"
+   ],
+   "english": false,
+   "desc": "池ノ上の路地にある大衆酒場。もつ煮込みとホッピーを楽しめ、L字カウンターと小上がりがある。",
+   "talk": "カウンターには一人客や常連客も。店の忙しさを見ながら会話を楽しみたい。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年7月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131801/13094096/",
+    "https://zekkei-sakaba.com/blog/nikomist-ikenoue-kuma8/"
+   ],
+   "lat": 35.6613292,
+   "lng": 139.6726316,
+   "kana": "くまはち",
+   "region": "渋谷・目黒・世田谷",
+   "geo": "listing",
+   "near": [
+    [
+     "池ノ上",
+     95
+    ],
+    [
+     "東北沢",
+     423
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13001813",
+   "name": "台湾料理 光春",
+   "kind": "sakaba",
+   "area": "池ノ上",
+   "ward": "世田谷区",
+   "address": "東京都世田谷区代沢2-45-9 飛田ビル 1F",
+   "station": "池ノ上駅周辺",
+   "budget": "3,000〜3,999円（掲載予算の目安）",
+   "budget_min": 3000,
+   "budget_max": 3999,
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "台湾料理",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "池ノ上駅近くの台湾料理店。台湾ビールや紹興酒に料理を合わせ、カウンターでの一人飲みもできる。",
+   "talk": "カウンター席とテーブル席があり、少人数で料理とお酒を楽しめる。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年8月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131801/13001813/",
+    "https://koushun.owst.jp/"
+   ],
+   "lat": 35.6606814,
+   "lng": 139.6726424,
+   "kana": "こうしゅん",
+   "region": "渋谷・目黒・世田谷",
+   "geo": "listing",
+   "near": [
+    [
+     "池ノ上",
+     32
+    ],
+    [
+     "東北沢",
+     495
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13268865",
+   "name": "近近",
+   "kind": "tachinomi",
+   "area": "下北沢",
+   "ward": "世田谷区",
+   "address": "東京都世田谷区北沢2-8-5 2F",
+   "station": "下北沢駅周辺",
+   "hours": "営業時間は要確認",
+   "budget": "1,000〜1,999円（掲載予算の目安）",
+   "budget_min": 1000,
+   "budget_max": 1999,
+   "social": 4,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "立ち飲み",
+    "ギャラリー"
+   ],
+   "english": false,
+   "desc": "下北沢の2階にある立ち飲み屋。ときどきギャラリーにもなる空間で、一杯から立ち寄れる。",
+   "talk": "立ち飲みと展示が同居する店。作品やその日の飲み物が会話のきっかけになる。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年3月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131802/13268865/",
+    "https://love-shimokitazawa.jp/archives/49046"
+   ],
+   "lat": 35.6621061,
+   "lng": 139.6692903,
+   "kana": "ちかちか",
+   "region": "渋谷・目黒・世田谷",
+   "aliases": [
+    "チカチカ",
+    "chikadika",
+    "ギャラリー&バー 近近"
+   ],
+   "geo": "listing",
+   "near": [
+    [
+     "下北沢",
+     228
+    ],
+    [
+     "池ノ上",
+     373
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13310040",
+   "name": "臺クラフトビール",
+   "kind": "tachinomi",
+   "area": "下北沢",
+   "ward": "世田谷区",
+   "address": "東京都世田谷区北沢2-22-10 下北沢リライアンスビル 1F-D",
+   "station": "下北沢駅周辺",
+   "budget": "2,000〜2,999円（掲載予算の目安）",
+   "budget_min": 2000,
+   "budget_max": 2999,
+   "social": 4,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "クラフトビール",
+    "台湾料理"
+   ],
+   "english": false,
+   "desc": "台湾のクラフトビールと台湾のつまみを扱う立ち飲み店。下北沢駅近くで、台湾の醸造所の味を飲み比べられる。",
+   "talk": "立ち飲みでビールを選ぶ店。味の好みを伝えて相談する入り方もできる。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年10月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131802/13310040/",
+    "https://prtimes.jp/main/html/rd/p/000000003.000165462.html"
+   ],
+   "lat": 35.6609916,
+   "lng": 139.665999,
+   "kana": "うてなくらふとびーる",
+   "region": "渋谷・目黒・世田谷",
+   "aliases": [
+    "臺",
+    "ウテナ",
+    "UTENA CRAFT BEER"
+   ],
+   "geo": "listing",
+   "near": [
+    [
+     "下北沢",
+     94
+    ],
+    [
+     "世田谷代田",
+     503
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13111895",
+   "name": "ひげちょうちん",
+   "kind": "tachinomi",
+   "area": "下北沢",
+   "ward": "世田谷区",
+   "address": "東京都世田谷区北沢2-19-5",
+   "station": "下北沢駅周辺",
+   "budget": "1,000〜1,999円（掲載予算の目安）",
+   "budget_min": 1000,
+   "budget_max": 1999,
+   "social": 4,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "日本酒",
+    "煮込み",
+    "立ち飲み"
+   ],
+   "english": false,
+   "desc": "福島の日本酒と純レバ・煮込みなどを楽しめる酒場。1階は立ち飲み、2階には着席のスペースもある。",
+   "talk": "一人なら1階の立ち飲み、連れと座るなら2階と使い分けられる。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年8月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131802/13111895/",
+    "https://shimokitazawa.org/archives/596"
+   ],
+   "lat": 35.6606418,
+   "lng": 139.6671958,
+   "kana": "ひげちょうちん",
+   "region": "渋谷・目黒・世田谷",
+   "geo": "listing",
+   "near": [
+    [
+     "下北沢",
+     82
+    ],
+    [
+     "池ノ上",
+     518
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13006623",
+   "name": "ケムリ",
+   "kind": "sakaba",
+   "area": "新代田",
+   "ward": "世田谷区",
+   "address": "東京都世田谷区代田4-7-16",
+   "station": "新代田駅周辺",
+   "hours": "掲載元で営業時間が異なるため要確認",
+   "budget": "4,000〜4,999円（掲載予算の目安）",
+   "budget_min": 4000,
+   "budget_max": 4999,
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "焼き鳥",
+    "日本酒",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "新代田駅近くの焼き鳥店。炭火の串焼きと新潟の地酒を楽しめ、カウンターもある。",
+   "talk": "カウンターで串を少しずつ頼める。一人飲みもできる着席の酒場。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年6月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131803/13006623/",
+    "https://www.hotpepper.jp/strJ000138807/"
+   ],
+   "lat": 35.6607634,
+   "lng": 139.659925,
+   "kana": "けむり",
+   "region": "渋谷・目黒・世田谷",
+   "geo": "listing",
+   "near": [
+    [
+     "新代田",
+     215
+    ],
+    [
+     "世田谷代田",
+     311
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13145361",
+   "name": "真心酒菜 一帆",
+   "kind": "sakaba",
+   "area": "東松原",
+   "ward": "世田谷区",
+   "address": "東京都世田谷区松原5-2-5 東松原ユニオンビル Ｂ１",
+   "station": "東松原駅周辺",
+   "hours": "掲載元で営業時間が異なるため要確認",
+   "budget": "4,000〜4,999円（掲載予算の目安）",
+   "budget_min": 4000,
+   "budget_max": 4999,
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "日本酒",
+    "刺身",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "東松原の地下にある和食の酒場。季節の魚料理と日本酒を、カウンターやテーブルで味わえる。",
+   "talk": "カウンターで料理とお酒を相談しながら飲める。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年7月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131803/13145361/",
+    "https://www.magokoro-ippo.com/"
+   ],
+   "lat": 35.6626231,
+   "lng": 139.6551811,
+   "kana": "まごころしゅさいいっぽ",
+   "region": "渋谷・目黒・世田谷",
+   "geo": "listing",
+   "near": [
+    [
+     "東松原",
+     61
+    ],
+    [
+     "新代田",
+     491
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13070514",
+   "name": "まとい",
+   "kind": "sakaba",
+   "area": "東松原",
+   "ward": "世田谷区",
+   "address": "東京都世田谷区松原5-22-10",
+   "station": "東松原駅周辺",
+   "hours": "掲載元で営業時間が異なるため要確認",
+   "budget": "3,000〜3,999円（掲載予算の目安）",
+   "budget_min": 3000,
+   "budget_max": 3999,
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "刺身",
+    "日本酒",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "東松原の住宅街にある酒場。カウンターの魚料理や酒の肴を目当てに、一人客や地元客が訪れる。",
+   "talk": "小さなカウンターを中心にした店。空いている時に料理のおすすめを聞くのもよい。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年5月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131803/13070514/",
+    "https://saka-navi.com/archives/77986"
+   ],
+   "lat": 35.6624935,
+   "lng": 139.6497095,
+   "kana": "まとい",
+   "region": "渋谷・目黒・世田谷",
+   "geo": "listing",
+   "near": [
+    [
+     "東松原",
+     556
+    ],
+    [
+     "明大前",
+     664
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13304958",
+   "name": "VERTERE Eifuku Taproom",
+   "kind": "tachinomi",
+   "area": "永福町",
+   "ward": "杉並区",
+   "address": "東京都杉並区永福1-44-8 中根ビル 1F",
+   "station": "永福町駅周辺",
+   "budget": "3,000〜3,999円（掲載予算の目安）",
+   "budget_min": 3000,
+   "budget_max": 3999,
+   "social": 4,
+   "solo": 4,
+   "hiru": true,
+   "tags": [
+    "クラフトビール",
+    "立ち飲み",
+    "昼飲み"
+   ],
+   "english": false,
+   "desc": "奥多摩のブルワリー「VERTERE」の永福町タップルーム。15人ほどが立てる空間で、10タップのビールを楽しめる。",
+   "talk": "立ち飲みカウンターでビールを選ぶ店。醸造所やビールの味を話題にしやすい。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年6月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131805/13304958/",
+    "https://verterebrew.com/2815/"
+   ],
+   "lat": 35.6751866,
+   "lng": 139.643435,
+   "kana": "ばーてれえいふくたっぷるーむ",
+   "region": "新宿・中野・杉並",
+   "aliases": [
+    "VERTERE",
+    "バテレ",
+    "バーテレ",
+    "バテレ 永福町"
+   ],
+   "geo": "listing",
+   "near": [
+    [
+     "永福町",
+     139
+    ],
+    [
+     "西永福",
+     814
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13301631",
+   "name": "イタリア酒場and",
+   "kind": "sakaba",
+   "area": "西永福",
+   "ward": "杉並区",
+   "address": "東京都杉並区永福3-55-3 峯村ビル B1F",
+   "station": "西永福駅周辺",
+   "budget": "3,000〜3,999円（掲載予算の目安）",
+   "budget_min": 3000,
+   "budget_max": 3999,
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "ワイン",
+    "イタリア料理",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "西永福の地下にあるイタリア酒場。10席のカウンターとテーブルがあり、ワインと料理を一人から楽しめる。",
+   "talk": "一人客も利用できるカウンターがあり、料理に合わせたワインを相談できる。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年10月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131805/13301631/",
+    "https://nishieifukuand.owst.jp/"
+   ],
+   "lat": 35.6788362,
+   "lng": 139.6363826,
+   "kana": "いたりあさかばあんど",
+   "region": "新宿・中野・杉並",
+   "aliases": [
+    "and",
+    "アンド"
+   ],
+   "geo": "listing",
+   "near": [
+    [
+     "西永福",
+     78
+    ],
+    [
+     "永福町",
+     634
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13283733",
+   "name": "上々や 西永福店",
+   "kind": "sakaba",
+   "area": "西永福",
+   "ward": "杉並区",
+   "address": "東京都杉並区永福3-56-30 レムカ西永福ビル 1F",
+   "station": "西永福駅周辺",
+   "budget": "4,000〜4,999円（掲載予算の目安）",
+   "budget_min": 4000,
+   "budget_max": 4999,
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "刺身",
+    "日本酒",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "西永福の和食居酒屋。魚料理や日本酒を楽しめ、カウンターでの一人飲みにも使える。",
+   "talk": "カウンターとテーブルのある店。食事を兼ねた一杯にも向く。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年2月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131805/13283733/",
+    "https://www.hotpepper.jp/strJ000783444/",
+    "https://kenkou-uplus.metro.tokyo.lg.jp/shspot/detail/sh380.html",
+    "https://jyoujyouya.jp/blog/20220815-1593/"
+   ],
+   "lat": 35.6789881,
+   "lng": 139.6362016,
+   "kana": "じょうじょうやにしえいふくてん",
+   "region": "新宿・中野・杉並",
+   "aliases": [
+    "上々や",
+    "じょうじょうや"
+   ],
+   "geo": "listing",
+   "near": [
+    [
+     "西永福",
+     68
+    ],
+    [
+     "永福町",
+     656
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13153607",
+   "name": "居間居酒屋 ハマヤマ",
+   "kind": "sakaba",
+   "area": "浜田山",
+   "ward": "杉並区",
+   "address": "東京都杉並区浜田山1-23-4 さんまたビル 1F",
+   "station": "浜田山駅周辺",
+   "budget": "3,000〜3,999円（掲載予算の目安）",
+   "budget_min": 3000,
+   "budget_max": 3999,
+   "social": 2,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "刺身",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "浜田山の居酒屋。魚や肉の料理を揃え、グループの席に加えて一人でも使えるカウンターがある。",
+   "talk": "一人飲みとグループ利用の両方がある店。カウンターで落ち着いて飲みたい時にも。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年10月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131805/13153607/",
+    "https://www.hotpepper.jp/strJ003365004/"
+   ],
+   "lat": 35.6797626,
+   "lng": 139.6291171,
+   "kana": "いまいざかやはまやま",
+   "region": "新宿・中野・杉並",
+   "geo": "listing",
+   "near": [
+    [
+     "浜田山",
+     257
+    ],
+    [
+     "西永福",
+     591
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13033699",
+   "name": "炭火焼きと羽釜ご飯 あいたか",
+   "kind": "sakaba",
+   "area": "高井戸",
+   "ward": "杉並区",
+   "address": "東京都杉並区高井戸東3-8-13 ＨＰビル １Ｆ",
+   "station": "高井戸駅周辺",
+   "budget": "3,000〜3,999円（掲載予算の目安）",
+   "budget_min": 3000,
+   "budget_max": 3999,
+   "social": 2,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "炭火焼",
+    "日本酒",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "高井戸駅近くで炭火料理と羽釜ご飯を出す店。窓際のカウンターがあり、一人でお酒と食事を楽しめる。",
+   "talk": "テーブルの食事客もいる店。カウンターは一人飲みの選択肢になる。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年6月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131806/13033699/",
+    "https://www.aitaka-takaido.jp/"
+   ],
+   "lat": 35.6839544,
+   "lng": 139.6159342,
+   "kana": "すみびやきとはがまごはんあいたか",
+   "region": "新宿・中野・杉並",
+   "geo": "listing",
+   "near": [
+    [
+     "高井戸",
+     119
+    ],
+    [
+     "富士見ヶ丘",
+     756
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13121054",
+   "name": "バーカロ フェッロ",
+   "kind": "tachinomi",
+   "area": "富士見ヶ丘",
+   "ward": "杉並区",
+   "address": "東京都杉並区高井戸西1-33-12 富士見ヶ丘センタービル 101",
+   "station": "富士見ヶ丘駅周辺",
+   "hours": "営業時間は要確認",
+   "social": 4,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "ワイン",
+    "イタリア料理",
+    "立ち飲み"
+   ],
+   "english": false,
+   "desc": "富士見ヶ丘のイタリア酒場。ヴェネツィアのバーカロのように、ワインと小皿料理を楽しむ立ち飲みができる。",
+   "talk": "立ち飲みと着席スペースがある。小皿やワインを選びながら過ごせる。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年6月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131806/13121054/",
+    "https://san-tatsu.jp/collects/50808/"
+   ],
+   "lat": 35.6843376,
+   "lng": 139.6078688,
+   "kana": "ばーかろふぇっろ",
+   "region": "新宿・中野・杉並",
+   "geo": "listing",
+   "near": [
+    [
+     "富士見ヶ丘",
+     44
+    ],
+    [
+     "高井戸",
+     651
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13318692",
+   "name": "いざかや",
+   "kind": "sakaba",
+   "area": "富士見ヶ丘",
+   "ward": "杉並区",
+   "address": "東京都杉並区高井戸西1-21-16 田熊ビル106",
+   "station": "富士見ヶ丘駅周辺",
+   "hours": "営業時間は要確認",
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "創作料理",
+    "小さな店"
+   ],
+   "english": false,
+   "desc": "富士見ヶ丘の「きくらげ」に続く店として2024年12月に開業。16席の空間で、各国の料理を取り入れたつまみを出す。",
+   "talk": "小規模な着席の酒場。料理を目当てに少人数で訪ねやすい。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年6月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131806/13318692/",
+    "https://food-stadium.com/headline/37071/"
+   ],
+   "lat": 35.6835502,
+   "lng": 139.6074068,
+   "kana": "いざかや",
+   "region": "新宿・中野・杉並",
+   "geo": "listing",
+   "near": [
+    [
+     "富士見ヶ丘",
+     126
+    ],
+    [
+     "高井戸",
+     682
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13124477",
+   "name": "やきとん あかね",
+   "kind": "sakaba",
+   "area": "久我山",
+   "ward": "杉並区",
+   "address": "東京都杉並区久我山2-12-7",
+   "station": "久我山駅周辺",
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "焼きとん",
+    "ホッピー",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "久我山駅南側のやきとん店。味噌を添えた串とホッピーを楽しめ、カウンター8席とテーブルがある。",
+   "talk": "串を数本から頼んで飲めるカウンターがある。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年3月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131806/13124477/",
+    "https://kugayama-minamiginza.com/tenpo.html"
+   ],
+   "lat": 35.6850478,
+   "lng": 139.5988446,
+   "kana": "やきとんあかね",
+   "region": "新宿・中野・杉並",
+   "geo": "listing",
+   "near": [
+    [
+     "久我山",
+     333
+    ],
+    [
+     "富士見ヶ丘",
+     793
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13063930",
+   "name": "炉端焼 じゅん",
+   "kind": "sakaba",
+   "area": "三鷹台",
+   "ward": "三鷹市",
+   "address": "東京都三鷹市井の頭1-24-19",
+   "station": "三鷹台駅周辺",
+   "hours": "掲載元で営業時間が異なるため要確認",
+   "budget": "2,000〜2,999円（掲載予算の目安）",
+   "budget_min": 2000,
+   "budget_max": 2999,
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "炉端焼",
+    "刺身",
+    "日本酒"
+   ],
+   "english": false,
+   "desc": "三鷹台の炉端焼きの店。魚料理や酒の肴を、カウンターや座敷で楽しめる。",
+   "talk": "カウンターがあり、一人客も利用できる昔ながらの酒場。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年7月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131806/13063930/",
+    "https://www.hotpepper.jp/strJ000159500/"
+   ],
+   "lat": 35.6902267,
+   "lng": 139.5868021,
+   "kana": "ろばたやきじゅん",
+   "region": "多摩",
+   "geo": "listing",
+   "near": [
+    [
+     "三鷹台",
+     294
+    ],
+    [
+     "井の頭公園",
+     889
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13297920",
+   "name": "ニューイノカシラ",
+   "kind": "sakaba",
+   "area": "三鷹台",
+   "ward": "三鷹市",
+   "address": "東京都三鷹市井の頭1-31-28",
+   "station": "三鷹台駅周辺",
+   "hours": "掲載元で営業時間が異なるため要確認",
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "おでん",
+    "ザンギ",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "三鷹台駅近くの「おでんとザンギ」の酒場。鶏白湯のおでんと釧路風ザンギが看板で、カウンターもある。",
+   "talk": "一人ならカウンターで、一品と一杯から楽しめる。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年6月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131806/13297920/",
+    "https://www.hotpepper.jp/strJ003806704/"
+   ],
+   "lat": 35.6921529,
+   "lng": 139.5887932,
+   "kana": "にゅーいのかしら",
+   "region": "多摩",
+   "aliases": [
+    "おでんとザンギ ニューイノカシラ"
+   ],
+   "geo": "listing",
+   "near": [
+    [
+     "三鷹台",
+     15
+    ],
+    [
+     "井の頭公園",
+     809
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13125942",
+   "name": "YAMATO",
+   "kind": "bar",
+   "area": "三鷹台",
+   "ward": "三鷹市",
+   "address": "東京都三鷹市井の頭2-7-2 1F",
+   "station": "三鷹台駅周辺",
+   "budget": "3,000〜3,999円（掲載予算の目安）",
+   "budget_min": 3000,
+   "budget_max": 3999,
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "日本酒",
+    "焼酎",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "三鷹台の小さな酒場。日本酒や焼酎と料理を楽しめ、17席の店内にはカウンターもある。",
+   "talk": "カウンターでお酒を選びながら飲める。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年4月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131806/13125942/"
+   ],
+   "lat": 35.6919157,
+   "lng": 139.5882053,
+   "kana": "やまと",
+   "region": "多摩",
+   "aliases": [
+    "SAKABA YAMATO",
+    "ヤマト"
+   ],
+   "geo": "listing",
+   "near": [
+    [
+     "三鷹台",
+     74
+    ],
+    [
+     "井の頭公園",
+     794
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13281727",
+   "name": "Craft beer TOCA",
+   "kind": "bar",
+   "area": "井の頭公園",
+   "ward": "三鷹市",
+   "address": "東京都三鷹市井の頭3-12-13 早志ビル",
+   "station": "井の頭公園駅周辺",
+   "budget": "3,000〜3,999円（掲載予算の目安）",
+   "budget_min": 3000,
+   "budget_max": 3999,
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "クラフトビール",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "井の頭公園駅近くのクラフトビール店。L字のカウンターでビールや日本酒を楽しめる。",
+   "talk": "小さなカウンターを囲む空間。ビールの好みを話しながら一杯を選べる。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年5月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1320/A132001/13281727/",
+    "https://kichifan.com/2023/06/06/craft-beer-toca_report/"
+   ],
+   "lat": 35.6972407,
+   "lng": 139.5827621,
+   "kana": "くらふとびーるとか",
+   "region": "多摩",
+   "aliases": [
+    "TOCA",
+    "トカ",
+    "クラフトビールトカ"
+   ],
+   "geo": "listing",
+   "near": [
+    [
+     "井の頭公園",
+     29
+    ],
+    [
+     "吉祥寺",
+     644
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13105495",
+   "name": "さわやか",
+   "kind": "sakaba",
+   "area": "駒場東大前",
+   "ward": "目黒区",
+   "address": "東京都目黒区駒場1-27-1",
+   "station": "駒場東大前駅周辺",
+   "social": 2,
+   "solo": 3,
+   "hiru": false,
+   "tags": [
+    "家庭料理",
+    "日本酒"
+   ],
+   "english": false,
+   "desc": "駒場東大前の家庭料理の店。手作りの料理とお酒を楽しめる、地域の食事と一杯の場。",
+   "talk": "食事客や連れ立った利用もある店。静かに料理とお酒を楽しみたい時に。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年5月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131801/13105495/",
+    "https://komabatodaimae.com/sawayaka/"
+   ],
+   "lat": 35.6575917,
+   "lng": 139.6859525,
+   "kana": "さわやか",
+   "region": "渋谷・目黒・世田谷",
+   "geo": "listing",
+   "near": [
+    [
+     "駒場東大前",
+     181
+    ],
+    [
+     "神泉",
+     682
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13155577",
+   "name": "三木松",
+   "kind": "sakaba",
+   "area": "東松原",
+   "ward": "世田谷区",
+   "address": "東京都世田谷区松原5-3-13",
+   "station": "東松原駅周辺",
+   "hours": "営業時間は要確認",
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "日本酒",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "東松原の小さな和食酒場。魚や野菜の料理を肴に、日本酒を飲めるカウンターの店。",
+   "talk": "カウンターで料理やお酒について相談しながら過ごせる。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年2月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131804/13155577/",
+    "https://bs.tbs.co.jp/sakaba/shop/543.html"
+   ],
+   "lat": 35.6618176,
+   "lng": 139.6543628,
+   "kana": "みきまつ",
+   "region": "渋谷・目黒・世田谷",
+   "geo": "listing",
+   "near": [
+    [
+     "東松原",
+     163
+    ],
+    [
+     "新代田",
+     572
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13053212",
+   "name": "宮古2号店",
+   "kind": "sakaba",
+   "area": "明大前",
+   "ward": "世田谷区",
+   "address": "東京都世田谷区松原2-41-5",
+   "station": "明大前駅周辺",
+   "social": 2,
+   "solo": 3,
+   "hiru": false,
+   "tags": [
+    "沖縄料理",
+    "泡盛"
+   ],
+   "english": false,
+   "desc": "明大前の沖縄料理店。宮古島の料理や泡盛を楽しめる、地域で長く続く酒場。",
+   "talk": "料理を囲む着席の店。沖縄の料理やお酒を目当てに訪ねたい。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年10月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131804/13053212/",
+    "https://www.hotpepper.jp/strJ000139123/"
+   ],
+   "lat": 35.6681386,
+   "lng": 139.6491499,
+   "kana": "みやこにごうてん",
+   "region": "渋谷・目黒・世田谷",
+   "geo": "listing",
+   "near": [
+    [
+     "明大前",
+     120
+    ],
+    [
+     "下高井戸",
+     718
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13130893",
+   "name": "桃串",
+   "kind": "sakaba",
+   "area": "浜田山",
+   "ward": "杉並区",
+   "address": "東京都杉並区浜田山3-32-6 熊倉ビル B1F",
+   "station": "浜田山駅周辺",
+   "social": 3,
+   "solo": 4,
+   "hiru": true,
+   "tags": [
+    "焼き鳥",
+    "昼飲み"
+   ],
+   "english": false,
+   "desc": "浜田山駅近くの地下にある串焼きの店。焼き鳥などの料理とお酒を出し、昼飲みも案内している。",
+   "talk": "19席の小規模な店。昼から串と一杯を楽しめる。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年7月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131805/13130893/",
+    "https://www.hamadayama-izakaya.jp/"
+   ],
+   "lat": 35.6819693,
+   "lng": 139.6269425,
+   "kana": "ももぐし",
+   "region": "新宿・中野・杉並",
+   "geo": "listing",
+   "near": [
+    [
+     "浜田山",
+     60
+    ],
+    [
+     "西永福",
+     857
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13284066",
+   "name": "ヨイノフネ",
+   "kind": "sakaba",
+   "area": "久我山",
+   "ward": "杉並区",
+   "address": "東京都杉並区久我山4-1-4 松村ビル103",
+   "station": "久我山駅周辺",
+   "hours": "掲載元で営業時間が異なるため要確認",
+   "budget": "6,000〜7,999円（掲載予算の目安）",
+   "budget_min": 6000,
+   "budget_max": 7999,
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "日本酒",
+    "和食",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "久我山駅北側の和食酒場。季節の料理と日本酒を出し、14席の店内にはカウンターがある。",
+   "talk": "一人飲みを案内している店。カウンターで料理に合うお酒を相談できる。",
+   "status": "open",
+   "checked": "2026年11月3日確認：公式ブログの2026年10月5日営業案内",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131806/13284066/",
+    "https://yoinofune.jp/blog/"
+   ],
+   "lat": 35.6885026,
+   "lng": 139.5991576,
+   "kana": "よいのふね",
+   "region": "新宿・中野・杉並",
+   "geo": "listing",
+   "near": [
+    [
+     "久我山",
+     72
+    ],
+    [
+     "富士見ヶ丘",
+     874
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13253196",
+   "name": "串焼きとお酒 かんむり",
+   "kind": "sakaba",
+   "area": "久我山",
+   "ward": "杉並区",
+   "address": "東京都杉並区久我山4-1-9 久我山ビル 1F",
+   "station": "久我山駅周辺",
+   "budget": "5,000〜5,999円（掲載予算の目安）",
+   "budget_min": 5000,
+   "budget_max": 5999,
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "焼き鳥",
+    "野菜串",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "久我山駅北側の串焼き酒場。肉や季節の野菜の炭火焼きとお酒を、木のカウンターやテーブルで楽しめる。",
+   "talk": "一人ならカウンター、連れとならテーブルと使い分けられる。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年7月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131806/13253196/",
+    "https://www.kanmuri-cocoterrace.com/"
+   ],
+   "lat": 35.6882718,
+   "lng": 139.5997937,
+   "kana": "くしやきとおさけかんむり",
+   "region": "新宿・中野・杉並",
+   "geo": "listing",
+   "near": [
+    [
+     "久我山",
+     37
+    ],
+    [
+     "富士見ヶ丘",
+     812
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13010009",
+   "name": "カッパ",
+   "kind": "sakaba",
+   "area": "吉祥寺",
+   "ward": "武蔵野市",
+   "address": "東京都武蔵野市吉祥寺南町1-5-9",
+   "station": "吉祥寺駅周辺",
+   "budget": "3,000〜3,999円（掲載予算の目安）",
+   "budget_min": 3000,
+   "budget_max": 3999,
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "もつ焼き",
+    "カウンターのみ"
+   ],
+   "english": false,
+   "desc": "吉祥寺駅南側にあるもつ焼きの店。20席のカウンターで、串とお酒を楽しむ昔ながらの酒場。",
+   "talk": "カウンターを囲む店。まずは串と飲み物を頼み、店のペースに合わせて過ごしたい。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年10月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1320/A132001/13010009/"
+   ],
+   "lat": 35.7024601,
+   "lng": 139.5791055,
+   "kana": "かっぱ",
+   "region": "多摩",
+   "geo": "listing",
+   "near": [
+    [
+     "吉祥寺",
+     111
+    ],
+    [
+     "井の頭公園",
+     641
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13047814",
+   "name": "ささの葉",
+   "kind": "sakaba",
+   "area": "吉祥寺",
+   "ward": "武蔵野市",
+   "address": "東京都武蔵野市吉祥寺本町1-1-4",
+   "station": "吉祥寺駅周辺",
+   "social": 4,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "刺身",
+    "日本酒",
+    "カウンターのみ"
+   ],
+   "english": false,
+   "desc": "吉祥寺の小さな魚料理の酒場。8席のカウンターで、刺身や酒の肴と日本酒を楽しめる。",
+   "talk": "少人数向きの小さな店。空席や料理の量を確かめながら注文したい。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年10月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1320/A132001/13047814/"
+   ],
+   "lat": 35.7038531,
+   "lng": 139.5791089,
+   "kana": "ささのは",
+   "region": "多摩",
+   "geo": "listing",
+   "near": [
+    [
+     "吉祥寺",
+     169
+    ],
+    [
+     "井の頭公園",
+     778
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13045448",
+   "name": "コパンダ",
+   "kind": "bar",
+   "yokocho": "kichijoji-harmonica-yokocho",
+   "area": "吉祥寺",
+   "ward": "武蔵野市",
+   "address": "東京都武蔵野市吉祥寺本町1-1-4 ハーモニカ横丁内",
+   "station": "吉祥寺駅周辺",
+   "social": 4,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "ハモニカ横丁",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "ハモニカ横丁にある小さなバー。カウンターでお酒とつまみを楽しめる、横丁の一軒。",
+   "talk": "横丁のカウンター酒場。まずは一杯を頼み、周りの様子を見ながら過ごしたい。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年9月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1320/A132001/13045448/"
+   ],
+   "lat": 35.7037249,
+   "lng": 139.5790944,
+   "kana": "こぱんだ",
+   "region": "多摩",
+   "aliases": [
+    "copanda"
+   ],
+   "geo": "listing",
+   "near": [
+    [
+     "吉祥寺",
+     159
+    ],
+    [
+     "井の頭公園",
+     766
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13143480",
+   "name": "酒とさか菜",
+   "kind": "sakaba",
+   "area": "神泉",
+   "ward": "渋谷区",
+   "address": "東京都渋谷区神泉町12-4 アーガス神泉ビル 1F",
+   "station": "神泉駅周辺",
+   "budget": "5,000〜5,999円（掲載予算の目安）",
+   "budget_min": 5000,
+   "budget_max": 5999,
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "日本酒",
+    "おでん",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "神泉の日本酒と料理の酒場。静岡おでんなどの酒の肴を、カウンターやテーブルで楽しめる。",
+   "talk": "カウンターで地酒と料理を組み合わせる楽しみがある。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年5月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1303/A130301/13143480/",
+    "https://saketosakana.net/"
+   ],
+   "lat": 35.6557937,
+   "lng": 139.6927507,
+   "kana": "さけとさかな",
+   "region": "渋谷・目黒・世田谷",
+   "geo": "listing",
+   "near": [
+    [
+     "神泉",
+     172
+    ],
+    [
+     "渋谷",
+     751
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13117100",
+   "name": "文房具居酒屋 どろぼう堂",
+   "kind": "sakaba",
+   "area": "久我山",
+   "ward": "杉並区",
+   "address": "東京都杉並区久我山4-2-24",
+   "station": "久我山駅周辺",
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "文房具",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "久我山の文房具をテーマにした居酒屋。店内の文房具を眺めながら、お酒と料理を楽しめる。",
+   "talk": "カウンターがあり、文房具という共通の話題がある店。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年4月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131806/13117100/",
+    "https://kugayamatown.com/shops/doroboudou.html"
+   ],
+   "lat": 35.6889351,
+   "lng": 139.5998632,
+   "kana": "ぶんぼうぐいざかやどろぼうどう",
+   "region": "新宿・中野・杉並",
+   "geo": "listing",
+   "near": [
+    [
+     "久我山",
+     109
+    ],
+    [
+     "富士見ヶ丘",
+     845
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13264889",
+   "name": "KAMERA",
+   "kind": "tachinomi",
+   "area": "神泉",
+   "ward": "渋谷区",
+   "address": "東京都渋谷区道玄坂2-20-5 1F",
+   "station": "神泉駅周辺",
+   "budget": "4,000〜4,999円（掲載予算の目安）",
+   "budget_min": 4000,
+   "budget_max": 4999,
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "立ち飲み",
+    "焼売",
+    "ウーロンハイ"
+   ],
+   "english": false,
+   "desc": "神泉に近い道玄坂の酒場。焼売とウーロンハイが看板で、立ち飲みカウンターと着席スペースがある。",
+   "talk": "一人で立ち寄る立ち飲みも、連れとの着席利用もできる。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年10月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1303/A130301/13264889/",
+    "https://www.timeout.jp/tokyo/ja/レストラン/kamera"
+   ],
+   "lat": 35.6593213,
+   "lng": 139.6965501,
+   "kana": "かめら",
+   "region": "渋谷・目黒・世田谷",
+   "aliases": [
+    "カメラ"
+   ],
+   "geo": "listing",
+   "near": [
+    [
+     "神泉",
+     362
+    ],
+    [
+     "渋谷",
+     371
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13151557",
+   "name": "楽椿",
+   "kind": "sakaba",
+   "area": "神泉",
+   "ward": "渋谷区",
+   "address": "東京都渋谷区円山町23-10 渋谷ATビル 1F",
+   "station": "神泉駅周辺",
+   "budget": "3,000〜3,999円（掲載予算の目安）",
+   "budget_min": 3000,
+   "budget_max": 3999,
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "刺身",
+    "おでん",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "神泉のカウンター酒場。刺身やおでん、ひな鶏の半身揚げなどの料理とお酒を楽しめる。",
+   "talk": "カウンターとテーブルのある店。串や小皿だけでなく料理もしっかり楽しみたい時に。",
+   "status": "open",
+   "checked": "2026年11月3日確認：運営会社の現行店舗一覧。食べログは2025年5月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1303/A130301/13151557/",
+    "https://raku-co.com/?page_id=252"
+   ],
+   "lat": 35.6564097,
+   "lng": 139.6939631,
+   "kana": "らくちん",
+   "region": "渋谷・目黒・世田谷",
+   "aliases": [
+    "らくちん"
+   ],
+   "geo": "listing",
+   "near": [
+    [
+     "神泉",
+     99
+    ],
+    [
+     "渋谷",
+     624
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13060120",
+   "name": "かる小屋 池ノ上店",
+   "kind": "sakaba",
+   "area": "池ノ上",
+   "ward": "世田谷区",
+   "address": "東京都世田谷区代沢2-45-5 ソフィア下北 1F",
+   "station": "池ノ上駅周辺",
+   "hours": "掲載元で営業時間が異なるため要確認",
+   "budget": "3,000〜3,999円（掲載予算の目安）",
+   "budget_min": 3000,
+   "budget_max": 3999,
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "焼きとん",
+    "ホッピー",
+    "レモンサワー"
+   ],
+   "english": false,
+   "desc": "池ノ上駅近くのやきとんの店。串焼きや煮込みにサワーを合わせ、カウンターで一人飲みもできる。",
+   "talk": "串と飲み物を少しずつ頼める、地域の着席酒場。",
+   "status": "open",
+   "checked": "2026年11月3日確認：ホットペッパーの2026年3月22日訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131801/13060120/",
+    "https://karugoya-ikenoue.owst.jp/",
+    "https://www.hotpepper.jp/strJ000940812/"
+   ],
+   "lat": 35.6607855,
+   "lng": 139.6724727,
+   "kana": "かるごやいけのうえてん",
+   "region": "渋谷・目黒・世田谷",
+   "geo": "listing",
+   "near": [
+    [
+     "池ノ上",
+     51
+    ],
+    [
+     "東北沢",
+     483
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13176289",
+   "name": "北沢小西",
+   "kind": "kakuuchi",
+   "area": "下北沢",
+   "ward": "世田谷区",
+   "address": "東京都世田谷区代沢5-28-16",
+   "station": "下北沢駅周辺",
+   "hours": "月・水・木 14:00〜22:00／金 14:00〜23:00／土 11:00〜23:00／日・祝 11:00〜21:00（月1回不定休あり。営業日は公式SNSで要確認）",
+   "closed": "火曜、月1回不定休",
+   "social": 3,
+   "solo": 4,
+   "hiru": true,
+   "tags": [
+    "クラフトビール",
+    "角打ち",
+    "昼飲み"
+   ],
+   "english": false,
+   "desc": "下北沢の酒販店で、買ったクラフトビールやハードサイダーを店内で飲める。少人数で銘柄を選んで楽しむ角打ち。",
+   "talk": "ビールやサイダーの好みを話しながら選べる。通常は1〜4人の利用が中心。",
+   "tips": "開栓料は1缶110円、プラカップ30円。全日16時までは開栓料無料。強い匂いの食べ物は持ち込めません（公式案内、2026年11月3日確認）。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年5月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131802/13176289/",
+    "https://kitazawakonishi.com/"
+   ],
+   "lat": 35.6585262,
+   "lng": 139.6669774,
+   "kana": "きたざわこにし",
+   "region": "渋谷・目黒・世田谷",
+   "aliases": [
+    "北澤小西"
+   ],
+   "geo": "listing",
+   "near": [
+    [
+     "下北沢",
+     314
+    ],
+    [
+     "世田谷代田",
+     493
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13282963",
+   "name": "reverb",
+   "kind": "bar",
+   "area": "高井戸",
+   "ward": "杉並区",
+   "address": "東京都杉並区高井戸東2-25-11 1F",
+   "station": "高井戸駅周辺",
+   "hours": "掲載元で営業時間が異なるため要確認",
+   "budget": "2,000〜2,999円（掲載予算の目安）",
+   "budget_min": 2000,
+   "budget_max": 2999,
+   "social": 4,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "クラフトビール",
+    "醸造所",
+    "立ち飲みも可"
+   ],
+   "english": false,
+   "desc": "高井戸のNovel Craft Brewingに併設されたタップルーム。醸造設備を眺めながら飲め、着席と立ち飲みの両方がある。",
+   "talk": "自家醸造ビールを選べるカウンターがあり、ビールや醸造が会話の話題になる。",
+   "status": "open",
+   "checked": "2026年11月3日確認：2026年4月24日の訪問記事",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131806/13282963/",
+    "https://note.com/craft_beer/n/nf187841e1fd0"
+   ],
+   "lat": 35.6819944,
+   "lng": 139.6155262,
+   "kana": "りばーぶ",
+   "region": "新宿・中野・杉並",
+   "aliases": [
+    "リバーブ",
+    "Novel Craft Brewing",
+    "ノベルクラフトブルーイング"
+   ],
+   "geo": "listing",
+   "near": [
+    [
+     "高井戸",
+     149
+    ],
+    [
+     "富士見ヶ丘",
+     774
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13312524",
+   "name": "Mountain River Brewery",
+   "kind": "bar",
+   "area": "久我山",
+   "ward": "杉並区",
+   "address": "東京都杉並区久我山3-17-18 ウッディ久我山",
+   "station": "久我山駅周辺",
+   "hours": "有料試飲の日程・時間は要確認（醸造所の直売・試飲）",
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "クラフトビール",
+    "醸造所",
+    "有料試飲"
+   ],
+   "english": false,
+   "desc": "久我山の小さなブルワリーの直売・有料試飲スペース。通常の酒場とは営業形態が異なり、試飲の日程を確認して訪ねたい。",
+   "talk": "醸造所でビールを試す場。販売時間と店内で飲める時間を分けて確認したい。",
+   "tips": "ボトル販売の営業時間は、店内で飲める時間を意味しません。試飲実施日を確認してください。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年2月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131806/13312524/",
+    "https://revomax.jp/craftbeer/mountain-river-brewery-kugayama/"
+   ],
+   "lat": 35.6869541,
+   "lng": 139.5965277,
+   "kana": "まうんてんりばーぶるわりー",
+   "region": "新宿・中野・杉並",
+   "aliases": [
+    "マウンテンリバーブリュワリー",
+    "マウンテンリバーブルワリー"
+   ],
+   "geo": "listing",
+   "near": [
+    [
+     "久我山",
+     301
+    ],
+    [
+     "三鷹台",
+     904
+    ]
+   ]
+  },
+  {
+   "id": "inokashira-tl-13279899",
+   "name": "みらい水産",
+   "kind": "sakaba",
+   "area": "永福町",
+   "ward": "杉並区",
+   "address": "東京都杉並区和泉3-52-15",
+   "station": "永福町駅周辺",
+   "budget": "5,000〜5,999円（掲載予算の目安）",
+   "budget_min": 5000,
+   "budget_max": 5999,
+   "social": 3,
+   "solo": 4,
+   "hiru": false,
+   "tags": [
+    "刺身",
+    "ワイン",
+    "カウンター"
+   ],
+   "english": false,
+   "desc": "永福町の生本まぐろを扱う鮮魚店。店内の飲食カウンターで、魚料理とワインを楽しめる。",
+   "talk": "鮮魚の販売に飲食スペースを併設した店。魚とワインの組み合わせを相談できる。",
+   "status": "open",
+   "checked": "2026年11月3日確認：食べログの2026年10月訪問記録",
+   "sources": [
+    "https://tabelog.com/tokyo/A1318/A131805/13279899/",
+    "https://miraisuisan.co.jp/storeinformation/"
+   ],
+   "lat": 35.6808571,
+   "lng": 139.6467123,
+   "kana": "みらいすいさん",
+   "region": "新宿・中野・杉並",
+   "geo": "listing",
+   "near": [
+    [
+     "永福町",
+     630
+    ],
+    [
+     "方南町",
+     1034
     ]
    ]
   }
